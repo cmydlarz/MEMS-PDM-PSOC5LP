@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
   20:.\Generated_Source\PSoC5/core_cm3.c ****  * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
   21:.\Generated_Source\PSoC5/core_cm3.c ****  *
   22:.\Generated_Source\PSoC5/core_cm3.c ****  ******************************************************************************/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/core_cm3.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
   77:.\Generated_Source\PSoC5/core_cm3.c **** 
   78:.\Generated_Source\PSoC5/core_cm3.c **** /**
   79:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Main Stack Pointer
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 3
 
 
   80:.\Generated_Source\PSoC5/core_cm3.c ****  *
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  134:.\Generated_Source\PSoC5/core_cm3.c **** 
  135:.\Generated_Source\PSoC5/core_cm3.c **** #if (__ARMCC_VERSION < 400000)
  136:.\Generated_Source\PSoC5/core_cm3.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 4
 
 
  137:.\Generated_Source\PSoC5/core_cm3.c **** /**
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  191:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the priority mask bit in the priority mask register
  192:.\Generated_Source\PSoC5/core_cm3.c ****  */
  193:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_PRIMASK(uint32_t priMask)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 5
 
 
  194:.\Generated_Source\PSoC5/core_cm3.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  248:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
  249:.\Generated_Source\PSoC5/core_cm3.c **** }
  250:.\Generated_Source\PSoC5/core_cm3.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 6
 
 
  251:.\Generated_Source\PSoC5/core_cm3.c **** #endif /* __ARMCC_VERSION  */ 
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  305:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value mainStackPointer to the MSP 
  306:.\Generated_Source\PSoC5/core_cm3.c ****  * (main stack pointer) Cortex processor register
  307:.\Generated_Source\PSoC5/core_cm3.c ****  */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 7
 
 
  308:.\Generated_Source\PSoC5/core_cm3.c **** void __set_MSP(uint32_t topOfMainStack)
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  362:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 16 bit values
  363:.\Generated_Source\PSoC5/core_cm3.c ****  */
  364:.\Generated_Source\PSoC5/core_cm3.c **** uint16_t __LDREXH(uint16_t *addr)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 8
 
 
  365:.\Generated_Source\PSoC5/core_cm3.c **** {
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  419:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
  420:.\Generated_Source\PSoC5/core_cm3.c ****  *
  421:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 32 bit values
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 9
 
 
  422:.\Generated_Source\PSoC5/core_cm3.c ****  */
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
   56              		.type	__set_PSP, %function
   57              	__set_PSP:
   58              	.LFB1:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 10
 
 
  452:.\Generated_Source\PSoC5/core_cm3.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
   86              		@ Naked Function: prologue and epilogue provided by programmer.
   87              		@ args = 0, pretend = 0, frame = 0
   88              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 11
 
 
  479:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  499:.\Generated_Source\PSoC5/core_cm3.c ****                   "BX  lr     \n\t" : : "r" (topOfMainStack) );
  500:.\Generated_Source\PSoC5/core_cm3.c **** }
  123              		.loc 1 500 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 12
 
 
  124              		.thumb
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  518:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Base Priority value
  519:.\Generated_Source\PSoC5/core_cm3.c ****  *
  520:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  basePri  BasePriority
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 13
 
 
  521:.\Generated_Source\PSoC5/core_cm3.c ****  *
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  195              	.LVL10:
  541:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
  542:.\Generated_Source\PSoC5/core_cm3.c **** }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 14
 
 
  196              		.loc 1 542 0
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  559:.\Generated_Source\PSoC5/core_cm3.c ****  * @return FaultMask
  560:.\Generated_Source\PSoC5/core_cm3.c ****  *
  561:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the fault mask register
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 15
 
 
  562:.\Generated_Source\PSoC5/core_cm3.c ****  */
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  581:.\Generated_Source\PSoC5/core_cm3.c **** }
  269              		.loc 1 581 0
  270              		.thumb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 16
 
 
  271 0004 7047     		bx	lr
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  599:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Control Register value
  600:.\Generated_Source\PSoC5/core_cm3.c ****  *
  601:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  control  Control value
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 17
 
 
  602:.\Generated_Source\PSoC5/core_cm3.c ****  *
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  340 0000 00BA     		rev r0, r0
  341              	@ 0 "" 2
  342              	.LVL19:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 18
 
 
  343              	.LVL20:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  379              		.thumb
  380              		.thumb_func
  381              		.type	__REVSH, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 19
 
 
  382              	__REVSH:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  668:.\Generated_Source\PSoC5/core_cm3.c **** {
  410              		.loc 1 668 0
  411              		.cfi_startproc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 20
 
 
  412              		@ args = 0, pretend = 0, frame = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  688:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
  689:.\Generated_Source\PSoC5/core_cm3.c **** }
  447              		.loc 1 689 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 21
 
 
  448              		.thumb
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  486              	__LDREXW:
  487              	.LFB18:
  706:.\Generated_Source\PSoC5/core_cm3.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 22
 
 
  707:.\Generated_Source\PSoC5/core_cm3.c **** /**
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  515              		.cfi_startproc
  516              		@ args = 0, pretend = 0, frame = 0
  517              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 23
 
 
  518              		@ link register save eliminated.
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  754:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
  755:.\Generated_Source\PSoC5/core_cm3.c **** }
  552              		.loc 1 755 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 24
 
 
  553              		.thumb
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  590 0004 08000000 		.4byte	.LVL1
  591 0008 0100     		.2byte	0x1
  592 000a 50       		.byte	0x50
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 25
 
 
  593 000b 00000000 		.4byte	0x0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  647 00a0 0100     		.2byte	0x1
  648 00a2 50       		.byte	0x50
  649 00a3 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 26
 
 
  650 00a7 00000000 		.4byte	0x0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  704 013a 50       		.byte	0x50
  705 013b 00000000 		.4byte	0x0
  706 013f 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 27
 
 
  707              	.LLST36:
@@ -1617,13 +1617,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  760 0006 00000000 		.4byte	.Ldebug_abbrev0
  761 000a 04       		.byte	0x4
  762 000b 01       		.uleb128 0x1
- 763 000c B8010000 		.4byte	.LASF44
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 28
+ 763 000c 6F010000 		.4byte	.LASF44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 28
 
 
  764 0010 01       		.byte	0x1
  765 0011 65000000 		.4byte	.LASF45
- 766 0015 F4000000 		.4byte	.LASF46
+ 766 0015 EC010000 		.4byte	.LASF46
  767 0019 00000000 		.4byte	0x0
  768 001d 00000000 		.4byte	0x0
  769 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -1631,9 +1631,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  771 0029 02       		.uleb128 0x2
  772 002a 01       		.byte	0x1
  773 002b 06       		.byte	0x6
- 774 002c 29020000 		.4byte	.LASF0
+ 774 002c E0010000 		.4byte	.LASF0
  775 0030 03       		.uleb128 0x3
- 776 0031 6F010000 		.4byte	.LASF2
+ 776 0031 26010000 		.4byte	.LASF2
  777 0035 02       		.byte	0x2
  778 0036 2A       		.byte	0x2a
  779 0037 3B000000 		.4byte	0x3b
@@ -1642,16 +1642,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  782 003d 08       		.byte	0x8
  783 003e 9B000000 		.4byte	.LASF1
  784 0042 03       		.uleb128 0x3
- 785 0043 88010000 		.4byte	.LASF3
+ 785 0043 3F010000 		.4byte	.LASF3
  786 0047 02       		.byte	0x2
  787 0048 35       		.byte	0x35
  788 0049 4D000000 		.4byte	0x4d
  789 004d 02       		.uleb128 0x2
  790 004e 02       		.byte	0x2
  791 004f 05       		.byte	0x5
- 792 0050 FB010000 		.4byte	.LASF4
+ 792 0050 B2010000 		.4byte	.LASF4
  793 0054 03       		.uleb128 0x3
- 794 0055 05020000 		.4byte	.LASF5
+ 794 0055 BC010000 		.4byte	.LASF5
  795 0059 02       		.byte	0x2
  796 005a 36       		.byte	0x36
  797 005b 5F000000 		.4byte	0x5f
@@ -1660,16 +1660,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  800 0061 07       		.byte	0x7
  801 0062 D9000000 		.4byte	.LASF6
  802 0066 03       		.uleb128 0x3
- 803 0067 99010000 		.4byte	.LASF7
+ 803 0067 50010000 		.4byte	.LASF7
  804 006b 02       		.byte	0x2
  805 006c 4F       		.byte	0x4f
  806 006d 71000000 		.4byte	0x71
  807 0071 02       		.uleb128 0x2
  808 0072 04       		.byte	0x4
  809 0073 05       		.byte	0x5
- 810 0074 17020000 		.4byte	.LASF8
+ 810 0074 CE010000 		.4byte	.LASF8
  811 0078 03       		.uleb128 0x3
- 812 0079 0E020000 		.4byte	.LASF9
+ 812 0079 C5010000 		.4byte	.LASF9
  813 007d 02       		.byte	0x2
  814 007e 50       		.byte	0x50
  815 007f 83000000 		.4byte	0x83
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  818 0085 07       		.byte	0x7
  819 0086 C7000000 		.4byte	.LASF10
  820 008a 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 29
 
 
  821 008b 08       		.byte	0x8
@@ -1687,7 +1687,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  824 0091 02       		.uleb128 0x2
  825 0092 08       		.byte	0x8
  826 0093 07       		.byte	0x7
- 827 0094 58010000 		.4byte	.LASF12
+ 827 0094 0F010000 		.4byte	.LASF12
  828 0098 04       		.uleb128 0x4
  829 0099 04       		.byte	0x4
  830 009a 05       		.byte	0x5
@@ -1695,10 +1695,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  832 009f 02       		.uleb128 0x2
  833 00a0 04       		.byte	0x4
  834 00a1 07       		.byte	0x7
- 835 00a2 4B010000 		.4byte	.LASF13
+ 835 00a2 02010000 		.4byte	.LASF13
  836 00a6 05       		.uleb128 0x5
  837 00a7 01       		.byte	0x1
- 838 00a8 7E010000 		.4byte	.LASF14
+ 838 00a8 35010000 		.4byte	.LASF14
  839 00ac 01       		.byte	0x1
  840 00ad BB01     		.2byte	0x1bb
  841 00af 01       		.byte	0x1
@@ -1709,7 +1709,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  846 00bd 5D       		.byte	0x5d
  847 00be D3000000 		.4byte	0xd3
  848 00c2 06       		.uleb128 0x6
- 849 00c3 77010000 		.4byte	.LASF16
+ 849 00c3 2E010000 		.4byte	.LASF16
  850 00c7 01       		.byte	0x1
  851 00c8 BD01     		.2byte	0x1bd
  852 00ca 78000000 		.4byte	0x78
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  875 00fb 01       		.byte	0x1
  876 00fc 51000000 		.4byte	.LASF15
  877 0100 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 30
 
 
  878 0101 DD01     		.2byte	0x1dd
@@ -1750,7 +1750,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  884 0111 5D       		.byte	0x5d
  885 0112 27010000 		.4byte	0x127
  886 0116 06       		.uleb128 0x6
- 887 0117 77010000 		.4byte	.LASF16
+ 887 0117 2E010000 		.4byte	.LASF16
  888 011b 01       		.byte	0x1
  889 011c DF01     		.2byte	0x1df
  890 011e 78000000 		.4byte	0x78
@@ -1768,7 +1768,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  902 013a 5D       		.byte	0x5d
  903 013b 4E010000 		.4byte	0x14e
  904 013f 08       		.uleb128 0x8
- 905 0140 A9010000 		.4byte	.LASF20
+ 905 0140 60010000 		.4byte	.LASF20
  906 0144 01       		.byte	0x1
  907 0145 F001     		.2byte	0x1f0
  908 0147 78000000 		.4byte	0x78
@@ -1777,7 +1777,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  911 014d 00       		.byte	0x0
  912 014e 05       		.uleb128 0x5
  913 014f 01       		.byte	0x1
- 914 0150 ED010000 		.4byte	.LASF21
+ 914 0150 A4010000 		.4byte	.LASF21
  915 0154 01       		.byte	0x1
  916 0155 FD01     		.2byte	0x1fd
  917 0157 01       		.byte	0x1
@@ -1788,7 +1788,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  922 0165 5D       		.byte	0x5d
  923 0166 7B010000 		.4byte	0x17b
  924 016a 06       		.uleb128 0x6
- 925 016b 77010000 		.4byte	.LASF16
+ 925 016b 2E010000 		.4byte	.LASF16
  926 016f 01       		.byte	0x1
  927 0170 FF01     		.2byte	0x1ff
  928 0172 78000000 		.4byte	0x78
@@ -1796,9 +1796,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  930 017a 00       		.byte	0x0
  931 017b 07       		.uleb128 0x7
  932 017c 01       		.byte	0x1
- 933 017d 3D010000 		.4byte	.LASF22
+ 933 017d F4000000 		.4byte	.LASF22
  934 0181 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 31
 
 
  935 0182 0C02     		.2byte	0x20c
@@ -1829,7 +1829,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  960 01b9 5D       		.byte	0x5d
  961 01ba CF010000 		.4byte	0x1cf
  962 01be 06       		.uleb128 0x6
- 963 01bf 77010000 		.4byte	.LASF16
+ 963 01bf 2E010000 		.4byte	.LASF16
  964 01c3 01       		.byte	0x1
  965 01c4 1A02     		.2byte	0x21a
  966 01c6 78000000 		.4byte	0x78
@@ -1837,7 +1837,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  968 01ce 00       		.byte	0x0
  969 01cf 07       		.uleb128 0x7
  970 01d0 01       		.byte	0x1
- 971 01d1 C4010000 		.4byte	.LASF25
+ 971 01d1 7B010000 		.4byte	.LASF25
  972 01d5 01       		.byte	0x1
  973 01d6 2702     		.2byte	0x227
  974 01d8 01       		.byte	0x1
@@ -1856,9 +1856,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  987 01f5 00       		.byte	0x0
  988 01f6 05       		.uleb128 0x5
  989 01f7 01       		.byte	0x1
- 990 01f8 47020000 		.4byte	.LASF27
+ 990 01f8 62020000 		.4byte	.LASF27
  991 01fc 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 32
 
 
  992 01fd 3302     		.2byte	0x233
@@ -1870,7 +1870,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  998 020d 5D       		.byte	0x5d
  999 020e 23020000 		.4byte	0x223
  1000 0212 06       		.uleb128 0x6
- 1001 0213 77010000 		.4byte	.LASF16
+ 1001 0213 2E010000 		.4byte	.LASF16
  1002 0217 01       		.byte	0x1
  1003 0218 3502     		.2byte	0x235
  1004 021a 78000000 		.4byte	0x78
@@ -1897,7 +1897,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1025 0249 00       		.byte	0x0
  1026 024a 05       		.uleb128 0x5
  1027 024b 01       		.byte	0x1
- 1028 024c D8010000 		.4byte	.LASF30
+ 1028 024c 8F010000 		.4byte	.LASF30
  1029 0250 01       		.byte	0x1
  1030 0251 4E02     		.2byte	0x24e
  1031 0253 01       		.byte	0x1
@@ -1908,7 +1908,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1036 0261 5D       		.byte	0x5d
  1037 0262 77020000 		.4byte	0x277
  1038 0266 06       		.uleb128 0x6
- 1039 0267 77010000 		.4byte	.LASF16
+ 1039 0267 2E010000 		.4byte	.LASF16
  1040 026b 01       		.byte	0x1
  1041 026c 5002     		.2byte	0x250
  1042 026e 78000000 		.4byte	0x78
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1046 0278 01       		.byte	0x1
  1047 0279 13000000 		.4byte	.LASF31
  1048 027d 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 33
 
 
  1049 027e 5D02     		.2byte	0x25d
@@ -1938,7 +1938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1063 029d 00       		.byte	0x0
  1064 029e 05       		.uleb128 0x5
  1065 029f 01       		.byte	0x1
- 1066 02a0 D2010000 		.4byte	.LASF33
+ 1066 02a0 89010000 		.4byte	.LASF33
  1067 02a4 01       		.byte	0x1
  1068 02a5 6B02     		.2byte	0x26b
  1069 02a7 01       		.byte	0x1
@@ -1955,7 +1955,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1080 02c2 78000000 		.4byte	0x78
  1081 02c6 72000000 		.4byte	.LLST19
  1082 02ca 06       		.uleb128 0x6
- 1083 02cb 77010000 		.4byte	.LASF16
+ 1083 02cb 2E010000 		.4byte	.LASF16
  1084 02cf 01       		.byte	0x1
  1085 02d0 6D02     		.2byte	0x26d
  1086 02d2 78000000 		.4byte	0x78
@@ -1978,12 +1978,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1103 02fc 01       		.byte	0x1
  1104 02fd 7B02     		.2byte	0x27b
  1105 02ff 54000000 		.4byte	0x54
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 34
 
 
  1106 0303 98000000 		.4byte	.LLST22
  1107 0307 06       		.uleb128 0x6
- 1108 0308 77010000 		.4byte	.LASF16
+ 1108 0308 2E010000 		.4byte	.LASF16
  1109 030c 01       		.byte	0x1
  1110 030d 7D02     		.2byte	0x27d
  1111 030f 78000000 		.4byte	0x78
@@ -1991,7 +1991,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1113 0317 00       		.byte	0x0
  1114 0318 05       		.uleb128 0x5
  1115 0319 01       		.byte	0x1
- 1116 031a A1010000 		.4byte	.LASF35
+ 1116 031a 58010000 		.4byte	.LASF35
  1117 031e 01       		.byte	0x1
  1118 031f 8B02     		.2byte	0x28b
  1119 0321 01       		.byte	0x1
@@ -2008,7 +2008,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1130 033c 42000000 		.4byte	0x42
  1131 0340 BE000000 		.4byte	.LLST25
  1132 0344 06       		.uleb128 0x6
- 1133 0345 77010000 		.4byte	.LASF16
+ 1133 0345 2E010000 		.4byte	.LASF16
  1134 0349 01       		.byte	0x1
  1135 034a 8D02     		.2byte	0x28d
  1136 034c 78000000 		.4byte	0x78
@@ -2016,7 +2016,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1138 0354 00       		.byte	0x0
  1139 0355 05       		.uleb128 0x5
  1140 0356 01       		.byte	0x1
- 1141 0357 E6010000 		.4byte	.LASF36
+ 1141 0357 9D010000 		.4byte	.LASF36
  1142 035b 01       		.byte	0x1
  1143 035c 9B02     		.2byte	0x29b
  1144 035e 01       		.byte	0x1
@@ -2033,18 +2033,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1155 0379 78000000 		.4byte	0x78
  1156 037d E4000000 		.4byte	.LLST28
  1157 0381 06       		.uleb128 0x6
- 1158 0382 77010000 		.4byte	.LASF16
+ 1158 0382 2E010000 		.4byte	.LASF16
  1159 0386 01       		.byte	0x1
  1160 0387 9D02     		.2byte	0x29d
  1161 0389 78000000 		.4byte	0x78
  1162 038d F7000000 		.4byte	.LLST29
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 35
 
 
  1163 0391 00       		.byte	0x0
  1164 0392 05       		.uleb128 0x5
  1165 0393 01       		.byte	0x1
- 1166 0394 35020000 		.4byte	.LASF37
+ 1166 0394 50020000 		.4byte	.LASF37
  1167 0398 01       		.byte	0x1
  1168 0399 AB02     		.2byte	0x2ab
  1169 039b 01       		.byte	0x1
@@ -2061,7 +2061,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1180 03b6 CB030000 		.4byte	0x3cb
  1181 03ba 0A010000 		.4byte	.LLST31
  1182 03be 0A       		.uleb128 0xa
- 1183 03bf 77010000 		.4byte	.LASF16
+ 1183 03bf 2E010000 		.4byte	.LASF16
  1184 03c3 01       		.byte	0x1
  1185 03c4 AD02     		.2byte	0x2ad
  1186 03c6 30000000 		.4byte	0x30
@@ -2071,7 +2071,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1190 03cd 30000000 		.4byte	0x30
  1191 03d1 05       		.uleb128 0x5
  1192 03d2 01       		.byte	0x1
- 1193 03d3 57020000 		.4byte	.LASF39
+ 1193 03d3 72020000 		.4byte	.LASF39
  1194 03d7 01       		.byte	0x1
  1195 03d8 BB02     		.2byte	0x2bb
  1196 03da 01       		.byte	0x1
@@ -2088,7 +2088,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1207 03f5 0A040000 		.4byte	0x40a
  1208 03f9 1D010000 		.4byte	.LLST33
  1209 03fd 0A       		.uleb128 0xa
- 1210 03fe 77010000 		.4byte	.LASF16
+ 1210 03fe 2E010000 		.4byte	.LASF16
  1211 0402 01       		.byte	0x1
  1212 0403 BD02     		.2byte	0x2bd
  1213 0405 54000000 		.4byte	0x54
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1217 040c 54000000 		.4byte	0x54
  1218 0410 05       		.uleb128 0x5
  1219 0411 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 36
 
 
  1220 0412 27000000 		.4byte	.LASF40
@@ -2118,7 +2118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1234 0434 4D040000 		.4byte	0x44d
  1235 0438 30010000 		.4byte	.LLST35
  1236 043c 06       		.uleb128 0x6
- 1237 043d 77010000 		.4byte	.LASF16
+ 1237 043d 2E010000 		.4byte	.LASF16
  1238 0441 01       		.byte	0x1
  1239 0442 CD02     		.2byte	0x2cd
  1240 0444 78000000 		.4byte	0x78
@@ -2129,7 +2129,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1245 044f 78000000 		.4byte	0x78
  1246 0453 05       		.uleb128 0x5
  1247 0454 01       		.byte	0x1
- 1248 0455 3E020000 		.4byte	.LASF41
+ 1248 0455 59020000 		.4byte	.LASF41
  1249 0459 01       		.byte	0x1
  1250 045a DC02     		.2byte	0x2dc
  1251 045c 01       		.byte	0x1
@@ -2153,18 +2153,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1269 048b 01       		.byte	0x1
  1270 048c 51       		.byte	0x51
  1271 048d 06       		.uleb128 0x6
- 1272 048e 77010000 		.4byte	.LASF16
+ 1272 048e 2E010000 		.4byte	.LASF16
  1273 0492 01       		.byte	0x1
  1274 0493 DE02     		.2byte	0x2de
  1275 0495 78000000 		.4byte	0x78
  1276 0499 69010000 		.4byte	.LLST39
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 37
 
 
  1277 049d 00       		.byte	0x0
  1278 049e 05       		.uleb128 0x5
  1279 049f 01       		.byte	0x1
- 1280 04a0 90010000 		.4byte	.LASF42
+ 1280 04a0 47010000 		.4byte	.LASF42
  1281 04a4 01       		.byte	0x1
  1282 04a5 ED02     		.2byte	0x2ed
  1283 04a7 01       		.byte	0x1
@@ -2188,7 +2188,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1301 04d6 01       		.byte	0x1
  1302 04d7 51       		.byte	0x51
  1303 04d8 06       		.uleb128 0x6
- 1304 04d9 77010000 		.4byte	.LASF16
+ 1304 04d9 2E010000 		.4byte	.LASF16
  1305 04dd 01       		.byte	0x1
  1306 04de EF02     		.2byte	0x2ef
  1307 04e0 78000000 		.4byte	0x78
@@ -2196,7 +2196,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1309 04e8 00       		.byte	0x0
  1310 04e9 0C       		.uleb128 0xc
  1311 04ea 01       		.byte	0x1
- 1312 04eb 20020000 		.4byte	.LASF43
+ 1312 04eb D7010000 		.4byte	.LASF43
  1313 04ef 01       		.byte	0x1
  1314 04f0 FE02     		.2byte	0x2fe
  1315 04f2 01       		.byte	0x1
@@ -2218,11 +2218,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1331 0519 4D040000 		.4byte	0x44d
  1332 051d 01       		.byte	0x1
  1333 051e 51       		.byte	0x51
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 38
 
 
  1334 051f 06       		.uleb128 0x6
- 1335 0520 77010000 		.4byte	.LASF16
+ 1335 0520 2E010000 		.4byte	.LASF16
  1336 0524 01       		.byte	0x1
  1337 0525 0003     		.2byte	0x300
  1338 0527 78000000 		.4byte	0x78
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1388 002d 04       		.uleb128 0x4
  1389 002e 24       		.uleb128 0x24
  1390 002f 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 39
 
 
  1391 0030 0B       		.uleb128 0xb
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1445 0066 0E       		.uleb128 0xe
  1446 0067 3A       		.uleb128 0x3a
  1447 0068 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 40
 
 
  1448 0069 3B       		.uleb128 0x3b
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1502 009f 13       		.uleb128 0x13
  1503 00a0 00       		.byte	0x0
  1504 00a1 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 41
 
 
  1505 00a2 0B       		.uleb128 0xb
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1551 0046 4E010000 		.4byte	0x14e
  1552 004a 5F5F6765 		.ascii	"__get_BASEPRI\000"
  1552      745F4241 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 42
 
 
  1552      53455052 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1578 0118 5F5F4C44 		.ascii	"__LDREXH\000"
  1578      52455848 
  1578      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 43
 
 
  1579 0121 10040000 		.4byte	0x410
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1625 0084 04000000 		.4byte	.LFE14-.LFB14
  1626 0088 00000000 		.4byte	.LFB15
  1627 008c 06000000 		.4byte	.LFE15-.LFB15
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 44
 
 
  1628 0090 00000000 		.4byte	.LFB16
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1682 0098 00000000 		.4byte	.LFB18
  1683 009c 06000000 		.4byte	.LFE18
  1684 00a0 00000000 		.4byte	.LFB19
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 45
 
 
  1685 00a4 06000000 		.4byte	.LFE19
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1715              	.LASF17:
  1716 0089 5F5F7365 		.ascii	"__set_PSP\000"
  1716      745F5053 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 46
 
 
  1716      5000
@@ -2735,131 +2735,133 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
  1729              	.LASF32:
  1730 00ec 636F6E74 		.ascii	"control\000"
  1730      726F6C00 
- 1731              	.LASF46:
- 1732 00f4 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 1732      665C486F 
- 1732      6D655C44 
- 1732      65736B74 
- 1732      6F705C4B 
- 1733 0121 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
- 1733      69745072 
- 1733      6F675F42 
- 1733      6F6F746C 
- 1733      6F616465 
- 1734              	.LASF22:
- 1735 013d 5F5F7365 		.ascii	"__set_BASEPRI\000"
- 1735      745F4241 
- 1735      53455052 
- 1735      4900
- 1736              	.LASF13:
- 1737 014b 756E7369 		.ascii	"unsigned int\000"
- 1737      676E6564 
- 1737      20696E74 
- 1737      00
- 1738              	.LASF12:
- 1739 0158 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 47
+ 1731              	.LASF22:
+ 1732 00f4 5F5F7365 		.ascii	"__set_BASEPRI\000"
+ 1732      745F4241 
+ 1732      53455052 
+ 1732      4900
+ 1733              	.LASF13:
+ 1734 0102 756E7369 		.ascii	"unsigned int\000"
+ 1734      676E6564 
+ 1734      20696E74 
+ 1734      00
+ 1735              	.LASF12:
+ 1736 010f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1736      206C6F6E 
+ 1736      6720756E 
+ 1736      7369676E 
+ 1736      65642069 
+ 1737              	.LASF2:
+ 1738 0126 75696E74 		.ascii	"uint8_t\000"
+ 1738      385F7400 
+ 1739              	.LASF16:
+ 1740 012e 72657375 		.ascii	"result\000"
+ 1740      6C7400
+ 1741              	.LASF14:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 47
 
 
- 1739      206C6F6E 
- 1739      6720756E 
- 1739      7369676E 
- 1739      65642069 
- 1740              	.LASF2:
- 1741 016f 75696E74 		.ascii	"uint8_t\000"
- 1741      385F7400 
- 1742              	.LASF16:
- 1743 0177 72657375 		.ascii	"result\000"
- 1743      6C7400
- 1744              	.LASF14:
- 1745 017e 5F5F6765 		.ascii	"__get_PSP\000"
- 1745      745F5053 
- 1745      5000
- 1746              	.LASF3:
- 1747 0188 696E7431 		.ascii	"int16_t\000"
- 1747      365F7400 
- 1748              	.LASF42:
- 1749 0190 5F5F5354 		.ascii	"__STREXH\000"
- 1749      52455848 
- 1749      00
- 1750              	.LASF7:
- 1751 0199 696E7433 		.ascii	"int32_t\000"
- 1751      325F7400 
- 1752              	.LASF35:
- 1753 01a1 5F5F5245 		.ascii	"__REVSH\000"
- 1753      56534800 
- 1754              	.LASF20:
- 1755 01a9 746F704F 		.ascii	"topOfMainStack\000"
- 1755      664D6169 
- 1755      6E537461 
- 1755      636B00
- 1756              	.LASF44:
- 1757 01b8 474E5520 		.ascii	"GNU C 4.4.1\000"
- 1757      4320342E 
- 1757      342E3100 
- 1758              	.LASF25:
- 1759 01c4 5F5F7365 		.ascii	"__set_PRIMASK\000"
- 1759      745F5052 
- 1759      494D4153 
- 1759      4B00
- 1760              	.LASF33:
- 1761 01d2 5F5F5245 		.ascii	"__REV\000"
- 1761      5600
- 1762              	.LASF30:
- 1763 01d8 5F5F6765 		.ascii	"__get_CONTROL\000"
- 1763      745F434F 
- 1763      4E54524F 
- 1763      4C00
- 1764              	.LASF36:
- 1765 01e6 5F5F5242 		.ascii	"__RBIT\000"
- 1765      495400
- 1766              	.LASF21:
- 1767 01ed 5F5F6765 		.ascii	"__get_BASEPRI\000"
- 1767      745F4241 
- 1767      53455052 
- 1767      4900
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 48
+ 1742 0135 5F5F6765 		.ascii	"__get_PSP\000"
+ 1742      745F5053 
+ 1742      5000
+ 1743              	.LASF3:
+ 1744 013f 696E7431 		.ascii	"int16_t\000"
+ 1744      365F7400 
+ 1745              	.LASF42:
+ 1746 0147 5F5F5354 		.ascii	"__STREXH\000"
+ 1746      52455848 
+ 1746      00
+ 1747              	.LASF7:
+ 1748 0150 696E7433 		.ascii	"int32_t\000"
+ 1748      325F7400 
+ 1749              	.LASF35:
+ 1750 0158 5F5F5245 		.ascii	"__REVSH\000"
+ 1750      56534800 
+ 1751              	.LASF20:
+ 1752 0160 746F704F 		.ascii	"topOfMainStack\000"
+ 1752      664D6169 
+ 1752      6E537461 
+ 1752      636B00
+ 1753              	.LASF44:
+ 1754 016f 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1754      4320342E 
+ 1754      342E3100 
+ 1755              	.LASF25:
+ 1756 017b 5F5F7365 		.ascii	"__set_PRIMASK\000"
+ 1756      745F5052 
+ 1756      494D4153 
+ 1756      4B00
+ 1757              	.LASF33:
+ 1758 0189 5F5F5245 		.ascii	"__REV\000"
+ 1758      5600
+ 1759              	.LASF30:
+ 1760 018f 5F5F6765 		.ascii	"__get_CONTROL\000"
+ 1760      745F434F 
+ 1760      4E54524F 
+ 1760      4C00
+ 1761              	.LASF36:
+ 1762 019d 5F5F5242 		.ascii	"__RBIT\000"
+ 1762      495400
+ 1763              	.LASF21:
+ 1764 01a4 5F5F6765 		.ascii	"__get_BASEPRI\000"
+ 1764      745F4241 
+ 1764      53455052 
+ 1764      4900
+ 1765              	.LASF4:
+ 1766 01b2 73686F72 		.ascii	"short int\000"
+ 1766      7420696E 
+ 1766      7400
+ 1767              	.LASF5:
+ 1768 01bc 75696E74 		.ascii	"uint16_t\000"
+ 1768      31365F74 
+ 1768      00
+ 1769              	.LASF9:
+ 1770 01c5 75696E74 		.ascii	"uint32_t\000"
+ 1770      33325F74 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJbAaki.s 			page 48
 
 
- 1768              	.LASF4:
- 1769 01fb 73686F72 		.ascii	"short int\000"
- 1769      7420696E 
- 1769      7400
- 1770              	.LASF5:
- 1771 0205 75696E74 		.ascii	"uint16_t\000"
- 1771      31365F74 
- 1771      00
- 1772              	.LASF9:
- 1773 020e 75696E74 		.ascii	"uint32_t\000"
- 1773      33325F74 
- 1773      00
- 1774              	.LASF8:
- 1775 0217 6C6F6E67 		.ascii	"long int\000"
- 1775      20696E74 
- 1775      00
- 1776              	.LASF43:
- 1777 0220 5F5F5354 		.ascii	"__STREXW\000"
- 1777      52455857 
- 1777      00
- 1778              	.LASF0:
- 1779 0229 7369676E 		.ascii	"signed char\000"
- 1779      65642063 
- 1779      68617200 
- 1780              	.LASF37:
- 1781 0235 5F5F4C44 		.ascii	"__LDREXB\000"
- 1781      52455842 
- 1781      00
- 1782              	.LASF41:
- 1783 023e 5F5F5354 		.ascii	"__STREXB\000"
- 1783      52455842 
- 1783      00
- 1784              	.LASF27:
- 1785 0247 5F5F6765 		.ascii	"__get_FAULTMASK\000"
- 1785      745F4641 
- 1785      554C544D 
- 1785      41534B00 
- 1786              	.LASF39:
- 1787 0257 5F5F4C44 		.ascii	"__LDREXH\000"
- 1787      52455848 
- 1787      00
- 1788              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 1770      00
+ 1771              	.LASF8:
+ 1772 01ce 6C6F6E67 		.ascii	"long int\000"
+ 1772      20696E74 
+ 1772      00
+ 1773              	.LASF43:
+ 1774 01d7 5F5F5354 		.ascii	"__STREXW\000"
+ 1774      52455857 
+ 1774      00
+ 1775              	.LASF0:
+ 1776 01e0 7369676E 		.ascii	"signed char\000"
+ 1776      65642063 
+ 1776      68617200 
+ 1777              	.LASF46:
+ 1778 01ec 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 1778      665C486F 
+ 1778      6D655C44 
+ 1778      65736B74 
+ 1778      6F705C55 
+ 1779 0219 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg_Bootloader"
+ 1779      50726F67 
+ 1779      20766572 
+ 1779      73696F6E 
+ 1779      20325F30 
+ 1780 0249 2E637964 		.ascii	".cydsn\000"
+ 1780      736E00
+ 1781              	.LASF37:
+ 1782 0250 5F5F4C44 		.ascii	"__LDREXB\000"
+ 1782      52455842 
+ 1782      00
+ 1783              	.LASF41:
+ 1784 0259 5F5F5354 		.ascii	"__STREXB\000"
+ 1784      52455842 
+ 1784      00
+ 1785              	.LASF27:
+ 1786 0262 5F5F6765 		.ascii	"__get_FAULTMASK\000"
+ 1786      745F4641 
+ 1786      554C544D 
+ 1786      41534B00 
+ 1787              	.LASF39:
+ 1788 0272 5F5F4C44 		.ascii	"__LDREXH\000"
+ 1788      52455848 
+ 1788      00
+ 1789              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

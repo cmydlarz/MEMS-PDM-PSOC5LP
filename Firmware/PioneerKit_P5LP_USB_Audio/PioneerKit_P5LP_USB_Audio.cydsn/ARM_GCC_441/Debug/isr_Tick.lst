@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
   20:.\Generated_Source\PSoC5/isr_Tick.c **** #include <CYLIB.H>
   21:.\Generated_Source\PSoC5/isr_Tick.c **** #include <isr_Tick.H>
   22:.\Generated_Source\PSoC5/isr_Tick.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/isr_Tick.c **** #if !defined(isr_Tick__REMOVED) /* Check for removal by optimization */
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
   63:.\Generated_Source\PSoC5/isr_Tick.c ****     isr_Tick_SetVector(&isr_Tick_Interrupt);
   46              		.loc 1 63 0
   47 0008 40F20000 		movw	r0, #:lower16:isr_Tick_Interrupt
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 3
 
 
   48 000c C0F20000 		movt	r0, #:upper16:isr_Tick_Interrupt
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
   77              		.cfi_def_cfa_offset 16
   78 0004 00AF     		add	r7, sp, #0
   79              		.cfi_offset 14, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 4
 
 
   80              		.cfi_offset 7, -8
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  114:.\Generated_Source\PSoC5/isr_Tick.c **** *
  115:.\Generated_Source\PSoC5/isr_Tick.c **** *******************************************************************************/
  116:.\Generated_Source\PSoC5/isr_Tick.c **** void isr_Tick_Stop(void)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 5
 
 
  117:.\Generated_Source\PSoC5/isr_Tick.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  140:.\Generated_Source\PSoC5/isr_Tick.c **** *
  141:.\Generated_Source\PSoC5/isr_Tick.c **** *******************************************************************************/
  142:.\Generated_Source\PSoC5/isr_Tick.c **** CY_ISR(isr_Tick_Interrupt)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 6
 
 
  143:.\Generated_Source\PSoC5/isr_Tick.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  168              		.cfi_startproc
  169              		@ args = 0, pretend = 0, frame = 16
  170              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 7
 
 
  171              		@ link register save eliminated.
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  185:.\Generated_Source\PSoC5/isr_Tick.c **** *   None
  186:.\Generated_Source\PSoC5/isr_Tick.c **** *
  187:.\Generated_Source\PSoC5/isr_Tick.c **** * Return:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 8
 
 
  188:.\Generated_Source\PSoC5/isr_Tick.c **** *   Address of the ISR in the interrupt vector table.
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  201:.\Generated_Source\PSoC5/isr_Tick.c **** /*******************************************************************************
  202:.\Generated_Source\PSoC5/isr_Tick.c **** * Function Name: isr_Tick_SetPriority
  203:.\Generated_Source\PSoC5/isr_Tick.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 9
 
 
  204:.\Generated_Source\PSoC5/isr_Tick.c **** *
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  285              		.thumb
  286              		.thumb_func
  287              		.type	isr_Tick_GetPriority, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 10
 
 
  288              	isr_Tick_GetPriority:
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  317 0020 BD46     		mov	sp, r7
  318 0022 80BC     		pop	{r7}
  319 0024 7047     		bx	lr
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 11
 
 
  320              		.cfi_endproc
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  353              	.LFE8:
  354              		.size	isr_Tick_Enable, .-isr_Tick_Enable
  355              		.section	.text.isr_Tick_GetState,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 12
 
 
  356              		.align	2
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  389 0022 BD46     		mov	sp, r7
  390 0024 80BC     		pop	{r7}
  391 0026 7047     		bx	lr
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 13
 
 
  392              		.cfi_endproc
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  425              	.LFE10:
  426              		.size	isr_Tick_Disable, .-isr_Tick_Disable
  427              		.section	.text.isr_Tick_SetPending,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 14
 
 
  428              		.align	2
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  461              		.global	isr_Tick_ClearPending
  462              		.thumb
  463              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 15
 
 
  464              		.type	isr_Tick_ClearPending, %function
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  498 0008 0100     		.2byte	0x1
  499 000a 5D       		.byte	0x5d
  500 000b 02000000 		.4byte	.LCFI0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 16
 
 
  501 000f 04000000 		.4byte	.LCFI1
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  555 0097 5D       		.byte	0x5d
  556 0098 02000000 		.4byte	.LCFI7
  557 009c 04000000 		.4byte	.LCFI8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 17
 
 
  558 00a0 0200     		.2byte	0x2
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  612              	.LLST6:
  613 0126 00000000 		.4byte	.LFB6
  614 012a 02000000 		.4byte	.LCFI15
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 18
 
 
  615 012e 0100     		.2byte	0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  669 01b5 77       		.byte	0x77
  670 01b6 04       		.sleb128 4
  671 01b7 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 19
 
 
  672 01bb 00000000 		.4byte	0x0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  726 0244 02000000 		.4byte	.LCFI29
  727 0248 0100     		.2byte	0x1
  728 024a 5D       		.byte	0x5d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 20
 
 
  729 024b 02000000 		.4byte	.LCFI29
@@ -1160,10 +1160,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  745 0006 00000000 		.4byte	.Ldebug_abbrev0
  746 000a 04       		.byte	0x4
  747 000b 01       		.uleb128 0x1
- 748 000c 8A010000 		.4byte	.LASF29
+ 748 000c 92010000 		.4byte	.LASF29
  749 0010 01       		.byte	0x1
- 750 0011 DF010000 		.4byte	.LASF30
- 751 0015 68000000 		.4byte	.LASF31
+ 750 0011 E7010000 		.4byte	.LASF30
+ 751 0015 1E000000 		.4byte	.LASF31
  752 0019 00000000 		.4byte	0x0
  753 001d 00000000 		.4byte	0x0
  754 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -1171,19 +1171,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  756 0029 02       		.uleb128 0x2
  757 002a 01       		.byte	0x1
  758 002b 06       		.byte	0x6
- 759 002c 3B020000 		.4byte	.LASF0
+ 759 002c 43020000 		.4byte	.LASF0
  760 0030 02       		.uleb128 0x2
  761 0031 01       		.byte	0x1
  762 0032 08       		.byte	0x8
- 763 0033 5A000000 		.4byte	.LASF1
+ 763 0033 C2000000 		.4byte	.LASF1
  764 0037 02       		.uleb128 0x2
  765 0038 02       		.byte	0x2
  766 0039 05       		.byte	0x5
- 767 003a 03020000 		.4byte	.LASF2
+ 767 003a 0B020000 		.4byte	.LASF2
  768 003e 02       		.uleb128 0x2
  769 003f 02       		.byte	0x2
  770 0040 07       		.byte	0x7
- 771 0041 1E000000 		.4byte	.LASF3
+ 771 0041 86000000 		.4byte	.LASF3
  772 0045 03       		.uleb128 0x3
  773 0046 04       		.byte	0x4
  774 0047 05       		.byte	0x5
@@ -1191,29 +1191,29 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  776 004c 02       		.uleb128 0x2
  777 004d 04       		.byte	0x4
  778 004e 07       		.byte	0x7
- 779 004f 20010000 		.4byte	.LASF4
+ 779 004f 28010000 		.4byte	.LASF4
  780 0053 02       		.uleb128 0x2
  781 0054 08       		.byte	0x8
  782 0055 05       		.byte	0x5
  783 0056 00000000 		.4byte	.LASF5
  784 005a 02       		.uleb128 0x2
  785 005b 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 21
 
 
  786 005c 07       		.byte	0x7
- 787 005d 3F010000 		.4byte	.LASF6
+ 787 005d 47010000 		.4byte	.LASF6
  788 0061 02       		.uleb128 0x2
  789 0062 04       		.byte	0x4
  790 0063 05       		.byte	0x5
- 791 0064 0D020000 		.4byte	.LASF7
+ 791 0064 15020000 		.4byte	.LASF7
  792 0068 04       		.uleb128 0x4
  793 0069 04       		.byte	0x4
  794 006a 07       		.byte	0x7
  795 006b 02       		.uleb128 0x2
  796 006c 04       		.byte	0x4
  797 006d 07       		.byte	0x7
- 798 006e D0000000 		.4byte	.LASF8
+ 798 006e D8000000 		.4byte	.LASF8
  799 0072 05       		.uleb128 0x5
  800 0073 01       		.byte	0x1
  801 0074 06       		.uleb128 0x6
@@ -1222,28 +1222,28 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  804 007a 02       		.uleb128 0x2
  805 007b 01       		.byte	0x1
  806 007c 08       		.byte	0x8
- 807 007d 96010000 		.4byte	.LASF9
+ 807 007d 9E010000 		.4byte	.LASF9
  808 0081 07       		.uleb128 0x7
- 809 0082 E2000000 		.4byte	.LASF12
+ 809 0082 EA000000 		.4byte	.LASF12
  810 0086 02       		.byte	0x2
  811 0087 4C       		.byte	0x4c
  812 0088 30000000 		.4byte	0x30
  813 008c 02       		.uleb128 0x2
  814 008d 04       		.byte	0x4
  815 008e 04       		.byte	0x4
- 816 008f 54000000 		.4byte	.LASF10
+ 816 008f BC000000 		.4byte	.LASF10
  817 0093 02       		.uleb128 0x2
  818 0094 08       		.byte	0x8
  819 0095 04       		.byte	0x4
- 820 0096 19010000 		.4byte	.LASF11
+ 820 0096 21010000 		.4byte	.LASF11
  821 009a 07       		.uleb128 0x7
- 822 009b 7D010000 		.4byte	.LASF13
+ 822 009b 85010000 		.4byte	.LASF13
  823 009f 02       		.byte	0x2
  824 00a0 EB       		.byte	0xeb
  825 00a1 74000000 		.4byte	0x74
  826 00a5 08       		.uleb128 0x8
  827 00a6 01       		.byte	0x1
- 828 00a7 BD010000 		.4byte	.LASF14
+ 828 00a7 C5010000 		.4byte	.LASF14
  829 00ab 01       		.byte	0x1
  830 00ac 39       		.byte	0x39
  831 00ad 01       		.byte	0x1
@@ -1252,19 +1252,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  834 00b6 00000000 		.4byte	.LLST0
  835 00ba 09       		.uleb128 0x9
  836 00bb 01       		.byte	0x1
- 837 00bc 6C010000 		.4byte	.LASF17
+ 837 00bc 74010000 		.4byte	.LASF17
  838 00c0 01       		.byte	0x1
  839 00c1 57       		.byte	0x57
  840 00c2 01       		.byte	0x1
  841 00c3 00000000 		.4byte	.LFB1
  842 00c7 26000000 		.4byte	.LFE1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 22
 
 
  843 00cb 2B000000 		.4byte	.LLST1
  844 00cf E2000000 		.4byte	0xe2
  845 00d3 0A       		.uleb128 0xa
- 846 00d4 C8000000 		.4byte	.LASF19
+ 846 00d4 D0000000 		.4byte	.LASF19
  847 00d8 01       		.byte	0x1
  848 00d9 57       		.byte	0x57
  849 00da 9A000000 		.4byte	0x9a
@@ -1274,7 +1274,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  853 00e1 00       		.byte	0x0
  854 00e2 08       		.uleb128 0x8
  855 00e3 01       		.byte	0x1
- 856 00e4 46000000 		.4byte	.LASF15
+ 856 00e4 AE000000 		.4byte	.LASF15
  857 00e8 01       		.byte	0x1
  858 00e9 74       		.byte	0x74
  859 00ea 01       		.byte	0x1
@@ -1283,7 +1283,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  862 00f3 62000000 		.4byte	.LLST2
  863 00f7 08       		.uleb128 0x8
  864 00f8 01       		.byte	0x1
- 865 00f9 CC010000 		.4byte	.LASF16
+ 865 00f9 D4010000 		.4byte	.LASF16
  866 00fd 01       		.byte	0x1
  867 00fe 8E       		.byte	0x8e
  868 00ff 01       		.byte	0x1
@@ -1292,7 +1292,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  871 0108 8D000000 		.4byte	.LLST3
  872 010c 09       		.uleb128 0x9
  873 010d 01       		.byte	0x1
- 874 010e E8000000 		.4byte	.LASF18
+ 874 010e F0000000 		.4byte	.LASF18
  875 0112 01       		.byte	0x1
  876 0113 A7       		.byte	0xa7
  877 0114 01       		.byte	0x1
@@ -1301,7 +1301,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  880 011d B8000000 		.4byte	.LLST4
  881 0121 42010000 		.4byte	0x142
  882 0125 0A       		.uleb128 0xa
- 883 0126 C8000000 		.4byte	.LASF19
+ 883 0126 D0000000 		.4byte	.LASF19
  884 012a 01       		.byte	0x1
  885 012b A7       		.byte	0xa7
  886 012c 9A000000 		.4byte	0x9a
@@ -1309,7 +1309,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  888 0131 91       		.byte	0x91
  889 0132 6C       		.sleb128 -20
  890 0133 0B       		.uleb128 0xb
- 891 0134 9B010000 		.4byte	.LASF20
+ 891 0134 A3010000 		.4byte	.LASF20
  892 0138 01       		.byte	0x1
  893 0139 A9       		.byte	0xa9
  894 013a 42010000 		.4byte	0x142
@@ -1318,14 +1318,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  897 0140 74       		.sleb128 -12
  898 0141 00       		.byte	0x0
  899 0142 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 23
 
 
  900 0143 04       		.byte	0x4
  901 0144 9A000000 		.4byte	0x9a
  902 0148 0C       		.uleb128 0xc
  903 0149 01       		.byte	0x1
- 904 014a AA010000 		.4byte	.LASF23
+ 904 014a B2010000 		.4byte	.LASF23
  905 014e 01       		.byte	0x1
  906 014f BF       		.byte	0xbf
  907 0150 01       		.byte	0x1
@@ -1335,7 +1335,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  911 015d EF000000 		.4byte	.LLST5
  912 0161 74010000 		.4byte	0x174
  913 0165 0B       		.uleb128 0xb
- 914 0166 9B010000 		.4byte	.LASF20
+ 914 0166 A3010000 		.4byte	.LASF20
  915 016a 01       		.byte	0x1
  916 016b C1       		.byte	0xc1
  917 016c 42010000 		.4byte	0x142
@@ -1345,7 +1345,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  921 0173 00       		.byte	0x0
  922 0174 09       		.uleb128 0x9
  923 0175 01       		.byte	0x1
- 924 0176 04010000 		.4byte	.LASF21
+ 924 0176 0C010000 		.4byte	.LASF21
  925 017a 01       		.byte	0x1
  926 017b DB       		.byte	0xdb
  927 017c 01       		.byte	0x1
@@ -1354,7 +1354,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  930 0185 26010000 		.4byte	.LLST6
  931 0189 9C010000 		.4byte	0x19c
  932 018d 0A       		.uleb128 0xa
- 933 018e FB000000 		.4byte	.LASF22
+ 933 018e 03010000 		.4byte	.LASF22
  934 0192 01       		.byte	0x1
  935 0193 DB       		.byte	0xdb
  936 0194 81000000 		.4byte	0x81
@@ -1364,7 +1364,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  940 019b 00       		.byte	0x0
  941 019c 0C       		.uleb128 0xc
  942 019d 01       		.byte	0x1
- 943 019e 31000000 		.4byte	.LASF24
+ 943 019e 99000000 		.4byte	.LASF24
  944 01a2 01       		.byte	0x1
  945 01a3 EF       		.byte	0xef
  946 01a4 01       		.byte	0x1
@@ -1374,11 +1374,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  950 01b1 5D010000 		.4byte	.LLST7
  951 01b5 C8010000 		.4byte	0x1c8
  952 01b9 0B       		.uleb128 0xb
- 953 01ba FB000000 		.4byte	.LASF22
+ 953 01ba 03010000 		.4byte	.LASF22
  954 01be 01       		.byte	0x1
  955 01bf F1       		.byte	0xf1
  956 01c0 81000000 		.4byte	0x81
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 24
 
 
  957 01c4 02       		.byte	0x2
@@ -1396,7 +1396,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  969 01da 94010000 		.4byte	.LLST8
  970 01de 0E       		.uleb128 0xe
  971 01df 01       		.byte	0x1
- 972 01e0 2D010000 		.4byte	.LASF32
+ 972 01e0 35010000 		.4byte	.LASF32
  973 01e4 01       		.byte	0x1
  974 01e5 1D01     		.2byte	0x11d
  975 01e7 01       		.byte	0x1
@@ -1406,7 +1406,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  979 01f4 BF010000 		.4byte	.LLST9
  980 01f8 0D       		.uleb128 0xd
  981 01f9 01       		.byte	0x1
- 982 01fa 2A020000 		.4byte	.LASF26
+ 982 01fa 32020000 		.4byte	.LASF26
  983 01fe 01       		.byte	0x1
  984 01ff 3201     		.2byte	0x132
  985 0201 01       		.byte	0x1
@@ -1415,7 +1415,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  988 020a EA010000 		.4byte	.LLST10
  989 020e 0D       		.uleb128 0xd
  990 020f 01       		.byte	0x1
- 991 0210 16020000 		.4byte	.LASF27
+ 991 0210 1E020000 		.4byte	.LASF27
  992 0214 01       		.byte	0x1
  993 0215 4801     		.2byte	0x148
  994 0217 01       		.byte	0x1
@@ -1424,7 +1424,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  997 0220 15020000 		.4byte	.LLST11
  998 0224 0D       		.uleb128 0xd
  999 0225 01       		.byte	0x1
- 1000 0226 56010000 		.4byte	.LASF28
+ 1000 0226 5E010000 		.4byte	.LASF28
  1001 022a 01       		.byte	0x1
  1002 022b 5C01     		.2byte	0x15c
  1003 022d 01       		.byte	0x1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1011 0002 01       		.byte	0x1
  1012 0003 25       		.uleb128 0x25
  1013 0004 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 25
 
 
  1014 0005 13       		.uleb128 0x13
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1068 003b 06       		.uleb128 0x6
  1069 003c 0F       		.uleb128 0xf
  1070 003d 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 26
 
 
  1071 003e 0B       		.uleb128 0xb
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1125 0074 01       		.uleb128 0x1
  1126 0075 12       		.uleb128 0x12
  1127 0076 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 27
 
 
  1128 0077 40       		.uleb128 0x40
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1182 00ad 01       		.uleb128 0x1
  1183 00ae 40       		.uleb128 0x40
  1184 00af 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 28
 
 
  1185 00b0 01       		.uleb128 0x1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1239 000e A5000000 		.4byte	0xa5
  1240 0012 6973725F 		.ascii	"isr_Tick_Start\000"
  1240      5469636B 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 29
 
 
  1240      5F537461 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1259 00e9 F8010000 		.4byte	0x1f8
  1260 00ed 6973725F 		.ascii	"isr_Tick_Disable\000"
  1260      5469636B 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 30
 
 
  1260      5F446973 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1304 0000 00000000 		.4byte	.Ltext0
  1305 0004 00000000 		.4byte	.Letext0
  1306 0008 00000000 		.4byte	.LFB0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 31
 
 
  1307 000c 22000000 		.4byte	.LFE0
@@ -1839,174 +1839,176 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 1
  1338      5469636B 
  1338      5F456E61 
  1338      626C6500 
- 1339              	.LASF3:
- 1340 001e 73686F72 		.ascii	"short unsigned int\000"
- 1340      7420756E 
- 1340      7369676E 
- 1340      65642069 
- 1340      6E7400
- 1341              	.LASF24:
- 1342 0031 6973725F 		.ascii	"isr_Tick_GetPriority\000"
- 1342      5469636B 
- 1342      5F476574 
- 1342      5072696F 
- 1342      72697479 
- 1343              	.LASF15:
- 1344 0046 6973725F 		.ascii	"isr_Tick_Stop\000"
- 1344      5469636B 
- 1344      5F53746F 
- 1344      7000
- 1345              	.LASF10:
- 1346 0054 666C6F61 		.ascii	"float\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 32
+ 1339              	.LASF31:
+ 1340 001e 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 1340      665C486F 
+ 1340      6D655C44 
+ 1340      65736B74 
+ 1340      6F705C55 
+ 1341 004b 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 1341      6E656572 
+ 1341      4B69745F 
+ 1341      50354C50 
+ 1341      5F555342 
+ 1342 007c 64696F2E 		.ascii	"dio.cydsn\000"
+ 1342      63796473 
+ 1342      6E00
+ 1343              	.LASF3:
+ 1344 0086 73686F72 		.ascii	"short unsigned int\000"
+ 1344      7420756E 
+ 1344      7369676E 
+ 1344      65642069 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 32
 
 
- 1346      7400
- 1347              	.LASF1:
- 1348 005a 756E7369 		.ascii	"unsigned char\000"
- 1348      676E6564 
- 1348      20636861 
- 1348      7200
- 1349              	.LASF31:
- 1350 0068 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 1350      665C486F 
- 1350      6D655C44 
- 1350      65736B74 
- 1350      6F705C55 
- 1351 0094 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 1351      5F50354C 
- 1351      505F5553 
- 1351      425F4175 
- 1351      64696F5C 
- 1352 00c6 6E00     		.ascii	"n\000"
+ 1344      6E7400
+ 1345              	.LASF24:
+ 1346 0099 6973725F 		.ascii	"isr_Tick_GetPriority\000"
+ 1346      5469636B 
+ 1346      5F476574 
+ 1346      5072696F 
+ 1346      72697479 
+ 1347              	.LASF15:
+ 1348 00ae 6973725F 		.ascii	"isr_Tick_Stop\000"
+ 1348      5469636B 
+ 1348      5F53746F 
+ 1348      7000
+ 1349              	.LASF10:
+ 1350 00bc 666C6F61 		.ascii	"float\000"
+ 1350      7400
+ 1351              	.LASF1:
+ 1352 00c2 756E7369 		.ascii	"unsigned char\000"
+ 1352      676E6564 
+ 1352      20636861 
+ 1352      7200
  1353              	.LASF19:
- 1354 00c8 61646472 		.ascii	"address\000"
+ 1354 00d0 61646472 		.ascii	"address\000"
  1354      65737300 
  1355              	.LASF8:
- 1356 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1356 00d8 6C6F6E67 		.ascii	"long unsigned int\000"
  1356      20756E73 
  1356      69676E65 
  1356      6420696E 
  1356      7400
  1357              	.LASF12:
- 1358 00e2 75696E74 		.ascii	"uint8\000"
+ 1358 00ea 75696E74 		.ascii	"uint8\000"
  1358      3800
  1359              	.LASF18:
- 1360 00e8 6973725F 		.ascii	"isr_Tick_SetVector\000"
+ 1360 00f0 6973725F 		.ascii	"isr_Tick_SetVector\000"
  1360      5469636B 
  1360      5F536574 
  1360      56656374 
  1360      6F7200
  1361              	.LASF22:
- 1362 00fb 7072696F 		.ascii	"priority\000"
+ 1362 0103 7072696F 		.ascii	"priority\000"
  1362      72697479 
  1362      00
  1363              	.LASF21:
- 1364 0104 6973725F 		.ascii	"isr_Tick_SetPriority\000"
+ 1364 010c 6973725F 		.ascii	"isr_Tick_SetPriority\000"
  1364      5469636B 
  1364      5F536574 
  1364      5072696F 
  1364      72697479 
  1365              	.LASF11:
- 1366 0119 646F7562 		.ascii	"double\000"
+ 1366 0121 646F7562 		.ascii	"double\000"
  1366      6C6500
  1367              	.LASF4:
- 1368 0120 756E7369 		.ascii	"unsigned int\000"
+ 1368 0128 756E7369 		.ascii	"unsigned int\000"
  1368      676E6564 
  1368      20696E74 
  1368      00
  1369              	.LASF32:
- 1370 012d 6973725F 		.ascii	"isr_Tick_GetState\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 33
+
+
+ 1370 0135 6973725F 		.ascii	"isr_Tick_GetState\000"
  1370      5469636B 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 33
-
-
  1370      5F476574 
  1370      53746174 
  1370      6500
  1371              	.LASF6:
- 1372 013f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1372 0147 6C6F6E67 		.ascii	"long long unsigned int\000"
  1372      206C6F6E 
  1372      6720756E 
  1372      7369676E 
  1372      65642069 
  1373              	.LASF28:
- 1374 0156 6973725F 		.ascii	"isr_Tick_ClearPending\000"
+ 1374 015e 6973725F 		.ascii	"isr_Tick_ClearPending\000"
  1374      5469636B 
  1374      5F436C65 
  1374      61725065 
  1374      6E64696E 
  1375              	.LASF17:
- 1376 016c 6973725F 		.ascii	"isr_Tick_StartEx\000"
+ 1376 0174 6973725F 		.ascii	"isr_Tick_StartEx\000"
  1376      5469636B 
  1376      5F537461 
  1376      72744578 
  1376      00
  1377              	.LASF13:
- 1378 017d 63796973 		.ascii	"cyisraddress\000"
+ 1378 0185 63796973 		.ascii	"cyisraddress\000"
  1378      72616464 
  1378      72657373 
  1378      00
  1379              	.LASF29:
- 1380 018a 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1380 0192 474E5520 		.ascii	"GNU C 4.4.1\000"
  1380      4320342E 
  1380      342E3100 
  1381              	.LASF9:
- 1382 0196 63686172 		.ascii	"char\000"
+ 1382 019e 63686172 		.ascii	"char\000"
  1382      00
  1383              	.LASF20:
- 1384 019b 72616D56 		.ascii	"ramVectorTable\000"
+ 1384 01a3 72616D56 		.ascii	"ramVectorTable\000"
  1384      6563746F 
  1384      72546162 
  1384      6C6500
  1385              	.LASF23:
- 1386 01aa 6973725F 		.ascii	"isr_Tick_GetVector\000"
+ 1386 01b2 6973725F 		.ascii	"isr_Tick_GetVector\000"
  1386      5469636B 
  1386      5F476574 
  1386      56656374 
  1386      6F7200
  1387              	.LASF14:
- 1388 01bd 6973725F 		.ascii	"isr_Tick_Start\000"
+ 1388 01c5 6973725F 		.ascii	"isr_Tick_Start\000"
  1388      5469636B 
  1388      5F537461 
  1388      727400
  1389              	.LASF16:
- 1390 01cc 6973725F 		.ascii	"isr_Tick_Interrupt\000"
+ 1390 01d4 6973725F 		.ascii	"isr_Tick_Interrupt\000"
  1390      5469636B 
  1390      5F496E74 
  1390      65727275 
  1390      707400
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq9pIsL.s 			page 34
+
+
  1391              	.LASF30:
- 1392 01df 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_Tick.c\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccnTNaPQ.s 			page 34
-
-
+ 1392 01e7 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_Tick.c\000"
  1392      6E657261 
  1392      7465645F 
  1392      536F7572 
  1392      63655C50 
  1393              	.LASF2:
- 1394 0203 73686F72 		.ascii	"short int\000"
+ 1394 020b 73686F72 		.ascii	"short int\000"
  1394      7420696E 
  1394      7400
  1395              	.LASF7:
- 1396 020d 6C6F6E67 		.ascii	"long int\000"
+ 1396 0215 6C6F6E67 		.ascii	"long int\000"
  1396      20696E74 
  1396      00
  1397              	.LASF27:
- 1398 0216 6973725F 		.ascii	"isr_Tick_SetPending\000"
+ 1398 021e 6973725F 		.ascii	"isr_Tick_SetPending\000"
  1398      5469636B 
  1398      5F536574 
  1398      50656E64 
  1398      696E6700 
  1399              	.LASF26:
- 1400 022a 6973725F 		.ascii	"isr_Tick_Disable\000"
+ 1400 0232 6973725F 		.ascii	"isr_Tick_Disable\000"
  1400      5469636B 
  1400      5F446973 
  1400      61626C65 
  1400      00
  1401              	.LASF0:
- 1402 023b 7369676E 		.ascii	"signed char\000"
+ 1402 0243 7369676E 		.ascii	"signed char\000"
  1402      65642063 
  1402      68617200 
  1403              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
    9:.\Generated_Source\PSoC5/I2C_Master_PM.c **** *  None
   10:.\Generated_Source\PSoC5/I2C_Master_PM.c **** *
   11:.\Generated_Source\PSoC5/I2C_Master_PM.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 2
 
 
   12:.\Generated_Source\PSoC5/I2C_Master_PM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
   66:.\Generated_Source\PSoC5/I2C_Master_PM.c **** 
   67:.\Generated_Source\PSoC5/I2C_Master_PM.c **** /*******************************************************************************
   68:.\Generated_Source\PSoC5/I2C_Master_PM.c **** * Function Name: I2C_Master_SaveConfig
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 3
 
 
   69:.\Generated_Source\PSoC5/I2C_Master_PM.c **** ********************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  103:.\Generated_Source\PSoC5/I2C_Master_PM.c ****         I2C_Master_backup.xcfg = I2C_Master_XCFG_REG;
   63              		.loc 1 103 0
   64 001a 44F6C813 		movw	r3, #:lower16:1073760712
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 4
 
 
   65 001e C4F20003 		movt	r3, #:upper16:1073760712
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  136:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             (void) CyIntSetVector(I2C_Master_ISR_NUMBER, &I2C_Master_WAKEUP_ISR);
  137:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             I2C_Master_wakeupSource = 0u;
  138:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             I2C_Master_EnableInt();
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 5
 
 
  139:.\Generated_Source\PSoC5/I2C_Master_PM.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  178:.\Generated_Source\PSoC5/I2C_Master_PM.c **** *
  179:.\Generated_Source\PSoC5/I2C_Master_PM.c **** * Return:
  180:.\Generated_Source\PSoC5/I2C_Master_PM.c **** *  None
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 6
 
 
  181:.\Generated_Source\PSoC5/I2C_Master_PM.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  202:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             I2C_Master_Stop();
  135              		.loc 1 202 0
  136 003a FFF7FEFF 		bl	I2C_Master_Stop
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 7
 
 
  137              	.L4:
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  161              	.LCFI5:
  162              		.cfi_def_cfa_offset 16
  163 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 8
 
 
  164              		.cfi_offset 14, -4
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  249:.\Generated_Source\PSoC5/I2C_Master_PM.c ****                 /* Disable power to I2C block before register restore */
  250:.\Generated_Source\PSoC5/I2C_Master_PM.c ****                 enableInterrupts = CyEnterCriticalSection();
  251:.\Generated_Source\PSoC5/I2C_Master_PM.c ****                 I2C_Master_ACT_PWRMGR_REG  &= ((uint8) ~I2C_Master_ACT_PWR_EN);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 9
 
 
  252:.\Generated_Source\PSoC5/I2C_Master_PM.c ****                 I2C_Master_STBY_PWRMGR_REG &= ((uint8) ~I2C_Master_STBY_PWR_EN);
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  277:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             (void) CyIntSetVector(I2C_Master_ISR_NUMBER, &I2C_Master_ISR);
  278:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             if(0u != I2C_Master_wakeupSource)
  279:.\Generated_Source\PSoC5/I2C_Master_PM.c ****             {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 10
 
 
  280:.\Generated_Source\PSoC5/I2C_Master_PM.c ****                 I2C_Master_SetPendingInt();   /* Generate interrupt to process incomming transcatio
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  319:.\Generated_Source\PSoC5/I2C_Master_PM.c **** 
  320:.\Generated_Source\PSoC5/I2C_Master_PM.c **** 
  321:.\Generated_Source\PSoC5/I2C_Master_PM.c **** /*******************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 11
 
 
  322:.\Generated_Source\PSoC5/I2C_Master_PM.c **** * Function Name: I2C_Master_Wakeup
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  270 001e CEF20003 		movt	r3, #:upper16:-536813312
  271 0022 4FF40042 		mov	r2, #32768
  272 0026 1A60     		str	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 12
 
 
  273              	.L12:
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  319 005a 02000000 		.4byte	.LCFI4
  320 005e 0100     		.2byte	0x1
  321 0060 5D       		.byte	0x5d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 13
 
 
  322 0061 02000000 		.4byte	.LCFI4
@@ -763,10 +763,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  361 0006 00000000 		.4byte	.Ldebug_abbrev0
  362 000a 04       		.byte	0x4
  363 000b 01       		.uleb128 0x1
- 364 000c A7000000 		.4byte	.LASF21
+ 364 000c 0F010000 		.4byte	.LASF21
  365 0010 01       		.byte	0x1
- 366 0011 72010000 		.4byte	.LASF22
- 367 0015 12010000 		.4byte	.LASF23
+ 366 0011 7A010000 		.4byte	.LASF22
+ 367 0015 37000000 		.4byte	.LASF23
  368 0019 00000000 		.4byte	0x0
  369 001d 00000000 		.4byte	0x0
  370 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -774,30 +774,30 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  372 0029 02       		.uleb128 0x2
  373 002a 01       		.byte	0x1
  374 002b 06       		.byte	0x6
- 375 002c AE010000 		.4byte	.LASF0
+ 375 002c B6010000 		.4byte	.LASF0
  376 0030 02       		.uleb128 0x2
  377 0031 01       		.byte	0x1
  378 0032 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 14
 
 
- 379 0033 B3000000 		.4byte	.LASF1
+ 379 0033 1B010000 		.4byte	.LASF1
  380 0037 02       		.uleb128 0x2
  381 0038 02       		.byte	0x2
  382 0039 05       		.byte	0x5
- 383 003a C0010000 		.4byte	.LASF2
+ 383 003a C8010000 		.4byte	.LASF2
  384 003e 02       		.uleb128 0x2
  385 003f 02       		.byte	0x2
  386 0040 07       		.byte	0x7
- 387 0041 9B010000 		.4byte	.LASF3
+ 387 0041 A3010000 		.4byte	.LASF3
  388 0045 02       		.uleb128 0x2
  389 0046 04       		.byte	0x4
  390 0047 05       		.byte	0x5
- 391 0048 C1000000 		.4byte	.LASF4
+ 391 0048 29010000 		.4byte	.LASF4
  392 004c 02       		.uleb128 0x2
  393 004d 04       		.byte	0x4
  394 004e 07       		.byte	0x7
- 395 004f 60000000 		.4byte	.LASF5
+ 395 004f C8000000 		.4byte	.LASF5
  396 0053 02       		.uleb128 0x2
  397 0054 08       		.byte	0x8
  398 0055 05       		.byte	0x5
@@ -805,7 +805,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  400 005a 02       		.uleb128 0x2
  401 005b 08       		.byte	0x8
  402 005c 07       		.byte	0x7
- 403 005d 77000000 		.4byte	.LASF7
+ 403 005d DF000000 		.4byte	.LASF7
  404 0061 03       		.uleb128 0x3
  405 0062 04       		.byte	0x4
  406 0063 05       		.byte	0x5
@@ -815,22 +815,22 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  410 006a 07       		.byte	0x7
  411 006b 1A000000 		.4byte	.LASF8
  412 006f 04       		.uleb128 0x4
- 413 0070 5A000000 		.4byte	.LASF16
+ 413 0070 C2000000 		.4byte	.LASF16
  414 0074 03       		.byte	0x3
  415 0075 4C       		.byte	0x4c
  416 0076 30000000 		.4byte	0x30
  417 007a 02       		.uleb128 0x2
  418 007b 04       		.byte	0x4
  419 007c 04       		.byte	0x4
- 420 007d BA010000 		.4byte	.LASF9
+ 420 007d C2010000 		.4byte	.LASF9
  421 0081 02       		.uleb128 0x2
  422 0082 08       		.byte	0x8
  423 0083 04       		.byte	0x4
- 424 0084 F2000000 		.4byte	.LASF10
+ 424 0084 5A010000 		.4byte	.LASF10
  425 0088 02       		.uleb128 0x2
  426 0089 01       		.byte	0x1
  427 008a 08       		.byte	0x8
- 428 008b CA010000 		.4byte	.LASF11
+ 428 008b D2010000 		.4byte	.LASF11
  429 008f 05       		.uleb128 0x5
  430 0090 04       		.byte	0x4
  431 0091 07       		.byte	0x7
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  433 0093 05       		.byte	0x5
  434 0094 02       		.byte	0x2
  435 0095 79       		.byte	0x79
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 15
 
 
  436 0096 E1000000 		.4byte	0xe1
@@ -851,7 +851,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  443 00a6 23       		.byte	0x23
  444 00a7 00       		.uleb128 0x0
  445 00a8 07       		.uleb128 0x7
- 446 00a9 72000000 		.4byte	.LASF13
+ 446 00a9 DA000000 		.4byte	.LASF13
  447 00ad 02       		.byte	0x2
  448 00ae 7D       		.byte	0x7d
  449 00af 6F000000 		.4byte	0x6f
@@ -884,13 +884,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  476 00df 04       		.uleb128 0x4
  477 00e0 00       		.byte	0x0
  478 00e1 04       		.uleb128 0x4
- 479 00e2 8E000000 		.4byte	.LASF17
+ 479 00e2 F6000000 		.4byte	.LASF17
  480 00e6 02       		.byte	0x2
  481 00e7 A2       		.byte	0xa2
  482 00e8 92000000 		.4byte	0x92
  483 00ec 09       		.uleb128 0x9
  484 00ed 01       		.byte	0x1
- 485 00ee DC000000 		.4byte	.LASF18
+ 485 00ee 44010000 		.4byte	.LASF18
  486 00f2 01       		.byte	0x1
  487 00f3 5E       		.byte	0x5e
  488 00f4 01       		.byte	0x1
@@ -898,11 +898,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  490 00f9 62000000 		.4byte	.LFE0
  491 00fd 00000000 		.4byte	.LLST0
  492 0101 09       		.uleb128 0x9
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 16
 
 
  493 0102 01       		.byte	0x1
- 494 0103 CF010000 		.4byte	.LASF19
+ 494 0103 D7010000 		.4byte	.LASF19
  495 0107 01       		.byte	0x1
  496 0108 BA       		.byte	0xba
  497 0109 01       		.byte	0x1
@@ -911,7 +911,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  500 0112 2B000000 		.4byte	.LLST1
  501 0116 0A       		.uleb128 0xa
  502 0117 01       		.byte	0x1
- 503 0118 F9000000 		.4byte	.LASF24
+ 503 0118 61010000 		.4byte	.LASF24
  504 011c 01       		.byte	0x1
  505 011d E7       		.byte	0xe7
  506 011e 01       		.byte	0x1
@@ -920,7 +920,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  509 0127 56000000 		.4byte	.LLST2
  510 012b 3E010000 		.4byte	0x13e
  511 012f 0B       		.uleb128 0xb
- 512 0130 37000000 		.4byte	.LASF25
+ 512 0130 9F000000 		.4byte	.LASF25
  513 0134 01       		.byte	0x1
  514 0135 EA       		.byte	0xea
  515 0136 6F000000 		.4byte	0x6f
@@ -930,7 +930,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  519 013d 00       		.byte	0x0
  520 013e 0C       		.uleb128 0xc
  521 013f 01       		.byte	0x1
- 522 0140 CA000000 		.4byte	.LASF20
+ 522 0140 32010000 		.4byte	.LASF20
  523 0144 01       		.byte	0x1
  524 0145 5701     		.2byte	0x157
  525 0147 01       		.byte	0x1
@@ -938,7 +938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  527 014c 2A000000 		.4byte	.LFE3
  528 0150 8D000000 		.4byte	.LLST3
  529 0154 0D       		.uleb128 0xd
- 530 0155 48000000 		.4byte	.LASF26
+ 530 0155 B0000000 		.4byte	.LASF26
  531 0159 01       		.byte	0x1
  532 015a 14       		.byte	0x14
  533 015b E1000000 		.4byte	0xe1
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  547 0007 03       		.uleb128 0x3
  548 0008 0E       		.uleb128 0xe
  549 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 17
 
 
  550 000a 0E       		.uleb128 0xe
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  604 0040 00       		.byte	0x0
  605 0041 06       		.uleb128 0x6
  606 0042 13       		.uleb128 0x13
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 18
 
 
  607 0043 01       		.byte	0x1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  661 0079 11       		.uleb128 0x11
  662 007a 01       		.uleb128 0x1
  663 007b 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 19
 
 
  664 007c 01       		.uleb128 0x1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  718 00b2 27       		.uleb128 0x27
  719 00b3 0C       		.uleb128 0xc
  720 00b4 11       		.uleb128 0x11
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 20
 
 
  721 00b5 01       		.uleb128 0x1
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  759 0070 54010000 		.4byte	0x154
  760 0074 4932435F 		.ascii	"I2C_Master_backup\000"
  760      4D617374 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 21
 
 
  760      65725F62 
@@ -1258,127 +1258,129 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 1
  803              	.LASF15:
  804 002f 636C6B44 		.ascii	"clkDiv2\000"
  804      69763200 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 22
 
 
- 805              	.LASF25:
- 806 0037 656E6162 		.ascii	"enableInterrupts\000"
- 806      6C65496E 
- 806      74657272 
- 806      75707473 
- 806      00
- 807              	.LASF26:
- 808 0048 4932435F 		.ascii	"I2C_Master_backup\000"
- 808      4D617374 
- 808      65725F62 
- 808      61636B75 
- 808      7000
- 809              	.LASF16:
- 810 005a 75696E74 		.ascii	"uint8\000"
- 810      3800
- 811              	.LASF5:
- 812 0060 6C6F6E67 		.ascii	"long unsigned int\000"
- 812      20756E73 
- 812      69676E65 
- 812      6420696E 
- 812      7400
- 813              	.LASF13:
- 814 0072 78636667 		.ascii	"xcfg\000"
- 814      00
- 815              	.LASF7:
- 816 0077 6C6F6E67 		.ascii	"long long unsigned int\000"
- 816      206C6F6E 
- 816      6720756E 
- 816      7369676E 
- 816      65642069 
- 817              	.LASF17:
- 818 008e 4932435F 		.ascii	"I2C_Master_BACKUP_STRUCT\000"
- 818      4D617374 
- 818      65725F42 
- 818      41434B55 
- 818      505F5354 
- 819              	.LASF21:
- 820 00a7 474E5520 		.ascii	"GNU C 4.4.1\000"
- 820      4320342E 
- 820      342E3100 
- 821              	.LASF1:
- 822 00b3 756E7369 		.ascii	"unsigned char\000"
- 822      676E6564 
- 822      20636861 
- 822      7200
- 823              	.LASF4:
- 824 00c1 6C6F6E67 		.ascii	"long int\000"
- 824      20696E74 
- 824      00
- 825              	.LASF20:
- 826 00ca 4932435F 		.ascii	"I2C_Master_Wakeup\000"
- 826      4D617374 
- 826      65725F57 
- 826      616B6575 
- 826      7000
- 827              	.LASF18:
- 828 00dc 4932435F 		.ascii	"I2C_Master_SaveConfig\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 23
+ 805              	.LASF23:
+ 806 0037 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 806      665C486F 
+ 806      6D655C44 
+ 806      65736B74 
+ 806      6F705C55 
+ 807 0064 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 807      6E656572 
+ 807      4B69745F 
+ 807      50354C50 
+ 807      5F555342 
+ 808 0095 64696F2E 		.ascii	"dio.cydsn\000"
+ 808      63796473 
+ 808      6E00
+ 809              	.LASF25:
+ 810 009f 656E6162 		.ascii	"enableInterrupts\000"
+ 810      6C65496E 
+ 810      74657272 
+ 810      75707473 
+ 810      00
+ 811              	.LASF26:
+ 812 00b0 4932435F 		.ascii	"I2C_Master_backup\000"
+ 812      4D617374 
+ 812      65725F62 
+ 812      61636B75 
+ 812      7000
+ 813              	.LASF16:
+ 814 00c2 75696E74 		.ascii	"uint8\000"
+ 814      3800
+ 815              	.LASF5:
+ 816 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 816      20756E73 
+ 816      69676E65 
+ 816      6420696E 
+ 816      7400
+ 817              	.LASF13:
+ 818 00da 78636667 		.ascii	"xcfg\000"
+ 818      00
+ 819              	.LASF7:
+ 820 00df 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 820      206C6F6E 
+ 820      6720756E 
+ 820      7369676E 
+ 820      65642069 
+ 821              	.LASF17:
+ 822 00f6 4932435F 		.ascii	"I2C_Master_BACKUP_STRUCT\000"
+ 822      4D617374 
+ 822      65725F42 
+ 822      41434B55 
+ 822      505F5354 
+ 823              	.LASF21:
+ 824 010f 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 824      4320342E 
+ 824      342E3100 
+ 825              	.LASF1:
+ 826 011b 756E7369 		.ascii	"unsigned char\000"
+ 826      676E6564 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 23
 
 
- 828      4D617374 
- 828      65725F53 
- 828      61766543 
- 828      6F6E6669 
- 829              	.LASF10:
- 830 00f2 646F7562 		.ascii	"double\000"
- 830      6C6500
- 831              	.LASF24:
- 832 00f9 4932435F 		.ascii	"I2C_Master_RestoreConfig\000"
+ 826      20636861 
+ 826      7200
+ 827              	.LASF4:
+ 828 0129 6C6F6E67 		.ascii	"long int\000"
+ 828      20696E74 
+ 828      00
+ 829              	.LASF20:
+ 830 0132 4932435F 		.ascii	"I2C_Master_Wakeup\000"
+ 830      4D617374 
+ 830      65725F57 
+ 830      616B6575 
+ 830      7000
+ 831              	.LASF18:
+ 832 0144 4932435F 		.ascii	"I2C_Master_SaveConfig\000"
  832      4D617374 
- 832      65725F52 
- 832      6573746F 
- 832      7265436F 
- 833              	.LASF23:
- 834 0112 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 834      665C486F 
- 834      6D655C44 
- 834      65736B74 
- 834      6F705C55 
- 835 013e 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 835      5F50354C 
- 835      505F5553 
- 835      425F4175 
- 835      64696F5C 
- 836 0170 6E00     		.ascii	"n\000"
+ 832      65725F53 
+ 832      61766543 
+ 832      6F6E6669 
+ 833              	.LASF10:
+ 834 015a 646F7562 		.ascii	"double\000"
+ 834      6C6500
+ 835              	.LASF24:
+ 836 0161 4932435F 		.ascii	"I2C_Master_RestoreConfig\000"
+ 836      4D617374 
+ 836      65725F52 
+ 836      6573746F 
+ 836      7265436F 
  837              	.LASF22:
- 838 0172 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_Master_PM.c\000"
+ 838 017a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_Master_PM.c\000"
  838      6E657261 
  838      7465645F 
  838      536F7572 
  838      63655C50 
  839              	.LASF3:
- 840 019b 73686F72 		.ascii	"short unsigned int\000"
+ 840 01a3 73686F72 		.ascii	"short unsigned int\000"
  840      7420756E 
  840      7369676E 
  840      65642069 
  840      6E7400
  841              	.LASF0:
- 842 01ae 7369676E 		.ascii	"signed char\000"
+ 842 01b6 7369676E 		.ascii	"signed char\000"
  842      65642063 
  842      68617200 
  843              	.LASF9:
- 844 01ba 666C6F61 		.ascii	"float\000"
+ 844 01c2 666C6F61 		.ascii	"float\000"
  844      7400
  845              	.LASF2:
- 846 01c0 73686F72 		.ascii	"short int\000"
+ 846 01c8 73686F72 		.ascii	"short int\000"
  846      7420696E 
  846      7400
  847              	.LASF11:
- 848 01ca 63686172 		.ascii	"char\000"
+ 848 01d2 63686172 		.ascii	"char\000"
  848      00
  849              	.LASF19:
- 850 01cf 4932435F 		.ascii	"I2C_Master_Sleep\000"
+ 850 01d7 4932435F 		.ascii	"I2C_Master_Sleep\000"
  850      4D617374 
  850      65725F53 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccILqIsL.s 			page 24
+
+
  850      6C656570 
  850      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccdl2V0R.s 			page 24
-
-
  851              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

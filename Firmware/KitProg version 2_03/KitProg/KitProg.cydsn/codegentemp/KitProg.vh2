@@ -2,7 +2,7 @@
 --	Conversion of KitProg.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Aug 26 19:31:25 2015
+--	Fri Aug 28 18:33:29 2015
 --
 
 USE cypress.cypress.all;
@@ -73,60 +73,11 @@ SIGNAL tmpFB_0__SWDIO_net_0 : bit;
 SIGNAL Net_36 : bit;
 TERMINAL tmpSIOVREF__SWDIO_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__SWDIO_net_0 : bit;
-SIGNAL tmpOE__Pin_VTarget_net_0 : bit;
-SIGNAL tmpFB_0__Pin_VTarget_net_0 : bit;
-TERMINAL Net_596 : bit;
-SIGNAL tmpIO_0__Pin_VTarget_net_0 : bit;
-TERMINAL tmpSIOVREF__Pin_VTarget_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Pin_VTarget_net_0 : bit;
-SIGNAL \ADC_Voltage_Target:aclock\ : bit;
-SIGNAL \ADC_Voltage_Target:mod_dat_3\ : bit;
-SIGNAL \ADC_Voltage_Target:mod_dat_2\ : bit;
-SIGNAL \ADC_Voltage_Target:mod_dat_1\ : bit;
-SIGNAL \ADC_Voltage_Target:mod_dat_0\ : bit;
-SIGNAL \ADC_Voltage_Target:soc\ : bit;
-SIGNAL \ADC_Voltage_Target:mod_reset\ : bit;
-SIGNAL Net_617 : bit;
-SIGNAL \ADC_Voltage_Target:Net_481\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_482\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_40\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_488\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_520\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_681\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_580\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_349\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_573\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_257\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_487\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_570\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_352\ : bit;
-TERMINAL Net_599 : bit;
-SIGNAL \ADC_Voltage_Target:Net_7\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_8\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_677\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_478\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_471_3\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_471_2\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_471_1\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_471_0\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_7\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_6\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_5\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_4\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_3\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_2\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_1\ : bit;
-SIGNAL \ADC_Voltage_Target:Net_9_0\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_690\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_11\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_12\ : bit;
-TERMINAL \ADC_Voltage_Target:Net_13\ : bit;
 SIGNAL tmpOE__Pin_HWVersionA_net_0 : bit;
 SIGNAL tmpFB_0__Pin_HWVersionA_net_0 : bit;
 SIGNAL tmpIO_0__Pin_HWVersionA_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_HWVersionA_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_HWVersionA_net_0 : bit;
-TERMINAL Net_595 : bit;
 SIGNAL \I2CHW:sda_x_wire\ : bit;
 SIGNAL \I2CHW:Net_643_4\ : bit;
 SIGNAL \I2CHW:Net_697\ : bit;
@@ -1663,181 +1614,6 @@ SWDIO:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__SWDIO_net_0);
-Pin_VTarget:cy_psoc3_pins_v1_10
-	GENERIC MAP(id=>"05a9c8de-3ba2-4909-8250-95fdc61c0bf4",
-		drive_mode=>"000",
-		ibuf_enabled=>"0",
-		init_dr_st=>"0",
-		input_sync=>"1",
-		input_clk_en=>'0',
-		input_sync_mode=>"0",
-		intr_mode=>"00",
-		invert_in_clock=>'0',
-		invert_in_clock_en=>'0',
-		invert_in_reset=>'0',
-		invert_out_clock=>'0',
-		invert_out_clock_en=>'0',
-		invert_out_reset=>'0',
-		io_voltage=>"",
-		layout_mode=>"CONTIGUOUS",
-		output_conn=>"0",
-		output_sync=>"0",
-		output_clk_en=>'0',
-		output_mode=>"0",
-		output_reset=>'0',
-		output_clock_mode=>"0",
-		oe_sync=>"0",
-		oe_conn=>"0",
-		oe_reset=>'0',
-		pin_aliases=>"",
-		pin_mode=>"A",
-		por_state=>4,
-		sio_group_cnt=>0,
-		sio_hifreq=>"",
-		sio_hyst=>"0",
-		sio_ibuf=>"00000000",
-		sio_info=>"00",
-		sio_obuf=>"00000000",
-		sio_refsel=>"00000000",
-		sio_vtrip=>"00000000",
-		slew_rate=>"0",
-		spanning=>'0',
-		sw_only=>'0',
-		vtrip=>"10",
-		width=>1,
-		port_alias_required=>'0',
-		port_alias_group=>"",
-		use_annotation=>"0",
-		pa_in_clock=>-1,
-		pa_in_clock_en=>-1,
-		pa_in_reset=>-1,
-		pa_out_clock=>-1,
-		pa_out_clock_en=>-1,
-		pa_out_reset=>-1)
-	PORT MAP(oe=>(one),
-		y=>(zero),
-		fb=>(tmpFB_0__Pin_VTarget_net_0),
-		analog=>Net_596,
-		io=>(tmpIO_0__Pin_VTarget_net_0),
-		siovref=>(tmpSIOVREF__Pin_VTarget_net_0),
-		annotation=>(open),
-		in_clock=>zero,
-		in_clock_en=>one,
-		in_reset=>zero,
-		out_clock=>zero,
-		out_clock_en=>one,
-		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Pin_VTarget_net_0);
-\ADC_Voltage_Target:DEC\:cy_psoc3_decimator_v1_0
-	GENERIC MAP(cy_registers=>"")
-	PORT MAP(aclock=>\ADC_Voltage_Target:aclock\,
-		mod_dat=>(\ADC_Voltage_Target:mod_dat_3\, \ADC_Voltage_Target:mod_dat_2\, \ADC_Voltage_Target:mod_dat_1\, \ADC_Voltage_Target:mod_dat_0\),
-		ext_start=>one,
-		mod_reset=>\ADC_Voltage_Target:mod_reset\,
-		interrupt=>Net_617);
-\ADC_Voltage_Target:theACLK\:cy_clock_v1_0
-	GENERIC MAP(cy_registers=>"",
-		id=>"bb3ad7eb-5f1c-4320-aac3-7f9849f4a94e/edd15f43-b66b-457b-be3a-5342345270c8",
-		source_clock_id=>"61737EF6-3B74-48f9-8B91-F7473A442AE7",
-		divisor=>0,
-		period=>"3125000000",
-		is_direct=>'0',
-		is_digital=>'0')
-	PORT MAP(clock_out=>\ADC_Voltage_Target:Net_40\,
-		dig_domain_out=>open);
-\ADC_Voltage_Target:IRQ\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10")
-	PORT MAP(int_signal=>Net_617);
-\ADC_Voltage_Target:cy_analog_virtualmux_1_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_520\,
-		signal2=>\ADC_Voltage_Target:Net_681\);
-\ADC_Voltage_Target:cy_analog_virtualmux_2_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_580\,
-		signal2=>\ADC_Voltage_Target:Net_349\);
-\ADC_Voltage_Target:cy_analog_virtualmux_3_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_573\,
-		signal2=>\ADC_Voltage_Target:Net_257\);
-\ADC_Voltage_Target:cy_analog_noconnect_2\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>\ADC_Voltage_Target:Net_349\);
-\ADC_Voltage_Target:cy_analog_noconnect_3\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>\ADC_Voltage_Target:Net_257\);
-\ADC_Voltage_Target:Ext_CP_Clk\:cy_clock_v1_0
-	GENERIC MAP(cy_registers=>"",
-		id=>"bb3ad7eb-5f1c-4320-aac3-7f9849f4a94e/b7604721-db56-4477-98c2-8fae77869066",
-		source_clock_id=>"61737EF6-3B74-48f9-8B91-F7473A442AE7",
-		divisor=>0,
-		period=>"781250000",
-		is_direct=>'0',
-		is_digital=>'1')
-	PORT MAP(clock_out=>\ADC_Voltage_Target:Net_487\,
-		dig_domain_out=>open);
-\ADC_Voltage_Target:cy_analog_virtualmux_5_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_570\,
-		signal2=>\ADC_Voltage_Target:Net_352\);
-\ADC_Voltage_Target:cy_analog_noconnect_5\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>\ADC_Voltage_Target:Net_352\);
-\ADC_Voltage_Target:DSM4\:cy_psoc3_ds_mod_v4_0
-	GENERIC MAP(cy_registers=>"",
-		resolution=>12)
-	PORT MAP(aclock=>\ADC_Voltage_Target:Net_40\,
-		vplus=>Net_599,
-		vminus=>\ADC_Voltage_Target:Net_520\,
-		modbit=>zero,
-		reset_udb=>zero,
-		reset_dec=>\ADC_Voltage_Target:mod_reset\,
-		clk_udb=>zero,
-		extclk_cp_udb=>\ADC_Voltage_Target:Net_487\,
-		ext_pin_1=>\ADC_Voltage_Target:Net_580\,
-		ext_pin_2=>\ADC_Voltage_Target:Net_573\,
-		ext_vssa=>\ADC_Voltage_Target:Net_570\,
-		qtz_ref=>\ADC_Voltage_Target:Net_677\,
-		dec_clock=>\ADC_Voltage_Target:aclock\,
-		mod_dat=>(\ADC_Voltage_Target:mod_dat_3\, \ADC_Voltage_Target:mod_dat_2\, \ADC_Voltage_Target:mod_dat_1\, \ADC_Voltage_Target:mod_dat_0\),
-		dout_udb=>(\ADC_Voltage_Target:Net_9_7\, \ADC_Voltage_Target:Net_9_6\, \ADC_Voltage_Target:Net_9_5\, \ADC_Voltage_Target:Net_9_4\,
-			\ADC_Voltage_Target:Net_9_3\, \ADC_Voltage_Target:Net_9_2\, \ADC_Voltage_Target:Net_9_1\, \ADC_Voltage_Target:Net_9_0\));
-\ADC_Voltage_Target:AMux\:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(\ADC_Voltage_Target:Net_690\, \ADC_Voltage_Target:Net_11\),
-		hw_ctrl_en=>(others => zero),
-		vout=>\ADC_Voltage_Target:Net_681\);
-\ADC_Voltage_Target:cy_analog_virtualmux_4_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_677\,
-		signal2=>\ADC_Voltage_Target:Net_12\);
-\ADC_Voltage_Target:cy_analog_noconnect_1\:cy_analog_noconnect_v1_0
-	PORT MAP(noconnect=>\ADC_Voltage_Target:Net_12\);
-\ADC_Voltage_Target:cy_analog_virtualmux_6_connect\:cy_connect_v1_0
-	GENERIC MAP(sig_width=>1,
-		is_net_join=>'0')
-	PORT MAP(signal1=>\ADC_Voltage_Target:Net_690\,
-		signal2=>\ADC_Voltage_Target:Net_13\);
-\ADC_Voltage_Target:ADC_Vssa_2:vRef_1\:cy_vref_v1_0
-	GENERIC MAP(guid=>"15B3DB15-B7B3-4d62-A2DF-25EA392A7161",
-		name=>"Vssa (GND)",
-		autoenable=>'1',
-		ignoresleep=>'0')
-	PORT MAP(vout=>\ADC_Voltage_Target:Net_13\);
-\ADC_Voltage_Target:ADC_Vssa_1:vRef_1\:cy_vref_v1_0
-	GENERIC MAP(guid=>"15B3DB15-B7B3-4d62-A2DF-25EA392A7161",
-		name=>"Vssa (GND)",
-		autoenable=>'1',
-		ignoresleep=>'0')
-	PORT MAP(vout=>\ADC_Voltage_Target:Net_11\);
 Pin_HWVersionA:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"4c15b41e-e284-4978-99e7-5aaee19bd0ce",
 		drive_mode=>"001",
@@ -1903,23 +1679,6 @@ Pin_HWVersionA:cy_psoc3_pins_v1_10
 		out_clock_en=>one,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_HWVersionA_net_0);
-AMux:cy_psoc3_amux_v1_0
-	GENERIC MAP(cy_registers=>"",
-		muxin_width=>2,
-		hw_control=>'0',
-		one_active=>'0',
-		init_mux_sel=>"00",
-		api_type=>0,
-		connect_mode=>1)
-	PORT MAP(muxin=>(Net_596, Net_595),
-		hw_ctrl_en=>(others => zero),
-		vout=>Net_599);
-vRef_1:cy_vref_v1_0
-	GENERIC MAP(guid=>"89B398AD-36A8-4627-9212-707F2986319E",
-		name=>"1.024V",
-		autoenable=>'1',
-		ignoresleep=>'0')
-	PORT MAP(vout=>Net_595);
 \I2CHW:I2C_IRQ\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00")
 	PORT MAP(int_signal=>\I2CHW:Net_697\);

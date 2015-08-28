@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
   20:.\Generated_Source\PSoC5/AudioClkGen.c **** #include "cyfitter.h"
   21:.\Generated_Source\PSoC5/AudioClkGen.c **** #include "CyLib.h"
   22:.\Generated_Source\PSoC5/AudioClkGen.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/AudioClkGen.c **** #include "AudioClkGen.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
   40 0002 00AF     		add	r7, sp, #0
   41              		.cfi_offset 7, -4
   42              	.LCFI1:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 3
 
 
   43              		.cfi_def_cfa_register 7
@@ -126,40 +126,40 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
   70:.\Generated_Source\PSoC5/AudioClkGen.c **** 	 * When the waveform is 24 cycles long the extra cycle is added to the high period of the clock ou
   71:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_HIGH_PERIOD = (11-2);	/* High period is 11 or 12 cycles */
   44              		.loc 1 71 0
-  45 0004 46F22743 		movw	r3, #:lower16:1073767463
-  46 0008 C4F20003 		movt	r3, #:upper16:1073767463
+  45 0004 46F22243 		movw	r3, #:lower16:1073767458
+  46 0008 C4F20003 		movt	r3, #:upper16:1073767458
   47 000c 4FF00902 		mov	r2, #9
   48 0010 1A70     		strb	r2, [r3, #0]
   72:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_LOW_PERIOD = (23-2);	/* Overall period is 23 or 24 cycles */
   49              		.loc 1 72 0
-  50 0012 46F23743 		movw	r3, #:lower16:1073767479
-  51 0016 C4F20003 		movt	r3, #:upper16:1073767479
+  50 0012 46F23243 		movw	r3, #:lower16:1073767474
+  51 0016 C4F20003 		movt	r3, #:upper16:1073767474
   52 001a 4FF01502 		mov	r2, #21
   53 001e 1A70     		strb	r2, [r3, #0]
   73:.\Generated_Source\PSoC5/AudioClkGen.c **** 	
   74:.\Generated_Source\PSoC5/AudioClkGen.c **** 	/* Settings that aren't audio rate dependent */
   75:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_C0_0 = (uint8)((24000 - 74) & 0xFF);
   54              		.loc 1 75 0
-  55 0020 46F22653 		movw	r3, #:lower16:1073767718
-  56 0024 C4F20003 		movt	r3, #:upper16:1073767718
+  55 0020 46F22443 		movw	r3, #:lower16:1073767460
+  56 0024 C4F20003 		movt	r3, #:upper16:1073767460
   57 0028 4FF07602 		mov	r2, #118
   58 002c 1A70     		strb	r2, [r3, #0]
   76:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_C0_1 = (uint8)(((24000 - 74) >> 8) & 0xFF);
   59              		.loc 1 76 0
-  60 002e 46F22753 		movw	r3, #:lower16:1073767719
-  61 0032 C4F20003 		movt	r3, #:upper16:1073767719
+  60 002e 46F22543 		movw	r3, #:lower16:1073767461
+  61 0032 C4F20003 		movt	r3, #:upper16:1073767461
   62 0036 4FF05D02 		mov	r2, #93
   63 003a 1A70     		strb	r2, [r3, #0]
   77:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_N = (55-2);
   64              		.loc 1 77 0
-  65 003c 46F22643 		movw	r3, #:lower16:1073767462
-  66 0040 C4F20003 		movt	r3, #:upper16:1073767462
+  65 003c 46F22343 		movw	r3, #:lower16:1073767459
+  66 0040 C4F20003 		movt	r3, #:upper16:1073767459
   67 0044 4FF03502 		mov	r2, #53
   68 0048 1A70     		strb	r2, [r3, #0]
   78:.\Generated_Source\PSoC5/AudioClkGen.c **** 	AudioClkGen_SHIFT_CNT = (16-1);	/* Shift counter */	
   69              		.loc 1 78 0
-  70 004a 46F23643 		movw	r3, #:lower16:1073767478
-  71 004e C4F20003 		movt	r3, #:upper16:1073767478
+  70 004a 46F23343 		movw	r3, #:lower16:1073767475
+  71 004e C4F20003 		movt	r3, #:upper16:1073767475
   72 0052 4FF00F02 		mov	r2, #15
   73 0056 1A70     		strb	r2, [r3, #0]
   79:.\Generated_Source\PSoC5/AudioClkGen.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
   86              		.type	AudioClkGen_Stop, %function
   87              	AudioClkGen_Stop:
   88              	.LFB1:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 4
 
 
   80:.\Generated_Source\PSoC5/AudioClkGen.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  107:.\Generated_Source\PSoC5/AudioClkGen.c **** *  rate: Desired audio sample rate to be fed to PLL.  
  108:.\Generated_Source\PSoC5/AudioClkGen.c **** *  		 Must be one of the following:
  109:.\Generated_Source\PSoC5/AudioClkGen.c **** *		AudioClkGen_RATE_8KHZ
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 5
 
 
  110:.\Generated_Source\PSoC5/AudioClkGen.c **** *		AudioClkGen_RATE_11KHZ
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  133:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#ifdef BUSCLK_48
  134:.\Generated_Source\PSoC5/AudioClkGen.c **** 				CY_SET_XTND_REG16((void CYFAR *)(CYDEV_FASTCLK_PLL_P), 48);
  135:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#endif
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 6
 
 
  136:.\Generated_Source\PSoC5/AudioClkGen.c **** 				
@@ -343,53 +343,53 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  170:.\Generated_Source\PSoC5/AudioClkGen.c ****                 #else
  171:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_INIT_0 = (uint8)(24640 & 0xFF);
  152              		.loc 1 171 0
- 153 003a 46F21453 		movw	r3, #:lower16:1073767700
- 154 003e C4F20003 		movt	r3, #:upper16:1073767700
+ 153 003a 46F21643 		movw	r3, #:lower16:1073767446
+ 154 003e C4F20003 		movt	r3, #:upper16:1073767446
  155 0042 4FF04002 		mov	r2, #64
  156 0046 1A70     		strb	r2, [r3, #0]
  172:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_INIT_1 = (uint8)((24640 >> 8) & 0xFF);
  157              		.loc 1 172 0
- 158 0048 46F21553 		movw	r3, #:lower16:1073767701
- 159 004c C4F20003 		movt	r3, #:upper16:1073767701
+ 158 0048 46F21743 		movw	r3, #:lower16:1073767447
+ 159 004c C4F20003 		movt	r3, #:upper16:1073767447
  160 0050 4FF06002 		mov	r2, #96
  161 0054 1A70     		strb	r2, [r3, #0]
  173:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_THRESHOLD_0 = (uint8)(36288 & 0xFF);
  162              		.loc 1 173 0
- 163 0056 46F22453 		movw	r3, #:lower16:1073767716
- 164 005a C4F20003 		movt	r3, #:upper16:1073767716
+ 163 0056 46F22643 		movw	r3, #:lower16:1073767462
+ 164 005a C4F20003 		movt	r3, #:upper16:1073767462
  165 005e 6FF03F02 		mvn	r2, #63
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 7
 
 
  166 0062 1A70     		strb	r2, [r3, #0]
  174:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_THRESHOLD_1 = (uint8)((36288 >> 8) & 0xFF);
  167              		.loc 1 174 0
- 168 0064 46F22553 		movw	r3, #:lower16:1073767717
- 169 0068 C4F20003 		movt	r3, #:upper16:1073767717
+ 168 0064 46F22743 		movw	r3, #:lower16:1073767463
+ 169 0068 C4F20003 		movt	r3, #:upper16:1073767463
  170 006c 6FF07202 		mvn	r2, #114
  171 0070 1A70     		strb	r2, [r3, #0]
  175:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_M_0 = (uint8)(56320 & 0xFF);
  172              		.loc 1 175 0
- 173 0072 46F23453 		movw	r3, #:lower16:1073767732
- 174 0076 C4F20003 		movt	r3, #:upper16:1073767732
+ 173 0072 46F23643 		movw	r3, #:lower16:1073767478
+ 174 0076 C4F20003 		movt	r3, #:upper16:1073767478
  175 007a 4FF00002 		mov	r2, #0
  176 007e 1A70     		strb	r2, [r3, #0]
  176:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_M_1 = (uint8)((56320 >> 8) & 0xFF);										
  177              		.loc 1 176 0
- 178 0080 46F23553 		movw	r3, #:lower16:1073767733
- 179 0084 C4F20003 		movt	r3, #:upper16:1073767733
+ 178 0080 46F23743 		movw	r3, #:lower16:1073767479
+ 179 0084 C4F20003 		movt	r3, #:upper16:1073767479
  180 0088 6FF02302 		mvn	r2, #35
  181 008c 1A70     		strb	r2, [r3, #0]
  177:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_0 = (uint8)(24640 & 0xFF);
  182              		.loc 1 177 0
- 183 008e 46F23653 		movw	r3, #:lower16:1073767734
- 184 0092 C4F20003 		movt	r3, #:upper16:1073767734
+ 183 008e 46F23443 		movw	r3, #:lower16:1073767476
+ 184 0092 C4F20003 		movt	r3, #:upper16:1073767476
  185 0096 4FF04002 		mov	r2, #64
  186 009a 1A70     		strb	r2, [r3, #0]
  178:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_1 = (uint8)((24640 >> 8) & 0xFF);
  187              		.loc 1 178 0
- 188 009c 46F23753 		movw	r3, #:lower16:1073767735
- 189 00a0 C4F20003 		movt	r3, #:upper16:1073767735
+ 188 009c 46F23543 		movw	r3, #:lower16:1073767477
+ 189 00a0 C4F20003 		movt	r3, #:upper16:1073767477
  190 00a4 4FF06002 		mov	r2, #96
  191 00a8 1A70     		strb	r2, [r3, #0]
  179:.\Generated_Source\PSoC5/AudioClkGen.c ****                 #endif
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  194:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#endif
  195:.\Generated_Source\PSoC5/AudioClkGen.c **** 				
  196:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#ifdef BUSCLK_12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 8
 
 
  197:.\Generated_Source\PSoC5/AudioClkGen.c **** 				CY_SET_XTND_REG16((void CYFAR *)(CYDEV_FASTCLK_PLL_P), 11);
@@ -448,53 +448,53 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  221:.\Generated_Source\PSoC5/AudioClkGen.c ****                 #else                                
  222:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_INIT_0 = (uint8)(21696 & 0xFF);
  200              		.loc 1 222 0
- 201 00ba 46F21453 		movw	r3, #:lower16:1073767700
- 202 00be C4F20003 		movt	r3, #:upper16:1073767700
+ 201 00ba 46F21643 		movw	r3, #:lower16:1073767446
+ 202 00be C4F20003 		movt	r3, #:upper16:1073767446
  203 00c2 6FF03F02 		mvn	r2, #63
  204 00c6 1A70     		strb	r2, [r3, #0]
  223:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_INIT_1 = (uint8)((21696 >> 8) & 0xFF);
  205              		.loc 1 223 0
- 206 00c8 46F21553 		movw	r3, #:lower16:1073767701
- 207 00cc C4F20003 		movt	r3, #:upper16:1073767701
+ 206 00c8 46F21743 		movw	r3, #:lower16:1073767447
+ 207 00cc C4F20003 		movt	r3, #:upper16:1073767447
  208 00d0 4FF05402 		mov	r2, #84
  209 00d4 1A70     		strb	r2, [r3, #0]
  224:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_THRESHOLD_0 = (uint8)(39296 & 0xFF);
  210              		.loc 1 224 0
- 211 00d6 46F22453 		movw	r3, #:lower16:1073767716
- 212 00da C4F20003 		movt	r3, #:upper16:1073767716
+ 211 00d6 46F22643 		movw	r3, #:lower16:1073767462
+ 212 00da C4F20003 		movt	r3, #:upper16:1073767462
  213 00de 6FF07F02 		mvn	r2, #127
  214 00e2 1A70     		strb	r2, [r3, #0]
  225:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_THRESHOLD_1 = (uint8)((39296 >> 8) & 0xFF);
  215              		.loc 1 225 0
- 216 00e4 46F22553 		movw	r3, #:lower16:1073767717
- 217 00e8 C4F20003 		movt	r3, #:upper16:1073767717
+ 216 00e4 46F22743 		movw	r3, #:lower16:1073767463
+ 217 00e8 C4F20003 		movt	r3, #:upper16:1073767463
  218 00ec 6FF06602 		mvn	r2, #102
  219 00f0 1A70     		strb	r2, [r3, #0]
  226:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_M_0 = (uint8)(56448 & 0xFF);
  220              		.loc 1 226 0
- 221 00f2 46F23453 		movw	r3, #:lower16:1073767732
- 222 00f6 C4F20003 		movt	r3, #:upper16:1073767732
+ 221 00f2 46F23643 		movw	r3, #:lower16:1073767478
+ 222 00f6 C4F20003 		movt	r3, #:upper16:1073767478
  223 00fa 6FF07F02 		mvn	r2, #127
  224 00fe 1A70     		strb	r2, [r3, #0]
  227:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_M_1 = (uint8)((56448 >> 8) & 0xFF);										
  225              		.loc 1 227 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 9
 
 
- 226 0100 46F23553 		movw	r3, #:lower16:1073767733
- 227 0104 C4F20003 		movt	r3, #:upper16:1073767733
+ 226 0100 46F23743 		movw	r3, #:lower16:1073767479
+ 227 0104 C4F20003 		movt	r3, #:upper16:1073767479
  228 0108 6FF02302 		mvn	r2, #35
  229 010c 1A70     		strb	r2, [r3, #0]
  228:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_0 = (uint8)(21696 & 0xFF);
  230              		.loc 1 228 0
- 231 010e 46F23653 		movw	r3, #:lower16:1073767734
- 232 0112 C4F20003 		movt	r3, #:upper16:1073767734
+ 231 010e 46F23443 		movw	r3, #:lower16:1073767476
+ 232 0112 C4F20003 		movt	r3, #:upper16:1073767476
  233 0116 6FF03F02 		mvn	r2, #63
  234 011a 1A70     		strb	r2, [r3, #0]
  229:.\Generated_Source\PSoC5/AudioClkGen.c ****     				AudioClkGen_NC0_1 = (uint8)((21696 >> 8) & 0xFF);					
  235              		.loc 1 229 0
- 236 011c 46F23753 		movw	r3, #:lower16:1073767735
- 237 0120 C4F20003 		movt	r3, #:upper16:1073767735
+ 236 011c 46F23543 		movw	r3, #:lower16:1073767477
+ 237 0120 C4F20003 		movt	r3, #:upper16:1073767477
  238 0124 4FF05402 		mov	r2, #84
  239 0128 1A70     		strb	r2, [r3, #0]
  240              	.L6:
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  244:.\Generated_Source\PSoC5/AudioClkGen.c **** 			#if (AudioClkGen_Enable_Mclk)
  245:.\Generated_Source\PSoC5/AudioClkGen.c **** 			AudioClkGen_Clock_SCK_SetDividerRegister(23,0);	/* divide by 24 */
  264              		.loc 1 245 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 10
 
 
  265 0168 4FF01700 		mov	r0, #23
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  289 01a4 FFF7FEFF 		bl	AudioClkGen_Clock_SCK_SetDividerRegister
  276:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#endif
  277:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#if (AudioClkGen_Enable_I2Sclk)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 11
 
 
  278:.\Generated_Source\PSoC5/AudioClkGen.c **** 					#ifdef WORD_PERIOD_32
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  325:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#if (AudioClkGen_Enable_I2Sclk)
  326:.\Generated_Source\PSoC5/AudioClkGen.c **** 					#ifdef WORD_PERIOD_32
  327:.\Generated_Source\PSoC5/AudioClkGen.c **** 					AudioClkGen_Clock_I2S_SetDivider(15);	//divide by 16
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 12
 
 
  328:.\Generated_Source\PSoC5/AudioClkGen.c **** 					#else
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  374:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#ifdef WORD_PERIOD_32
  375:.\Generated_Source\PSoC5/AudioClkGen.c **** 					AudioClkGen_Clock_I2S_SetDivider(5);	//divide by 6
  376:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#else
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 13
 
 
  377:.\Generated_Source\PSoC5/AudioClkGen.c **** 					AudioClkGen_Clock_I2S_SetDivider(2);	//divide by 3
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  406:.\Generated_Source\PSoC5/AudioClkGen.c **** 					AudioClkGen_Clock_I2S_SetDivider(7);	//divide by 8
  407:.\Generated_Source\PSoC5/AudioClkGen.c **** 					#endif
  408:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#endif
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 14
 
 
  409:.\Generated_Source\PSoC5/AudioClkGen.c **** 			#endif
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  455:.\Generated_Source\PSoC5/AudioClkGen.c **** 					AudioClkGen_Clock_I2S_SetDivider(2);	//divide by 3
  456:.\Generated_Source\PSoC5/AudioClkGen.c **** 				#endif	
  457:.\Generated_Source\PSoC5/AudioClkGen.c ****             #endif
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 15
 
 
  458:.\Generated_Source\PSoC5/AudioClkGen.c **** 			
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  377 0027 00000000 		.4byte	0x0
  378              	.LLST1:
  379 002b 00000000 		.4byte	.LFB1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 16
 
 
  380 002f 02000000 		.4byte	.LCFI2
@@ -945,10 +945,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  421 0006 00000000 		.4byte	.Ldebug_abbrev0
  422 000a 04       		.byte	0x4
  423 000b 01       		.uleb128 0x1
- 424 000c 7F000000 		.4byte	.LASF14
+ 424 000c E7000000 		.4byte	.LASF14
  425 0010 01       		.byte	0x1
- 426 0011 26010000 		.4byte	.LASF15
- 427 0015 AE000000 		.4byte	.LASF16
+ 426 0011 2E010000 		.4byte	.LASF15
+ 427 0015 2E000000 		.4byte	.LASF16
  428 0019 00000000 		.4byte	0x0
  429 001d 00000000 		.4byte	0x0
  430 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -956,18 +956,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  432 0029 02       		.uleb128 0x2
  433 002a 01       		.byte	0x1
  434 002b 06       		.byte	0x6
- 435 002c 14010000 		.4byte	.LASF0
+ 435 002c 1C010000 		.4byte	.LASF0
  436 0030 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 17
 
 
  437 0031 01       		.byte	0x1
  438 0032 08       		.byte	0x8
- 439 0033 8B000000 		.4byte	.LASF1
+ 439 0033 F3000000 		.4byte	.LASF1
  440 0037 02       		.uleb128 0x2
  441 0038 02       		.byte	0x2
  442 0039 05       		.byte	0x5
- 443 003a 4D010000 		.4byte	.LASF2
+ 443 003a 55010000 		.4byte	.LASF2
  444 003e 02       		.uleb128 0x2
  445 003f 02       		.byte	0x2
  446 0040 07       		.byte	0x7
@@ -975,11 +975,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  448 0045 02       		.uleb128 0x2
  449 0046 04       		.byte	0x4
  450 0047 05       		.byte	0x5
- 451 0048 9E000000 		.4byte	.LASF4
+ 451 0048 06010000 		.4byte	.LASF4
  452 004c 02       		.uleb128 0x2
  453 004d 04       		.byte	0x4
  454 004e 07       		.byte	0x7
- 455 004f 44000000 		.4byte	.LASF5
+ 455 004f AC000000 		.4byte	.LASF5
  456 0053 02       		.uleb128 0x2
  457 0054 08       		.byte	0x8
  458 0055 05       		.byte	0x5
@@ -987,7 +987,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  460 005a 02       		.uleb128 0x2
  461 005b 08       		.byte	0x8
  462 005c 07       		.byte	0x7
- 463 005d 56000000 		.4byte	.LASF7
+ 463 005d BE000000 		.4byte	.LASF7
  464 0061 03       		.uleb128 0x3
  465 0062 04       		.byte	0x4
  466 0063 05       		.byte	0x5
@@ -997,31 +997,31 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  470 006a 07       		.byte	0x7
  471 006b 21000000 		.4byte	.LASF8
  472 006f 04       		.uleb128 0x4
- 473 0070 0E010000 		.4byte	.LASF17
+ 473 0070 16010000 		.4byte	.LASF17
  474 0074 02       		.byte	0x2
  475 0075 4C       		.byte	0x4c
  476 0076 30000000 		.4byte	0x30
  477 007a 02       		.uleb128 0x2
  478 007b 04       		.byte	0x4
  479 007c 04       		.byte	0x4
- 480 007d 20010000 		.4byte	.LASF9
+ 480 007d 28010000 		.4byte	.LASF9
  481 0081 02       		.uleb128 0x2
  482 0082 08       		.byte	0x8
  483 0083 04       		.byte	0x4
- 484 0084 A7000000 		.4byte	.LASF10
+ 484 0084 0F010000 		.4byte	.LASF10
  485 0088 02       		.uleb128 0x2
  486 0089 01       		.byte	0x1
  487 008a 08       		.byte	0x8
- 488 008b 99000000 		.4byte	.LASF11
+ 488 008b 01010000 		.4byte	.LASF11
  489 008f 05       		.uleb128 0x5
  490 0090 04       		.byte	0x4
  491 0091 07       		.byte	0x7
  492 0092 06       		.uleb128 0x6
  493 0093 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 18
 
 
- 494 0094 6D000000 		.4byte	.LASF12
+ 494 0094 D5000000 		.4byte	.LASF12
  495 0098 01       		.byte	0x1
  496 0099 43       		.byte	0x43
  497 009a 01       		.byte	0x1
@@ -1030,7 +1030,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  500 00a3 00000000 		.4byte	.LLST0
  501 00a7 06       		.uleb128 0x6
  502 00a8 01       		.byte	0x1
- 503 00a9 2E000000 		.4byte	.LASF13
+ 503 00a9 96000000 		.4byte	.LASF13
  504 00ad 01       		.byte	0x1
  505 00ae 5E       		.byte	0x5e
  506 00af 01       		.byte	0x1
@@ -1039,7 +1039,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  509 00b8 2B000000 		.4byte	.LLST1
  510 00bc 07       		.uleb128 0x7
  511 00bd 01       		.byte	0x1
- 512 00be 57010000 		.4byte	.LASF18
+ 512 00be 5F010000 		.4byte	.LASF18
  513 00c2 01       		.byte	0x1
  514 00c3 7A       		.byte	0x7a
  515 00c4 01       		.byte	0x1
@@ -1047,7 +1047,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  517 00c9 3E020000 		.4byte	.LFE2
  518 00cd 56000000 		.4byte	.LLST2
  519 00d1 08       		.uleb128 0x8
- 520 00d2 3F000000 		.4byte	.LASF19
+ 520 00d2 A7000000 		.4byte	.LASF19
  521 00d6 01       		.byte	0x1
  522 00d7 7A       		.byte	0x7a
  523 00d8 6F000000 		.4byte	0x6f
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  548 0012 06       		.uleb128 0x6
  549 0013 00       		.byte	0x0
  550 0014 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 19
 
 
  551 0015 02       		.uleb128 0x2
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  605 004b 0B       		.uleb128 0xb
  606 004c 27       		.uleb128 0x27
  607 004d 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 20
 
 
  608 004e 11       		.uleb128 0x11
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  659      53746172 
  659      7400
  660 0024 A7000000 		.4byte	0xa7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 21
 
 
  661 0028 41756469 		.ascii	"AudioClkGen_Stop\000"
@@ -1258,92 +1258,94 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 1
  699      676E6564 
  699      20696E74 
  699      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 22
 
 
- 700              	.LASF13:
- 701 002e 41756469 		.ascii	"AudioClkGen_Stop\000"
- 701      6F436C6B 
- 701      47656E5F 
- 701      53746F70 
- 701      00
- 702              	.LASF19:
- 703 003f 72617465 		.ascii	"rate\000"
- 703      00
- 704              	.LASF5:
- 705 0044 6C6F6E67 		.ascii	"long unsigned int\000"
- 705      20756E73 
- 705      69676E65 
- 705      6420696E 
- 705      7400
- 706              	.LASF7:
- 707 0056 6C6F6E67 		.ascii	"long long unsigned int\000"
- 707      206C6F6E 
- 707      6720756E 
- 707      7369676E 
- 707      65642069 
- 708              	.LASF12:
- 709 006d 41756469 		.ascii	"AudioClkGen_Start\000"
- 709      6F436C6B 
- 709      47656E5F 
- 709      53746172 
+ 700              	.LASF16:
+ 701 002e 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 701      665C486F 
+ 701      6D655C44 
+ 701      65736B74 
+ 701      6F705C55 
+ 702 005b 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 702      6E656572 
+ 702      4B69745F 
+ 702      50354C50 
+ 702      5F555342 
+ 703 008c 64696F2E 		.ascii	"dio.cydsn\000"
+ 703      63796473 
+ 703      6E00
+ 704              	.LASF13:
+ 705 0096 41756469 		.ascii	"AudioClkGen_Stop\000"
+ 705      6F436C6B 
+ 705      47656E5F 
+ 705      53746F70 
+ 705      00
+ 706              	.LASF19:
+ 707 00a7 72617465 		.ascii	"rate\000"
+ 707      00
+ 708              	.LASF5:
+ 709 00ac 6C6F6E67 		.ascii	"long unsigned int\000"
+ 709      20756E73 
+ 709      69676E65 
+ 709      6420696E 
  709      7400
- 710              	.LASF14:
- 711 007f 474E5520 		.ascii	"GNU C 4.4.1\000"
- 711      4320342E 
- 711      342E3100 
- 712              	.LASF1:
- 713 008b 756E7369 		.ascii	"unsigned char\000"
- 713      676E6564 
- 713      20636861 
- 713      7200
- 714              	.LASF11:
- 715 0099 63686172 		.ascii	"char\000"
- 715      00
- 716              	.LASF4:
- 717 009e 6C6F6E67 		.ascii	"long int\000"
- 717      20696E74 
- 717      00
- 718              	.LASF10:
- 719 00a7 646F7562 		.ascii	"double\000"
- 719      6C6500
- 720              	.LASF16:
- 721 00ae 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 721      665C486F 
- 721      6D655C44 
- 721      65736B74 
- 721      6F705C55 
- 722 00da 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 722      5F50354C 
- 722      505F5553 
- 722      425F4175 
- 722      64696F5C 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccy7AVsL.s 			page 23
+ 710              	.LASF7:
+ 711 00be 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 711      206C6F6E 
+ 711      6720756E 
+ 711      7369676E 
+ 711      65642069 
+ 712              	.LASF12:
+ 713 00d5 41756469 		.ascii	"AudioClkGen_Start\000"
+ 713      6F436C6B 
+ 713      47656E5F 
+ 713      53746172 
+ 713      7400
+ 714              	.LASF14:
+ 715 00e7 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 715      4320342E 
+ 715      342E3100 
+ 716              	.LASF1:
+ 717 00f3 756E7369 		.ascii	"unsigned char\000"
+ 717      676E6564 
+ 717      20636861 
+ 717      7200
+ 718              	.LASF11:
+ 719 0101 63686172 		.ascii	"char\000"
+ 719      00
+ 720              	.LASF4:
+ 721 0106 6C6F6E67 		.ascii	"long int\000"
+ 721      20696E74 
+ 721      00
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccFXqh9y.s 			page 23
 
 
- 723 010c 6E00     		.ascii	"n\000"
+ 722              	.LASF10:
+ 723 010f 646F7562 		.ascii	"double\000"
+ 723      6C6500
  724              	.LASF17:
- 725 010e 75696E74 		.ascii	"uint8\000"
+ 725 0116 75696E74 		.ascii	"uint8\000"
  725      3800
  726              	.LASF0:
- 727 0114 7369676E 		.ascii	"signed char\000"
+ 727 011c 7369676E 		.ascii	"signed char\000"
  727      65642063 
  727      68617200 
  728              	.LASF9:
- 729 0120 666C6F61 		.ascii	"float\000"
+ 729 0128 666C6F61 		.ascii	"float\000"
  729      7400
  730              	.LASF15:
- 731 0126 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\AudioClkGen.c\000"
+ 731 012e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\AudioClkGen.c\000"
  731      6E657261 
  731      7465645F 
  731      536F7572 
  731      63655C50 
  732              	.LASF2:
- 733 014d 73686F72 		.ascii	"short int\000"
+ 733 0155 73686F72 		.ascii	"short int\000"
  733      7420696E 
  733      7400
  734              	.LASF18:
- 735 0157 41756469 		.ascii	"AudioClkGen_SetAudioRate\000"
+ 735 015f 41756469 		.ascii	"AudioClkGen_SetAudioRate\000"
  735      6F436C6B 
  735      47656E5F 
  735      53657441 

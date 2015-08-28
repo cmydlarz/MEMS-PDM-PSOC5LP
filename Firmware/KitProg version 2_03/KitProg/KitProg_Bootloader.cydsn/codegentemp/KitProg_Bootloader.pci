@@ -1,11 +1,6 @@
 # KitProg_Bootloader
-# 2015-08-26 23:38:23Z
+# 2015-08-28 22:15:20Z
 
-dont_use_location 0 0
-dont_use_location 1 0
-dont_use_location 2 0
-dont_use_location 3 0
-dont_use_location sarcell -1 -1 1
 set_io "Pin_PSoC4A_XRES(0)" iocell 2 4
 set_io "Pin_Status_LED(0)" iocell 3 1
 set_io "\USBFS:Dm(0)\" iocell 15 7

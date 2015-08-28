@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.296ms
-Initializing data phase: Elapsed time ==> 2s.937ms
+Loading plugins phase: Elapsed time ==> 0s.281ms
+Initializing data phase: Elapsed time ==> 2s.890ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p \\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -d CY8C5666LTI-LP005 -s \\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\Generated_Source\PSoC5 -- -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE</CYPRESSTAG>
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p \\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -d CY8C5667LTI-LP009 -s \\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\Generated_Source\PSoC5 -- -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 6s.953ms
+Elaboration phase: Elapsed time ==> 7s.328ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.156ms
+HDL generation phase: Elapsed time ==> 0s.140ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.156ms
 ======================================================================
 Compiling:  PioneerKit_P5LP_USB_Audio.v
 Program  :   C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PioneerKit_P5LP_USB_Audio.v
 Program  :   C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\bin/warp.exe
-Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  PioneerKit_P5LP_USB_Audio.v
 Program  :   vlogfe
-Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Wed Aug 26 20:17:41 2015
+Fri Aug 28 18:40:21 2015
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 PioneerKit_P5LP_USB_Audio.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Wed Aug 26 20:17:41 2015
+Fri Aug 28 18:40:21 2015
 
 Flattening file 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\..\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\I2S_v2_40\I2S_v2_40.v'
 Flattening file 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cypress.v'
@@ -118,11 +118,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  PioneerKit_P5LP_USB_Audio.v
 Program  :   tovif
-Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Wed Aug 26 20:17:42 2015
+Fri Aug 28 18:40:22 2015
 
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -133,23 +133,23 @@ Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.ctl'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.ctl'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\I2S_v2_40\I2S_v2_40.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cydff_v1_30\cydff_v1_30.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\not_v1_0\not_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_sync_v1_0\cy_sync_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\LUT_v1_50\LUT_v1_50.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Comb_v1_0\PDM_Comb_v1_0.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Comb_v1_0\PDM_Comb_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
@@ -164,11 +164,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  PioneerKit_P5LP_USB_Audio.v
 Program  :   topld
-Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 -verilog PioneerKit_P5LP_USB_Audio.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Wed Aug 26 20:17:45 2015
+Fri Aug 28 18:40:25 2015
 
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -179,23 +179,23 @@ Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.ctl'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.ctl'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\I2S_v2_40\I2S_v2_40.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\PioneerKit_P5LP_USB_Audio.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cydff_v1_30\cydff_v1_30.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\not_v1_0\not_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_sync_v1_0\cy_sync_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\LUT_v1_50\LUT_v1_50.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v'.
-Linking '\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Comb_v1_0\PDM_Comb_v1_0.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v'.
+Linking '\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\codegentemp\..\PDM_Comb_v1_0\PDM_Comb_v1_0.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_70\CyControlReg_v1_70.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v'.
 Linking 'C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
@@ -2568,16 +2568,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp
 Warp Program   : C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\bin/warp.exe
-Warp Arguments : -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
+Warp Arguments : -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -dcpsoc3 PioneerKit_P5LP_USB_Audio.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 6s.359ms
+Warp synthesis phase: Elapsed time ==> 5s.687ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V2.2.0.572, Family: PSoC3, Started at: Wednesday, 26 August 2015 20:17:47
-Options: -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -d CY8C5666LTI-LP005 PioneerKit_P5LP_USB_Audio.v -verilog
+cyp3fit: V2.2.0.572, Family: PSoC3, Started at: Friday, 28 August 2015 18:40:27
+Options: -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PioneerKit_P5LP_USB_Audio.cyprj -d CY8C5667LTI-LP009 PioneerKit_P5LP_USB_Audio.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.109ms
+Design parsing phase: Elapsed time ==> 0s.093ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -6479,26 +6479,24 @@ Resource Type                 : Used : Free :  Max :  % Used
 Digital domain clock dividers :    4 :    4 :    8 :  50.00%
 Analog domain clock dividers  :    0 :    4 :    4 :   0.00%
 Pins                          :   14 :   34 :   48 :  29.17%
-UDB Macrocells                :  101 :   59 :  160 :  63.13%
-UDB Unique Pterms             :  205 :  115 :  320 :  64.06%
+UDB Macrocells                :  101 :   91 :  192 :  52.60%
+UDB Unique Pterms             :  205 :  179 :  384 :  53.39%
 UDB Total Pterms              :  231 :      :      : 
-UDB Datapath Cells            :   24 :   -4 :   20 : 120.00%
-Error: mpr.M0014: Resource limit: Maximum number of UDB Datapath Cells exceeded (max=20, needed=24). (App=cydsfit)
-UDB Status Cells              :    3 :   17 :   20 :  15.00%
+UDB Datapath Cells            :   24 :    0 :   24 : 100.00%
+UDB Status Cells              :    3 :   21 :   24 :  12.50%
             StatusI Registers :    2 
                    Sync Cells :    4 (in 1 status cell)
-UDB Control Cells             :    5 :   15 :   20 :  25.00%
+UDB Control Cells             :    5 :   19 :   24 :  20.83%
             Control Registers :    3 
                  Count7 Cells :    2 
 DMA Channels                  :   14 :   10 :   24 :  58.33%
 Interrupts                    :   15 :   17 :   32 :  46.88%
-DSM Fixed Blocks              :    0 :    1 :    1 :   0.00%
 VIDAC Fixed Blocks            :    0 :    4 :    4 :   0.00%
 SC Fixed Blocks               :    0 :    4 :    4 :   0.00%
 Comparator Fixed Blocks       :    0 :    4 :    4 :   0.00%
 Opamp Fixed Blocks            :    0 :    4 :    4 :   0.00%
 CapSense Buffers              :    0 :    2 :    2 :   0.00%
-Decimator Fixed Blocks        :    0 :    1 :    1 :   0.00%
+CAN Fixed Blocks              :    0 :    1 :    1 :   0.00%
 I2C Fixed Blocks              :    1 :    0 :    1 : 100.00%
 Timer Fixed Blocks            :    0 :    4 :    4 :   0.00%
 DFB Fixed Blocks              :    1 :    0 :    1 : 100.00%
@@ -6506,18 +6504,4629 @@ USB Fixed Blocks              :    1 :    0 :    1 : 100.00%
 LCD Fixed Blocks              :    0 :    1 :    1 :   0.00%
 EMIF Fixed Blocks             :    0 :    1 :    1 :   0.00%
 LPF Fixed Blocks              :    0 :    2 :    2 :   0.00%
-SAR Fixed Blocks              :    0 :    1 :    1 :   0.00%
+SAR Fixed Blocks              :    0 :    2 :    2 :   0.00%
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.328ms
+Technology Mapping: Elapsed time ==> 0s.656ms
 Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
-Tech mapping phase: Elapsed time ==> 0s.468ms
+Tech mapping phase: Elapsed time ==> 0s.765ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+Initial Analog Placement Results:
+IO_6@[IOP=(3)][IoId=(6)] : PSOC_CODEC_RST(0) (fixed)
+IO_1@[IOP=(0)][IoId=(1)] : PSOC_I2S_LRCLK(0) (fixed)
+IO_7@[IOP=(12)][IoId=(7)] : PSOC_I2S_MCLK(0) (fixed)
+IO_5@[IOP=(3)][IoId=(5)] : PSOC_I2S_SCLK(0) (fixed)
+IO_7@[IOP=(3)][IoId=(7)] : PSOC_I2S_SDTO(0) (fixed)
+IO_6@[IOP=(12)][IoId=(6)] : PSOC_PDM_ClkOut(0) (fixed)
+IO_0@[IOP=(0)][IoId=(0)] : PSOC_PDM_DataIn(0) (fixed)
+IO_4@[IOP=(3)][IoId=(4)] : PSOC_PDM_LR_SEL(0) (fixed)
+IO_1@[IOP=(3)][IoId=(1)] : PSOC_STATUS_LED(0) (fixed)
+IO_4@[IOP=(2)][IoId=(4)] : PSOC_SW(0) (fixed)
+IO_2@[IOP=(1)][IoId=(2)] : SCL(0) (fixed)
+IO_0@[IOP=(3)][IoId=(0)] : SDA(0) (fixed)
+IO_7@[IOP=(15)][IoId=(7)] : \USBFS:Dm(0)\ (fixed)
+IO_6@[IOP=(15)][IoId=(6)] : \USBFS:Dp(0)\ (fixed)
+USB[0]@[FFB(USB,0)] : \USBFS:USB\
+Analog Placement phase: Elapsed time ==> 0s.031ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+Analog Routing phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Dump of CyP35AnalogRoutingResultsDB
+IsVddaHalfUsedForComp = False
+IsVddaHalfUsedForSar0 = False
+IsVddaHalfUsedForSar1 = False
+Analog Code Generation phase: Elapsed time ==> 0s.359ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2076: Total run-time: 3.8 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary" expanded>
+
+------------------------------------------------------------
+PLD Packing Summary
+------------------------------------------------------------
+            Resource Type : Used : Free :  Max :  % Used
+    ====================================================
+                     PLDs :   46 :    2 :   48 :  95.83%
+
+<CYPRESSTAG name="PLD Statistics">
+
+        PLD Resource Type :     Average/LAB
+    =======================================
+                   Inputs :            6.61
+                   Pterms :            4.87
+               Macrocells :            2.20
+</CYPRESSTAG>
+<CYPRESSTAG name="Packed PLD Contents">
+Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.343ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Simulated Annealing">
+Annealing: Elapsed time ==> 0s.000ms
+<CYPRESSTAG name="Simulated Annealing Results">
+The seed used for moves was 114161200.
+Inital cost was 1565, final cost is 1565 (0.00% improvement).</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :         24 :      10.29 :       4.21
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] contents:
+LAB@[UDB=(0,0)][LB=0] #macrocells=2, #inputs=5, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_R:f1_load\, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\
+            + !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_0\
+        );
+        Output = \PDM_CIC:Comb_R:f1_load\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:right_shift_msb\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\ * !\PDM_CIC:Comb_R:right_shift_msb\ * 
+              !\PDM_CIC:Comb_R:ce1_3\
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:right_shift_msb\ * 
+              \PDM_CIC:Comb_R:ce1_3\
+        );
+        Output = \PDM_CIC:Comb_R:right_shift_msb\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Comb_R:genblk2:dp32:u2\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_R:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_R:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_R:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_R:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_R:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_R:f1_load\ ,
+        chain_in => \PDM_CIC:Comb_R:genblk2:dp32:carry1\ ,
+        chain_out => \PDM_CIC:Comb_R:genblk2:dp32:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000011110000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_R:genblk2:dp32:u1\
+    Next in chain : \PDM_CIC:Comb_R:genblk2:dp32:u3\
+
+UDB [UDB=(0,1)] contents:
+LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=8, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Integrator:f1_load\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Integrator:cs_addr_2\ * 
+              !\PDM_CIC:Integrator:cs_addr_1\ * 
+              \PDM_CIC:Integrator:cs_addr_0\
+        );
+        Output = \PDM_CIC:Integrator:f1_load\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=MODIN3_1, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_1 * MODIN3_0
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_1 * !MODIN3_0
+        );
+        Output = MODIN3_1 (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=MODIN3_0, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_0
+        );
+        Output = MODIN3_0 (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Comb_R:genblk2:dp32:u1\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_R:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_R:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_R:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_R:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_R:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_R:f1_load\ ,
+        chain_in => \PDM_CIC:Comb_R:genblk2:dp32:carry0\ ,
+        chain_out => \PDM_CIC:Comb_R:genblk2:dp32:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000011110000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_R:genblk2:dp32:u0\
+    Next in chain : \PDM_CIC:Comb_R:genblk2:dp32:u2\
+
+synccell: Name =SCL(0)_SYNC
+    PORT MAP (
+        in => \I2C_Master:Net_1109_0\ ,
+        out => \I2C_Master:Net_1109_0_SYNCOUT\ ,
+        clock => ClockBlock_BUS_CLK );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,2)] contents:
+LAB@[UDB=(0,2)][LB=0] #macrocells=2, #inputs=4, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\, Mode=(D-Register) @ [UDB=(0,2)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Net_2664\ * 
+              \PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\
+            + \PDM_CIC:Net_2680\
+        );
+        Output = \PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Net_2664\, Mode=(D-Register) @ [UDB=(0,2)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\
+            + \PDM_CIC:Net_2680\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\
+        );
+        Output = \PDM_CIC:Net_2664\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(0,2)][LB=1] #macrocells=1, #inputs=3, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\, Mode=(D-Register) @ [UDB=(0,2)][LB=1][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\
+            + \PDM_CIC:Net_2680\
+        );
+        Output = \PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk2:dp32_l:u1\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_l\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_in => \PDM_CIC:Integrator:genblk2:dp32_l:carry0\ ,
+        chain_out => \PDM_CIC:Integrator:genblk2:dp32_l:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u0\
+    Next in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u2\
+
+UDB [UDB=(0,3)] contents:
+LAB@[UDB=(0,3)][LB=0] #macrocells=1, #inputs=7, #pterms=2
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:tmp__LUT_DmaThrottle_R_ins_2\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=3]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:tmp__LUT_DmaThrottle_R_ins_2\ * 
+              !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !\PDM_CIC:Comb_R:f0_load\ * 
+              \PDM_CIC:Comb_R:d0_reg_updated\
+            + \PDM_CIC:tmp__LUT_DmaThrottle_R_ins_0\ * 
+              !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !\PDM_CIC:Comb_R:f0_load\ * 
+              \PDM_CIC:Comb_R:d0_reg_updated\
+        );
+        Output = \PDM_CIC:tmp__LUT_DmaThrottle_R_ins_2\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,3)][LB=1] #macrocells=4, #inputs=12, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_R:cs_addr_0\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        !(
+              !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\ * !\PDM_CIC:Comb_R:first_count_1\
+            + !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\ * !\PDM_CIC:Comb_R:first_count_0\
+            + !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_0\
+            + \PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\
+            + !\PDM_CIC:Comb_R:cs_addr_1\ * \PDM_CIC:Comb_R:cs_addr_0\ * 
+              \PDM_CIC:Net_2664\
+        );
+        Output = \PDM_CIC:Comb_R:cs_addr_0\ (fanout=19)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:cs_addr_1\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=1]
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        !(
+              !\PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Net_2664\
+            + !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_0\
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_3 * !MODIN3_2 * MODIN3_1 * 
+              !MODIN3_0
+            + !\PDM_CIC:Comb_R:cs_addr_1\ * !\PDM_CIC:Comb_R:cs_addr_0\
+        );
+        Output = \PDM_CIC:Comb_R:cs_addr_1\ (fanout=19)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_R:cs_addr_2\, Mode=(T-Register) @ [UDB=(0,3)][LB=1][MC=2]
+        Total # of inputs        : 9
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_0\
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_3 * !MODIN3_2 * MODIN3_1 * 
+              !MODIN3_0
+        );
+        Output = \PDM_CIC:Comb_R:cs_addr_2\ (fanout=19)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_R:f0_load\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=3]
+        Total # of inputs        : 7
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_3 * !MODIN3_2 * MODIN3_1 * 
+              !MODIN3_0
+        );
+        Output = \PDM_CIC:Comb_R:f0_load\ (fanout=6)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk2:dp32_l:u2\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_l\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_in => \PDM_CIC:Integrator:genblk2:dp32_l:carry1\ ,
+        chain_out => \PDM_CIC:Integrator:genblk2:dp32_l:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u1\
+    Next in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u3\
+
+UDB [UDB=(0,4)] contents:
+LAB@[UDB=(0,4)][LB=0] #macrocells=3, #inputs=9, #pterms=8
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=MODIN3_3, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_3 * MODIN3_2 * MODIN3_1 * 
+              MODIN3_0
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_3 * !MODIN3_2
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_3 * !MODIN3_1
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_3 * !MODIN3_0
+        );
+        Output = MODIN3_3 (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=MODIN3_2, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=2]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * !MODIN3_2 * MODIN3_1 * MODIN3_0
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_2 * !MODIN3_1
+            + \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * MODIN3_2 * !MODIN3_0
+        );
+        Output = MODIN3_2 (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Integrator:first_count_1\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Integrator:first_count_1\ * 
+              !\PDM_CIC:Integrator:first_count_0\
+        );
+        Output = \PDM_CIC:Integrator:first_count_1\ (fanout=4)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,4)][LB=1] #macrocells=2, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:d0_reg_updated\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Preset = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              \PDM_CIC:Comb_R:cs_addr_2\ * !\PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:d0_reg_updated\
+            + !\PDM_CIC:Comb_R:d0_reg_updated\ * !\PDM_CIC:Net_2665\
+        );
+        Output = \PDM_CIC:Comb_R:d0_reg_updated\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Net_2666\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              !\PDM_CIC:Comb_R:cs_addr_0\
+        );
+        Output = \PDM_CIC:Net_2666\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk3:dp32_r:u1\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_r\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_in => \PDM_CIC:Integrator:genblk3:dp32_r:carry0\ ,
+        chain_out => \PDM_CIC:Integrator:genblk3:dp32_r:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u0\
+    Next in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u2\
+
+UDB [UDB=(0,5)] contents:
+LAB@[UDB=(0,5)][LB=0] #macrocells=4, #inputs=7, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=Net_3458, Mode=(T-Register) @ [UDB=(0,5)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !Net_3458 * !\PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * \PDM_CIC:Integrator:cs_addr_0\
+            + Net_3458 * \PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\
+        );
+        Output = Net_3458 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Integrator:first_count_0\, Mode=(D-Register) @ [UDB=(0,5)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Integrator:first_count_1\ * 
+              \PDM_CIC:Integrator:first_count_0\
+        );
+        Output = \PDM_CIC:Integrator:first_count_0\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Integrator:cs_addr_0\, Mode=(T-Register) @ [UDB=(0,5)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              !\PDM_CIC:Integrator:cs_addr_2\ * 
+              !\PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\ * 
+              !\PDM_CIC:Integrator:first_count_1\
+            + !\PDM_CIC:Integrator:cs_addr_2\ * 
+              !\PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\ * 
+              !\PDM_CIC:Integrator:first_count_0\
+        );
+        Output = \PDM_CIC:Integrator:cs_addr_0\ (fanout=17)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Integrator:out_fifo_full_r\, Mode=(D-Register) @ [UDB=(0,5)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Integrator:f0_blk_stat_r_3\
+        );
+        Output = \PDM_CIC:Integrator:out_fifo_full_r\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,5)][LB=1] #macrocells=2, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:comb_loop_count_0\, Mode=(D-Register) @ [UDB=(0,5)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_0\
+        );
+        Output = \PDM_CIC:Comb_R:comb_loop_count_0\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_R:comb_loop_count_1\, Mode=(D-Register) @ [UDB=(0,5)][LB=1][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_1\ * 
+              \PDM_CIC:Comb_R:comb_loop_count_0\
+            + !\PDM_CIC:Comb_R:cs_addr_2\ * \PDM_CIC:Comb_R:cs_addr_1\ * 
+              \PDM_CIC:Comb_R:cs_addr_0\ * \PDM_CIC:Comb_R:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_R:comb_loop_count_0\
+        );
+        Output = \PDM_CIC:Comb_R:comb_loop_count_1\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk3:dp32_r:u2\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_r\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_in => \PDM_CIC:Integrator:genblk3:dp32_r:carry1\ ,
+        chain_out => \PDM_CIC:Integrator:genblk3:dp32_r:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u1\
+    Next in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u3\
+
+UDB [UDB=(1,0)] contents:
+LAB@[UDB=(1,0)][LB=0] #macrocells=4, #inputs=10, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_L:shift_count_reg_3\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_2\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_1\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:shift_count_reg_3\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:out_fifo_full\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_R:f0_blk_stat_3\
+        );
+        Output = \PDM_CIC:Comb_R:out_fifo_full\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_L:f0_load\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=2]
+        Total # of inputs        : 7
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:f0_load\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_L:d0_reg_updated\, Mode=(D-Register) @ [UDB=(1,0)][LB=0][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Preset = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              \PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:d0_reg_updated\
+            + !\PDM_CIC:Comb_L:d0_reg_updated\ * !\PDM_CIC:Net_2654\
+        );
+        Output = \PDM_CIC:Comb_L:d0_reg_updated\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,0)][LB=1] #macrocells=3, #inputs=7, #pterms=4
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_L:first_count_1\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Comb_L:first_count_1\ * 
+              !\PDM_CIC:Comb_L:first_count_0\
+        );
+        Output = \PDM_CIC:Comb_L:first_count_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_L:comb_loop_count_1\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_1\ * 
+              \PDM_CIC:Comb_L:comb_loop_count_0\
+            + !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_0\
+        );
+        Output = \PDM_CIC:Comb_L:comb_loop_count_1\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_L:comb_loop_count_0\, Mode=(D-Register) @ [UDB=(1,0)][LB=1][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_0\
+        );
+        Output = \PDM_CIC:Comb_L:comb_loop_count_0\ (fanout=5)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Comb_R:genblk2:dp32:u3\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_R:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_R:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_R:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_R:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_R:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_R:f1_load\ ,
+        ce1_comb => \PDM_CIC:Comb_R:ce1_3\ ,
+        f0_bus_stat_comb => Net_3506 ,
+        f0_blk_stat_comb => \PDM_CIC:Comb_R:f0_blk_stat_3\ ,
+        chain_in => \PDM_CIC:Comb_R:genblk2:dp32:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001000000011111111101011111001001001000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_R:genblk2:dp32:u2\
+
+UDB [UDB=(1,1)] contents:
+LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=7, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:tmp__LUT_DmaThrottle_L_ins_2\, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:wire_int_ready_l\ * !\PDM_CIC:Comb_L:cs_addr_2\ * 
+              !\PDM_CIC:Comb_L:cs_addr_1\ * \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:f0_load\ * \PDM_CIC:Comb_L:d0_reg_updated\
+            + \PDM_CIC:tmp__LUT_DmaThrottle_L_ins_2\ * 
+              !\PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * !\PDM_CIC:Comb_L:f0_load\ * 
+              \PDM_CIC:Comb_L:d0_reg_updated\
+        );
+        Output = \PDM_CIC:tmp__LUT_DmaThrottle_L_ins_2\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,1)][LB=1] #macrocells=3, #inputs=12, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_L:cs_addr_0\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        !(
+              !\PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\ * !\PDM_CIC:Comb_L:first_count_1\
+            + !\PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\ * !\PDM_CIC:Comb_L:first_count_0\
+            + !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\
+            + !\PDM_CIC:Comb_L:cs_addr_1\ * \PDM_CIC:Comb_L:cs_addr_0\ * 
+              \PDM_CIC:Net_2548\
+        );
+        Output = \PDM_CIC:Comb_L:cs_addr_0\ (fanout=19)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_L:cs_addr_2\, Mode=(T-Register) @ [UDB=(1,1)][LB=1][MC=2]
+        Total # of inputs        : 9
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:cs_addr_2\ (fanout=19)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_L:cs_addr_1\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=3]
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        !(
+              !\PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Net_2548\
+            + !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:comb_loop_count_1\ * 
+              !\PDM_CIC:Comb_L:comb_loop_count_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_3\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+            + !\PDM_CIC:Comb_L:cs_addr_1\ * !\PDM_CIC:Comb_L:cs_addr_0\
+        );
+        Output = \PDM_CIC:Comb_L:cs_addr_1\ (fanout=19)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Comb_R:genblk2:dp32:u0\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_R:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_R:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_R:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_R:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_R:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_R:f1_load\ ,
+        chain_out => \PDM_CIC:Comb_R:genblk2:dp32:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000000000000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \PDM_CIC:Comb_R:genblk2:dp32:u1\
+
+controlcell: Name =\PDM_CIC:Int_Ctrl_Reg:Sync:ctrl_reg\
+    PORT MAP (
+        clock => Net_3495 ,
+        control_7 => \PDM_CIC:Int_Ctrl_Reg:control_7\ ,
+        control_6 => \PDM_CIC:Int_Ctrl_Reg:control_6\ ,
+        control_5 => \PDM_CIC:Int_Ctrl_Reg:control_5\ ,
+        control_4 => \PDM_CIC:Int_Ctrl_Reg:control_4\ ,
+        control_3 => \PDM_CIC:Int_Ctrl_Reg:control_3\ ,
+        control_2 => \PDM_CIC:Int_Ctrl_Reg:control_2\ ,
+        control_1 => \PDM_CIC:Int_Ctrl_Reg:control_1\ ,
+        control_0 => \PDM_CIC:wire_int_en\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000001"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 1
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=0] #macrocells=4, #inputs=7, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Integrator:cs_addr_1\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\
+            + !\PDM_CIC:Integrator:cs_addr_1\ * 
+              \PDM_CIC:Integrator:cs_addr_0\
+        );
+        Output = \PDM_CIC:Integrator:cs_addr_1\ (fanout=17)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Net_3007\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Integrator:f0_load\ * 
+              \PDM_CIC:Integrator:out_fifo_full_l\
+        );
+        Output = \PDM_CIC:Net_3007\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Net_3010\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Integrator:f0_load\ * 
+              \PDM_CIC:Integrator:out_fifo_full_r\
+        );
+        Output = \PDM_CIC:Net_3010\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Integrator:f0_load\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Integrator:cnt_tc\ * \PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\
+        );
+        Output = \PDM_CIC:Integrator:f0_load\ (fanout=10)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,2)][LB=1] #macrocells=3, #inputs=6, #pterms=3
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_L:first_count_0\, Mode=(D-Register) @ [UDB=(1,2)][LB=1][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Comb_L:first_count_1\ * 
+              \PDM_CIC:Comb_L:first_count_0\
+        );
+        Output = \PDM_CIC:Comb_L:first_count_0\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:wire_comb_ov_l\, Mode=(D-Register) @ [UDB=(1,2)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_L:f0_load\ * \PDM_CIC:Comb_L:out_fifo_full\
+        );
+        Output = \PDM_CIC:wire_comb_ov_l\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:wire_comb_ov_r\, Mode=(D-Register) @ [UDB=(1,2)][LB=1][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_R:f0_load\ * \PDM_CIC:Comb_R:out_fifo_full\
+        );
+        Output = \PDM_CIC:wire_comb_ov_r\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk2:dp32_l:u0\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_l\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_out => \PDM_CIC:Integrator:genblk2:dp32_l:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011101000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000010000000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u1\
+
+statusicell: Name =\PDM_CIC:Status_Reg:sts_intr:sts_reg\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        status_3 => \PDM_CIC:wire_comb_ov_r\ ,
+        status_2 => \PDM_CIC:wire_comb_ov_l\ ,
+        status_1 => \PDM_CIC:Net_3010\ ,
+        status_0 => \PDM_CIC:Net_3007\ ,
+        interrupt => Net_3513 );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0001111"
+        cy_md_select = "0001111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=3, #inputs=5, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Net_2665\ * 
+              \PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\
+            + \PDM_CIC:Net_2669\
+        );
+        Output = \PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Integrator:out_fifo_full_l\, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Integrator:f0_blk_stat_l_3\
+        );
+        Output = \PDM_CIC:Integrator:out_fifo_full_l\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Net_2665\, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Net_2669\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\
+            + \PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\
+        );
+        Output = \PDM_CIC:Net_2665\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,3)][LB=1] #macrocells=1, #inputs=3, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\, Mode=(D-Register) @ [UDB=(1,3)][LB=1][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Net_2669\
+            + \PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\
+        );
+        Output = \PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk2:dp32_l:u3\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_l\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        f0_bus_stat_comb => \PDM_CIC:wire_int_ready_l\ ,
+        f0_blk_stat_comb => \PDM_CIC:Integrator:f0_blk_stat_l_3\ ,
+        chain_in => \PDM_CIC:Integrator:genblk2:dp32_l:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk2:dp32_l:u2\
+
+UDB [UDB=(1,4)] contents:
+LAB@[UDB=(1,4)][LB=0] #macrocells=1, #inputs=5, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Integrator:cnt_enable\, Mode=(D-Register) @ [UDB=(1,4)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Integrator:cs_addr_2\ * 
+              !\PDM_CIC:Integrator:cs_addr_1\ * 
+              \PDM_CIC:Integrator:cs_addr_0\
+            + \PDM_CIC:Integrator:first_count_1\ * 
+              !\PDM_CIC:Integrator:first_count_0\
+        );
+        Output = \PDM_CIC:Integrator:cnt_enable\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,4)][LB=1] #macrocells=1, #inputs=8, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\ByteSwap_Tx:State_3\, Mode=(D-Register) @ [UDB=(1,4)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        !(
+              \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_3\ * \ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f0_blk_stat\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_2\ * !\ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\ * !\ByteSwap_Tx:f1_blk_stat\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f1_blk_stat\
+        );
+        Output = \ByteSwap_Tx:State_3\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk3:dp32_r:u0\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_r\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        chain_out => \PDM_CIC:Integrator:genblk3:dp32_r:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011101000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000010000000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u1\
+
+UDB [UDB=(1,5)] contents:
+LAB@[UDB=(1,5)][LB=0] #macrocells=1, #inputs=1, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\ByteSwap_Tx:enable\, Mode=(D-Register) @ [UDB=(1,5)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \ByteSwap_Tx:ctrl_0\
+        );
+        Output = \ByteSwap_Tx:enable\ (fanout=6)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,5)][LB=1] #macrocells=2, #inputs=9, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\ByteSwap_Tx:State_4\, Mode=(T-Register) @ [UDB=(1,5)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        (
+              !\ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_1\ * \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * \ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * \ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_2\ * !\ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\ * !\ByteSwap_Tx:f0_blk_stat\
+            + \ByteSwap_Tx:State_4\ * \ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_2\ * !\ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\ * !\ByteSwap_Tx:f1_blk_stat\
+            + \ByteSwap_Tx:State_4\ * \ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f1_blk_stat\
+        );
+        Output = \ByteSwap_Tx:State_4\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\ByteSwap_Tx:resolution_ctrl\, Mode=(D-Register) @ [UDB=(1,5)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \ByteSwap_Tx:ctrl_1\
+        );
+        Output = \ByteSwap_Tx:resolution_ctrl\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Integrator:genblk3:dp32_r:u3\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Integrator:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Integrator:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Integrator:cs_addr_0\ ,
+        route_ci => \PDM_CIC:Integrator:pdm_data_reg_r\ ,
+        f0_load => \PDM_CIC:Integrator:f0_load\ ,
+        f1_load => \PDM_CIC:Integrator:f1_load\ ,
+        f0_bus_stat_comb => \PDM_CIC:tmp__LUT_DmaThrottle_R_ins_0\ ,
+        f0_blk_stat_comb => \PDM_CIC:Integrator:f0_blk_stat_r_3\ ,
+        chain_in => \PDM_CIC:Integrator:genblk3:dp32_r:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000100000000000000110000011100000110110001110000011011000111000001101100011100000110110001110000000000000000000011111111000000001111111111111111000000110000000000000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Integrator:genblk3:dp32_r:u2\
+
+controlcell: Name =\ByteSwap_Tx:ControlReg\
+    PORT MAP (
+        control_7 => \ByteSwap_Tx:ctrl_7\ ,
+        control_6 => \ByteSwap_Tx:ctrl_6\ ,
+        control_5 => \ByteSwap_Tx:ctrl_5\ ,
+        control_4 => \ByteSwap_Tx:ctrl_4\ ,
+        control_3 => \ByteSwap_Tx:ctrl_3\ ,
+        control_2 => \ByteSwap_Tx:ctrl_2\ ,
+        control_1 => \ByteSwap_Tx:ctrl_1\ ,
+        control_0 => \ByteSwap_Tx:ctrl_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000000"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Enable: True
+
+UDB [UDB=(2,0)] contents:
+LAB@[UDB=(2,0)][LB=0] #macrocells=3, #inputs=6, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_L:shift_count_reg_1\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:shift_count_reg_1\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Net_2537\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\
+        );
+        Output = \PDM_CIC:Net_2537\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_L:shift_count_reg_2\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=3]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_1\ * 
+              \PDM_CIC:Comb_L:shift_count_reg_0\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_1\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:shift_count_reg_2\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:shift_count_reg_2\ (fanout=5)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,0)][LB=1] #macrocells=1, #inputs=4, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_L:shift_count_reg_0\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              \PDM_CIC:Comb_L:cs_addr_0\ * 
+              !\PDM_CIC:Comb_L:shift_count_reg_0\
+        );
+        Output = \PDM_CIC:Comb_L:shift_count_reg_0\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Comb_L:genblk2:dp32:u0\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_L:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_L:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_L:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_L:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_L:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_L:f1_load\ ,
+        chain_out => \PDM_CIC:Comb_L:genblk2:dp32:carry0\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000000000000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \PDM_CIC:Comb_L:genblk2:dp32:u1\
+
+UDB [UDB=(2,1)] contents:
+LAB@[UDB=(2,1)][LB=0] #macrocells=2, #inputs=6, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Integrator:pdm_data_reg_l\, Mode=(T-Register) @ [UDB=(2,1)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Integrator:cs_addr_2\ * \PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\ * 
+              !\PDM_CIC:Integrator:pdm_data_reg_l\ * Net_3512_SYNCOUT
+            + \PDM_CIC:Integrator:cs_addr_2\ * \PDM_CIC:Integrator:cs_addr_1\ * 
+              !\PDM_CIC:Integrator:cs_addr_0\ * 
+              \PDM_CIC:Integrator:pdm_data_reg_l\ * !Net_3512_SYNCOUT
+        );
+        Output = \PDM_CIC:Integrator:pdm_data_reg_l\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Integrator:pdm_data_reg_r\, Mode=(T-Register) @ [UDB=(2,1)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * \PDM_CIC:Integrator:cs_addr_0\ * 
+              !\PDM_CIC:Integrator:pdm_data_reg_r\ * Net_3512_SYNCOUT
+            + !\PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * \PDM_CIC:Integrator:cs_addr_0\ * 
+              \PDM_CIC:Integrator:pdm_data_reg_r\ * !Net_3512_SYNCOUT
+        );
+        Output = \PDM_CIC:Integrator:pdm_data_reg_r\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(2,1)][LB=1] #macrocells=3, #inputs=3, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_R:first_count_1\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Comb_R:first_count_1\ * 
+              !\PDM_CIC:Comb_R:first_count_0\
+        );
+        Output = \PDM_CIC:Comb_R:first_count_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Comb_R:first_count_0\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              !\PDM_CIC:Comb_R:first_count_1\ * 
+              \PDM_CIC:Comb_R:first_count_0\
+        );
+        Output = \PDM_CIC:Comb_R:first_count_0\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Comb_L:out_fifo_full\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PDM_CIC:Comb_L:f0_blk_stat_3\
+        );
+        Output = \PDM_CIC:Comb_L:out_fifo_full\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Comb_L:genblk2:dp32:u3\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_L:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_L:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_L:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_L:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_L:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_L:f1_load\ ,
+        ce1_comb => \PDM_CIC:Comb_L:ce1_3\ ,
+        f0_bus_stat_comb => Net_85 ,
+        f0_blk_stat_comb => \PDM_CIC:Comb_L:f0_blk_stat_3\ ,
+        chain_in => \PDM_CIC:Comb_L:genblk2:dp32:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001000000011111111101011111001001001000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_L:genblk2:dp32:u2\
+
+synccell: Name =PSOC_PDM_DataIn(0)_SYNC
+    PORT MAP (
+        in => Net_3512 ,
+        out => Net_3512_SYNCOUT ,
+        clock => ClockBlock_BUS_CLK );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,2)] contents:
+LAB@[UDB=(2,2)][LB=0] #macrocells=3, #inputs=9, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:state_3\, Mode=(D-Register) @ [UDB=(2,2)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              \AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:state_3\ (fanout=9)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync_ready\, Mode=(T-Register) @ [UDB=(2,2)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:sync_ready\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync_ready\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync_ready\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\AudioClkGen:UDB_ACG:transfer\, Mode=(D-Register) @ [UDB=(2,2)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \AudioClkGen:UDB_ACG:sync_ready\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\
+        );
+        Output = \AudioClkGen:UDB_ACG:transfer\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(2,2)][LB=1] #macrocells=2, #inputs=7, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:counterAddr_0\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:counterAddr_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:Integrator:cs_addr_2\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=2]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Integrator:cs_addr_2\ * 
+              \PDM_CIC:Integrator:cs_addr_1\ * \PDM_CIC:Integrator:cs_addr_0\
+            + \PDM_CIC:Integrator:cs_addr_2\ * 
+              !\PDM_CIC:Integrator:cs_addr_1\
+        );
+        Output = \PDM_CIC:Integrator:cs_addr_2\ (fanout=17)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:shaper:Div:u1\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_2 => \AudioClkGen:UDB_ACG:shaper:state_2\ ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:shaper:state_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:shaper:state_0\ ,
+        route_si => \AudioClkGen:UDB_ACG:value\ ,
+        cl0_comb => \AudioClkGen:UDB_ACG:shaper:cl0_1\ ,
+        chain_in => \AudioClkGen:UDB_ACG:shaper:Div:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000011011000100000010000100010000000000000000000000000100010001000000000000000000000000000000000000000000000000000011111111000000001111111111111111000011110000111100000001000010110000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \AudioClkGen:UDB_ACG:shaper:Div:u0\
+
+UDB [UDB=(2,3)] contents:
+LAB@[UDB=(2,3)][LB=0] #macrocells=2, #inputs=7, #pterms=8
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:addr_0\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        !(
+              !Net_3097 * !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\
+            + Net_3097 * \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:lastSof\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              \AudioClkGen:UDB_ACG:sync:lastSof\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              \AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync:counterZ0\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:addr_0\ (fanout=11)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:lastSof\, Mode=(D-Register) @ [UDB=(2,3)][LB=0][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_3097
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:lastSof\ (fanout=3)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,3)][LB=1] #macrocells=2, #inputs=9, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:addr_2\, Mode=(D-Register) @ [UDB=(2,3)][LB=1][MC=0]
+        Total # of inputs        : 9
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        !(
+              Net_3097 * \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:lastSof\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:sync:counterZ0\
+            + !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+            + \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync:counterZ1\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:addr_2\ (fanout=11)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:counterAddr_2\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:counterAddr_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:sync:SofCounter:u0\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_2 => \AudioClkGen:UDB_ACG:sync:addr_2\ ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:sync:addr_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:sync:addr_0\ ,
+        chain_out => \AudioClkGen:UDB_ACG:sync:SofCounter:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0010000001000000100000000100000000000000000100000110110000010000011101000001000010101000010000000001000100010000101010000100000011111111000000001111111111111111000000000000000000000001000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \AudioClkGen:UDB_ACG:sync:SofCounter:u1\
+
+count7cell: Name =\PDM_CIC:Integrator:Counter7\
+    PORT MAP (
+        clock => Net_3495 ,
+        reset => \PDM_CIC:wire_int_en\ ,
+        enable => \PDM_CIC:Integrator:cnt_enable\ ,
+        tc => \PDM_CIC:Integrator:cnt_tc\ );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "0011111"
+        cy_route_en = 1
+        cy_route_ld = 0
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,4)] contents:
+LAB@[UDB=(2,4)][LB=0] #macrocells=1, #inputs=8, #pterms=7
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\ByteSwap_Tx:State_2\, Mode=(T-Register) @ [UDB=(2,4)][LB=0][MC=3]
+        Total # of inputs        : 8
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        (
+              !\ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_2\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_1\ * 
+              \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f0_blk_stat\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f1_blk_stat\
+            + !\ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_0\
+            + !\ByteSwap_Tx:State_4\ * \ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\ * !\ByteSwap_Tx:f0_blk_stat\
+        );
+        Output = \ByteSwap_Tx:State_2\ (fanout=8)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,4)][LB=1] #macrocells=2, #inputs=9, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:addr_1\, Mode=(D-Register) @ [UDB=(2,4)][LB=1][MC=0]
+        Total # of inputs        : 9
+        Total # of product terms : 6
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 6 pterms
+        !(
+              Net_3097 * \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:lastSof\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+            + !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync:counterZ0\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              !\AudioClkGen:UDB_ACG:transfer\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync:counterZ1\
+            + !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:addr_1\ (fanout=11)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\AudioClkGen:UDB_ACG:sync:counterAddr_1\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+            + \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\
+        );
+        Output = \AudioClkGen:UDB_ACG:sync:counterAddr_1\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:sync:Counter:u0\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_2 => \AudioClkGen:UDB_ACG:sync:counterAddr_2\ ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:sync:counterAddr_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:sync:counterAddr_0\ ,
+        z0_comb => \AudioClkGen:UDB_ACG:sync:counterZ0\ ,
+        z1_comb => \AudioClkGen:UDB_ACG:sync:counterZ1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000001000000001000000010000000000000000100000010100000001000000000000000000000000000000000000000000000000000011111111000000001111111111111111000000000000000000000001000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,5)] contents:
+LAB@[UDB=(2,5)][LB=0] #macrocells=2, #inputs=8, #pterms=8
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\ByteSwap_Tx:d0_load\, Mode=(Combinatorial) @ [UDB=(2,5)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              \ByteSwap_Tx:State_0\
+        );
+        Output = \ByteSwap_Tx:d0_load\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\ByteSwap_Tx:State_1\, Mode=(T-Register) @ [UDB=(2,5)][LB=0][MC=3]
+        Total # of inputs        : 8
+        Total # of product terms : 7
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 7 pterms
+        (
+              !\ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_1\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:resolution_ctrl\ * 
+              !\ByteSwap_Tx:State_4\ * \ByteSwap_Tx:State_3\ * 
+              !\ByteSwap_Tx:State_2\ * !\ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * \ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f1_blk_stat\
+            + !\ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_1\ * \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:State_0\ * !\ByteSwap_Tx:f1_blk_stat\
+        );
+        Output = \ByteSwap_Tx:State_1\ (fanout=8)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,5)][LB=1] #macrocells=3, #inputs=9, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\ByteSwap_Tx:State_0\, Mode=(D-Register) @ [UDB=(2,5)][LB=1][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 5
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 5 pterms
+        (
+              \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              !\ByteSwap_Tx:State_3\ * !\ByteSwap_Tx:State_2\ * 
+              !\ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:State_0\ * 
+              !\ByteSwap_Tx:f0_blk_stat\
+            + \ByteSwap_Tx:enable\ * !\ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_3\ * \ByteSwap_Tx:State_2\ * 
+              \ByteSwap_Tx:State_1\ * !\ByteSwap_Tx:f0_blk_stat\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\ * 
+              !\ByteSwap_Tx:f1_blk_stat\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_4\ * 
+              \ByteSwap_Tx:State_0\
+            + \ByteSwap_Tx:enable\ * \ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_0\
+        );
+        Output = \ByteSwap_Tx:State_0\ (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\ByteSwap_Tx:f1_load\, Mode=(Combinatorial) @ [UDB=(2,5)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_1\
+            + !\ByteSwap_Tx:State_4\ * !\ByteSwap_Tx:State_3\ * 
+              \ByteSwap_Tx:State_2\ * \ByteSwap_Tx:State_0\
+        );
+        Output = \ByteSwap_Tx:f1_load\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=Net_2731, Mode=(Combinatorial) @ [UDB=(2,5)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \ByteSwap_Tx:enable\ * \ByteSwap_Tx:f0_not_full_stat\
+        );
+        Output = Net_2731 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\ByteSwap_Tx:dp_ByteSwap:u0\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        cs_addr_2 => \ByteSwap_Tx:State_2\ ,
+        cs_addr_1 => \ByteSwap_Tx:State_1\ ,
+        cs_addr_0 => \ByteSwap_Tx:State_0\ ,
+        f1_load => \ByteSwap_Tx:f1_load\ ,
+        d0_load => \ByteSwap_Tx:d0_load\ ,
+        f0_bus_stat_comb => \ByteSwap_Tx:f0_not_full_stat\ ,
+        f0_blk_stat_comb => \ByteSwap_Tx:f0_blk_stat\ ,
+        f1_blk_stat_comb => \ByteSwap_Tx:f1_blk_stat\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000001100000010101000010000000000000000010000000000001100000000000000100000000000000000000000000100000000000011111111000000001111111111111111000000000000000000001100000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+synccell: Name =\TX_Sync:genblk1[0]:INST\
+    PORT MAP (
+        clock => ClockBlock_BUS_CLK ,
+        in => Net_2731 ,
+        out => Net_2986 );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,0)] contents:
+LAB@[UDB=(3,0)][LB=0] #macrocells=2, #inputs=6, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\
+            + \PDM_CIC:Net_2625\
+        );
+        Output = \PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_BUS_CLK) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Net_2651\
+            + \PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\
+        );
+        Output = \PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,0)][LB=1] #macrocells=4, #inputs=8, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Net_2548\ * 
+              \PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\
+            + \PDM_CIC:Net_2625\
+        );
+        Output = \PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Net_2548\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\
+            + \PDM_CIC:Net_2625\ * 
+              !\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\
+        );
+        Output = \PDM_CIC:Net_2548\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Net_2651\
+            + !\PDM_CIC:Net_2654\ * 
+              \PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\
+        );
+        Output = \PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PDM_CIC:Net_2654\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Net_2651\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\
+            + \PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\ * 
+              !\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\
+        );
+        Output = \PDM_CIC:Net_2654\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PDM_CIC:Comb_L:genblk2:dp32:u1\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_L:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_L:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_L:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_L:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_L:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_L:f1_load\ ,
+        chain_in => \PDM_CIC:Comb_L:genblk2:dp32:carry0\ ,
+        chain_out => \PDM_CIC:Comb_L:genblk2:dp32:carry1\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000011110000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_L:genblk2:dp32:u0\
+    Next in chain : \PDM_CIC:Comb_L:genblk2:dp32:u2\
+
+synccell: Name =SDA(0)_SYNC
+    PORT MAP (
+        in => \I2C_Master:Net_1109_1\ ,
+        out => \I2C_Master:Net_1109_1_SYNCOUT\ ,
+        clock => ClockBlock_BUS_CLK );
+    Properties:
+    {
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,1)] contents:
+LAB@[UDB=(3,1)][LB=0] #macrocells=2, #inputs=6, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:div:state_0\, Mode=(D-Register) @ [UDB=(3,1)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\AudioClkGen:UDB_ACG:trigger_shaper\ * 
+              \AudioClkGen:UDB_ACG:div:state_1\ * 
+              \AudioClkGen:UDB_ACG:div:state_0\
+            + !\AudioClkGen:UDB_ACG:div:state_1\ * 
+              !\AudioClkGen:UDB_ACG:div:state_0\ * 
+              \AudioClkGen:UDB_ACG:div:deltaReg\
+            + \AudioClkGen:UDB_ACG:div:state_1\ * 
+              !\AudioClkGen:UDB_ACG:div:state_0\ * 
+              \AudioClkGen:UDB_ACG:div:ce0\
+        );
+        Output = \AudioClkGen:UDB_ACG:div:state_0\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\AudioClkGen:UDB_ACG:div:deltaReg\, Mode=(T-Register) @ [UDB=(3,1)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \AudioClkGen:UDB_ACG:trigger_shaper\ * 
+              !\AudioClkGen:UDB_ACG:delta\ * 
+              \AudioClkGen:UDB_ACG:div:state_1\ * 
+              \AudioClkGen:UDB_ACG:div:state_0\ * 
+              \AudioClkGen:UDB_ACG:div:deltaReg\
+            + \AudioClkGen:UDB_ACG:trigger_shaper\ * 
+              \AudioClkGen:UDB_ACG:delta\ * \AudioClkGen:UDB_ACG:div:state_1\ * 
+              \AudioClkGen:UDB_ACG:div:state_0\ * 
+              !\AudioClkGen:UDB_ACG:div:deltaReg\
+        );
+        Output = \AudioClkGen:UDB_ACG:div:deltaReg\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,1)][LB=1] #macrocells=2, #inputs=5, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PDM_CIC:Comb_L:f1_load\, Mode=(D-Register) @ [UDB=(3,1)][LB=1][MC=0]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\
+            + !\PDM_CIC:Comb_L:cs_addr_2\ * !\PDM_CIC:Comb_L:cs_addr_0\
+        );
+        Output = \PDM_CIC:Comb_L:f1_load\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PDM_CIC:Comb_L:right_shift_msb\, Mode=(T-Register) @ [UDB=(3,1)][LB=1][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3495) => Global
+            Reset  = !(\PDM_CIC:wire_int_en\)
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\ * !\PDM_CIC:Comb_L:right_shift_msb\ * 
+              !\PDM_CIC:Comb_L:ce1_3\
+            + \PDM_CIC:Comb_L:cs_addr_2\ * \PDM_CIC:Comb_L:cs_addr_1\ * 
+              !\PDM_CIC:Comb_L:cs_addr_0\ * \PDM_CIC:Comb_L:right_shift_msb\ * 
+              \PDM_CIC:Comb_L:ce1_3\
+        );
+        Output = \PDM_CIC:Comb_L:right_shift_msb\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\PDM_CIC:Comb_L:genblk2:dp32:u2\
+    PORT MAP (
+        clock => Net_3495 ,
+        cs_addr_2 => \PDM_CIC:Comb_L:cs_addr_2\ ,
+        cs_addr_1 => \PDM_CIC:Comb_L:cs_addr_1\ ,
+        cs_addr_0 => \PDM_CIC:Comb_L:cs_addr_0\ ,
+        route_si => \PDM_CIC:Comb_L:right_shift_msb\ ,
+        f0_load => \PDM_CIC:Comb_L:f0_load\ ,
+        f1_load => \PDM_CIC:Comb_L:f1_load\ ,
+        chain_in => \PDM_CIC:Comb_L:genblk2:dp32:carry1\ ,
+        chain_out => \PDM_CIC:Comb_L:genblk2:dp32:carry2\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001010000000010000000000000001000001100001000110001110000100011000101000010000000010000000000000000000000000000100100000011111111000000001111111111111111000011110000001101000101000000000000001000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \PDM_CIC:Comb_L:genblk2:dp32:u1\
+    Next in chain : \PDM_CIC:Comb_L:genblk2:dp32:u3\
+
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=3, #inputs=8, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\AudioClkGen:UDB_ACG:shaper:state_0\, Mode=(D-Register) @ [UDB=(3,2)][LB=0][MC=0]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\ * 
+              \AudioClkGen:UDB_ACG:shaper:cl0_1\
+            + !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_0\
+            + !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_0\ * 
+              \AudioClkGen:UDB_ACG:trigger_shaper\
+        );
+        Output = \AudioClkGen:UDB_ACG:shaper:state_0\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=GenClock, Mode=(D-Register) @ [UDB=(3,2)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \AudioClkGen:UDB_ACG:div:state_1\ * 
+              \AudioClkGen:UDB_ACG:div:state_0\
+        );
+        Output = GenClock (fanout=1)
+        Properties               : 
+        {
+            clock_driver = "GenClock"
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\AudioClkGen:UDB_ACG:div:state_1\, Mode=(D-Register) @ [UDB=(3,2)][LB=0][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        !(
+              \AudioClkGen:UDB_ACG:trigger_shaper\ * 
+              \AudioClkGen:UDB_ACG:div:state_1\ * 
+              \AudioClkGen:UDB_ACG:div:state_0\
+            + !\AudioClkGen:UDB_ACG:div:state_1\ * 
+              !\AudioClkGen:UDB_ACG:div:state_0\ * 
+              \AudioClkGen:UDB_ACG:div:deltaReg\
+        );
+        Output = \AudioClkGen:UDB_ACG:div:state_1\ (fanout=5)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(3,2)][LB=1] #macrocells=2, #inputs=5, #pterms=4
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\AudioClkGen:UDB_ACG:shaper:state_1\, Mode=(D-Register) @ [UDB=(3,2)][LB=1][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\
+            + !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_0\
+        );
+        Output = \AudioClkGen:UDB_ACG:shaper:state_1\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\AudioClkGen:UDB_ACG:delta\, Mode=(T-Register) @ [UDB=(3,2)][LB=1][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\ * 
+              !\AudioClkGen:UDB_ACG:shaper:cl0_1\ * 
+              !\AudioClkGen:UDB_ACG:delta\
+            + !\AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              !\AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\ * 
+              \AudioClkGen:UDB_ACG:shaper:cl0_1\ * 
+              \AudioClkGen:UDB_ACG:delta\
+        );
+        Output = \AudioClkGen:UDB_ACG:delta\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:shaper:Div:u0\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_2 => \AudioClkGen:UDB_ACG:shaper:state_2\ ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:shaper:state_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:shaper:state_0\ ,
+        route_si => \AudioClkGen:UDB_ACG:value\ ,
+        chain_out => \AudioClkGen:UDB_ACG:shaper:Div:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000011011000100000010000100010000000000000000000000000100010001000000000000000000000000000000000000000000000000000011111111000000001111111111111111000000000000101000000001000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \AudioClkGen:UDB_ACG:shaper:Div:u1\
+
+UDB [UDB=(3,3)] contents:
+LAB@[UDB=(3,3)][LB=0] #macrocells=1, #inputs=9, #pterms=4
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\AudioClkGen:UDB_ACG:shaper:state_2\, Mode=(T-Register) @ [UDB=(3,3)][LB=0][MC=2]
+        Total # of inputs        : 9
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_3093) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              \AudioClkGen:UDB_ACG:sync:addr_2\ * 
+              \AudioClkGen:UDB_ACG:sync:addr_1\ * 
+              !\AudioClkGen:UDB_ACG:sync:addr_0\ * 
+              !\AudioClkGen:UDB_ACG:sync:state_3\ * 
+              \AudioClkGen:UDB_ACG:sync:counterZ1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_2\
+            + \AudioClkGen:UDB_ACG:sync_ready\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_1\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\
+            + \AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_1\
+            + \AudioClkGen:UDB_ACG:shaper:state_2\ * 
+              \AudioClkGen:UDB_ACG:shaper:state_0\
+        );
+        Output = \AudioClkGen:UDB_ACG:shaper:state_2\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,3)][LB=1] #macrocells=1, #inputs=1, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=Net_2161, Mode=(D-Register) @ [UDB=(3,3)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \I2S:tx_data_out\
+        );
+        Output = Net_2161 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:sync:SofCounter:u1\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_2 => \AudioClkGen:UDB_ACG:sync:addr_2\ ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:sync:addr_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:sync:addr_0\ ,
+        so_comb => \AudioClkGen:UDB_ACG:value\ ,
+        chain_in => \AudioClkGen:UDB_ACG:sync:SofCounter:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0010000001000000100000000100000000000000000100000110110000010000011101000001000010101000010000000001000100010000101010000100000011111111000000001111111111111111000011110000111100000001000000110000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Previous in chain : \AudioClkGen:UDB_ACG:sync:SofCounter:u0\
+
+count7cell: Name =\I2S:BitCounter\
+    PORT MAP (
+        clock => I2Sclk ,
+        enable => \I2S:ctrl_2\ ,
+        count_6 => \I2S:count_6\ ,
+        count_5 => \I2S:count_5\ ,
+        count_4 => \I2S:count_4\ ,
+        count_3 => \I2S:count_3\ ,
+        count_2 => \I2S:count_2\ ,
+        count_1 => \I2S:count_1\ ,
+        count_0 => Net_2585 );
+    Properties:
+    {
+        cy_alt_mode = 0
+        cy_init_value = "0000000"
+        cy_period = "1111111"
+        cy_route_en = 1
+        cy_route_ld = 0
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,4)] contents:
+LAB@[UDB=(3,4)][LB=0] #macrocells=1, #inputs=11, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=\I2S:txenable\, Mode=(D-Register) @ [UDB=(3,4)][LB=0][MC=0]
+        Total # of inputs        : 11
+        Total # of product terms : 8
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 8 pterms
+        (
+              !Net_2585 * \I2S:ctrl_0\ * !\I2S:count_6\ * !\I2S:count_5\ * 
+              !\I2S:count_4\ * !\I2S:count_3\ * !\I2S:count_2\ * 
+              !\I2S:count_1\ * !\I2S:tx_underflow_sticky\
+            + Net_2585 * \I2S:ctrl_2\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_6\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_5\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_4\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_3\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_2\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+            + \I2S:ctrl_2\ * \I2S:count_1\ * !\I2S:tx_underflow_sticky\ * 
+              \I2S:txenable\
+        );
+        Output = \I2S:txenable\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,4)][LB=1] #macrocells=2, #inputs=7, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\I2S:tx_state_0\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        !(
+              !Net_2585 * \I2S:txenable\
+            + \I2S:count_5\ * \I2S:count_3\ * \I2S:count_2\ * \I2S:count_1\ * 
+              \I2S:txenable\
+            + \I2S:count_4\ * \I2S:count_3\ * \I2S:count_2\ * \I2S:count_1\ * 
+              \I2S:txenable\
+        );
+        Output = \I2S:tx_state_0\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\I2S:tx_state_1\, Mode=(D-Register) @ [UDB=(3,4)][LB=1][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              Net_2585 * \I2S:count_5\ * \I2S:count_3\ * \I2S:count_2\ * 
+              \I2S:count_1\
+            + Net_2585 * \I2S:count_4\ * \I2S:count_3\ * \I2S:count_2\ * 
+              \I2S:count_1\
+            + !\I2S:txenable\
+        );
+        Output = \I2S:tx_state_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\AudioClkGen:UDB_ACG:div:Div:u0\
+    PORT MAP (
+        clock => Net_3093 ,
+        cs_addr_1 => \AudioClkGen:UDB_ACG:div:state_1\ ,
+        cs_addr_0 => \AudioClkGen:UDB_ACG:div:state_0\ ,
+        ce0_comb => \AudioClkGen:UDB_ACG:div:ce0\ ,
+        ce1_comb => \AudioClkGen:UDB_ACG:trigger_shaper\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1010100001000000000000000000000000100000010000000010000001000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111101000000000000000000001000000000000000000000000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\I2S:Sync:CtlReg\
+    PORT MAP (
+        clock => I2Sclk ,
+        control_7 => \I2S:ctrl_7\ ,
+        control_6 => \I2S:ctrl_6\ ,
+        control_5 => \I2S:ctrl_5\ ,
+        control_4 => \I2S:ctrl_4\ ,
+        control_3 => \I2S:ctrl_3\ ,
+        control_2 => \I2S:ctrl_2\ ,
+        control_1 => \I2S:ctrl_1\ ,
+        control_0 => \I2S:ctrl_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(3,5)] contents:
+LAB@[UDB=(3,5)][LB=0] #macrocells=2, #inputs=5, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\I2S:tx_status_0\, Mode=(Combinatorial) @ [UDB=(3,5)][LB=0][MC=1]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \I2S:tx_state_1\ * !\I2S:tx_state_0\ * \I2S:tx_f0_empty_stat\
+        );
+        Output = \I2S:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\I2S:tx_underflow_sticky\, Mode=(D-Register) @ [UDB=(3,5)][LB=0][MC=3]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \I2S:ctrl_0\ * \I2S:tx_state_1\ * !\I2S:tx_state_0\ * 
+              \I2S:tx_f0_empty_stat\
+            + \I2S:ctrl_0\ * \I2S:tx_underflow_sticky\
+        );
+        Output = \I2S:tx_underflow_sticky\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(3,5)][LB=1] #macrocells=2, #inputs=3, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=Net_2586, Mode=(D-Register) @ [UDB=(3,5)][LB=1][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\I2S:reset\ * !\I2S:count_6\
+        );
+        Output = Net_2586 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\I2S:reset\, Mode=(D-Register) @ [UDB=(3,5)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (I2Sclk) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\I2S:ctrl_2\
+        );
+        Output = \I2S:reset\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\I2S:Tx:dpTx:u0\
+    PORT MAP (
+        clock => I2Sclk ,
+        cs_addr_1 => \I2S:tx_state_1\ ,
+        cs_addr_0 => \I2S:tx_state_0\ ,
+        so_comb => \I2S:tx_data_out\ ,
+        f0_bus_stat_comb => Net_3491 ,
+        f0_blk_stat_comb => \I2S:tx_f0_empty_stat\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000000000000000000010101000000000000110000001010100001010000000100000000000000010001010100000001000000110000101010000101000011111111000000001111111111111111000000000000000000000000000000000000000000000100"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\I2S:Tx:TxStsReg\
+    PORT MAP (
+        clock => I2Sclk ,
+        status_1 => Net_3491 ,
+        status_0 => \I2S:tx_status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0000000"
+        cy_md_select = "0000001"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+Intr hod @ [IntrHod=(0)]: 
+  Intr@ [IntrHod=(0)][IntrId=(0)] 
+    interrupt: Name =isr_TxDMADone
+        PORT MAP (
+            interrupt => Net_2611 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(1)] 
+    interrupt: Name =\USBFS:ep_2\
+        PORT MAP (
+            interrupt => \USBFS:ept_int_2\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(2)] 
+    interrupt: Name =\USBFS:ep_4\
+        PORT MAP (
+            interrupt => \USBFS:ept_int_4\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(3)] 
+    interrupt: Name =\USBFS:ep_6\
+        PORT MAP (
+            interrupt => \USBFS:ept_int_6\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(4)] 
+    interrupt: Name =isr_CICOverflow
+        PORT MAP (
+            interrupt => Net_3513 );
+        Properties:
+        {
+            int_type = "01"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(5)] 
+    interrupt: Name =isr_InDMADone
+        PORT MAP (
+            interrupt => Net_2599 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(6)] 
+    interrupt: Name =isr_RxDMADone
+        PORT MAP (
+            interrupt => Net_3555 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(7)] 
+    interrupt: Name =isr_Tick
+        PORT MAP (
+            interrupt => CTW_OUT );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(12)] 
+    interrupt: Name =\USBFS:dp_int\
+        PORT MAP (
+            interrupt => \USBFS:Net_1010\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(15)] 
+    interrupt: Name =\I2C_Master:I2C_IRQ\
+        PORT MAP (
+            interrupt => \I2C_Master:Net_697\ );
+        Properties:
+        {
+            int_type = "00"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(21)] 
+    interrupt: Name =\USBFS:sof_int\
+        PORT MAP (
+            interrupt => Net_3097 );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(22)] 
+    interrupt: Name =\USBFS:arb_int\
+        PORT MAP (
+            interrupt => \USBFS:Net_79\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(23)] 
+    interrupt: Name =\USBFS:bus_reset\
+        PORT MAP (
+            interrupt => \USBFS:Net_81\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(24)] 
+    interrupt: Name =\USBFS:ep_0\
+        PORT MAP (
+            interrupt => \USBFS:ept_int_0\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(25)] 
+    interrupt: Name =\USBFS:ord_int\
+        PORT MAP (
+            interrupt => \USBFS:Net_95\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+Drq hod @ [DrqHod=(0)]: 
+  Dma@ [DrqHod=(0)][DrqId=(0)] 
+    drqcell: Name =TxDMA
+        PORT MAP (
+            dmareq => Net_2986 ,
+            termin => zero ,
+            termout => Net_2611 );
+        Properties:
+        {
+            drq_type = "01"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(1)] 
+    drqcell: Name =\USBFS:ep2\
+        PORT MAP (
+            dmareq => \USBFS:dma_req_1\ ,
+            termin => \USBFS:Net_824\ ,
+            termout => \USBFS:Net_1019\ );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(2)] 
+    drqcell: Name =USBInDMA
+        PORT MAP (
+            dmareq => zero ,
+            termin => zero ,
+            termout => Net_2599 );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(3)] 
+    drqcell: Name =\USBFS:ep4\
+        PORT MAP (
+            dmareq => \USBFS:dma_req_3\ ,
+            termin => \USBFS:Net_824\ ,
+            termout => \USBFS:Net_1017\ );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(4)] 
+    drqcell: Name =CICOut_L
+        PORT MAP (
+            dmareq => Net_85 ,
+            termin => zero ,
+            termout => Net_3125 );
+        Properties:
+        {
+            drq_type = "01"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(5)] 
+    drqcell: Name =\USBFS:ep6\
+        PORT MAP (
+            dmareq => \USBFS:dma_req_5\ ,
+            termin => \USBFS:Net_824\ ,
+            termout => \USBFS:Net_1015\ );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(6)] 
+    drqcell: Name =CICOut_R
+        PORT MAP (
+            dmareq => Net_3506 ,
+            termin => zero ,
+            termout => Net_3129 );
+        Properties:
+        {
+            drq_type = "01"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(7)] 
+    drqcell: Name =I2S_Tx_DMA
+        PORT MAP (
+            dmareq => Net_3491 ,
+            termin => zero ,
+            termout => Net_3103 );
+        Properties:
+        {
+            drq_type = "01"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(8)] 
+    drqcell: Name =RxDMA
+        PORT MAP (
+            dmareq => Net_3533 ,
+            termin => zero ,
+            termout => Net_3555 );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(9)] 
+    drqcell: Name =USBOutDMA
+        PORT MAP (
+            dmareq => zero ,
+            termin => zero ,
+            termout => Net_3362 );
+        Properties:
+        {
+            drq_type = "10"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(10)] 
+    drqcell: Name =\PDM_CIC:DMA_CombD0Update_L\
+        PORT MAP (
+            dmareq => \PDM_CIC:Net_2537\ ,
+            termin => zero ,
+            termout => \PDM_CIC:Net_2651\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(11)] 
+    drqcell: Name =\PDM_CIC:DMA_CombD0Update_R\
+        PORT MAP (
+            dmareq => \PDM_CIC:Net_2666\ ,
+            termin => zero ,
+            termout => \PDM_CIC:Net_2669\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(12)] 
+    drqcell: Name =\PDM_CIC:DMA_IntOut_L\
+        PORT MAP (
+            dmareq => \PDM_CIC:tmp__LUT_DmaThrottle_L_ins_2\ ,
+            termin => zero ,
+            termout => \PDM_CIC:Net_2625\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+  Dma@ [DrqHod=(0)][DrqId=(13)] 
+    drqcell: Name =\PDM_CIC:DMA_IntOut_R\
+        PORT MAP (
+            dmareq => \PDM_CIC:tmp__LUT_DmaThrottle_R_ins_2\ ,
+            termin => zero ,
+            termout => \PDM_CIC:Net_2680\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+Port 0 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = PSOC_PDM_DataIn(0)
+    Attributes:
+        Alias: PDM_DATA
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_PDM_DataIn(0)__PA ,
+        fb => Net_3512 ,
+        pad => PSOC_PDM_DataIn(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = PSOC_I2S_LRCLK(0)
+    Attributes:
+        Alias: PSOC_I2S_LRCLK
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_I2S_LRCLK(0)__PA ,
+        input => Net_2586 ,
+        pad => PSOC_I2S_LRCLK(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 1 contains the following IO cells:
+[IoId=2]: 
+Pin : Name = SCL(0)
+    Attributes:
+        Alias: I2C_SCL
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: OPEN_DRAIN_LO
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => SCL(0)__PA ,
+        fb => \I2C_Master:Net_1109_0\ ,
+        input => \I2C_Master:Net_643_0\ ,
+        pad => SCL(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 2 contains the following IO cells:
+[IoId=4]: 
+Pin : Name = PSOC_SW(0)
+    Attributes:
+        Alias: PLAYBACK_SW
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_SW(0)__PA ,
+        pad => PSOC_SW(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 3 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = SDA(0)
+    Attributes:
+        Alias: I2C_SDA
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: OPEN_DRAIN_LO
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => SDA(0)__PA ,
+        fb => \I2C_Master:Net_1109_1\ ,
+        input => \I2C_Master:sda_x_wire\ ,
+        pad => SDA(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = PSOC_STATUS_LED(0)
+    Attributes:
+        Alias: PSOC_STATUS
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_STATUS_LED(0)__PA ,
+        pad => PSOC_STATUS_LED(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = PSOC_PDM_LR_SEL(0)
+    Attributes:
+        Alias: PDM_LR_SELECT
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_PDM_LR_SEL(0)__PA ,
+        pad => PSOC_PDM_LR_SEL(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = PSOC_I2S_SCLK(0)
+    Attributes:
+        Alias: PSOC_I2S_SCLK
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_I2S_SCLK(0)__PA ,
+        input => Net_2585 ,
+        pad => PSOC_I2S_SCLK(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = PSOC_CODEC_RST(0)
+    Attributes:
+        Alias: PSOC_CODEC_RST
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_CODEC_RST(0)__PA ,
+        pad => PSOC_CODEC_RST(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = PSOC_I2S_SDTO(0)
+    Attributes:
+        Alias: PSOC_I2S_SDTO
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_I2S_SDTO(0)__PA ,
+        input => Net_2161 ,
+        pad => PSOC_I2S_SDTO(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 12 contains the following IO cells:
+[IoId=6]: 
+Pin : Name = PSOC_PDM_ClkOut(0)
+    Attributes:
+        Alias: PDM_CLOCK
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_PDM_ClkOut(0)__PA ,
+        input => Net_3458 ,
+        pad => PSOC_PDM_ClkOut(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = PSOC_I2S_MCLK(0)
+    Attributes:
+        Alias: PSOC_I2S_MCLK
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => PSOC_I2S_MCLK(0)__PA ,
+        input => Net_55_local ,
+        pad => PSOC_I2S_MCLK(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 15 generates interrupt for logical port:
+    logicalport: Name =\USBFS:Dp\
+        PORT MAP (
+            in_clock_en => tmpOE__PSOC_I2S_SCLK_net_0 ,
+            in_reset => zero ,
+            out_clock_en => tmpOE__PSOC_I2S_SCLK_net_0 ,
+            out_reset => zero ,
+            interrupt => \USBFS:Net_1010\ ,
+            in_clock => ClockBlock_BUS_CLK );
+        Properties:
+        {
+            drive_mode = "000"
+            ibuf_enabled = "0"
+            id = "a3642a82-391b-436c-950f-ff2ba5f0c7f4/618a72fc-5ddd-4df5-958f-a3d55102db42"
+            init_dr_st = "0"
+            input_clk_en = 0
+            input_sync = "1"
+            input_sync_mode = "0"
+            intr_mode = "10"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = ""
+            sio_hyst = "0"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
+[IoId=6]: 
+Pin : Name = \USBFS:Dp(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: FALLING
+        Drive mode: HI_Z_ANALOG
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: USB_D_PLUS
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \USBFS:Dp(0)\__PA ,
+        analog_term => \USBFS:Net_1000\ ,
+        pad => \USBFS:Dp(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = \USBFS:Dm(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_ANALOG
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: True
+        Can contain Digital: False
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: USB_D_MINUS
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \USBFS:Dm(0)\__PA ,
+        analog_term => \USBFS:Net_597\ ,
+        pad => \USBFS:Dm(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Fixed Function block hod @ [FFB(CAN,0)]: empty
+Fixed Function block hod @ [FFB(Cache,0)]: empty
+Fixed Function block hod @ [FFB(CapSense,0)]: empty
+Fixed Function block hod @ [FFB(Clock,0)]: 
+    Clock Block @ [FFB(Clock,0)]: 
+    clockblockcell: Name =ClockBlock
+        PORT MAP (
+            xtal => ClockBlock_XTAL ,
+            ilo => ClockBlock_ILO ,
+            clk_100k => ClockBlock_100k ,
+            clk_1k => ClockBlock_1k ,
+            clk_32k => ClockBlock_32k ,
+            pllout => ClockBlock_PLL_OUT ,
+            imo => ClockBlock_IMO ,
+            clk_32k_xtal => ClockBlock_XTAL_32KHZ ,
+            clk_sync => ClockBlock_MASTER_CLK ,
+            clk_bus_glb => ClockBlock_BUS_CLK ,
+            clk_bus => ClockBlock_BUS_CLK_local ,
+            dsi_clkin_div => GenClock ,
+            dclk_glb_0 => Net_3495 ,
+            dclk_0 => Net_3495_local ,
+            dclk_glb_1 => Net_55 ,
+            dclk_1 => Net_55_local ,
+            dclk_glb_2 => I2Sclk ,
+            dclk_2 => I2Sclk_local ,
+            dclk_glb_3 => Net_3093 ,
+            dclk_3 => Net_3093_local );
+        Properties:
+        {
+        }
+Fixed Function block hod @ [FFB(Comparator,0)]: empty
+Fixed Function block hod @ [FFB(DFB,0)]: 
+    DFB Block @ [FFB(DFB,0)]: 
+    dfbcell: Name =\Droop_Filter:DFB\
+        PORT MAP (
+            out_1 => Net_3136 ,
+            out_2 => Net_3137 ,
+            dmareq_1 => Net_3533 ,
+            dmareq_2 => Net_3138 ,
+            interrupt => Net_3133 );
+        Properties:
+        {
+            cy_registers = ""
+        }
+Fixed Function block hod @ [FFB(DSM,0)]: empty
+Fixed Function block hod @ [FFB(Decimator,0)]: empty
+Fixed Function block hod @ [FFB(EMIF,0)]: empty
+Fixed Function block hod @ [FFB(I2C,0)]: 
+    I2C Block @ [FFB(I2C,0)]: 
+    i2ccell: Name =\I2C_Master:I2C_FF\
+        PORT MAP (
+            clock => ClockBlock_BUS_CLK ,
+            scl_in => \I2C_Master:Net_1109_0\ ,
+            sda_in => \I2C_Master:Net_1109_1\ ,
+            scl_out => \I2C_Master:Net_643_0\ ,
+            sda_out => \I2C_Master:sda_x_wire\ ,
+            interrupt => \I2C_Master:Net_697\ );
+        Properties:
+        {
+            cy_registers = ""
+            use_wakeup = 0
+        }
+Fixed Function block hod @ [FFB(LCD,0)]: empty
+Fixed Function block hod @ [FFB(LVD,0)]: empty
+Fixed Function block hod @ [FFB(PM,0)]: 
+    Pm Block @ [FFB(PM,0)]: 
+    pmcell: Name =PM
+        PORT MAP (
+            ctw_int => CTW_OUT );
+        Properties:
+        {
+        }
+Fixed Function block hod @ [FFB(SC,0)]: empty
+Fixed Function block hod @ [FFB(SPC,0)]: empty
+Fixed Function block hod @ [FFB(Timer,0)]: empty
+Fixed Function block hod @ [FFB(USB,0)]: 
+    USB Block @ [FFB(USB,0)]: 
+    usbcell: Name =\USBFS:USB\
+        PORT MAP (
+            dp => \USBFS:Net_1000\ ,
+            dm => \USBFS:Net_597\ ,
+            sof_int => Net_3097 ,
+            arb_int => \USBFS:Net_79\ ,
+            usb_int => \USBFS:Net_81\ ,
+            ept_int_8 => \USBFS:ept_int_8\ ,
+            ept_int_7 => \USBFS:ept_int_7\ ,
+            ept_int_6 => \USBFS:ept_int_6\ ,
+            ept_int_5 => \USBFS:ept_int_5\ ,
+            ept_int_4 => \USBFS:ept_int_4\ ,
+            ept_int_3 => \USBFS:ept_int_3\ ,
+            ept_int_2 => \USBFS:ept_int_2\ ,
+            ept_int_1 => \USBFS:ept_int_1\ ,
+            ept_int_0 => \USBFS:ept_int_0\ ,
+            ord_int => \USBFS:Net_95\ ,
+            dma_req_7 => \USBFS:dma_req_7\ ,
+            dma_req_6 => \USBFS:dma_req_6\ ,
+            dma_req_5 => \USBFS:dma_req_5\ ,
+            dma_req_4 => \USBFS:dma_req_4\ ,
+            dma_req_3 => \USBFS:dma_req_3\ ,
+            dma_req_2 => \USBFS:dma_req_2\ ,
+            dma_req_1 => \USBFS:dma_req_1\ ,
+            dma_req_0 => \USBFS:dma_req_0\ ,
+            dma_termin => \USBFS:Net_824\ );
+        Properties:
+        {
+            cy_registers = ""
+        }
+Fixed Function block hod @ [FFB(VIDAC,0)]: empty
+Fixed Function block hod @ [FFB(Abuf,0)]: empty
+Fixed Function block hod @ [FFB(CsAbuf,0)]: empty
+Fixed Function block hod @ [FFB(Vref,0)]: empty
+Fixed Function block hod @ [FFB(LPF,0)]: empty
+Fixed Function block hod @ [FFB(SAR,0)]: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |                    | 
+Port | Pin | Fixed |      Type |       Drive Mode |               Name | Connections
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+   0 |   0 |     * |      NONE |     HI_Z_DIGITAL | PSOC_PDM_DataIn(0) | FB(Net_3512)
+     |   1 |     * |      NONE |         CMOS_OUT |  PSOC_I2S_LRCLK(0) | In(Net_2586)
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+   1 |   2 |     * |      NONE |    OPEN_DRAIN_LO |             SCL(0) | FB(\I2C_Master:Net_1109_0\), In(\I2C_Master:Net_643_0\)
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+   2 |   4 |     * |      NONE |      RES_PULL_UP |         PSOC_SW(0) | 
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+   3 |   0 |     * |      NONE |    OPEN_DRAIN_LO |             SDA(0) | FB(\I2C_Master:Net_1109_1\), In(\I2C_Master:sda_x_wire\)
+     |   1 |     * |      NONE |         CMOS_OUT | PSOC_STATUS_LED(0) | 
+     |   4 |     * |      NONE |         CMOS_OUT | PSOC_PDM_LR_SEL(0) | 
+     |   5 |     * |      NONE |         CMOS_OUT |   PSOC_I2S_SCLK(0) | In(Net_2585)
+     |   6 |     * |      NONE |         CMOS_OUT |  PSOC_CODEC_RST(0) | 
+     |   7 |     * |      NONE |         CMOS_OUT |   PSOC_I2S_SDTO(0) | In(Net_2161)
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+  12 |   6 |     * |      NONE |         CMOS_OUT | PSOC_PDM_ClkOut(0) | In(Net_3458)
+     |   7 |     * |      NONE |         CMOS_OUT |   PSOC_I2S_MCLK(0) | In(Net_55_local)
+-----+-----+-------+-----------+------------------+--------------------+---------------------------------------------------------
+  15 |   6 |       |   FALLING |      HI_Z_ANALOG |      \USBFS:Dp(0)\ | Analog(\USBFS:Net_1000\)
+     |   7 |       |      NONE |      HI_Z_ANALOG |      \USBFS:Dm(0)\ | Analog(\USBFS:Net_597\)
+---------------------------------------------------------------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.015ms
+Digital Placement phase: Elapsed time ==> 4s.593ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+Routing successful.
+Digital Routing phase: Elapsed time ==> 7s.109ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream and API generation">
+Bitstream and API generation phase: Elapsed time ==> 2s.265ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream verification">
+Bitstream verification phase: Elapsed time ==> 0s.156ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in PioneerKit_P5LP_USB_Audio_timing.html.
+Static timing analysis phase: Elapsed time ==> 1s.109ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.343ms
+Design database save phase: Elapsed time ==> 0s.359ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 0s.968ms
+cydsfit: Elapsed time ==> 16s.875ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 1s.031ms
-Fitter phase: Elapsed time ==> 0s.000ms
-Dependency generation phase: Elapsed time ==> 0s.046ms
-Cleanup phase: Elapsed time ==> 0s.031ms
+Fitter phase: Elapsed time ==> 16s.921ms
+API generation phase: Elapsed time ==> 3s.328ms
+Dependency generation phase: Elapsed time ==> 0s.015ms
+Cleanup phase: Elapsed time ==> 0s.000ms

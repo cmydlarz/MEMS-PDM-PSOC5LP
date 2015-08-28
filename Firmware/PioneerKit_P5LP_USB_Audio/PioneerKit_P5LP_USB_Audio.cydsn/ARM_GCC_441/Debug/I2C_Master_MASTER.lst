@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
   12:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * You may use this file only in accordance with the license, terms, conditions,
   13:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * disclaimers, and limitations in the end user license agreement accompanying
   14:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * the software package with which this file was provided.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 2
 
 
   15:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *******************************************************************************/
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
   69:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  I2C_Master_mstrWrBufIndex - used to current index within master write
   70:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  buffer.
   71:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  I2C_Master_mstrWrBufSize - used to store master write buffer size.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 3
 
 
   72:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
   75 002e 44F6D913 		movw	r3, #:lower16:1073760729
   76 0032 C4F20003 		movt	r3, #:upper16:1073760729
   77 0036 1B78     		ldrb	r3, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 4
 
 
   78 0038 DBB2     		uxtb	r3, r3
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  105:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         }
  106:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         else
  107:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 5
 
 
  108:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             /* errStatus = I2C_Master_MSTR_NOT_READY was send before */
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  156 00ec 03F00103 		and	r3, r3, #1
  157 00f0 DBB2     		uxtb	r3, r3
  158 00f2 002B     		cmp	r3, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 6
 
 
  159 00f4 0ED0     		beq	.L7
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  197 0150 07F11C07 		add	r7, r7, #28
  198 0154 BD46     		mov	sp, r7
  199 0156 80BC     		pop	{r7}
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 7
 
 
  200 0158 7047     		bx	lr
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  182:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** {
  212              		.loc 1 182 0
  213              		.cfi_startproc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 8
 
 
  214              		@ args = 0, pretend = 0, frame = 24
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  255 0042 4FF00003 		mov	r3, #0
  256 0046 FB75     		strb	r3, [r7, #23]
  196:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 9
 
 
  197:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             else
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  293 0096 5CD1     		bne	.L11
  215:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         {
  216:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             I2C_Master_state    = I2C_Master_SM_MSTR_RD_ADDR;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 10
 
 
  294              		.loc 1 216 0
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  335 00fc 44F6D913 		movw	r3, #:lower16:1073760729
  336 0100 C4F20003 		movt	r3, #:upper16:1073760729
  337 0104 4FF01202 		mov	r2, #18
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 11
 
 
  338 0108 1A70     		strb	r2, [r3, #0]
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  378              		.section	.text.I2C_Master_MasterSendStart,"ax",%progbits
  379              		.align	2
  380              		.global	I2C_Master_MasterSendStart
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 12
 
 
  381              		.thumb
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  274:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     uint8 errStatus;
  275:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
  276:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     errStatus = I2C_Master_MSTR_NOT_READY;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 13
 
 
  405              		.loc 1 276 0
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  445 006a 06E0     		b	.L23
  446              	.L22:
  291:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 14
 
 
  292:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             else
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  321:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****                     I2C_Master_BUS_RELEASE;
  322:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
  323:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****                     /* Master lost arbitrage: reset FSM to IDLE */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 15
 
 
  324:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****                     I2C_Master_state = I2C_Master_SM_IDLE;
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  349:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** }
  501              		.loc 1 349 0
  502 00e2 1846     		mov	r0, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 16
 
 
  503 00e4 07F11407 		add	r7, r7, #20
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  527              	.LCFI10:
  528              		.cfi_def_cfa_offset 24
  529 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 17
 
 
  530              		.cfi_offset 7, -4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  568 004e 40F20003 		movw	r3, #:lower16:I2C_Master_state
  569 0052 C0F20003 		movt	r3, #:upper16:I2C_Master_state
  570 0056 4FF04502 		mov	r2, #69
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 18
 
 
  571 005a 1A70     		strb	r2, [r3, #0]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  602 00a8 0A2B     		cmp	r3, #10
  603 00aa 0AD1     		bne	.L33
  419:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 19
 
 
  420:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****                 /* Address has been NACKed: reset FSM to IDLE */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  441:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  condition was failed before call this function.
  442:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *
  443:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Parameters:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 20
 
 
  444:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  None
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  665 0024 C4F20003 		movt	r3, #:upper16:1073760729
  666 0028 4FF01002 		mov	r2, #16
  667 002c 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 21
 
 
  668 002e 44F6D713 		movw	r3, #:lower16:1073760727
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  701 0072 00BF     		.section	.text.I2C_Master_MasterWriteByte,"ax",%progbits
  702              		.align	2
  703              		.global	I2C_Master_MasterWriteByte
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 22
 
 
  704              		.thumb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  728 000e FB73     		strb	r3, [r7, #15]
  521:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
  522:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     /* Check if START condition was generated */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 23
 
 
  523:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     if(I2C_Master_CHECK_MASTER_MODE(I2C_Master_MCSR_REG))
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  545:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             else
  546:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         #endif /* (I2C_Master_MODE_MULTI_MASTER_ENABLED) */
  547:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 24
 
 
  548:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****             if(I2C_Master_CHECK_DATA_ACK(I2C_Master_CSR_REG))
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  801              		.global	I2C_Master_MasterReadByte
  802              		.thumb
  803              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 25
 
 
  804              		.type	I2C_Master_MasterReadByte, %function
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  824              		.loc 1 595 0
  825 000a 4FF00003 		mov	r3, #0
  826 000e FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 26
 
 
  596:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  864 006c 1B78     		ldrb	r3, [r3, #0]
  865 006e FB73     		strb	r3, [r7, #15]
  613:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 27
 
 
  614:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****         /* Now if the ACK flag was set, ACK the data which will release the bus and
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  632:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
  633:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** /*******************************************************************************
  634:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Function Name: I2C_Master_MasterStatus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 28
 
 
  635:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** ********************************************************************************
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  930              		.loc 1 660 0
  931 0026 FB79     		ldrb	r3, [r7, #7]
  932 0028 43F00403 		orr	r3, r3, #4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 29
 
 
  933 002c FB71     		strb	r3, [r7, #7]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  955              		.cfi_startproc
  956              		@ args = 0, pretend = 0, frame = 8
  957              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 30
 
 
  958              		@ link register save eliminated.
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  707:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *
  708:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Summary:
  709:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  Returns the amount of bytes that has been transferred with an
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 31
 
 
  710:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *  I2C_MasterReadBuf command.
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  731:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Function Name: I2C_Master_MasterGetWriteBufSize
  732:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** ********************************************************************************
  733:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 32
 
 
  734:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Summary:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  755:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** 
  756:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** /*******************************************************************************
  757:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** * Function Name: I2C_Master_MasterClearReadBuf
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 33
 
 
  758:.\Generated_Source\PSoC5/I2C_Master_MASTER.c **** ********************************************************************************
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1093 0030 80BC     		pop	{r7}
  1094 0032 7047     		bx	lr
  1095              		.cfi_endproc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 34
 
 
  1096              	.LFE11:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  810:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     I2C_Master_mstrStatus    &= ((uint8) ~I2C_Master_MSTAT_WR_CMPLT);
  1123              		.loc 1 810 0
  1124 0012 40F20003 		movw	r3, #:lower16:I2C_Master_mstrStatus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 35
 
 
  1125 0016 C0F20003 		movt	r3, #:upper16:I2C_Master_mstrStatus
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1157              		.cfi_offset 7, -4
  1158              	.LCFI36:
  1159              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 36
 
 
  833:.\Generated_Source\PSoC5/I2C_Master_MASTER.c ****     /* Does nothing */
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1212 0065 20       		.sleb128 32
  1213 0066 00000000 		.4byte	0x0
  1214 006a 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 37
 
 
  1215              	.LLST2:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1269 00f3 04000000 		.4byte	.LCFI13
  1270 00f7 06000000 		.4byte	.LCFI14
  1271 00fb 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 38
 
 
  1272 00fd 7D       		.byte	0x7d
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1326 0181 00000000 		.4byte	.LFB7
  1327 0185 02000000 		.4byte	.LCFI21
  1328 0189 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 39
 
 
  1329 018b 5D       		.byte	0x5d
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1383 0211 04       		.sleb128 4
  1384 0212 00000000 		.4byte	0x0
  1385 0216 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 40
 
 
  1386              	.LLST10:
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1440 02a3 0100     		.2byte	0x1
  1441 02a5 5D       		.byte	0x5d
  1442 02a6 02000000 		.4byte	.LCFI35
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 41
 
 
  1443 02aa 04000000 		.4byte	.LCFI36
@@ -2420,10 +2420,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1459 0006 00000000 		.4byte	.Ldebug_abbrev0
  1460 000a 04       		.byte	0x4
  1461 000b 01       		.uleb128 0x1
- 1462 000c 9F020000 		.4byte	.LASF44
+ 1462 000c 3F020000 		.4byte	.LASF44
  1463 0010 01       		.byte	0x1
- 1464 0011 72020000 		.4byte	.LASF45
- 1465 0015 F2000000 		.4byte	.LASF46
+ 1464 0011 12020000 		.4byte	.LASF45
+ 1465 0015 7F020000 		.4byte	.LASF46
  1466 0019 00000000 		.4byte	0x0
  1467 001d 00000000 		.4byte	0x0
  1468 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -2431,7 +2431,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1470 0029 02       		.uleb128 0x2
  1471 002a 01       		.byte	0x1
  1472 002b 06       		.byte	0x6
- 1473 002c 7C030000 		.4byte	.LASF0
+ 1473 002c 84030000 		.4byte	.LASF0
  1474 0030 02       		.uleb128 0x2
  1475 0031 01       		.byte	0x1
  1476 0032 08       		.byte	0x8
@@ -2439,7 +2439,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1478 0037 02       		.uleb128 0x2
  1479 0038 02       		.byte	0x2
  1480 0039 05       		.byte	0x5
- 1481 003a F8020000 		.4byte	.LASF2
+ 1481 003a 00030000 		.4byte	.LASF2
  1482 003e 02       		.uleb128 0x2
  1483 003f 02       		.byte	0x2
  1484 0040 07       		.byte	0x7
@@ -2447,22 +2447,22 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1486 0045 02       		.uleb128 0x2
  1487 0046 04       		.byte	0x4
  1488 0047 05       		.byte	0x5
- 1489 0048 4A030000 		.4byte	.LASF4
+ 1489 0048 52030000 		.4byte	.LASF4
  1490 004c 02       		.uleb128 0x2
  1491 004d 04       		.byte	0x4
  1492 004e 07       		.byte	0x7
- 1493 004f 69010000 		.4byte	.LASF5
+ 1493 004f 09010000 		.4byte	.LASF5
  1494 0053 02       		.uleb128 0x2
  1495 0054 08       		.byte	0x8
  1496 0055 05       		.byte	0x5
  1497 0056 00000000 		.4byte	.LASF6
  1498 005a 02       		.uleb128 0x2
  1499 005b 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 42
 
 
  1500 005c 07       		.byte	0x7
- 1501 005d E3010000 		.4byte	.LASF7
+ 1501 005d 83010000 		.4byte	.LASF7
  1502 0061 03       		.uleb128 0x3
  1503 0062 04       		.byte	0x4
  1504 0063 05       		.byte	0x5
@@ -2472,7 +2472,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1508 006a 07       		.byte	0x7
  1509 006b 9C000000 		.4byte	.LASF8
  1510 006f 04       		.uleb128 0x4
- 1511 0070 7B010000 		.4byte	.LASF47
+ 1511 0070 1B010000 		.4byte	.LASF47
  1512 0074 03       		.byte	0x3
  1513 0075 4C       		.byte	0x4c
  1514 0076 30000000 		.4byte	0x30
@@ -2483,11 +2483,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1519 0081 02       		.uleb128 0x2
  1520 0082 08       		.byte	0x8
  1521 0083 04       		.byte	0x4
- 1522 0084 C1010000 		.4byte	.LASF10
+ 1522 0084 61010000 		.4byte	.LASF10
  1523 0088 02       		.uleb128 0x2
  1524 0089 01       		.byte	0x1
  1525 008a 08       		.byte	0x8
- 1526 008b 53030000 		.4byte	.LASF11
+ 1526 008b 5B030000 		.4byte	.LASF11
  1527 008f 05       		.uleb128 0x5
  1528 0090 6F000000 		.4byte	0x6f
  1529 0094 06       		.uleb128 0x6
@@ -2513,12 +2513,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1549 00c0 91       		.byte	0x91
  1550 00c1 6F       		.sleb128 -17
  1551 00c2 08       		.uleb128 0x8
- 1552 00c3 DC010000 		.4byte	.LASF13
+ 1552 00c3 7C010000 		.4byte	.LASF13
  1553 00c7 01       		.byte	0x1
  1554 00c8 4D       		.byte	0x4d
  1555 00c9 FB000000 		.4byte	0xfb
  1556 00cd 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 43
 
 
  1557 00ce 91       		.byte	0x91
@@ -2532,7 +2532,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1565 00dc 91       		.byte	0x91
  1566 00dd 67       		.sleb128 -25
  1567 00de 08       		.uleb128 0x8
- 1568 00df 14020000 		.4byte	.LASF14
+ 1568 00df B4010000 		.4byte	.LASF14
  1569 00e3 01       		.byte	0x1
  1570 00e4 4D       		.byte	0x4d
  1571 00e5 6F000000 		.4byte	0x6f
@@ -2540,7 +2540,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1573 00ea 91       		.byte	0x91
  1574 00eb 66       		.sleb128 -26
  1575 00ec 0A       		.uleb128 0xa
- 1576 00ed 9A010000 		.4byte	.LASF18
+ 1576 00ed 3A010000 		.4byte	.LASF18
  1577 00f1 01       		.byte	0x1
  1578 00f2 50       		.byte	0x50
  1579 00f3 6F000000 		.4byte	0x6f
@@ -2571,14 +2571,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1604 012a 91       		.byte	0x91
  1605 012b 6F       		.sleb128 -17
  1606 012c 08       		.uleb128 0x8
- 1607 012d CD010000 		.4byte	.LASF17
+ 1607 012d 6D010000 		.4byte	.LASF17
  1608 0131 01       		.byte	0x1
  1609 0132 B4       		.byte	0xb4
  1610 0133 FB000000 		.4byte	0xfb
  1611 0137 02       		.byte	0x2
  1612 0138 91       		.byte	0x91
  1613 0139 68       		.sleb128 -24
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 44
 
 
  1614 013a 09       		.uleb128 0x9
@@ -2590,7 +2590,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1620 0146 91       		.byte	0x91
  1621 0147 67       		.sleb128 -25
  1622 0148 08       		.uleb128 0x8
- 1623 0149 14020000 		.4byte	.LASF14
+ 1623 0149 B4010000 		.4byte	.LASF14
  1624 014d 01       		.byte	0x1
  1625 014e B4       		.byte	0xb4
  1626 014f 6F000000 		.4byte	0x6f
@@ -2598,7 +2598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1628 0154 91       		.byte	0x91
  1629 0155 66       		.sleb128 -26
  1630 0156 0A       		.uleb128 0xa
- 1631 0157 9A010000 		.4byte	.LASF18
+ 1631 0157 3A010000 		.4byte	.LASF18
  1632 015b 01       		.byte	0x1
  1633 015c B7       		.byte	0xb7
  1634 015d 6F000000 		.4byte	0x6f
@@ -2608,7 +2608,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1638 0164 00       		.byte	0x0
  1639 0165 0C       		.uleb128 0xc
  1640 0166 01       		.byte	0x1
- 1641 0167 57020000 		.4byte	.LASF19
+ 1641 0167 F7010000 		.4byte	.LASF19
  1642 016b 01       		.byte	0x1
  1643 016c 0F01     		.2byte	0x10f
  1644 016e 01       		.byte	0x1
@@ -2626,7 +2626,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1656 0190 91       		.byte	0x91
  1657 0191 6F       		.sleb128 -17
  1658 0192 0D       		.uleb128 0xd
- 1659 0193 C8010000 		.4byte	.LASF20
+ 1659 0193 68010000 		.4byte	.LASF20
  1660 0197 01       		.byte	0x1
  1661 0198 0F01     		.2byte	0x10f
  1662 019a 6F000000 		.4byte	0x6f
@@ -2634,11 +2634,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1664 019f 91       		.byte	0x91
  1665 01a0 6E       		.sleb128 -18
  1666 01a1 0E       		.uleb128 0xe
- 1667 01a2 9A010000 		.4byte	.LASF18
+ 1667 01a2 3A010000 		.4byte	.LASF18
  1668 01a6 01       		.byte	0x1
  1669 01a7 1201     		.2byte	0x112
  1670 01a9 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 45
 
 
  1671 01ad 02       		.byte	0x2
@@ -2647,7 +2647,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1674 01b0 00       		.byte	0x0
  1675 01b1 0C       		.uleb128 0xc
  1676 01b2 01       		.byte	0x1
- 1677 01b3 5F030000 		.4byte	.LASF21
+ 1677 01b3 67030000 		.4byte	.LASF21
  1678 01b7 01       		.byte	0x1
  1679 01b8 7901     		.2byte	0x179
  1680 01ba 01       		.byte	0x1
@@ -2665,7 +2665,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1692 01dc 91       		.byte	0x91
  1693 01dd 6F       		.sleb128 -17
  1694 01de 0D       		.uleb128 0xd
- 1695 01df C8010000 		.4byte	.LASF20
+ 1695 01df 68010000 		.4byte	.LASF20
  1696 01e3 01       		.byte	0x1
  1697 01e4 7901     		.2byte	0x179
  1698 01e6 6F000000 		.4byte	0x6f
@@ -2673,7 +2673,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1700 01eb 91       		.byte	0x91
  1701 01ec 6E       		.sleb128 -18
  1702 01ed 0E       		.uleb128 0xe
- 1703 01ee 9A010000 		.4byte	.LASF18
+ 1703 01ee 3A010000 		.4byte	.LASF18
  1704 01f2 01       		.byte	0x1
  1705 01f3 7C01     		.2byte	0x17c
  1706 01f5 6F000000 		.4byte	0x6f
@@ -2683,7 +2683,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1710 01fc 00       		.byte	0x0
  1711 01fd 0C       		.uleb128 0xc
  1712 01fe 01       		.byte	0x1
- 1713 01ff C5020000 		.4byte	.LASF22
+ 1713 01ff 65020000 		.4byte	.LASF22
  1714 0203 01       		.byte	0x1
  1715 0204 CC01     		.2byte	0x1cc
  1716 0206 01       		.byte	0x1
@@ -2693,12 +2693,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1720 0213 DC000000 		.4byte	.LLST4
  1721 0217 2B020000 		.4byte	0x22b
  1722 021b 0E       		.uleb128 0xe
- 1723 021c 9A010000 		.4byte	.LASF18
+ 1723 021c 3A010000 		.4byte	.LASF18
  1724 0220 01       		.byte	0x1
  1725 0221 CE01     		.2byte	0x1ce
  1726 0223 6F000000 		.4byte	0x6f
  1727 0227 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 46
 
 
  1728 0228 91       		.byte	0x91
@@ -2716,7 +2716,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1740 0241 13010000 		.4byte	.LLST5
  1741 0245 68020000 		.4byte	0x268
  1742 0249 0D       		.uleb128 0xd
- 1743 024a 02030000 		.4byte	.LASF24
+ 1743 024a 0A030000 		.4byte	.LASF24
  1744 024e 01       		.byte	0x1
  1745 024f 0402     		.2byte	0x204
  1746 0251 6F000000 		.4byte	0x6f
@@ -2724,7 +2724,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1748 0256 91       		.byte	0x91
  1749 0257 6F       		.sleb128 -17
  1750 0258 0E       		.uleb128 0xe
- 1751 0259 9A010000 		.4byte	.LASF18
+ 1751 0259 3A010000 		.4byte	.LASF18
  1752 025d 01       		.byte	0x1
  1753 025e 0602     		.2byte	0x206
  1754 0260 6F000000 		.4byte	0x6f
@@ -2734,7 +2734,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1758 0267 00       		.byte	0x0
  1759 0268 0C       		.uleb128 0xc
  1760 0269 01       		.byte	0x1
- 1761 026a FA010000 		.4byte	.LASF25
+ 1761 026a 9A010000 		.4byte	.LASF25
  1762 026e 01       		.byte	0x1
  1763 026f 4F02     		.2byte	0x24f
  1764 0271 01       		.byte	0x1
@@ -2744,7 +2744,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1768 027e 4A010000 		.4byte	.LLST6
  1769 0282 A5020000 		.4byte	0x2a5
  1770 0286 0D       		.uleb128 0xd
- 1771 0287 D4010000 		.4byte	.LASF26
+ 1771 0287 74010000 		.4byte	.LASF26
  1772 028b 01       		.byte	0x1
  1773 028c 4F02     		.2byte	0x24f
  1774 028e 6F000000 		.4byte	0x6f
@@ -2752,20 +2752,20 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1776 0293 91       		.byte	0x91
  1777 0294 6F       		.sleb128 -17
  1778 0295 0E       		.uleb128 0xe
- 1779 0296 02030000 		.4byte	.LASF24
+ 1779 0296 0A030000 		.4byte	.LASF24
  1780 029a 01       		.byte	0x1
  1781 029b 5102     		.2byte	0x251
  1782 029d 6F000000 		.4byte	0x6f
  1783 02a1 02       		.byte	0x2
  1784 02a2 91       		.byte	0x91
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 47
 
 
  1785 02a3 77       		.sleb128 -9
  1786 02a4 00       		.byte	0x0
  1787 02a5 0C       		.uleb128 0xc
  1788 02a6 01       		.byte	0x1
- 1789 02a7 A0030000 		.4byte	.LASF27
+ 1789 02a7 A8030000 		.4byte	.LASF27
  1790 02ab 01       		.byte	0x1
  1791 02ac 8A02     		.2byte	0x28a
  1792 02ae 01       		.byte	0x1
@@ -2775,7 +2775,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1796 02bb 81010000 		.4byte	.LLST7
  1797 02bf D3020000 		.4byte	0x2d3
  1798 02c3 0E       		.uleb128 0xe
- 1799 02c4 58030000 		.4byte	.LASF28
+ 1799 02c4 60030000 		.4byte	.LASF28
  1800 02c8 01       		.byte	0x1
  1801 02c9 8C02     		.2byte	0x28c
  1802 02cb 6F000000 		.4byte	0x6f
@@ -2785,7 +2785,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1806 02d2 00       		.byte	0x0
  1807 02d3 0C       		.uleb128 0xc
  1808 02d4 01       		.byte	0x1
- 1809 02d5 A4010000 		.4byte	.LASF29
+ 1809 02d5 44010000 		.4byte	.LASF29
  1810 02d9 01       		.byte	0x1
  1811 02da B302     		.2byte	0x2b3
  1812 02dc 01       		.byte	0x1
@@ -2795,7 +2795,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1816 02e9 B8010000 		.4byte	.LLST8
  1817 02ed 01030000 		.4byte	0x301
  1818 02f1 0E       		.uleb128 0xe
- 1819 02f2 58030000 		.4byte	.LASF28
+ 1819 02f2 60030000 		.4byte	.LASF28
  1820 02f6 01       		.byte	0x1
  1821 02f7 B602     		.2byte	0x2b6
  1822 02f9 6F000000 		.4byte	0x6f
@@ -2805,7 +2805,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1826 0300 00       		.byte	0x0
  1827 0301 0F       		.uleb128 0xf
  1828 0302 01       		.byte	0x1
- 1829 0303 37020000 		.4byte	.LASF30
+ 1829 0303 D7010000 		.4byte	.LASF30
  1830 0307 01       		.byte	0x1
  1831 0308 D402     		.2byte	0x2d4
  1832 030a 01       		.byte	0x1
@@ -2815,10 +2815,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1836 0317 EF010000 		.4byte	.LLST9
  1837 031b 0F       		.uleb128 0xf
  1838 031c 01       		.byte	0x1
- 1839 031d 29030000 		.4byte	.LASF31
+ 1839 031d 31030000 		.4byte	.LASF31
  1840 0321 01       		.byte	0x1
  1841 0322 EE02     		.2byte	0x2ee
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 48
 
 
  1842 0324 01       		.byte	0x1
@@ -2828,7 +2828,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1846 0331 1A020000 		.4byte	.LLST10
  1847 0335 10       		.uleb128 0x10
  1848 0336 01       		.byte	0x1
- 1849 0337 19020000 		.4byte	.LASF32
+ 1849 0337 B9010000 		.4byte	.LASF32
  1850 033b 01       		.byte	0x1
  1851 033c 0A03     		.2byte	0x30a
  1852 033e 01       		.byte	0x1
@@ -2837,7 +2837,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1855 0347 45020000 		.4byte	.LLST11
  1856 034b 10       		.uleb128 0x10
  1857 034c 01       		.byte	0x1
- 1858 034d 0A030000 		.4byte	.LASF33
+ 1858 034d 12030000 		.4byte	.LASF33
  1859 0351 01       		.byte	0x1
  1860 0352 2703     		.2byte	0x327
  1861 0354 01       		.byte	0x1
@@ -2870,7 +2870,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1888 0391 03       		.byte	0x3
  1889 0392 00000000 		.4byte	I2C_Master_mstrStatus
  1890 0396 12       		.uleb128 0x12
- 1891 0397 52010000 		.4byte	.LASF37
+ 1891 0397 F2000000 		.4byte	.LASF37
  1892 039b 01       		.byte	0x1
  1893 039c 1A       		.byte	0x1a
  1894 039d 8F000000 		.4byte	0x8f
@@ -2878,11 +2878,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1896 03a2 05       		.byte	0x5
  1897 03a3 03       		.byte	0x3
  1898 03a4 00000000 		.4byte	I2C_Master_mstrControl
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 49
 
 
  1899 03a8 12       		.uleb128 0x12
- 1900 03a9 88030000 		.4byte	.LASF38
+ 1900 03a9 90030000 		.4byte	.LASF38
  1901 03ad 01       		.byte	0x1
  1902 03ae 1D       		.byte	0x1d
  1903 03af BA030000 		.4byte	0x3ba
@@ -2894,7 +2894,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1909 03bb 04       		.byte	0x4
  1910 03bc 8F000000 		.4byte	0x8f
  1911 03c0 12       		.uleb128 0x12
- 1912 03c1 81010000 		.4byte	.LASF39
+ 1912 03c1 21010000 		.4byte	.LASF39
  1913 03c5 01       		.byte	0x1
  1914 03c6 1E       		.byte	0x1e
  1915 03c7 8F000000 		.4byte	0x8f
@@ -2903,7 +2903,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1918 03cd 03       		.byte	0x3
  1919 03ce 00000000 		.4byte	I2C_Master_mstrRdBufSize
  1920 03d2 12       		.uleb128 0x12
- 1921 03d3 B8030000 		.4byte	.LASF40
+ 1921 03d3 C0030000 		.4byte	.LASF40
  1922 03d7 01       		.byte	0x1
  1923 03d8 1F       		.byte	0x1f
  1924 03d9 8F000000 		.4byte	0x8f
@@ -2921,7 +2921,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1936 03f1 03       		.byte	0x3
  1937 03f2 00000000 		.4byte	I2C_Master_mstrWrBufPtr
  1938 03f6 12       		.uleb128 0x12
- 1939 03f7 DF020000 		.4byte	.LASF42
+ 1939 03f7 E7020000 		.4byte	.LASF42
  1940 03fb 01       		.byte	0x1
  1941 03fc 23       		.byte	0x23
  1942 03fd 8F000000 		.4byte	0x8f
@@ -2930,7 +2930,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1945 0403 03       		.byte	0x3
  1946 0404 00000000 		.4byte	I2C_Master_mstrWrBufSize
  1947 0408 12       		.uleb128 0x12
- 1948 0409 AB020000 		.4byte	.LASF43
+ 1948 0409 4B020000 		.4byte	.LASF43
  1949 040d 01       		.byte	0x1
  1950 040e 24       		.byte	0x24
  1951 040f 8F000000 		.4byte	0x8f
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  1953 0414 05       		.byte	0x5
  1954 0415 03       		.byte	0x3
  1955 0416 00000000 		.4byte	I2C_Master_mstrWrBufIndex
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 50
 
 
  1956 041a 00       		.byte	0x0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2010 0034 49       		.uleb128 0x49
  2011 0035 13       		.uleb128 0x13
  2012 0036 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 51
 
 
  2013 0037 00       		.byte	0x0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2067 006d 0A       		.uleb128 0xa
  2068 006e 00       		.byte	0x0
  2069 006f 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 52
 
 
  2070 0070 09       		.uleb128 0x9
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2124 00a6 11       		.uleb128 0x11
  2125 00a7 01       		.uleb128 0x1
  2126 00a8 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 53
 
 
  2127 00a9 01       		.uleb128 0x1
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2181 00df 12       		.uleb128 0x12
  2182 00e0 01       		.uleb128 0x1
  2183 00e1 40       		.uleb128 0x40
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 54
 
 
  2184 00e2 06       		.uleb128 0x6
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2238 0118 02       		.uleb128 0x2
  2239 0119 0A       		.uleb128 0xa
  2240 011a 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 55
 
 
  2241 011b 00       		.byte	0x0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2263      72537461 
  2264 0100 D3020000 		.4byte	0x2d3
  2265 0104 4932435F 		.ascii	"I2C_Master_MasterClearStatus\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 56
 
 
  2265      4D617374 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2283      4D617374 
  2283      65725F6D 
  2283      73747252 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 57
 
 
  2283      64427566 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2321 0060 00000000 		.4byte	.LFB10
  2322 0064 18000000 		.4byte	.LFE10-.LFB10
  2323 0068 00000000 		.4byte	.LFB11
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 58
 
 
  2324 006c 34000000 		.4byte	.LFE11-.LFB11
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2371 0029 4932435F 		.ascii	"I2C_Master_MasterReadBuf\000"
  2371      4D617374 
  2371      65725F4D 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 59
 
 
  2371      61737465 
@@ -3537,190 +3537,192 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 1
  2391      676E6564 
  2391      20636861 
  2391      7200
- 2392              	.LASF46:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 60
+ 2392              	.LASF37:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 60
 
 
- 2393 00f2 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 2393      665C486F 
- 2393      6D655C44 
- 2393      65736B74 
- 2393      6F705C55 
- 2394 011e 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 2394      5F50354C 
- 2394      505F5553 
- 2394      425F4175 
- 2394      64696F5C 
- 2395 0150 6E00     		.ascii	"n\000"
- 2396              	.LASF37:
- 2397 0152 4932435F 		.ascii	"I2C_Master_mstrControl\000"
- 2397      4D617374 
- 2397      65725F6D 
- 2397      73747243 
- 2397      6F6E7472 
- 2398              	.LASF5:
- 2399 0169 6C6F6E67 		.ascii	"long unsigned int\000"
- 2399      20756E73 
- 2399      69676E65 
- 2399      6420696E 
- 2399      7400
- 2400              	.LASF47:
- 2401 017b 75696E74 		.ascii	"uint8\000"
- 2401      3800
- 2402              	.LASF39:
- 2403 0181 4932435F 		.ascii	"I2C_Master_mstrRdBufSize\000"
+ 2393 00f2 4932435F 		.ascii	"I2C_Master_mstrControl\000"
+ 2393      4D617374 
+ 2393      65725F6D 
+ 2393      73747243 
+ 2393      6F6E7472 
+ 2394              	.LASF5:
+ 2395 0109 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2395      20756E73 
+ 2395      69676E65 
+ 2395      6420696E 
+ 2395      7400
+ 2396              	.LASF47:
+ 2397 011b 75696E74 		.ascii	"uint8\000"
+ 2397      3800
+ 2398              	.LASF39:
+ 2399 0121 4932435F 		.ascii	"I2C_Master_mstrRdBufSize\000"
+ 2399      4D617374 
+ 2399      65725F6D 
+ 2399      73747252 
+ 2399      64427566 
+ 2400              	.LASF18:
+ 2401 013a 65727253 		.ascii	"errStatus\000"
+ 2401      74617475 
+ 2401      7300
+ 2402              	.LASF29:
+ 2403 0144 4932435F 		.ascii	"I2C_Master_MasterClearStatus\000"
  2403      4D617374 
- 2403      65725F6D 
- 2403      73747252 
- 2403      64427566 
- 2404              	.LASF18:
- 2405 019a 65727253 		.ascii	"errStatus\000"
- 2405      74617475 
- 2405      7300
- 2406              	.LASF29:
- 2407 01a4 4932435F 		.ascii	"I2C_Master_MasterClearStatus\000"
- 2407      4D617374 
- 2407      65725F4D 
- 2407      61737465 
- 2407      72436C65 
- 2408              	.LASF10:
- 2409 01c1 646F7562 		.ascii	"double\000"
- 2409      6C6500
- 2410              	.LASF20:
- 2411 01c8 525F6E57 		.ascii	"R_nW\000"
- 2411      00
- 2412              	.LASF17:
- 2413 01cd 72644461 		.ascii	"rdData\000"
+ 2403      65725F4D 
+ 2403      61737465 
+ 2403      72436C65 
+ 2404              	.LASF10:
+ 2405 0161 646F7562 		.ascii	"double\000"
+ 2405      6C6500
+ 2406              	.LASF20:
+ 2407 0168 525F6E57 		.ascii	"R_nW\000"
+ 2407      00
+ 2408              	.LASF17:
+ 2409 016d 72644461 		.ascii	"rdData\000"
+ 2409      746100
+ 2410              	.LASF26:
+ 2411 0174 61636B6E 		.ascii	"acknNak\000"
+ 2411      4E616B00 
+ 2412              	.LASF13:
+ 2413 017c 77724461 		.ascii	"wrData\000"
  2413      746100
- 2414              	.LASF26:
- 2415 01d4 61636B6E 		.ascii	"acknNak\000"
- 2415      4E616B00 
- 2416              	.LASF13:
- 2417 01dc 77724461 		.ascii	"wrData\000"
- 2417      746100
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 61
+ 2414              	.LASF7:
+ 2415 0183 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2415      206C6F6E 
+ 2415      6720756E 
+ 2415      7369676E 
+ 2415      65642069 
+ 2416              	.LASF25:
+ 2417 019a 4932435F 		.ascii	"I2C_Master_MasterReadByte\000"
+ 2417      4D617374 
+ 2417      65725F4D 
+ 2417      61737465 
+ 2417      72526561 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 61
 
 
- 2418              	.LASF7:
- 2419 01e3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2419      206C6F6E 
- 2419      6720756E 
- 2419      7369676E 
- 2419      65642069 
- 2420              	.LASF25:
- 2421 01fa 4932435F 		.ascii	"I2C_Master_MasterReadByte\000"
+ 2418              	.LASF14:
+ 2419 01b4 6D6F6465 		.ascii	"mode\000"
+ 2419      00
+ 2420              	.LASF32:
+ 2421 01b9 4932435F 		.ascii	"I2C_Master_MasterClearReadBuf\000"
  2421      4D617374 
  2421      65725F4D 
  2421      61737465 
- 2421      72526561 
- 2422              	.LASF14:
- 2423 0214 6D6F6465 		.ascii	"mode\000"
- 2423      00
- 2424              	.LASF32:
- 2425 0219 4932435F 		.ascii	"I2C_Master_MasterClearReadBuf\000"
+ 2421      72436C65 
+ 2422              	.LASF30:
+ 2423 01d7 4932435F 		.ascii	"I2C_Master_MasterGetReadBufSize\000"
+ 2423      4D617374 
+ 2423      65725F4D 
+ 2423      61737465 
+ 2423      72476574 
+ 2424              	.LASF19:
+ 2425 01f7 4932435F 		.ascii	"I2C_Master_MasterSendStart\000"
  2425      4D617374 
  2425      65725F4D 
  2425      61737465 
- 2425      72436C65 
- 2426              	.LASF30:
- 2427 0237 4932435F 		.ascii	"I2C_Master_MasterGetReadBufSize\000"
- 2427      4D617374 
- 2427      65725F4D 
- 2427      61737465 
- 2427      72476574 
- 2428              	.LASF19:
- 2429 0257 4932435F 		.ascii	"I2C_Master_MasterSendStart\000"
- 2429      4D617374 
- 2429      65725F4D 
- 2429      61737465 
- 2429      7253656E 
- 2430              	.LASF45:
- 2431 0272 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_Master_MASTER.c\000"
- 2431      6E657261 
- 2431      7465645F 
- 2431      536F7572 
- 2431      63655C50 
- 2432              	.LASF44:
- 2433 029f 474E5520 		.ascii	"GNU C 4.4.1\000"
- 2433      4320342E 
- 2433      342E3100 
- 2434              	.LASF43:
- 2435 02ab 4932435F 		.ascii	"I2C_Master_mstrWrBufIndex\000"
- 2435      4D617374 
- 2435      65725F6D 
- 2435      73747257 
- 2435      72427566 
- 2436              	.LASF22:
- 2437 02c5 4932435F 		.ascii	"I2C_Master_MasterSendStop\000"
- 2437      4D617374 
- 2437      65725F4D 
- 2437      61737465 
- 2437      7253656E 
+ 2425      7253656E 
+ 2426              	.LASF45:
+ 2427 0212 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2C_Master_MASTER.c\000"
+ 2427      6E657261 
+ 2427      7465645F 
+ 2427      536F7572 
+ 2427      63655C50 
+ 2428              	.LASF44:
+ 2429 023f 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 2429      4320342E 
+ 2429      342E3100 
+ 2430              	.LASF43:
+ 2431 024b 4932435F 		.ascii	"I2C_Master_mstrWrBufIndex\000"
+ 2431      4D617374 
+ 2431      65725F6D 
+ 2431      73747257 
+ 2431      72427566 
+ 2432              	.LASF22:
+ 2433 0265 4932435F 		.ascii	"I2C_Master_MasterSendStop\000"
+ 2433      4D617374 
+ 2433      65725F4D 
+ 2433      61737465 
+ 2433      7253656E 
+ 2434              	.LASF46:
+ 2435 027f 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 2435      665C486F 
+ 2435      6D655C44 
+ 2435      65736B74 
+ 2435      6F705C55 
+ 2436 02ac 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 2436      6E656572 
+ 2436      4B69745F 
+ 2436      50354C50 
+ 2436      5F555342 
+ 2437 02dd 64696F2E 		.ascii	"dio.cydsn\000"
+ 2437      63796473 
+ 2437      6E00
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 62
+
+
  2438              	.LASF42:
- 2439 02df 4932435F 		.ascii	"I2C_Master_mstrWrBufSize\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 62
-
-
+ 2439 02e7 4932435F 		.ascii	"I2C_Master_mstrWrBufSize\000"
  2439      4D617374 
  2439      65725F6D 
  2439      73747257 
  2439      72427566 
  2440              	.LASF2:
- 2441 02f8 73686F72 		.ascii	"short int\000"
+ 2441 0300 73686F72 		.ascii	"short int\000"
  2441      7420696E 
  2441      7400
  2442              	.LASF24:
- 2443 0302 74686542 		.ascii	"theByte\000"
+ 2443 030a 74686542 		.ascii	"theByte\000"
  2443      79746500 
  2444              	.LASF33:
- 2445 030a 4932435F 		.ascii	"I2C_Master_MasterClearWriteBuf\000"
+ 2445 0312 4932435F 		.ascii	"I2C_Master_MasterClearWriteBuf\000"
  2445      4D617374 
  2445      65725F4D 
  2445      61737465 
  2445      72436C65 
  2446              	.LASF31:
- 2447 0329 4932435F 		.ascii	"I2C_Master_MasterGetWriteBufSize\000"
+ 2447 0331 4932435F 		.ascii	"I2C_Master_MasterGetWriteBufSize\000"
  2447      4D617374 
  2447      65725F4D 
  2447      61737465 
  2447      72476574 
  2448              	.LASF4:
- 2449 034a 6C6F6E67 		.ascii	"long int\000"
+ 2449 0352 6C6F6E67 		.ascii	"long int\000"
  2449      20696E74 
  2449      00
  2450              	.LASF11:
- 2451 0353 63686172 		.ascii	"char\000"
+ 2451 035b 63686172 		.ascii	"char\000"
  2451      00
  2452              	.LASF28:
- 2453 0358 73746174 		.ascii	"status\000"
+ 2453 0360 73746174 		.ascii	"status\000"
  2453      757300
  2454              	.LASF21:
- 2455 035f 4932435F 		.ascii	"I2C_Master_MasterSendRestart\000"
+ 2455 0367 4932435F 		.ascii	"I2C_Master_MasterSendRestart\000"
  2455      4D617374 
  2455      65725F4D 
  2455      61737465 
  2455      7253656E 
  2456              	.LASF0:
- 2457 037c 7369676E 		.ascii	"signed char\000"
+ 2457 0384 7369676E 		.ascii	"signed char\000"
  2457      65642063 
  2457      68617200 
  2458              	.LASF38:
- 2459 0388 4932435F 		.ascii	"I2C_Master_mstrRdBufPtr\000"
+ 2459 0390 4932435F 		.ascii	"I2C_Master_mstrRdBufPtr\000"
  2459      4D617374 
  2459      65725F6D 
  2459      73747252 
  2459      64427566 
  2460              	.LASF27:
- 2461 03a0 4932435F 		.ascii	"I2C_Master_MasterStatus\000"
+ 2461 03a8 4932435F 		.ascii	"I2C_Master_MasterStatus\000"
  2461      4D617374 
  2461      65725F4D 
  2461      61737465 
  2461      72537461 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgvn9aE.s 			page 63
+
+
  2462              	.LASF40:
- 2463 03b8 4932435F 		.ascii	"I2C_Master_mstrRdBufIndex\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccJll36M.s 			page 63
-
-
+ 2463 03c0 4932435F 		.ascii	"I2C_Master_mstrRdBufIndex\000"
  2463      4D617374 
  2463      65725F6D 
  2463      73747252 

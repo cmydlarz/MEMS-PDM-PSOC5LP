@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
   14:.\Generated_Source\PSoC5/USBInDMA_dma.c **** ********************************************************************************
   15:.\Generated_Source\PSoC5/USBInDMA_dma.c **** * Copyright 2008-2010, Cypress Semiconductor Corporation.  All rights reserved.
   16:.\Generated_Source\PSoC5/USBInDMA_dma.c **** * You may use this file only in accordance with the license, terms, conditions, 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 2
 
 
   17:.\Generated_Source\PSoC5/USBInDMA_dma.c **** * disclaimers, and limitations in the end user license agreement accompanying 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
   71:.\Generated_Source\PSoC5/USBInDMA_dma.c **** /*********************************************************************
   72:.\Generated_Source\PSoC5/USBInDMA_dma.c **** * Function Name: uint8 USBInDMA_DmaInitalize
   73:.\Generated_Source\PSoC5/USBInDMA_dma.c **** **********************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 3
 
 
   74:.\Generated_Source\PSoC5/USBInDMA_dma.c **** * Summary:
@@ -171,14 +171,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
   57              		.loc 1 101 0
   58 000e 40F20003 		movw	r3, #:lower16:USBInDMA_DmaHandle
   59 0012 C0F20003 		movt	r3, #:upper16:USBInDMA_DmaHandle
-  60 0016 4FF00402 		mov	r2, #4
+  60 0016 4FF00202 		mov	r2, #2
   61 001a 1A70     		strb	r2, [r3, #0]
  102:.\Generated_Source\PSoC5/USBInDMA_dma.c **** 
  103:.\Generated_Source\PSoC5/USBInDMA_dma.c ****     /* Configure the channel. */
  104:.\Generated_Source\PSoC5/USBInDMA_dma.c ****     (void)CyDmaChSetConfiguration(USBInDMA_DmaHandle,
   62              		.loc 1 104 0
   63 001c 40F20003 		movw	r3, #:lower16:USBInDMA_DmaHandle
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 4
 
 
   64 0020 C0F20003 		movt	r3, #:upper16:USBInDMA_DmaHandle
@@ -192,7 +192,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
   72 0036 0846     		mov	r0, r1
   73 0038 1146     		mov	r1, r2
   74 003a 1A46     		mov	r2, r3
-  75 003c 4FF00403 		mov	r3, #4
+  75 003c 4FF00203 		mov	r3, #2
   76 0040 FFF7FEFF 		bl	CyDmaChSetConfiguration
  105:.\Generated_Source\PSoC5/USBInDMA_dma.c ****                                   BurstCount,
  106:.\Generated_Source\PSoC5/USBInDMA_dma.c ****                                   ReqestPerBurst,
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  104              	.LFE0:
  105              		.size	USBInDMA_DmaInitialize, .-USBInDMA_DmaInitialize
  106              		.section	.text.USBInDMA_DmaRelease,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 5
 
 
  107              		.align	2
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  139              		.section	.debug_loc,"",%progbits
  140              	.Ldebug_loc0:
  141              	.LLST0:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 6
 
 
  142 0000 00000000 		.4byte	.LFB0
@@ -346,10 +346,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  184 0006 00000000 		.4byte	.Ldebug_abbrev0
  185 000a 04       		.byte	0x4
  186 000b 01       		.uleb128 0x1
- 187 000c 87000000 		.4byte	.LASF18
+ 187 000c EF000000 		.4byte	.LASF18
  188 0010 01       		.byte	0x1
- 189 0011 6D010000 		.4byte	.LASF19
- 190 0015 C0000000 		.4byte	.LASF20
+ 189 0011 75010000 		.4byte	.LASF19
+ 190 0015 2B000000 		.4byte	.LASF20
  191 0019 00000000 		.4byte	0x0
  192 001d 00000000 		.4byte	0x0
  193 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -357,22 +357,22 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  195 0029 02       		.uleb128 0x2
  196 002a 01       		.byte	0x1
  197 002b 06       		.byte	0x6
- 198 002c 33010000 		.4byte	.LASF0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 7
+ 198 002c 3B010000 		.4byte	.LASF0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 7
 
 
  199 0030 02       		.uleb128 0x2
  200 0031 01       		.byte	0x1
  201 0032 08       		.byte	0x8
- 202 0033 93000000 		.4byte	.LASF1
+ 202 0033 FB000000 		.4byte	.LASF1
  203 0037 02       		.uleb128 0x2
  204 0038 02       		.byte	0x2
  205 0039 05       		.byte	0x5
- 206 003a AF000000 		.4byte	.LASF2
+ 206 003a 17010000 		.4byte	.LASF2
  207 003e 02       		.uleb128 0x2
  208 003f 02       		.byte	0x2
  209 0040 07       		.byte	0x7
- 210 0041 20010000 		.4byte	.LASF3
+ 210 0041 28010000 		.4byte	.LASF3
  211 0045 03       		.uleb128 0x3
  212 0046 04       		.byte	0x4
  213 0047 05       		.byte	0x5
@@ -388,46 +388,46 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  223 005a 02       		.uleb128 0x2
  224 005b 08       		.byte	0x8
  225 005c 07       		.byte	0x7
- 226 005d 5D000000 		.4byte	.LASF6
+ 226 005d C5000000 		.4byte	.LASF6
  227 0061 02       		.uleb128 0x2
  228 0062 04       		.byte	0x4
  229 0063 05       		.byte	0x5
- 230 0064 A6000000 		.4byte	.LASF7
+ 230 0064 0E010000 		.4byte	.LASF7
  231 0068 04       		.uleb128 0x4
  232 0069 04       		.byte	0x4
  233 006a 07       		.byte	0x7
  234 006b 02       		.uleb128 0x2
  235 006c 04       		.byte	0x4
  236 006d 07       		.byte	0x7
- 237 006e 3C000000 		.4byte	.LASF8
+ 237 006e A4000000 		.4byte	.LASF8
  238 0072 02       		.uleb128 0x2
  239 0073 01       		.byte	0x1
  240 0074 08       		.byte	0x8
- 241 0075 A1000000 		.4byte	.LASF9
+ 241 0075 09010000 		.4byte	.LASF9
  242 0079 05       		.uleb128 0x5
- 243 007a 36000000 		.4byte	.LASF10
+ 243 007a 9E000000 		.4byte	.LASF10
  244 007e 02       		.byte	0x2
  245 007f 4C       		.byte	0x4c
  246 0080 30000000 		.4byte	0x30
  247 0084 05       		.uleb128 0x5
- 248 0085 95010000 		.4byte	.LASF11
+ 248 0085 9D010000 		.4byte	.LASF11
  249 0089 02       		.byte	0x2
  250 008a 4D       		.byte	0x4d
  251 008b 3E000000 		.4byte	0x3e
  252 008f 02       		.uleb128 0x2
  253 0090 04       		.byte	0x4
  254 0091 04       		.byte	0x4
- 255 0092 56010000 		.4byte	.LASF12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 8
+ 255 0092 5E010000 		.4byte	.LASF12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 8
 
 
  256 0096 02       		.uleb128 0x2
  257 0097 08       		.byte	0x8
  258 0098 04       		.byte	0x4
- 259 0099 B9000000 		.4byte	.LASF13
+ 259 0099 21010000 		.4byte	.LASF13
  260 009d 06       		.uleb128 0x6
  261 009e 01       		.byte	0x1
- 262 009f 3F010000 		.4byte	.LASF21
+ 262 009f 47010000 		.4byte	.LASF21
  263 00a3 01       		.byte	0x1
  264 00a4 61       		.byte	0x61
  265 00a5 01       		.byte	0x1
@@ -437,7 +437,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  269 00b2 00000000 		.4byte	.LLST0
  270 00b6 F3000000 		.4byte	0xf3
  271 00ba 07       		.uleb128 0x7
- 272 00bb 2B000000 		.4byte	.LASF14
+ 272 00bb 93000000 		.4byte	.LASF14
  273 00bf 01       		.byte	0x1
  274 00c0 61       		.byte	0x61
  275 00c1 79000000 		.4byte	0x79
@@ -445,7 +445,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  277 00c6 91       		.byte	0x91
  278 00c7 77       		.sleb128 -9
  279 00c8 07       		.uleb128 0x7
- 280 00c9 4E000000 		.4byte	.LASF15
+ 280 00c9 B6000000 		.4byte	.LASF15
  281 00cd 01       		.byte	0x1
  282 00ce 61       		.byte	0x61
  283 00cf 79000000 		.4byte	0x79
@@ -461,7 +461,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  293 00e2 91       		.byte	0x91
  294 00e3 74       		.sleb128 -12
  295 00e4 07       		.uleb128 0x7
- 296 00e5 5C010000 		.4byte	.LASF17
+ 296 00e5 64010000 		.4byte	.LASF17
  297 00e9 01       		.byte	0x1
  298 00ea 61       		.byte	0x61
  299 00eb 84000000 		.4byte	0x84
@@ -471,18 +471,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  303 00f2 00       		.byte	0x0
  304 00f3 08       		.uleb128 0x8
  305 00f4 01       		.byte	0x1
- 306 00f5 9C010000 		.4byte	.LASF22
+ 306 00f5 A4010000 		.4byte	.LASF22
  307 00f9 01       		.byte	0x1
  308 00fa 88       		.byte	0x88
  309 00fb 01       		.byte	0x1
  310 00fc 00000000 		.4byte	.LFB1
  311 0100 16000000 		.4byte	.LFE1
  312 0104 37000000 		.4byte	.LLST1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 9
 
 
  313 0108 09       		.uleb128 0x9
- 314 0109 74000000 		.4byte	.LASF23
+ 314 0109 DC000000 		.4byte	.LASF23
  315 010d 01       		.byte	0x1
  316 010e 45       		.byte	0x45
  317 010f 79000000 		.4byte	0x79
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  367 002b 04       		.uleb128 0x4
  368 002c 24       		.uleb128 0x24
  369 002d 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 10
 
 
  370 002e 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  424 0064 13       		.uleb128 0x13
  425 0065 02       		.uleb128 0x2
  426 0066 0A       		.uleb128 0xa
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 11
 
 
  427 0067 00       		.byte	0x0
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  476      6E444D41 
  476      5F446D61 
  476      52656C65 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 12
 
 
  476      61736500 
@@ -709,113 +709,115 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 1
  510      676E6564 
  510      20696E74 
  510      00
- 511              	.LASF14:
- 512 002b 42757273 		.ascii	"BurstCount\000"
- 512      74436F75 
- 512      6E7400
- 513              	.LASF10:
- 514 0036 75696E74 		.ascii	"uint8\000"
- 514      3800
- 515              	.LASF8:
- 516 003c 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 13
+ 511              	.LASF20:
+ 512 002b 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 512      665C486F 
+ 512      6D655C44 
+ 512      65736B74 
+ 512      6F705C55 
+ 513 0058 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 513      6E656572 
+ 513      4B69745F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 13
 
 
- 516      20756E73 
- 516      69676E65 
- 516      6420696E 
- 516      7400
- 517              	.LASF15:
- 518 004e 52657165 		.ascii	"ReqestPerBurst\000"
- 518      73745065 
- 518      72427572 
- 518      737400
- 519              	.LASF6:
- 520 005d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 520      206C6F6E 
- 520      6720756E 
- 520      7369676E 
- 520      65642069 
- 521              	.LASF23:
- 522 0074 55534249 		.ascii	"USBInDMA_DmaHandle\000"
- 522      6E444D41 
- 522      5F446D61 
- 522      48616E64 
- 522      6C6500
- 523              	.LASF18:
- 524 0087 474E5520 		.ascii	"GNU C 4.4.1\000"
- 524      4320342E 
- 524      342E3100 
- 525              	.LASF1:
- 526 0093 756E7369 		.ascii	"unsigned char\000"
- 526      676E6564 
- 526      20636861 
- 526      7200
- 527              	.LASF9:
- 528 00a1 63686172 		.ascii	"char\000"
- 528      00
- 529              	.LASF7:
- 530 00a6 6C6F6E67 		.ascii	"long int\000"
- 530      20696E74 
- 530      00
- 531              	.LASF2:
- 532 00af 73686F72 		.ascii	"short int\000"
- 532      7420696E 
- 532      7400
- 533              	.LASF13:
- 534 00b9 646F7562 		.ascii	"double\000"
- 534      6C6500
- 535              	.LASF20:
- 536 00c0 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 536      665C486F 
- 536      6D655C44 
- 536      65736B74 
- 536      6F705C55 
- 537 00ec 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 537      5F50354C 
- 537      505F5553 
- 537      425F4175 
- 537      64696F5C 
- 538 011e 6E00     		.ascii	"n\000"
+ 513      50354C50 
+ 513      5F555342 
+ 514 0089 64696F2E 		.ascii	"dio.cydsn\000"
+ 514      63796473 
+ 514      6E00
+ 515              	.LASF14:
+ 516 0093 42757273 		.ascii	"BurstCount\000"
+ 516      74436F75 
+ 516      6E7400
+ 517              	.LASF10:
+ 518 009e 75696E74 		.ascii	"uint8\000"
+ 518      3800
+ 519              	.LASF8:
+ 520 00a4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 520      20756E73 
+ 520      69676E65 
+ 520      6420696E 
+ 520      7400
+ 521              	.LASF15:
+ 522 00b6 52657165 		.ascii	"ReqestPerBurst\000"
+ 522      73745065 
+ 522      72427572 
+ 522      737400
+ 523              	.LASF6:
+ 524 00c5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 524      206C6F6E 
+ 524      6720756E 
+ 524      7369676E 
+ 524      65642069 
+ 525              	.LASF23:
+ 526 00dc 55534249 		.ascii	"USBInDMA_DmaHandle\000"
+ 526      6E444D41 
+ 526      5F446D61 
+ 526      48616E64 
+ 526      6C6500
+ 527              	.LASF18:
+ 528 00ef 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 528      4320342E 
+ 528      342E3100 
+ 529              	.LASF1:
+ 530 00fb 756E7369 		.ascii	"unsigned char\000"
+ 530      676E6564 
+ 530      20636861 
+ 530      7200
+ 531              	.LASF9:
+ 532 0109 63686172 		.ascii	"char\000"
+ 532      00
+ 533              	.LASF7:
+ 534 010e 6C6F6E67 		.ascii	"long int\000"
+ 534      20696E74 
+ 534      00
+ 535              	.LASF2:
+ 536 0117 73686F72 		.ascii	"short int\000"
+ 536      7420696E 
+ 536      7400
+ 537              	.LASF13:
+ 538 0121 646F7562 		.ascii	"double\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc2u4ZQG.s 			page 14
+
+
+ 538      6C6500
  539              	.LASF3:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPH2V0R.s 			page 14
-
-
- 540 0120 73686F72 		.ascii	"short unsigned int\000"
+ 540 0128 73686F72 		.ascii	"short unsigned int\000"
  540      7420756E 
  540      7369676E 
  540      65642069 
  540      6E7400
  541              	.LASF0:
- 542 0133 7369676E 		.ascii	"signed char\000"
+ 542 013b 7369676E 		.ascii	"signed char\000"
  542      65642063 
  542      68617200 
  543              	.LASF21:
- 544 013f 55534249 		.ascii	"USBInDMA_DmaInitialize\000"
+ 544 0147 55534249 		.ascii	"USBInDMA_DmaInitialize\000"
  544      6E444D41 
  544      5F446D61 
  544      496E6974 
  544      69616C69 
  545              	.LASF12:
- 546 0156 666C6F61 		.ascii	"float\000"
+ 546 015e 666C6F61 		.ascii	"float\000"
  546      7400
  547              	.LASF17:
- 548 015c 55707065 		.ascii	"UpperDestAddress\000"
+ 548 0164 55707065 		.ascii	"UpperDestAddress\000"
  548      72446573 
  548      74416464 
  548      72657373 
  548      00
  549              	.LASF19:
- 550 016d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBInDMA_dma.c\000"
+ 550 0175 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBInDMA_dma.c\000"
  550      6E657261 
  550      7465645F 
  550      536F7572 
  550      63655C50 
  551              	.LASF11:
- 552 0195 75696E74 		.ascii	"uint16\000"
+ 552 019d 75696E74 		.ascii	"uint16\000"
  552      313600
  553              	.LASF22:
- 554 019c 55534249 		.ascii	"USBInDMA_DmaRelease\000"
+ 554 01a4 55534249 		.ascii	"USBInDMA_DmaRelease\000"
  554      6E444D41 
  554      5F446D61 
  554      52656C65 

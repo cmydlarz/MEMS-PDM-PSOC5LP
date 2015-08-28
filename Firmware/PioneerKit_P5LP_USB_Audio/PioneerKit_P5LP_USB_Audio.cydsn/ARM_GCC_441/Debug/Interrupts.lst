@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
   20:.\Interrupts.c **** * Any reproduction, modification, translation, compilation, or representation of
   21:.\Interrupts.c **** * this software except as specified above is prohibited without the express
   22:.\Interrupts.c **** * written permission of Cypress.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 2
 
 
   23:.\Interrupts.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
   77:.\Interrupts.c **** {
   32              		.loc 1 77 0
   33              		.cfi_startproc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 3
 
 
   34              		@ args = 0, pretend = 0, frame = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  101:.\Interrupts.c **** CY_ISR(RxDMADone_Interrupt)
  102:.\Interrupts.c **** {
   65              		.loc 1 102 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 4
 
 
   66              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  117:.\Interrupts.c **** 	if (inLevel >= IN_BUFSIZE) 
  106              		.loc 1 117 0
  107 0050 40F20003 		movw	r3, #:lower16:inLevel
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 5
 
 
  108 0054 C0F20003 		movt	r3, #:upper16:inLevel
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  138:.\Interrupts.c **** * Parameters:  
  139:.\Interrupts.c **** *	Sleep Timer tick interrupt vector
  140:.\Interrupts.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 6
 
 
  141:.\Interrupts.c **** * Return:
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  155:.\Interrupts.c **** *   The Interrupt Service Routine for isr_TxDMADone. This handles the AUDIO Out
  156:.\Interrupts.c **** *	buffer pointers and detects underflow of the buffer to stop AUDIO out.
  157:.\Interrupts.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 7
 
 
  158:.\Interrupts.c **** * Parameters:  
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  178:.\Interrupts.c ****     #if 0
  179:.\Interrupts.c **** 	if (outLevel > OUT_BUFSIZE) 
  180:.\Interrupts.c **** 		for(;;) ;		/* Overflow should not happen */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 8
 
 
  181:.\Interrupts.c ****     #endif
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  252              		.global	cicOverflow_Interrupt
  253              		.thumb
  254              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 9
 
 
  255              		.type	cicOverflow_Interrupt, %function
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  283              		.size	cicOverflow_Interrupt, .-cicOverflow_Interrupt
  284 0016 00BF     		.text
  285              	.Letext0:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 10
 
 
  286              		.section	.debug_loc,"",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  340 0083 77       		.byte	0x77
  341 0084 04       		.sleb128 4
  342 0085 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 11
 
 
  343 0089 00000000 		.4byte	0x0
@@ -654,11 +654,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  393 0006 00000000 		.4byte	.Ldebug_abbrev0
  394 000a 04       		.byte	0x4
  395 000b 01       		.uleb128 0x1
- 396 000c 52010000 		.4byte	.LASF31
+ 396 000c F2000000 		.4byte	.LASF31
  397 0010 01       		.byte	0x1
- 398 0011 5E010000 		.4byte	.LASF32
- 399 0015 7B000000 		.4byte	.LASF33
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 12
+ 398 0011 FE000000 		.4byte	.LASF32
+ 399 0015 12010000 		.4byte	.LASF33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 12
 
 
  400 0019 00000000 		.4byte	0x0
@@ -668,7 +668,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  404 0029 02       		.uleb128 0x2
  405 002a 01       		.byte	0x1
  406 002b 06       		.byte	0x6
- 407 002c B4010000 		.4byte	.LASF0
+ 407 002c BC010000 		.4byte	.LASF0
  408 0030 02       		.uleb128 0x2
  409 0031 01       		.byte	0x1
  410 0032 08       		.byte	0x8
@@ -676,19 +676,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  412 0037 02       		.uleb128 0x2
  413 0038 02       		.byte	0x2
  414 0039 05       		.byte	0x5
- 415 003a 86010000 		.4byte	.LASF2
+ 415 003a 8E010000 		.4byte	.LASF2
  416 003e 02       		.uleb128 0x2
  417 003f 02       		.byte	0x2
  418 0040 07       		.byte	0x7
- 419 0041 ED000000 		.4byte	.LASF3
+ 419 0041 8D000000 		.4byte	.LASF3
  420 0045 02       		.uleb128 0x2
  421 0046 04       		.byte	0x4
  422 0047 05       		.byte	0x5
- 423 0048 AB010000 		.4byte	.LASF4
+ 423 0048 B3010000 		.4byte	.LASF4
  424 004c 02       		.uleb128 0x2
  425 004d 04       		.byte	0x4
  426 004e 07       		.byte	0x7
- 427 004f DB000000 		.4byte	.LASF5
+ 427 004f 7B000000 		.4byte	.LASF5
  428 0053 02       		.uleb128 0x2
  429 0054 08       		.byte	0x8
  430 0055 05       		.byte	0x5
@@ -696,7 +696,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  432 005a 02       		.uleb128 0x2
  433 005b 08       		.byte	0x8
  434 005c 07       		.byte	0x7
- 435 005d 3B010000 		.4byte	.LASF7
+ 435 005d DB000000 		.4byte	.LASF7
  436 0061 03       		.uleb128 0x3
  437 0062 04       		.byte	0x4
  438 0063 05       		.byte	0x5
@@ -704,32 +704,32 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  440 0068 02       		.uleb128 0x2
  441 0069 04       		.byte	0x4
  442 006a 07       		.byte	0x7
- 443 006b 2E010000 		.4byte	.LASF8
+ 443 006b CE000000 		.4byte	.LASF8
  444 006f 04       		.uleb128 0x4
- 445 0070 A5010000 		.4byte	.LASF9
+ 445 0070 AD010000 		.4byte	.LASF9
  446 0074 02       		.byte	0x2
  447 0075 4C       		.byte	0x4c
  448 0076 30000000 		.4byte	0x30
  449 007a 04       		.uleb128 0x4
- 450 007b 21010000 		.4byte	.LASF10
+ 450 007b C1000000 		.4byte	.LASF10
  451 007f 02       		.byte	0x2
  452 0080 4D       		.byte	0x4d
  453 0081 3E000000 		.4byte	0x3e
  454 0085 02       		.uleb128 0x2
  455 0086 04       		.byte	0x4
  456 0087 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 13
 
 
  457 0088 53000000 		.4byte	.LASF11
  458 008c 02       		.uleb128 0x2
  459 008d 08       		.byte	0x8
  460 008e 04       		.byte	0x4
- 461 008f 0D010000 		.4byte	.LASF12
+ 461 008f AD000000 		.4byte	.LASF12
  462 0093 02       		.uleb128 0x2
  463 0094 01       		.byte	0x1
  464 0095 08       		.byte	0x8
- 465 0096 6D010000 		.4byte	.LASF13
+ 465 0096 0D010000 		.4byte	.LASF13
  466 009a 05       		.uleb128 0x5
  467 009b 04       		.byte	0x4
  468 009c 07       		.byte	0x7
@@ -744,7 +744,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  477 00ae 00000000 		.4byte	.LLST0
  478 00b2 07       		.uleb128 0x7
  479 00b3 01       		.byte	0x1
- 480 00b4 72010000 		.4byte	.LASF16
+ 480 00b4 7A010000 		.4byte	.LASF16
  481 00b8 01       		.byte	0x1
  482 00b9 65       		.byte	0x65
  483 00ba 01       		.byte	0x1
@@ -772,19 +772,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  505 00eb 62000000 		.4byte	.LLST2
  506 00ef 07       		.uleb128 0x7
  507 00f0 01       		.byte	0x1
- 508 00f1 CC010000 		.4byte	.LASF17
+ 508 00f1 D4010000 		.4byte	.LASF17
  509 00f5 01       		.byte	0x1
  510 00f6 A5       		.byte	0xa5
  511 00f7 01       		.byte	0x1
  512 00f8 00000000 		.4byte	.LFB32
  513 00fc 86000000 		.4byte	.LFE32
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 14
 
 
  514 0100 8D000000 		.4byte	.LLST3
  515 0104 17010000 		.4byte	0x117
  516 0108 08       		.uleb128 0x8
- 517 0109 28010000 		.4byte	.LASF19
+ 517 0109 C8000000 		.4byte	.LASF19
  518 010d 01       		.byte	0x1
  519 010e A8       		.byte	0xa8
  520 010f 7A000000 		.4byte	0x7a
@@ -794,7 +794,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  524 0116 00       		.byte	0x0
  525 0117 07       		.uleb128 0x7
  526 0118 01       		.byte	0x1
- 527 0119 EB010000 		.4byte	.LASF20
+ 527 0119 F3010000 		.4byte	.LASF20
  528 011d 01       		.byte	0x1
  529 011e D8       		.byte	0xd8
  530 011f 01       		.byte	0x1
@@ -812,7 +812,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  542 013d 77       		.sleb128 -9
  543 013e 00       		.byte	0x0
  544 013f 09       		.uleb128 0x9
- 545 0140 00010000 		.4byte	.LASF22
+ 545 0140 A0000000 		.4byte	.LASF22
  546 0144 03       		.byte	0x3
  547 0145 CE06     		.2byte	0x6ce
  548 0147 4D010000 		.4byte	0x14d
@@ -835,31 +835,31 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  565 016a 01       		.byte	0x1
  566 016b 01       		.byte	0x1
  567 016c 0B       		.uleb128 0xb
- 568 016d E0010000 		.4byte	.LASF25
+ 568 016d E8010000 		.4byte	.LASF25
  569 0171 01       		.byte	0x1
  570 0172 2D       		.byte	0x2d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 15
 
 
  571 0173 7A000000 		.4byte	0x7a
  572 0177 01       		.byte	0x1
  573 0178 01       		.byte	0x1
  574 0179 0B       		.uleb128 0xb
- 575 017a C0010000 		.4byte	.LASF26
+ 575 017a C8010000 		.4byte	.LASF26
  576 017e 01       		.byte	0x1
  577 017f 2E       		.byte	0x2e
  578 0180 7A000000 		.4byte	0x7a
  579 0184 01       		.byte	0x1
  580 0185 01       		.byte	0x1
  581 0186 0B       		.uleb128 0xb
- 582 0187 90010000 		.4byte	.LASF27
+ 582 0187 98010000 		.4byte	.LASF27
  583 018b 01       		.byte	0x1
  584 018c 2F       		.byte	0x2f
  585 018d 6F000000 		.4byte	0x6f
  586 0191 01       		.byte	0x1
  587 0192 01       		.byte	0x1
  588 0193 0B       		.uleb128 0xb
- 589 0194 01020000 		.4byte	.LASF28
+ 589 0194 09020000 		.4byte	.LASF28
  590 0198 01       		.byte	0x1
  591 0199 30       		.byte	0x30
  592 019a 7A000000 		.4byte	0x7a
@@ -873,7 +873,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  600 01ab 01       		.byte	0x1
  601 01ac 01       		.byte	0x1
  602 01ad 0B       		.uleb128 0xb
- 603 01ae 14010000 		.4byte	.LASF30
+ 603 01ae B4000000 		.4byte	.LASF30
  604 01b2 01       		.byte	0x1
  605 01b3 32       		.byte	0x32
  606 01b4 7A000000 		.4byte	0x7a
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  625 000e 01       		.uleb128 0x1
  626 000f 55       		.uleb128 0x55
  627 0010 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 16
 
 
  628 0011 10       		.uleb128 0x10
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  682 0047 0E       		.uleb128 0xe
  683 0048 3A       		.uleb128 0x3a
  684 0049 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 17
 
 
  685 004a 3B       		.uleb128 0x3b
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  739 0080 0E       		.uleb128 0xe
  740 0081 3A       		.uleb128 0x3a
  741 0082 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 18
 
 
  742 0083 3B       		.uleb128 0x3b
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  787      5F496E74 
  787      65727275 
  787      707400
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 19
 
 
  788 0051 EF000000 		.4byte	0xef
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  831      7400
  832              	.LASF23:
  833 000e 696E436E 		.ascii	"inCnt\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 20
 
 
  833      7400
@@ -1177,127 +1177,129 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 1
  849      655F496E 
  849      74657272 
  849      75707400 
- 850              	.LASF33:
- 851 007b 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 851      665C486F 
- 851      6D655C44 
- 851      65736B74 
- 851      6F705C55 
- 852 00a7 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 852      5F50354C 
- 852      505F5553 
- 852      425F4175 
- 852      64696F5C 
- 853 00d9 6E00     		.ascii	"n\000"
- 854              	.LASF5:
- 855 00db 6C6F6E67 		.ascii	"long unsigned int\000"
- 855      20756E73 
- 855      69676E65 
- 855      6420696E 
- 855      7400
- 856              	.LASF3:
- 857 00ed 73686F72 		.ascii	"short unsigned int\000"
- 857      7420756E 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 21
+ 850              	.LASF5:
+ 851 007b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 851      20756E73 
+ 851      69676E65 
+ 851      6420696E 
+ 851      7400
+ 852              	.LASF3:
+ 853 008d 73686F72 		.ascii	"short unsigned int\000"
+ 853      7420756E 
+ 853      7369676E 
+ 853      65642069 
+ 853      6E7400
+ 854              	.LASF22:
+ 855 00a0 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 855      52784275 
+ 855      66666572 
+ 855      00
+ 856              	.LASF12:
+ 857 00ad 646F7562 		.ascii	"double\000"
+ 857      6C6500
+ 858              	.LASF30:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 21
 
 
- 857      7369676E 
- 857      65642069 
- 857      6E7400
- 858              	.LASF22:
- 859 0100 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 859      52784275 
- 859      66666572 
+ 859 00b4 6F757455 		.ascii	"outUsbShadow\000"
+ 859      73625368 
+ 859      61646F77 
  859      00
- 860              	.LASF12:
- 861 010d 646F7562 		.ascii	"double\000"
- 861      6C6500
- 862              	.LASF30:
- 863 0114 6F757455 		.ascii	"outUsbShadow\000"
- 863      73625368 
- 863      61646F77 
- 863      00
- 864              	.LASF10:
- 865 0121 75696E74 		.ascii	"uint16\000"
- 865      313600
- 866              	.LASF19:
- 867 0128 61646465 		.ascii	"added\000"
- 867      6400
- 868              	.LASF8:
- 869 012e 756E7369 		.ascii	"unsigned int\000"
- 869      676E6564 
- 869      20696E74 
- 869      00
- 870              	.LASF7:
- 871 013b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 871      206C6F6E 
- 871      6720756E 
- 871      7369676E 
- 871      65642069 
- 872              	.LASF31:
- 873 0152 474E5520 		.ascii	"GNU C 4.4.1\000"
- 873      4320342E 
- 873      342E3100 
- 874              	.LASF32:
- 875 015e 2E5C496E 		.ascii	".\\Interrupts.c\000"
- 875      74657272 
- 875      75707473 
- 875      2E6300
- 876              	.LASF13:
- 877 016d 63686172 		.ascii	"char\000"
- 877      00
+ 860              	.LASF10:
+ 861 00c1 75696E74 		.ascii	"uint16\000"
+ 861      313600
+ 862              	.LASF19:
+ 863 00c8 61646465 		.ascii	"added\000"
+ 863      6400
+ 864              	.LASF8:
+ 865 00ce 756E7369 		.ascii	"unsigned int\000"
+ 865      676E6564 
+ 865      20696E74 
+ 865      00
+ 866              	.LASF7:
+ 867 00db 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 867      206C6F6E 
+ 867      6720756E 
+ 867      7369676E 
+ 867      65642069 
+ 868              	.LASF31:
+ 869 00f2 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 869      4320342E 
+ 869      342E3100 
+ 870              	.LASF32:
+ 871 00fe 2E5C496E 		.ascii	".\\Interrupts.c\000"
+ 871      74657272 
+ 871      75707473 
+ 871      2E6300
+ 872              	.LASF13:
+ 873 010d 63686172 		.ascii	"char\000"
+ 873      00
+ 874              	.LASF33:
+ 875 0112 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 875      665C486F 
+ 875      6D655C44 
+ 875      65736B74 
+ 875      6F705C55 
+ 876 013f 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 876      6E656572 
+ 876      4B69745F 
+ 876      50354C50 
+ 876      5F555342 
+ 877 0170 64696F2E 		.ascii	"dio.cydsn\000"
+ 877      63796473 
+ 877      6E00
  878              	.LASF16:
- 879 0172 5278444D 		.ascii	"RxDMADone_Interrupt\000"
+ 879 017a 5278444D 		.ascii	"RxDMADone_Interrupt\000"
  879      41446F6E 
  879      655F496E 
  879      74657272 
  879      75707400 
  880              	.LASF2:
- 881 0186 73686F72 		.ascii	"short int\000"
+ 881 018e 73686F72 		.ascii	"short int\000"
  881      7420696E 
  881      7400
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLxYY6M.s 			page 22
+
+
  882              	.LASF27:
- 883 0190 6170706C 		.ascii	"applicationTimerTick\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccsdmRry.s 			page 22
-
-
+ 883 0198 6170706C 		.ascii	"applicationTimerTick\000"
  883      69636174 
  883      696F6E54 
  883      696D6572 
  883      5469636B 
  884              	.LASF9:
- 885 01a5 75696E74 		.ascii	"uint8\000"
+ 885 01ad 75696E74 		.ascii	"uint8\000"
  885      3800
  886              	.LASF4:
- 887 01ab 6C6F6E67 		.ascii	"long int\000"
+ 887 01b3 6C6F6E67 		.ascii	"long int\000"
  887      20696E74 
  887      00
  888              	.LASF0:
- 889 01b4 7369676E 		.ascii	"signed char\000"
+ 889 01bc 7369676E 		.ascii	"signed char\000"
  889      65642063 
  889      68617200 
  890              	.LASF26:
- 891 01c0 696E5573 		.ascii	"inUsbShadow\000"
+ 891 01c8 696E5573 		.ascii	"inUsbShadow\000"
  891      62536861 
  891      646F7700 
  892              	.LASF17:
- 893 01cc 5478444D 		.ascii	"TxDMADone_Interrupt\000"
+ 893 01d4 5478444D 		.ascii	"TxDMADone_Interrupt\000"
  893      41446F6E 
  893      655F496E 
  893      74657272 
  893      75707400 
  894              	.LASF25:
- 895 01e0 696E5573 		.ascii	"inUsbCount\000"
+ 895 01e8 696E5573 		.ascii	"inUsbCount\000"
  895      62436F75 
  895      6E7400
  896              	.LASF20:
- 897 01eb 6369634F 		.ascii	"cicOverflow_Interrupt\000"
+ 897 01f3 6369634F 		.ascii	"cicOverflow_Interrupt\000"
  897      76657266 
  897      6C6F775F 
  897      496E7465 
  897      72727570 
  898              	.LASF28:
- 899 0201 6F75744C 		.ascii	"outLevel\000"
+ 899 0209 6F75744C 		.ascii	"outLevel\000"
  899      6576656C 
  899      00
  900              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

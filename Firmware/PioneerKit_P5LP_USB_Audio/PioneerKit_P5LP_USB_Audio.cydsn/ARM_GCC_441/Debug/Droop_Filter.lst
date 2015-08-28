@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
   15:.\Generated_Source\PSoC5/Droop_Filter.c **** * the software package with which this file was provided.
   16:.\Generated_Source\PSoC5/Droop_Filter.c **** *******************************************************************************/
   17:.\Generated_Source\PSoC5/Droop_Filter.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 2
 
 
   18:.\Generated_Source\PSoC5/Droop_Filter.c **** #include "Droop_Filter.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
   50:.\Generated_Source\PSoC5/Droop_Filter.c ****     while (count > 0u)
   59              		.loc 1 50 0
   60 0014 13E0     		b	.L2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 3
 
 
   61              	.L3:
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
   65:.\Generated_Source\PSoC5/Droop_Filter.c **** *
   66:.\Generated_Source\PSoC5/Droop_Filter.c **** * Parameters:
   67:.\Generated_Source\PSoC5/Droop_Filter.c **** *  reg32 regAddress[]: register address;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 4
 
 
   68:.\Generated_Source\PSoC5/Droop_Filter.c **** *  uint8 count: number of 32-bit registers for zeroing.
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  136              		.loc 1 86 0
  137 002c FB7B     		ldrb	r3, [r7, #15]
  138 002e 03F10103 		add	r3, r3, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 5
 
 
  139 0032 FB73     		strb	r3, [r7, #15]
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  119:.\Generated_Source\PSoC5/Droop_Filter.c **** *******************************************************************************/
  120:.\Generated_Source\PSoC5/Droop_Filter.c **** void Droop_Filter_Init(void) 
  121:.\Generated_Source\PSoC5/Droop_Filter.c **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 6
 
 
  161              		.loc 1 121 0
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  133:.\Generated_Source\PSoC5/Droop_Filter.c ****     /* Turns off Run Bit */
  134:.\Generated_Source\PSoC5/Droop_Filter.c ****     Droop_Filter_CR_REG &= (uint8) (~Droop_Filter_RUN_MASK);
  204              		.loc 1 134 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 7
 
 
  205 004e 4CF28073 		movw	r3, #:lower16:1073792896
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  146:.\Generated_Source\PSoC5/Droop_Filter.c ****     Droop_Filter_ZeroReg32(Droop_Filter_CFSM_RAM_PTR, Droop_Filter_CFSM_RAM_SIZE);
  248              		.loc 1 146 0
  249 00d4 4CF20060 		movw	r0, #:lower16:1073792512
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 8
 
 
  250 00d8 C4F20000 		movt	r0, #:upper16:1073792512
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  284 014c 40F20001 		movw	r1, #:lower16:Droop_Filter_acu
  285 0150 C0F20001 		movt	r1, #:upper16:Droop_Filter_acu
  286 0154 4FF00E02 		mov	r2, #14
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 9
 
 
  287 0158 FFF7FEFF 		bl	Droop_Filter_LoadReg32
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  323              		.size	Droop_Filter_Init, .-Droop_Filter_Init
  324              		.section	.text.Droop_Filter_Enable,"ax",%progbits
  325              		.align	2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 10
 
 
  326              		.global	Droop_Filter_Enable
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  355 001a C4F20002 		movt	r2, #:upper16:1073759142
  356 001e 1278     		ldrb	r2, [r2, #0]
  357 0020 D2B2     		uxtb	r2, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 11
 
 
  358 0022 42F01002 		orr	r2, r2, #16
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  402              		.type	Droop_Filter_Start, %function
  403              	Droop_Filter_Start:
  404              	.LFB4:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 12
 
 
  220:.\Generated_Source\PSoC5/Droop_Filter.c **** 
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  429 0022 1A70     		strb	r2, [r3, #0]
  430              	.L14:
  250:.\Generated_Source\PSoC5/Droop_Filter.c ****     }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 13
 
 
  251:.\Generated_Source\PSoC5/Droop_Filter.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  460              		.cfi_def_cfa_register 7
  276:.\Generated_Source\PSoC5/Droop_Filter.c ****     uint8 enableInterrupts;
  277:.\Generated_Source\PSoC5/Droop_Filter.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 14
 
 
  278:.\Generated_Source\PSoC5/Droop_Filter.c ****     enableInterrupts = CyEnterCriticalSection();
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  503              		.section	.text.Droop_Filter_Pause,"ax",%progbits
  504              		.align	2
  505              		.global	Droop_Filter_Pause
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 15
 
 
  506              		.thumb
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  535 0026 4FF03F02 		mov	r2, #63
  536 002a 1A70     		strb	r2, [r3, #0]
  315:.\Generated_Source\PSoC5/Droop_Filter.c **** }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 16
 
 
  537              		.loc 1 315 0
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  338:.\Generated_Source\PSoC5/Droop_Filter.c ****     /* Clears any pending interrupts */
  339:.\Generated_Source\PSoC5/Droop_Filter.c ****     Droop_Filter_SR_REG = 0xFFu;
  569              		.loc 1 339 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 17
 
 
  570 0012 4CF28473 		movw	r3, #:lower16:1073792900
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  365:.\Generated_Source\PSoC5/Droop_Filter.c **** *    Define                             Description
  366:.\Generated_Source\PSoC5/Droop_Filter.c **** *     Droop_Filter_STGA_KEY_LOW      Key Byte is low byte.
  367:.\Generated_Source\PSoC5/Droop_Filter.c **** *     Droop_Filter_STGA_KEY_MID      Key Byte is med byte.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 18
 
 
  368:.\Generated_Source\PSoC5/Droop_Filter.c **** *     Droop_Filter_STGA_KEY_HIGH     Key Byte is high byte.
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  400:.\Generated_Source\PSoC5/Droop_Filter.c **** }
  621              		.loc 1 400 0
  622 0016 07F10C07 		add	r7, r7, #12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 19
 
 
  623 001a BD46     		mov	sp, r7
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  637              		.loc 1 440 0
  638              		.cfi_startproc
  639              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 20
 
 
  640              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  460:.\Generated_Source\PSoC5/Droop_Filter.c **** *  address is out of range.
  461:.\Generated_Source\PSoC5/Droop_Filter.c **** *  Droop_Filter_DATA_OUT_OF_RANGE - error code, indicates a data overflow
  462:.\Generated_Source\PSoC5/Droop_Filter.c **** *  error.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 21
 
 
  463:.\Generated_Source\PSoC5/Droop_Filter.c **** *
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  714 003a BB75     		strb	r3, [r7, #22]
  715              		.loc 1 475 0
  716 003c 47E0     		b	.L29
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 22
 
 
  717              	.L28:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  759 0096 FA68     		ldr	r2, [r7, #12]
  760 0098 0A44     		add	r2, r1, r2
  761 009a 1268     		ldr	r2, [r2, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 23
 
 
  762 009c 1A60     		str	r2, [r3, #0]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  501:.\Generated_Source\PSoC5/Droop_Filter.c **** /*******************************************************************************
  502:.\Generated_Source\PSoC5/Droop_Filter.c **** * Function Name: Droop_Filter_LoadDataRAMB
  503:.\Generated_Source\PSoC5/Droop_Filter.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 24
 
 
  504:.\Generated_Source\PSoC5/Droop_Filter.c **** *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  831 001a BA68     		ldr	r2, [r7, #8]
  832 001c 4CF2FF13 		movw	r3, #:lower16:1073791487
  833 0020 C4F20003 		movt	r3, #:upper16:1073791487
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 25
 
 
  834 0024 9A42     		cmp	r2, r3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  877 0080 D2B2     		uxtb	r2, r2
  878 0082 1A70     		strb	r2, [r3, #0]
  543:.\Generated_Source\PSoC5/Droop_Filter.c ****         while (size > 0u)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 26
 
 
  879              		.loc 1 543 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  922 00d8 80BC     		pop	{r7}
  923 00da 7047     		bx	lr
  924              		.cfi_endproc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 27
 
 
  925              	.LFE11:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  581:.\Generated_Source\PSoC5/Droop_Filter.c **** 
  582:.\Generated_Source\PSoC5/Droop_Filter.c ****     value = (uint32) sample;
  953              		.loc 1 582 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 28
 
 
  954 000c 3B68     		ldr	r3, [r7, #0]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  996 0068 4FEA1222 		lsr	r2, r2, #8
  997 006c D2B2     		uxtb	r2, r2
  998 006e 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 29
 
 
  595:.\Generated_Source\PSoC5/Droop_Filter.c ****         Droop_Filter_STAGEBH_REG = (uint8) (value >> 16u);
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  625:.\Generated_Source\PSoC5/Droop_Filter.c **** *
  626:.\Generated_Source\PSoC5/Droop_Filter.c **** *******************************************************************************/
  627:.\Generated_Source\PSoC5/Droop_Filter.c **** int32 Droop_Filter_GetOutputValue(uint8 channel) 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 30
 
 
  628:.\Generated_Source\PSoC5/Droop_Filter.c **** {
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1063 003a 02DA     		bge	.L50
  1064 003c 4FF0FF03 		mov	r3, #255
  1065 0040 01E0     		b	.L51
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 31
 
 
  1066              	.L50:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1108 0090 4FF00003 		mov	r3, #0
  1109 0094 7B72     		strb	r3, [r7, #9]
  654:.\Generated_Source\PSoC5/Droop_Filter.c ****         data2 = 0x00u;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 32
 
 
  1110              		.loc 1 654 0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  671:.\Generated_Source\PSoC5/Droop_Filter.c **** *
  672:.\Generated_Source\PSoC5/Droop_Filter.c **** * Parameters:
  673:.\Generated_Source\PSoC5/Droop_Filter.c **** *  events: Bits [0:5] of events represent the events that trigger DFB
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 33
 
 
  674:.\Generated_Source\PSoC5/Droop_Filter.c **** *          interrupts.
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1176              		.cfi_endproc
  1177              	.LFE14:
  1178              		.size	Droop_Filter_SetInterruptMode, .-Droop_Filter_SetInterruptMode
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 34
 
 
  1179              		.section	.text.Droop_Filter_GetInterruptSource,"ax",%progbits
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1200 0004 4CF28473 		movw	r3, #:lower16:1073792900
  1201 0008 C4F20003 		movt	r3, #:upper16:1073792900
  1202 000c 1B78     		ldrb	r3, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 35
 
 
  1203 000e DBB2     		uxtb	r3, r3
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1225              		@ frame_needed = 1, uses_anonymous_args = 0
  1226              		@ link register save eliminated.
  1227 0000 80B4     		push	{r7}
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 36
 
 
  1228              	.LCFI44:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  779:.\Generated_Source\PSoC5/Droop_Filter.c **** *          request for the DFB.
  780:.\Generated_Source\PSoC5/Droop_Filter.c **** *   DMA Request 1:
  781:.\Generated_Source\PSoC5/Droop_Filter.c **** *    Define                                 Description
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 37
 
 
  782:.\Generated_Source\PSoC5/Droop_Filter.c **** *    Droop_Filter_DMAREQ1_DISABLED       No request will be generated;
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1296              		.cfi_endproc
  1297              	.LFE17:
  1298              		.size	Droop_Filter_SetDMAMode, .-Droop_Filter_SetDMAMode
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 38
 
 
  1299              		.section	.text.Droop_Filter_SetSemaphores,"ax",%progbits
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1330 001c D2B2     		uxtb	r2, r2
  1331 001e 42F00702 		orr	r2, r2, #7
  1332 0022 D2B2     		uxtb	r2, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 39
 
 
  1333 0024 1A70     		strb	r2, [r3, #0]
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  856:.\Generated_Source\PSoC5/Droop_Filter.c ****     /* Masked the valide bits in case the reserved bits in SEM_REG [4 and 7] get used for something
  857:.\Generated_Source\PSoC5/Droop_Filter.c ****     return (Droop_Filter_SEM_REG & Droop_Filter_SEM_MASK);
  1362              		.loc 1 857 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 40
 
 
  1363 0004 4CF29073 		movw	r3, #:lower16:1073792912
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1394              		.cfi_def_cfa_offset 16
  1395 0004 00AF     		add	r7, sp, #0
  1396              		.cfi_offset 7, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 41
 
 
  1397              	.LCFI57:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  907:.\Generated_Source\PSoC5/Droop_Filter.c **** *******************************************************************************/
  908:.\Generated_Source\PSoC5/Droop_Filter.c **** void Droop_Filter_SetOutput1Source(uint8 source) 
  909:.\Generated_Source\PSoC5/Droop_Filter.c **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 42
 
 
  1425              		.loc 1 909 0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  919:.\Generated_Source\PSoC5/Droop_Filter.c **** *  This function allows you to choose which internal signal will be mapped to
  920:.\Generated_Source\PSoC5/Droop_Filter.c **** *  the DSI output 2.
  921:.\Generated_Source\PSoC5/Droop_Filter.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 43
 
 
  922:.\Generated_Source\PSoC5/Droop_Filter.c **** * Parameters:
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1496 0024 42EA0102 		orr	r2, r2, r1
  1497 0028 D2B2     		uxtb	r2, r2
  1498 002a 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 44
 
 
  950:.\Generated_Source\PSoC5/Droop_Filter.c **** }
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1552 0065 18       		.sleb128 24
  1553 0066 00000000 		.4byte	0x0
  1554 006a 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 45
 
 
  1555              	.LLST2:
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1609 00f3 04000000 		.4byte	.LCFI13
  1610 00f7 2A000000 		.4byte	.LFE4
  1611 00fb 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 46
 
 
  1612 00fd 77       		.byte	0x77
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1666 0184 42000000 		.4byte	.LFE7
  1667 0188 0200     		.2byte	0x2
  1668 018a 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 47
 
 
  1669 018b 04       		.sleb128 4
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1723 0215 0200     		.2byte	0x2
  1724 0217 7D       		.byte	0x7d
  1725 0218 04       		.sleb128 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 48
 
 
  1726 0219 04000000 		.4byte	.LCFI28
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1780 029f 00000000 		.4byte	0x0
  1781 02a3 00000000 		.4byte	0x0
  1782              	.LLST13:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 49
 
 
  1783 02a7 00000000 		.4byte	.LFB13
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1837 0330 1E000000 		.4byte	.LFE15
  1838 0334 0200     		.2byte	0x2
  1839 0336 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 50
 
 
  1840 0337 04       		.sleb128 4
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1894 03c1 0200     		.2byte	0x2
  1895 03c3 7D       		.byte	0x7d
  1896 03c4 04       		.sleb128 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 51
 
 
  1897 03c5 04000000 		.4byte	.LCFI51
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1951 044f 0100     		.2byte	0x1
  1952 0451 5D       		.byte	0x5d
  1953 0452 02000000 		.4byte	.LCFI58
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 52
 
 
  1954 0456 04000000 		.4byte	.LCFI59
@@ -3109,8 +3109,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  1999 000b 01       		.uleb128 0x1
  2000 000c 6F000000 		.4byte	.LASF64
  2001 0010 01       		.byte	0x1
- 2002 0011 A6020000 		.4byte	.LASF65
- 2003 0015 21010000 		.4byte	.LASF66
+ 2002 0011 AE020000 		.4byte	.LASF65
+ 2003 0015 82000000 		.4byte	.LASF66
  2004 0019 00000000 		.4byte	0x0
  2005 001d 00000000 		.4byte	0x0
  2006 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -3118,34 +3118,34 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2008 0029 02       		.uleb128 0x2
  2009 002a 01       		.byte	0x1
  2010 002b 06       		.byte	0x6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 53
 
 
- 2011 002c 90000000 		.4byte	.LASF0
+ 2011 002c F8000000 		.4byte	.LASF0
  2012 0030 02       		.uleb128 0x2
  2013 0031 01       		.byte	0x1
  2014 0032 08       		.byte	0x8
- 2015 0033 2D030000 		.4byte	.LASF1
+ 2015 0033 35030000 		.4byte	.LASF1
  2016 0037 02       		.uleb128 0x2
  2017 0038 02       		.byte	0x2
  2018 0039 05       		.byte	0x5
- 2019 003a 6D030000 		.4byte	.LASF2
+ 2019 003a 75030000 		.4byte	.LASF2
  2020 003e 02       		.uleb128 0x2
  2021 003f 02       		.byte	0x2
  2022 0040 07       		.byte	0x7
- 2023 0041 FE010000 		.4byte	.LASF3
+ 2023 0041 06020000 		.4byte	.LASF3
  2024 0045 02       		.uleb128 0x2
  2025 0046 04       		.byte	0x4
  2026 0047 05       		.byte	0x5
- 2027 0048 BE000000 		.4byte	.LASF4
+ 2027 0048 26010000 		.4byte	.LASF4
  2028 004c 02       		.uleb128 0x2
  2029 004d 04       		.byte	0x4
  2030 004e 07       		.byte	0x7
- 2031 004f DC010000 		.4byte	.LASF5
+ 2031 004f E4010000 		.4byte	.LASF5
  2032 0053 02       		.uleb128 0x2
  2033 0054 08       		.byte	0x8
  2034 0055 05       		.byte	0x5
- 2035 0056 82000000 		.4byte	.LASF6
+ 2035 0056 EA000000 		.4byte	.LASF6
  2036 005a 02       		.uleb128 0x2
  2037 005b 08       		.byte	0x8
  2038 005c 07       		.byte	0x7
@@ -3157,42 +3157,42 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2044 0068 02       		.uleb128 0x2
  2045 0069 04       		.byte	0x4
  2046 006a 07       		.byte	0x7
- 2047 006b A7010000 		.4byte	.LASF8
+ 2047 006b AF010000 		.4byte	.LASF8
  2048 006f 04       		.uleb128 0x4
- 2049 0070 DA000000 		.4byte	.LASF9
+ 2049 0070 42010000 		.4byte	.LASF9
  2050 0074 02       		.byte	0x2
  2051 0075 4C       		.byte	0x4c
  2052 0076 30000000 		.4byte	0x30
  2053 007a 04       		.uleb128 0x4
- 2054 007b 81010000 		.4byte	.LASF10
+ 2054 007b 89010000 		.4byte	.LASF10
  2055 007f 02       		.byte	0x2
  2056 0080 4E       		.byte	0x4e
  2057 0081 4C000000 		.4byte	0x4c
  2058 0085 04       		.uleb128 0x4
- 2059 0086 9C000000 		.4byte	.LASF11
+ 2059 0086 04010000 		.4byte	.LASF11
  2060 008a 02       		.byte	0x2
  2061 008b 51       		.byte	0x51
  2062 008c 45000000 		.4byte	0x45
  2063 0090 02       		.uleb128 0x2
  2064 0091 04       		.byte	0x4
  2065 0092 04       		.byte	0x4
- 2066 0093 11030000 		.4byte	.LASF12
+ 2066 0093 19030000 		.4byte	.LASF12
  2067 0097 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 54
 
 
  2068 0098 08       		.byte	0x8
  2069 0099 04       		.byte	0x4
- 2070 009a FC000000 		.4byte	.LASF13
+ 2070 009a 64010000 		.4byte	.LASF13
  2071 009e 02       		.uleb128 0x2
  2072 009f 01       		.byte	0x1
  2073 00a0 08       		.byte	0x8
- 2074 00a1 04040000 		.4byte	.LASF14
+ 2074 00a1 0C040000 		.4byte	.LASF14
  2075 00a5 05       		.uleb128 0x5
  2076 00a6 04       		.byte	0x4
  2077 00a7 07       		.byte	0x7
  2078 00a8 06       		.uleb128 0x6
- 2079 00a9 8F020000 		.4byte	.LASF18
+ 2079 00a9 97020000 		.4byte	.LASF18
  2080 00ad 01       		.byte	0x1
  2081 00ae 2E       		.byte	0x2e
  2082 00af 01       		.byte	0x1
@@ -3201,7 +3201,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2085 00b8 00000000 		.4byte	.LLST0
  2086 00bc F7000000 		.4byte	0xf7
  2087 00c0 07       		.uleb128 0x7
- 2088 00c1 EE010000 		.4byte	.LASF15
+ 2088 00c1 F6010000 		.4byte	.LASF15
  2089 00c5 01       		.byte	0x1
  2090 00c6 2E       		.byte	0x2e
  2091 00c7 F7000000 		.4byte	0xf7
@@ -3209,7 +3209,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2093 00cc 91       		.byte	0x91
  2094 00cd 6C       		.sleb128 -20
  2095 00ce 07       		.uleb128 0x7
- 2096 00cf 63020000 		.4byte	.LASF16
+ 2096 00cf 6B020000 		.4byte	.LASF16
  2097 00d3 01       		.byte	0x1
  2098 00d4 2E       		.byte	0x2e
  2099 00d5 02010000 		.4byte	0x102
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2122 00f9 FD000000 		.4byte	0xfd
  2123 00fd 0A       		.uleb128 0xa
  2124 00fe 4C000000 		.4byte	0x4c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 55
 
 
  2125 0102 09       		.uleb128 0x9
@@ -3247,7 +3247,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2128 0108 0B       		.uleb128 0xb
  2129 0109 7A000000 		.4byte	0x7a
  2130 010d 06       		.uleb128 0x6
- 2131 010e 3B030000 		.4byte	.LASF19
+ 2131 010e 43030000 		.4byte	.LASF19
  2132 0112 01       		.byte	0x1
  2133 0113 4E       		.byte	0x4e
  2134 0114 01       		.byte	0x1
@@ -3256,7 +3256,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2137 011d 37000000 		.4byte	.LLST1
  2138 0121 4E010000 		.4byte	0x14e
  2139 0125 07       		.uleb128 0x7
- 2140 0126 EE010000 		.4byte	.LASF15
+ 2140 0126 F6010000 		.4byte	.LASF15
  2141 012a 01       		.byte	0x1
  2142 012b 4E       		.byte	0x4e
  2143 012c F7000000 		.4byte	0xf7
@@ -3282,7 +3282,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2163 014d 00       		.byte	0x0
  2164 014e 0C       		.uleb128 0xc
  2165 014f 01       		.byte	0x1
- 2166 0150 7E040000 		.4byte	.LASF21
+ 2166 0150 86040000 		.4byte	.LASF21
  2167 0154 01       		.byte	0x1
  2168 0155 78       		.byte	0x78
  2169 0156 01       		.byte	0x1
@@ -3291,20 +3291,20 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2172 015f 6E000000 		.4byte	.LLST2
  2173 0163 76010000 		.4byte	0x176
  2174 0167 0D       		.uleb128 0xd
- 2175 0168 47040000 		.4byte	.LASF20
+ 2175 0168 4F040000 		.4byte	.LASF20
  2176 016c 01       		.byte	0x1
  2177 016d 7A       		.byte	0x7a
  2178 016e 6F000000 		.4byte	0x6f
  2179 0172 02       		.byte	0x2
  2180 0173 91       		.byte	0x91
  2181 0174 77       		.sleb128 -9
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 56
 
 
  2182 0175 00       		.byte	0x0
  2183 0176 0C       		.uleb128 0xc
  2184 0177 01       		.byte	0x1
- 2185 0178 B4010000 		.4byte	.LASF22
+ 2185 0178 BC010000 		.4byte	.LASF22
  2186 017c 01       		.byte	0x1
  2187 017d CA       		.byte	0xca
  2188 017e 01       		.byte	0x1
@@ -3313,7 +3313,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2191 0187 A5000000 		.4byte	.LLST3
  2192 018b 9E010000 		.4byte	0x19e
  2193 018f 0D       		.uleb128 0xd
- 2194 0190 47040000 		.4byte	.LASF20
+ 2194 0190 4F040000 		.4byte	.LASF20
  2195 0194 01       		.byte	0x1
  2196 0195 CC       		.byte	0xcc
  2197 0196 6F000000 		.4byte	0x6f
@@ -3323,7 +3323,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2201 019d 00       		.byte	0x0
  2202 019e 0E       		.uleb128 0xe
  2203 019f 01       		.byte	0x1
- 2204 01a0 6A020000 		.4byte	.LASF24
+ 2204 01a0 72020000 		.4byte	.LASF24
  2205 01a4 01       		.byte	0x1
  2206 01a5 F4       		.byte	0xf4
  2207 01a6 01       		.byte	0x1
@@ -3332,7 +3332,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2210 01af DC000000 		.4byte	.LLST4
  2211 01b3 0F       		.uleb128 0xf
  2212 01b4 01       		.byte	0x1
- 2213 01b5 E3020000 		.4byte	.LASF23
+ 2213 01b5 EB020000 		.4byte	.LASF23
  2214 01b9 01       		.byte	0x1
  2215 01ba 1201     		.2byte	0x112
  2216 01bc 01       		.byte	0x1
@@ -3341,7 +3341,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2219 01c5 07010000 		.4byte	.LLST5
  2220 01c9 DD010000 		.4byte	0x1dd
  2221 01cd 10       		.uleb128 0x10
- 2222 01ce 47040000 		.4byte	.LASF20
+ 2222 01ce 4F040000 		.4byte	.LASF20
  2223 01d2 01       		.byte	0x1
  2224 01d3 1401     		.2byte	0x114
  2225 01d5 6F000000 		.4byte	0x6f
@@ -3351,19 +3351,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2229 01dc 00       		.byte	0x0
  2230 01dd 11       		.uleb128 0x11
  2231 01de 01       		.byte	0x1
- 2232 01df C7000000 		.4byte	.LASF25
+ 2232 01df 2F010000 		.4byte	.LASF25
  2233 01e3 01       		.byte	0x1
  2234 01e4 3501     		.2byte	0x135
  2235 01e6 01       		.byte	0x1
  2236 01e7 00000000 		.4byte	.LFB6
  2237 01eb 32000000 		.4byte	.LFE6
  2238 01ef 3E010000 		.4byte	.LLST6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 57
 
 
  2239 01f3 11       		.uleb128 0x11
  2240 01f4 01       		.byte	0x1
- 2241 01f5 93010000 		.4byte	.LASF26
+ 2241 01f5 9B010000 		.4byte	.LASF26
  2242 01f9 01       		.byte	0x1
  2243 01fa 4E01     		.2byte	0x14e
  2244 01fc 01       		.byte	0x1
@@ -3372,7 +3372,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2247 0205 69010000 		.4byte	.LLST7
  2248 0209 0F       		.uleb128 0xf
  2249 020a 01       		.byte	0x1
- 2250 020b CC030000 		.4byte	.LASF27
+ 2250 020b D4030000 		.4byte	.LASF27
  2251 020f 01       		.byte	0x1
  2252 0210 8D01     		.2byte	0x18d
  2253 0212 01       		.byte	0x1
@@ -3381,7 +3381,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2256 021b 94010000 		.4byte	.LLST8
  2257 021f 33020000 		.4byte	0x233
  2258 0223 12       		.uleb128 0x12
- 2259 0224 1C030000 		.4byte	.LASF28
+ 2259 0224 24030000 		.4byte	.LASF28
  2260 0228 01       		.byte	0x1
  2261 0229 8D01     		.2byte	0x18d
  2262 022b 6F000000 		.4byte	0x6f
@@ -3391,7 +3391,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2266 0232 00       		.byte	0x0
  2267 0233 0F       		.uleb128 0xf
  2268 0234 01       		.byte	0x1
- 2269 0235 22020000 		.4byte	.LASF29
+ 2269 0235 2A020000 		.4byte	.LASF29
  2270 0239 01       		.byte	0x1
  2271 023a B701     		.2byte	0x1b7
  2272 023c 01       		.byte	0x1
@@ -3400,7 +3400,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2275 0245 CB010000 		.4byte	.LLST9
  2276 0249 5D020000 		.4byte	0x25d
  2277 024d 12       		.uleb128 0x12
- 2278 024e 39020000 		.4byte	.LASF30
+ 2278 024e 41020000 		.4byte	.LASF30
  2279 0252 01       		.byte	0x1
  2280 0253 B701     		.2byte	0x1b7
  2281 0255 6F000000 		.4byte	0x6f
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2293 026b 00000000 		.4byte	.LFB10
  2294 026f DC000000 		.4byte	.LFE10
  2295 0273 02020000 		.4byte	.LLST10
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 58
 
 
  2296 0277 C5020000 		.4byte	0x2c5
@@ -3431,7 +3431,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2303 0288 91       		.byte	0x91
  2304 0289 6C       		.sleb128 -20
  2305 028a 12       		.uleb128 0x12
- 2306 028b 17030000 		.4byte	.LASF31
+ 2306 028b 1F030000 		.4byte	.LASF31
  2307 028f 01       		.byte	0x1
  2308 0290 D501     		.2byte	0x1d5
  2309 0292 D0020000 		.4byte	0x2d0
@@ -3439,7 +3439,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2311 0297 91       		.byte	0x91
  2312 0298 68       		.sleb128 -24
  2313 0299 12       		.uleb128 0x12
- 2314 029a F9010000 		.4byte	.LASF32
+ 2314 029a 01020000 		.4byte	.LASF32
  2315 029e 01       		.byte	0x1
  2316 029f D501     		.2byte	0x1d5
  2317 02a1 6F000000 		.4byte	0x6f
@@ -3447,7 +3447,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2319 02a6 91       		.byte	0x91
  2320 02a7 67       		.sleb128 -25
  2321 02a8 10       		.uleb128 0x10
- 2322 02a9 90040000 		.4byte	.LASF33
+ 2322 02a9 98040000 		.4byte	.LASF33
  2323 02ad 01       		.byte	0x1
  2324 02ae D801     		.2byte	0x1d8
  2325 02b0 6F000000 		.4byte	0x6f
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2350 02dd 0D02     		.2byte	0x20d
  2351 02df 01       		.byte	0x1
  2352 02e0 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 59
 
 
  2353 02e4 00000000 		.4byte	.LFB11
@@ -3494,7 +3494,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2363 0301 91       		.byte	0x91
  2364 0302 6C       		.sleb128 -20
  2365 0303 12       		.uleb128 0x12
- 2366 0304 17030000 		.4byte	.LASF31
+ 2366 0304 1F030000 		.4byte	.LASF31
  2367 0308 01       		.byte	0x1
  2368 0309 0D02     		.2byte	0x20d
  2369 030b D0020000 		.4byte	0x2d0
@@ -3502,7 +3502,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2371 0310 91       		.byte	0x91
  2372 0311 68       		.sleb128 -24
  2373 0312 12       		.uleb128 0x12
- 2374 0313 F9010000 		.4byte	.LASF32
+ 2374 0313 01020000 		.4byte	.LASF32
  2375 0317 01       		.byte	0x1
  2376 0318 0D02     		.2byte	0x20d
  2377 031a 6F000000 		.4byte	0x6f
@@ -3510,7 +3510,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2379 031f 91       		.byte	0x91
  2380 0320 67       		.sleb128 -25
  2381 0321 10       		.uleb128 0x10
- 2382 0322 90040000 		.4byte	.LASF33
+ 2382 0322 98040000 		.4byte	.LASF33
  2383 0326 01       		.byte	0x1
  2384 0327 1002     		.2byte	0x210
  2385 0329 6F000000 		.4byte	0x6f
@@ -3528,7 +3528,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2397 033d 00       		.byte	0x0
  2398 033e 0F       		.uleb128 0xf
  2399 033f 01       		.byte	0x1
- 2400 0340 A2000000 		.4byte	.LASF36
+ 2400 0340 0A010000 		.4byte	.LASF36
  2401 0344 01       		.byte	0x1
  2402 0345 4202     		.2byte	0x242
  2403 0347 01       		.byte	0x1
@@ -3537,8 +3537,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2406 0350 70020000 		.4byte	.LLST12
  2407 0354 86030000 		.4byte	0x386
  2408 0358 12       		.uleb128 0x12
- 2409 0359 A5030000 		.4byte	.LASF37
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 60
+ 2409 0359 AD030000 		.4byte	.LASF37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 60
 
 
  2410 035d 01       		.byte	0x1
@@ -3556,7 +3556,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2422 0374 91       		.byte	0x91
  2423 0375 68       		.sleb128 -24
  2424 0376 10       		.uleb128 0x10
- 2425 0377 8D010000 		.4byte	.LASF39
+ 2425 0377 95010000 		.4byte	.LASF39
  2426 037b 01       		.byte	0x1
  2427 037c 4402     		.2byte	0x244
  2428 037e 7A000000 		.4byte	0x7a
@@ -3566,7 +3566,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2432 0385 00       		.byte	0x0
  2433 0386 13       		.uleb128 0x13
  2434 0387 01       		.byte	0x1
- 2435 0388 E0000000 		.4byte	.LASF40
+ 2435 0388 48010000 		.4byte	.LASF40
  2436 038c 01       		.byte	0x1
  2437 038d 7302     		.2byte	0x273
  2438 038f 01       		.byte	0x1
@@ -3576,7 +3576,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2442 039c A7020000 		.4byte	.LLST13
  2443 03a0 FF030000 		.4byte	0x3ff
  2444 03a4 12       		.uleb128 0x12
- 2445 03a5 A5030000 		.4byte	.LASF37
+ 2445 03a5 AD030000 		.4byte	.LASF37
  2446 03a9 01       		.byte	0x1
  2447 03aa 7302     		.2byte	0x273
  2448 03ac 6F000000 		.4byte	0x6f
@@ -3584,7 +3584,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2450 03b1 91       		.byte	0x91
  2451 03b2 6F       		.sleb128 -17
  2452 03b3 10       		.uleb128 0x10
- 2453 03b4 09040000 		.4byte	.LASF41
+ 2453 03b4 11040000 		.4byte	.LASF41
  2454 03b8 01       		.byte	0x1
  2455 03b9 7502     		.2byte	0x275
  2456 03bb 6F000000 		.4byte	0x6f
@@ -3592,18 +3592,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2458 03c0 91       		.byte	0x91
  2459 03c1 70       		.sleb128 -16
  2460 03c2 10       		.uleb128 0x10
- 2461 03c3 7D020000 		.4byte	.LASF42
+ 2461 03c3 85020000 		.4byte	.LASF42
  2462 03c7 01       		.byte	0x1
  2463 03c8 7602     		.2byte	0x276
  2464 03ca 6F000000 		.4byte	0x6f
  2465 03ce 02       		.byte	0x2
  2466 03cf 91       		.byte	0x91
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 61
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 61
 
 
  2467 03d0 71       		.sleb128 -15
  2468 03d1 10       		.uleb128 0x10
- 2469 03d2 83020000 		.4byte	.LASF43
+ 2469 03d2 8B020000 		.4byte	.LASF43
  2470 03d6 01       		.byte	0x1
  2471 03d7 7702     		.2byte	0x277
  2472 03d9 6F000000 		.4byte	0x6f
@@ -3611,7 +3611,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2474 03de 91       		.byte	0x91
  2475 03df 72       		.sleb128 -14
  2476 03e0 10       		.uleb128 0x10
- 2477 03e1 89020000 		.4byte	.LASF44
+ 2477 03e1 91020000 		.4byte	.LASF44
  2478 03e5 01       		.byte	0x1
  2479 03e6 7802     		.2byte	0x278
  2480 03e8 6F000000 		.4byte	0x6f
@@ -3619,7 +3619,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2482 03ed 91       		.byte	0x91
  2483 03ee 73       		.sleb128 -13
  2484 03ef 10       		.uleb128 0x10
- 2485 03f0 47020000 		.4byte	.LASF45
+ 2485 03f0 4F020000 		.4byte	.LASF45
  2486 03f4 01       		.byte	0x1
  2487 03f5 7902     		.2byte	0x279
  2488 03f7 7A000000 		.4byte	0x7a
@@ -3638,7 +3638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2501 0411 DE020000 		.4byte	.LLST14
  2502 0415 29040000 		.4byte	0x429
  2503 0419 12       		.uleb128 0x12
- 2504 041a C5030000 		.4byte	.LASF47
+ 2504 041a CD030000 		.4byte	.LASF47
  2505 041e 01       		.byte	0x1
  2506 041f B802     		.2byte	0x2b8
  2507 0421 6F000000 		.4byte	0x6f
@@ -3648,7 +3648,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2511 0428 00       		.byte	0x0
  2512 0429 16       		.uleb128 0x16
  2513 042a 01       		.byte	0x1
- 2514 042b 85030000 		.4byte	.LASF53
+ 2514 042b 8D030000 		.4byte	.LASF53
  2515 042f 01       		.byte	0x1
  2516 0430 D902     		.2byte	0x2d9
  2517 0432 01       		.byte	0x1
@@ -3658,10 +3658,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2521 043f 15030000 		.4byte	.LLST15
  2522 0443 0F       		.uleb128 0xf
  2523 0444 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 62
 
 
- 2524 0445 F5020000 		.4byte	.LASF48
+ 2524 0445 FD020000 		.4byte	.LASF48
  2525 0449 01       		.byte	0x1
  2526 044a FB02     		.2byte	0x2fb
  2527 044c 01       		.byte	0x1
@@ -3670,7 +3670,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2530 0455 40030000 		.4byte	.LLST16
  2531 0459 6D040000 		.4byte	0x46d
  2532 045d 12       		.uleb128 0x12
- 2533 045e 77030000 		.4byte	.LASF49
+ 2533 045e 7F030000 		.4byte	.LASF49
  2534 0462 01       		.byte	0x1
  2535 0463 FB02     		.2byte	0x2fb
  2536 0465 6F000000 		.4byte	0x6f
@@ -3680,7 +3680,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2540 046c 00       		.byte	0x0
  2541 046d 0F       		.uleb128 0xf
  2542 046e 01       		.byte	0x1
- 2543 046f AD030000 		.4byte	.LASF50
+ 2543 046f B5030000 		.4byte	.LASF50
  2544 0473 01       		.byte	0x1
  2545 0474 2403     		.2byte	0x324
  2546 0476 01       		.byte	0x1
@@ -3689,7 +3689,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2549 047f 77030000 		.4byte	.LLST17
  2550 0483 97040000 		.4byte	0x497
  2551 0487 12       		.uleb128 0x12
- 2552 0488 C5030000 		.4byte	.LASF47
+ 2552 0488 CD030000 		.4byte	.LASF47
  2553 048c 01       		.byte	0x1
  2554 048d 2403     		.2byte	0x324
  2555 048f 6F000000 		.4byte	0x6f
@@ -3699,7 +3699,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2559 0496 00       		.byte	0x0
  2560 0497 0F       		.uleb128 0xf
  2561 0498 01       		.byte	0x1
- 2562 0499 2C040000 		.4byte	.LASF51
+ 2562 0499 34040000 		.4byte	.LASF51
  2563 049d 01       		.byte	0x1
  2564 049e 3C03     		.2byte	0x33c
  2565 04a0 01       		.byte	0x1
@@ -3708,7 +3708,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2568 04a9 AE030000 		.4byte	.LLST18
  2569 04ad C1040000 		.4byte	0x4c1
  2570 04b1 12       		.uleb128 0x12
- 2571 04b2 88010000 		.4byte	.LASF52
+ 2571 04b2 90010000 		.4byte	.LASF52
  2572 04b6 01       		.byte	0x1
  2573 04b7 3C03     		.2byte	0x33c
  2574 04b9 6F000000 		.4byte	0x6f
@@ -3718,10 +3718,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2578 04c0 00       		.byte	0x0
  2579 04c1 16       		.uleb128 0x16
  2580 04c2 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 63
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 63
 
 
- 2581 04c3 52030000 		.4byte	.LASF54
+ 2581 04c3 5A030000 		.4byte	.LASF54
  2582 04c7 01       		.byte	0x1
  2583 04c8 5603     		.2byte	0x356
  2584 04ca 01       		.byte	0x1
@@ -3731,7 +3731,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2588 04d7 E5030000 		.4byte	.LLST19
  2589 04db 0F       		.uleb128 0xf
  2590 04dc 01       		.byte	0x1
- 2591 04dd 0F040000 		.4byte	.LASF55
+ 2591 04dd 17040000 		.4byte	.LASF55
  2592 04e1 01       		.byte	0x1
  2593 04e2 6F03     		.2byte	0x36f
  2594 04e4 01       		.byte	0x1
@@ -3740,7 +3740,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2597 04ed 10040000 		.4byte	.LLST20
  2598 04f1 05050000 		.4byte	0x505
  2599 04f5 12       		.uleb128 0x12
- 2600 04f6 88010000 		.4byte	.LASF52
+ 2600 04f6 90010000 		.4byte	.LASF52
  2601 04fa 01       		.byte	0x1
  2602 04fb 6F03     		.2byte	0x36f
  2603 04fd 6F000000 		.4byte	0x6f
@@ -3750,7 +3750,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2607 0504 00       		.byte	0x0
  2608 0505 0F       		.uleb128 0xf
  2609 0506 01       		.byte	0x1
- 2610 0507 03010000 		.4byte	.LASF56
+ 2610 0507 6B010000 		.4byte	.LASF56
  2611 050b 01       		.byte	0x1
  2612 050c 8C03     		.2byte	0x38c
  2613 050e 01       		.byte	0x1
@@ -3759,7 +3759,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2616 0517 47040000 		.4byte	.LLST21
  2617 051b 2F050000 		.4byte	0x52f
  2618 051f 12       		.uleb128 0x12
- 2619 0520 63020000 		.4byte	.LASF16
+ 2619 0520 6B020000 		.4byte	.LASF16
  2620 0524 01       		.byte	0x1
  2621 0525 8C03     		.2byte	0x38c
  2622 0527 6F000000 		.4byte	0x6f
@@ -3769,7 +3769,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2626 052e 00       		.byte	0x0
  2627 052f 0F       		.uleb128 0xf
  2628 0530 01       		.byte	0x1
- 2629 0531 E6030000 		.4byte	.LASF57
+ 2629 0531 EE030000 		.4byte	.LASF57
  2630 0535 01       		.byte	0x1
  2631 0536 B303     		.2byte	0x3b3
  2632 0538 01       		.byte	0x1
@@ -3778,10 +3778,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2635 0541 7E040000 		.4byte	.LLST22
  2636 0545 59050000 		.4byte	0x559
  2637 0549 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 64
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 64
 
 
- 2638 054a 63020000 		.4byte	.LASF16
+ 2638 054a 6B020000 		.4byte	.LASF16
  2639 054e 01       		.byte	0x1
  2640 054f B303     		.2byte	0x3b3
  2641 0551 6F000000 		.4byte	0x6f
@@ -3790,7 +3790,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2644 0557 77       		.sleb128 -9
  2645 0558 00       		.byte	0x0
  2646 0559 17       		.uleb128 0x17
- 2647 055a CE020000 		.4byte	.LASF58
+ 2647 055a D6020000 		.4byte	.LASF58
  2648 055e 01       		.byte	0x1
  2649 055f 17       		.byte	0x17
  2650 0560 6F000000 		.4byte	0x6f
@@ -3806,7 +3806,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2660 0579 3F       		.byte	0x3f
  2661 057a 00       		.byte	0x0
  2662 057b 1A       		.uleb128 0x1a
- 2663 057c 4E020000 		.4byte	.LASF59
+ 2663 057c 56020000 		.4byte	.LASF59
  2664 0580 03       		.byte	0x3
  2665 0581 3E       		.byte	0x3e
  2666 0582 88050000 		.4byte	0x588
@@ -3822,7 +3822,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2676 059b 7F       		.byte	0x7f
  2677 059c 00       		.byte	0x0
  2678 059d 1A       		.uleb128 0x1a
- 2679 059e 6A040000 		.4byte	.LASF60
+ 2679 059e 72040000 		.4byte	.LASF60
  2680 05a2 03       		.byte	0x3
  2681 05a3 41       		.byte	0x41
  2682 05a4 AA050000 		.4byte	0x5aa
@@ -3831,14 +3831,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2685 05aa 0B       		.uleb128 0xb
  2686 05ab 8D050000 		.4byte	0x58d
  2687 05af 1A       		.uleb128 0x1a
- 2688 05b0 C8010000 		.4byte	.LASF61
+ 2688 05b0 D0010000 		.4byte	.LASF61
  2689 05b4 03       		.byte	0x3
  2690 05b5 42       		.byte	0x42
  2691 05b6 BC050000 		.4byte	0x5bc
  2692 05ba 01       		.byte	0x1
  2693 05bb 01       		.byte	0x1
  2694 05bc 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 65
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 65
 
 
  2695 05bd 8D050000 		.4byte	0x58d
@@ -3850,7 +3850,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2701 05cf 15       		.byte	0x15
  2702 05d0 00       		.byte	0x0
  2703 05d1 1A       		.uleb128 0x1a
- 2704 05d2 58040000 		.4byte	.LASF62
+ 2704 05d2 60040000 		.4byte	.LASF62
  2705 05d6 03       		.byte	0x3
  2706 05d7 43       		.byte	0x43
  2707 05d8 DE050000 		.4byte	0x5de
@@ -3866,7 +3866,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2717 05f1 0D       		.byte	0xd
  2718 05f2 00       		.byte	0x0
  2719 05f3 1A       		.uleb128 0x1a
- 2720 05f4 11020000 		.4byte	.LASF63
+ 2720 05f4 19020000 		.4byte	.LASF63
  2721 05f8 03       		.byte	0x3
  2722 05f9 44       		.byte	0x44
  2723 05fa 00060000 		.4byte	0x600
@@ -3898,7 +3898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2749 0013 00       		.byte	0x0
  2750 0014 00       		.byte	0x0
  2751 0015 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 66
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 66
 
 
  2752 0016 24       		.uleb128 0x24
@@ -3958,7 +3958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2806 004c 11       		.uleb128 0x11
  2807 004d 01       		.uleb128 0x1
  2808 004e 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 67
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 67
 
 
  2809 004f 01       		.uleb128 0x1
@@ -4018,7 +4018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2863 0085 26       		.uleb128 0x26
  2864 0086 00       		.byte	0x0
  2865 0087 49       		.uleb128 0x49
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 68
 
 
  2866 0088 13       		.uleb128 0x13
@@ -4078,7 +4078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2920 00be 11       		.uleb128 0x11
  2921 00bf 01       		.uleb128 0x1
  2922 00c0 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 69
 
 
  2923 00c1 01       		.uleb128 0x1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  2977 00f7 27       		.uleb128 0x27
  2978 00f8 0C       		.uleb128 0xc
  2979 00f9 11       		.uleb128 0x11
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 70
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 70
 
 
  2980 00fa 01       		.uleb128 0x1
@@ -4198,7 +4198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3034 0130 3B       		.uleb128 0x3b
  3035 0131 05       		.uleb128 0x5
  3036 0132 49       		.uleb128 0x49
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 71
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 71
 
 
  3037 0133 13       		.uleb128 0x13
@@ -4258,7 +4258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3091 0169 3F       		.uleb128 0x3f
  3092 016a 0C       		.uleb128 0xc
  3093 016b 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 72
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 72
 
 
  3094 016c 0A       		.uleb128 0xa
@@ -4318,7 +4318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3141      5F456E61 
  3141      626C6500 
  3142 003c 9E010000 		.4byte	0x19e
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 73
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 73
 
 
  3143 0040 44726F6F 		.ascii	"Droop_Filter_Start\000"
@@ -4378,7 +4378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3161 0131 44726F6F 		.ascii	"Droop_Filter_GetOutputValue\000"
  3161      705F4669 
  3161      6C746572 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 74
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 74
 
 
  3161      5F476574 
@@ -4438,7 +4438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3179      5F536574 
  3179      4F757470 
  3180 0272 59050000 		.4byte	0x559
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 75
 
 
  3181 0276 44726F6F 		.ascii	"Droop_Filter_initVar\000"
@@ -4498,7 +4498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3231 00b0 00000000 		.4byte	.LFB20
  3232 00b4 2A000000 		.4byte	.LFE20-.LFB20
  3233 00b8 00000000 		.4byte	.LFB21
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 76
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 76
 
 
  3234 00bc 36000000 		.4byte	.LFE21-.LFB21
@@ -4558,7 +4558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3288 00bc 36000000 		.4byte	.LFE22
  3289 00c0 00000000 		.4byte	0x0
  3290 00c4 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 77
 
 
  3291              		.section	.debug_str,"MS",%progbits,1
@@ -4596,315 +4596,317 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 1
  3304              	.LASF38:
  3305 007b 73616D70 		.ascii	"sample\000"
  3305      6C6500
- 3306              	.LASF6:
- 3307 0082 6C6F6E67 		.ascii	"long long int\000"
- 3307      206C6F6E 
- 3307      6720696E 
- 3307      7400
- 3308              	.LASF0:
- 3309 0090 7369676E 		.ascii	"signed char\000"
- 3309      65642063 
- 3309      68617200 
- 3310              	.LASF11:
- 3311 009c 696E7433 		.ascii	"int32\000"
- 3311      3200
- 3312              	.LASF36:
- 3313 00a2 44726F6F 		.ascii	"Droop_Filter_LoadInputValue\000"
- 3313      705F4669 
- 3313      6C746572 
- 3313      5F4C6F61 
- 3313      64496E70 
- 3314              	.LASF4:
- 3315 00be 6C6F6E67 		.ascii	"long int\000"
- 3315      20696E74 
- 3315      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 78
+ 3306              	.LASF66:
+ 3307 0082 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 3307      665C486F 
+ 3307      6D655C44 
+ 3307      65736B74 
+ 3307      6F705C55 
+ 3308 00af 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 3308      6E656572 
+ 3308      4B69745F 
+ 3308      50354C50 
+ 3308      5F555342 
+ 3309 00e0 64696F2E 		.ascii	"dio.cydsn\000"
+ 3309      63796473 
+ 3309      6E00
+ 3310              	.LASF6:
+ 3311 00ea 6C6F6E67 		.ascii	"long long int\000"
+ 3311      206C6F6E 
+ 3311      6720696E 
+ 3311      7400
+ 3312              	.LASF0:
+ 3313 00f8 7369676E 		.ascii	"signed char\000"
+ 3313      65642063 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 78
 
 
- 3316              	.LASF25:
- 3317 00c7 44726F6F 		.ascii	"Droop_Filter_Pause\000"
+ 3313      68617200 
+ 3314              	.LASF11:
+ 3315 0104 696E7433 		.ascii	"int32\000"
+ 3315      3200
+ 3316              	.LASF36:
+ 3317 010a 44726F6F 		.ascii	"Droop_Filter_LoadInputValue\000"
  3317      705F4669 
  3317      6C746572 
- 3317      5F506175 
- 3317      736500
- 3318              	.LASF9:
- 3319 00da 75696E74 		.ascii	"uint8\000"
- 3319      3800
- 3320              	.LASF40:
- 3321 00e0 44726F6F 		.ascii	"Droop_Filter_GetOutputValue\000"
+ 3317      5F4C6F61 
+ 3317      64496E70 
+ 3318              	.LASF4:
+ 3319 0126 6C6F6E67 		.ascii	"long int\000"
+ 3319      20696E74 
+ 3319      00
+ 3320              	.LASF25:
+ 3321 012f 44726F6F 		.ascii	"Droop_Filter_Pause\000"
  3321      705F4669 
  3321      6C746572 
- 3321      5F476574 
- 3321      4F757470 
- 3322              	.LASF13:
- 3323 00fc 646F7562 		.ascii	"double\000"
- 3323      6C6500
- 3324              	.LASF56:
- 3325 0103 44726F6F 		.ascii	"Droop_Filter_SetOutput1Source\000"
+ 3321      5F506175 
+ 3321      736500
+ 3322              	.LASF9:
+ 3323 0142 75696E74 		.ascii	"uint8\000"
+ 3323      3800
+ 3324              	.LASF40:
+ 3325 0148 44726F6F 		.ascii	"Droop_Filter_GetOutputValue\000"
  3325      705F4669 
  3325      6C746572 
- 3325      5F536574 
+ 3325      5F476574 
  3325      4F757470 
- 3326              	.LASF66:
- 3327 0121 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 3327      665C486F 
- 3327      6D655C44 
- 3327      65736B74 
- 3327      6F705C55 
- 3328 014d 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 3328      5F50354C 
- 3328      505F5553 
- 3328      425F4175 
- 3328      64696F5C 
- 3329 017f 6E00     		.ascii	"n\000"
+ 3326              	.LASF13:
+ 3327 0164 646F7562 		.ascii	"double\000"
+ 3327      6C6500
+ 3328              	.LASF56:
+ 3329 016b 44726F6F 		.ascii	"Droop_Filter_SetOutput1Source\000"
+ 3329      705F4669 
+ 3329      6C746572 
+ 3329      5F536574 
+ 3329      4F757470 
  3330              	.LASF10:
- 3331 0181 75696E74 		.ascii	"uint32\000"
+ 3331 0189 75696E74 		.ascii	"uint32\000"
  3331      333200
  3332              	.LASF52:
- 3333 0188 6D61736B 		.ascii	"mask\000"
+ 3333 0190 6D61736B 		.ascii	"mask\000"
  3333      00
  3334              	.LASF39:
- 3335 018d 76616C75 		.ascii	"value\000"
+ 3335 0195 76616C75 		.ascii	"value\000"
  3335      6500
  3336              	.LASF26:
- 3337 0193 44726F6F 		.ascii	"Droop_Filter_Resume\000"
+ 3337 019b 44726F6F 		.ascii	"Droop_Filter_Resume\000"
  3337      705F4669 
  3337      6C746572 
  3337      5F526573 
  3337      756D6500 
  3338              	.LASF8:
- 3339 01a7 756E7369 		.ascii	"unsigned int\000"
+ 3339 01af 756E7369 		.ascii	"unsigned int\000"
  3339      676E6564 
  3339      20696E74 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 79
+
+
  3339      00
  3340              	.LASF22:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 79
-
-
- 3341 01b4 44726F6F 		.ascii	"Droop_Filter_Enable\000"
+ 3341 01bc 44726F6F 		.ascii	"Droop_Filter_Enable\000"
  3341      705F4669 
  3341      6C746572 
  3341      5F456E61 
  3341      626C6500 
  3342              	.LASF61:
- 3343 01c8 44726F6F 		.ascii	"Droop_Filter_data_b\000"
+ 3343 01d0 44726F6F 		.ascii	"Droop_Filter_data_b\000"
  3343      705F4669 
  3343      6C746572 
  3343      5F646174 
  3343      615F6200 
  3344              	.LASF5:
- 3345 01dc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3345 01e4 6C6F6E67 		.ascii	"long unsigned int\000"
  3345      20756E73 
  3345      69676E65 
  3345      6420696E 
  3345      7400
  3346              	.LASF15:
- 3347 01ee 72656741 		.ascii	"regAddress\000"
+ 3347 01f6 72656741 		.ascii	"regAddress\000"
  3347      64647265 
  3347      737300
  3348              	.LASF32:
- 3349 01f9 73697A65 		.ascii	"size\000"
+ 3349 0201 73697A65 		.ascii	"size\000"
  3349      00
  3350              	.LASF3:
- 3351 01fe 73686F72 		.ascii	"short unsigned int\000"
+ 3351 0206 73686F72 		.ascii	"short unsigned int\000"
  3351      7420756E 
  3351      7369676E 
  3351      65642069 
  3351      6E7400
  3352              	.LASF63:
- 3353 0211 44726F6F 		.ascii	"Droop_Filter_acu\000"
+ 3353 0219 44726F6F 		.ascii	"Droop_Filter_acu\000"
  3353      705F4669 
  3353      6C746572 
  3353      5F616375 
  3353      00
  3354              	.LASF29:
- 3355 0222 44726F6F 		.ascii	"Droop_Filter_SetDalign\000"
+ 3355 022a 44726F6F 		.ascii	"Droop_Filter_SetDalign\000"
  3355      705F4669 
  3355      6C746572 
  3355      5F536574 
  3355      44616C69 
  3356              	.LASF30:
- 3357 0239 64616C69 		.ascii	"dalignKeyByte\000"
+ 3357 0241 64616C69 		.ascii	"dalignKeyByte\000"
  3357      676E4B65 
  3357      79427974 
  3357      6500
  3358              	.LASF45:
- 3359 0247 6F757470 		.ascii	"output\000"
+ 3359 024f 6F757470 		.ascii	"output\000"
  3359      757400
  3360              	.LASF59:
- 3361 024e 44726F6F 		.ascii	"Droop_Filter_control\000"
+ 3361 0256 44726F6F 		.ascii	"Droop_Filter_control\000"
  3361      705F4669 
  3361      6C746572 
  3361      5F636F6E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 80
+
+
  3361      74726F6C 
  3362              	.LASF16:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 80
-
-
- 3363 0263 736F7572 		.ascii	"source\000"
+ 3363 026b 736F7572 		.ascii	"source\000"
  3363      636500
  3364              	.LASF24:
- 3365 026a 44726F6F 		.ascii	"Droop_Filter_Start\000"
+ 3365 0272 44726F6F 		.ascii	"Droop_Filter_Start\000"
  3365      705F4669 
  3365      6C746572 
  3365      5F537461 
  3365      727400
  3366              	.LASF42:
- 3367 027d 64617461 		.ascii	"data1\000"
+ 3367 0285 64617461 		.ascii	"data1\000"
  3367      3100
  3368              	.LASF43:
- 3369 0283 64617461 		.ascii	"data2\000"
+ 3369 028b 64617461 		.ascii	"data2\000"
  3369      3200
  3370              	.LASF44:
- 3371 0289 64617461 		.ascii	"data3\000"
+ 3371 0291 64617461 		.ascii	"data3\000"
  3371      3300
  3372              	.LASF18:
- 3373 028f 44726F6F 		.ascii	"Droop_Filter_LoadReg32\000"
+ 3373 0297 44726F6F 		.ascii	"Droop_Filter_LoadReg32\000"
  3373      705F4669 
  3373      6C746572 
  3373      5F4C6F61 
  3373      64526567 
  3374              	.LASF65:
- 3375 02a6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Droop_Filter.c\000"
+ 3375 02ae 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Droop_Filter.c\000"
  3375      6E657261 
  3375      7465645F 
  3375      536F7572 
  3375      63655C50 
  3376              	.LASF58:
- 3377 02ce 44726F6F 		.ascii	"Droop_Filter_initVar\000"
+ 3377 02d6 44726F6F 		.ascii	"Droop_Filter_initVar\000"
  3377      705F4669 
  3377      6C746572 
  3377      5F696E69 
  3377      74566172 
  3378              	.LASF23:
- 3379 02e3 44726F6F 		.ascii	"Droop_Filter_Stop\000"
+ 3379 02eb 44726F6F 		.ascii	"Droop_Filter_Stop\000"
  3379      705F4669 
  3379      6C746572 
  3379      5F53746F 
  3379      7000
  3380              	.LASF48:
- 3381 02f5 44726F6F 		.ascii	"Droop_Filter_ClearInterrupt\000"
+ 3381 02fd 44726F6F 		.ascii	"Droop_Filter_ClearInterrupt\000"
  3381      705F4669 
  3381      6C746572 
  3381      5F436C65 
  3381      6172496E 
  3382              	.LASF12:
- 3383 0311 666C6F61 		.ascii	"float\000"
+ 3383 0319 666C6F61 		.ascii	"float\000"
  3383      7400
  3384              	.LASF31:
- 3385 0317 61646472 		.ascii	"addr\000"
+ 3385 031f 61646472 		.ascii	"addr\000"
  3385      00
  3386              	.LASF28:
- 3387 031c 636F6865 		.ascii	"coherencyKeyByte\000"
+ 3387 0324 636F6865 		.ascii	"coherencyKeyByte\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 81
+
+
  3387      72656E63 
  3387      794B6579 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 81
-
-
  3387      42797465 
  3387      00
  3388              	.LASF1:
- 3389 032d 756E7369 		.ascii	"unsigned char\000"
+ 3389 0335 756E7369 		.ascii	"unsigned char\000"
  3389      676E6564 
  3389      20636861 
  3389      7200
  3390              	.LASF19:
- 3391 033b 44726F6F 		.ascii	"Droop_Filter_ZeroReg32\000"
+ 3391 0343 44726F6F 		.ascii	"Droop_Filter_ZeroReg32\000"
  3391      705F4669 
  3391      6C746572 
  3391      5F5A6572 
  3391      6F526567 
  3392              	.LASF54:
- 3393 0352 44726F6F 		.ascii	"Droop_Filter_GetSemaphores\000"
+ 3393 035a 44726F6F 		.ascii	"Droop_Filter_GetSemaphores\000"
  3393      705F4669 
  3393      6C746572 
  3393      5F476574 
  3393      53656D61 
  3394              	.LASF2:
- 3395 036d 73686F72 		.ascii	"short int\000"
+ 3395 0375 73686F72 		.ascii	"short int\000"
  3395      7420696E 
  3395      7400
  3396              	.LASF49:
- 3397 0377 696E7465 		.ascii	"interruptMask\000"
+ 3397 037f 696E7465 		.ascii	"interruptMask\000"
  3397      72727570 
  3397      744D6173 
  3397      6B00
  3398              	.LASF53:
- 3399 0385 44726F6F 		.ascii	"Droop_Filter_GetInterruptSource\000"
+ 3399 038d 44726F6F 		.ascii	"Droop_Filter_GetInterruptSource\000"
  3399      705F4669 
  3399      6C746572 
  3399      5F476574 
  3399      496E7465 
  3400              	.LASF37:
- 3401 03a5 6368616E 		.ascii	"channel\000"
+ 3401 03ad 6368616E 		.ascii	"channel\000"
  3401      6E656C00 
  3402              	.LASF50:
- 3403 03ad 44726F6F 		.ascii	"Droop_Filter_SetDMAMode\000"
+ 3403 03b5 44726F6F 		.ascii	"Droop_Filter_SetDMAMode\000"
  3403      705F4669 
  3403      6C746572 
  3403      5F536574 
  3403      444D414D 
  3404              	.LASF47:
- 3405 03c5 6576656E 		.ascii	"events\000"
+ 3405 03cd 6576656E 		.ascii	"events\000"
  3405      747300
  3406              	.LASF27:
- 3407 03cc 44726F6F 		.ascii	"Droop_Filter_SetCoherency\000"
+ 3407 03d4 44726F6F 		.ascii	"Droop_Filter_SetCoherency\000"
  3407      705F4669 
  3407      6C746572 
  3407      5F536574 
  3407      436F6865 
  3408              	.LASF57:
- 3409 03e6 44726F6F 		.ascii	"Droop_Filter_SetOutput2Source\000"
+ 3409 03ee 44726F6F 		.ascii	"Droop_Filter_SetOutput2Source\000"
  3409      705F4669 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccqno2NF.s 			page 82
+
+
  3409      6C746572 
  3409      5F536574 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPDUs9N.s 			page 82
-
-
  3409      4F757470 
  3410              	.LASF14:
- 3411 0404 63686172 		.ascii	"char\000"
+ 3411 040c 63686172 		.ascii	"char\000"
  3411      00
  3412              	.LASF41:
- 3413 0409 64617461 		.ascii	"data0\000"
+ 3413 0411 64617461 		.ascii	"data0\000"
  3413      3000
  3414              	.LASF55:
- 3415 040f 44726F6F 		.ascii	"Droop_Filter_ClearSemaphores\000"
+ 3415 0417 44726F6F 		.ascii	"Droop_Filter_ClearSemaphores\000"
  3415      705F4669 
  3415      6C746572 
  3415      5F436C65 
  3415      61725365 
  3416              	.LASF51:
- 3417 042c 44726F6F 		.ascii	"Droop_Filter_SetSemaphores\000"
+ 3417 0434 44726F6F 		.ascii	"Droop_Filter_SetSemaphores\000"
  3417      705F4669 
  3417      6C746572 
  3417      5F536574 
  3417      53656D61 
  3418              	.LASF20:
- 3419 0447 656E6162 		.ascii	"enableInterrupts\000"
+ 3419 044f 656E6162 		.ascii	"enableInterrupts\000"
  3419      6C65496E 
  3419      74657272 
  3419      75707473 
  3419      00
  3420              	.LASF62:
- 3421 0458 44726F6F 		.ascii	"Droop_Filter_cfsm\000"
+ 3421 0460 44726F6F 		.ascii	"Droop_Filter_cfsm\000"
  3421      705F4669 
  3421      6C746572 
  3421      5F636673 
  3421      6D00
  3422              	.LASF60:
- 3423 046a 44726F6F 		.ascii	"Droop_Filter_data_a\000"
+ 3423 0472 44726F6F 		.ascii	"Droop_Filter_data_a\000"
  3423      705F4669 
  3423      6C746572 
  3423      5F646174 
  3423      615F6100 
  3424              	.LASF21:
- 3425 047e 44726F6F 		.ascii	"Droop_Filter_Init\000"
+ 3425 0486 44726F6F 		.ascii	"Droop_Filter_Init\000"
  3425      705F4669 
  3425      6C746572 
  3425      5F496E69 
  3425      7400
  3426              	.LASF33:
- 3427 0490 72657375 		.ascii	"result\000"
+ 3427 0498 72657375 		.ascii	"result\000"
  3427      6C7400
  3428              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

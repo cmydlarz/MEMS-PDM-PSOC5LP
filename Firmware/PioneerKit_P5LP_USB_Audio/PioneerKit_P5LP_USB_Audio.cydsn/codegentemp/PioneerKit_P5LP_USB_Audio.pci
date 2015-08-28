@@ -1,0 +1,18 @@
+# PioneerKit_P5LP_USB_Audio
+# 2015-08-28 22:40:28Z
+
+set_io "PSOC_CODEC_RST(0)" iocell 3 6
+set_io "PSOC_I2S_LRCLK(0)" iocell 0 1
+set_io "PSOC_I2S_MCLK(0)" iocell 12 7
+set_io "PSOC_I2S_SCLK(0)" iocell 3 5
+set_io "PSOC_I2S_SDTO(0)" iocell 3 7
+set_io "PSOC_PDM_ClkOut(0)" iocell 12 6
+set_io "PSOC_PDM_DataIn(0)" iocell 0 0
+set_io "PSOC_PDM_LR_SEL(0)" iocell 3 4
+set_io "PSOC_STATUS_LED(0)" iocell 3 1
+set_io "PSOC_SW(0)" iocell 2 4
+set_io "SCL(0)" iocell 1 2
+set_io "SDA(0)" iocell 3 0
+set_io "\USBFS:Dm(0)\" iocell 15 7
+set_io "\USBFS:Dp(0)\" iocell 15 6
+set_location "\USBFS:USB\" usbcell -1 -1 0

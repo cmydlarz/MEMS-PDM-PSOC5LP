@@ -31,12 +31,8 @@
 #include <SWDXRES.h>
 #include <SWDIO_aliases.h>
 #include <SWDIO.h>
-#include <Pin_VTarget_aliases.h>
-#include <Pin_VTarget.h>
-#include <ADC_Voltage_Target.h>
 #include <Pin_HWVersionA_aliases.h>
 #include <Pin_HWVersionA.h>
-#include <AMux.h>
 #include <Bootloadable.h>
 #include <I2CHW.h>
 #include <I2CHW_PVT.h>
@@ -74,9 +70,6 @@
 #include <USBFS_VBUS.h>
 #include <USBFS_Dp_aliases.h>
 #include <USBFS_Dp.h>
-#include <ADC_Voltage_Target_theACLK.h>
-#include <ADC_Voltage_Target_Ext_CP_Clk.h>
-#include <ADC_Voltage_Target_AMux.h>
 #include <core_cm3_psoc5.h>
 #include <core_cm3.h>
 #include <CyDmac.h>

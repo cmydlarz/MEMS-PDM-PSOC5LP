@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
   16:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *******************************************************************************/
   17:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** 
   18:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** #include "Droop_Filter.h"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 2
 
 
   19:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
   46:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** * Function Name: Droop_Filter_RestoreConfig
   47:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** ********************************************************************************
   48:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 3
 
 
   49:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** * Summary:
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
   76:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *  calling the CyPmSleep() or the CyPmHibernate() function. Refer to the PSoC
   77:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *  Creator System Reference Guide for more information about power management
   78:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *  functions.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 4
 
 
   79:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
   99:.\Generated_Source\PSoC5/Droop_Filter_PM.c ****     }
  100:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** 
  101:.\Generated_Source\PSoC5/Droop_Filter_PM.c ****     /* Disables the clock to the entire core of the block */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 5
 
 
  102:.\Generated_Source\PSoC5/Droop_Filter_PM.c ****     Droop_Filter_CR_REG |= Droop_Filter_CORECLK_DISABLE;
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  131:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** *******************************************************************************/
  132:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** void Droop_Filter_Wakeup(void) 
  133:.\Generated_Source\PSoC5/Droop_Filter_PM.c **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 6
 
 
  149              		.loc 1 133 0
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  187              		.loc 1 149 0
  188 0044 4CF28473 		movw	r3, #:lower16:1073792900
  189 0048 C4F20003 		movt	r3, #:upper16:1073792900
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 7
 
 
  190 004c 4FF0FF32 		mov	r2, #-1
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  242 0065 04000000 		.4byte	.LCFI5
  243 0069 0200     		.2byte	0x2
  244 006b 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 8
 
 
  245 006c 08       		.sleb128 8
@@ -454,10 +454,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  275 0006 00000000 		.4byte	.Ldebug_abbrev0
  276 000a 04       		.byte	0x4
  277 000b 01       		.uleb128 0x1
- 278 000c B3000000 		.4byte	.LASF18
+ 278 000c 1B010000 		.4byte	.LASF18
  279 0010 01       		.byte	0x1
- 280 0011 EA000000 		.4byte	.LASF19
- 281 0015 1C010000 		.4byte	.LASF20
+ 280 0011 52010000 		.4byte	.LASF19
+ 281 0015 3B000000 		.4byte	.LASF20
  282 0019 00000000 		.4byte	0x0
  283 001d 00000000 		.4byte	0x0
  284 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -465,30 +465,30 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  286 0029 02       		.uleb128 0x2
  287 002a 01       		.byte	0x1
  288 002b 06       		.byte	0x6
- 289 002c 8F010000 		.4byte	.LASF0
+ 289 002c 97010000 		.4byte	.LASF0
  290 0030 02       		.uleb128 0x2
  291 0031 01       		.byte	0x1
  292 0032 08       		.byte	0x8
- 293 0033 BF000000 		.4byte	.LASF1
+ 293 0033 27010000 		.4byte	.LASF1
  294 0037 02       		.uleb128 0x2
  295 0038 02       		.byte	0x2
  296 0039 05       		.byte	0x5
- 297 003a A1010000 		.4byte	.LASF2
+ 297 003a A9010000 		.4byte	.LASF2
  298 003e 02       		.uleb128 0x2
  299 003f 02       		.byte	0x2
  300 0040 07       		.byte	0x7
- 301 0041 7C010000 		.4byte	.LASF3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 9
+ 301 0041 84010000 		.4byte	.LASF3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 9
 
 
  302 0045 02       		.uleb128 0x2
  303 0046 04       		.byte	0x4
  304 0047 05       		.byte	0x5
- 305 0048 E1000000 		.4byte	.LASF4
+ 305 0048 49010000 		.4byte	.LASF4
  306 004c 02       		.uleb128 0x2
  307 004d 04       		.byte	0x4
  308 004e 07       		.byte	0x7
- 309 004f 5C000000 		.4byte	.LASF5
+ 309 004f C4000000 		.4byte	.LASF5
  310 0053 02       		.uleb128 0x2
  311 0054 08       		.byte	0x8
  312 0055 05       		.byte	0x5
@@ -496,7 +496,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  314 005a 02       		.uleb128 0x2
  315 005b 08       		.byte	0x8
  316 005c 07       		.byte	0x7
- 317 005d 89000000 		.4byte	.LASF7
+ 317 005d F1000000 		.4byte	.LASF7
  318 0061 03       		.uleb128 0x3
  319 0062 04       		.byte	0x4
  320 0063 05       		.byte	0x5
@@ -506,22 +506,22 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  324 006a 07       		.byte	0x7
  325 006b 1A000000 		.4byte	.LASF8
  326 006f 04       		.uleb128 0x4
- 327 0070 56000000 		.4byte	.LASF12
+ 327 0070 BE000000 		.4byte	.LASF12
  328 0074 02       		.byte	0x2
  329 0075 4C       		.byte	0x4c
  330 0076 30000000 		.4byte	0x30
  331 007a 02       		.uleb128 0x2
  332 007b 04       		.byte	0x4
  333 007c 04       		.byte	0x4
- 334 007d 9B010000 		.4byte	.LASF9
+ 334 007d A3010000 		.4byte	.LASF9
  335 0081 02       		.uleb128 0x2
  336 0082 08       		.byte	0x8
  337 0083 04       		.byte	0x4
- 338 0084 15010000 		.4byte	.LASF10
+ 338 0084 7D010000 		.4byte	.LASF10
  339 0088 02       		.uleb128 0x2
  340 0089 01       		.byte	0x1
  341 008a 08       		.byte	0x8
- 342 008b AB010000 		.4byte	.LASF11
+ 342 008b B3010000 		.4byte	.LASF11
  343 008f 05       		.uleb128 0x5
  344 0090 04       		.byte	0x4
  345 0091 07       		.byte	0x7
@@ -538,18 +538,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  356 00a5 02       		.byte	0x2
  357 00a6 23       		.byte	0x23
  358 00a7 00       		.uleb128 0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 10
 
 
  359 00a8 00       		.byte	0x0
  360 00a9 04       		.uleb128 0x4
- 361 00aa 6E000000 		.4byte	.LASF13
+ 361 00aa D6000000 		.4byte	.LASF13
  362 00ae 03       		.byte	0x3
  363 00af 4A       		.byte	0x4a
  364 00b0 92000000 		.4byte	0x92
  365 00b4 08       		.uleb128 0x8
  366 00b5 01       		.byte	0x1
- 367 00b6 B0010000 		.4byte	.LASF14
+ 367 00b6 B8010000 		.4byte	.LASF14
  368 00ba 01       		.byte	0x1
  369 00bb 27       		.byte	0x27
  370 00bc 01       		.byte	0x1
@@ -558,7 +558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  373 00c5 00000000 		.4byte	.LLST0
  374 00c9 08       		.uleb128 0x8
  375 00ca 01       		.byte	0x1
- 376 00cb 3B000000 		.4byte	.LASF15
+ 376 00cb A3000000 		.4byte	.LASF15
  377 00cf 01       		.byte	0x1
  378 00d0 3D       		.byte	0x3d
  379 00d1 01       		.byte	0x1
@@ -567,7 +567,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  382 00da 2B000000 		.4byte	.LLST1
  383 00de 08       		.uleb128 0x8
  384 00df 01       		.byte	0x1
- 385 00e0 A0000000 		.4byte	.LASF16
+ 385 00e0 08010000 		.4byte	.LASF16
  386 00e4 01       		.byte	0x1
  387 00e5 5A       		.byte	0x5a
  388 00e6 01       		.byte	0x1
@@ -576,7 +576,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  391 00ef 56000000 		.4byte	.LLST2
  392 00f3 08       		.uleb128 0x8
  393 00f4 01       		.byte	0x1
- 394 00f5 CD000000 		.4byte	.LASF17
+ 394 00f5 35010000 		.4byte	.LASF17
  395 00f9 01       		.byte	0x1
  396 00fa 84       		.byte	0x84
  397 00fb 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  413 0002 01       		.byte	0x1
  414 0003 25       		.uleb128 0x25
  415 0004 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 11
 
 
  416 0005 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  470 003b 0B       		.uleb128 0xb
  471 003c 0B       		.uleb128 0xb
  472 003d 3E       		.uleb128 0x3e
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 12
 
 
  473 003e 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  527 0074 00       		.byte	0x0
  528 0075 03       		.uleb128 0x3
  529 0076 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 13
 
 
  530 0077 3A       		.uleb128 0x3a
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  568 0024 5A000000 		.4byte	.LFE2-.LFB2
  569 0028 00000000 		.4byte	.LFB3
  570 002c 54000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 14
 
 
  571 0030 00000000 		.4byte	0x0
@@ -818,107 +818,109 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 1
  595      6C746572 
  595      5F626163 
  595      6B757000 
- 596              	.LASF15:
- 597 003b 44726F6F 		.ascii	"Droop_Filter_RestoreConfig\000"
- 597      705F4669 
- 597      6C746572 
- 597      5F526573 
- 597      746F7265 
- 598              	.LASF12:
- 599 0056 75696E74 		.ascii	"uint8\000"
- 599      3800
- 600              	.LASF5:
- 601 005c 6C6F6E67 		.ascii	"long unsigned int\000"
- 601      20756E73 
- 601      69676E65 
- 601      6420696E 
- 601      7400
- 602              	.LASF13:
- 603 006e 44726F6F 		.ascii	"Droop_Filter_BACKUP_STRUCT\000"
- 603      705F4669 
- 603      6C746572 
- 603      5F424143 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 15
+ 596              	.LASF20:
+ 597 003b 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 597      665C486F 
+ 597      6D655C44 
+ 597      65736B74 
+ 597      6F705C55 
+ 598 0068 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 598      6E656572 
+ 598      4B69745F 
+ 598      50354C50 
+ 598      5F555342 
+ 599 0099 64696F2E 		.ascii	"dio.cydsn\000"
+ 599      63796473 
+ 599      6E00
+ 600              	.LASF15:
+ 601 00a3 44726F6F 		.ascii	"Droop_Filter_RestoreConfig\000"
+ 601      705F4669 
+ 601      6C746572 
+ 601      5F526573 
+ 601      746F7265 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 15
 
 
- 603      4B55505F 
- 604              	.LASF7:
- 605 0089 6C6F6E67 		.ascii	"long long unsigned int\000"
- 605      206C6F6E 
- 605      6720756E 
- 605      7369676E 
- 605      65642069 
- 606              	.LASF16:
- 607 00a0 44726F6F 		.ascii	"Droop_Filter_Sleep\000"
+ 602              	.LASF12:
+ 603 00be 75696E74 		.ascii	"uint8\000"
+ 603      3800
+ 604              	.LASF5:
+ 605 00c4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 605      20756E73 
+ 605      69676E65 
+ 605      6420696E 
+ 605      7400
+ 606              	.LASF13:
+ 607 00d6 44726F6F 		.ascii	"Droop_Filter_BACKUP_STRUCT\000"
  607      705F4669 
  607      6C746572 
- 607      5F536C65 
- 607      657000
- 608              	.LASF18:
- 609 00b3 474E5520 		.ascii	"GNU C 4.4.1\000"
- 609      4320342E 
- 609      342E3100 
- 610              	.LASF1:
- 611 00bf 756E7369 		.ascii	"unsigned char\000"
- 611      676E6564 
- 611      20636861 
- 611      7200
- 612              	.LASF17:
- 613 00cd 44726F6F 		.ascii	"Droop_Filter_Wakeup\000"
- 613      705F4669 
- 613      6C746572 
- 613      5F57616B 
- 613      65757000 
- 614              	.LASF4:
- 615 00e1 6C6F6E67 		.ascii	"long int\000"
- 615      20696E74 
- 615      00
- 616              	.LASF19:
- 617 00ea 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Droop_Filter_PM.c\000"
- 617      6E657261 
- 617      7465645F 
- 617      536F7572 
- 617      63655C50 
- 618              	.LASF10:
- 619 0115 646F7562 		.ascii	"double\000"
- 619      6C6500
- 620              	.LASF20:
- 621 011c 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 621      665C486F 
- 621      6D655C44 
- 621      65736B74 
- 621      6F705C55 
- 622 0148 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 622      5F50354C 
- 622      505F5553 
- 622      425F4175 
- 622      64696F5C 
- 623 017a 6E00     		.ascii	"n\000"
+ 607      5F424143 
+ 607      4B55505F 
+ 608              	.LASF7:
+ 609 00f1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 609      206C6F6E 
+ 609      6720756E 
+ 609      7369676E 
+ 609      65642069 
+ 610              	.LASF16:
+ 611 0108 44726F6F 		.ascii	"Droop_Filter_Sleep\000"
+ 611      705F4669 
+ 611      6C746572 
+ 611      5F536C65 
+ 611      657000
+ 612              	.LASF18:
+ 613 011b 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 613      4320342E 
+ 613      342E3100 
+ 614              	.LASF1:
+ 615 0127 756E7369 		.ascii	"unsigned char\000"
+ 615      676E6564 
+ 615      20636861 
+ 615      7200
+ 616              	.LASF17:
+ 617 0135 44726F6F 		.ascii	"Droop_Filter_Wakeup\000"
+ 617      705F4669 
+ 617      6C746572 
+ 617      5F57616B 
+ 617      65757000 
+ 618              	.LASF4:
+ 619 0149 6C6F6E67 		.ascii	"long int\000"
+ 619      20696E74 
+ 619      00
+ 620              	.LASF19:
+ 621 0152 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Droop_Filter_PM.c\000"
+ 621      6E657261 
+ 621      7465645F 
+ 621      536F7572 
+ 621      63655C50 
+ 622              	.LASF10:
+ 623 017d 646F7562 		.ascii	"double\000"
+ 623      6C6500
  624              	.LASF3:
- 625 017c 73686F72 		.ascii	"short unsigned int\000"
+ 625 0184 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc5tyB2a.s 			page 16
+
+
  625      7420756E 
  625      7369676E 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWAEeBl.s 			page 16
-
-
  625      65642069 
  625      6E7400
  626              	.LASF0:
- 627 018f 7369676E 		.ascii	"signed char\000"
+ 627 0197 7369676E 		.ascii	"signed char\000"
  627      65642063 
  627      68617200 
  628              	.LASF9:
- 629 019b 666C6F61 		.ascii	"float\000"
+ 629 01a3 666C6F61 		.ascii	"float\000"
  629      7400
  630              	.LASF2:
- 631 01a1 73686F72 		.ascii	"short int\000"
+ 631 01a9 73686F72 		.ascii	"short int\000"
  631      7420696E 
  631      7400
  632              	.LASF11:
- 633 01ab 63686172 		.ascii	"char\000"
+ 633 01b3 63686172 		.ascii	"char\000"
  633      00
  634              	.LASF14:
- 635 01b0 44726F6F 		.ascii	"Droop_Filter_SaveConfig\000"
+ 635 01b8 44726F6F 		.ascii	"Droop_Filter_SaveConfig\000"
  635      705F4669 
  635      6C746572 
  635      5F536176 

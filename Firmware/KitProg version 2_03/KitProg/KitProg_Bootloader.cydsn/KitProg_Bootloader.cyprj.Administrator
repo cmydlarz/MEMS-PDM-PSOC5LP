@@ -1111,6 +1111,7 @@
 <name_val_pair name=".\Generated_Source\PSoC5\USBFS_Dp.c" v="&quot;-I. &quot;&quot;-Wno-main &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC5\cyfitter_cfg.c" v="&quot;-I. &quot;&quot;-Wno-main &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name="\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\ARM_GCC_441\Debug\KitProg_Bootloader.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-Wl,--gc-sections &quot;" />
+<name_val_pair name="\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\ARM_GCC_441\Debug\KitProg_Bootloader.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-Wl,--gc-sections &quot;" />
 </name>
 <name v="c9323d49-d323-40b8-9b59-cc008d68a989@Release@CortexM3">
 <name_val_pair name=".\main.c" v="&quot;-I. &quot;&quot;-Wno-main &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;NDEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-Os &quot;&quot;-ffunction-sections &quot;" />
@@ -1146,17 +1147,18 @@
 <name_val_pair name=".\Generated_Source\PSoC5\USBFS_Dp.c" v="&quot;-I. &quot;&quot;-Wno-main &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;NDEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-Os &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC5\cyfitter_cfg.c" v="&quot;-I. &quot;&quot;-Wno-main &quot;&quot;-I./Generated_Source/PSoC5 &quot;&quot;-mcpu=cortex-m3 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;NDEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-Os &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name="\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\ARM_GCC_441\Release\KitProg_Bootloader.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-Wl,--gc-sections &quot;" />
+<name_val_pair name="\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\ARM_GCC_441\Release\KitProg_Bootloader.hex" v="&quot;-mthumb &quot;&quot;-march=armv7-m &quot;&quot;-mfix-cortex-m3-ldrd &quot;&quot;-T &quot;&quot;.\Generated_Source\PSoC5\cm3gcc.ld &quot;&quot;-g &quot;&quot;-Wl,-Map,${OutputDir}\${ProjectShortName}.map &quot;&quot;-Wl,--gc-sections &quot;" />
 </name>
 </genericCmdLineData>
-<codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj&quot; &quot;-d&quot; &quot;CY8C5666LTI-LP005&quot; &quot;-s&quot; &quot;\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
+<codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj&quot; &quot;-d&quot; &quot;CY8C5667LTI-LP009&quot; &quot;-s&quot; &quot;\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
 </CyGuid_b0374e30-ce3a-47f2-ad85-821643292c68>
 </dataGuid>
 <dataGuid v="597c5b74-0c46-4204-8b7f-96f3570671dc">
 <CyGuid_597c5b74-0c46-4204-8b7f-96f3570671dc type_name="CyDesigner.Common.ProjMgmt.DeviceSelector.CyDeviceSelectorState" version="1">
 <name_val_pair name="Dialog Bounds" v="880, 426, 800, 587" />
-<name_val_pair name="Column Order" v="PartNumber;DesignFits;Architecture;SPEED_MHZ;FLASH_BYTES;SRAM_BYTES;EEPROM_BYTES;TRACEBUFF_BYTES;DMACHANNELS_COUNT;PLL_COUNT;DIRDRIVELCD;CAPSENSE;PVT_COMPLEX_ADC;DAC8_COUNT;ANALOGBLOCKS_COUNT;DFB_COUNT;COMP_COUNT;OPAMP_COUNT;USB_TYPE;CAN20B_COUNT;UDB_COUNT;TIMERCOUNTERPWM_COUNT;GPIO_COUNT;SIO_COUNT;USBIO_COUNT;BOOSTCONVERTER_VOLTS;VDDMIN_VOLTS;VDDMAX_VOLTS;AUTOMOTIVE_QUALIFIED;TEMPMIN_CELSIUS;TEMPMAX_CELSIUS;PACKAGE;SILICONID;SENSE_IO_COUNT;SCB_COUNT;LPCOMP_COUNT;PVT_ANALOG_IN_VOLT_RANGE;PVT_DIGITAL_IN_VOLT_RANGE;ETM;;" />
-<name_val_pair name="Filter Options" v=";" />
-<name_val_pair name="Visible Columns" v="PartNumber;DesignFits;Architecture;SPEED_MHZ;FLASH_BYTES;SRAM_BYTES;EEPROM_BYTES;TRACEBUFF_BYTES;DMACHANNELS_COUNT;PLL_COUNT;DIRDRIVELCD;CAPSENSE;PVT_COMPLEX_ADC;DAC8_COUNT;ANALOGBLOCKS_COUNT;DFB_COUNT;;" />
+<name_val_pair name="Column Order" v="PartNumber;DesignFits;Architecture;SPEED_MHZ;FLASH_BYTES;SRAM_BYTES;EEPROM_BYTES;TRACEBUFF_BYTES;DMACHANNELS_COUNT;PLL_COUNT;DIRDRIVELCD;CAPSENSE;PVT_COMPLEX_ADC;DAC8_COUNT;ANALOGBLOCKS_COUNT;DFB_COUNT;COMP_COUNT;OPAMP_COUNT;USB_TYPE;CAN20B_COUNT;UDB_COUNT;TIMERCOUNTERPWM_COUNT;GPIO_COUNT;SIO_COUNT;USBIO_COUNT;BOOSTCONVERTER_VOLTS;VDDMIN_VOLTS;VDDMAX_VOLTS;AUTOMOTIVE_QUALIFIED;TEMPMIN_CELSIUS;TEMPMAX_CELSIUS;PACKAGE;SILICONID;SENSE_IO_COUNT;SCB_COUNT;LPCOMP_COUNT;PVT_ANALOG_IN_VOLT_RANGE;PVT_DIGITAL_IN_VOLT_RANGE;ETM;" />
+<name_val_pair name="Filter Options" v="" />
+<name_val_pair name="Visible Columns" v="PartNumber;DesignFits;Architecture;SPEED_MHZ;FLASH_BYTES;SRAM_BYTES;EEPROM_BYTES;TRACEBUFF_BYTES;DMACHANNELS_COUNT;PLL_COUNT;DIRDRIVELCD;CAPSENSE;PVT_COMPLEX_ADC;DAC8_COUNT;ANALOGBLOCKS_COUNT;DFB_COUNT;" />
 <name_val_pair name="Sort" v="PartNumber;Ascending" />
 </CyGuid_597c5b74-0c46-4204-8b7f-96f3570671dc>
 </dataGuid>
@@ -1689,7 +1691,7 @@
 <v>C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="130851059110937500" />
+<deps_time v="130852737286093750" />
 <top_block v="TopDesign" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>

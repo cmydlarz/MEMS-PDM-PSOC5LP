@@ -1,5 +1,5 @@
 -- Project:   KitProg_Bootloader
--- Generated: 08/26/2015 19:38:24
+-- Generated: 08/28/2015 18:15:21
 -- 
 
 ENTITY KitProg_Bootloader IS
@@ -29,7 +29,7 @@ ARCHITECTURE __DEFAULT__ OF KitProg_Bootloader IS
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL Net_134 : bit;
-    ATTRIBUTE placement_force OF Net_134 : SIGNAL IS "U(2,1,A)1";
+    ATTRIBUTE placement_force OF Net_134 : SIGNAL IS "U(3,0,A)1";
     SIGNAL Net_409 : bit;
     SIGNAL Net_84 : bit;
     ATTRIBUTE global_signal OF Net_84 : SIGNAL IS true;
@@ -47,16 +47,16 @@ ARCHITECTURE __DEFAULT__ OF KitProg_Bootloader IS
     SIGNAL \PWM:PWMUDB:control_6\ : bit;
     SIGNAL \PWM:PWMUDB:ctrl_enable\ : bit;
     SIGNAL \PWM:PWMUDB:final_kill_reg\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:final_kill_reg\ : SIGNAL IS "U(3,1,A)1";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:final_kill_reg\ : SIGNAL IS "U(2,0,A)1";
     SIGNAL \PWM:PWMUDB:prevCompare1\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:prevCompare1\ : SIGNAL IS "U(2,1,A)2";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:prevCompare1\ : SIGNAL IS "U(3,0,A)2";
     SIGNAL \PWM:PWMUDB:runmode_enable\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:runmode_enable\ : SIGNAL IS "U(2,1,B)2";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:runmode_enable\ : SIGNAL IS "U(3,0,A)0";
     SIGNAL \PWM:PWMUDB:status_0\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_0\ : SIGNAL IS "U(2,1,A)3";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_0\ : SIGNAL IS "U(3,0,A)3";
     SIGNAL \PWM:PWMUDB:status_3\ : bit;
     SIGNAL \PWM:PWMUDB:status_5\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_5\ : SIGNAL IS "U(3,1,A)0";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_5\ : SIGNAL IS "U(2,0,A)0";
     SIGNAL \PWM:PWMUDB:tc_i\ : bit;
     SIGNAL \\\USBFS:Dm(0)\\__PA\ : bit;
     SIGNAL \\\USBFS:Dp(0)\\__PA\ : bit;
@@ -105,29 +105,29 @@ ARCHITECTURE __DEFAULT__ OF KitProg_Bootloader IS
     SIGNAL \PWM:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF Net_134 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_134 : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF Net_134 : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF Pin_PSoC4A_XRES(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF Pin_PSoC4A_XRES(0) : LABEL IS "P2[4]";
     ATTRIBUTE lib_model OF Pin_Status_LED(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF Pin_Status_LED(0) : LABEL IS "P3[1]";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:final_kill_reg\ : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF \PWM:PWMUDB:final_kill_reg\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:final_kill_reg\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sSTSReg:rstSts:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sSTSReg:rstSts:stsreg\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sSTSReg:rstSts:stsreg\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \PWM:PWMUDB:status_0\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:status_0\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:status_5\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \PWM:PWMUDB:status_5\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:status_5\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \USBFS:Dm(0)\ : LABEL IS "iocell3";
     ATTRIBUTE Location OF \USBFS:Dm(0)\ : LABEL IS "P15[7]";
     ATTRIBUTE lib_model OF \USBFS:Dp(0)\ : LABEL IS "iocell4";

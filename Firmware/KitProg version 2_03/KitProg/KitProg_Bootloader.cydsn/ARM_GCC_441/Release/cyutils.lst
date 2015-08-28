@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
   20:.\Generated_Source\PSoC5/cyutils.c ****     * Function Name: CySetReg24
   21:.\Generated_Source\PSoC5/cyutils.c ****     ****************************************************************************
   22:.\Generated_Source\PSoC5/cyutils.c ****     *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/cyutils.c ****     * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
   62              	.Ldebug_loc0:
   63              	.LLST1:
   64 0000 00000000 		.4byte	.LVL0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 3
 
 
   65 0004 08000000 		.4byte	.LVL1
@@ -133,10 +133,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
   74 0006 00000000 		.4byte	.Ldebug_abbrev0
   75 000a 04       		.byte	0x4
   76 000b 01       		.uleb128 0x1
-  77 000c 03010000 		.4byte	.LASF16
+  77 000c BA000000 		.4byte	.LASF16
   78 0010 01       		.byte	0x1
   79 0011 14000000 		.4byte	.LASF17
-  80 0015 88000000 		.4byte	.LASF18
+  80 0015 F0000000 		.4byte	.LASF18
   81 0019 00000000 		.4byte	0x0
   82 001d 00000000 		.4byte	0x0
   83 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -144,7 +144,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
   85 0029 02       		.uleb128 0x2
   86 002a 01       		.byte	0x1
   87 002b 06       		.byte	0x6
-  88 002c 2D010000 		.4byte	.LASF0
+  88 002c E4000000 		.4byte	.LASF0
   89 0030 02       		.uleb128 0x2
   90 0031 01       		.byte	0x1
   91 0032 08       		.byte	0x8
@@ -152,7 +152,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
   93 0037 02       		.uleb128 0x2
   94 0038 02       		.byte	0x2
   95 0039 05       		.byte	0x5
-  96 003a 14010000 		.4byte	.LASF2
+  96 003a CB000000 		.4byte	.LASF2
   97 003e 02       		.uleb128 0x2
   98 003f 02       		.byte	0x2
   99 0040 07       		.byte	0x7
@@ -160,7 +160,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  101 0045 02       		.uleb128 0x2
  102 0046 04       		.byte	0x4
  103 0047 05       		.byte	0x5
- 104 0048 24010000 		.4byte	.LASF4
+ 104 0048 DB000000 		.4byte	.LASF4
  105 004c 02       		.uleb128 0x2
  106 004d 04       		.byte	0x4
  107 004e 07       		.byte	0x7
@@ -172,25 +172,25 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  113 005a 02       		.uleb128 0x2
  114 005b 08       		.byte	0x8
  115 005c 07       		.byte	0x7
- 116 005d EC000000 		.4byte	.LASF7
+ 116 005d A3000000 		.4byte	.LASF7
  117 0061 03       		.uleb128 0x3
  118 0062 04       		.byte	0x4
  119 0063 05       		.byte	0x5
  120 0064 696E7400 		.ascii	"int\000"
  121 0068 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 4
 
 
  122 0069 04       		.byte	0x4
  123 006a 07       		.byte	0x7
- 124 006b DF000000 		.4byte	.LASF8
+ 124 006b 96000000 		.4byte	.LASF8
  125 006f 04       		.uleb128 0x4
- 126 0070 1E010000 		.4byte	.LASF9
+ 126 0070 D5000000 		.4byte	.LASF9
  127 0074 02       		.byte	0x2
  128 0075 4C       		.byte	0x4c
  129 0076 30000000 		.4byte	0x30
  130 007a 04       		.uleb128 0x4
- 131 007b D8000000 		.4byte	.LASF10
+ 131 007b 8F000000 		.4byte	.LASF10
  132 007f 02       		.byte	0x2
  133 0080 4E       		.byte	0x4e
  134 0081 4C000000 		.4byte	0x4c
@@ -201,11 +201,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  139 008c 02       		.uleb128 0x2
  140 008d 08       		.byte	0x8
  141 008e 04       		.byte	0x4
- 142 008f D1000000 		.4byte	.LASF12
+ 142 008f 88000000 		.4byte	.LASF12
  143 0093 02       		.uleb128 0x2
  144 0094 01       		.byte	0x1
  145 0095 08       		.byte	0x8
- 146 0096 0F010000 		.4byte	.LASF13
+ 146 0096 C6000000 		.4byte	.LASF13
  147 009a 05       		.uleb128 0x5
  148 009b 6F000000 		.4byte	0x6f
  149 009f 05       		.uleb128 0x5
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  176 00d8 5B000000 		.4byte	.LASF20
  177 00dc 01       		.byte	0x1
  178 00dd 27       		.byte	0x27
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 5
 
 
  179 00de E9000000 		.4byte	0xe9
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  233 002c 16       		.uleb128 0x16
  234 002d 00       		.byte	0x0
  235 002e 03       		.uleb128 0x3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 6
 
 
  236 002f 0E       		.uleb128 0xe
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  290 0065 08       		.uleb128 0x8
  291 0066 05       		.uleb128 0x5
  292 0067 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 7
 
 
  293 0068 03       		.uleb128 0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  345 0014 12000000 		.4byte	.LFE0-.LFB0
  346 0018 00000000 		.4byte	0x0
  347 001c 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 8
 
 
  348              		.section	.debug_ranges,"",%progbits
@@ -474,57 +474,59 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 1
  376      7369676E 
  376      65642069 
  376      6E7400
- 377              	.LASF18:
- 378 0088 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 378      665C486F 
- 378      6D655C44 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczkRP3l.s 			page 9
+ 377              	.LASF12:
+ 378 0088 646F7562 		.ascii	"double\000"
+ 378      6C6500
+ 379              	.LASF10:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccq3XVv1.s 			page 9
 
 
- 378      65736B74 
- 378      6F705C4B 
- 379 00b5 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
- 379      69745072 
- 379      6F675F42 
- 379      6F6F746C 
- 379      6F616465 
- 380              	.LASF12:
- 381 00d1 646F7562 		.ascii	"double\000"
- 381      6C6500
- 382              	.LASF10:
- 383 00d8 75696E74 		.ascii	"uint32\000"
- 383      333200
- 384              	.LASF8:
- 385 00df 756E7369 		.ascii	"unsigned int\000"
- 385      676E6564 
- 385      20696E74 
- 385      00
- 386              	.LASF7:
- 387 00ec 6C6F6E67 		.ascii	"long long unsigned int\000"
- 387      206C6F6E 
- 387      6720756E 
- 387      7369676E 
- 387      65642069 
- 388              	.LASF16:
- 389 0103 474E5520 		.ascii	"GNU C 4.4.1\000"
- 389      4320342E 
- 389      342E3100 
- 390              	.LASF13:
- 391 010f 63686172 		.ascii	"char\000"
- 391      00
- 392              	.LASF2:
- 393 0114 73686F72 		.ascii	"short int\000"
- 393      7420696E 
- 393      7400
- 394              	.LASF9:
- 395 011e 75696E74 		.ascii	"uint8\000"
- 395      3800
- 396              	.LASF4:
- 397 0124 6C6F6E67 		.ascii	"long int\000"
- 397      20696E74 
- 397      00
- 398              	.LASF0:
- 399 012d 7369676E 		.ascii	"signed char\000"
- 399      65642063 
- 399      68617200 
- 400              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 380 008f 75696E74 		.ascii	"uint32\000"
+ 380      333200
+ 381              	.LASF8:
+ 382 0096 756E7369 		.ascii	"unsigned int\000"
+ 382      676E6564 
+ 382      20696E74 
+ 382      00
+ 383              	.LASF7:
+ 384 00a3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 384      206C6F6E 
+ 384      6720756E 
+ 384      7369676E 
+ 384      65642069 
+ 385              	.LASF16:
+ 386 00ba 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 386      4320342E 
+ 386      342E3100 
+ 387              	.LASF13:
+ 388 00c6 63686172 		.ascii	"char\000"
+ 388      00
+ 389              	.LASF2:
+ 390 00cb 73686F72 		.ascii	"short int\000"
+ 390      7420696E 
+ 390      7400
+ 391              	.LASF9:
+ 392 00d5 75696E74 		.ascii	"uint8\000"
+ 392      3800
+ 393              	.LASF4:
+ 394 00db 6C6F6E67 		.ascii	"long int\000"
+ 394      20696E74 
+ 394      00
+ 395              	.LASF0:
+ 396 00e4 7369676E 		.ascii	"signed char\000"
+ 396      65642063 
+ 396      68617200 
+ 397              	.LASF18:
+ 398 00f0 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 398      665C486F 
+ 398      6D655C44 
+ 398      65736B74 
+ 398      6F705C55 
+ 399 011d 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg_Bootloader"
+ 399      50726F67 
+ 399      20766572 
+ 399      73696F6E 
+ 399      20325F30 
+ 400 014d 2E637964 		.ascii	".cydsn\000"
+ 400      736E00
+ 401              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
   51 0003 00       		.space	1
   52              		.section	.text.ConfigureApplication,"ax",%progbits
   53              		.align	2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 2
 
 
   54              		.global	ConfigureApplication
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
   48:.\Application.c **** static void HandleUserInputs(void);
   49:.\Application.c **** static void CheckPlayPauseButton(void);
   50:.\Application.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 3
 
 
   51:.\Application.c **** /* Extern declarations */
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
   89:.\Application.c **** 	#ifdef CODEC_I2C_SUPPORTED
   90:.\Application.c **** 	I2C_Master_CLKDIV1_REG = I2C_DIVIDER_400KHZ_OPERATION;
   91:.\Application.c **** 	#endif
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 4
 
 
   92:.\Application.c ****             
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  120:.\Application.c **** *
  121:.\Application.c **** * Return:
  122:.\Application.c **** *  void
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 5
 
 
  123:.\Application.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  149:.\Application.c **** * Return:
  150:.\Application.c **** *  void
  151:.\Application.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 6
 
 
  152:.\Application.c **** *******************************************************************************/
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  161:.\Application.c ****     }
  162:.\Application.c **** 	
  163:.\Application.c **** }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 7
 
 
  176              		.loc 1 163 0
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  209 0018 03F00403 		and	r3, r3, #4
  210 001c 002B     		cmp	r3, #0
  211 001e 14D1     		bne	.L10
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 8
 
 
  185:.\Application.c ****         {
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  199:.\Application.c **** 		if((buttonStatus & PLAY_PAUSE_MASK))
  252              		.loc 1 199 0
  253 0086 40F20003 		movw	r3, #:lower16:buttonStatus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 9
 
 
  254 008a C0F20003 		movt	r3, #:upper16:buttonStatus
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  302 0015 7D       		.byte	0x7d
  303 0016 08       		.sleb128 8
  304 0017 04000000 		.4byte	.LCFI1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 10
 
 
  305 001b 28000000 		.4byte	.LFE29
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  359 00a3 08       		.sleb128 8
  360 00a4 00000000 		.4byte	0x0
  361 00a8 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 11
 
 
  362              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
@@ -609,10 +609,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  367 0006 00000000 		.4byte	.Ldebug_abbrev0
  368 000a 04       		.byte	0x4
  369 000b 01       		.uleb128 0x1
- 370 000c D4000000 		.4byte	.LASF25
+ 370 000c 3C010000 		.4byte	.LASF25
  371 0010 01       		.byte	0x1
- 372 0011 C9010000 		.4byte	.LASF26
- 373 0015 3F010000 		.4byte	.LASF27
+ 372 0011 D1010000 		.4byte	.LASF26
+ 373 0015 91000000 		.4byte	.LASF27
  374 0019 00000000 		.4byte	0x0
  375 001d 00000000 		.4byte	0x0
  376 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -620,27 +620,27 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  378 0029 02       		.uleb128 0x2
  379 002a 01       		.byte	0x1
  380 002b 06       		.byte	0x6
- 381 002c B7010000 		.4byte	.LASF0
+ 381 002c BF010000 		.4byte	.LASF0
  382 0030 02       		.uleb128 0x2
  383 0031 01       		.byte	0x1
  384 0032 08       		.byte	0x8
- 385 0033 F6000000 		.4byte	.LASF1
+ 385 0033 5E010000 		.4byte	.LASF1
  386 0037 02       		.uleb128 0x2
  387 0038 02       		.byte	0x2
  388 0039 05       		.byte	0x5
- 389 003a D9010000 		.4byte	.LASF2
+ 389 003a E1010000 		.4byte	.LASF2
  390 003e 02       		.uleb128 0x2
  391 003f 02       		.byte	0x2
  392 0040 07       		.byte	0x7
- 393 0041 91000000 		.4byte	.LASF3
+ 393 0041 F9000000 		.4byte	.LASF3
  394 0045 02       		.uleb128 0x2
  395 0046 04       		.byte	0x4
  396 0047 05       		.byte	0x5
- 397 0048 36010000 		.4byte	.LASF4
+ 397 0048 9E010000 		.4byte	.LASF4
  398 004c 02       		.uleb128 0x2
  399 004d 04       		.byte	0x4
  400 004e 07       		.byte	0x7
- 401 004f 1D010000 		.4byte	.LASF5
+ 401 004f 85010000 		.4byte	.LASF5
  402 0053 02       		.uleb128 0x2
  403 0054 08       		.byte	0x8
  404 0055 05       		.byte	0x5
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  416 006a 07       		.byte	0x7
  417 006b 15000000 		.4byte	.LASF8
  418 006f 04       		.uleb128 0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 12
 
 
  419 0070 4E000000 		.4byte	.LASF9
@@ -673,21 +673,21 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  428 0085 02       		.uleb128 0x2
  429 0086 04       		.byte	0x4
  430 0087 04       		.byte	0x4
- 431 0088 C3010000 		.4byte	.LASF11
+ 431 0088 CB010000 		.4byte	.LASF11
  432 008c 02       		.uleb128 0x2
  433 008d 08       		.byte	0x8
  434 008e 04       		.byte	0x4
- 435 008f 2F010000 		.4byte	.LASF12
+ 435 008f 97010000 		.4byte	.LASF12
  436 0093 02       		.uleb128 0x2
  437 0094 01       		.byte	0x1
  438 0095 08       		.byte	0x8
- 439 0096 04010000 		.4byte	.LASF13
+ 439 0096 6C010000 		.4byte	.LASF13
  440 009a 05       		.uleb128 0x5
  441 009b 04       		.byte	0x4
  442 009c 07       		.byte	0x7
  443 009d 06       		.uleb128 0x6
  444 009e 01       		.byte	0x1
- 445 009f A4000000 		.4byte	.LASF14
+ 445 009f 0C010000 		.4byte	.LASF14
  446 00a3 01       		.byte	0x1
  447 00a4 54       		.byte	0x54
  448 00a5 01       		.byte	0x1
@@ -696,7 +696,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  451 00ae 00000000 		.4byte	.LLST0
  452 00b2 06       		.uleb128 0x6
  453 00b3 01       		.byte	0x1
- 454 00b4 B9000000 		.4byte	.LASF15
+ 454 00b4 21010000 		.4byte	.LASF15
  455 00b8 01       		.byte	0x1
  456 00b9 7D       		.byte	0x7d
  457 00ba 01       		.byte	0x1
@@ -718,12 +718,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  473 00e2 01       		.byte	0x1
  474 00e3 00000000 		.4byte	.LFB32
  475 00e7 D6000000 		.4byte	.LFE32
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 13
 
 
  476 00eb 81000000 		.4byte	.LLST3
  477 00ef 08       		.uleb128 0x8
- 478 00f0 AA010000 		.4byte	.LASF18
+ 478 00f0 B2010000 		.4byte	.LASF18
  479 00f4 03       		.byte	0x3
  480 00f5 CE06     		.2byte	0x6ce
  481 00f7 FD000000 		.4byte	0xfd
@@ -750,7 +750,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  502 0121 03       		.byte	0x3
  503 0122 00000000 		.4byte	buttonMask
  504 0126 0A       		.uleb128 0xa
- 505 0127 09010000 		.4byte	.LASF21
+ 505 0127 71010000 		.4byte	.LASF21
  506 012b 01       		.byte	0x1
  507 012c 3E       		.byte	0x3e
  508 012d 6F000000 		.4byte	0x6f
@@ -759,7 +759,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  511 0133 03       		.byte	0x3
  512 0134 00000000 		.4byte	applicationInitiate
  513 0138 0A       		.uleb128 0xa
- 514 0139 E0000000 		.4byte	.LASF22
+ 514 0139 48010000 		.4byte	.LASF22
  515 013d 01       		.byte	0x1
  516 013e 3F       		.byte	0x3f
  517 013f 6F000000 		.4byte	0x6f
@@ -768,7 +768,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  520 0145 03       		.byte	0x3
  521 0146 00000000 		.4byte	playlistControlReport
  522 014a 0A       		.uleb128 0xa
- 523 014b 9F010000 		.4byte	.LASF23
+ 523 014b A7010000 		.4byte	.LASF23
  524 014f 01       		.byte	0x1
  525 0150 40       		.byte	0x40
  526 0151 6F000000 		.4byte	0x6f
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  530 0158 00000000 		.4byte	prevReport
  531 015c 0A       		.uleb128 0xa
  532 015d 2D000000 		.4byte	.LASF24
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 14
 
 
  533 0161 01       		.byte	0x1
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  587 002d 00       		.byte	0x0
  588 002e 03       		.uleb128 0x3
  589 002f 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 15
 
 
  590 0030 3A       		.uleb128 0x3a
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  644 0066 06       		.uleb128 0x6
  645 0067 00       		.byte	0x0
  646 0068 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 16
 
 
  647 0069 08       		.uleb128 0x8
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  697 002b 48616E64 		.ascii	"HandleApplicationInterface\000"
  697      6C654170 
  697      706C6963 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 17
 
 
  697      6174696F 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  731 0000 00000000 		.4byte	.Ltext0
  732 0004 00000000 		.4byte	.Letext0
  733 0008 00000000 		.4byte	.LFB29
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 18
 
 
  734 000c 28000000 		.4byte	.LFE29
@@ -1078,104 +1078,106 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 1
  763 007a 6C6F6E67 		.ascii	"long long unsigned int\000"
  763      206C6F6E 
  763      6720756E 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 19
 
 
  763      7369676E 
  763      65642069 
- 764              	.LASF3:
- 765 0091 73686F72 		.ascii	"short unsigned int\000"
- 765      7420756E 
- 765      7369676E 
- 765      65642069 
- 765      6E7400
- 766              	.LASF14:
- 767 00a4 436F6E66 		.ascii	"ConfigureApplication\000"
- 767      69677572 
- 767      65417070 
- 767      6C696361 
- 767      74696F6E 
- 768              	.LASF15:
- 769 00b9 48616E64 		.ascii	"HandleApplicationInterface\000"
- 769      6C654170 
- 769      706C6963 
- 769      6174696F 
- 769      6E496E74 
- 770              	.LASF25:
- 771 00d4 474E5520 		.ascii	"GNU C 4.4.1\000"
- 771      4320342E 
- 771      342E3100 
- 772              	.LASF22:
- 773 00e0 706C6179 		.ascii	"playlistControlReport\000"
- 773      6C697374 
- 773      436F6E74 
- 773      726F6C52 
- 773      65706F72 
- 774              	.LASF1:
- 775 00f6 756E7369 		.ascii	"unsigned char\000"
- 775      676E6564 
- 775      20636861 
- 775      7200
- 776              	.LASF13:
- 777 0104 63686172 		.ascii	"char\000"
- 777      00
- 778              	.LASF21:
- 779 0109 6170706C 		.ascii	"applicationInitiate\000"
- 779      69636174 
- 779      696F6E49 
- 779      6E697469 
- 779      61746500 
- 780              	.LASF5:
- 781 011d 6C6F6E67 		.ascii	"long unsigned int\000"
- 781      20756E73 
- 781      69676E65 
- 781      6420696E 
- 781      7400
- 782              	.LASF12:
- 783 012f 646F7562 		.ascii	"double\000"
- 783      6C6500
- 784              	.LASF4:
- 785 0136 6C6F6E67 		.ascii	"long int\000"
- 785      20696E74 
- 785      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccn8QGi5.s 			page 20
+ 764              	.LASF27:
+ 765 0091 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 765      665C486F 
+ 765      6D655C44 
+ 765      65736B74 
+ 765      6F705C55 
+ 766 00be 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 766      6E656572 
+ 766      4B69745F 
+ 766      50354C50 
+ 766      5F555342 
+ 767 00ef 64696F2E 		.ascii	"dio.cydsn\000"
+ 767      63796473 
+ 767      6E00
+ 768              	.LASF3:
+ 769 00f9 73686F72 		.ascii	"short unsigned int\000"
+ 769      7420756E 
+ 769      7369676E 
+ 769      65642069 
+ 769      6E7400
+ 770              	.LASF14:
+ 771 010c 436F6E66 		.ascii	"ConfigureApplication\000"
+ 771      69677572 
+ 771      65417070 
+ 771      6C696361 
+ 771      74696F6E 
+ 772              	.LASF15:
+ 773 0121 48616E64 		.ascii	"HandleApplicationInterface\000"
+ 773      6C654170 
+ 773      706C6963 
+ 773      6174696F 
+ 773      6E496E74 
+ 774              	.LASF25:
+ 775 013c 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 775      4320342E 
+ 775      342E3100 
+ 776              	.LASF22:
+ 777 0148 706C6179 		.ascii	"playlistControlReport\000"
+ 777      6C697374 
+ 777      436F6E74 
+ 777      726F6C52 
+ 777      65706F72 
+ 778              	.LASF1:
+ 779 015e 756E7369 		.ascii	"unsigned char\000"
+ 779      676E6564 
+ 779      20636861 
+ 779      7200
+ 780              	.LASF13:
+ 781 016c 63686172 		.ascii	"char\000"
+ 781      00
+ 782              	.LASF21:
+ 783 0171 6170706C 		.ascii	"applicationInitiate\000"
+ 783      69636174 
+ 783      696F6E49 
+ 783      6E697469 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccCXPPzv.s 			page 20
 
 
- 786              	.LASF27:
- 787 013f 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 787      665C486F 
- 787      6D655C44 
- 787      65736B74 
- 787      6F705C55 
- 788 016b 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 788      5F50354C 
- 788      505F5553 
- 788      425F4175 
- 788      64696F5C 
- 789 019d 6E00     		.ascii	"n\000"
+ 783      61746500 
+ 784              	.LASF5:
+ 785 0185 6C6F6E67 		.ascii	"long unsigned int\000"
+ 785      20756E73 
+ 785      69676E65 
+ 785      6420696E 
+ 785      7400
+ 786              	.LASF12:
+ 787 0197 646F7562 		.ascii	"double\000"
+ 787      6C6500
+ 788              	.LASF4:
+ 789 019e 6C6F6E67 		.ascii	"long int\000"
+ 789      20696E74 
+ 789      00
  790              	.LASF23:
- 791 019f 70726576 		.ascii	"prevReport\000"
+ 791 01a7 70726576 		.ascii	"prevReport\000"
  791      5265706F 
  791      727400
  792              	.LASF18:
- 793 01aa 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 793 01b2 49544D5F 		.ascii	"ITM_RxBuffer\000"
  793      52784275 
  793      66666572 
  793      00
  794              	.LASF0:
- 795 01b7 7369676E 		.ascii	"signed char\000"
+ 795 01bf 7369676E 		.ascii	"signed char\000"
  795      65642063 
  795      68617200 
  796              	.LASF11:
- 797 01c3 666C6F61 		.ascii	"float\000"
+ 797 01cb 666C6F61 		.ascii	"float\000"
  797      7400
  798              	.LASF26:
- 799 01c9 2E5C4170 		.ascii	".\\Application.c\000"
+ 799 01d1 2E5C4170 		.ascii	".\\Application.c\000"
  799      706C6963 
  799      6174696F 
  799      6E2E6300 
  800              	.LASF2:
- 801 01d9 73686F72 		.ascii	"short int\000"
+ 801 01e1 73686F72 		.ascii	"short int\000"
  801      7420696E 
  801      7400
  802              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

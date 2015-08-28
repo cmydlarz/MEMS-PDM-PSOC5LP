@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
   14:.\main.c      **** * 	001-85925 - CY8CKIT-042 PSoC 4 Pioneer Kit IROS
   15:.\main.c      **** *
   16:.\main.c      **** * Hardware Dependency:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 2
 
 
   17:.\main.c      **** * 	CY8CKIT-042 (KitProg) 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
   59:.\main.c      ****     CyGlobalIntEnable;   
   50              		.loc 1 59 0
   51              	@ 59 ".\main.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 3
 
 
   52 0004 62B6     		CPSIE   i
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
   92:.\main.c      **** 		
   93:.\main.c      **** 		/* If the USB is not reset. */
   94:.\main.c      ****         if(bUSBResetDetected == FALSE)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 4
 
 
   95:.\main.c      ****         {
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  149:.\main.c      ****         }
  150:.\main.c      **** 		
  151:.\main.c      **** 		SWDHalt();
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 5
 
 
  152:.\main.c      **** 		
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  115              		.loc 1 114 0
  116 007a 4FF00000 		mov	r0, #0
  117 007e FFF7FEFF 		bl	Pin_StatusLED_Write
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 6
 
 
  118              		.loc 1 117 0
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  172 00f8 002B     		cmp	r3, #0
  173 00fa 98D1     		bne	.L13
  174              		.loc 1 157 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 7
 
 
  175 00fc FFF7FEFF 		bl	USBFS_Stop
@@ -402,8 +402,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  213 000b 01       		.uleb128 0x1
  214 000c 62000000 		.4byte	.LASF14
  215 0010 01       		.byte	0x1
- 216 0011 C8000000 		.4byte	.LASF15
- 217 0015 81000000 		.4byte	.LASF16
+ 216 0011 8A000000 		.4byte	.LASF15
+ 217 0015 B3000000 		.4byte	.LASF16
  218 0019 00000000 		.4byte	0x0
  219 001d 00000000 		.4byte	0x0
  220 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -411,18 +411,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  222 0029 02       		.uleb128 0x2
  223 002a 01       		.byte	0x1
  224 002b 06       		.byte	0x6
- 225 002c E5000000 		.4byte	.LASF0
+ 225 002c A7000000 		.4byte	.LASF0
  226 0030 02       		.uleb128 0x2
  227 0031 01       		.byte	0x1
  228 0032 08       		.byte	0x8
  229 0033 6E000000 		.4byte	.LASF1
  230 0037 02       		.uleb128 0x2
  231 0038 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 8
 
 
  232 0039 05       		.byte	0x5
- 233 003a 09010000 		.4byte	.LASF2
+ 233 003a 24010000 		.4byte	.LASF2
  234 003e 02       		.uleb128 0x2
  235 003f 02       		.byte	0x2
  236 0040 07       		.byte	0x7
@@ -430,7 +430,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  238 0045 02       		.uleb128 0x2
  239 0046 04       		.byte	0x4
  240 0047 05       		.byte	0x5
- 241 0048 BF000000 		.4byte	.LASF4
+ 241 0048 81000000 		.4byte	.LASF4
  242 004c 02       		.uleb128 0x2
  243 004d 04       		.byte	0x4
  244 004e 07       		.byte	0x7
@@ -459,11 +459,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  267 007a 02       		.uleb128 0x2
  268 007b 04       		.byte	0x4
  269 007c 04       		.byte	0x4
- 270 007d 03010000 		.4byte	.LASF9
+ 270 007d 1E010000 		.4byte	.LASF9
  271 0081 02       		.uleb128 0x2
  272 0082 08       		.byte	0x8
  273 0083 04       		.byte	0x4
- 274 0084 D1000000 		.4byte	.LASF10
+ 274 0084 93000000 		.4byte	.LASF10
  275 0088 02       		.uleb128 0x2
  276 0089 01       		.byte	0x1
  277 008a 08       		.byte	0x8
@@ -478,14 +478,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  286 0099 2E000000 		.4byte	.LASF18
  287 009d 01       		.byte	0x1
  288 009e 38       		.byte	0x38
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 9
 
 
  289 009f 00000000 		.4byte	.LFB29
  290 00a3 0A010000 		.4byte	.LFE29
  291 00a7 00000000 		.4byte	.LLST0
  292 00ab 08       		.uleb128 0x8
- 293 00ac D8000000 		.4byte	.LASF12
+ 293 00ac 9A000000 		.4byte	.LASF12
  294 00b0 02       		.byte	0x2
  295 00b1 CE06     		.2byte	0x6ce
  296 00b3 B9000000 		.4byte	0xb9
@@ -494,7 +494,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  299 00b9 05       		.uleb128 0x5
  300 00ba 61000000 		.4byte	0x61
  301 00be 09       		.uleb128 0x9
- 302 00bf F1000000 		.4byte	.LASF13
+ 302 00bf 0C010000 		.4byte	.LASF13
  303 00c3 01       		.byte	0x1
  304 00c4 36       		.byte	0x36
  305 00c5 8F000000 		.4byte	0x8f
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  343 001f 00       		.byte	0x0
  344 0020 03       		.uleb128 0x3
  345 0021 24       		.uleb128 0x24
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 10
 
 
  346 0022 00       		.byte	0x0
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  400 0058 06       		.uleb128 0x6
  401 0059 00       		.byte	0x0
  402 005a 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 11
 
 
  403 005b 08       		.uleb128 0x8
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  452 000a 04       		.byte	0x4
  453 000b 00       		.byte	0x0
  454 000c 0000     		.2byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 12
 
 
  455 000e 0000     		.2byte	0x0
@@ -718,54 +718,54 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 1
  486      676E6564 
  486      20636861 
  486      7200
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cczgVi9y.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccKhmIo0.s 			page 13
 
 
  487              	.LASF11:
  488 007c 63686172 		.ascii	"char\000"
  488      00
- 489              	.LASF16:
- 490 0081 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 490      665C486F 
- 490      6D655C44 
- 490      65736B74 
- 490      6F705C4B 
- 491 00ae 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
- 491      69745072 
- 491      6F672E63 
- 491      7964736E 
- 491      00
- 492              	.LASF4:
- 493 00bf 6C6F6E67 		.ascii	"long int\000"
- 493      20696E74 
- 493      00
- 494              	.LASF15:
- 495 00c8 2E5C6D61 		.ascii	".\\main.c\000"
- 495      696E2E63 
- 495      00
- 496              	.LASF10:
- 497 00d1 646F7562 		.ascii	"double\000"
- 497      6C6500
- 498              	.LASF12:
- 499 00d8 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 499      52784275 
- 499      66666572 
- 499      00
- 500              	.LASF0:
- 501 00e5 7369676E 		.ascii	"signed char\000"
- 501      65642063 
- 501      68617200 
+ 489              	.LASF4:
+ 490 0081 6C6F6E67 		.ascii	"long int\000"
+ 490      20696E74 
+ 490      00
+ 491              	.LASF15:
+ 492 008a 2E5C6D61 		.ascii	".\\main.c\000"
+ 492      696E2E63 
+ 492      00
+ 493              	.LASF10:
+ 494 0093 646F7562 		.ascii	"double\000"
+ 494      6C6500
+ 495              	.LASF12:
+ 496 009a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 496      52784275 
+ 496      66666572 
+ 496      00
+ 497              	.LASF0:
+ 498 00a7 7369676E 		.ascii	"signed char\000"
+ 498      65642063 
+ 498      68617200 
+ 499              	.LASF16:
+ 500 00b3 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 500      665C486F 
+ 500      6D655C44 
+ 500      65736B74 
+ 500      6F705C55 
+ 501 00e0 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg.cydsn\000"
+ 501      50726F67 
+ 501      20766572 
+ 501      73696F6E 
+ 501      20325F30 
  502              	.LASF13:
- 503 00f1 62555342 		.ascii	"bUSBResetDetected\000"
+ 503 010c 62555342 		.ascii	"bUSBResetDetected\000"
  503      52657365 
  503      74446574 
  503      65637465 
  503      6400
  504              	.LASF9:
- 505 0103 666C6F61 		.ascii	"float\000"
+ 505 011e 666C6F61 		.ascii	"float\000"
  505      7400
  506              	.LASF2:
- 507 0109 73686F72 		.ascii	"short int\000"
+ 507 0124 73686F72 		.ascii	"short int\000"
  507      7420696E 
  507      7400
  508              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

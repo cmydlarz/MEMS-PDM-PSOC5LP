@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
   16:.\Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
   17:.\Generated_Source\PSoC5/I2S_PM.c **** 
   18:.\Generated_Source\PSoC5/I2S_PM.c **** #include "I2S.h"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 2
 
 
   19:.\Generated_Source\PSoC5/I2S_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
   43              		.cfi_def_cfa_offset 4
   44 0002 00AF     		add	r7, sp, #0
   45              		.cfi_offset 7, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 3
 
 
   46              	.LCFI1:
@@ -126,8 +126,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
   66:.\Generated_Source\PSoC5/I2S_PM.c ****     /* Saves CTL_REG bits to define what direction was enabled */
   67:.\Generated_Source\PSoC5/I2S_PM.c ****     I2S_backup.CtrlReg = I2S_CONTROL_REG;
   48              		.loc 1 67 0
-  49 0004 46F27653 		movw	r3, #:lower16:1073767798
-  50 0008 C4F20003 		movt	r3, #:upper16:1073767798
+  49 0004 46F27243 		movw	r3, #:lower16:1073767538
+  50 0008 C4F20003 		movt	r3, #:upper16:1073767538
   51 000c 1B78     		ldrb	r3, [r3, #0]
   52 000e DAB2     		uxtb	r2, r3
   53 0010 40F20003 		movw	r3, #:lower16:I2S_backup
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
   95:.\Generated_Source\PSoC5/I2S_PM.c **** * Return:
   96:.\Generated_Source\PSoC5/I2S_PM.c **** *  None.
   97:.\Generated_Source\PSoC5/I2S_PM.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 4
 
 
   98:.\Generated_Source\PSoC5/I2S_PM.c **** * Global Variables:
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  125:.\Generated_Source\PSoC5/I2S_PM.c **** *  Prepares I2S goes to sleep.
  126:.\Generated_Source\PSoC5/I2S_PM.c **** *
  127:.\Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 5
 
 
  128:.\Generated_Source\PSoC5/I2S_PM.c **** *  None.
@@ -270,8 +270,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  142:.\Generated_Source\PSoC5/I2S_PM.c ****     /* Get component state */
  143:.\Generated_Source\PSoC5/I2S_PM.c ****     I2S_backup.enableState = ((uint8) I2S_IS_ENABLE);
  110              		.loc 1 143 0
- 111 0004 46F27653 		movw	r3, #:lower16:1073767798
- 112 0008 C4F20003 		movt	r3, #:upper16:1073767798
+ 111 0004 46F27243 		movw	r3, #:lower16:1073767538
+ 112 0008 C4F20003 		movt	r3, #:upper16:1073767538
  113 000c 1B78     		ldrb	r3, [r3, #0]
  114 000e DBB2     		uxtb	r3, r3
  115 0010 03F00403 		and	r3, r3, #4
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  129              		.cfi_endproc
  130              	.LFE2:
  131              		.size	I2S_Sleep, .-I2S_Sleep
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 6
 
 
  132              		.section	.text.I2S_Wakeup,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  158 0012 002B     		cmp	r3, #0
  159 0014 0DD0     		beq	.L9
  179:.\Generated_Source\PSoC5/I2S_PM.c ****     {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 7
 
 
  180:.\Generated_Source\PSoC5/I2S_PM.c ****         /* Enable component's operation */
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  195 0021 77       		.byte	0x77
  196 0022 04       		.sleb128 4
  197 0023 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 8
 
 
  198 0027 00000000 		.4byte	0x0
@@ -478,16 +478,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  252              		.section	.debug_info
  253 0000 24010000 		.4byte	0x124
  254 0004 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 9
 
 
  255 0006 00000000 		.4byte	.Ldebug_abbrev0
  256 000a 04       		.byte	0x4
  257 000b 01       		.uleb128 0x1
- 258 000c 95000000 		.4byte	.LASF20
+ 258 000c FD000000 		.4byte	.LASF20
  259 0010 01       		.byte	0x1
- 260 0011 32000000 		.4byte	.LASF21
- 261 0015 E1000000 		.4byte	.LASF22
+ 260 0011 8F000000 		.4byte	.LASF21
+ 261 0015 27000000 		.4byte	.LASF22
  262 0019 00000000 		.4byte	0x0
  263 001d 00000000 		.4byte	0x0
  264 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -495,27 +495,27 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  266 0029 02       		.uleb128 0x2
  267 002a 01       		.byte	0x1
  268 002b 06       		.byte	0x6
- 269 002c 63010000 		.4byte	.LASF0
+ 269 002c 6B010000 		.4byte	.LASF0
  270 0030 02       		.uleb128 0x2
  271 0031 01       		.byte	0x1
  272 0032 08       		.byte	0x8
- 273 0033 AB000000 		.4byte	.LASF1
+ 273 0033 13010000 		.4byte	.LASF1
  274 0037 02       		.uleb128 0x2
  275 0038 02       		.byte	0x2
  276 0039 05       		.byte	0x5
- 277 003a 75010000 		.4byte	.LASF2
+ 277 003a 7D010000 		.4byte	.LASF2
  278 003e 02       		.uleb128 0x2
  279 003f 02       		.byte	0x2
  280 0040 07       		.byte	0x7
- 281 0041 50010000 		.4byte	.LASF3
+ 281 0041 58010000 		.4byte	.LASF3
  282 0045 02       		.uleb128 0x2
  283 0046 04       		.byte	0x4
  284 0047 05       		.byte	0x5
- 285 0048 C9000000 		.4byte	.LASF4
+ 285 0048 31010000 		.4byte	.LASF4
  286 004c 02       		.uleb128 0x2
  287 004d 04       		.byte	0x4
  288 004e 07       		.byte	0x7
- 289 004f 5A000000 		.4byte	.LASF5
+ 289 004f C2000000 		.4byte	.LASF5
  290 0053 02       		.uleb128 0x2
  291 0054 08       		.byte	0x8
  292 0055 05       		.byte	0x5
@@ -523,7 +523,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  294 005a 02       		.uleb128 0x2
  295 005b 08       		.byte	0x8
  296 005c 07       		.byte	0x7
- 297 005d 6C000000 		.4byte	.LASF7
+ 297 005d D4000000 		.4byte	.LASF7
  298 0061 03       		.uleb128 0x3
  299 0062 04       		.byte	0x4
  300 0063 05       		.byte	0x5
@@ -533,25 +533,25 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  304 006a 07       		.byte	0x7
  305 006b 1A000000 		.4byte	.LASF8
  306 006f 04       		.uleb128 0x4
- 307 0070 54000000 		.4byte	.LASF14
+ 307 0070 BC000000 		.4byte	.LASF14
  308 0074 03       		.byte	0x3
  309 0075 4C       		.byte	0x4c
  310 0076 30000000 		.4byte	0x30
  311 007a 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 10
 
 
  312 007b 04       		.byte	0x4
  313 007c 04       		.byte	0x4
- 314 007d 6F010000 		.4byte	.LASF9
+ 314 007d 77010000 		.4byte	.LASF9
  315 0081 02       		.uleb128 0x2
  316 0082 08       		.byte	0x8
  317 0083 04       		.byte	0x4
- 318 0084 D2000000 		.4byte	.LASF10
+ 318 0084 3A010000 		.4byte	.LASF10
  319 0088 02       		.uleb128 0x2
  320 0089 01       		.byte	0x1
  321 008a 08       		.byte	0x8
- 322 008b B9000000 		.4byte	.LASF11
+ 322 008b 21010000 		.4byte	.LASF11
  323 008f 05       		.uleb128 0x5
  324 0090 04       		.byte	0x4
  325 0091 07       		.byte	0x7
@@ -569,7 +569,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  337 00a6 23       		.byte	0x23
  338 00a7 00       		.uleb128 0x0
  339 00a8 07       		.uleb128 0x7
- 340 00a9 D9000000 		.4byte	.LASF13
+ 340 00a9 41010000 		.4byte	.LASF13
  341 00ad 02       		.byte	0x2
  342 00ae 43       		.byte	0x43
  343 00af 6F000000 		.4byte	0x6f
@@ -578,13 +578,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  346 00b5 01       		.uleb128 0x1
  347 00b6 00       		.byte	0x0
  348 00b7 04       		.uleb128 0x4
- 349 00b8 7F010000 		.4byte	.LASF15
+ 349 00b8 87010000 		.4byte	.LASF15
  350 00bc 02       		.byte	0x2
  351 00bd 50       		.byte	0x50
  352 00be 92000000 		.4byte	0x92
  353 00c2 08       		.uleb128 0x8
  354 00c3 01       		.byte	0x1
- 355 00c4 41010000 		.4byte	.LASF16
+ 355 00c4 49010000 		.4byte	.LASF16
  356 00c8 01       		.byte	0x1
  357 00c9 40       		.byte	0x40
  358 00ca 01       		.byte	0x1
@@ -593,19 +593,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  361 00d3 00000000 		.4byte	.LLST0
  362 00d7 08       		.uleb128 0x8
  363 00d8 01       		.byte	0x1
- 364 00d9 83000000 		.4byte	.LASF17
+ 364 00d9 EB000000 		.4byte	.LASF17
  365 00dd 01       		.byte	0x1
  366 00de 66       		.byte	0x66
  367 00df 01       		.byte	0x1
  368 00e0 00000000 		.4byte	.LFB1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 11
 
 
  369 00e4 0A000000 		.4byte	.LFE1
  370 00e8 2B000000 		.4byte	.LLST1
  371 00ec 08       		.uleb128 0x8
  372 00ed 01       		.byte	0x1
- 373 00ee A1000000 		.4byte	.LASF18
+ 373 00ee 09010000 		.4byte	.LASF18
  374 00f2 01       		.byte	0x1
  375 00f3 8C       		.byte	0x8c
  376 00f4 01       		.byte	0x1
@@ -614,7 +614,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  379 00fd 56000000 		.4byte	.LLST2
  380 0101 08       		.uleb128 0x8
  381 0102 01       		.byte	0x1
- 382 0103 BE000000 		.4byte	.LASF19
+ 382 0103 26010000 		.4byte	.LASF19
  383 0107 01       		.byte	0x1
  384 0108 AD       		.byte	0xad
  385 0109 01       		.byte	0x1
@@ -622,7 +622,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  387 010e 34000000 		.4byte	.LFE3
  388 0112 81000000 		.4byte	.LLST3
  389 0116 09       		.uleb128 0x9
- 390 0117 27000000 		.4byte	.LASF23
+ 390 0117 B1000000 		.4byte	.LASF23
  391 011b 01       		.byte	0x1
  392 011c 14       		.byte	0x14
  393 011d B7000000 		.4byte	0xb7
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  423 0018 0B       		.uleb128 0xb
  424 0019 0B       		.uleb128 0xb
  425 001a 3E       		.uleb128 0x3e
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 12
 
 
  426 001b 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  480 0051 03       		.uleb128 0x3
  481 0052 0E       		.uleb128 0xe
  482 0053 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 13
 
 
  483 0054 0B       		.uleb128 0xb
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  535      436F6E66 
  535      696700
  536 0021 D7000000 		.4byte	0xd7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 14
 
 
  537 0025 4932535F 		.ascii	"I2S_RestoreConfig\000"
@@ -838,113 +838,115 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 1
  579      6C655374 
  579      61746500 
  580              	.LASF8:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 15
 
 
  581 001a 756E7369 		.ascii	"unsigned int\000"
  581      676E6564 
  581      20696E74 
  581      00
- 582              	.LASF23:
- 583 0027 4932535F 		.ascii	"I2S_backup\000"
- 583      6261636B 
- 583      757000
- 584              	.LASF21:
- 585 0032 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2S_PM.c\000"
- 585      6E657261 
- 585      7465645F 
- 585      536F7572 
- 585      63655C50 
- 586              	.LASF14:
- 587 0054 75696E74 		.ascii	"uint8\000"
- 587      3800
- 588              	.LASF5:
- 589 005a 6C6F6E67 		.ascii	"long unsigned int\000"
- 589      20756E73 
- 589      69676E65 
- 589      6420696E 
- 589      7400
- 590              	.LASF7:
- 591 006c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 591      206C6F6E 
- 591      6720756E 
- 591      7369676E 
- 591      65642069 
- 592              	.LASF17:
- 593 0083 4932535F 		.ascii	"I2S_RestoreConfig\000"
- 593      52657374 
- 593      6F726543 
- 593      6F6E6669 
- 593      6700
- 594              	.LASF20:
- 595 0095 474E5520 		.ascii	"GNU C 4.4.1\000"
- 595      4320342E 
- 595      342E3100 
- 596              	.LASF18:
- 597 00a1 4932535F 		.ascii	"I2S_Sleep\000"
- 597      536C6565 
- 597      7000
- 598              	.LASF1:
- 599 00ab 756E7369 		.ascii	"unsigned char\000"
- 599      676E6564 
- 599      20636861 
- 599      7200
- 600              	.LASF11:
- 601 00b9 63686172 		.ascii	"char\000"
- 601      00
- 602              	.LASF19:
- 603 00be 4932535F 		.ascii	"I2S_Wakeup\000"
- 603      57616B65 
- 603      757000
- 604              	.LASF4:
- 605 00c9 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYoOaPQ.s 			page 16
+ 582              	.LASF22:
+ 583 0027 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 583      665C486F 
+ 583      6D655C44 
+ 583      65736B74 
+ 583      6F705C55 
+ 584 0054 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 584      6E656572 
+ 584      4B69745F 
+ 584      50354C50 
+ 584      5F555342 
+ 585 0085 64696F2E 		.ascii	"dio.cydsn\000"
+ 585      63796473 
+ 585      6E00
+ 586              	.LASF21:
+ 587 008f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2S_PM.c\000"
+ 587      6E657261 
+ 587      7465645F 
+ 587      536F7572 
+ 587      63655C50 
+ 588              	.LASF23:
+ 589 00b1 4932535F 		.ascii	"I2S_backup\000"
+ 589      6261636B 
+ 589      757000
+ 590              	.LASF14:
+ 591 00bc 75696E74 		.ascii	"uint8\000"
+ 591      3800
+ 592              	.LASF5:
+ 593 00c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 593      20756E73 
+ 593      69676E65 
+ 593      6420696E 
+ 593      7400
+ 594              	.LASF7:
+ 595 00d4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 595      206C6F6E 
+ 595      6720756E 
+ 595      7369676E 
+ 595      65642069 
+ 596              	.LASF17:
+ 597 00eb 4932535F 		.ascii	"I2S_RestoreConfig\000"
+ 597      52657374 
+ 597      6F726543 
+ 597      6F6E6669 
+ 597      6700
+ 598              	.LASF20:
+ 599 00fd 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 599      4320342E 
+ 599      342E3100 
+ 600              	.LASF18:
+ 601 0109 4932535F 		.ascii	"I2S_Sleep\000"
+ 601      536C6565 
+ 601      7000
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc3v4ZQG.s 			page 16
 
 
- 605      20696E74 
+ 602              	.LASF1:
+ 603 0113 756E7369 		.ascii	"unsigned char\000"
+ 603      676E6564 
+ 603      20636861 
+ 603      7200
+ 604              	.LASF11:
+ 605 0121 63686172 		.ascii	"char\000"
  605      00
- 606              	.LASF10:
- 607 00d2 646F7562 		.ascii	"double\000"
- 607      6C6500
- 608              	.LASF13:
- 609 00d9 4374726C 		.ascii	"CtrlReg\000"
- 609      52656700 
- 610              	.LASF22:
- 611 00e1 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 611      665C486F 
- 611      6D655C44 
- 611      65736B74 
- 611      6F705C55 
- 612 010d 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 612      5F50354C 
- 612      505F5553 
- 612      425F4175 
- 612      64696F5C 
- 613 013f 6E00     		.ascii	"n\000"
+ 606              	.LASF19:
+ 607 0126 4932535F 		.ascii	"I2S_Wakeup\000"
+ 607      57616B65 
+ 607      757000
+ 608              	.LASF4:
+ 609 0131 6C6F6E67 		.ascii	"long int\000"
+ 609      20696E74 
+ 609      00
+ 610              	.LASF10:
+ 611 013a 646F7562 		.ascii	"double\000"
+ 611      6C6500
+ 612              	.LASF13:
+ 613 0141 4374726C 		.ascii	"CtrlReg\000"
+ 613      52656700 
  614              	.LASF16:
- 615 0141 4932535F 		.ascii	"I2S_SaveConfig\000"
+ 615 0149 4932535F 		.ascii	"I2S_SaveConfig\000"
  615      53617665 
  615      436F6E66 
  615      696700
  616              	.LASF3:
- 617 0150 73686F72 		.ascii	"short unsigned int\000"
+ 617 0158 73686F72 		.ascii	"short unsigned int\000"
  617      7420756E 
  617      7369676E 
  617      65642069 
  617      6E7400
  618              	.LASF0:
- 619 0163 7369676E 		.ascii	"signed char\000"
+ 619 016b 7369676E 		.ascii	"signed char\000"
  619      65642063 
  619      68617200 
  620              	.LASF9:
- 621 016f 666C6F61 		.ascii	"float\000"
+ 621 0177 666C6F61 		.ascii	"float\000"
  621      7400
  622              	.LASF2:
- 623 0175 73686F72 		.ascii	"short int\000"
+ 623 017d 73686F72 		.ascii	"short int\000"
  623      7420696E 
  623      7400
  624              	.LASF15:
- 625 017f 4932535F 		.ascii	"I2S_BACKUP_STRUCT\000"
+ 625 0187 4932535F 		.ascii	"I2S_BACKUP_STRUCT\000"
  625      4241434B 
  625      55505F53 
  625      54525543 

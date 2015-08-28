@@ -1,4 +1,4 @@
---------------- Rebuild Started: 08/26/2015 18:49:46 Project: KitProg_Bootloader, Configuration: ARM GCC 4.4.1 Debug ---------------
+--------------- Rebuild Started: 08/28/2015 18:15:06 Project: KitProg_Bootloader, Configuration: ARM GCC 4.4.1 Debug ---------------
 Deleting file ".\ARM_GCC_441\Debug\main.o"
 Deleting file ".\ARM_GCC_441\Debug\Cm3Start.o"
 Deleting file ".\ARM_GCC_441\Debug\core_cm3.o"
@@ -41,10 +41,10 @@ Deleting file ".\KitProg_Bootloader_timing.html"
 Deleting file ".\ARM_GCC_441\Debug\.deps\C_FILE.P"
 Deleting file ".\ARM_GCC_441\Debug\.deps\ARM_C_FILE.P"
 Deleting file ".\ARM_GCC_441\Debug\.deps\GNU_ARM_ASM_FILE.P"
-cydsfit.exe "-.appdatapath" "C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj" "-d" "CY8C5666LTI-LP005" "-s" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+cydsfit.exe "-.appdatapath" "C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj" "-d" "CY8C5667LTI-LP009" "-s" "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
 Elaborating Design...
 ADD: pft.M0055: warning: Flash Security Warning:  One or more rows of flash have been configured to be read protected; however, debugging has been enabled in the System DWR Editor. This means that the read protected flash rows can still be read via SWD or JTAG. To protect these rows of flash, disable debugging in the System DWR Editor.
- * \\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cydwr (Enable Device Protection)
+ * \\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cydwr (Enable Device Protection)
 HDL Generation ...
 Synthesis ...
 Place and Route ...
@@ -98,7 +98,7 @@ arm-none-eabi-gcc.exe -mthumb -march=armv7-m -mfix-cortex-m3-ldrd -T .\Generated
 arm-none-eabi-objcopy.exe -O ihex .\ARM_GCC_441\Debug\KitProg_Bootloader.elf .\ARM_GCC_441\Debug\KitProg_Bootloader.ihx
 cysymboladdressfinder.exe -f .\ARM_GCC_441\Debug\KitProg_Bootloader.elf -s Bootloader_Checksum -p .\ARM_GCC_441\Debug\cksmaddress.txt -l 0
 cysymboladdressfinder.exe -f .\ARM_GCC_441\Debug\KitProg_Bootloader.elf -s Bootloader_SizeBytes -p .\ARM_GCC_441\Debug\sizeaddress.txt -l 0
-cyhextool -o .\ARM_GCC_441\Debug\KitProg_Bootloader.hex -f .\ARM_GCC_441\Debug\KitProg_Bootloader.ihx -prot .\Generated_Source\PSoC5\protect.hex -id 2E105069 -a EEPROM=90200000:800,PROGRAM=00000000:10000,CONFIG=80000000:2000,PROTECT=90400000:40 -meta 0001 -cunv 00004007 -wonv BC90ACAF -ecc OFF -blver 0200010001 -blcks .\ARM_GCC_441\Debug\cksmaddress.txt -blsize .\ARM_GCC_441\Debug\sizeaddress.txt -flsLine 256 -endian l
-Flash used: 19664 of 65536 bytes (30.0 %).
-SRAM used: 956 of 16384 bytes (5.8 %).
---------------- Rebuild Succeeded: 08/26/2015 18:51:42 ---------------
+cyhextool -o .\ARM_GCC_441\Debug\KitProg_Bootloader.hex -f .\ARM_GCC_441\Debug\KitProg_Bootloader.ihx -prot .\Generated_Source\PSoC5\protect.hex -id 2E109069 -a EEPROM=90200000:800,PROGRAM=00000000:20000,CONFIG=80000000:4000,PROTECT=90400000:80 -meta 0001 -cunv 00004007 -wonv BC90ACAF -ecc OFF -blver 0200010001 -blcks .\ARM_GCC_441\Debug\cksmaddress.txt -blsize .\ARM_GCC_441\Debug\sizeaddress.txt -flsLine 256 -endian l
+Flash used: 19688 of 131072 bytes (15.0 %).
+SRAM used: 956 of 32768 bytes (2.9 %).
+--------------- Rebuild Succeeded: 08/28/2015 18:17:07 ---------------

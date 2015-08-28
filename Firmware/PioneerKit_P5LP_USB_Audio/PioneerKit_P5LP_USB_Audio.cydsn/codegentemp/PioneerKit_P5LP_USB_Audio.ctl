@@ -1,6 +1,6 @@
 -- ======================================================================
 -- PioneerKit_P5LP_USB_Audio.ctl generated from PioneerKit_P5LP_USB_Audio
--- 08/26/2015 at 20:17
+-- 08/28/2015 at 18:40
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

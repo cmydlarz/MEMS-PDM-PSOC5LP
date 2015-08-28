@@ -12,7 +12,7 @@ Verifying bitstream.
 ---------Processing bitstream.---------
 
 Utilized "udb_hv_b@[UDB Pair=(1,0)]"
-Utilized "udb_hc@[UDB Pair=(1,1)]"
+Utilized "udb_hc@[UDB Pair=(1,0)]"
 Utilized "dsi_hc@[DSI=(1,0)][side=bottom]"
 Utilized "dsi_hv_a@[DSI=(1,0)][side=bottom]"
 Utilized "dsi_hv_a@[DSI=(0,1)][side=top]"
@@ -22,93 +22,86 @@ Utilized "dsi_hc@[DSI=(1,5)][side=bottom]"
 
 ---------Propagating signals.---------
 
-Found signal "Net_134" on jack "pld0:out0[UDB=(2,1)]".
+Found signal "\PWM:PWMUDB:final_kill_reg\" on jack "pld0:out1[UDB=(2,0)]".
+Number of connected bvjacks: 1.
+
+    1. Connected jack name: "pld0:in2[UDB=(2,0)]"
+    
+    
+
+Found signal "\PWM:PWMUDB:status_5\" on jack "pld0:out2[UDB=(2,0)]".
+Number of connected bvjacks: 1.
+
+    1. Connected jack name: "statctrl:inout1[UDB=(2,0)]"
+    
+    
+
+Found signal "\PWM:PWMUDB:status_0\" on jack "pld0:out0[UDB=(3,0)]".
+Number of connected bvjacks: 1.
+
+    1. Connected jack name: "statctrl:in0[UDB=(2,0)]"
+    
+    
+
+Found signal "\PWM:PWMUDB:prevCompare1\" on jack "pld0:out1[UDB=(3,0)]".
+Number of connected bvjacks: 1.
+
+    1. Connected jack name: "pld0:in5[UDB=(3,0)]"
+    
+    
+
+Found signal "\PWM:PWMUDB:runmode_enable\" on jack "pld0:out2[UDB=(3,0)]".
+Number of connected bvjacks: 2.
+
+    1. Connected jack name: "dp:in1[UDB=(2,0)]"
+    
+    2. Connected jack name: "dp:in1[UDB=(3,0)]"
+    
+    
+
+Found signal "Net_134" on jack "pld0:out3[UDB=(3,0)]".
 Number of connected bvjacks: 1.
 
     1. Connected jack name: "io_ijack_1[IOP=(3)]"
     
     
 
-Found signal "\PWM:PWMUDB:prevCompare1\" on jack "pld0:out1[UDB=(2,1)]".
+Found signal "\PWM:PWMUDB:status_3\" on jack "dp:out1[UDB=(3,0)]".
 Number of connected bvjacks: 1.
 
-    1. Connected jack name: "pld0:in2[UDB=(2,1)]"
+    1. Connected jack name: "statctrl:in3[UDB=(2,0)]"
     
     
 
-Found signal "\PWM:PWMUDB:status_0\" on jack "pld0:out3[UDB=(2,1)]".
+Found signal "\PWM:PWMUDB:tc_i\" on jack "dp:out2[UDB=(3,0)]".
+Number of connected bvjacks: 3.
+
+    1. Connected jack name: "statctrl:in2[UDB=(2,0)]"
+    
+    2. Connected jack name: "dp:in3[UDB=(2,0)]"
+    
+    3. Connected jack name: "dp:in3[UDB=(3,0)]"
+    
+    
+
+Found signal "\PWM:PWMUDB:cmp1_eq\" on jack "dp:out3[UDB=(3,0)]".
 Number of connected bvjacks: 1.
 
-    1. Connected jack name: "statctrl:in0[UDB=(2,1)]"
+    1. Connected jack name: "pld0:in9[UDB=(3,0)]"
     
     
 
-Found signal "\PWM:PWMUDB:runmode_enable\" on jack "pld1:out3[UDB=(2,1)]".
-Number of connected bvjacks: 2.
-
-    1. Connected jack name: "dp:in0[UDB=(2,1)]"
-    
-    2. Connected jack name: "dp:in0[UDB=(3,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:tc_i\" on jack "dp:out0[UDB=(2,1)]".
+Found signal "\PWM:PWMUDB:cmp1_less\" on jack "dp:out5[UDB=(3,0)]".
 Number of connected bvjacks: 1.
 
-    1. Connected jack name: "statctrl:in2[UDB=(2,1)]"
+    1. Connected jack name: "pld0:in7[UDB=(3,0)]"
     
     
 
-Found signal "\PWM:PWMUDB:status_3\" on jack "dp:out1[UDB=(2,1)]".
+Found signal "\PWM:PWMUDB:ctrl_enable\" on jack "statctrl:out7[UDB=(3,0)]".
 Number of connected bvjacks: 1.
 
-    1. Connected jack name: "statctrl:in3[UDB=(2,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:cmp1_eq\" on jack "dp:out3[UDB=(2,1)]".
-Number of connected bvjacks: 1.
-
-    1. Connected jack name: "pld0:in9[UDB=(2,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:cmp1_less\" on jack "dp:out4[UDB=(2,1)]".
-Number of connected bvjacks: 1.
-
-    1. Connected jack name: "pld0:in10[UDB=(2,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:tc_i\" on jack "dp:out5[UDB=(2,1)]".
-Number of connected bvjacks: 2.
-
-    1. Connected jack name: "dp:in4[UDB=(2,1)]"
-    
-    2. Connected jack name: "dp:in4[UDB=(3,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:ctrl_enable\" on jack "statctrl:out7[UDB=(2,1)]".
-Number of connected bvjacks: 2.
-
-    1. Connected jack name: "pld0:in4[UDB=(2,1)]"
-    
-    2. Connected jack name: "pld1:in4[UDB=(2,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:final_kill_reg\" on jack "pld0:out0[UDB=(3,1)]".
-Number of connected bvjacks: 1.
-
-    1. Connected jack name: "pld0:in4[UDB=(3,1)]"
-    
-    
-
-Found signal "\PWM:PWMUDB:status_5\" on jack "pld0:out2[UDB=(3,1)]".
-Number of connected bvjacks: 1.
-
-    1. Connected jack name: "statctrl:inout1[UDB=(2,1)]"
+    1. Connected jack name: "pld0:in11[UDB=(3,0)]"
     
     
 

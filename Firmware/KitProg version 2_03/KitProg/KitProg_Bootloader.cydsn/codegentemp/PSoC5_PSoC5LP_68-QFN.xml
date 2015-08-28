@@ -180,8 +180,9 @@
       <ffbterm ffbtype="Abuf" ffbid="0" term="vout" required="false" />
       <function name="OPAMP0OUT" />
     </pin>
-    <pin number="50" name="P0[2]" pinSide="EAST" padSide="NORTH" portId="0" pinId="2" ioSupplyPin="Vio0" ioSupplyPinNo="52" capabilities="0x0000020000000027">
+    <pin number="50" name="P0[2]" pinSide="EAST" padSide="NORTH" portId="0" pinId="2" ioSupplyPin="Vio0" ioSupplyPinNo="52" capabilities="0x0000020010000027">
       <ffbterm ffbtype="Abuf" ffbid="0" term="vplus" required="false" />
+      <ffbterm ffbtype="SAR" ffbid="1" term="ext_pin" required="true" />
       <function name="OPAMP0+" />
       <function name="EXTSAR1" />
     </pin>

@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
   20:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** #if !defined(PDM_CIC_Status_Reg_sts_intr_sts_reg__REMOVED) /* Check for removal by optimization */
   21:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
   22:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
@@ -91,8 +91,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
   43              		.cfi_def_cfa_register 7
   39:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     return PDM_CIC_Status_Reg_Status;
   44              		.loc 1 39 0
-  45 0004 46F26C43 		movw	r3, #:lower16:1073767532
-  46 0008 C4F20003 		movt	r3, #:upper16:1073767532
+  45 0004 46F26843 		movw	r3, #:lower16:1073767528
+  46 0008 C4F20003 		movt	r3, #:upper16:1073767528
   47 000c 1B78     		ldrb	r3, [r3, #0]
   48 000e DBB2     		uxtb	r3, r3
   40:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
   44:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_InterruptEnable
   45:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
   46:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 3
 
 
   47:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
@@ -156,10 +156,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
   83 000c FB71     		strb	r3, [r7, #7]
   61:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Aux_Ctrl |= PDM_CIC_Status_Reg_STATUS_INTR_ENBL;
   84              		.loc 1 61 0
-  85 000e 46F29C43 		movw	r3, #:lower16:1073767580
-  86 0012 C4F20003 		movt	r3, #:upper16:1073767580
-  87 0016 46F29C42 		movw	r2, #:lower16:1073767580
-  88 001a C4F20002 		movt	r2, #:upper16:1073767580
+  85 000e 46F29843 		movw	r3, #:lower16:1073767576
+  86 0012 C4F20003 		movt	r3, #:upper16:1073767576
+  87 0016 46F29842 		movw	r2, #:lower16:1073767576
+  88 001a C4F20002 		movt	r2, #:upper16:1073767576
   89 001e 1278     		ldrb	r2, [r2, #0]
   90 0020 D2B2     		uxtb	r2, r2
   91 0022 42F01002 		orr	r2, r2, #16
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  102              		.cfi_endproc
  103              	.LFE1:
  104              		.size	PDM_CIC_Status_Reg_InterruptEnable, .-PDM_CIC_Status_Reg_InterruptEnable
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 4
 
 
  105 003a 00BF     		.section	.text.PDM_CIC_Status_Reg_InterruptDisable,"ax",%progbits
@@ -230,15 +230,15 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  131 000c FB71     		strb	r3, [r7, #7]
   84:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Aux_Ctrl &= (uint8)(~PDM_CIC_Status_Reg_STATUS_INTR_ENBL);
  132              		.loc 1 84 0
- 133 000e 46F29C43 		movw	r3, #:lower16:1073767580
- 134 0012 C4F20003 		movt	r3, #:upper16:1073767580
- 135 0016 46F29C42 		movw	r2, #:lower16:1073767580
- 136 001a C4F20002 		movt	r2, #:upper16:1073767580
+ 133 000e 46F29843 		movw	r3, #:lower16:1073767576
+ 134 0012 C4F20003 		movt	r3, #:upper16:1073767576
+ 135 0016 46F29842 		movw	r2, #:lower16:1073767576
+ 136 001a C4F20002 		movt	r2, #:upper16:1073767576
  137 001e 1278     		ldrb	r2, [r2, #0]
  138 0020 D2B2     		uxtb	r2, r2
  139 0022 02F0EF02 		and	r2, r2, #239
  140 0026 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 5
 
 
   85:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     CyExitCriticalSection(interruptState);
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  175 0006 0346     		mov	r3, r0
  176 0008 FB71     		strb	r3, [r7, #7]
  105:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     #if(PDM_CIC_Status_Reg_INPUTS < 8u)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 6
 
 
  106:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     	mask &= (uint8)((((uint8)1u) << PDM_CIC_Status_Reg_INPUTS) - 1u);
@@ -309,8 +309,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  107:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 	#endif /* End PDM_CIC_Status_Reg_INPUTS < 8u */
  108:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Mask = mask;
  181              		.loc 1 108 0
- 182 0012 46F28C43 		movw	r3, #:lower16:1073767564
- 183 0016 C4F20003 		movt	r3, #:upper16:1073767564
+ 182 0012 46F28843 		movw	r3, #:lower16:1073767560
+ 183 0016 C4F20003 		movt	r3, #:upper16:1073767560
  184 001a FA79     		ldrb	r2, [r7, #7]
  185 001c 1A70     		strb	r2, [r3, #0]
  109:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
@@ -358,15 +358,15 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  209              		.cfi_def_cfa_offset 4
  210 0002 00AF     		add	r7, sp, #0
  211              		.cfi_offset 7, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 7
 
 
  212              	.LCFI12:
  213              		.cfi_def_cfa_register 7
  128:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     return PDM_CIC_Status_Reg_Status_Mask;
  214              		.loc 1 128 0
- 215 0004 46F28C43 		movw	r3, #:lower16:1073767564
- 216 0008 C4F20003 		movt	r3, #:upper16:1073767564
+ 215 0004 46F28843 		movw	r3, #:lower16:1073767560
+ 216 0008 C4F20003 		movt	r3, #:upper16:1073767560
  217 000c 1B78     		ldrb	r3, [r3, #0]
  218 000e DBB2     		uxtb	r3, r3
  129:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  264 0052 3A000000 		.4byte	.LFE1
  265 0056 0200     		.2byte	0x2
  266 0058 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 8
 
 
  267 0059 10       		.sleb128 16
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  321 00e3 0200     		.2byte	0x2
  322 00e5 7D       		.byte	0x7d
  323 00e6 04       		.sleb128 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 9
 
 
  324 00e7 04000000 		.4byte	.LCFI12
@@ -495,10 +495,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  335 0006 00000000 		.4byte	.Ldebug_abbrev0
  336 000a 04       		.byte	0x4
  337 000b 01       		.uleb128 0x1
- 338 000c D6000000 		.4byte	.LASF18
+ 338 000c 1A010000 		.4byte	.LASF18
  339 0010 01       		.byte	0x1
  340 0011 38000000 		.4byte	.LASF19
- 341 0015 05010000 		.4byte	.LASF20
+ 341 0015 AD000000 		.4byte	.LASF20
  342 0019 00000000 		.4byte	0x0
  343 001d 00000000 		.4byte	0x0
  344 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -506,23 +506,23 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  346 0029 02       		.uleb128 0x2
  347 002a 01       		.byte	0x1
  348 002b 06       		.byte	0x6
- 349 002c 78010000 		.4byte	.LASF0
+ 349 002c 80010000 		.4byte	.LASF0
  350 0030 02       		.uleb128 0x2
  351 0031 01       		.byte	0x1
  352 0032 08       		.byte	0x8
- 353 0033 E2000000 		.4byte	.LASF1
+ 353 0033 26010000 		.4byte	.LASF1
  354 0037 02       		.uleb128 0x2
  355 0038 02       		.byte	0x2
  356 0039 05       		.byte	0x5
- 357 003a A6010000 		.4byte	.LASF2
+ 357 003a AE010000 		.4byte	.LASF2
  358 003e 02       		.uleb128 0x2
  359 003f 02       		.byte	0x2
  360 0040 07       		.byte	0x7
- 361 0041 65010000 		.4byte	.LASF3
+ 361 0041 6D010000 		.4byte	.LASF3
  362 0045 02       		.uleb128 0x2
  363 0046 04       		.byte	0x4
  364 0047 05       		.byte	0x5
- 365 0048 F5000000 		.4byte	.LASF4
+ 365 0048 39010000 		.4byte	.LASF4
  366 004c 02       		.uleb128 0x2
  367 004d 04       		.byte	0x4
  368 004e 07       		.byte	0x7
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  378 0061 03       		.uleb128 0x3
  379 0062 04       		.byte	0x4
  380 0063 05       		.byte	0x5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 10
 
 
  381 0064 696E7400 		.ascii	"int\000"
@@ -554,15 +554,15 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  391 007a 02       		.uleb128 0x2
  392 007b 04       		.byte	0x4
  393 007c 04       		.byte	0x4
- 394 007d A0010000 		.4byte	.LASF9
+ 394 007d A8010000 		.4byte	.LASF9
  395 0081 02       		.uleb128 0x2
  396 0082 08       		.byte	0x8
  397 0083 04       		.byte	0x4
- 398 0084 FE000000 		.4byte	.LASF10
+ 398 0084 66010000 		.4byte	.LASF10
  399 0088 02       		.uleb128 0x2
  400 0089 01       		.byte	0x1
  401 008a 08       		.byte	0x8
- 402 008b F0000000 		.4byte	.LASF11
+ 402 008b 34010000 		.4byte	.LASF11
  403 008f 05       		.uleb128 0x5
  404 0090 04       		.byte	0x4
  405 0091 07       		.byte	0x7
@@ -578,7 +578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  415 00a7 00000000 		.4byte	.LLST0
  416 00ab 07       		.uleb128 0x7
  417 00ac 01       		.byte	0x1
- 418 00ad B0010000 		.4byte	.LASF12
+ 418 00ad B8010000 		.4byte	.LASF12
  419 00b1 01       		.byte	0x1
  420 00b2 39       		.byte	0x39
  421 00b3 01       		.byte	0x1
@@ -587,7 +587,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  424 00bc 2B000000 		.4byte	.LLST1
  425 00c0 D3000000 		.4byte	0xd3
  426 00c4 08       		.uleb128 0x8
- 427 00c5 D3010000 		.4byte	.LASF14
+ 427 00c5 DB010000 		.4byte	.LASF14
  428 00c9 01       		.byte	0x1
  429 00ca 3B       		.byte	0x3b
  430 00cb 6F000000 		.4byte	0x6f
@@ -597,8 +597,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  434 00d2 00       		.byte	0x0
  435 00d3 07       		.uleb128 0x7
  436 00d4 01       		.byte	0x1
- 437 00d5 AD000000 		.4byte	.LASF13
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 11
+ 437 00d5 42010000 		.4byte	.LASF13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 11
 
 
  438 00d9 01       		.byte	0x1
@@ -609,7 +609,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  443 00e4 62000000 		.4byte	.LLST2
  444 00e8 FB000000 		.4byte	0xfb
  445 00ec 08       		.uleb128 0x8
- 446 00ed D3010000 		.4byte	.LASF14
+ 446 00ed DB010000 		.4byte	.LASF14
  447 00f1 01       		.byte	0x1
  448 00f2 52       		.byte	0x52
  449 00f3 6F000000 		.4byte	0x6f
@@ -628,7 +628,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  462 010c 99000000 		.4byte	.LLST3
  463 0110 23010000 		.4byte	0x123
  464 0114 09       		.uleb128 0x9
- 465 0115 D1000000 		.4byte	.LASF22
+ 465 0115 15010000 		.4byte	.LASF22
  466 0119 01       		.byte	0x1
  467 011a 67       		.byte	0x67
  468 011b 6F000000 		.4byte	0x6f
@@ -638,7 +638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  472 0122 00       		.byte	0x0
  473 0123 06       		.uleb128 0x6
  474 0124 01       		.byte	0x1
- 475 0125 84010000 		.4byte	.LASF17
+ 475 0125 8C010000 		.4byte	.LASF17
  476 0129 01       		.byte	0x1
  477 012a 7E       		.byte	0x7e
  478 012b 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  492 0007 03       		.uleb128 0x3
  493 0008 0E       		.uleb128 0xe
  494 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 12
 
 
  495 000a 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  549 0040 00       		.byte	0x0
  550 0041 06       		.uleb128 0x6
  551 0042 2E       		.uleb128 0x2e
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 13
 
 
  552 0043 00       		.byte	0x0
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  606 0079 13       		.uleb128 0x13
  607 007a 02       		.uleb128 0x2
  608 007b 0A       		.uleb128 0xa
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 14
 
 
  609 007c 00       		.byte	0x0
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  643              		.section	.debug_aranges,"",%progbits
  644 0000 3C000000 		.4byte	0x3c
  645 0004 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 15
 
 
  646 0006 00000000 		.4byte	.Ldebug_info0
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  687      536F7572 
  687      63655C50 
  688              	.LASF21:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 16
 
 
  689 0066 75696E74 		.ascii	"uint8\000"
@@ -921,80 +921,82 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
  695      6720756E 
  695      7369676E 
  695      65642069 
- 696              	.LASF13:
- 697 00ad 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptDisable\000"
- 697      4349435F 
- 697      53746174 
- 697      75735F52 
- 697      65675F49 
- 698              	.LASF22:
- 699 00d1 6D61736B 		.ascii	"mask\000"
- 699      00
- 700              	.LASF18:
- 701 00d6 474E5520 		.ascii	"GNU C 4.4.1\000"
- 701      4320342E 
- 701      342E3100 
- 702              	.LASF1:
- 703 00e2 756E7369 		.ascii	"unsigned char\000"
- 703      676E6564 
- 703      20636861 
- 703      7200
- 704              	.LASF11:
- 705 00f0 63686172 		.ascii	"char\000"
- 705      00
- 706              	.LASF4:
- 707 00f5 6C6F6E67 		.ascii	"long int\000"
- 707      20696E74 
+ 696              	.LASF20:
+ 697 00ad 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 697      665C486F 
+ 697      6D655C44 
+ 697      65736B74 
+ 697      6F705C55 
+ 698 00da 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 698      6E656572 
+ 698      4B69745F 
+ 698      50354C50 
+ 698      5F555342 
+ 699 010b 64696F2E 		.ascii	"dio.cydsn\000"
+ 699      63796473 
+ 699      6E00
+ 700              	.LASF22:
+ 701 0115 6D61736B 		.ascii	"mask\000"
+ 701      00
+ 702              	.LASF18:
+ 703 011a 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 703      4320342E 
+ 703      342E3100 
+ 704              	.LASF1:
+ 705 0126 756E7369 		.ascii	"unsigned char\000"
+ 705      676E6564 
+ 705      20636861 
+ 705      7200
+ 706              	.LASF11:
+ 707 0134 63686172 		.ascii	"char\000"
  707      00
- 708              	.LASF10:
- 709 00fe 646F7562 		.ascii	"double\000"
- 709      6C6500
- 710              	.LASF20:
- 711 0105 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 711      665C486F 
- 711      6D655C44 
- 711      65736B74 
- 711      6F705C55 
- 712 0131 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 712      5F50354C 
- 712      505F5553 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 17
+ 708              	.LASF4:
+ 709 0139 6C6F6E67 		.ascii	"long int\000"
+ 709      20696E74 
+ 709      00
+ 710              	.LASF13:
+ 711 0142 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptDisable\000"
+ 711      4349435F 
+ 711      53746174 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cccWMgio.s 			page 17
 
 
- 712      425F4175 
- 712      64696F5C 
- 713 0163 6E00     		.ascii	"n\000"
+ 711      75735F52 
+ 711      65675F49 
+ 712              	.LASF10:
+ 713 0166 646F7562 		.ascii	"double\000"
+ 713      6C6500
  714              	.LASF3:
- 715 0165 73686F72 		.ascii	"short unsigned int\000"
+ 715 016d 73686F72 		.ascii	"short unsigned int\000"
  715      7420756E 
  715      7369676E 
  715      65642069 
  715      6E7400
  716              	.LASF0:
- 717 0178 7369676E 		.ascii	"signed char\000"
+ 717 0180 7369676E 		.ascii	"signed char\000"
  717      65642063 
  717      68617200 
  718              	.LASF17:
- 719 0184 50444D5F 		.ascii	"PDM_CIC_Status_Reg_ReadMask\000"
+ 719 018c 50444D5F 		.ascii	"PDM_CIC_Status_Reg_ReadMask\000"
  719      4349435F 
  719      53746174 
  719      75735F52 
  719      65675F52 
  720              	.LASF9:
- 721 01a0 666C6F61 		.ascii	"float\000"
+ 721 01a8 666C6F61 		.ascii	"float\000"
  721      7400
  722              	.LASF2:
- 723 01a6 73686F72 		.ascii	"short int\000"
+ 723 01ae 73686F72 		.ascii	"short int\000"
  723      7420696E 
  723      7400
  724              	.LASF12:
- 725 01b0 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptEnable\000"
+ 725 01b8 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptEnable\000"
  725      4349435F 
  725      53746174 
  725      75735F52 
  725      65675F49 
  726              	.LASF14:
- 727 01d3 696E7465 		.ascii	"interruptState\000"
+ 727 01db 696E7465 		.ascii	"interruptState\000"
  727      72727570 
  727      74537461 
  727      746500

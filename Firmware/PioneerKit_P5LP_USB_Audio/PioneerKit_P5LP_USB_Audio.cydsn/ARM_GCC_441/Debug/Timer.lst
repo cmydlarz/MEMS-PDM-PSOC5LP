@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
   14:.\Timer.c     **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
   15:.\Timer.c     **** * license to copy, use, modify, create derivative works of, and compile the
   16:.\Timer.c     **** * Cypress Source Code and derivative works for the sole purpose of creating
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 2
 
 
   17:.\Timer.c     **** * custom software in support of licensee product to be used only in conjunction
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
   43              	.LCFI0:
   44              		.cfi_def_cfa_offset 8
   45 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 3
 
 
   46              		.cfi_offset 14, -4
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
   85 005a DAB2     		uxtb	r2, r3
   86 005c 40F20003 		movw	r3, #:lower16:clockSwitchTimer
   87 0060 C0F20003 		movt	r3, #:upper16:clockSwitchTimer
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 4
 
 
   88 0064 1A70     		strb	r2, [r3, #0]
@@ -231,29 +231,29 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  127 0006 00000000 		.4byte	.Ldebug_abbrev0
  128 000a 04       		.byte	0x4
  129 000b 01       		.uleb128 0x1
- 130 000c 71000000 		.4byte	.LASF16
+ 130 000c D9000000 		.4byte	.LASF16
  131 0010 01       		.byte	0x1
- 132 0011 45010000 		.4byte	.LASF17
- 133 0015 BB000000 		.4byte	.LASF18
+ 132 0011 4D010000 		.4byte	.LASF17
+ 133 0015 2E000000 		.4byte	.LASF18
  134 0019 00000000 		.4byte	0x0
  135 001d 00000000 		.4byte	0x0
  136 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 5
 
 
  137 0025 00000000 		.4byte	.Ldebug_line0
  138 0029 02       		.uleb128 0x2
  139 002a 01       		.byte	0x1
  140 002b 06       		.byte	0x6
- 141 002c 28010000 		.4byte	.LASF0
+ 141 002c 30010000 		.4byte	.LASF0
  142 0030 02       		.uleb128 0x2
  143 0031 01       		.byte	0x1
  144 0032 08       		.byte	0x8
- 145 0033 7D000000 		.4byte	.LASF1
+ 145 0033 E5000000 		.4byte	.LASF1
  146 0037 02       		.uleb128 0x2
  147 0038 02       		.byte	0x2
  148 0039 05       		.byte	0x5
- 149 003a 55010000 		.4byte	.LASF2
+ 149 003a 5D010000 		.4byte	.LASF2
  150 003e 02       		.uleb128 0x2
  151 003f 02       		.byte	0x2
  152 0040 07       		.byte	0x7
@@ -261,11 +261,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  154 0045 02       		.uleb128 0x2
  155 0046 04       		.byte	0x4
  156 0047 05       		.byte	0x5
- 157 0048 B2000000 		.4byte	.LASF4
+ 157 0048 1A010000 		.4byte	.LASF4
  158 004c 02       		.uleb128 0x2
  159 004d 04       		.byte	0x4
  160 004e 07       		.byte	0x7
- 161 004f 48000000 		.4byte	.LASF5
+ 161 004f B0000000 		.4byte	.LASF5
  162 0053 02       		.uleb128 0x2
  163 0054 08       		.byte	0x8
  164 0055 05       		.byte	0x5
@@ -273,7 +273,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  166 005a 02       		.uleb128 0x2
  167 005b 08       		.byte	0x8
  168 005c 07       		.byte	0x7
- 169 005d 5A000000 		.4byte	.LASF7
+ 169 005d C2000000 		.4byte	.LASF7
  170 0061 03       		.uleb128 0x3
  171 0062 04       		.byte	0x4
  172 0063 05       		.byte	0x5
@@ -283,31 +283,31 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  176 006a 07       		.byte	0x7
  177 006b 21000000 		.4byte	.LASF8
  178 006f 04       		.uleb128 0x4
- 179 0070 42000000 		.4byte	.LASF19
+ 179 0070 AA000000 		.4byte	.LASF19
  180 0074 03       		.byte	0x3
  181 0075 4C       		.byte	0x4c
  182 0076 30000000 		.4byte	0x30
  183 007a 02       		.uleb128 0x2
  184 007b 04       		.byte	0x4
  185 007c 04       		.byte	0x4
- 186 007d 4F010000 		.4byte	.LASF9
+ 186 007d 57010000 		.4byte	.LASF9
  187 0081 02       		.uleb128 0x2
  188 0082 08       		.byte	0x8
  189 0083 04       		.byte	0x4
- 190 0084 AB000000 		.4byte	.LASF10
+ 190 0084 13010000 		.4byte	.LASF10
  191 0088 02       		.uleb128 0x2
  192 0089 01       		.byte	0x1
  193 008a 08       		.byte	0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 6
 
 
- 194 008b 8B000000 		.4byte	.LASF11
+ 194 008b F3000000 		.4byte	.LASF11
  195 008f 05       		.uleb128 0x5
  196 0090 04       		.byte	0x4
  197 0091 07       		.byte	0x7
  198 0092 06       		.uleb128 0x6
  199 0093 01       		.byte	0x1
- 200 0094 90000000 		.4byte	.LASF20
+ 200 0094 F8000000 		.4byte	.LASF20
  201 0098 01       		.byte	0x1
  202 0099 40       		.byte	0x40
  203 009a 01       		.byte	0x1
@@ -315,7 +315,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  205 009f 76000000 		.4byte	.LFE29
  206 00a3 00000000 		.4byte	.LLST0
  207 00a7 07       		.uleb128 0x7
- 208 00a8 1B010000 		.4byte	.LASF12
+ 208 00a8 23010000 		.4byte	.LASF12
  209 00ac 02       		.byte	0x2
  210 00ad CE06     		.2byte	0x6ce
  211 00af B5000000 		.4byte	0xb5
@@ -324,21 +324,21 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  214 00b5 08       		.uleb128 0x8
  215 00b6 61000000 		.4byte	0x61
  216 00ba 09       		.uleb128 0x9
- 217 00bb 2E000000 		.4byte	.LASF13
+ 217 00bb 96000000 		.4byte	.LASF13
  218 00bf 01       		.byte	0x1
  219 00c0 2A       		.byte	0x2a
  220 00c1 6F000000 		.4byte	0x6f
  221 00c5 01       		.byte	0x1
  222 00c6 01       		.byte	0x1
  223 00c7 09       		.uleb128 0x9
- 224 00c8 34010000 		.4byte	.LASF14
+ 224 00c8 3C010000 		.4byte	.LASF14
  225 00cc 01       		.byte	0x1
  226 00cd 2C       		.byte	0x2c
  227 00ce 6F000000 		.4byte	0x6f
  228 00d2 01       		.byte	0x1
  229 00d3 01       		.byte	0x1
  230 00d4 0A       		.uleb128 0xa
- 231 00d5 5F010000 		.4byte	.LASF15
+ 231 00d5 67010000 		.4byte	.LASF15
  232 00d9 01       		.byte	0x1
  233 00da 30       		.byte	0x30
  234 00db 6F000000 		.4byte	0x6f
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  248 0007 03       		.uleb128 0x3
  249 0008 0E       		.uleb128 0xe
  250 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 7
 
 
  251 000a 0E       		.uleb128 0xe
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  305 0040 00       		.byte	0x0
  306 0041 06       		.uleb128 0x6
  307 0042 2E       		.uleb128 0x2e
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 8
 
 
  308 0043 00       		.byte	0x0
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  362 0079 3F       		.uleb128 0x3f
  363 007a 0C       		.uleb128 0xc
  364 007b 3C       		.uleb128 0x3c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 9
 
 
  365 007c 0C       		.uleb128 0xc
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  411 0004 00000000 		.4byte	.Letext0
  412 0008 00000000 		.4byte	.LFB29
  413 000c 76000000 		.4byte	.LFE29
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 10
 
 
  414 0010 00000000 		.4byte	0x0
@@ -560,95 +560,97 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 1
  422      676E6564 
  422      20696E74 
  422      00
- 423              	.LASF13:
- 424 002e 73776974 		.ascii	"switchDebounceTimer\000"
- 424      63684465 
- 424      626F756E 
- 424      63655469 
- 424      6D657200 
- 425              	.LASF19:
- 426 0042 75696E74 		.ascii	"uint8\000"
- 426      3800
- 427              	.LASF5:
- 428 0048 6C6F6E67 		.ascii	"long unsigned int\000"
- 428      20756E73 
- 428      69676E65 
- 428      6420696E 
- 428      7400
- 429              	.LASF7:
- 430 005a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 430      206C6F6E 
- 430      6720756E 
- 430      7369676E 
- 430      65642069 
- 431              	.LASF16:
- 432 0071 474E5520 		.ascii	"GNU C 4.4.1\000"
- 432      4320342E 
- 432      342E3100 
- 433              	.LASF1:
- 434 007d 756E7369 		.ascii	"unsigned char\000"
- 434      676E6564 
- 434      20636861 
- 434      7200
- 435              	.LASF11:
- 436 008b 63686172 		.ascii	"char\000"
- 436      00
- 437              	.LASF20:
- 438 0090 48616E64 		.ascii	"HandleApplicationTimerTick\000"
- 438      6C654170 
- 438      706C6963 
- 438      6174696F 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccNYRq2a.s 			page 11
+ 423              	.LASF18:
+ 424 002e 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 424      665C486F 
+ 424      6D655C44 
+ 424      65736B74 
+ 424      6F705C55 
+ 425 005b 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 425      6E656572 
+ 425      4B69745F 
+ 425      50354C50 
+ 425      5F555342 
+ 426 008c 64696F2E 		.ascii	"dio.cydsn\000"
+ 426      63796473 
+ 426      6E00
+ 427              	.LASF13:
+ 428 0096 73776974 		.ascii	"switchDebounceTimer\000"
+ 428      63684465 
+ 428      626F756E 
+ 428      63655469 
+ 428      6D657200 
+ 429              	.LASF19:
+ 430 00aa 75696E74 		.ascii	"uint8\000"
+ 430      3800
+ 431              	.LASF5:
+ 432 00b0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 432      20756E73 
+ 432      69676E65 
+ 432      6420696E 
+ 432      7400
+ 433              	.LASF7:
+ 434 00c2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 434      206C6F6E 
+ 434      6720756E 
+ 434      7369676E 
+ 434      65642069 
+ 435              	.LASF16:
+ 436 00d9 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 436      4320342E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8tryTH.s 			page 11
 
 
- 438      6E54696D 
- 439              	.LASF10:
- 440 00ab 646F7562 		.ascii	"double\000"
- 440      6C6500
- 441              	.LASF4:
- 442 00b2 6C6F6E67 		.ascii	"long int\000"
- 442      20696E74 
- 442      00
- 443              	.LASF18:
- 444 00bb 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 444      665C486F 
- 444      6D655C44 
- 444      65736B74 
- 444      6F705C55 
- 445 00e7 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 445      5F50354C 
- 445      505F5553 
- 445      425F4175 
- 445      64696F5C 
- 446 0119 6E00     		.ascii	"n\000"
+ 436      342E3100 
+ 437              	.LASF1:
+ 438 00e5 756E7369 		.ascii	"unsigned char\000"
+ 438      676E6564 
+ 438      20636861 
+ 438      7200
+ 439              	.LASF11:
+ 440 00f3 63686172 		.ascii	"char\000"
+ 440      00
+ 441              	.LASF20:
+ 442 00f8 48616E64 		.ascii	"HandleApplicationTimerTick\000"
+ 442      6C654170 
+ 442      706C6963 
+ 442      6174696F 
+ 442      6E54696D 
+ 443              	.LASF10:
+ 444 0113 646F7562 		.ascii	"double\000"
+ 444      6C6500
+ 445              	.LASF4:
+ 446 011a 6C6F6E67 		.ascii	"long int\000"
+ 446      20696E74 
+ 446      00
  447              	.LASF12:
- 448 011b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 448 0123 49544D5F 		.ascii	"ITM_RxBuffer\000"
  448      52784275 
  448      66666572 
  448      00
  449              	.LASF0:
- 450 0128 7369676E 		.ascii	"signed char\000"
+ 450 0130 7369676E 		.ascii	"signed char\000"
  450      65642063 
  450      68617200 
  451              	.LASF14:
- 452 0134 636C6F63 		.ascii	"clockSwitchTimer\000"
+ 452 013c 636C6F63 		.ascii	"clockSwitchTimer\000"
  452      6B537769 
  452      74636854 
  452      696D6572 
  452      00
  453              	.LASF17:
- 454 0145 2E5C5469 		.ascii	".\\Timer.c\000"
+ 454 014d 2E5C5469 		.ascii	".\\Timer.c\000"
  454      6D65722E 
  454      6300
  455              	.LASF9:
- 456 014f 666C6F61 		.ascii	"float\000"
+ 456 0157 666C6F61 		.ascii	"float\000"
  456      7400
  457              	.LASF2:
- 458 0155 73686F72 		.ascii	"short int\000"
+ 458 015d 73686F72 		.ascii	"short int\000"
  458      7420696E 
  458      7400
  459              	.LASF15:
- 460 015f 6170706C 		.ascii	"applicationTimerTick\000"
+ 460 0167 6170706C 		.ascii	"applicationTimerTick\000"
  460      69636174 
  460      696F6E54 
  460      696D6572 

@@ -87,8 +87,8 @@ uint16 result = 0;
 *******************************************************************************/
 void VoltageMonitorInit(void)
 {
-	ADC_Voltage_Target_Start();
-	ADC_Voltage_Target_StartConvert();
+	//ADC_Voltage_Target_Start();
+	//ADC_Voltage_Target_StartConvert();
 	GetRange();
 }
 
@@ -108,11 +108,11 @@ void VoltageMonitorInit(void)
 void GetRange(void)
 {
 	/* Select the known voltage source VRef for the ADC */
-	AMux_Select(0);
+	//AMux_Select(0);
 	
 	/* Calculate the counts for the known voltage source */
-	ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
-	result = ADC_Voltage_Target_GetResult16();
+	//ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
+	//result = ADC_Voltage_Target_GetResult16();
 	
 	/* Determine the VDD range based on the count value for known input source */
 	if(result < THRESHOLD)
@@ -140,14 +140,14 @@ void GetRange(void)
 uint16 GetVoltage(void)
 {
 	uint16 targetVoltage = ZERO;
-	uint16 targetValue;	
+	uint16 targetValue = ZERO;	
 	
 	/* Seelct the Vtarget input */
-	AMux_Select(1);
+	//AMux_Select(1);
 	
 	/* Calculate the ADC input value */
-	ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
-	targetValue = ADC_Voltage_Target_GetResult16();
+	//ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
+	//targetValue = ADC_Voltage_Target_GetResult16();
 	
 	/* Convert to milliVolts */
 	targetVoltage = Convert_To_milliVolts(targetValue);
@@ -209,7 +209,7 @@ uint16 Convert_To_milliVolts(uint16 counts)
 *******************************************************************************/
 void VoltageMonitorStop(void)
 {
-	ADC_Voltage_Target_Sleep();
+	//ADC_Voltage_Target_Sleep();
 }
 /*******************************************************************************
 * Function Name: SendPSoCToSleep()
@@ -255,8 +255,8 @@ void ResumeFromSleep(void)
 	ProgramInit();
 	HostCommInit();
 	SWDInit();
-	ADC_Voltage_Target_Wakeup();
-	ADC_Voltage_Target_StartConvert();
+	//ADC_Voltage_Target_Wakeup();
+	//ADC_Voltage_Target_StartConvert();
 	
 	/* Initializes USB-UART interface */
     USBUARTInit();

@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
   20:.\Generated_Source\PSoC5/PSOC_PDM_ClkOut.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
   21:.\Generated_Source\PSoC5/PSOC_PDM_ClkOut.c **** #if !(CY_PSOC5A &&\
   22:.\Generated_Source\PSoC5/PSOC_PDM_ClkOut.c **** 	 PSOC_PDM_ClkOut__PORT == 15 && ((PSOC_PDM_ClkOut__MASK & 0xC0) != 0))
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/PSOC_PDM_ClkOut.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
   66 0038 1A70     		strb	r2, [r3, #0]
   43:.\Generated_Source\PSoC5/PSOC_PDM_ClkOut.c **** }
   67              		.loc 1 43 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 3
 
 
   68 003a 07F11407 		add	r7, r7, #20
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  103 0012 45F26602 		movw	r2, #:lower16:1073762406
  104 0016 C4F20002 		movt	r2, #:upper16:1073762406
  105 001a 1278     		ldrb	r2, [r2, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 4
 
 
  106 001c D2B2     		uxtb	r2, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  137 0000 80B4     		push	{r7}
  138              	.LCFI6:
  139              		.cfi_def_cfa_offset 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 5
 
 
  140 0002 00AF     		add	r7, sp, #0
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  174              	.LCFI8:
  175              		.cfi_def_cfa_offset 4
  176 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 6
 
 
  177              		.cfi_offset 7, -4
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  229 004a 0200     		.2byte	0x2
  230 004c 7D       		.byte	0x7d
  231 004d 04       		.sleb128 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 7
 
 
  232 004e 04000000 		.4byte	.LCFI4
@@ -414,11 +414,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  282 0006 00000000 		.4byte	.Ldebug_abbrev0
  283 000a 04       		.byte	0x4
  284 000b 01       		.uleb128 0x1
- 285 000c 77010000 		.4byte	.LASF18
+ 285 000c 17010000 		.4byte	.LASF18
  286 0010 01       		.byte	0x1
- 287 0011 EA000000 		.4byte	.LASF19
- 288 0015 65000000 		.4byte	.LASF20
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 8
+ 287 0011 8A000000 		.4byte	.LASF19
+ 288 0015 28010000 		.4byte	.LASF20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 8
 
 
  289 0019 00000000 		.4byte	0x0
@@ -428,7 +428,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  293 0029 02       		.uleb128 0x2
  294 002a 01       		.byte	0x1
  295 002b 06       		.byte	0x6
- 296 002c A1010000 		.4byte	.LASF0
+ 296 002c A9010000 		.4byte	.LASF0
  297 0030 02       		.uleb128 0x2
  298 0031 01       		.byte	0x1
  299 0032 08       		.byte	0x8
@@ -436,19 +436,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  301 0037 02       		.uleb128 0x2
  302 0038 02       		.byte	0x2
  303 0039 05       		.byte	0x5
- 304 003a 88010000 		.4byte	.LASF2
+ 304 003a 90010000 		.4byte	.LASF2
  305 003e 02       		.uleb128 0x2
  306 003f 02       		.byte	0x2
  307 0040 07       		.byte	0x7
- 308 0041 D7000000 		.4byte	.LASF3
+ 308 0041 77000000 		.4byte	.LASF3
  309 0045 02       		.uleb128 0x2
  310 0046 04       		.byte	0x4
  311 0047 05       		.byte	0x5
- 312 0048 98010000 		.4byte	.LASF4
+ 312 0048 A0010000 		.4byte	.LASF4
  313 004c 02       		.uleb128 0x2
  314 004d 04       		.byte	0x4
  315 004e 07       		.byte	0x7
- 316 004f C5000000 		.4byte	.LASF5
+ 316 004f 65000000 		.4byte	.LASF5
  317 0053 02       		.uleb128 0x2
  318 0054 08       		.byte	0x8
  319 0055 05       		.byte	0x5
@@ -456,7 +456,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  321 005a 02       		.uleb128 0x2
  322 005b 08       		.byte	0x8
  323 005c 07       		.byte	0x7
- 324 005d 5B010000 		.4byte	.LASF7
+ 324 005d FB000000 		.4byte	.LASF7
  325 0061 03       		.uleb128 0x3
  326 0062 04       		.byte	0x4
  327 0063 05       		.byte	0x5
@@ -464,9 +464,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  329 0068 02       		.uleb128 0x2
  330 0069 04       		.byte	0x4
  331 006a 07       		.byte	0x7
- 332 006b 4E010000 		.4byte	.LASF8
+ 332 006b EE000000 		.4byte	.LASF8
  333 006f 04       		.uleb128 0x4
- 334 0070 92010000 		.4byte	.LASF21
+ 334 0070 9A010000 		.4byte	.LASF21
  335 0074 02       		.byte	0x2
  336 0075 4C       		.byte	0x4c
  337 0076 30000000 		.4byte	0x30
@@ -477,14 +477,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  342 0081 02       		.uleb128 0x2
  343 0082 08       		.byte	0x8
  344 0083 04       		.byte	0x4
- 345 0084 15010000 		.4byte	.LASF10
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 9
+ 345 0084 B5000000 		.4byte	.LASF10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 9
 
 
  346 0088 02       		.uleb128 0x2
  347 0089 01       		.byte	0x1
  348 008a 08       		.byte	0x8
- 349 008b 83010000 		.4byte	.LASF11
+ 349 008b 23010000 		.4byte	.LASF11
  350 008f 05       		.uleb128 0x5
  351 0090 01       		.byte	0x1
  352 0091 3B000000 		.4byte	.LASF12
@@ -514,7 +514,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  376 00c4 00       		.byte	0x0
  377 00c5 05       		.uleb128 0x5
  378 00c6 01       		.byte	0x1
- 379 00c7 1C010000 		.4byte	.LASF13
+ 379 00c7 BC000000 		.4byte	.LASF13
  380 00cb 01       		.byte	0x1
  381 00cc 3C       		.byte	0x3c
  382 00cd 01       		.byte	0x1
@@ -523,7 +523,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  385 00d6 37000000 		.4byte	.LLST1
  386 00da ED000000 		.4byte	0xed
  387 00de 06       		.uleb128 0x6
- 388 00df 72010000 		.4byte	.LASF15
+ 388 00df 12010000 		.4byte	.LASF15
  389 00e3 01       		.byte	0x1
  390 00e4 3C       		.byte	0x3c
  391 00e5 6F000000 		.4byte	0x6f
@@ -533,12 +533,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  395 00ec 00       		.byte	0x0
  396 00ed 08       		.uleb128 0x8
  397 00ee 01       		.byte	0x1
- 398 00ef 39010000 		.4byte	.LASF16
+ 398 00ef D9000000 		.4byte	.LASF16
  399 00f3 01       		.byte	0x1
  400 00f4 54       		.byte	0x54
  401 00f5 01       		.byte	0x1
  402 00f6 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 10
 
 
  403 00fa 00000000 		.4byte	.LFB2
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  457 0027 03       		.uleb128 0x3
  458 0028 08       		.uleb128 0x8
  459 0029 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 11
 
 
  460 002a 00       		.byte	0x0
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  514 0060 00       		.byte	0x0
  515 0061 03       		.uleb128 0x3
  516 0062 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 12
 
 
  517 0063 3A       		.uleb128 0x3a
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  561      5F436C6B 
  561      4F75745F 
  561      52656164 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 13
 
 
  562 0062 06010000 		.4byte	0x106
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  604              	.LASF22:
  605 0030 73746174 		.ascii	"staticBits\000"
  605      69634269 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 14
 
 
  605      747300
@@ -796,88 +796,90 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 1
  611      676E6564 
  611      20636861 
  611      7200
- 612              	.LASF20:
- 613 0065 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 613      665C486F 
- 613      6D655C44 
- 613      65736B74 
- 613      6F705C55 
- 614 0091 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 614      5F50354C 
- 614      505F5553 
- 614      425F4175 
- 614      64696F5C 
- 615 00c3 6E00     		.ascii	"n\000"
- 616              	.LASF5:
- 617 00c5 6C6F6E67 		.ascii	"long unsigned int\000"
- 617      20756E73 
- 617      69676E65 
- 617      6420696E 
- 617      7400
- 618              	.LASF3:
- 619 00d7 73686F72 		.ascii	"short unsigned int\000"
- 619      7420756E 
- 619      7369676E 
- 619      65642069 
- 619      6E7400
- 620              	.LASF19:
- 621 00ea 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PSOC_PDM_ClkOut.c\000"
- 621      6E657261 
- 621      7465645F 
- 621      536F7572 
- 621      63655C50 
- 622              	.LASF10:
- 623 0115 646F7562 		.ascii	"double\000"
- 623      6C6500
- 624              	.LASF13:
- 625 011c 50534F43 		.ascii	"PSOC_PDM_ClkOut_SetDriveMode\000"
- 625      5F50444D 
- 625      5F436C6B 
- 625      4F75745F 
- 625      53657444 
- 626              	.LASF16:
- 627 0139 50534F43 		.ascii	"PSOC_PDM_ClkOut_Read\000"
- 627      5F50444D 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc6Ab6ji.s 			page 15
+ 612              	.LASF5:
+ 613 0065 6C6F6E67 		.ascii	"long unsigned int\000"
+ 613      20756E73 
+ 613      69676E65 
+ 613      6420696E 
+ 613      7400
+ 614              	.LASF3:
+ 615 0077 73686F72 		.ascii	"short unsigned int\000"
+ 615      7420756E 
+ 615      7369676E 
+ 615      65642069 
+ 615      6E7400
+ 616              	.LASF19:
+ 617 008a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PSOC_PDM_ClkOut.c\000"
+ 617      6E657261 
+ 617      7465645F 
+ 617      536F7572 
+ 617      63655C50 
+ 618              	.LASF10:
+ 619 00b5 646F7562 		.ascii	"double\000"
+ 619      6C6500
+ 620              	.LASF13:
+ 621 00bc 50534F43 		.ascii	"PSOC_PDM_ClkOut_SetDriveMode\000"
+ 621      5F50444D 
+ 621      5F436C6B 
+ 621      4F75745F 
+ 621      53657444 
+ 622              	.LASF16:
+ 623 00d9 50534F43 		.ascii	"PSOC_PDM_ClkOut_Read\000"
+ 623      5F50444D 
+ 623      5F436C6B 
+ 623      4F75745F 
+ 623      52656164 
+ 624              	.LASF8:
+ 625 00ee 756E7369 		.ascii	"unsigned int\000"
+ 625      676E6564 
+ 625      20696E74 
+ 625      00
+ 626              	.LASF7:
+ 627 00fb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 627      206C6F6E 
+ 627      6720756E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccVK4ALw.s 			page 15
 
 
- 627      5F436C6B 
- 627      4F75745F 
- 627      52656164 
- 628              	.LASF8:
- 629 014e 756E7369 		.ascii	"unsigned int\000"
- 629      676E6564 
- 629      20696E74 
+ 627      7369676E 
+ 627      65642069 
+ 628              	.LASF15:
+ 629 0112 6D6F6465 		.ascii	"mode\000"
  629      00
- 630              	.LASF7:
- 631 015b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 631      206C6F6E 
- 631      6720756E 
- 631      7369676E 
- 631      65642069 
- 632              	.LASF15:
- 633 0172 6D6F6465 		.ascii	"mode\000"
+ 630              	.LASF18:
+ 631 0117 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 631      4320342E 
+ 631      342E3100 
+ 632              	.LASF11:
+ 633 0123 63686172 		.ascii	"char\000"
  633      00
- 634              	.LASF18:
- 635 0177 474E5520 		.ascii	"GNU C 4.4.1\000"
- 635      4320342E 
- 635      342E3100 
- 636              	.LASF11:
- 637 0183 63686172 		.ascii	"char\000"
- 637      00
+ 634              	.LASF20:
+ 635 0128 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 635      665C486F 
+ 635      6D655C44 
+ 635      65736B74 
+ 635      6F705C55 
+ 636 0155 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 636      6E656572 
+ 636      4B69745F 
+ 636      50354C50 
+ 636      5F555342 
+ 637 0186 64696F2E 		.ascii	"dio.cydsn\000"
+ 637      63796473 
+ 637      6E00
  638              	.LASF2:
- 639 0188 73686F72 		.ascii	"short int\000"
+ 639 0190 73686F72 		.ascii	"short int\000"
  639      7420696E 
  639      7400
  640              	.LASF21:
- 641 0192 75696E74 		.ascii	"uint8\000"
+ 641 019a 75696E74 		.ascii	"uint8\000"
  641      3800
  642              	.LASF4:
- 643 0198 6C6F6E67 		.ascii	"long int\000"
+ 643 01a0 6C6F6E67 		.ascii	"long int\000"
  643      20696E74 
  643      00
  644              	.LASF0:
- 645 01a1 7369676E 		.ascii	"signed char\000"
+ 645 01a9 7369676E 		.ascii	"signed char\000"
  645      65642063 
  645      68617200 
  646              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

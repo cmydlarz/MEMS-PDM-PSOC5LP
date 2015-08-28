@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
   51              	outPlaying:
   52 0001 00       		.space	1
   53              		.global	outLevel
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 2
 
 
   54              		.align	1
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  108              		.global	clearInBuffer
  109              		.type	clearInBuffer, %object
  110              		.size	clearInBuffer, 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 3
 
 
  111              	clearInBuffer:
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
    9:.\AudioControl.c **** ********************************************************************************
   10:.\AudioControl.c **** * Copyright (2008-2013), Cypress Semiconductor Corporation.
   11:.\AudioControl.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 4
 
 
   12:.\AudioControl.c **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
   66:.\AudioControl.c **** /* structure definition for Droop_Filter state retention fix */
   67:.\AudioControl.c **** static Droop_Filter_Custom_BACKUP_STRUCT  Droop_Filter_Custom_backup = 
   68:.\AudioControl.c **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 5
 
 
   69:.\AudioControl.c ****     Droop_Filter_CUSTOM_DISABLED,
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  123:.\AudioControl.c **** * Summary:
  124:.\AudioControl.c **** *       This function sets up the DMA and starts USB, I2S and interrupts
  125:.\AudioControl.c **** *       to get the PSoC 5 device configured for audio streaming mode
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 6
 
 
  126:.\AudioControl.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  187 002a C4F20003 		movt	r3, #:upper16:1073758753
  188 002e 4FF00002 		mov	r2, #0
  189 0032 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 7
 
 
  150:.\AudioControl.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  219 0088 40F20003 		movw	r3, #:lower16:rxDmaChan
  220 008c C0F20003 		movt	r3, #:upper16:rxDmaChan
  221 0090 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 8
 
 
  175:.\AudioControl.c ****     #endif
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  256              		.loc 1 194 0
  257 00d8 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
  258 00da 40F20003 		movw	r3, #:lower16:txTd
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 9
 
 
  259 00de C0F20003 		movt	r3, #:upper16:txTd
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  302 0162 9A5C     		ldrb	r2, [r3, r2]	@ zero_extendqisi2
  303 0164 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  304 0166 1946     		mov	r1, r3	@ movhi
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 10
 
 
  305 0168 4FEAC101 		lsl	r1, r1, #3
@@ -552,7 +552,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  313 0180 9BB2     		uxth	r3, r3
  314 0182 1046     		mov	r0, r2
  315 0184 1946     		mov	r1, r3
- 316 0186 46F24142 		movw	r2, #25665
+ 316 0186 46F24042 		movw	r2, #25664
  317 018a FFF7FEFF 		bl	CyDmaTdSetAddress
  206:.\AudioControl.c ****         #endif
  207:.\AudioControl.c ****         
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  219:.\AudioControl.c ****     I2STxDMAChan = I2S_Tx_DMA_DmaInitialize(DMA_BURSTCOUNT, RQST_PER_BURST, HI16(CYDEV_PERIPH_BASE)
  346              		.loc 1 219 0
  347 01d2 4FF00100 		mov	r0, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 11
 
 
  348 01d6 4FF00101 		mov	r1, #1
@@ -637,8 +637,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  378 022e C0F20003 		movt	r3, #:upper16:I2STxTd
  379 0232 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  380 0234 1846     		mov	r0, r3
- 381 0236 46F25141 		movw	r1, #25681
- 382 023a 46F24042 		movw	r2, #25664
+ 381 0236 46F25041 		movw	r1, #25680
+ 382 023a 46F24142 		movw	r2, #25665
  383 023e FFF7FEFF 		bl	CyDmaTdSetAddress
  223:.\AudioControl.c ****     CyDmaChSetInitialTd(I2STxDMAChan, I2STxTd);
  384              		.loc 1 223 0
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  228:.\AudioControl.c ****     /* USB Out DMA Config:  Entire chain is sent based on a single request from the CPU. Td's are c
  229:.\AudioControl.c ****     USBOutDmaChan = USBOutDMA_DmaInitialize(DMA_BURSTCOUNT, USBDMA_RQST_PER_BURST, HI16(CYREG_SRAM_
  394              		.loc 1 229 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 12
 
 
  395 025e 4FF00100 		mov	r0, #1
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  440 02de 1A46     		mov	r2, r3
  441 02e0 40F20003 		movw	r3, #:lower16:USBInTd
  442 02e4 C0F20003 		movt	r3, #:upper16:USBInTd
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 13
 
 
  443 02e8 5A70     		strb	r2, [r3, #1]
@@ -749,10 +749,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  251:.\AudioControl.c ****     /* set TX FIFO trigger to 2 bytes (half-empty) to increase timing margin */
  252:.\AudioControl.c ****     I2S_TX_AUX_CONTROL_REG = I2S_TX_AUX_CONTROL_REG | FIFO_HALF_EMPTY_MASK;
  456              		.loc 1 252 0
- 457 030e 46F29043 		movw	r3, #:lower16:1073767568
- 458 0312 C4F20003 		movt	r3, #:upper16:1073767568
- 459 0316 46F29042 		movw	r2, #:lower16:1073767568
- 460 031a C4F20002 		movt	r2, #:upper16:1073767568
+ 457 030e 46F29143 		movw	r3, #:lower16:1073767569
+ 458 0312 C4F20003 		movt	r3, #:upper16:1073767569
+ 459 0316 46F29142 		movw	r2, #:lower16:1073767569
+ 460 031a C4F20002 		movt	r2, #:upper16:1073767569
  461 031e 1278     		ldrb	r2, [r2, #0]
  462 0320 D2B2     		uxtb	r2, r2
  463 0322 42F00C02 		orr	r2, r2, #12
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  472              		.loc 1 263 0
  473 0336 40F20000 		movw	r0, #:lower16:cicOverflow_Interrupt
  474 033a C0F20000 		movt	r0, #:upper16:cicOverflow_Interrupt
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 14
 
 
  475 033e FFF7FEFF 		bl	isr_CICOverflow_StartEx
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  290:.\AudioControl.c **** *******************************************************************************/
  291:.\AudioControl.c **** #ifndef ENABLE_DIGITAL_AUDIO_IN_ONLY
  292:.\AudioControl.c **** void ProcessAudioOut(void) 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 15
 
 
  293:.\AudioControl.c **** {
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  544 004c 1A70     		strb	r2, [r3, #0]
  545              	.L9:
  306:.\AudioControl.c ****         }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 16
 
 
  307:.\AudioControl.c ****         
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  321:.\AudioControl.c ****             CyDmaTdSetConfiguration(USBOutTd[0], remain, USBOutTd[1], TD_INC_SRC_ADR | TD_INC_DST_A
  586              		.loc 1 321 0
  587 00b2 40F20003 		movw	r3, #:lower16:USBOutTd
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 17
 
 
  588 00b6 C0F20003 		movt	r3, #:upper16:USBOutTd
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  639 0146 1344     		add	r3, r2, r3
  640 0148 9AB2     		uxth	r2, r3
  641 014a 40F20003 		movw	r3, #:lower16:outBuffer
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 18
 
 
  642 014e C0F20003 		movt	r3, #:upper16:outBuffer
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  687 01c8 1888     		ldrh	r0, [r3, #0]
  688 01ca 40F20003 		movw	r3, #:lower16:outBuffer
  689 01ce C0F20003 		movt	r3, #:upper16:outBuffer
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 19
 
 
  690 01d2 9BB2     		uxth	r3, r3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  736 024a 40F20003 		movw	r3, #:lower16:USBOutDmaChan
  737 024e C0F20003 		movt	r3, #:upper16:USBOutDmaChan
  738 0252 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 20
 
 
  739 0254 1846     		mov	r0, r3
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  781 02c4 FFF7FEFF 		bl	CyDmaChSetRequest
  354:.\AudioControl.c ****             CyDmaChEnable(txDmaChan, 1);
  782              		.loc 1 354 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 21
 
 
  783 02c8 40F20003 		movw	r3, #:lower16:txDmaChan
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  827 0340 1846     		mov	r0, r3
  828 0342 4FF00101 		mov	r1, #1
  829 0346 FFF7FEFF 		bl	CyDmaChEnable
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 22
 
 
  365:.\AudioControl.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  853              	.LCFI6:
  854              		.cfi_def_cfa_offset 8
  855 0002 82B0     		sub	sp, sp, #8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 23
 
 
  856              	.LCFI7:
@@ -1371,14 +1371,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  892 0052 1A70     		strb	r2, [r3, #0]
  407:.\AudioControl.c ****             rate44_count = 0;    
  893              		.loc 1 407 0
- 894 0054 40F20003 		movw	r3, #:lower16:rate44_count.3593
- 895 0058 C0F20003 		movt	r3, #:upper16:rate44_count.3593
+ 894 0054 40F20003 		movw	r3, #:lower16:rate44_count.3585
+ 895 0058 C0F20003 		movt	r3, #:upper16:rate44_count.3585
  896 005c 4FF00002 		mov	r2, #0
  897 0060 1A70     		strb	r2, [r3, #0]
  898              	.L17:
  408:.\AudioControl.c ****         }
  409:.\AudioControl.c ****         
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 24
 
 
  410:.\AudioControl.c ****         CyDmaChDisable(USBInDmaChan);
@@ -1414,8 +1414,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  417:.\AudioControl.c ****             case RATE_44KHZ:
  418:.\AudioControl.c ****                     if(9 == rate44_count) 
  922              		.loc 1 418 0
- 923 0090 40F20003 		movw	r3, #:lower16:rate44_count.3593
- 924 0094 C0F20003 		movt	r3, #:upper16:rate44_count.3593
+ 923 0090 40F20003 		movw	r3, #:lower16:rate44_count.3585
+ 924 0094 C0F20003 		movt	r3, #:upper16:rate44_count.3585
  925 0098 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  926 009a 092B     		cmp	r3, #9
  927 009c 0AD1     		bne	.L22
@@ -1426,8 +1426,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  930 00a2 FB80     		strh	r3, [r7, #6]	@ movhi
  421:.\AudioControl.c ****                         rate44_count = 0;
  931              		.loc 1 421 0
- 932 00a4 40F20003 		movw	r3, #:lower16:rate44_count.3593
- 933 00a8 C0F20003 		movt	r3, #:upper16:rate44_count.3593
+ 932 00a4 40F20003 		movw	r3, #:lower16:rate44_count.3585
+ 933 00a8 C0F20003 		movt	r3, #:upper16:rate44_count.3585
  934 00ac 4FF00002 		mov	r2, #0
  935 00b0 1A70     		strb	r2, [r3, #0]
  422:.\AudioControl.c ****                     }
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  427:.\AudioControl.c ****                     }
  428:.\AudioControl.c ****                 break;
  936              		.loc 1 428 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 25
 
 
  937 00b2 13E0     		b	.L18
@@ -1447,13 +1447,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  940 00b4 4FF0B003 		mov	r3, #176
  941 00b8 FB80     		strh	r3, [r7, #6]	@ movhi
  942              		.loc 1 426 0
- 943 00ba 40F20003 		movw	r3, #:lower16:rate44_count.3593
- 944 00be C0F20003 		movt	r3, #:upper16:rate44_count.3593
+ 943 00ba 40F20003 		movw	r3, #:lower16:rate44_count.3585
+ 944 00be C0F20003 		movt	r3, #:upper16:rate44_count.3585
  945 00c2 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  946 00c4 03F10103 		add	r3, r3, #1
  947 00c8 DAB2     		uxtb	r2, r3
- 948 00ca 40F20003 		movw	r3, #:lower16:rate44_count.3593
- 949 00ce C0F20003 		movt	r3, #:upper16:rate44_count.3593
+ 948 00ca 40F20003 		movw	r3, #:lower16:rate44_count.3585
+ 949 00ce C0F20003 		movt	r3, #:upper16:rate44_count.3585
  950 00d2 1A70     		strb	r2, [r3, #0]
  951              		.loc 1 428 0
  952 00d4 02E0     		b	.L18
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  443:.\AudioControl.c ****         if ((inBufIndex + count) > sizeof(inBuffer)) 
  977              		.loc 1 443 0
  978 010a 40F20003 		movw	r3, #:lower16:inBufIndex
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 26
 
 
  979 010e C0F20003 		movt	r3, #:upper16:inBufIndex
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1026 0190 C0F20003 		movt	r3, #:upper16:inBuffer
  1027 0194 9BB2     		uxth	r3, r3
  1028 0196 1344     		add	r3, r2, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 27
 
 
  1029 0198 9AB2     		uxth	r2, r3
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1074              		.loc 1 459 0
  1075 020e 40F20003 		movw	r3, #:lower16:USBInTd
  1076 0212 C0F20003 		movt	r3, #:upper16:USBInTd
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 28
 
 
  1077 0216 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1126 029e 1B88     		ldrh	r3, [r3, #0]
  1127 02a0 B3F5407F 		cmp	r3, #768
  1128 02a4 06D1     		bne	.L25
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 29
 
 
  465:.\AudioControl.c **** 			{
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1166              		.loc 1 481 0
  1167 030a 40F20003 		movw	r3, #:lower16:rxDmaChan
  1168 030e C0F20003 		movt	r3, #:upper16:rxDmaChan
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 30
 
 
  1169 0312 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1207 036e 00BF     		.section	.text.Stop_I2S_Tx,"ax",%progbits
  1208              		.align	2
  1209              		.global	Stop_I2S_Tx
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 31
 
 
  1210              		.thumb
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1238              		.loc 1 523 0
  1239 001e FFF7FEFF 		bl	ByteSwap_Tx_Stop
  524:.\AudioControl.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 32
 
 
  525:.\AudioControl.c ****        
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1279              		.align	2
  1280              		.global	Stop_PDM_InPath
  1281              		.thumb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 33
 
 
  1282              		.thumb_func
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1311              		.loc 1 564 0
  1312 0026 40F20003 		movw	r3, #:lower16:resetRx
  1313 002a C0F20003 		movt	r3, #:upper16:resetRx
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 34
 
 
  1314 002e 4FF00102 		mov	r2, #1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  581:.\AudioControl.c **** 
  582:.\AudioControl.c **** /*******************************************************************************
  583:.\AudioControl.c **** * Function Name: SetClockRate
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 35
 
 
  584:.\AudioControl.c **** ********************************************************************************
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1379 0022 FFF7FEFF 		bl	CyDelayFreq
  611:.\AudioControl.c ****     rate = newRate;
  1380              		.loc 1 611 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 36
 
 
  1381 0026 40F20003 		movw	r3, #:lower16:rate
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  634:.\AudioControl.c ****             Clock_CIC_SetDividerRegister(DIVIDER_44K_48K_SR, 0);
  1413              		.loc 1 634 0
  1414 0066 4FF00100 		mov	r0, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 37
 
 
  1415 006a 4FF00001 		mov	r1, #0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1435 009e 80BD     		pop	{r7, pc}
  1436              		.cfi_endproc
  1437              	.LFE34:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 38
 
 
  1438              		.size	SetClockRate, .-SetClockRate
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1467 0018 FFF7FEFF 		bl	PSOC_I2S_SCLK_SetDriveMode
  694:.\AudioControl.c ****         PSOC_I2S_LRCLK_SetDriveMode(PSOC_I2S_LRCLK_DM_STRONG);
  1468              		.loc 1 694 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 39
 
 
  1469 001c 4FF00C00 		mov	r0, #12
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  713:.\AudioControl.c **** 
  714:.\AudioControl.c **** /*******************************************************************************
  715:.\AudioControl.c **** * Function Name: StopAudioComponents
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 40
 
 
  716:.\AudioControl.c **** ********************************************************************************
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1523 0014 FFF7FEFF 		bl	CyDelayFreq
  752:.\AudioControl.c ****     CyDelayUs(100);
  1524              		.loc 1 752 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 41
 
 
  1525 0018 4FF06400 		mov	r0, #100
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  779:.\AudioControl.c ****     setRate = FREQUENCY_NOT_SET;       /* clear the current audio sampling rate set value */
  1553              		.loc 1 779 0
  1554 0064 40F20003 		movw	r3, #:lower16:setRate
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 42
 
 
  1555 0068 C0F20003 		movt	r3, #:upper16:setRate
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1585              		.cfi_def_cfa_register 7
  804:.\AudioControl.c ****     /* USBFS_frequencyChanged is set by the USB component when a setup token for Sampling frequency
  805:.\AudioControl.c ****      * It takes a sometime for the host to actually send the Out token containing the updated sampl
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 43
 
 
  806:.\AudioControl.c ****      * Wait for USBFS_transferState to be equal to USBFS_TRANS_STATE_IDLE to make sure the updated 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  817:.\AudioControl.c ****         {
  818:.\AudioControl.c ****             uint32 newFrequency;
  819:.\AudioControl.c ****             uint8 newRate = RATE_48KHZ;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 44
 
 
  1629              		.loc 1 819 0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1679              		.loc 1 821 0
  1680 00f0 40EA0303 		orr	r3, r0, r3
  1681 00f4 3B60     		str	r3, [r7, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 45
 
 
  824:.\AudioControl.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1719 0140 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
  1720 0142 9A42     		cmp	r2, r3
  1721 0144 23D0     		beq	.L52
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 46
 
 
  841:.\AudioControl.c ****             {   
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  856:.\AudioControl.c ****         }
  857:.\AudioControl.c ****         #ifndef ENABLE_DIGITAL_AUDIO_OUT_ONLY
  858:.\AudioControl.c ****         #ifndef ENABLE_DIGITAL_AUDIO_IN_ONLY
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 47
 
 
  859:.\AudioControl.c ****         else
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1786 0000 80B5     		push	{r7, lr}
  1787              	.LCFI23:
  1788              		.cfi_def_cfa_offset 8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 48
 
 
  1789 0002 00AF     		add	r7, sp, #0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1832 0060 C0F20003 		movt	r3, #:upper16:clockSwitchTimer
  1833 0064 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  1834 0066 012B     		cmp	r3, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 49
 
 
  1835 0068 1CD1     		bne	.L56
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1871 00c4 C0F20003 		movt	r3, #:upper16:USBFS_interfaceSetting
  1872 00c8 5B78     		ldrb	r3, [r3, #1]
  1873 00ca DBB2     		uxtb	r3, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 50
 
 
  1874 00cc 002B     		cmp	r3, #0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  927:.\AudioControl.c ****         }
  928:.\AudioControl.c ****       
  929:.\AudioControl.c ****         /* USER_CODE: [Low -> High power transition] Placeholder for turning on external hardware b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 51
 
 
  930:.\AudioControl.c ****          * components before transitioning into high power mode */
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1945 0008 C0F20003 		movt	r3, #:upper16:inPlaying
  1946 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  1947              		.loc 1 951 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 52
 
 
  1948 000e 002B     		cmp	r3, #0
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  1991              		.thumb
  1992              		.thumb_func
  1993              		.type	HandleAudioInBuffer, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 53
 
 
  1994              	HandleAudioInBuffer:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2022              		.loc 1 993 0
  2023 001c FB88     		ldrh	r3, [r7, #6]
  2024 001e BF2B     		cmp	r3, #191
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 54
 
 
  2025 0020 07D8     		bhi	.L69
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1003:.\AudioControl.c **** 
 1004:.\AudioControl.c **** /*******************************************************************************
 1005:.\AudioControl.c **** * Function Name: CICOutDMA_ConfigAndStart
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 55
 
 
 1006:.\AudioControl.c **** ********************************************************************************
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1029:.\AudioControl.c ****     #ifdef DISABLE_DFB
 1030:.\AudioControl.c **** 	CyDmaTdSetConfiguration(DMA_CICOut_Left_TD[0], sizeof(leftCICOutput), DMA_CICOut_Left_TD[0], TD_IN
 1031:.\AudioControl.c **** 	CyDmaTdSetConfiguration(DMA_CICOut_Left_TD[1], 2, DMA_CICOut_Left_TD[0],TD_INC_DST_ADR);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 56
 
 
 1032:.\AudioControl.c **** 	
@@ -3329,14 +3329,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2117              		.loc 1 1040 0
  2118 0056 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
  2119 0058 1846     		mov	r0, r3
- 2120 005a 46F69C01 		movw	r1, #26780
+ 2120 005a 46F68C21 		movw	r1, #27276
  2121 005e 4CF2A272 		movw	r2, #51106
  2122 0062 FFF7FEFF 		bl	CyDmaTdSetAddress
 1041:.\AudioControl.c **** 	CyDmaTdSetAddress(DMA_CICOut_Left_TD[1], LO16((uint32)(PDM_CIC_LEFT_LO16_OUTPUT_REG_PTR)), LO16((u
  2123              		.loc 1 1041 0
  2124 0066 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
  2125 0068 1846     		mov	r0, r3
- 2126 006a 46F69801 		movw	r1, #26776
+ 2126 006a 46F68821 		movw	r1, #27272
  2127 006e 4CF2A072 		movw	r2, #51104
  2128 0072 FFF7FEFF 		bl	CyDmaTdSetAddress
 1042:.\AudioControl.c ****     #endif
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1047:.\AudioControl.c ****     /* PDM right channel DMA configuration */
 1048:.\AudioControl.c ****     DMA_CICOut_Right_Channel = CICOut_R_DmaInitialize(2, 1, HI16(CYDEV_PERIPH_BASE), HI16(CYDEV_PER
  2140              		.loc 1 1048 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 57
 
 
  2141 008e 4FF00200 		mov	r0, #2
@@ -3412,17 +3412,17 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2172              		.loc 1 1065 0
  2173 00de 3B78     		ldrb	r3, [r7, #0]	@ zero_extendqisi2
  2174 00e0 1846     		mov	r0, r3
- 2175 00e2 46F69401 		movw	r1, #26772
+ 2175 00e2 46F69421 		movw	r1, #27284
  2176 00e6 4CF2A672 		movw	r2, #51110
  2177 00ea FFF7FEFF 		bl	CyDmaTdSetAddress
 1066:.\AudioControl.c **** 	CyDmaTdSetAddress(DMA_CICOut_Right_TD[1], LO16((uint32)(PDM_CIC_RIGHT_LO16_OUTPUT_REG_PTR)), LO16(
  2178              		.loc 1 1066 0
  2179 00ee 7B78     		ldrb	r3, [r7, #1]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 58
 
 
  2180 00f0 1846     		mov	r0, r3
- 2181 00f2 46F69001 		movw	r1, #26768
+ 2181 00f2 46F69021 		movw	r1, #27280
  2182 00f6 4CF2A472 		movw	r2, #51108
  2183 00fa FFF7FEFF 		bl	CyDmaTdSetAddress
 1067:.\AudioControl.c ****     #endif
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1091:.\AudioControl.c **** *******************************************************************************/
 1092:.\AudioControl.c **** void Droop_Filter_ModifiedSaveConfig(void)
 1093:.\AudioControl.c **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 59
 
 
  2210              		.loc 1 1093 0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2260              	.LFB43:
 1098:.\AudioControl.c **** 
 1099:.\AudioControl.c **** /*******************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 60
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 60
 
 
 1100:.\AudioControl.c **** * Function Name: Droop_Filter_ModifiedRestoreConfig
@@ -3598,7 +3598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2291 0038 C0F20002 		movt	r2, #:upper16:Droop_Filter_Custom_backup
  2292 003c D278     		ldrb	r2, [r2, #3]	@ zero_extendqisi2
  2293 003e 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 61
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 61
 
 
 1124:.\AudioControl.c **** 
@@ -3658,7 +3658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2334              		.thumb
  2335              		.thumb_func
  2336              		.type	Droop_Filter_ModifiedSleep, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 62
 
 
  2337              	Droop_Filter_ModifiedSleep:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2363 0024 1A70     		strb	r2, [r3, #0]
  2364 0026 06E0     		b	.L80
  2365              	.L79:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 63
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 63
 
 
 1166:.\AudioControl.c ****     }
@@ -3778,7 +3778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1197:.\AudioControl.c **** *  Droop_Filter_Custom_backup - used when non-retention registers are restored.
 1198:.\AudioControl.c **** *
 1199:.\AudioControl.c **** *******************************************************************************/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 64
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 64
 
 
 1200:.\AudioControl.c **** void Droop_Filter_ModifiedWakeup(void)
@@ -3838,7 +3838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1218:.\AudioControl.c **** *  name of a private function named Droop_Filter_LoadReg32 in the  Droop_Filter assembler
 1219:.\AudioControl.c **** *  component (Droop_Filter.c) added here to support state retention
 1220:.\AudioControl.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 65
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 65
 
 
 1221:.\AudioControl.c **** * Parameters:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2459 002a 1268     		ldr	r2, [r2, #0]
  2460 002c 1A60     		str	r2, [r3, #0]
 1241:.\AudioControl.c ****         count--;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 66
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 66
 
 
  2461              		.loc 1 1241 0
@@ -3958,7 +3958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
 1267:.\AudioControl.c **** void Droop_Filter_ModifiedZeroReg32(reg32 regAddress[], uint8 count)
 1268:.\AudioControl.c **** {
  2490              		.loc 1 1268 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 67
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 67
 
 
  2491              		.cfi_startproc
@@ -4018,14 +4018,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2536 003e BD46     		mov	sp, r7
  2537 0040 80BC     		pop	{r7}
  2538 0042 7047     		bx	lr
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 68
 
 
  2539              		.cfi_endproc
  2540              	.LFE47:
  2541              		.size	Droop_Filter_ModifiedZeroReg32, .-Droop_Filter_ModifiedZeroReg32
  2542              		.bss
- 2543              	rate44_count.3593:
+ 2543              	rate44_count.3585:
  2544 0017 00       		.space	1
  2545              		.text
  2546              	.Letext0:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2593              	.LLST2:
  2594 006e 00000000 		.4byte	.LFB31
  2595 0072 02000000 		.4byte	.LCFI6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 69
 
 
  2596 0076 0100     		.2byte	0x1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2650 00fb 00000000 		.4byte	.LFB34
  2651 00ff 02000000 		.4byte	.LCFI13
  2652 0103 0100     		.2byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 70
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 70
 
 
  2653 0105 5D       		.byte	0x5d
@@ -4198,7 +4198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2707 018c 02000000 		.4byte	.LCFI20
  2708 0190 0100     		.2byte	0x1
  2709 0192 5D       		.byte	0x5d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 71
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 71
 
 
  2710 0193 02000000 		.4byte	.LCFI20
@@ -4258,7 +4258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2764 021d 0100     		.2byte	0x1
  2765 021f 5D       		.byte	0x5d
  2766 0220 02000000 		.4byte	.LCFI27
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 72
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 72
 
 
  2767 0224 04000000 		.4byte	.LCFI28
@@ -4318,7 +4318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2821 02aa 00000000 		.4byte	0x0
  2822              	.LLST14:
  2823 02ae 00000000 		.4byte	.LFB43
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 73
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 73
 
 
  2824 02b2 02000000 		.4byte	.LCFI35
@@ -4378,7 +4378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2878 033a 02000000 		.4byte	.LCFI41
  2879 033e 04000000 		.4byte	.LCFI42
  2880 0342 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 74
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 74
 
 
  2881 0344 7D       		.byte	0x7d
@@ -4429,16 +4429,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2926 0006 00000000 		.4byte	.Ldebug_abbrev0
  2927 000a 04       		.byte	0x4
  2928 000b 01       		.uleb128 0x1
- 2929 000c 68050000 		.4byte	.LASF98
+ 2929 000c D0050000 		.4byte	.LASF98
  2930 0010 01       		.byte	0x1
  2931 0011 FC030000 		.4byte	.LASF99
- 2932 0015 89050000 		.4byte	.LASF100
+ 2932 0015 54040000 		.4byte	.LASF100
  2933 0019 00000000 		.4byte	0x0
  2934 001d 00000000 		.4byte	0x0
  2935 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
  2936 0025 00000000 		.4byte	.Ldebug_line0
  2937 0029 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 75
 
 
  2938 002a 01       		.byte	0x1
@@ -4463,7 +4463,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2957 004c 02       		.uleb128 0x2
  2958 004d 04       		.byte	0x4
  2959 004e 07       		.byte	0x7
- 2960 004f 77040000 		.4byte	.LASF5
+ 2960 004f DF040000 		.4byte	.LASF5
  2961 0053 02       		.uleb128 0x2
  2962 0054 08       		.byte	0x8
  2963 0055 05       		.byte	0x5
@@ -4491,14 +4491,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  2985 0080 4D       		.byte	0x4d
  2986 0081 3E000000 		.4byte	0x3e
  2987 0085 04       		.uleb128 0x4
- 2988 0086 89040000 		.4byte	.LASF11
+ 2988 0086 F1040000 		.4byte	.LASF11
  2989 008a 02       		.byte	0x2
  2990 008b 4E       		.byte	0x4e
  2991 008c 4C000000 		.4byte	0x4c
  2992 0090 02       		.uleb128 0x2
  2993 0091 04       		.byte	0x4
  2994 0092 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 76
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 76
 
 
  2995 0093 B3010000 		.4byte	.LASF12
@@ -4546,7 +4546,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3037 00e1 23       		.byte	0x23
  3038 00e2 08       		.uleb128 0x8
  3039 00e3 08       		.uleb128 0x8
- 3040 00e4 A9040000 		.4byte	.LASF18
+ 3040 00e4 11050000 		.4byte	.LASF18
  3041 00e8 03       		.byte	0x3
  3042 00e9 49       		.byte	0x49
  3043 00ea 11010000 		.4byte	0x111
@@ -4558,7 +4558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3049 00f3 6F000000 		.4byte	0x6f
  3050 00f7 02010000 		.4byte	0x102
  3051 00fb 0A       		.uleb128 0xa
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 77
 
 
  3052 00fc AA000000 		.4byte	0xaa
@@ -4603,7 +4603,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3091 0148 23       		.byte	0x23
  3092 0149 02       		.uleb128 0x2
  3093 014a 08       		.uleb128 0x8
- 3094 014b A4040000 		.4byte	.LASF22
+ 3094 014b 0C050000 		.4byte	.LASF22
  3095 014f 04       		.byte	0x4
  3096 0150 3C       		.byte	0x3c
  3097 0151 6F000000 		.4byte	0x6f
@@ -4618,7 +4618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3106 0160 16010000 		.4byte	0x116
  3107 0164 0C       		.uleb128 0xc
  3108 0165 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 78
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 78
 
 
  3109 0166 5B020000 		.4byte	.LASF24
@@ -4649,7 +4649,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3134 019e 37000000 		.4byte	.LLST1
  3135 01a2 C5010000 		.4byte	0x1c5
  3136 01a6 0F       		.uleb128 0xf
- 3137 01a7 E2040000 		.4byte	.LASF27
+ 3137 01a7 4A050000 		.4byte	.LASF27
  3138 01ab 01       		.byte	0x1
  3139 01ac 2601     		.2byte	0x126
  3140 01ae 7A000000 		.4byte	0x7a
@@ -4657,7 +4657,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3142 01b3 91       		.byte	0x91
  3143 01b4 74       		.sleb128 -12
  3144 01b5 0F       		.uleb128 0xf
- 3145 01b6 E9050000 		.4byte	.LASF28
+ 3145 01b6 F1050000 		.4byte	.LASF28
  3146 01ba 01       		.byte	0x1
  3147 01bb 2701     		.2byte	0x127
  3148 01bd 7A000000 		.4byte	0x7a
@@ -4676,9 +4676,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3161 01d7 6E000000 		.4byte	.LLST2
  3162 01db 10020000 		.4byte	0x210
  3163 01df 0F       		.uleb128 0xf
- 3164 01e0 E9050000 		.4byte	.LASF28
+ 3164 01e0 F1050000 		.4byte	.LASF28
  3165 01e4 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 79
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 79
 
 
  3166 01e5 8C01     		.2byte	0x18c
@@ -4687,7 +4687,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3169 01ec 91       		.byte	0x91
  3170 01ed 74       		.sleb128 -12
  3171 01ee 0F       		.uleb128 0xf
- 3172 01ef E2040000 		.4byte	.LASF27
+ 3172 01ef 4A050000 		.4byte	.LASF27
  3173 01f3 01       		.byte	0x1
  3174 01f4 8D01     		.2byte	0x18d
  3175 01f6 7A000000 		.4byte	0x7a
@@ -4701,7 +4701,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3183 0205 6F000000 		.4byte	0x6f
  3184 0209 05       		.byte	0x5
  3185 020a 03       		.byte	0x3
- 3186 020b 17000000 		.4byte	rate44_count.3593
+ 3186 020b 17000000 		.4byte	rate44_count.3585
  3187 020f 00       		.byte	0x0
  3188 0210 10       		.uleb128 0x10
  3189 0211 01       		.byte	0x1
@@ -4714,7 +4714,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3196 0222 A5000000 		.4byte	.LLST3
  3197 0226 10       		.uleb128 0x10
  3198 0227 01       		.byte	0x1
- 3199 0228 04050000 		.4byte	.LASF32
+ 3199 0228 6C050000 		.4byte	.LASF32
  3200 022c 01       		.byte	0x1
  3201 022d 2C02     		.2byte	0x22c
  3202 022f 01       		.byte	0x1
@@ -4732,20 +4732,20 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3214 024e FB000000 		.4byte	.LLST5
  3215 0252 66020000 		.4byte	0x266
  3216 0256 11       		.uleb128 0x11
- 3217 0257 81050000 		.4byte	.LASF38
+ 3217 0257 E9050000 		.4byte	.LASF38
  3218 025b 01       		.byte	0x1
  3219 025c 5402     		.2byte	0x254
  3220 025e 6F000000 		.4byte	0x6f
  3221 0262 02       		.byte	0x2
  3222 0263 91       		.byte	0x91
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 80
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 80
 
 
  3223 0264 77       		.sleb128 -9
  3224 0265 00       		.byte	0x0
  3225 0266 10       		.uleb128 0x10
  3226 0267 01       		.byte	0x1
- 3227 0268 23050000 		.4byte	.LASF34
+ 3227 0268 8B050000 		.4byte	.LASF34
  3228 026c 01       		.byte	0x1
  3229 026d AB02     		.2byte	0x2ab
  3230 026f 01       		.byte	0x1
@@ -4783,7 +4783,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3262 02c2 91       		.byte	0x91
  3263 02c3 70       		.sleb128 -16
  3264 02c4 0F       		.uleb128 0xf
- 3265 02c5 81050000 		.4byte	.LASF38
+ 3265 02c5 E9050000 		.4byte	.LASF38
  3266 02c9 01       		.byte	0x1
  3267 02ca 3303     		.2byte	0x333
  3268 02cc 6F000000 		.4byte	0x6f
@@ -4798,7 +4798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3277 02db 01       		.byte	0x1
  3278 02dc 7603     		.2byte	0x376
  3279 02de 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 81
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 81
 
 
  3280 02df 00000000 		.4byte	.LFB38
@@ -4806,7 +4806,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3282 02e7 BF010000 		.4byte	.LLST9
  3283 02eb 10       		.uleb128 0x10
  3284 02ec 01       		.byte	0x1
- 3285 02ed 90040000 		.4byte	.LASF40
+ 3285 02ed F8040000 		.4byte	.LASF40
  3286 02f1 01       		.byte	0x1
  3287 02f2 B303     		.2byte	0x3b3
  3288 02f4 01       		.byte	0x1
@@ -4815,7 +4815,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3291 02fd EA010000 		.4byte	.LLST10
  3292 0301 0E       		.uleb128 0xe
  3293 0302 01       		.byte	0x1
- 3294 0303 CE040000 		.4byte	.LASF41
+ 3294 0303 36050000 		.4byte	.LASF41
  3295 0307 01       		.byte	0x1
  3296 0308 D803     		.2byte	0x3d8
  3297 030a 01       		.byte	0x1
@@ -4858,7 +4858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3334 0360 02       		.byte	0x2
  3335 0361 91       		.byte	0x91
  3336 0362 74       		.sleb128 -12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 82
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 82
 
 
  3337 0363 0F       		.uleb128 0xf
@@ -4870,7 +4870,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3343 0370 91       		.byte	0x91
  3344 0371 77       		.sleb128 -9
  3345 0372 0F       		.uleb128 0xf
- 3346 0373 BA040000 		.4byte	.LASF46
+ 3346 0373 22050000 		.4byte	.LASF46
  3347 0377 01       		.byte	0x1
  3348 0378 FD03     		.2byte	0x3fd
  3349 037a 82030000 		.4byte	0x382
@@ -4918,7 +4918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3391 03da 01       		.byte	0x1
  3392 03db B004     		.2byte	0x4b0
  3393 03dd 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 83
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 83
 
 
  3394 03de 00000000 		.4byte	.LFB45
@@ -4951,7 +4951,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3421 0420 91       		.byte	0x91
  3422 0421 68       		.sleb128 -24
  3423 0422 11       		.uleb128 0x11
- 3424 0423 E2040000 		.4byte	.LASF27
+ 3424 0423 4A050000 		.4byte	.LASF27
  3425 0427 01       		.byte	0x1
  3426 0428 D204     		.2byte	0x4d2
  3427 042a 6F000000 		.4byte	0x6f
@@ -4978,11 +4978,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3448 0450 15       		.uleb128 0x15
  3449 0451 85000000 		.4byte	0x85
  3450 0455 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 84
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 84
 
 
  3451 0456 01       		.byte	0x1
- 3452 0457 38050000 		.4byte	.LASF54
+ 3452 0457 A0050000 		.4byte	.LASF54
  3453 045b 01       		.byte	0x1
  3454 045c F304     		.2byte	0x4f3
  3455 045e 01       		.byte	0x1
@@ -4999,7 +4999,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3466 047c 91       		.byte	0x91
  3467 047d 6C       		.sleb128 -20
  3468 047e 11       		.uleb128 0x11
- 3469 047f E2040000 		.4byte	.LASF27
+ 3469 047f 4A050000 		.4byte	.LASF27
  3470 0483 01       		.byte	0x1
  3471 0484 F304     		.2byte	0x4f3
  3472 0486 6F000000 		.4byte	0x6f
@@ -5016,7 +5016,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3483 0499 77       		.sleb128 -9
  3484 049a 00       		.byte	0x0
  3485 049b 0D       		.uleb128 0xd
- 3486 049c 5C040000 		.4byte	.LASF55
+ 3486 049c C4040000 		.4byte	.LASF55
  3487 04a0 01       		.byte	0x1
  3488 04a1 43       		.byte	0x43
  3489 04a2 59010000 		.4byte	0x159
@@ -5031,19 +5031,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3498 04ba 0D       		.byte	0xd
  3499 04bb 00       		.byte	0x0
  3500 04bc 16       		.uleb128 0x16
- 3501 04bd 57050000 		.4byte	.LASF56
+ 3501 04bd BF050000 		.4byte	.LASF56
  3502 04c1 05       		.byte	0x5
  3503 04c2 44       		.byte	0x44
  3504 04c3 C9040000 		.4byte	0x4c9
  3505 04c7 01       		.byte	0x1
  3506 04c8 01       		.byte	0x1
  3507 04c9 15       		.uleb128 0x15
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 85
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 85
 
 
  3508 04ca AC040000 		.4byte	0x4ac
  3509 04ce 17       		.uleb128 0x17
- 3510 04cf 74050000 		.4byte	.LASF57
+ 3510 04cf DC050000 		.4byte	.LASF57
  3511 04d3 06       		.byte	0x6
  3512 04d4 CE06     		.2byte	0x6ce
  3513 04d6 DC040000 		.4byte	0x4dc
@@ -5088,7 +5088,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3552 0527 18       		.uleb128 0x18
  3553 0528 00       		.byte	0x0
  3554 0529 16       		.uleb128 0x16
- 3555 052a FD050000 		.4byte	.LASF61
+ 3555 052a 05060000 		.4byte	.LASF61
  3556 052e 01       		.byte	0x1
  3557 052f 31       		.byte	0x31
  3558 0530 36050000 		.4byte	0x536
@@ -5098,7 +5098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3562 0537 1E050000 		.4byte	0x51e
  3563 053b 16       		.uleb128 0x16
  3564 053c 29010000 		.4byte	.LASF62
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 86
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 86
 
 
  3565 0540 01       		.byte	0x1
@@ -5123,7 +5123,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3584 0568 1F01     		.2byte	0x11f
  3585 056a 00       		.byte	0x0
  3586 056b 16       		.uleb128 0x16
- 3587 056c 1C060000 		.4byte	.LASF64
+ 3587 056c 24060000 		.4byte	.LASF64
  3588 0570 01       		.byte	0x1
  3589 0571 3A       		.byte	0x3a
  3590 0572 5A050000 		.4byte	0x55a
@@ -5158,7 +5158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3619 05ad 01       		.byte	0x1
  3620 05ae 05       		.byte	0x5
  3621 05af 03       		.byte	0x3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 87
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 87
 
 
  3622 05b0 00000000 		.4byte	USBOutDmaChan
@@ -5181,7 +5181,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3639 05d3 03       		.byte	0x3
  3640 05d4 00000000 		.4byte	I2STxDMAChan
  3641 05d8 19       		.uleb128 0x19
- 3642 05d9 F0050000 		.4byte	.LASF70
+ 3642 05d9 F8050000 		.4byte	.LASF70
  3643 05dd 01       		.byte	0x1
  3644 05de 4C       		.byte	0x4c
  3645 05df 6F000000 		.4byte	0x6f
@@ -5218,7 +5218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3676 061f 0D040000 		.4byte	.LASF73
  3677 0623 01       		.byte	0x1
  3678 0624 50       		.byte	0x50
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 88
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 88
 
 
  3679 0625 FC050000 		.4byte	0x5fc
@@ -5254,7 +5254,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3709 0661 03       		.byte	0x3
  3710 0662 00000000 		.4byte	USBOutTd
  3711 0666 19       		.uleb128 0x19
- 3712 0667 54040000 		.4byte	.LASF77
+ 3712 0667 BC040000 		.4byte	.LASF77
  3713 066b 01       		.byte	0x1
  3714 066c 54       		.byte	0x54
  3715 066d 82030000 		.4byte	0x382
@@ -5278,7 +5278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3733 0691 6F000000 		.4byte	0x6f
  3734 0695 01       		.byte	0x1
  3735 0696 05       		.byte	0x5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 89
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 89
 
 
  3736 0697 03       		.byte	0x3
@@ -5318,7 +5318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3770 06e0 7F04     		.2byte	0x47f
  3771 06e2 00       		.byte	0x0
  3772 06e3 19       		.uleb128 0x19
- 3773 06e4 19050000 		.4byte	.LASF83
+ 3773 06e4 81050000 		.4byte	.LASF83
  3774 06e8 01       		.byte	0x1
  3775 06e9 5B       		.byte	0x5b
  3776 06ea D2060000 		.4byte	0x6d2
@@ -5338,7 +5338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3790 0707 19       		.uleb128 0x19
  3791 0708 D4030000 		.4byte	.LASF85
  3792 070c 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 90
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 90
 
 
  3793 070d 5F       		.byte	0x5f
@@ -5357,7 +5357,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3806 0726 03       		.byte	0x3
  3807 0727 00000000 		.4byte	inPlaying
  3808 072b 19       		.uleb128 0x19
- 3809 072c 14060000 		.4byte	.LASF87
+ 3809 072c 1C060000 		.4byte	.LASF87
  3810 0730 01       		.byte	0x1
  3811 0731 61       		.byte	0x61
  3812 0732 7A000000 		.4byte	0x7a
@@ -5366,7 +5366,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3815 0738 03       		.byte	0x3
  3816 0739 00000000 		.4byte	inLevel
  3817 073d 19       		.uleb128 0x19
- 3818 073e E8040000 		.4byte	.LASF88
+ 3818 073e 50050000 		.4byte	.LASF88
  3819 0742 01       		.byte	0x1
  3820 0743 62       		.byte	0x62
  3821 0744 7A000000 		.4byte	0x7a
@@ -5398,7 +5398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3847 077c 1A       		.uleb128 0x1a
  3848 077d AA000000 		.4byte	0xaa
  3849 0781 FF02     		.2byte	0x2ff
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 91
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 91
 
 
  3850 0783 00       		.byte	0x0
@@ -5430,7 +5430,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3876 07b5 03       		.byte	0x3
  3877 07b6 00000000 		.4byte	lowPowerIdle
  3878 07ba 19       		.uleb128 0x19
- 3879 07bb B2040000 		.4byte	.LASF94
+ 3879 07bb 1A050000 		.4byte	.LASF94
  3880 07bf 01       		.byte	0x1
  3881 07c0 6C       		.byte	0x6c
  3882 07c1 6F000000 		.4byte	0x6f
@@ -5448,7 +5448,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3894 07d9 03       		.byte	0x3
  3895 07da 00000000 		.4byte	rateChangedWhileInactive
  3896 07de 19       		.uleb128 0x19
- 3897 07df F3040000 		.4byte	.LASF96
+ 3897 07df 5B050000 		.4byte	.LASF96
  3898 07e3 01       		.byte	0x1
  3899 07e4 6E       		.byte	0x6e
  3900 07e5 6F000000 		.4byte	0x6f
@@ -5457,8 +5457,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3903 07eb 03       		.byte	0x3
  3904 07ec 00000000 		.4byte	clockSwitchTimer
  3905 07f0 19       		.uleb128 0x19
- 3906 07f1 14050000 		.4byte	.LASF97
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 92
+ 3906 07f1 7C050000 		.4byte	.LASF97
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 92
 
 
  3907 07f5 01       		.byte	0x1
@@ -5518,7 +5518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  3961 002d 00       		.byte	0x0
  3962 002e 03       		.uleb128 0x3
  3963 002f 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 93
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 93
 
 
  3964 0030 3A       		.uleb128 0x3a
@@ -5578,7 +5578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4018 0066 09       		.uleb128 0x9
  4019 0067 01       		.uleb128 0x1
  4020 0068 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 94
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 94
 
 
  4021 0069 49       		.uleb128 0x49
@@ -5638,7 +5638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4075 009f 34       		.uleb128 0x34
  4076 00a0 00       		.byte	0x0
  4077 00a1 03       		.uleb128 0x3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 95
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 95
 
 
  4078 00a2 0E       		.uleb128 0xe
@@ -5698,7 +5698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4132 00d8 03       		.uleb128 0x3
  4133 00d9 0E       		.uleb128 0xe
  4134 00da 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 96
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 96
 
 
  4135 00db 0B       		.uleb128 0xb
@@ -5758,7 +5758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4189 0111 00       		.byte	0x0
  4190 0112 0B       		.uleb128 0xb
  4191 0113 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 97
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 97
 
 
  4192 0114 49       		.uleb128 0x49
@@ -5818,7 +5818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4246 014a 0E       		.uleb128 0xe
  4247 014b 3A       		.uleb128 0x3a
  4248 014c 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 98
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 98
 
 
  4249 014d 3B       		.uleb128 0x3b
@@ -5878,7 +5878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4285      00
  4286 0081 66020000 		.4byte	0x266
  4287 0085 53746172 		.ascii	"StartAudioComponents\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 99
 
 
  4287      74417564 
@@ -5938,7 +5938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4305      705F4669 
  4305      6C746572 
  4305      5F4D6F64 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 100
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 100
 
 
  4305      69666965 
@@ -5998,7 +5998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4328 0294 30060000 		.4byte	0x630
  4329 0298 49325354 		.ascii	"I2STxTd\000"
  4329      78546400 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 101
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 101
 
 
  4330 02a0 42060000 		.4byte	0x642
@@ -6058,7 +6058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4359      62536861 
  4359      646F7700 
  4360 0371 61070000 		.4byte	0x761
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 102
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 102
 
 
  4361 0375 636C6561 		.ascii	"clearInBuffer\000"
@@ -6118,7 +6118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4395 0038 00000000 		.4byte	.LFB34
  4396 003c A0000000 		.4byte	.LFE34-.LFB34
  4397 0040 00000000 		.4byte	.LFB35
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 103
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 103
 
 
  4398 0044 5A000000 		.4byte	.LFE35-.LFB35
@@ -6178,7 +6178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4452 0064 6C000000 		.4byte	.LFE40
  4453 0068 00000000 		.4byte	.LFB41
  4454 006c 1E010000 		.4byte	.LFE41
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 104
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 104
 
 
  4455 0070 00000000 		.4byte	.LFB42
@@ -6238,7 +6238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4489 0065 49325354 		.ascii	"I2STxTd\000"
  4489      78546400 
  4490              	.LASF23:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 105
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 105
 
 
  4491 006d 44726F6F 		.ascii	"Droop_Filter_Custom_BACKUP_STRUCT\000"
@@ -6298,7 +6298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4515 0115 75696E74 		.ascii	"uint16\000"
  4515      313600
  4516              	.LASF30:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 106
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 106
 
 
  4517 011c 72617465 		.ascii	"rate44_count\000"
@@ -6358,7 +6358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4539      206C6F6E 
  4539      6720696E 
  4539      7400
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 107
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 107
 
 
  4540              	.LASF16:
@@ -6418,7 +6418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4563 028e 44726F6F 		.ascii	"Droop_Filter_ModifiedRestoreConfig\000"
  4563      705F4669 
  4563      6C746572 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 108
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 108
 
 
  4563      5F4D6F64 
@@ -6478,7 +6478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4586              	.LASF7:
  4587 036e 6C6F6E67 		.ascii	"long long unsigned int\000"
  4587      206C6F6E 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 109
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 109
 
 
  4587      6720756E 
@@ -6538,7 +6538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4611      6C654469 
  4611      67697461 
  4611      6C417564 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 110
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 110
 
 
  4611      696F4C6F 
@@ -6551,143 +6551,145 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 1
  4615 0448 53746F70 		.ascii	"Stop_I2S_Tx\000"
  4615      5F493253 
  4615      5F547800 
- 4616              	.LASF77:
- 4617 0454 55534249 		.ascii	"USBInTd\000"
- 4617      6E546400 
- 4618              	.LASF55:
- 4619 045c 44726F6F 		.ascii	"Droop_Filter_Custom_backup\000"
- 4619      705F4669 
- 4619      6C746572 
- 4619      5F437573 
- 4619      746F6D5F 
- 4620              	.LASF5:
- 4621 0477 6C6F6E67 		.ascii	"long unsigned int\000"
- 4621      20756E73 
- 4621      69676E65 
- 4621      6420696E 
- 4621      7400
- 4622              	.LASF11:
- 4623 0489 75696E74 		.ascii	"uint32\000"
- 4623      333200
- 4624              	.LASF40:
- 4625 0490 55706461 		.ascii	"UpdateAudioStatusUI\000"
- 4625      74654175 
- 4625      64696F53 
- 4625      74617475 
- 4625      73554900 
- 4626              	.LASF22:
- 4627 04a4 73656D61 		.ascii	"sema\000"
- 4627      00
- 4628              	.LASF18:
- 4629 04a9 72657365 		.ascii	"reserved\000"
- 4629      72766564 
- 4629      00
- 4630              	.LASF94:
- 4631 04b2 73657452 		.ascii	"setRate\000"
- 4631      61746500 
- 4632              	.LASF46:
- 4633 04ba 444D415F 		.ascii	"DMA_CICOut_Right_TD\000"
- 4633      4349434F 
- 4633      75745F52 
- 4633      69676874 
- 4633      5F544400 
- 4634              	.LASF41:
- 4635 04ce 48616E64 		.ascii	"HandleAudioInBuffer\000"
- 4635      6C654175 
- 4635      64696F49 
- 4635      6E427566 
- 4635      66657200 
- 4636              	.LASF27:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 111
+ 4616              	.LASF100:
+ 4617 0454 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 4617      665C486F 
+ 4617      6D655C44 
+ 4617      65736B74 
+ 4617      6F705C55 
+ 4618 0481 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 4618      6E656572 
+ 4618      4B69745F 
+ 4618      50354C50 
+ 4618      5F555342 
+ 4619 04b2 64696F2E 		.ascii	"dio.cydsn\000"
+ 4619      63796473 
+ 4619      6E00
+ 4620              	.LASF77:
+ 4621 04bc 55534249 		.ascii	"USBInTd\000"
+ 4621      6E546400 
+ 4622              	.LASF55:
+ 4623 04c4 44726F6F 		.ascii	"Droop_Filter_Custom_backup\000"
+ 4623      705F4669 
+ 4623      6C746572 
+ 4623      5F437573 
+ 4623      746F6D5F 
+ 4624              	.LASF5:
+ 4625 04df 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4625      20756E73 
+ 4625      69676E65 
+ 4625      6420696E 
+ 4625      7400
+ 4626              	.LASF11:
+ 4627 04f1 75696E74 		.ascii	"uint32\000"
+ 4627      333200
+ 4628              	.LASF40:
+ 4629 04f8 55706461 		.ascii	"UpdateAudioStatusUI\000"
+ 4629      74654175 
+ 4629      64696F53 
+ 4629      74617475 
+ 4629      73554900 
+ 4630              	.LASF22:
+ 4631 050c 73656D61 		.ascii	"sema\000"
+ 4631      00
+ 4632              	.LASF18:
+ 4633 0511 72657365 		.ascii	"reserved\000"
+ 4633      72766564 
+ 4633      00
+ 4634              	.LASF94:
+ 4635 051a 73657452 		.ascii	"setRate\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 111
 
 
- 4637 04e2 636F756E 		.ascii	"count\000"
- 4637      7400
- 4638              	.LASF88:
- 4639 04e8 696E5573 		.ascii	"inUsbCount\000"
- 4639      62436F75 
- 4639      6E7400
- 4640              	.LASF96:
- 4641 04f3 636C6F63 		.ascii	"clockSwitchTimer\000"
- 4641      6B537769 
- 4641      74636854 
- 4641      696D6572 
- 4641      00
- 4642              	.LASF32:
- 4643 0504 53746F70 		.ascii	"Stop_PDM_InPath\000"
- 4643      5F50444D 
- 4643      5F496E50 
- 4643      61746800 
- 4644              	.LASF97:
- 4645 0514 72617465 		.ascii	"rate\000"
+ 4635      61746500 
+ 4636              	.LASF46:
+ 4637 0522 444D415F 		.ascii	"DMA_CICOut_Right_TD\000"
+ 4637      4349434F 
+ 4637      75745F52 
+ 4637      69676874 
+ 4637      5F544400 
+ 4638              	.LASF41:
+ 4639 0536 48616E64 		.ascii	"HandleAudioInBuffer\000"
+ 4639      6C654175 
+ 4639      64696F49 
+ 4639      6E427566 
+ 4639      66657200 
+ 4640              	.LASF27:
+ 4641 054a 636F756E 		.ascii	"count\000"
+ 4641      7400
+ 4642              	.LASF88:
+ 4643 0550 696E5573 		.ascii	"inUsbCount\000"
+ 4643      62436F75 
+ 4643      6E7400
+ 4644              	.LASF96:
+ 4645 055b 636C6F63 		.ascii	"clockSwitchTimer\000"
+ 4645      6B537769 
+ 4645      74636854 
+ 4645      696D6572 
  4645      00
- 4646              	.LASF83:
- 4647 0519 6F757442 		.ascii	"outBuffer\000"
- 4647      75666665 
- 4647      7200
- 4648              	.LASF34:
- 4649 0523 53746172 		.ascii	"StartAudioComponents\000"
- 4649      74417564 
- 4649      696F436F 
- 4649      6D706F6E 
- 4649      656E7473 
- 4650              	.LASF54:
- 4651 0538 44726F6F 		.ascii	"Droop_Filter_ModifiedZeroReg32\000"
- 4651      705F4669 
- 4651      6C746572 
- 4651      5F4D6F64 
- 4651      69666965 
- 4652              	.LASF56:
- 4653 0557 44726F6F 		.ascii	"Droop_Filter_acu\000"
- 4653      705F4669 
- 4653      6C746572 
- 4653      5F616375 
- 4653      00
- 4654              	.LASF98:
- 4655 0568 474E5520 		.ascii	"GNU C 4.4.1\000"
- 4655      4320342E 
- 4655      342E3100 
- 4656              	.LASF57:
- 4657 0574 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 4657      52784275 
- 4657      66666572 
+ 4646              	.LASF32:
+ 4647 056c 53746F70 		.ascii	"Stop_PDM_InPath\000"
+ 4647      5F50444D 
+ 4647      5F496E50 
+ 4647      61746800 
+ 4648              	.LASF97:
+ 4649 057c 72617465 		.ascii	"rate\000"
+ 4649      00
+ 4650              	.LASF83:
+ 4651 0581 6F757442 		.ascii	"outBuffer\000"
+ 4651      75666665 
+ 4651      7200
+ 4652              	.LASF34:
+ 4653 058b 53746172 		.ascii	"StartAudioComponents\000"
+ 4653      74417564 
+ 4653      696F436F 
+ 4653      6D706F6E 
+ 4653      656E7473 
+ 4654              	.LASF54:
+ 4655 05a0 44726F6F 		.ascii	"Droop_Filter_ModifiedZeroReg32\000"
+ 4655      705F4669 
+ 4655      6C746572 
+ 4655      5F4D6F64 
+ 4655      69666965 
+ 4656              	.LASF56:
+ 4657 05bf 44726F6F 		.ascii	"Droop_Filter_acu\000"
+ 4657      705F4669 
+ 4657      6C746572 
+ 4657      5F616375 
  4657      00
- 4658              	.LASF38:
- 4659 0581 6E657752 		.ascii	"newRate\000"
- 4659      61746500 
- 4660              	.LASF100:
- 4661 0589 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 4661      665C486F 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccI7p4Fc.s 			page 112
+ 4658              	.LASF98:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccLQqyTH.s 			page 112
 
 
- 4661      6D655C44 
- 4661      65736B74 
- 4661      6F705C55 
- 4662 05b5 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 4662      5F50354C 
- 4662      505F5553 
- 4662      425F4175 
- 4662      64696F5C 
- 4663 05e7 6E00     		.ascii	"n\000"
+ 4659 05d0 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 4659      4320342E 
+ 4659      342E3100 
+ 4660              	.LASF57:
+ 4661 05dc 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 4661      52784275 
+ 4661      66666572 
+ 4661      00
+ 4662              	.LASF38:
+ 4663 05e9 6E657752 		.ascii	"newRate\000"
+ 4663      61746500 
  4664              	.LASF28:
- 4665 05e9 72656D61 		.ascii	"remain\000"
+ 4665 05f1 72656D61 		.ascii	"remain\000"
  4665      696E00
  4666              	.LASF70:
- 4667 05f0 55534249 		.ascii	"USBInDmaChan\000"
+ 4667 05f8 55534249 		.ascii	"USBInDmaChan\000"
  4667      6E446D61 
  4667      4368616E 
  4667      00
  4668              	.LASF61:
- 4669 05fd 55534246 		.ascii	"USBFS_interfaceSetting\000"
+ 4669 0605 55534246 		.ascii	"USBFS_interfaceSetting\000"
  4669      535F696E 
  4669      74657266 
  4669      61636553 
  4669      65747469 
  4670              	.LASF87:
- 4671 0614 696E4C65 		.ascii	"inLevel\000"
+ 4671 061c 696E4C65 		.ascii	"inLevel\000"
  4671      76656C00 
  4672              	.LASF64:
- 4673 061c 6F757452 		.ascii	"outRam\000"
+ 4673 0624 6F757452 		.ascii	"outRam\000"
  4673      616D00
  4674              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

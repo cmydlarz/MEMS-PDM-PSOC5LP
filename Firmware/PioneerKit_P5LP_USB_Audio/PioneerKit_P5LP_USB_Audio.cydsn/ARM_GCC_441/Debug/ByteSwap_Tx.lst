@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   20:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** /*******************************************************************************
   21:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** * Function Name: ByteSwap_Tx_Start
   22:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** *
@@ -92,10 +92,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   39:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	/* Configure Aux control register for FIFO status */
   40:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	ByteSwap_Tx_AUX_CONTROL_REG = ByteSwap_Tx_AUX_CONTROL_REG & (~(ByteSwap_Tx_INPUT_FIFO_0_CLR | 
   44              		.loc 1 40 0
-  45 0004 46F29143 		movw	r3, #:lower16:1073767569
-  46 0008 C4F20003 		movt	r3, #:upper16:1073767569
-  47 000c 46F29142 		movw	r2, #:lower16:1073767569
-  48 0010 C4F20002 		movt	r2, #:upper16:1073767569
+  45 0004 46F29043 		movw	r3, #:lower16:1073767568
+  46 0008 C4F20003 		movt	r3, #:upper16:1073767568
+  47 000c 46F29042 		movw	r2, #:lower16:1073767568
+  48 0010 C4F20002 		movt	r2, #:upper16:1073767568
   49 0014 1278     		ldrb	r2, [r2, #0]
   50 0016 D2B2     		uxtb	r2, r2
   51 0018 02F0FC02 		and	r2, r2, #252
@@ -104,10 +104,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   42:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 																			
   43:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	ByteSwap_Tx_AUX_CONTROL_REG = ByteSwap_Tx_AUX_CONTROL_REG | ByteSwap_Tx_INPUT_FIFO_LEVEL_HALF_EMPT
   53              		.loc 1 43 0
-  54 001e 46F29143 		movw	r3, #:lower16:1073767569
-  55 0022 C4F20003 		movt	r3, #:upper16:1073767569
-  56 0026 46F29142 		movw	r2, #:lower16:1073767569
-  57 002a C4F20002 		movt	r2, #:upper16:1073767569
+  54 001e 46F29043 		movw	r3, #:lower16:1073767568
+  55 0022 C4F20003 		movt	r3, #:upper16:1073767568
+  56 0026 46F29042 		movw	r2, #:lower16:1073767568
+  57 002a C4F20002 		movt	r2, #:upper16:1073767568
   58 002e 1278     		ldrb	r2, [r2, #0]
   59 0030 D2B2     		uxtb	r2, r2
   60 0032 42F00C02 		orr	r2, r2, #12
@@ -117,13 +117,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   45:.\Generated_Source\PSoC5/ByteSwap_Tx.c ****     /* Set Control register enable flag  */
   46:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	ByteSwap_Tx_CONTROL_REG = ByteSwap_Tx_CONTROL_REG | ByteSwap_Tx_EN;
   63              		.loc 1 46 0
-  64 003a 46F27243 		movw	r3, #:lower16:1073767538
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 3
+  64 003a 46F27F43 		movw	r3, #:lower16:1073767551
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 3
 
 
-  65 003e C4F20003 		movt	r3, #:upper16:1073767538
-  66 0042 46F27242 		movw	r2, #:lower16:1073767538
-  67 0046 C4F20002 		movt	r2, #:upper16:1073767538
+  65 003e C4F20003 		movt	r3, #:upper16:1073767551
+  66 0042 46F27F42 		movw	r2, #:lower16:1073767551
+  67 0046 C4F20002 		movt	r2, #:upper16:1073767551
   68 004a 1278     		ldrb	r2, [r2, #0]
   69 004c D2B2     		uxtb	r2, r2
   70 004e 42F00102 		orr	r2, r2, #1
@@ -178,16 +178,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   97              		.cfi_offset 7, -4
   98              	.LCFI3:
   99              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 4
 
 
   69:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	/* Clear Aux control FIFO status */
   70:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	ByteSwap_Tx_AUX_CONTROL_REG = ByteSwap_Tx_AUX_CONTROL_REG | (ByteSwap_Tx_INPUT_FIFO_0_CLR | 
  100              		.loc 1 70 0
- 101 0004 46F29143 		movw	r3, #:lower16:1073767569
- 102 0008 C4F20003 		movt	r3, #:upper16:1073767569
- 103 000c 46F29142 		movw	r2, #:lower16:1073767569
- 104 0010 C4F20002 		movt	r2, #:upper16:1073767569
+ 101 0004 46F29043 		movw	r3, #:lower16:1073767568
+ 102 0008 C4F20003 		movt	r3, #:upper16:1073767568
+ 103 000c 46F29042 		movw	r2, #:lower16:1073767568
+ 104 0010 C4F20002 		movt	r2, #:upper16:1073767568
  105 0014 1278     		ldrb	r2, [r2, #0]
  106 0016 D2B2     		uxtb	r2, r2
  107 0018 42F00302 		orr	r2, r2, #3
@@ -198,10 +198,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
   73:.\Generated_Source\PSoC5/ByteSwap_Tx.c ****     /* Clears the Control register enable flag  */
   74:.\Generated_Source\PSoC5/ByteSwap_Tx.c **** 	ByteSwap_Tx_CONTROL_REG = ByteSwap_Tx_CONTROL_REG & (~ ByteSwap_Tx_EN);
  110              		.loc 1 74 0
- 111 0020 46F27243 		movw	r3, #:lower16:1073767538
- 112 0024 C4F20003 		movt	r3, #:upper16:1073767538
- 113 0028 46F27242 		movw	r2, #:lower16:1073767538
- 114 002c C4F20002 		movt	r2, #:upper16:1073767538
+ 111 0020 46F27F43 		movw	r3, #:lower16:1073767551
+ 112 0024 C4F20003 		movt	r3, #:upper16:1073767551
+ 113 0028 46F27F42 		movw	r2, #:lower16:1073767551
+ 114 002c C4F20002 		movt	r2, #:upper16:1073767551
  115 0030 1278     		ldrb	r2, [r2, #0]
  116 0032 D2B2     		uxtb	r2, r2
  117 0034 02F0FE02 		and	r2, r2, #254
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  147              	.LLST1:
  148 002b 00000000 		.4byte	.LFB1
  149 002f 02000000 		.4byte	.LCFI2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 5
 
 
  150 0033 0100     		.2byte	0x1
@@ -261,10 +261,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  167 0006 00000000 		.4byte	.Ldebug_abbrev0
  168 000a 04       		.byte	0x4
  169 000b 01       		.uleb128 0x1
- 170 000c 6B000000 		.4byte	.LASF14
+ 170 000c D3000000 		.4byte	.LASF14
  171 0010 01       		.byte	0x1
- 172 0011 2D000000 		.4byte	.LASF15
- 173 0015 9A000000 		.4byte	.LASF16
+ 172 0011 95000000 		.4byte	.LASF15
+ 173 0015 1B000000 		.4byte	.LASF16
  174 0019 00000000 		.4byte	0x0
  175 001d 00000000 		.4byte	0x0
  176 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -272,38 +272,38 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  178 0029 02       		.uleb128 0x2
  179 002a 01       		.byte	0x1
  180 002b 06       		.byte	0x6
- 181 002c 1F010000 		.4byte	.LASF0
+ 181 002c 27010000 		.4byte	.LASF0
  182 0030 02       		.uleb128 0x2
  183 0031 01       		.byte	0x1
  184 0032 08       		.byte	0x8
- 185 0033 77000000 		.4byte	.LASF1
+ 185 0033 DF000000 		.4byte	.LASF1
  186 0037 02       		.uleb128 0x2
  187 0038 02       		.byte	0x2
  188 0039 05       		.byte	0x5
- 189 003a 31010000 		.4byte	.LASF2
+ 189 003a 39010000 		.4byte	.LASF2
  190 003e 02       		.uleb128 0x2
  191 003f 02       		.byte	0x2
  192 0040 07       		.byte	0x7
- 193 0041 0C010000 		.4byte	.LASF3
+ 193 0041 14010000 		.4byte	.LASF3
  194 0045 02       		.uleb128 0x2
  195 0046 04       		.byte	0x4
  196 0047 05       		.byte	0x5
- 197 0048 8A000000 		.4byte	.LASF4
+ 197 0048 F2000000 		.4byte	.LASF4
  198 004c 02       		.uleb128 0x2
  199 004d 04       		.byte	0x4
  200 004e 07       		.byte	0x7
- 201 004f 1B000000 		.4byte	.LASF5
+ 201 004f 83000000 		.4byte	.LASF5
  202 0053 02       		.uleb128 0x2
  203 0054 08       		.byte	0x8
  204 0055 05       		.byte	0x5
  205 0056 00000000 		.4byte	.LASF6
  206 005a 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 6
 
 
  207 005b 08       		.byte	0x8
  208 005c 07       		.byte	0x7
- 209 005d 54000000 		.4byte	.LASF7
+ 209 005d BC000000 		.4byte	.LASF7
  210 0061 03       		.uleb128 0x3
  211 0062 04       		.byte	0x4
  212 0063 05       		.byte	0x5
@@ -315,21 +315,21 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  218 006f 02       		.uleb128 0x2
  219 0070 04       		.byte	0x4
  220 0071 04       		.byte	0x4
- 221 0072 2B010000 		.4byte	.LASF9
+ 221 0072 33010000 		.4byte	.LASF9
  222 0076 02       		.uleb128 0x2
  223 0077 08       		.byte	0x8
  224 0078 04       		.byte	0x4
- 225 0079 93000000 		.4byte	.LASF10
+ 225 0079 FB000000 		.4byte	.LASF10
  226 007d 02       		.uleb128 0x2
  227 007e 01       		.byte	0x1
  228 007f 08       		.byte	0x8
- 229 0080 85000000 		.4byte	.LASF11
+ 229 0080 ED000000 		.4byte	.LASF11
  230 0084 04       		.uleb128 0x4
  231 0085 04       		.byte	0x4
  232 0086 07       		.byte	0x7
  233 0087 05       		.uleb128 0x5
  234 0088 01       		.byte	0x1
- 235 0089 FA000000 		.4byte	.LASF12
+ 235 0089 02010000 		.4byte	.LASF12
  236 008d 01       		.byte	0x1
  237 008e 25       		.byte	0x25
  238 008f 01       		.byte	0x1
@@ -338,7 +338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  241 0098 00000000 		.4byte	.LLST0
  242 009c 05       		.uleb128 0x5
  243 009d 01       		.byte	0x1
- 244 009e 3B010000 		.4byte	.LASF13
+ 244 009e 43010000 		.4byte	.LASF13
  245 00a2 01       		.byte	0x1
  246 00a3 43       		.byte	0x43
  247 00a4 01       		.byte	0x1
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  261 0008 0E       		.uleb128 0xe
  262 0009 1B       		.uleb128 0x1b
  263 000a 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 7
 
 
  264 000b 11       		.uleb128 0x11
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  318 0041 11       		.uleb128 0x11
  319 0042 01       		.uleb128 0x1
  320 0043 12       		.uleb128 0x12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 8
 
 
  321 0044 01       		.uleb128 0x1
@@ -478,88 +478,90 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 1
  364              	.LASF8:
  365 000e 756E7369 		.ascii	"unsigned int\000"
  365      676E6564 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 9
 
 
  365      20696E74 
  365      00
- 366              	.LASF5:
- 367 001b 6C6F6E67 		.ascii	"long unsigned int\000"
- 367      20756E73 
- 367      69676E65 
- 367      6420696E 
- 367      7400
- 368              	.LASF15:
- 369 002d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ByteSwap_Tx.c\000"
- 369      6E657261 
- 369      7465645F 
- 369      536F7572 
- 369      63655C50 
- 370              	.LASF7:
- 371 0054 6C6F6E67 		.ascii	"long long unsigned int\000"
- 371      206C6F6E 
- 371      6720756E 
- 371      7369676E 
- 371      65642069 
- 372              	.LASF14:
- 373 006b 474E5520 		.ascii	"GNU C 4.4.1\000"
- 373      4320342E 
- 373      342E3100 
- 374              	.LASF1:
- 375 0077 756E7369 		.ascii	"unsigned char\000"
- 375      676E6564 
- 375      20636861 
- 375      7200
- 376              	.LASF11:
- 377 0085 63686172 		.ascii	"char\000"
- 377      00
- 378              	.LASF4:
- 379 008a 6C6F6E67 		.ascii	"long int\000"
- 379      20696E74 
- 379      00
- 380              	.LASF10:
- 381 0093 646F7562 		.ascii	"double\000"
- 381      6C6500
- 382              	.LASF16:
- 383 009a 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 383      665C486F 
- 383      6D655C44 
- 383      65736B74 
- 383      6F705C55 
- 384 00c6 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 384      5F50354C 
- 384      505F5553 
- 384      425F4175 
- 384      64696F5C 
- 385 00f8 6E00     		.ascii	"n\000"
+ 366              	.LASF16:
+ 367 001b 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 367      665C486F 
+ 367      6D655C44 
+ 367      65736B74 
+ 367      6F705C55 
+ 368 0048 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 368      6E656572 
+ 368      4B69745F 
+ 368      50354C50 
+ 368      5F555342 
+ 369 0079 64696F2E 		.ascii	"dio.cydsn\000"
+ 369      63796473 
+ 369      6E00
+ 370              	.LASF5:
+ 371 0083 6C6F6E67 		.ascii	"long unsigned int\000"
+ 371      20756E73 
+ 371      69676E65 
+ 371      6420696E 
+ 371      7400
+ 372              	.LASF15:
+ 373 0095 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ByteSwap_Tx.c\000"
+ 373      6E657261 
+ 373      7465645F 
+ 373      536F7572 
+ 373      63655C50 
+ 374              	.LASF7:
+ 375 00bc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 375      206C6F6E 
+ 375      6720756E 
+ 375      7369676E 
+ 375      65642069 
+ 376              	.LASF14:
+ 377 00d3 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 377      4320342E 
+ 377      342E3100 
+ 378              	.LASF1:
+ 379 00df 756E7369 		.ascii	"unsigned char\000"
+ 379      676E6564 
+ 379      20636861 
+ 379      7200
+ 380              	.LASF11:
+ 381 00ed 63686172 		.ascii	"char\000"
+ 381      00
+ 382              	.LASF4:
+ 383 00f2 6C6F6E67 		.ascii	"long int\000"
+ 383      20696E74 
+ 383      00
+ 384              	.LASF10:
+ 385 00fb 646F7562 		.ascii	"double\000"
+ 385      6C6500
  386              	.LASF12:
- 387 00fa 42797465 		.ascii	"ByteSwap_Tx_Start\000"
+ 387 0102 42797465 		.ascii	"ByteSwap_Tx_Start\000"
  387      53776170 
  387      5F54785F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccOu4ZQG.s 			page 10
+
+
  387      53746172 
  387      7400
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccPEZ8bP.s 			page 10
-
-
  388              	.LASF3:
- 389 010c 73686F72 		.ascii	"short unsigned int\000"
+ 389 0114 73686F72 		.ascii	"short unsigned int\000"
  389      7420756E 
  389      7369676E 
  389      65642069 
  389      6E7400
  390              	.LASF0:
- 391 011f 7369676E 		.ascii	"signed char\000"
+ 391 0127 7369676E 		.ascii	"signed char\000"
  391      65642063 
  391      68617200 
  392              	.LASF9:
- 393 012b 666C6F61 		.ascii	"float\000"
+ 393 0133 666C6F61 		.ascii	"float\000"
  393      7400
  394              	.LASF2:
- 395 0131 73686F72 		.ascii	"short int\000"
+ 395 0139 73686F72 		.ascii	"short int\000"
  395      7420696E 
  395      7400
  396              	.LASF13:
- 397 013b 42797465 		.ascii	"ByteSwap_Tx_Stop\000"
+ 397 0143 42797465 		.ascii	"ByteSwap_Tx_Stop\000"
  397      53776170 
  397      5F54785F 
  397      53746F70 

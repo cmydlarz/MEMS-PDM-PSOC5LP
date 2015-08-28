@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device schemaVersion="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_0.xsd">
-  <name>CY8C5666LTI_LP005</name>
+  <name>CY8C5667LTI_LP009</name>
   <version>0.1</version>
   <description>CY8C56LP</description>
   <addressUnitBits>8</addressUnitBits>
@@ -655,7 +655,7 @@
     <peripheral>
       <name>PWM</name>
       <description>No description available</description>
-      <baseAddress>0x40006526</baseAddress>
+      <baseAddress>0x40006524</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x72</size>
@@ -706,7 +706,7 @@
         <register>
           <name>PWM_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x61</addressOffset>
+          <addressOffset>0x60</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

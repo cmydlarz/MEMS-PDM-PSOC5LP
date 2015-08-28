@@ -1,24 +1,19 @@
 # KitProg_Bootloader
-# 2015-08-26 23:38:24Z
+# 2015-08-28 22:15:21Z
 
-dont_use_location 0 0
-dont_use_location 1 0
-dont_use_location 2 0
-dont_use_location 3 0
-dont_use_location sarcell -1 -1 1
 set_location "ClockBlock" clockblockcell -1 -1 0
-set_location "Net_134" 2 1 0 1
+set_location "Net_134" 3 0 0 1
 set_io "Pin_PSoC4A_XRES(0)" iocell 2 4
 set_io "Pin_Status_LED(0)" iocell 3 1
-set_location "\PWM:PWMUDB:final_kill_reg\" 3 1 0 1
-set_location "\PWM:PWMUDB:prevCompare1\" 2 1 0 2
-set_location "\PWM:PWMUDB:runmode_enable\" 2 1 1 2
-set_location "\PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\" 2 1 6
-set_location "\PWM:PWMUDB:sP16:pwmdp:u0\" 3 1 2
-set_location "\PWM:PWMUDB:sP16:pwmdp:u1\" 2 1 2
-set_location "\PWM:PWMUDB:sSTSReg:rstSts:stsreg\" 2 1 4
-set_location "\PWM:PWMUDB:status_0\" 2 1 0 3
-set_location "\PWM:PWMUDB:status_5\" 3 1 0 0
+set_location "\PWM:PWMUDB:final_kill_reg\" 2 0 0 1
+set_location "\PWM:PWMUDB:prevCompare1\" 3 0 0 2
+set_location "\PWM:PWMUDB:runmode_enable\" 3 0 0 0
+set_location "\PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\" 3 0 6
+set_location "\PWM:PWMUDB:sP16:pwmdp:u0\" 2 0 2
+set_location "\PWM:PWMUDB:sP16:pwmdp:u1\" 3 0 2
+set_location "\PWM:PWMUDB:sSTSReg:rstSts:stsreg\" 2 0 4
+set_location "\PWM:PWMUDB:status_0\" 3 0 0 3
+set_location "\PWM:PWMUDB:status_5\" 2 0 0 0
 set_io "\USBFS:Dm(0)\" iocell 15 7
 set_io "\USBFS:Dp(0)\" iocell 15 6
 set_location "\USBFS:Dp\" logicalport -1 -1 15

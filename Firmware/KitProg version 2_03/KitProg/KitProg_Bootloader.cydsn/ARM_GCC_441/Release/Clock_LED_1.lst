@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
   20:.\Generated_Source\PSoC5/Clock_LED_1.c **** /* Clock Distribution registers. */
   21:.\Generated_Source\PSoC5/Clock_LED_1.c **** #define CLK_DIST_LD              (* (reg8 *) CYREG_CLKDIST_LD)
   22:.\Generated_Source\PSoC5/Clock_LED_1.c **** #define CLK_DIST_BCFG2           (* (reg8 *) CYREG_CLKDIST_BCFG2)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/Clock_LED_1.c **** #define BCFG2_MASK               (0x80u)
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
   58              		.global	Clock_LED_1_Stop
   59              		.thumb
   60              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 3
 
 
   61              		.type	Clock_LED_1_Stop, %function
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
   89              		.align	1
   90              		.global	Clock_LED_1_StopBlock
   91              		.thumb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 4
 
 
   92              		.thumb_func
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  114:.\Generated_Source\PSoC5/Clock_LED_1.c ****         CLK_DIST_DMASK = Clock_LED_1_CLKEN_MASK;
  109              		.loc 1 114 0
  110 000c 1649     		ldr	r1, .L14+8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 5
 
 
  111              		.loc 1 107 0
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  149 0042 0CF0FE0C 		and	ip, ip, #254
  150 0046 81F800C0 		strb	ip, [r1, #0]
  131:.\Generated_Source\PSoC5/Clock_LED_1.c ****         Clock_LED_1_CLKSTBY &= (uint8)(~Clock_LED_1_CLKSTBY_MASK);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 6
 
 
  151              		.loc 1 131 0
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  154:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  None
  155:.\Generated_Source\PSoC5/Clock_LED_1.c **** *
  156:.\Generated_Source\PSoC5/Clock_LED_1.c **** *******************************************************************************/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 7
 
 
  157:.\Generated_Source\PSoC5/Clock_LED_1.c **** void Clock_LED_1_StandbyPower(uint8 state) 
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  175:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  Modifies the clock divider and, thus, the frequency. When the clock divider
  176:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  register is set to zero or changed from zero, the clock will be temporarily
  177:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  disabled in order to change the SSS mode bit. If the clock is enabled when
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 8
 
 
  178:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  SetDividerRegister is called, then the source clock must be running.
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  232:.\Generated_Source\PSoC5/Clock_LED_1.c **** #if defined(Clock_LED_1__CFG3)
  233:.\Generated_Source\PSoC5/Clock_LED_1.c ****                 CLK_DIST_AMASK = Clock_LED_1_CLKEN_MASK;
  234:.\Generated_Source\PSoC5/Clock_LED_1.c ****                 CLK_DIST_DMASK = 0x00u;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 9
 
 
  235:.\Generated_Source\PSoC5/Clock_LED_1.c **** #else
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  289:.\Generated_Source\PSoC5/Clock_LED_1.c **** * Parameters:
  290:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  None
  291:.\Generated_Source\PSoC5/Clock_LED_1.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 10
 
 
  292:.\Generated_Source\PSoC5/Clock_LED_1.c **** * Returns:
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  320:.\Generated_Source\PSoC5/Clock_LED_1.c **** *                 is asserted for approximately half of its period. When
  321:.\Generated_Source\PSoC5/Clock_LED_1.c **** *                 disabled, the output clock is asserted for one period of the
  322:.\Generated_Source\PSoC5/Clock_LED_1.c **** *                 source clock.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 11
 
 
  323:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   - CYCLK_SYNC  Enable output synchronization to master clock. This should
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  347:.\Generated_Source\PSoC5/Clock_LED_1.c **** *
  348:.\Generated_Source\PSoC5/Clock_LED_1.c **** * Parameters:
  349:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  clkMode: Bit mask containing the bits to clear. For PSoC 3 and PSoC 5,
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 12
 
 
  350:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   clkMode should be a set of the following optional bits or'ed together.
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  373:.\Generated_Source\PSoC5/Clock_LED_1.c **** /*******************************************************************************
  374:.\Generated_Source\PSoC5/Clock_LED_1.c **** * Function Name: Clock_LED_1_GetModeRegister
  375:.\Generated_Source\PSoC5/Clock_LED_1.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 13
 
 
  376:.\Generated_Source\PSoC5/Clock_LED_1.c **** *
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  404:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   following input sources:
  405:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   - CYCLK_SRC_SEL_SYNC_DIG
  406:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   - CYCLK_SRC_SEL_IMO
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 14
 
 
  407:.\Generated_Source\PSoC5/Clock_LED_1.c **** *   - CYCLK_SRC_SEL_XTALM
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  461:.\Generated_Source\PSoC5/Clock_LED_1.c **** *  The input source of the clock. See SetSourceRegister for details.
  462:.\Generated_Source\PSoC5/Clock_LED_1.c **** *
  463:.\Generated_Source\PSoC5/Clock_LED_1.c **** *******************************************************************************/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 15
 
 
  464:.\Generated_Source\PSoC5/Clock_LED_1.c **** uint8 Clock_LED_1_GetSourceRegister(void) 
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  382 0008 ADB2     		uxth	r5, r5
  383              	.LVL7:
  384              	.LBE9:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 16
 
 
  385              	.LBE10:
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  439              	.LFE9:
  440              		.size	Clock_LED_1_SetSourceRegister, .-Clock_LED_1_SetSourceRegister
  441              		.section	.text.Clock_LED_1_SetDividerRegister,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 17
 
 
  442              		.align	1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  496 002a 1A70     		strb	r2, [r3, #0]
  497 002c 38BD     		pop	{r3, r4, r5, pc}
  498              	.LVL16:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 18
 
 
  499              	.L55:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  553 0080 114A     		ldr	r2, .L64+4
  554 0082 92F800C0 		ldrb	ip, [r2, #0]	@ zero_extendqisi2
  555 0086 0CF0FE0C 		and	ip, ip, #254
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 19
 
 
  556 008a 82F800C0 		strb	ip, [r2, #0]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  610              	.LFE4:
  611              		.size	Clock_LED_1_SetDividerRegister, .-Clock_LED_1_SetDividerRegister
  612              		.text
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 20
 
 
  613              	.Letext0:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  667 0085 00000000 		.4byte	0x0
  668 0089 00000000 		.4byte	0x0
  669              	.LLST14:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 21
 
 
  670 008d 00000000 		.4byte	.LVL12
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  724 0122 00000000 		.4byte	0x0
  725              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
  726              		.section	.debug_info
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 22
 
 
  727 0000 72020000 		.4byte	0x272
@@ -1266,10 +1266,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  729 0006 00000000 		.4byte	.Ldebug_abbrev0
  730 000a 04       		.byte	0x4
  731 000b 01       		.uleb128 0x1
- 732 000c DF010000 		.4byte	.LASF33
+ 732 000c 96010000 		.4byte	.LASF33
  733 0010 01       		.byte	0x1
  734 0011 4C000000 		.4byte	.LASF34
- 735 0015 C7000000 		.4byte	.LASF35
+ 735 0015 13020000 		.4byte	.LASF35
  736 0019 00000000 		.4byte	0x0
  737 001d 00000000 		.4byte	0x0
  738 0021 18000000 		.4byte	.Ldebug_ranges0+0x18
@@ -1277,7 +1277,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  740 0029 02       		.uleb128 0x2
  741 002a 01       		.byte	0x1
  742 002b 06       		.byte	0x6
- 743 002c 50020000 		.4byte	.LASF0
+ 743 002c 07020000 		.4byte	.LASF0
  744 0030 02       		.uleb128 0x2
  745 0031 01       		.byte	0x1
  746 0032 08       		.byte	0x8
@@ -1285,7 +1285,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  748 0037 02       		.uleb128 0x2
  749 0038 02       		.byte	0x2
  750 0039 05       		.byte	0x5
- 751 003a 0E020000 		.4byte	.LASF2
+ 751 003a C5010000 		.4byte	.LASF2
  752 003e 02       		.uleb128 0x2
  753 003f 02       		.byte	0x2
  754 0040 07       		.byte	0x7
@@ -1293,7 +1293,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  756 0045 02       		.uleb128 0x2
  757 0046 04       		.byte	0x4
  758 0047 05       		.byte	0x5
- 759 0048 3D020000 		.4byte	.LASF4
+ 759 0048 F4010000 		.4byte	.LASF4
  760 004c 02       		.uleb128 0x2
  761 004d 04       		.byte	0x4
  762 004e 07       		.byte	0x7
@@ -1305,7 +1305,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  768 005a 02       		.uleb128 0x2
  769 005b 08       		.byte	0x8
  770 005c 07       		.byte	0x7
- 771 005d AB010000 		.4byte	.LASF7
+ 771 005d 62010000 		.4byte	.LASF7
  772 0061 03       		.uleb128 0x3
  773 0062 04       		.byte	0x4
  774 0063 05       		.byte	0x5
@@ -1313,17 +1313,17 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  776 0068 02       		.uleb128 0x2
  777 0069 04       		.byte	0x4
  778 006a 07       		.byte	0x7
- 779 006b 96010000 		.4byte	.LASF8
+ 779 006b 4D010000 		.4byte	.LASF8
  780 006f 04       		.uleb128 0x4
- 781 0070 18020000 		.4byte	.LASF9
+ 781 0070 CF010000 		.4byte	.LASF9
  782 0074 02       		.byte	0x2
  783 0075 4C       		.byte	0x4c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 23
 
 
  784 0076 30000000 		.4byte	0x30
  785 007a 04       		.uleb128 0x4
- 786 007b 5A010000 		.4byte	.LASF10
+ 786 007b 11010000 		.4byte	.LASF10
  787 007f 02       		.byte	0x2
  788 0080 4D       		.byte	0x4d
  789 0081 3E000000 		.4byte	0x3e
@@ -1334,14 +1334,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  794 008c 02       		.uleb128 0x2
  795 008d 08       		.byte	0x8
  796 008e 04       		.byte	0x4
- 797 008f 2D010000 		.4byte	.LASF12
+ 797 008f E4000000 		.4byte	.LASF12
  798 0093 02       		.uleb128 0x2
  799 0094 01       		.byte	0x1
  800 0095 08       		.byte	0x8
- 801 0096 EB010000 		.4byte	.LASF13
+ 801 0096 A2010000 		.4byte	.LASF13
  802 009a 05       		.uleb128 0x5
  803 009b 01       		.byte	0x1
- 804 009c 61010000 		.4byte	.LASF36
+ 804 009c 18010000 		.4byte	.LASF36
  805 00a0 01       		.byte	0x1
  806 00a1 2901     		.2byte	0x129
  807 00a3 01       		.byte	0x1
@@ -1349,7 +1349,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  809 00a8 01       		.byte	0x1
  810 00a9 06       		.uleb128 0x6
  811 00aa 01       		.byte	0x1
- 812 00ab 10010000 		.4byte	.LASF14
+ 812 00ab C7000000 		.4byte	.LASF14
  813 00af 01       		.byte	0x1
  814 00b0 2D       		.byte	0x2d
  815 00b1 01       		.byte	0x1
@@ -1359,7 +1359,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  819 00bb 5D       		.byte	0x5d
  820 00bc 06       		.uleb128 0x6
  821 00bd 01       		.byte	0x1
- 822 00be CE010000 		.4byte	.LASF15
+ 822 00be 85010000 		.4byte	.LASF15
  823 00c2 01       		.byte	0x1
  824 00c3 47       		.byte	0x47
  825 00c4 01       		.byte	0x1
@@ -1369,7 +1369,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  829 00ce 5D       		.byte	0x5d
  830 00cf 07       		.uleb128 0x7
  831 00d0 01       		.byte	0x1
- 832 00d1 80010000 		.4byte	.LASF16
+ 832 00d1 37010000 		.4byte	.LASF16
  833 00d5 01       		.byte	0x1
  834 00d6 64       		.byte	0x64
  835 00d7 01       		.byte	0x1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  838 00e0 01       		.byte	0x1
  839 00e1 5D       		.byte	0x5d
  840 00e2 FE000000 		.4byte	0xfe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 24
 
 
  841 00e6 08       		.uleb128 0x8
@@ -1395,7 +1395,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  852 00fd 00       		.byte	0x0
  853 00fe 07       		.uleb128 0x7
  854 00ff 01       		.byte	0x1
- 855 0100 5C020000 		.4byte	.LASF17
+ 855 0100 77020000 		.4byte	.LASF17
  856 0104 01       		.byte	0x1
  857 0105 9D       		.byte	0x9d
  858 0106 01       		.byte	0x1
@@ -1430,7 +1430,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  887 0145 5D       		.byte	0x5d
  888 0146 5B010000 		.4byte	0x15b
  889 014a 0D       		.uleb128 0xd
- 890 014b C2010000 		.4byte	.LASF20
+ 890 014b 79010000 		.4byte	.LASF20
  891 014f 01       		.byte	0x1
  892 0150 4C01     		.2byte	0x14c
  893 0152 6F000000 		.4byte	0x6f
@@ -1438,10 +1438,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  895 015a 00       		.byte	0x0
  896 015b 0C       		.uleb128 0xc
  897 015c 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 25
 
 
- 898 015d 3C010000 		.4byte	.LASF21
+ 898 015d F3000000 		.4byte	.LASF21
  899 0161 01       		.byte	0x1
  900 0162 6F01     		.2byte	0x16f
  901 0164 01       		.byte	0x1
@@ -1451,7 +1451,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  905 016e 5D       		.byte	0x5d
  906 016f 84010000 		.4byte	0x184
  907 0173 0D       		.uleb128 0xd
- 908 0174 C2010000 		.4byte	.LASF20
+ 908 0174 79010000 		.4byte	.LASF20
  909 0178 01       		.byte	0x1
  910 0179 6F01     		.2byte	0x16f
  911 017b 6F000000 		.4byte	0x6f
@@ -1470,7 +1470,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  924 019b 5D       		.byte	0x5d
  925 019c 0E       		.uleb128 0xe
  926 019d 01       		.byte	0x1
- 927 019e 75020000 		.4byte	.LASF23
+ 927 019e 90020000 		.4byte	.LASF23
  928 01a2 01       		.byte	0x1
  929 01a3 D001     		.2byte	0x1d0
  930 01a5 01       		.byte	0x1
@@ -1481,7 +1481,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  935 01b3 5D       		.byte	0x5d
  936 01b4 0F       		.uleb128 0xf
  937 01b5 01       		.byte	0x1
- 938 01b6 F0010000 		.4byte	.LASF24
+ 938 01b6 A7010000 		.4byte	.LASF24
  939 01ba 01       		.byte	0x1
  940 01bb A301     		.2byte	0x1a3
  941 01bd 01       		.byte	0x1
@@ -1490,7 +1490,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  944 01c6 26000000 		.4byte	.LLST11
  945 01ca 09020000 		.4byte	0x209
  946 01ce 0D       		.uleb128 0xd
- 947 01cf 46020000 		.4byte	.LASF25
+ 947 01cf FD010000 		.4byte	.LASF25
  948 01d3 01       		.byte	0x1
  949 01d4 A301     		.2byte	0x1a3
  950 01d6 6F000000 		.4byte	0x6f
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  952 01de 10       		.uleb128 0x10
  953 01df 7E000000 		.4byte	.LASF27
  954 01e3 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 26
 
 
  955 01e4 A501     		.2byte	0x1a5
@@ -1506,7 +1506,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  957 01ea 01       		.byte	0x1
  958 01eb 55       		.byte	0x55
  959 01ec 11       		.uleb128 0x11
- 960 01ed 93020000 		.4byte	.LASF31
+ 960 01ed AE020000 		.4byte	.LASF31
  961 01f1 01       		.byte	0x1
  962 01f2 A601     		.2byte	0x1a6
  963 01f4 6F000000 		.4byte	0x6f
@@ -1519,7 +1519,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  970 0208 00       		.byte	0x0
  971 0209 13       		.uleb128 0x13
  972 020a 01       		.byte	0x1
- 973 020b 1E020000 		.4byte	.LASF37
+ 973 020b D5010000 		.4byte	.LASF37
  974 020f 01       		.byte	0x1
  975 0210 C1       		.byte	0xc1
  976 0211 01       		.byte	0x1
@@ -1527,13 +1527,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  978 0216 DC000000 		.4byte	.LFE4
  979 021a 6E000000 		.4byte	.LLST13
  980 021e 14       		.uleb128 0x14
- 981 021f 22010000 		.4byte	.LASF28
+ 981 021f D9000000 		.4byte	.LASF28
  982 0223 01       		.byte	0x1
  983 0224 C1       		.byte	0xc1
  984 0225 7A000000 		.4byte	0x7a
  985 0229 8D000000 		.4byte	.LLST14
  986 022d 14       		.uleb128 0x14
- 987 022e 34010000 		.4byte	.LASF29
+ 987 022e EB000000 		.4byte	.LASF29
  988 0232 01       		.byte	0x1
  989 0233 C1       		.byte	0xc1
  990 0234 6F000000 		.4byte	0x6f
@@ -1545,7 +1545,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  996 0243 6F000000 		.4byte	0x6f
  997 0247 D4000000 		.4byte	.LLST16
  998 024b 16       		.uleb128 0x16
- 999 024c A3010000 		.4byte	.LASF32
+ 999 024c 5A010000 		.4byte	.LASF32
  1000 0250 01       		.byte	0x1
  1001 0251 C6       		.byte	0xc6
  1002 0252 6F000000 		.4byte	0x6f
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1009 0265 17       		.uleb128 0x17
  1010 0266 9A000000 		.4byte	0x9a
  1011 026a 0A000000 		.4byte	.LBB11
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 27
 
 
  1012 026e 10000000 		.4byte	.LBE11
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1066 0030 3A       		.uleb128 0x3a
  1067 0031 0B       		.uleb128 0xb
  1068 0032 3B       		.uleb128 0x3b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 28
 
 
  1069 0033 0B       		.uleb128 0xb
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1123 0069 3B       		.uleb128 0x3b
  1124 006a 0B       		.uleb128 0xb
  1125 006b 27       		.uleb128 0x27
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 29
 
 
  1126 006c 0C       		.uleb128 0xc
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1180 00a2 13       		.uleb128 0x13
  1181 00a3 11       		.uleb128 0x11
  1182 00a4 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 30
 
 
  1183 00a5 12       		.uleb128 0x12
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1237 00db 05       		.uleb128 0x5
  1238 00dc 27       		.uleb128 0x27
  1239 00dd 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 31
 
 
  1240 00de 49       		.uleb128 0x49
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1294 0114 0B       		.uleb128 0xb
  1295 0115 3B       		.uleb128 0x3b
  1296 0116 05       		.uleb128 0x5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 32
 
 
  1297 0117 49       		.uleb128 0x49
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1351 014d 00       		.byte	0x0
  1352 014e 15       		.uleb128 0x15
  1353 014f 34       		.uleb128 0x34
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 33
 
 
  1354 0150 00       		.byte	0x0
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1404 0028 436C6F63 		.ascii	"Clock_LED_1_Stop\000"
  1404      6B5F4C45 
  1404      445F315F 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 34
 
 
  1404      53746F70 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1422      53657444 
  1422      69766964 
  1423 015c 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 35
 
 
  1424              		.section	.debug_aranges,"",%progbits
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1478 0050 00000000 		.4byte	.LFB7
  1479 0054 14000000 		.4byte	.LFE7
  1480 0058 00000000 		.4byte	.LFB8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 36
 
 
  1481 005c 10000000 		.4byte	.LFE8
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1511              	.LASF5:
  1512 00a2 6C6F6E67 		.ascii	"long unsigned int\000"
  1512      20756E73 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 37
 
 
  1512      69676E65 
@@ -2170,135 +2170,137 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 1
  1514      7369676E 
  1514      65642069 
  1514      6E7400
- 1515              	.LASF35:
- 1516 00c7 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 1516      665C486F 
- 1516      6D655C44 
- 1516      65736B74 
- 1516      6F705C4B 
- 1517 00f4 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
- 1517      69745072 
- 1517      6F675F42 
- 1517      6F6F746C 
- 1517      6F616465 
- 1518              	.LASF14:
- 1519 0110 436C6F63 		.ascii	"Clock_LED_1_Start\000"
- 1519      6B5F4C45 
- 1519      445F315F 
- 1519      53746172 
- 1519      7400
- 1520              	.LASF28:
- 1521 0122 636C6B44 		.ascii	"clkDivider\000"
- 1521      69766964 
- 1521      657200
- 1522              	.LASF12:
- 1523 012d 646F7562 		.ascii	"double\000"
- 1523      6C6500
- 1524              	.LASF29:
- 1525 0134 72657374 		.ascii	"restart\000"
- 1525      61727400 
- 1526              	.LASF21:
- 1527 013c 436C6F63 		.ascii	"Clock_LED_1_ClearModeRegister\000"
- 1527      6B5F4C45 
- 1527      445F315F 
- 1527      436C6561 
- 1527      724D6F64 
- 1528              	.LASF10:
- 1529 015a 75696E74 		.ascii	"uint16\000"
- 1529      313600
- 1530              	.LASF36:
- 1531 0161 436C6F63 		.ascii	"Clock_LED_1_GetDividerRegister\000"
- 1531      6B5F4C45 
- 1531      445F315F 
- 1531      47657444 
- 1531      69766964 
- 1532              	.LASF16:
- 1533 0180 436C6F63 		.ascii	"Clock_LED_1_StopBlock\000"
- 1533      6B5F4C45 
- 1533      445F315F 
- 1533      53746F70 
- 1533      426C6F63 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 38
+ 1515              	.LASF14:
+ 1516 00c7 436C6F63 		.ascii	"Clock_LED_1_Start\000"
+ 1516      6B5F4C45 
+ 1516      445F315F 
+ 1516      53746172 
+ 1516      7400
+ 1517              	.LASF28:
+ 1518 00d9 636C6B44 		.ascii	"clkDivider\000"
+ 1518      69766964 
+ 1518      657200
+ 1519              	.LASF12:
+ 1520 00e4 646F7562 		.ascii	"double\000"
+ 1520      6C6500
+ 1521              	.LASF29:
+ 1522 00eb 72657374 		.ascii	"restart\000"
+ 1522      61727400 
+ 1523              	.LASF21:
+ 1524 00f3 436C6F63 		.ascii	"Clock_LED_1_ClearModeRegister\000"
+ 1524      6B5F4C45 
+ 1524      445F315F 
+ 1524      436C6561 
+ 1524      724D6F64 
+ 1525              	.LASF10:
+ 1526 0111 75696E74 		.ascii	"uint16\000"
+ 1526      313600
+ 1527              	.LASF36:
+ 1528 0118 436C6F63 		.ascii	"Clock_LED_1_GetDividerRegister\000"
+ 1528      6B5F4C45 
+ 1528      445F315F 
+ 1528      47657444 
+ 1528      69766964 
+ 1529              	.LASF16:
+ 1530 0137 436C6F63 		.ascii	"Clock_LED_1_StopBlock\000"
+ 1530      6B5F4C45 
+ 1530      445F315F 
+ 1530      53746F70 
+ 1530      426C6F63 
+ 1531              	.LASF8:
+ 1532 014d 756E7369 		.ascii	"unsigned int\000"
+ 1532      676E6564 
+ 1532      20696E74 
+ 1532      00
+ 1533              	.LASF32:
+ 1534 015a 63757272 		.ascii	"currSrc\000"
+ 1534      53726300 
+ 1535              	.LASF7:
+ 1536 0162 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1536      206C6F6E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 38
 
 
- 1534              	.LASF8:
- 1535 0196 756E7369 		.ascii	"unsigned int\000"
- 1535      676E6564 
- 1535      20696E74 
- 1535      00
- 1536              	.LASF32:
- 1537 01a3 63757272 		.ascii	"currSrc\000"
- 1537      53726300 
- 1538              	.LASF7:
- 1539 01ab 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1539      206C6F6E 
- 1539      6720756E 
- 1539      7369676E 
- 1539      65642069 
- 1540              	.LASF20:
- 1541 01c2 6D6F6465 		.ascii	"modeBitMask\000"
- 1541      4269744D 
- 1541      61736B00 
- 1542              	.LASF15:
- 1543 01ce 436C6F63 		.ascii	"Clock_LED_1_Stop\000"
- 1543      6B5F4C45 
- 1543      445F315F 
- 1543      53746F70 
- 1543      00
- 1544              	.LASF33:
- 1545 01df 474E5520 		.ascii	"GNU C 4.4.1\000"
- 1545      4320342E 
- 1545      342E3100 
- 1546              	.LASF13:
- 1547 01eb 63686172 		.ascii	"char\000"
- 1547      00
- 1548              	.LASF24:
- 1549 01f0 436C6F63 		.ascii	"Clock_LED_1_SetSourceRegister\000"
- 1549      6B5F4C45 
- 1549      445F315F 
- 1549      53657453 
- 1549      6F757263 
- 1550              	.LASF2:
- 1551 020e 73686F72 		.ascii	"short int\000"
- 1551      7420696E 
- 1551      7400
- 1552              	.LASF9:
- 1553 0218 75696E74 		.ascii	"uint8\000"
- 1553      3800
- 1554              	.LASF37:
- 1555 021e 436C6F63 		.ascii	"Clock_LED_1_SetDividerRegister\000"
- 1555      6B5F4C45 
- 1555      445F315F 
- 1555      53657444 
- 1555      69766964 
- 1556              	.LASF4:
- 1557 023d 6C6F6E67 		.ascii	"long int\000"
- 1557      20696E74 
- 1557      00
- 1558              	.LASF25:
- 1559 0246 636C6B53 		.ascii	"clkSource\000"
- 1559      6F757263 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccW9D0Xj.s 			page 39
+ 1536      6720756E 
+ 1536      7369676E 
+ 1536      65642069 
+ 1537              	.LASF20:
+ 1538 0179 6D6F6465 		.ascii	"modeBitMask\000"
+ 1538      4269744D 
+ 1538      61736B00 
+ 1539              	.LASF15:
+ 1540 0185 436C6F63 		.ascii	"Clock_LED_1_Stop\000"
+ 1540      6B5F4C45 
+ 1540      445F315F 
+ 1540      53746F70 
+ 1540      00
+ 1541              	.LASF33:
+ 1542 0196 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1542      4320342E 
+ 1542      342E3100 
+ 1543              	.LASF13:
+ 1544 01a2 63686172 		.ascii	"char\000"
+ 1544      00
+ 1545              	.LASF24:
+ 1546 01a7 436C6F63 		.ascii	"Clock_LED_1_SetSourceRegister\000"
+ 1546      6B5F4C45 
+ 1546      445F315F 
+ 1546      53657453 
+ 1546      6F757263 
+ 1547              	.LASF2:
+ 1548 01c5 73686F72 		.ascii	"short int\000"
+ 1548      7420696E 
+ 1548      7400
+ 1549              	.LASF9:
+ 1550 01cf 75696E74 		.ascii	"uint8\000"
+ 1550      3800
+ 1551              	.LASF37:
+ 1552 01d5 436C6F63 		.ascii	"Clock_LED_1_SetDividerRegister\000"
+ 1552      6B5F4C45 
+ 1552      445F315F 
+ 1552      53657444 
+ 1552      69766964 
+ 1553              	.LASF4:
+ 1554 01f4 6C6F6E67 		.ascii	"long int\000"
+ 1554      20696E74 
+ 1554      00
+ 1555              	.LASF25:
+ 1556 01fd 636C6B53 		.ascii	"clkSource\000"
+ 1556      6F757263 
+ 1556      6500
+ 1557              	.LASF0:
+ 1558 0207 7369676E 		.ascii	"signed char\000"
+ 1558      65642063 
+ 1558      68617200 
+ 1559              	.LASF35:
+ 1560 0213 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 1560      665C486F 
+ 1560      6D655C44 
+ 1560      65736B74 
+ 1560      6F705C55 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccc7ix9N.s 			page 39
 
 
- 1559      6500
- 1560              	.LASF0:
- 1561 0250 7369676E 		.ascii	"signed char\000"
- 1561      65642063 
- 1561      68617200 
- 1562              	.LASF17:
- 1563 025c 436C6F63 		.ascii	"Clock_LED_1_StandbyPower\000"
- 1563      6B5F4C45 
- 1563      445F315F 
- 1563      5374616E 
- 1563      64627950 
- 1564              	.LASF23:
- 1565 0275 436C6F63 		.ascii	"Clock_LED_1_GetSourceRegister\000"
- 1565      6B5F4C45 
- 1565      445F315F 
- 1565      47657453 
- 1565      6F757263 
- 1566              	.LASF31:
- 1567 0293 6F6C6453 		.ascii	"oldSrc\000"
- 1567      726300
- 1568              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 1561 0240 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg_Bootloader"
+ 1561      50726F67 
+ 1561      20766572 
+ 1561      73696F6E 
+ 1561      20325F30 
+ 1562 0270 2E637964 		.ascii	".cydsn\000"
+ 1562      736E00
+ 1563              	.LASF17:
+ 1564 0277 436C6F63 		.ascii	"Clock_LED_1_StandbyPower\000"
+ 1564      6B5F4C45 
+ 1564      445F315F 
+ 1564      5374616E 
+ 1564      64627950 
+ 1565              	.LASF23:
+ 1566 0290 436C6F63 		.ascii	"Clock_LED_1_GetSourceRegister\000"
+ 1566      6B5F4C45 
+ 1566      445F315F 
+ 1566      47657453 
+ 1566      6F757263 
+ 1567              	.LASF31:
+ 1568 02ae 6F6C6453 		.ascii	"oldSrc\000"
+ 1568      726300
+ 1569              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

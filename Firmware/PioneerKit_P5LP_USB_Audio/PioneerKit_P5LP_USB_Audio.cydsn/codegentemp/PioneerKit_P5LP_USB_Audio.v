@@ -1,6 +1,6 @@
 // ======================================================================
 // PioneerKit_P5LP_USB_Audio.v generated from TopDesign.cysch
-// 08/26/2015 at 20:17
+// 08/28/2015 at 18:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -121,8 +121,8 @@
 `define CY_BLK_DIR "..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83"
 `include "..\..\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v"
 `else
-`define CY_BLK_DIR "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\CyDigitalAudio.cylib\B_AudioClkGen_v0_83"
-`include "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v"
+`define CY_BLK_DIR "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\CyDigitalAudio.cylib\B_AudioClkGen_v0_83"
+`include "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\CyDigitalAudio.cylib\B_AudioClkGen_v0_83\B_AudioClkGen_v0_83.v"
 `endif
 
 // AudioClkGen_v0_83(Enable_I2Sclk=true, Enable_Mclk=true, Enable_Sync=true, CY_COMPONENT_NAME=AudioClkGen_v0_83, CY_CONTROL_FILE=<:default:>, CY_FITTER_NAME=AudioClkGen, CY_INSTANCE_SHORT_NAME=AudioClkGen, CY_MAJOR_VERSION=0, CY_MINOR_VERSION=83, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=cydsfit No Version Information Found, INSTANCE_NAME=AudioClkGen, )
@@ -393,8 +393,8 @@ endmodule
 `define CY_BLK_DIR "..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10"
 `include "..\..\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v"
 `else
-`define CY_BLK_DIR "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\Byte_Swap_Component.cylib\ByteSwap_v1_10"
-`include "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v"
+`define CY_BLK_DIR "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\Byte_Swap_Component.cylib\ByteSwap_v1_10"
+`include "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\Byte_Swap_Component.cylib\ByteSwap_v1_10\ByteSwap_v1_10.v"
 `endif
 
 // Component: cy_sync_v1_0
@@ -469,8 +469,8 @@ endmodule
 `define CY_BLK_DIR "..\PDM_Integrator_v1_0"
 `include "..\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v"
 `else
-`define CY_BLK_DIR "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Integrator_v1_0"
-`include "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v"
+`define CY_BLK_DIR "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Integrator_v1_0"
+`include "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Integrator_v1_0\PDM_Integrator_v1_0.v"
 `endif
 
 // Component: PDM_Comb_v1_0
@@ -482,8 +482,8 @@ endmodule
 `define CY_BLK_DIR "..\PDM_Comb_v1_0"
 `include "..\PDM_Comb_v1_0\PDM_Comb_v1_0.v"
 `else
-`define CY_BLK_DIR "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Comb_v1_0"
-`include "\\psf\Home\Desktop\USB-audio\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Comb_v1_0\PDM_Comb_v1_0.v"
+`define CY_BLK_DIR "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Comb_v1_0"
+`include "\\psf\Home\Desktop\USB-Audio-PSOC5LP\Firmware\PioneerKit_P5LP_USB_Audio\PioneerKit_P5LP_USB_Audio.cydsn\PDM_Comb_v1_0\PDM_Comb_v1_0.v"
 `endif
 
 // Component: CyControlReg_v1_70

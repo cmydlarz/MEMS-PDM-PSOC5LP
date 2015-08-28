@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 1
 
 
    1              		.syntax unified
@@ -43,8 +43,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 1
   36 0007 08       		.byte	8
   37 0008 B4       		.byte	-76
   38 0009 04       		.byte	4
-  39 000a 10       		.byte	16
-  40 000b C4       		.byte	-60
+  39 000a 00       		.byte	0
+  40 000b C5       		.byte	-59
   41 000c 00       		.byte	0
   42 000d 10       		.byte	16
   43 000e 01       		.byte	1
@@ -54,16 +54,16 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 1
   47              		.global	USBFS_DEVICE0_CONFIGURATION0_DESCR
   48 0012 0000     		.align	2
   49              		.type	USBFS_DEVICE0_CONFIGURATION0_DESCR, %object
-  50              		.size	USBFS_DEVICE0_CONFIGURATION0_DESCR, 278
+  50              		.size	USBFS_DEVICE0_CONFIGURATION0_DESCR, 137
   51              	USBFS_DEVICE0_CONFIGURATION0_DESCR:
   52 0014 09       		.byte	9
   53 0015 02       		.byte	2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 2
 
 
-  54 0016 16       		.byte	22
-  55 0017 01       		.byte	1
-  56 0018 04       		.byte	4
+  54 0016 89       		.byte	-119
+  55 0017 00       		.byte	0
+  56 0018 03       		.byte	3
   57 0019 01       		.byte	1
   58 001a 0A       		.byte	10
   59 001b 80       		.byte	-128
@@ -77,1951 +77,1788 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 1
   67 0023 01       		.byte	1
   68 0024 00       		.byte	0
   69 0025 0C       		.byte	12
-  70 0026 0A       		.byte	10
+  70 0026 09       		.byte	9
   71 0027 24       		.byte	36
   72 0028 01       		.byte	1
   73 0029 00       		.byte	0
   74 002a 01       		.byte	1
-  75 002b 46       		.byte	70
+  75 002b 1E       		.byte	30
   76 002c 00       		.byte	0
-  77 002d 02       		.byte	2
+  77 002d 01       		.byte	1
   78 002e 01       		.byte	1
-  79 002f 02       		.byte	2
-  80 0030 0A       		.byte	10
-  81 0031 24       		.byte	36
-  82 0032 06       		.byte	6
-  83 0033 02       		.byte	2
-  84 0034 01       		.byte	1
-  85 0035 01       		.byte	1
+  79 002f 0C       		.byte	12
+  80 0030 24       		.byte	36
+  81 0031 02       		.byte	2
+  82 0032 04       		.byte	4
+  83 0033 01       		.byte	1
+  84 0034 02       		.byte	2
+  85 0035 00       		.byte	0
   86 0036 02       		.byte	2
-  87 0037 02       		.byte	2
-  88 0038 02       		.byte	2
+  87 0037 03       		.byte	3
+  88 0038 00       		.byte	0
   89 0039 00       		.byte	0
-  90 003a 0C       		.byte	12
-  91 003b 24       		.byte	36
-  92 003c 02       		.byte	2
-  93 003d 01       		.byte	1
-  94 003e 01       		.byte	1
+  90 003a 04       		.byte	4
+  91 003b 09       		.byte	9
+  92 003c 24       		.byte	36
+  93 003d 03       		.byte	3
+  94 003e 05       		.byte	5
   95 003f 01       		.byte	1
-  96 0040 00       		.byte	0
-  97 0041 02       		.byte	2
-  98 0042 03       		.byte	3
-  99 0043 00       		.byte	0
- 100 0044 00       		.byte	0
- 101 0045 06       		.byte	6
- 102 0046 09       		.byte	9
- 103 0047 24       		.byte	36
- 104 0048 03       		.byte	3
- 105 0049 03       		.byte	3
- 106 004a 01       		.byte	1
- 107 004b 03       		.byte	3
+  96 0040 01       		.byte	1
+  97 0041 00       		.byte	0
+  98 0042 04       		.byte	4
+  99 0043 06       		.byte	6
+ 100 0044 09       		.byte	9
+ 101 0045 05       		.byte	5
+ 102 0046 86       		.byte	-122
+ 103 0047 03       		.byte	3
+ 104 0048 02       		.byte	2
+ 105 0049 00       		.byte	0
+ 106 004a 1E       		.byte	30
+ 107 004b 00       		.byte	0
  108 004c 00       		.byte	0
- 109 004d 02       		.byte	2
- 110 004e 05       		.byte	5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 3
+ 109 004d 09       		.byte	9
+ 110 004e 04       		.byte	4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 3
 
 
- 111 004f 0C       		.byte	12
- 112 0050 24       		.byte	36
- 113 0051 02       		.byte	2
- 114 0052 04       		.byte	4
- 115 0053 01       		.byte	1
- 116 0054 02       		.byte	2
- 117 0055 00       		.byte	0
- 118 0056 02       		.byte	2
- 119 0057 03       		.byte	3
- 120 0058 00       		.byte	0
- 121 0059 00       		.byte	0
- 122 005a 04       		.byte	4
- 123 005b 09       		.byte	9
- 124 005c 24       		.byte	36
- 125 005d 03       		.byte	3
- 126 005e 05       		.byte	5
- 127 005f 01       		.byte	1
- 128 0060 01       		.byte	1
- 129 0061 00       		.byte	0
- 130 0062 06       		.byte	6
- 131 0063 06       		.byte	6
- 132 0064 08       		.byte	8
- 133 0065 24       		.byte	36
- 134 0066 06       		.byte	6
- 135 0067 06       		.byte	6
- 136 0068 04       		.byte	4
+ 111 004f 01       		.byte	1
+ 112 0050 00       		.byte	0
+ 113 0051 00       		.byte	0
+ 114 0052 01       		.byte	1
+ 115 0053 02       		.byte	2
+ 116 0054 00       		.byte	0
+ 117 0055 0C       		.byte	12
+ 118 0056 09       		.byte	9
+ 119 0057 04       		.byte	4
+ 120 0058 01       		.byte	1
+ 121 0059 01       		.byte	1
+ 122 005a 01       		.byte	1
+ 123 005b 01       		.byte	1
+ 124 005c 02       		.byte	2
+ 125 005d 00       		.byte	0
+ 126 005e 08       		.byte	8
+ 127 005f 07       		.byte	7
+ 128 0060 24       		.byte	36
+ 129 0061 01       		.byte	1
+ 130 0062 05       		.byte	5
+ 131 0063 01       		.byte	1
+ 132 0064 01       		.byte	1
+ 133 0065 00       		.byte	0
+ 134 0066 0E       		.byte	14
+ 135 0067 24       		.byte	36
+ 136 0068 02       		.byte	2
  137 0069 01       		.byte	1
- 138 006a 03       		.byte	3
- 139 006b 00       		.byte	0
- 140 006c 09       		.byte	9
- 141 006d 05       		.byte	5
- 142 006e 86       		.byte	-122
- 143 006f 03       		.byte	3
- 144 0070 02       		.byte	2
- 145 0071 00       		.byte	0
- 146 0072 1E       		.byte	30
+ 138 006a 02       		.byte	2
+ 139 006b 02       		.byte	2
+ 140 006c 10       		.byte	16
+ 141 006d 02       		.byte	2
+ 142 006e 44       		.byte	68
+ 143 006f AC       		.byte	-84
+ 144 0070 00       		.byte	0
+ 145 0071 80       		.byte	-128
+ 146 0072 BB       		.byte	-69
  147 0073 00       		.byte	0
- 148 0074 00       		.byte	0
- 149 0075 09       		.byte	9
- 150 0076 04       		.byte	4
- 151 0077 01       		.byte	1
- 152 0078 00       		.byte	0
+ 148 0074 09       		.byte	9
+ 149 0075 05       		.byte	5
+ 150 0076 82       		.byte	-126
+ 151 0077 0D       		.byte	13
+ 152 0078 C0       		.byte	-64
  153 0079 00       		.byte	0
  154 007a 01       		.byte	1
- 155 007b 02       		.byte	2
+ 155 007b 00       		.byte	0
  156 007c 00       		.byte	0
- 157 007d 0C       		.byte	12
- 158 007e 09       		.byte	9
- 159 007f 04       		.byte	4
+ 157 007d 07       		.byte	7
+ 158 007e 25       		.byte	37
+ 159 007f 01       		.byte	1
  160 0080 01       		.byte	1
  161 0081 01       		.byte	1
  162 0082 01       		.byte	1
- 163 0083 01       		.byte	1
- 164 0084 02       		.byte	2
- 165 0085 00       		.byte	0
- 166 0086 08       		.byte	8
- 167 0087 07       		.byte	7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 4
+ 163 0083 00       		.byte	0
+ 164 0084 09       		.byte	9
+ 165 0085 04       		.byte	4
+ 166 0086 02       		.byte	2
+ 167 0087 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 4
 
 
- 168 0088 24       		.byte	36
- 169 0089 01       		.byte	1
- 170 008a 01       		.byte	1
- 171 008b 01       		.byte	1
- 172 008c 01       		.byte	1
- 173 008d 00       		.byte	0
- 174 008e 0E       		.byte	14
- 175 008f 24       		.byte	36
- 176 0090 02       		.byte	2
- 177 0091 01       		.byte	1
- 178 0092 02       		.byte	2
- 179 0093 02       		.byte	2
- 180 0094 10       		.byte	16
- 181 0095 02       		.byte	2
- 182 0096 44       		.byte	68
- 183 0097 AC       		.byte	-84
- 184 0098 00       		.byte	0
- 185 0099 80       		.byte	-128
- 186 009a BB       		.byte	-69
+ 168 0088 01       		.byte	1
+ 169 0089 03       		.byte	3
+ 170 008a 00       		.byte	0
+ 171 008b 00       		.byte	0
+ 172 008c 0B       		.byte	11
+ 173 008d 09       		.byte	9
+ 174 008e 21       		.byte	33
+ 175 008f 11       		.byte	17
+ 176 0090 01       		.byte	1
+ 177 0091 00       		.byte	0
+ 178 0092 01       		.byte	1
+ 179 0093 22       		.byte	34
+ 180 0094 17       		.byte	23
+ 181 0095 00       		.byte	0
+ 182 0096 07       		.byte	7
+ 183 0097 05       		.byte	5
+ 184 0098 84       		.byte	-124
+ 185 0099 03       		.byte	3
+ 186 009a 01       		.byte	1
  187 009b 00       		.byte	0
- 188 009c 09       		.byte	9
- 189 009d 05       		.byte	5
- 190 009e 01       		.byte	1
- 191 009f 01       		.byte	1
- 192 00a0 C0       		.byte	-64
- 193 00a1 00       		.byte	0
- 194 00a2 01       		.byte	1
- 195 00a3 00       		.byte	0
- 196 00a4 00       		.byte	0
- 197 00a5 07       		.byte	7
- 198 00a6 25       		.byte	37
- 199 00a7 01       		.byte	1
- 200 00a8 01       		.byte	1
- 201 00a9 01       		.byte	1
- 202 00aa 01       		.byte	1
- 203 00ab 00       		.byte	0
- 204 00ac 09       		.byte	9
- 205 00ad 04       		.byte	4
- 206 00ae 01       		.byte	1
- 207 00af 02       		.byte	2
- 208 00b0 01       		.byte	1
- 209 00b1 01       		.byte	1
- 210 00b2 02       		.byte	2
- 211 00b3 00       		.byte	0
- 212 00b4 09       		.byte	9
- 213 00b5 07       		.byte	7
- 214 00b6 24       		.byte	36
- 215 00b7 01       		.byte	1
- 216 00b8 01       		.byte	1
- 217 00b9 01       		.byte	1
- 218 00ba 01       		.byte	1
- 219 00bb 00       		.byte	0
- 220 00bc 0E       		.byte	14
- 221 00bd 24       		.byte	36
- 222 00be 02       		.byte	2
- 223 00bf 01       		.byte	1
- 224 00c0 02       		.byte	2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 5
+ 188 009c 28       		.byte	40
+ 189              		.global	USBFS_STRING_DESCRIPTORS
+ 190 009d 000000   		.align	2
+ 191              		.type	USBFS_STRING_DESCRIPTORS, %object
+ 192              		.size	USBFS_STRING_DESCRIPTORS, 345
+ 193              	USBFS_STRING_DESCRIPTORS:
+ 194 00a0 04       		.byte	4
+ 195 00a1 03       		.byte	3
+ 196 00a2 09       		.byte	9
+ 197 00a3 04       		.byte	4
+ 198 00a4 2C       		.byte	44
+ 199 00a5 03       		.byte	3
+ 200 00a6 43       		.byte	67
+ 201 00a7 00       		.byte	0
+ 202 00a8 79       		.byte	121
+ 203 00a9 00       		.byte	0
+ 204 00aa 70       		.byte	112
+ 205 00ab 00       		.byte	0
+ 206 00ac 72       		.byte	114
+ 207 00ad 00       		.byte	0
+ 208 00ae 65       		.byte	101
+ 209 00af 00       		.byte	0
+ 210 00b0 73       		.byte	115
+ 211 00b1 00       		.byte	0
+ 212 00b2 73       		.byte	115
+ 213 00b3 00       		.byte	0
+ 214 00b4 20       		.byte	32
+ 215 00b5 00       		.byte	0
+ 216 00b6 53       		.byte	83
+ 217 00b7 00       		.byte	0
+ 218 00b8 65       		.byte	101
+ 219 00b9 00       		.byte	0
+ 220 00ba 6D       		.byte	109
+ 221 00bb 00       		.byte	0
+ 222 00bc 69       		.byte	105
+ 223 00bd 00       		.byte	0
+ 224 00be 63       		.byte	99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 5
 
 
- 225 00c1 03       		.byte	3
- 226 00c2 18       		.byte	24
- 227 00c3 02       		.byte	2
- 228 00c4 44       		.byte	68
- 229 00c5 AC       		.byte	-84
- 230 00c6 00       		.byte	0
- 231 00c7 80       		.byte	-128
- 232 00c8 BB       		.byte	-69
- 233 00c9 00       		.byte	0
- 234 00ca 09       		.byte	9
- 235 00cb 05       		.byte	5
- 236 00cc 01       		.byte	1
- 237 00cd 0D       		.byte	13
- 238 00ce 20       		.byte	32
- 239 00cf 01       		.byte	1
- 240 00d0 01       		.byte	1
- 241 00d1 00       		.byte	0
- 242 00d2 00       		.byte	0
- 243 00d3 07       		.byte	7
- 244 00d4 25       		.byte	37
- 245 00d5 01       		.byte	1
- 246 00d6 01       		.byte	1
- 247 00d7 01       		.byte	1
- 248 00d8 01       		.byte	1
- 249 00d9 00       		.byte	0
- 250 00da 09       		.byte	9
- 251 00db 04       		.byte	4
- 252 00dc 02       		.byte	2
- 253 00dd 00       		.byte	0
- 254 00de 00       		.byte	0
- 255 00df 01       		.byte	1
- 256 00e0 02       		.byte	2
- 257 00e1 00       		.byte	0
- 258 00e2 0C       		.byte	12
- 259 00e3 09       		.byte	9
- 260 00e4 04       		.byte	4
- 261 00e5 02       		.byte	2
- 262 00e6 01       		.byte	1
- 263 00e7 01       		.byte	1
- 264 00e8 01       		.byte	1
- 265 00e9 02       		.byte	2
- 266 00ea 00       		.byte	0
- 267 00eb 08       		.byte	8
- 268 00ec 07       		.byte	7
- 269 00ed 24       		.byte	36
- 270 00ee 01       		.byte	1
- 271 00ef 05       		.byte	5
- 272 00f0 01       		.byte	1
- 273 00f1 01       		.byte	1
- 274 00f2 00       		.byte	0
- 275 00f3 0E       		.byte	14
- 276 00f4 24       		.byte	36
- 277 00f5 02       		.byte	2
- 278 00f6 01       		.byte	1
- 279 00f7 02       		.byte	2
- 280 00f8 02       		.byte	2
- 281 00f9 10       		.byte	16
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 6
+ 225 00bf 00       		.byte	0
+ 226 00c0 6F       		.byte	111
+ 227 00c1 00       		.byte	0
+ 228 00c2 6E       		.byte	110
+ 229 00c3 00       		.byte	0
+ 230 00c4 64       		.byte	100
+ 231 00c5 00       		.byte	0
+ 232 00c6 75       		.byte	117
+ 233 00c7 00       		.byte	0
+ 234 00c8 63       		.byte	99
+ 235 00c9 00       		.byte	0
+ 236 00ca 74       		.byte	116
+ 237 00cb 00       		.byte	0
+ 238 00cc 6F       		.byte	111
+ 239 00cd 00       		.byte	0
+ 240 00ce 72       		.byte	114
+ 241 00cf 00       		.byte	0
+ 242 00d0 28       		.byte	40
+ 243 00d1 03       		.byte	3
+ 244 00d2 43       		.byte	67
+ 245 00d3 00       		.byte	0
+ 246 00d4 79       		.byte	121
+ 247 00d5 00       		.byte	0
+ 248 00d6 70       		.byte	112
+ 249 00d7 00       		.byte	0
+ 250 00d8 72       		.byte	114
+ 251 00d9 00       		.byte	0
+ 252 00da 65       		.byte	101
+ 253 00db 00       		.byte	0
+ 254 00dc 73       		.byte	115
+ 255 00dd 00       		.byte	0
+ 256 00de 73       		.byte	115
+ 257 00df 00       		.byte	0
+ 258 00e0 41       		.byte	65
+ 259 00e1 00       		.byte	0
+ 260 00e2 75       		.byte	117
+ 261 00e3 00       		.byte	0
+ 262 00e4 64       		.byte	100
+ 263 00e5 00       		.byte	0
+ 264 00e6 69       		.byte	105
+ 265 00e7 00       		.byte	0
+ 266 00e8 6F       		.byte	111
+ 267 00e9 00       		.byte	0
+ 268 00ea 43       		.byte	67
+ 269 00eb 00       		.byte	0
+ 270 00ec 6F       		.byte	111
+ 271 00ed 00       		.byte	0
+ 272 00ee 6E       		.byte	110
+ 273 00ef 00       		.byte	0
+ 274 00f0 74       		.byte	116
+ 275 00f1 00       		.byte	0
+ 276 00f2 72       		.byte	114
+ 277 00f3 00       		.byte	0
+ 278 00f4 6F       		.byte	111
+ 279 00f5 00       		.byte	0
+ 280 00f6 6C       		.byte	108
+ 281 00f7 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 6
 
 
- 282 00fa 02       		.byte	2
- 283 00fb 44       		.byte	68
- 284 00fc AC       		.byte	-84
- 285 00fd 00       		.byte	0
- 286 00fe 80       		.byte	-128
- 287 00ff BB       		.byte	-69
- 288 0100 00       		.byte	0
- 289 0101 09       		.byte	9
- 290 0102 05       		.byte	5
- 291 0103 82       		.byte	-126
- 292 0104 0D       		.byte	13
- 293 0105 C0       		.byte	-64
- 294 0106 00       		.byte	0
- 295 0107 01       		.byte	1
- 296 0108 00       		.byte	0
- 297 0109 00       		.byte	0
- 298 010a 07       		.byte	7
- 299 010b 25       		.byte	37
- 300 010c 01       		.byte	1
- 301 010d 01       		.byte	1
- 302 010e 01       		.byte	1
- 303 010f 01       		.byte	1
- 304 0110 00       		.byte	0
- 305 0111 09       		.byte	9
- 306 0112 04       		.byte	4
- 307 0113 03       		.byte	3
- 308 0114 00       		.byte	0
- 309 0115 01       		.byte	1
- 310 0116 03       		.byte	3
- 311 0117 00       		.byte	0
- 312 0118 00       		.byte	0
- 313 0119 0B       		.byte	11
- 314 011a 09       		.byte	9
- 315 011b 21       		.byte	33
- 316 011c 11       		.byte	17
- 317 011d 01       		.byte	1
- 318 011e 00       		.byte	0
- 319 011f 01       		.byte	1
- 320 0120 22       		.byte	34
- 321 0121 17       		.byte	23
- 322 0122 00       		.byte	0
- 323 0123 07       		.byte	7
- 324 0124 05       		.byte	5
- 325 0125 84       		.byte	-124
- 326 0126 03       		.byte	3
- 327 0127 01       		.byte	1
- 328 0128 00       		.byte	0
- 329 0129 28       		.byte	40
- 330              		.global	USBFS_STRING_DESCRIPTORS
- 331 012a 0000     		.align	2
- 332              		.type	USBFS_STRING_DESCRIPTORS, %object
- 333              		.size	USBFS_STRING_DESCRIPTORS, 345
- 334              	USBFS_STRING_DESCRIPTORS:
- 335 012c 04       		.byte	4
- 336 012d 03       		.byte	3
- 337 012e 09       		.byte	9
- 338 012f 04       		.byte	4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 7
+ 282 00f8 1C       		.byte	28
+ 283 00f9 03       		.byte	3
+ 284 00fa 5A       		.byte	90
+ 285 00fb 00       		.byte	0
+ 286 00fc 65       		.byte	101
+ 287 00fd 00       		.byte	0
+ 288 00fe 72       		.byte	114
+ 289 00ff 00       		.byte	0
+ 290 0100 6F       		.byte	111
+ 291 0101 00       		.byte	0
+ 292 0102 42       		.byte	66
+ 293 0103 00       		.byte	0
+ 294 0104 61       		.byte	97
+ 295 0105 00       		.byte	0
+ 296 0106 6E       		.byte	110
+ 297 0107 00       		.byte	0
+ 298 0108 64       		.byte	100
+ 299 0109 00       		.byte	0
+ 300 010a 77       		.byte	119
+ 301 010b 00       		.byte	0
+ 302 010c 69       		.byte	105
+ 303 010d 00       		.byte	0
+ 304 010e 64       		.byte	100
+ 305 010f 00       		.byte	0
+ 306 0110 74       		.byte	116
+ 307 0111 00       		.byte	0
+ 308 0112 68       		.byte	104
+ 309 0113 00       		.byte	0
+ 310 0114 16       		.byte	22
+ 311 0115 03       		.byte	3
+ 312 0116 4D       		.byte	77
+ 313 0117 00       		.byte	0
+ 314 0118 69       		.byte	105
+ 315 0119 00       		.byte	0
+ 316 011a 63       		.byte	99
+ 317 011b 00       		.byte	0
+ 318 011c 72       		.byte	114
+ 319 011d 00       		.byte	0
+ 320 011e 6F       		.byte	111
+ 321 011f 00       		.byte	0
+ 322 0120 70       		.byte	112
+ 323 0121 00       		.byte	0
+ 324 0122 68       		.byte	104
+ 325 0123 00       		.byte	0
+ 326 0124 6F       		.byte	111
+ 327 0125 00       		.byte	0
+ 328 0126 6E       		.byte	110
+ 329 0127 00       		.byte	0
+ 330 0128 65       		.byte	101
+ 331 0129 00       		.byte	0
+ 332 012a 10       		.byte	16
+ 333 012b 03       		.byte	3
+ 334 012c 53       		.byte	83
+ 335 012d 00       		.byte	0
+ 336 012e 70       		.byte	112
+ 337 012f 00       		.byte	0
+ 338 0130 65       		.byte	101
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 7
 
 
- 339 0130 2C       		.byte	44
- 340 0131 03       		.byte	3
- 341 0132 43       		.byte	67
- 342 0133 00       		.byte	0
- 343 0134 79       		.byte	121
- 344 0135 00       		.byte	0
- 345 0136 70       		.byte	112
- 346 0137 00       		.byte	0
- 347 0138 72       		.byte	114
- 348 0139 00       		.byte	0
- 349 013a 65       		.byte	101
- 350 013b 00       		.byte	0
- 351 013c 73       		.byte	115
- 352 013d 00       		.byte	0
- 353 013e 73       		.byte	115
- 354 013f 00       		.byte	0
- 355 0140 20       		.byte	32
- 356 0141 00       		.byte	0
- 357 0142 53       		.byte	83
- 358 0143 00       		.byte	0
- 359 0144 65       		.byte	101
- 360 0145 00       		.byte	0
- 361 0146 6D       		.byte	109
- 362 0147 00       		.byte	0
- 363 0148 69       		.byte	105
- 364 0149 00       		.byte	0
- 365 014a 63       		.byte	99
- 366 014b 00       		.byte	0
- 367 014c 6F       		.byte	111
- 368 014d 00       		.byte	0
- 369 014e 6E       		.byte	110
- 370 014f 00       		.byte	0
- 371 0150 64       		.byte	100
- 372 0151 00       		.byte	0
- 373 0152 75       		.byte	117
- 374 0153 00       		.byte	0
- 375 0154 63       		.byte	99
- 376 0155 00       		.byte	0
- 377 0156 74       		.byte	116
- 378 0157 00       		.byte	0
- 379 0158 6F       		.byte	111
- 380 0159 00       		.byte	0
- 381 015a 72       		.byte	114
- 382 015b 00       		.byte	0
- 383 015c 28       		.byte	40
- 384 015d 03       		.byte	3
- 385 015e 43       		.byte	67
- 386 015f 00       		.byte	0
- 387 0160 79       		.byte	121
- 388 0161 00       		.byte	0
- 389 0162 70       		.byte	112
- 390 0163 00       		.byte	0
- 391 0164 72       		.byte	114
- 392 0165 00       		.byte	0
- 393 0166 65       		.byte	101
- 394 0167 00       		.byte	0
- 395 0168 73       		.byte	115
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 8
+ 339 0131 00       		.byte	0
+ 340 0132 61       		.byte	97
+ 341 0133 00       		.byte	0
+ 342 0134 6B       		.byte	107
+ 343 0135 00       		.byte	0
+ 344 0136 65       		.byte	101
+ 345 0137 00       		.byte	0
+ 346 0138 72       		.byte	114
+ 347 0139 00       		.byte	0
+ 348 013a 1C       		.byte	28
+ 349 013b 03       		.byte	3
+ 350 013c 55       		.byte	85
+ 351 013d 00       		.byte	0
+ 352 013e 53       		.byte	83
+ 353 013f 00       		.byte	0
+ 354 0140 42       		.byte	66
+ 355 0141 00       		.byte	0
+ 356 0142 20       		.byte	32
+ 357 0143 00       		.byte	0
+ 358 0144 53       		.byte	83
+ 359 0145 00       		.byte	0
+ 360 0146 74       		.byte	116
+ 361 0147 00       		.byte	0
+ 362 0148 72       		.byte	114
+ 363 0149 00       		.byte	0
+ 364 014a 65       		.byte	101
+ 365 014b 00       		.byte	0
+ 366 014c 61       		.byte	97
+ 367 014d 00       		.byte	0
+ 368 014e 6D       		.byte	109
+ 369 014f 00       		.byte	0
+ 370 0150 69       		.byte	105
+ 371 0151 00       		.byte	0
+ 372 0152 6E       		.byte	110
+ 373 0153 00       		.byte	0
+ 374 0154 67       		.byte	103
+ 375 0155 00       		.byte	0
+ 376 0156 0E       		.byte	14
+ 377 0157 03       		.byte	3
+ 378 0158 41       		.byte	65
+ 379 0159 00       		.byte	0
+ 380 015a 63       		.byte	99
+ 381 015b 00       		.byte	0
+ 382 015c 74       		.byte	116
+ 383 015d 00       		.byte	0
+ 384 015e 69       		.byte	105
+ 385 015f 00       		.byte	0
+ 386 0160 76       		.byte	118
+ 387 0161 00       		.byte	0
+ 388 0162 65       		.byte	101
+ 389 0163 00       		.byte	0
+ 390 0164 1C       		.byte	28
+ 391 0165 03       		.byte	3
+ 392 0166 41       		.byte	65
+ 393 0167 00       		.byte	0
+ 394 0168 63       		.byte	99
+ 395 0169 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 8
 
 
- 396 0169 00       		.byte	0
- 397 016a 73       		.byte	115
- 398 016b 00       		.byte	0
- 399 016c 41       		.byte	65
- 400 016d 00       		.byte	0
- 401 016e 75       		.byte	117
- 402 016f 00       		.byte	0
- 403 0170 64       		.byte	100
- 404 0171 00       		.byte	0
- 405 0172 69       		.byte	105
- 406 0173 00       		.byte	0
- 407 0174 6F       		.byte	111
- 408 0175 00       		.byte	0
- 409 0176 43       		.byte	67
- 410 0177 00       		.byte	0
- 411 0178 6F       		.byte	111
- 412 0179 00       		.byte	0
- 413 017a 6E       		.byte	110
- 414 017b 00       		.byte	0
- 415 017c 74       		.byte	116
- 416 017d 00       		.byte	0
- 417 017e 72       		.byte	114
- 418 017f 00       		.byte	0
- 419 0180 6F       		.byte	111
- 420 0181 00       		.byte	0
- 421 0182 6C       		.byte	108
- 422 0183 00       		.byte	0
- 423 0184 1C       		.byte	28
- 424 0185 03       		.byte	3
- 425 0186 5A       		.byte	90
- 426 0187 00       		.byte	0
- 427 0188 65       		.byte	101
- 428 0189 00       		.byte	0
- 429 018a 72       		.byte	114
- 430 018b 00       		.byte	0
- 431 018c 6F       		.byte	111
- 432 018d 00       		.byte	0
- 433 018e 42       		.byte	66
- 434 018f 00       		.byte	0
- 435 0190 61       		.byte	97
- 436 0191 00       		.byte	0
- 437 0192 6E       		.byte	110
- 438 0193 00       		.byte	0
- 439 0194 64       		.byte	100
- 440 0195 00       		.byte	0
- 441 0196 77       		.byte	119
- 442 0197 00       		.byte	0
- 443 0198 69       		.byte	105
- 444 0199 00       		.byte	0
- 445 019a 64       		.byte	100
- 446 019b 00       		.byte	0
- 447 019c 74       		.byte	116
- 448 019d 00       		.byte	0
- 449 019e 68       		.byte	104
- 450 019f 00       		.byte	0
- 451 01a0 16       		.byte	22
- 452 01a1 03       		.byte	3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 9
+ 396 016a 74       		.byte	116
+ 397 016b 00       		.byte	0
+ 398 016c 69       		.byte	105
+ 399 016d 00       		.byte	0
+ 400 016e 76       		.byte	118
+ 401 016f 00       		.byte	0
+ 402 0170 65       		.byte	101
+ 403 0171 00       		.byte	0
+ 404 0172 20       		.byte	32
+ 405 0173 00       		.byte	0
+ 406 0174 31       		.byte	49
+ 407 0175 00       		.byte	0
+ 408 0176 36       		.byte	54
+ 409 0177 00       		.byte	0
+ 410 0178 20       		.byte	32
+ 411 0179 00       		.byte	0
+ 412 017a 62       		.byte	98
+ 413 017b 00       		.byte	0
+ 414 017c 69       		.byte	105
+ 415 017d 00       		.byte	0
+ 416 017e 74       		.byte	116
+ 417 017f 00       		.byte	0
+ 418 0180 1C       		.byte	28
+ 419 0181 03       		.byte	3
+ 420 0182 41       		.byte	65
+ 421 0183 00       		.byte	0
+ 422 0184 63       		.byte	99
+ 423 0185 00       		.byte	0
+ 424 0186 74       		.byte	116
+ 425 0187 00       		.byte	0
+ 426 0188 69       		.byte	105
+ 427 0189 00       		.byte	0
+ 428 018a 76       		.byte	118
+ 429 018b 00       		.byte	0
+ 430 018c 65       		.byte	101
+ 431 018d 00       		.byte	0
+ 432 018e 20       		.byte	32
+ 433 018f 00       		.byte	0
+ 434 0190 32       		.byte	50
+ 435 0191 00       		.byte	0
+ 436 0192 34       		.byte	52
+ 437 0193 00       		.byte	0
+ 438 0194 20       		.byte	32
+ 439 0195 00       		.byte	0
+ 440 0196 62       		.byte	98
+ 441 0197 00       		.byte	0
+ 442 0198 69       		.byte	105
+ 443 0199 00       		.byte	0
+ 444 019a 74       		.byte	116
+ 445 019b 00       		.byte	0
+ 446 019c 08       		.byte	8
+ 447 019d 03       		.byte	3
+ 448 019e 4D       		.byte	77
+ 449 019f 00       		.byte	0
+ 450 01a0 61       		.byte	97
+ 451 01a1 00       		.byte	0
+ 452 01a2 63       		.byte	99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 9
 
 
- 453 01a2 4D       		.byte	77
- 454 01a3 00       		.byte	0
- 455 01a4 69       		.byte	105
- 456 01a5 00       		.byte	0
- 457 01a6 63       		.byte	99
- 458 01a7 00       		.byte	0
- 459 01a8 72       		.byte	114
- 460 01a9 00       		.byte	0
- 461 01aa 6F       		.byte	111
- 462 01ab 00       		.byte	0
- 463 01ac 70       		.byte	112
- 464 01ad 00       		.byte	0
- 465 01ae 68       		.byte	104
- 466 01af 00       		.byte	0
- 467 01b0 6F       		.byte	111
- 468 01b1 00       		.byte	0
- 469 01b2 6E       		.byte	110
- 470 01b3 00       		.byte	0
- 471 01b4 65       		.byte	101
- 472 01b5 00       		.byte	0
- 473 01b6 10       		.byte	16
- 474 01b7 03       		.byte	3
- 475 01b8 53       		.byte	83
- 476 01b9 00       		.byte	0
- 477 01ba 70       		.byte	112
- 478 01bb 00       		.byte	0
- 479 01bc 65       		.byte	101
- 480 01bd 00       		.byte	0
- 481 01be 61       		.byte	97
- 482 01bf 00       		.byte	0
- 483 01c0 6B       		.byte	107
- 484 01c1 00       		.byte	0
- 485 01c2 65       		.byte	101
- 486 01c3 00       		.byte	0
- 487 01c4 72       		.byte	114
- 488 01c5 00       		.byte	0
- 489 01c6 1C       		.byte	28
- 490 01c7 03       		.byte	3
- 491 01c8 55       		.byte	85
- 492 01c9 00       		.byte	0
- 493 01ca 53       		.byte	83
- 494 01cb 00       		.byte	0
- 495 01cc 42       		.byte	66
- 496 01cd 00       		.byte	0
- 497 01ce 20       		.byte	32
- 498 01cf 00       		.byte	0
- 499 01d0 53       		.byte	83
- 500 01d1 00       		.byte	0
- 501 01d2 74       		.byte	116
- 502 01d3 00       		.byte	0
- 503 01d4 72       		.byte	114
- 504 01d5 00       		.byte	0
- 505 01d6 65       		.byte	101
- 506 01d7 00       		.byte	0
- 507 01d8 61       		.byte	97
- 508 01d9 00       		.byte	0
- 509 01da 6D       		.byte	109
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 10
+ 453 01a3 00       		.byte	0
+ 454 01a4 20       		.byte	32
+ 455 01a5 03       		.byte	3
+ 456 01a6 50       		.byte	80
+ 457 01a7 00       		.byte	0
+ 458 01a8 6C       		.byte	108
+ 459 01a9 00       		.byte	0
+ 460 01aa 61       		.byte	97
+ 461 01ab 00       		.byte	0
+ 462 01ac 79       		.byte	121
+ 463 01ad 00       		.byte	0
+ 464 01ae 6C       		.byte	108
+ 465 01af 00       		.byte	0
+ 466 01b0 69       		.byte	105
+ 467 01b1 00       		.byte	0
+ 468 01b2 73       		.byte	115
+ 469 01b3 00       		.byte	0
+ 470 01b4 74       		.byte	116
+ 471 01b5 00       		.byte	0
+ 472 01b6 43       		.byte	67
+ 473 01b7 00       		.byte	0
+ 474 01b8 6F       		.byte	111
+ 475 01b9 00       		.byte	0
+ 476 01ba 6E       		.byte	110
+ 477 01bb 00       		.byte	0
+ 478 01bc 74       		.byte	116
+ 479 01bd 00       		.byte	0
+ 480 01be 72       		.byte	114
+ 481 01bf 00       		.byte	0
+ 482 01c0 6F       		.byte	111
+ 483 01c1 00       		.byte	0
+ 484 01c2 6C       		.byte	108
+ 485 01c3 00       		.byte	0
+ 486 01c4 34       		.byte	52
+ 487 01c5 03       		.byte	3
+ 488 01c6 43       		.byte	67
+ 489 01c7 00       		.byte	0
+ 490 01c8 79       		.byte	121
+ 491 01c9 00       		.byte	0
+ 492 01ca 70       		.byte	112
+ 493 01cb 00       		.byte	0
+ 494 01cc 72       		.byte	114
+ 495 01cd 00       		.byte	0
+ 496 01ce 65       		.byte	101
+ 497 01cf 00       		.byte	0
+ 498 01d0 73       		.byte	115
+ 499 01d1 00       		.byte	0
+ 500 01d2 73       		.byte	115
+ 501 01d3 00       		.byte	0
+ 502 01d4 20       		.byte	32
+ 503 01d5 00       		.byte	0
+ 504 01d6 44       		.byte	68
+ 505 01d7 00       		.byte	0
+ 506 01d8 69       		.byte	105
+ 507 01d9 00       		.byte	0
+ 508 01da 67       		.byte	103
+ 509 01db 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 10
 
 
- 510 01db 00       		.byte	0
- 511 01dc 69       		.byte	105
- 512 01dd 00       		.byte	0
- 513 01de 6E       		.byte	110
- 514 01df 00       		.byte	0
- 515 01e0 67       		.byte	103
- 516 01e1 00       		.byte	0
- 517 01e2 0E       		.byte	14
- 518 01e3 03       		.byte	3
- 519 01e4 41       		.byte	65
- 520 01e5 00       		.byte	0
- 521 01e6 63       		.byte	99
- 522 01e7 00       		.byte	0
- 523 01e8 74       		.byte	116
- 524 01e9 00       		.byte	0
- 525 01ea 69       		.byte	105
- 526 01eb 00       		.byte	0
- 527 01ec 76       		.byte	118
- 528 01ed 00       		.byte	0
- 529 01ee 65       		.byte	101
- 530 01ef 00       		.byte	0
- 531 01f0 1C       		.byte	28
- 532 01f1 03       		.byte	3
- 533 01f2 41       		.byte	65
- 534 01f3 00       		.byte	0
- 535 01f4 63       		.byte	99
- 536 01f5 00       		.byte	0
- 537 01f6 74       		.byte	116
- 538 01f7 00       		.byte	0
- 539 01f8 69       		.byte	105
- 540 01f9 00       		.byte	0
- 541 01fa 76       		.byte	118
- 542 01fb 00       		.byte	0
- 543 01fc 65       		.byte	101
- 544 01fd 00       		.byte	0
- 545 01fe 20       		.byte	32
- 546 01ff 00       		.byte	0
- 547 0200 31       		.byte	49
- 548 0201 00       		.byte	0
- 549 0202 36       		.byte	54
- 550 0203 00       		.byte	0
- 551 0204 20       		.byte	32
- 552 0205 00       		.byte	0
- 553 0206 62       		.byte	98
- 554 0207 00       		.byte	0
- 555 0208 69       		.byte	105
- 556 0209 00       		.byte	0
- 557 020a 74       		.byte	116
- 558 020b 00       		.byte	0
- 559 020c 1C       		.byte	28
- 560 020d 03       		.byte	3
- 561 020e 41       		.byte	65
- 562 020f 00       		.byte	0
- 563 0210 63       		.byte	99
- 564 0211 00       		.byte	0
- 565 0212 74       		.byte	116
- 566 0213 00       		.byte	0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 11
+ 510 01dc 69       		.byte	105
+ 511 01dd 00       		.byte	0
+ 512 01de 74       		.byte	116
+ 513 01df 00       		.byte	0
+ 514 01e0 61       		.byte	97
+ 515 01e1 00       		.byte	0
+ 516 01e2 6C       		.byte	108
+ 517 01e3 00       		.byte	0
+ 518 01e4 20       		.byte	32
+ 519 01e5 00       		.byte	0
+ 520 01e6 41       		.byte	65
+ 521 01e7 00       		.byte	0
+ 522 01e8 75       		.byte	117
+ 523 01e9 00       		.byte	0
+ 524 01ea 64       		.byte	100
+ 525 01eb 00       		.byte	0
+ 526 01ec 69       		.byte	105
+ 527 01ed 00       		.byte	0
+ 528 01ee 6F       		.byte	111
+ 529 01ef 00       		.byte	0
+ 530 01f0 20       		.byte	32
+ 531 01f1 00       		.byte	0
+ 532 01f2 44       		.byte	68
+ 533 01f3 00       		.byte	0
+ 534 01f4 56       		.byte	86
+ 535 01f5 00       		.byte	0
+ 536 01f6 4B       		.byte	75
+ 537 01f7 00       		.byte	0
+ 538 01f8 00       		.byte	0
+ 539              		.global	USBFS_SN_STRING_DESCRIPTOR
+ 540 01f9 000000   		.align	2
+ 541              		.type	USBFS_SN_STRING_DESCRIPTOR, %object
+ 542              		.size	USBFS_SN_STRING_DESCRIPTOR, 2
+ 543              	USBFS_SN_STRING_DESCRIPTOR:
+ 544 01fc 02       		.byte	2
+ 545 01fd 03       		.byte	3
+ 546              		.global	USBFS_HIDREPORT_DESCRIPTOR1
+ 547 01fe 0000     		.align	2
+ 548              		.type	USBFS_HIDREPORT_DESCRIPTOR1, %object
+ 549              		.size	USBFS_HIDREPORT_DESCRIPTOR1, 27
+ 550              	USBFS_HIDREPORT_DESCRIPTOR1:
+ 551 0200 17       		.byte	23
+ 552 0201 00       		.byte	0
+ 553 0202 05       		.byte	5
+ 554 0203 0C       		.byte	12
+ 555 0204 09       		.byte	9
+ 556 0205 01       		.byte	1
+ 557 0206 A1       		.byte	-95
+ 558 0207 01       		.byte	1
+ 559 0208 15       		.byte	21
+ 560 0209 00       		.byte	0
+ 561 020a 25       		.byte	37
+ 562 020b 01       		.byte	1
+ 563 020c 75       		.byte	117
+ 564 020d 01       		.byte	1
+ 565 020e 95       		.byte	-107
+ 566 020f 01       		.byte	1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 11
 
 
- 567 0214 69       		.byte	105
- 568 0215 00       		.byte	0
- 569 0216 76       		.byte	118
- 570 0217 00       		.byte	0
- 571 0218 65       		.byte	101
- 572 0219 00       		.byte	0
- 573 021a 20       		.byte	32
- 574 021b 00       		.byte	0
- 575 021c 32       		.byte	50
- 576 021d 00       		.byte	0
- 577 021e 34       		.byte	52
- 578 021f 00       		.byte	0
- 579 0220 20       		.byte	32
- 580 0221 00       		.byte	0
- 581 0222 62       		.byte	98
- 582 0223 00       		.byte	0
- 583 0224 69       		.byte	105
- 584 0225 00       		.byte	0
- 585 0226 74       		.byte	116
- 586 0227 00       		.byte	0
- 587 0228 08       		.byte	8
- 588 0229 03       		.byte	3
- 589 022a 4D       		.byte	77
- 590 022b 00       		.byte	0
- 591 022c 61       		.byte	97
- 592 022d 00       		.byte	0
- 593 022e 63       		.byte	99
- 594 022f 00       		.byte	0
- 595 0230 20       		.byte	32
- 596 0231 03       		.byte	3
- 597 0232 50       		.byte	80
- 598 0233 00       		.byte	0
- 599 0234 6C       		.byte	108
- 600 0235 00       		.byte	0
- 601 0236 61       		.byte	97
- 602 0237 00       		.byte	0
- 603 0238 79       		.byte	121
- 604 0239 00       		.byte	0
- 605 023a 6C       		.byte	108
- 606 023b 00       		.byte	0
- 607 023c 69       		.byte	105
- 608 023d 00       		.byte	0
- 609 023e 73       		.byte	115
- 610 023f 00       		.byte	0
- 611 0240 74       		.byte	116
- 612 0241 00       		.byte	0
- 613 0242 43       		.byte	67
- 614 0243 00       		.byte	0
- 615 0244 6F       		.byte	111
- 616 0245 00       		.byte	0
- 617 0246 6E       		.byte	110
- 618 0247 00       		.byte	0
- 619 0248 74       		.byte	116
- 620 0249 00       		.byte	0
- 621 024a 72       		.byte	114
- 622 024b 00       		.byte	0
- 623 024c 6F       		.byte	111
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 12
+ 567 0210 09       		.byte	9
+ 568 0211 CD       		.byte	-51
+ 569 0212 81       		.byte	-127
+ 570 0213 02       		.byte	2
+ 571 0214 95       		.byte	-107
+ 572 0215 07       		.byte	7
+ 573 0216 81       		.byte	-127
+ 574 0217 01       		.byte	1
+ 575 0218 C0       		.byte	-64
+ 576 0219 00       		.byte	0
+ 577 021a 00       		.byte	0
+ 578              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_SCB,4,4
+ 579              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_BUF,2,4
+ 580              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE
+ 581 021b 00       		.align	2
+ 582              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE, %object
+ 583              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE, 12
+ 584              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE:
+ 585 021c 0200     		.short	2
+ 586 021e 0000     		.space	2
+ 587 0220 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_BUF
+ 588 0224 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_SCB
+ 589              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE
+ 590              		.align	2
+ 591              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE, %object
+ 592              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE, 40
+ 593              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE:
+ 594 0228 00       		.byte	0
+ 595 0229 000000   		.space	3
+ 596 022c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE
+ 597 0230 00       		.byte	0
+ 598 0231 000000   		.space	3
+ 599 0234 00000000 		.word	0
+ 600 0238 00       		.byte	0
+ 601 0239 000000   		.space	3
+ 602 023c 00000000 		.word	0
+ 603 0240 01       		.byte	1
+ 604 0241 000000   		.space	3
+ 605 0244 00000000 		.word	USBFS_HIDREPORT_DESCRIPTOR1
+ 606 0248 01       		.byte	1
+ 607 0249 000000   		.space	3
+ 608 024c 79000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR+121
+ 609              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE
+ 610              		.align	2
+ 611              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE, %object
+ 612              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE, 8
+ 613              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE:
+ 614 0250 01       		.byte	1
+ 615 0251 000000   		.space	3
+ 616 0254 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE
+ 617              		.global	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 618              		.align	2
+ 619              		.type	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, %object
+ 620              		.size	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, 24
+ 621              	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE:
+ 622 0258 00       		.byte	0
+ 623 0259 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 12
 
 
- 624 024d 00       		.byte	0
- 625 024e 6C       		.byte	108
- 626 024f 00       		.byte	0
- 627 0250 34       		.byte	52
- 628 0251 03       		.byte	3
- 629 0252 43       		.byte	67
- 630 0253 00       		.byte	0
- 631 0254 79       		.byte	121
- 632 0255 00       		.byte	0
- 633 0256 70       		.byte	112
- 634 0257 00       		.byte	0
- 635 0258 72       		.byte	114
- 636 0259 00       		.byte	0
- 637 025a 65       		.byte	101
- 638 025b 00       		.byte	0
- 639 025c 73       		.byte	115
- 640 025d 00       		.byte	0
- 641 025e 73       		.byte	115
- 642 025f 00       		.byte	0
- 643 0260 20       		.byte	32
- 644 0261 00       		.byte	0
- 645 0262 44       		.byte	68
- 646 0263 00       		.byte	0
- 647 0264 69       		.byte	105
- 648 0265 00       		.byte	0
- 649 0266 67       		.byte	103
- 650 0267 00       		.byte	0
- 651 0268 69       		.byte	105
- 652 0269 00       		.byte	0
- 653 026a 74       		.byte	116
- 654 026b 00       		.byte	0
- 655 026c 61       		.byte	97
- 656 026d 00       		.byte	0
- 657 026e 6C       		.byte	108
- 658 026f 00       		.byte	0
- 659 0270 20       		.byte	32
- 660 0271 00       		.byte	0
- 661 0272 41       		.byte	65
- 662 0273 00       		.byte	0
- 663 0274 75       		.byte	117
- 664 0275 00       		.byte	0
- 665 0276 64       		.byte	100
- 666 0277 00       		.byte	0
- 667 0278 69       		.byte	105
- 668 0279 00       		.byte	0
- 669 027a 6F       		.byte	111
- 670 027b 00       		.byte	0
- 671 027c 20       		.byte	32
- 672 027d 00       		.byte	0
- 673 027e 44       		.byte	68
- 674 027f 00       		.byte	0
- 675 0280 56       		.byte	86
- 676 0281 00       		.byte	0
- 677 0282 4B       		.byte	75
- 678 0283 00       		.byte	0
- 679 0284 00       		.byte	0
- 680              		.global	USBFS_SN_STRING_DESCRIPTOR
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 13
+ 624 025a 86       		.byte	-122
+ 625 025b 03       		.byte	3
+ 626 025c 0200     		.short	2
+ 627 025e 01       		.byte	1
+ 628 025f 00       		.space	1
+ 629 0260 01       		.byte	1
+ 630 0261 01       		.byte	1
+ 631 0262 82       		.byte	-126
+ 632 0263 0D       		.byte	13
+ 633 0264 C000     		.short	192
+ 634 0266 01       		.byte	1
+ 635 0267 00       		.space	1
+ 636 0268 02       		.byte	2
+ 637 0269 00       		.byte	0
+ 638 026a 84       		.byte	-124
+ 639 026b 03       		.byte	3
+ 640 026c 0100     		.short	1
+ 641 026e 03       		.byte	3
+ 642 026f 00       		.space	1
+ 643              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 644              		.align	2
+ 645              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, %object
+ 646              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, 3
+ 647              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS:
+ 648 0270 01       		.byte	1
+ 649 0271 01       		.byte	1
+ 650 0272 03       		.byte	3
+ 651              		.global	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 652 0273 00       		.align	2
+ 653              		.type	USBFS_DEVICE0_CONFIGURATION0_TABLE, %object
+ 654              		.size	USBFS_DEVICE0_CONFIGURATION0_TABLE, 48
+ 655              	USBFS_DEVICE0_CONFIGURATION0_TABLE:
+ 656 0274 01       		.byte	1
+ 657 0275 000000   		.space	3
+ 658 0278 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR
+ 659 027c 03       		.byte	3
+ 660 027d 000000   		.space	3
+ 661 0280 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 662 0284 00       		.byte	0
+ 663 0285 000000   		.space	3
+ 664 0288 00000000 		.word	0
+ 665 028c 00       		.byte	0
+ 666 028d 000000   		.space	3
+ 667 0290 00000000 		.word	0
+ 668 0294 01       		.byte	1
+ 669 0295 000000   		.space	3
+ 670 0298 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE
+ 671 029c 00       		.byte	0
+ 672 029d 000000   		.space	3
+ 673 02a0 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 674              		.global	USBFS_DEVICE0_TABLE
+ 675              		.align	2
+ 676              		.type	USBFS_DEVICE0_TABLE, %object
+ 677              		.size	USBFS_DEVICE0_TABLE, 16
+ 678              	USBFS_DEVICE0_TABLE:
+ 679 02a4 01       		.byte	1
+ 680 02a5 000000   		.space	3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 13
 
 
- 681 0285 000000   		.align	2
- 682              		.type	USBFS_SN_STRING_DESCRIPTOR, %object
- 683              		.size	USBFS_SN_STRING_DESCRIPTOR, 2
- 684              	USBFS_SN_STRING_DESCRIPTOR:
- 685 0288 02       		.byte	2
- 686 0289 03       		.byte	3
- 687              		.global	USBFS_HIDREPORT_DESCRIPTOR1
- 688 028a 0000     		.align	2
- 689              		.type	USBFS_HIDREPORT_DESCRIPTOR1, %object
- 690              		.size	USBFS_HIDREPORT_DESCRIPTOR1, 27
- 691              	USBFS_HIDREPORT_DESCRIPTOR1:
- 692 028c 17       		.byte	23
- 693 028d 00       		.byte	0
- 694 028e 05       		.byte	5
- 695 028f 0C       		.byte	12
- 696 0290 09       		.byte	9
- 697 0291 01       		.byte	1
- 698 0292 A1       		.byte	-95
- 699 0293 01       		.byte	1
- 700 0294 15       		.byte	21
- 701 0295 00       		.byte	0
- 702 0296 25       		.byte	37
- 703 0297 01       		.byte	1
- 704 0298 75       		.byte	117
- 705 0299 01       		.byte	1
- 706 029a 95       		.byte	-107
- 707 029b 01       		.byte	1
- 708 029c 09       		.byte	9
- 709 029d CD       		.byte	-51
- 710 029e 81       		.byte	-127
- 711 029f 02       		.byte	2
- 712 02a0 95       		.byte	-107
- 713 02a1 07       		.byte	7
- 714 02a2 81       		.byte	-127
- 715 02a3 01       		.byte	1
- 716 02a4 C0       		.byte	-64
- 717 02a5 00       		.byte	0
- 718 02a6 00       		.byte	0
- 719              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB,4,4
- 720              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF,2,4
- 721              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
- 722 02a7 00       		.align	2
- 723              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE, %object
- 724              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE, 12
- 725              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE:
- 726 02a8 0200     		.short	2
- 727 02aa 0000     		.space	2
- 728 02ac 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF
- 729 02b0 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB
- 730              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
- 731              		.align	2
- 732              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE, %object
- 733              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE, 40
- 734              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE:
- 735 02b4 00       		.byte	0
- 736 02b5 000000   		.space	3
- 737 02b8 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 14
+ 681 02a8 00000000 		.word	USBFS_DEVICE0_DESCR
+ 682 02ac 01       		.byte	1
+ 683 02ad 000000   		.space	3
+ 684 02b0 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 685              		.global	USBFS_TABLE
+ 686              		.align	2
+ 687              		.type	USBFS_TABLE, %object
+ 688              		.size	USBFS_TABLE, 8
+ 689              	USBFS_TABLE:
+ 690 02b4 01       		.byte	1
+ 691 02b5 000000   		.space	3
+ 692 02b8 00000000 		.word	USBFS_DEVICE0_TABLE
+ 693              		.text
+ 694              	.Letext0:
+ 695              		.file 1 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 696              		.file 2 ".\\Generated_Source\\PSoC5\\/USBFS.h"
+ 697              		.file 3 ".\\Generated_Source\\PSoC5\\USBFS_descr.c"
+ 698              		.section	.debug_info
+ 699 0000 D9030000 		.4byte	0x3d9
+ 700 0004 0200     		.2byte	0x2
+ 701 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 702 000a 04       		.byte	0x4
+ 703 000b 01       		.uleb128 0x1
+ 704 000c 10030000 		.4byte	.LASF49
+ 705 0010 01       		.byte	0x1
+ 706 0011 6A030000 		.4byte	.LASF50
+ 707 0015 48000000 		.4byte	.LASF51
+ 708 0019 00000000 		.4byte	.Ltext0
+ 709 001d 00000000 		.4byte	.Letext0
+ 710 0021 00000000 		.4byte	.Ldebug_line0
+ 711 0025 02       		.uleb128 0x2
+ 712 0026 01       		.byte	0x1
+ 713 0027 06       		.byte	0x6
+ 714 0028 DB030000 		.4byte	.LASF0
+ 715 002c 02       		.uleb128 0x2
+ 716 002d 01       		.byte	0x1
+ 717 002e 08       		.byte	0x8
+ 718 002f AA010000 		.4byte	.LASF1
+ 719 0033 02       		.uleb128 0x2
+ 720 0034 02       		.byte	0x2
+ 721 0035 05       		.byte	0x5
+ 722 0036 9C030000 		.4byte	.LASF2
+ 723 003a 02       		.uleb128 0x2
+ 724 003b 02       		.byte	0x2
+ 725 003c 07       		.byte	0x7
+ 726 003d C2000000 		.4byte	.LASF3
+ 727 0041 02       		.uleb128 0x2
+ 728 0042 04       		.byte	0x4
+ 729 0043 05       		.byte	0x5
+ 730 0044 D2030000 		.4byte	.LASF4
+ 731 0048 02       		.uleb128 0x2
+ 732 0049 04       		.byte	0x4
+ 733 004a 07       		.byte	0x7
+ 734 004b 67020000 		.4byte	.LASF5
+ 735 004f 02       		.uleb128 0x2
+ 736 0050 08       		.byte	0x8
+ 737 0051 05       		.byte	0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 14
 
 
- 738 02bc 00       		.byte	0
- 739 02bd 000000   		.space	3
- 740 02c0 00000000 		.word	0
- 741 02c4 00       		.byte	0
- 742 02c5 000000   		.space	3
- 743 02c8 00000000 		.word	0
- 744 02cc 01       		.byte	1
- 745 02cd 000000   		.space	3
- 746 02d0 00000000 		.word	USBFS_HIDREPORT_DESCRIPTOR1
- 747 02d4 01       		.byte	1
- 748 02d5 000000   		.space	3
- 749 02d8 06010000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR+262
- 750              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
- 751              		.align	2
- 752              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE, %object
- 753              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE, 8
- 754              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE:
- 755 02dc 01       		.byte	1
- 756 02dd 000000   		.space	3
- 757 02e0 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
- 758              		.global	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
- 759              		.align	2
- 760              		.type	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, %object
- 761              		.size	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, 40
- 762              	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE:
- 763 02e4 00       		.byte	0
- 764 02e5 00       		.byte	0
- 765 02e6 86       		.byte	-122
- 766 02e7 03       		.byte	3
- 767 02e8 0200     		.short	2
- 768 02ea 01       		.byte	1
- 769 02eb 00       		.space	1
- 770 02ec 01       		.byte	1
- 771 02ed 01       		.byte	1
- 772 02ee 01       		.byte	1
- 773 02ef 01       		.byte	1
- 774 02f0 C000     		.short	192
- 775 02f2 01       		.byte	1
- 776 02f3 00       		.space	1
- 777 02f4 01       		.byte	1
- 778 02f5 02       		.byte	2
- 779 02f6 01       		.byte	1
- 780 02f7 0D       		.byte	13
- 781 02f8 2001     		.short	288
- 782 02fa 01       		.byte	1
- 783 02fb 00       		.space	1
- 784 02fc 02       		.byte	2
- 785 02fd 01       		.byte	1
- 786 02fe 82       		.byte	-126
- 787 02ff 0D       		.byte	13
- 788 0300 C000     		.short	192
- 789 0302 01       		.byte	1
- 790 0303 00       		.space	1
- 791 0304 03       		.byte	3
- 792 0305 00       		.byte	0
- 793 0306 84       		.byte	-124
- 794 0307 03       		.byte	3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 15
+ 738 0052 00000000 		.4byte	.LASF6
+ 739 0056 02       		.uleb128 0x2
+ 740 0057 08       		.byte	0x8
+ 741 0058 07       		.byte	0x7
+ 742 0059 86020000 		.4byte	.LASF7
+ 743 005d 03       		.uleb128 0x3
+ 744 005e 04       		.byte	0x4
+ 745 005f 05       		.byte	0x5
+ 746 0060 696E7400 		.ascii	"int\000"
+ 747 0064 02       		.uleb128 0x2
+ 748 0065 04       		.byte	0x4
+ 749 0066 07       		.byte	0x7
+ 750 0067 79020000 		.4byte	.LASF8
+ 751 006b 04       		.uleb128 0x4
+ 752 006c C2030000 		.4byte	.LASF9
+ 753 0070 01       		.byte	0x1
+ 754 0071 4C       		.byte	0x4c
+ 755 0072 2C000000 		.4byte	0x2c
+ 756 0076 04       		.uleb128 0x4
+ 757 0077 ED010000 		.4byte	.LASF10
+ 758 007b 01       		.byte	0x1
+ 759 007c 4D       		.byte	0x4d
+ 760 007d 3A000000 		.4byte	0x3a
+ 761 0081 02       		.uleb128 0x2
+ 762 0082 04       		.byte	0x4
+ 763 0083 04       		.byte	0x4
+ 764 0084 08010000 		.4byte	.LASF11
+ 765 0088 02       		.uleb128 0x2
+ 766 0089 08       		.byte	0x8
+ 767 008a 04       		.byte	0x4
+ 768 008b B8010000 		.4byte	.LASF12
+ 769 008f 02       		.uleb128 0x2
+ 770 0090 01       		.byte	0x1
+ 771 0091 08       		.byte	0x8
+ 772 0092 28030000 		.4byte	.LASF13
+ 773 0096 05       		.uleb128 0x5
+ 774 0097 6B000000 		.4byte	0x6b
+ 775 009b 06       		.uleb128 0x6
+ 776 009c 04       		.byte	0x4
+ 777 009d 07       		.byte	0x7
+ 778 009e 07       		.uleb128 0x7
+ 779 009f 04       		.byte	0x4
+ 780 00a0 08       		.uleb128 0x8
+ 781 00a1 23020000 		.4byte	.LASF21
+ 782 00a5 08       		.byte	0x8
+ 783 00a6 02       		.byte	0x2
+ 784 00a7 87       		.byte	0x87
+ 785 00a8 01010000 		.4byte	0x101
+ 786 00ac 09       		.uleb128 0x9
+ 787 00ad C8030000 		.4byte	.LASF14
+ 788 00b1 02       		.byte	0x2
+ 789 00b2 88       		.byte	0x88
+ 790 00b3 6B000000 		.4byte	0x6b
+ 791 00b7 02       		.byte	0x2
+ 792 00b8 23       		.byte	0x23
+ 793 00b9 00       		.uleb128 0x0
+ 794 00ba 09       		.uleb128 0x9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 15
 
 
- 795 0308 0100     		.short	1
- 796 030a 03       		.byte	3
- 797 030b 00       		.space	1
- 798              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
- 799              		.align	2
- 800              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, %object
- 801              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, 4
- 802              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS:
- 803 030c 01       		.byte	1
- 804 030d 01       		.byte	1
- 805 030e 01       		.byte	1
- 806 030f 03       		.byte	3
- 807              		.global	USBFS_DEVICE0_CONFIGURATION0_TABLE
- 808              		.align	2
- 809              		.type	USBFS_DEVICE0_CONFIGURATION0_TABLE, %object
- 810              		.size	USBFS_DEVICE0_CONFIGURATION0_TABLE, 56
- 811              	USBFS_DEVICE0_CONFIGURATION0_TABLE:
- 812 0310 01       		.byte	1
- 813 0311 000000   		.space	3
- 814 0314 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR
- 815 0318 05       		.byte	5
- 816 0319 000000   		.space	3
- 817 031c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
- 818 0320 00       		.byte	0
- 819 0321 000000   		.space	3
- 820 0324 00000000 		.word	0
- 821 0328 00       		.byte	0
- 822 0329 000000   		.space	3
- 823 032c 00000000 		.word	0
- 824 0330 00       		.byte	0
- 825 0331 000000   		.space	3
- 826 0334 00000000 		.word	0
- 827 0338 01       		.byte	1
- 828 0339 000000   		.space	3
- 829 033c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
- 830 0340 00       		.byte	0
- 831 0341 000000   		.space	3
- 832 0344 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
- 833              		.global	USBFS_DEVICE0_TABLE
- 834              		.align	2
- 835              		.type	USBFS_DEVICE0_TABLE, %object
- 836              		.size	USBFS_DEVICE0_TABLE, 16
- 837              	USBFS_DEVICE0_TABLE:
- 838 0348 01       		.byte	1
- 839 0349 000000   		.space	3
- 840 034c 00000000 		.word	USBFS_DEVICE0_DESCR
- 841 0350 01       		.byte	1
- 842 0351 000000   		.space	3
- 843 0354 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_TABLE
- 844              		.global	USBFS_TABLE
- 845              		.align	2
- 846              		.type	USBFS_TABLE, %object
- 847              		.size	USBFS_TABLE, 8
- 848              	USBFS_TABLE:
- 849 0358 01       		.byte	1
- 850 0359 000000   		.space	3
- 851 035c 00000000 		.word	USBFS_DEVICE0_TABLE
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 16
+ 795 00bb 0E010000 		.4byte	.LASF15
+ 796 00bf 02       		.byte	0x2
+ 797 00c0 89       		.byte	0x89
+ 798 00c1 6B000000 		.4byte	0x6b
+ 799 00c5 02       		.byte	0x2
+ 800 00c6 23       		.byte	0x23
+ 801 00c7 01       		.uleb128 0x1
+ 802 00c8 09       		.uleb128 0x9
+ 803 00c9 91010000 		.4byte	.LASF16
+ 804 00cd 02       		.byte	0x2
+ 805 00ce 8A       		.byte	0x8a
+ 806 00cf 6B000000 		.4byte	0x6b
+ 807 00d3 02       		.byte	0x2
+ 808 00d4 23       		.byte	0x23
+ 809 00d5 02       		.uleb128 0x2
+ 810 00d6 09       		.uleb128 0x9
+ 811 00d7 49010000 		.4byte	.LASF17
+ 812 00db 02       		.byte	0x2
+ 813 00dc 8B       		.byte	0x8b
+ 814 00dd 6B000000 		.4byte	0x6b
+ 815 00e1 02       		.byte	0x2
+ 816 00e2 23       		.byte	0x23
+ 817 00e3 03       		.uleb128 0x3
+ 818 00e4 09       		.uleb128 0x9
+ 819 00e5 91030000 		.4byte	.LASF18
+ 820 00e9 02       		.byte	0x2
+ 821 00ea 8C       		.byte	0x8c
+ 822 00eb 76000000 		.4byte	0x76
+ 823 00ef 02       		.byte	0x2
+ 824 00f0 23       		.byte	0x23
+ 825 00f1 04       		.uleb128 0x4
+ 826 00f2 09       		.uleb128 0x9
+ 827 00f3 3D040000 		.4byte	.LASF19
+ 828 00f7 02       		.byte	0x2
+ 829 00f8 8D       		.byte	0x8d
+ 830 00f9 6B000000 		.4byte	0x6b
+ 831 00fd 02       		.byte	0x2
+ 832 00fe 23       		.byte	0x23
+ 833 00ff 06       		.uleb128 0x6
+ 834 0100 00       		.byte	0x0
+ 835 0101 04       		.uleb128 0x4
+ 836 0102 A4020000 		.4byte	.LASF20
+ 837 0106 02       		.byte	0x2
+ 838 0107 8E       		.byte	0x8e
+ 839 0108 A0000000 		.4byte	0xa0
+ 840 010c 08       		.uleb128 0x8
+ 841 010d 32010000 		.4byte	.LASF22
+ 842 0111 04       		.byte	0x4
+ 843 0112 02       		.byte	0x2
+ 844 0113 91       		.byte	0x91
+ 845 0114 35010000 		.4byte	0x135
+ 846 0118 09       		.uleb128 0x9
+ 847 0119 F0000000 		.4byte	.LASF23
+ 848 011d 02       		.byte	0x2
+ 849 011e 92       		.byte	0x92
+ 850 011f 6B000000 		.4byte	0x6b
+ 851 0123 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 16
 
 
- 852              		.text
- 853              	.Letext0:
- 854              		.file 1 ".\\Generated_Source\\PSoC5\\/cytypes.h"
- 855              		.file 2 ".\\Generated_Source\\PSoC5\\/USBFS.h"
- 856              		.file 3 ".\\Generated_Source\\PSoC5\\USBFS_descr.c"
- 857              		.section	.debug_info
- 858 0000 DB030000 		.4byte	0x3db
- 859 0004 0200     		.2byte	0x2
- 860 0006 00000000 		.4byte	.Ldebug_abbrev0
- 861 000a 04       		.byte	0x4
- 862 000b 01       		.uleb128 0x1
- 863 000c 4C030000 		.4byte	.LASF49
- 864 0010 01       		.byte	0x1
- 865 0011 69030000 		.4byte	.LASF50
- 866 0015 EC000000 		.4byte	.LASF51
- 867 0019 00000000 		.4byte	.Ltext0
- 868 001d 00000000 		.4byte	.Letext0
- 869 0021 00000000 		.4byte	.Ldebug_line0
- 870 0025 02       		.uleb128 0x2
- 871 0026 01       		.byte	0x1
- 872 0027 06       		.byte	0x6
- 873 0028 17040000 		.4byte	.LASF0
- 874 002c 02       		.uleb128 0x2
- 875 002d 01       		.byte	0x1
- 876 002e 08       		.byte	0x8
- 877 002f 2A030000 		.4byte	.LASF1
- 878 0033 02       		.uleb128 0x2
- 879 0034 02       		.byte	0x2
- 880 0035 05       		.byte	0x5
- 881 0036 9B030000 		.4byte	.LASF2
- 882 003a 02       		.uleb128 0x2
- 883 003b 02       		.byte	0x2
- 884 003c 07       		.byte	0x7
- 885 003d 65000000 		.4byte	.LASF3
- 886 0041 02       		.uleb128 0x2
- 887 0042 04       		.byte	0x4
- 888 0043 05       		.byte	0x5
- 889 0044 0E040000 		.4byte	.LASF4
- 890 0048 02       		.uleb128 0x2
- 891 0049 04       		.byte	0x4
- 892 004a 07       		.byte	0x7
- 893 004b B9020000 		.4byte	.LASF5
- 894 004f 02       		.uleb128 0x2
- 895 0050 08       		.byte	0x8
- 896 0051 05       		.byte	0x5
- 897 0052 00000000 		.4byte	.LASF6
- 898 0056 02       		.uleb128 0x2
- 899 0057 08       		.byte	0x8
- 900 0058 07       		.byte	0x7
- 901 0059 D8020000 		.4byte	.LASF7
- 902 005d 03       		.uleb128 0x3
- 903 005e 04       		.byte	0x4
- 904 005f 05       		.byte	0x5
- 905 0060 696E7400 		.ascii	"int\000"
- 906 0064 02       		.uleb128 0x2
- 907 0065 04       		.byte	0x4
- 908 0066 07       		.byte	0x7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 17
+ 852 0124 23       		.byte	0x23
+ 853 0125 00       		.uleb128 0x0
+ 854 0126 09       		.uleb128 0x9
+ 855 0127 E7030000 		.4byte	.LASF24
+ 856 012b 02       		.byte	0x2
+ 857 012c 93       		.byte	0x93
+ 858 012d 76000000 		.4byte	0x76
+ 859 0131 02       		.byte	0x2
+ 860 0132 23       		.byte	0x23
+ 861 0133 02       		.uleb128 0x2
+ 862 0134 00       		.byte	0x0
+ 863 0135 04       		.uleb128 0x4
+ 864 0136 54010000 		.4byte	.LASF25
+ 865 013a 02       		.byte	0x2
+ 866 013b 94       		.byte	0x94
+ 867 013c 0C010000 		.4byte	0x10c
+ 868 0140 08       		.uleb128 0x8
+ 869 0141 5D020000 		.4byte	.LASF26
+ 870 0145 0C       		.byte	0xc
+ 871 0146 02       		.byte	0x2
+ 872 0147 97       		.byte	0x97
+ 873 0148 77010000 		.4byte	0x177
+ 874 014c 09       		.uleb128 0x9
+ 875 014d BC000000 		.4byte	.LASF27
+ 876 0151 02       		.byte	0x2
+ 877 0152 98       		.byte	0x98
+ 878 0153 76000000 		.4byte	0x76
+ 879 0157 02       		.byte	0x2
+ 880 0158 23       		.byte	0x23
+ 881 0159 00       		.uleb128 0x0
+ 882 015a 09       		.uleb128 0x9
+ 883 015b F7000000 		.4byte	.LASF28
+ 884 015f 02       		.byte	0x2
+ 885 0160 99       		.byte	0x99
+ 886 0161 77010000 		.4byte	0x177
+ 887 0165 02       		.byte	0x2
+ 888 0166 23       		.byte	0x23
+ 889 0167 04       		.uleb128 0x4
+ 890 0168 09       		.uleb128 0x9
+ 891 0169 0E000000 		.4byte	.LASF29
+ 892 016d 02       		.byte	0x2
+ 893 016e 9A       		.byte	0x9a
+ 894 016f 7D010000 		.4byte	0x17d
+ 895 0173 02       		.byte	0x2
+ 896 0174 23       		.byte	0x23
+ 897 0175 08       		.uleb128 0x8
+ 898 0176 00       		.byte	0x0
+ 899 0177 0A       		.uleb128 0xa
+ 900 0178 04       		.byte	0x4
+ 901 0179 96000000 		.4byte	0x96
+ 902 017d 0A       		.uleb128 0xa
+ 903 017e 04       		.byte	0x4
+ 904 017f 35010000 		.4byte	0x135
+ 905 0183 04       		.uleb128 0x4
+ 906 0184 FD000000 		.4byte	.LASF30
+ 907 0188 02       		.byte	0x2
+ 908 0189 9B       		.byte	0x9b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 17
 
 
- 909 0067 CB020000 		.4byte	.LASF8
- 910 006b 04       		.uleb128 0x4
- 911 006c C1030000 		.4byte	.LASF9
- 912 0070 01       		.byte	0x1
- 913 0071 4C       		.byte	0x4c
- 914 0072 2C000000 		.4byte	0x2c
- 915 0076 04       		.uleb128 0x4
- 916 0077 3F020000 		.4byte	.LASF10
- 917 007b 01       		.byte	0x1
- 918 007c 4D       		.byte	0x4d
- 919 007d 3A000000 		.4byte	0x3a
- 920 0081 02       		.uleb128 0x2
- 921 0082 04       		.byte	0x4
- 922 0083 04       		.byte	0x4
- 923 0084 AB000000 		.4byte	.LASF11
- 924 0088 02       		.uleb128 0x2
- 925 0089 08       		.byte	0x8
- 926 008a 04       		.byte	0x4
- 927 008b 38020000 		.4byte	.LASF12
- 928 008f 02       		.uleb128 0x2
- 929 0090 01       		.byte	0x1
- 930 0091 08       		.byte	0x8
- 931 0092 64030000 		.4byte	.LASF13
- 932 0096 05       		.uleb128 0x5
- 933 0097 6B000000 		.4byte	0x6b
- 934 009b 06       		.uleb128 0x6
- 935 009c 04       		.byte	0x4
- 936 009d 07       		.byte	0x7
- 937 009e 07       		.uleb128 0x7
- 938 009f 04       		.byte	0x4
- 939 00a0 08       		.uleb128 0x8
- 940 00a1 75020000 		.4byte	.LASF21
- 941 00a5 08       		.byte	0x8
- 942 00a6 02       		.byte	0x2
- 943 00a7 87       		.byte	0x87
- 944 00a8 01010000 		.4byte	0x101
- 945 00ac 09       		.uleb128 0x9
- 946 00ad 04040000 		.4byte	.LASF14
- 947 00b1 02       		.byte	0x2
- 948 00b2 88       		.byte	0x88
- 949 00b3 6B000000 		.4byte	0x6b
- 950 00b7 02       		.byte	0x2
- 951 00b8 23       		.byte	0x23
- 952 00b9 00       		.uleb128 0x0
- 953 00ba 09       		.uleb128 0x9
- 954 00bb B1000000 		.4byte	.LASF15
- 955 00bf 02       		.byte	0x2
- 956 00c0 89       		.byte	0x89
- 957 00c1 6B000000 		.4byte	0x6b
- 958 00c5 02       		.byte	0x2
- 959 00c6 23       		.byte	0x23
- 960 00c7 01       		.uleb128 0x1
- 961 00c8 09       		.uleb128 0x9
- 962 00c9 AD010000 		.4byte	.LASF16
- 963 00cd 02       		.byte	0x2
- 964 00ce 8A       		.byte	0x8a
- 965 00cf 6B000000 		.4byte	0x6b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 18
+ 909 018a 40010000 		.4byte	0x140
+ 910 018e 08       		.uleb128 0x8
+ 911 018f EE030000 		.4byte	.LASF31
+ 912 0193 08       		.byte	0x8
+ 913 0194 02       		.byte	0x2
+ 914 0195 9E       		.byte	0x9e
+ 915 0196 B5010000 		.4byte	0x1b5
+ 916 019a 0B       		.uleb128 0xb
+ 917 019b 6300     		.ascii	"c\000"
+ 918 019d 02       		.byte	0x2
+ 919 019e 9F       		.byte	0x9f
+ 920 019f 6B000000 		.4byte	0x6b
+ 921 01a3 02       		.byte	0x2
+ 922 01a4 23       		.byte	0x23
+ 923 01a5 00       		.uleb128 0x0
+ 924 01a6 09       		.uleb128 0x9
+ 925 01a7 9D020000 		.4byte	.LASF32
+ 926 01ab 02       		.byte	0x2
+ 927 01ac A0       		.byte	0xa0
+ 928 01ad 9E000000 		.4byte	0x9e
+ 929 01b1 02       		.byte	0x2
+ 930 01b2 23       		.byte	0x23
+ 931 01b3 04       		.uleb128 0x4
+ 932 01b4 00       		.byte	0x0
+ 933 01b5 04       		.uleb128 0x4
+ 934 01b6 1C030000 		.4byte	.LASF33
+ 935 01ba 02       		.byte	0x2
+ 936 01bb A1       		.byte	0xa1
+ 937 01bc 8E010000 		.4byte	0x18e
+ 938 01c0 0C       		.uleb128 0xc
+ 939 01c1 6B000000 		.4byte	0x6b
+ 940 01c5 D0010000 		.4byte	0x1d0
+ 941 01c9 0D       		.uleb128 0xd
+ 942 01ca 9B000000 		.4byte	0x9b
+ 943 01ce 11       		.byte	0x11
+ 944 01cf 00       		.byte	0x0
+ 945 01d0 0E       		.uleb128 0xe
+ 946 01d1 BE020000 		.4byte	.LASF34
+ 947 01d5 03       		.byte	0x3
+ 948 01d6 26       		.byte	0x26
+ 949 01d7 E2010000 		.4byte	0x1e2
+ 950 01db 01       		.byte	0x1
+ 951 01dc 05       		.byte	0x5
+ 952 01dd 03       		.byte	0x3
+ 953 01de 00000000 		.4byte	USBFS_DEVICE0_DESCR
+ 954 01e2 0F       		.uleb128 0xf
+ 955 01e3 C0010000 		.4byte	0x1c0
+ 956 01e7 0C       		.uleb128 0xc
+ 957 01e8 6B000000 		.4byte	0x6b
+ 958 01ec F7010000 		.4byte	0x1f7
+ 959 01f0 0D       		.uleb128 0xd
+ 960 01f1 9B000000 		.4byte	0x9b
+ 961 01f5 88       		.byte	0x88
+ 962 01f6 00       		.byte	0x0
+ 963 01f7 0E       		.uleb128 0xe
+ 964 01f8 3A020000 		.4byte	.LASF35
+ 965 01fc 03       		.byte	0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 18
 
 
- 966 00d3 02       		.byte	0x2
- 967 00d4 23       		.byte	0x23
- 968 00d5 02       		.uleb128 0x2
- 969 00d6 09       		.uleb128 0x9
- 970 00d7 48000000 		.4byte	.LASF17
- 971 00db 02       		.byte	0x2
- 972 00dc 8B       		.byte	0x8b
- 973 00dd 6B000000 		.4byte	0x6b
- 974 00e1 02       		.byte	0x2
- 975 00e2 23       		.byte	0x23
- 976 00e3 03       		.uleb128 0x3
- 977 00e4 09       		.uleb128 0x9
- 978 00e5 90030000 		.4byte	.LASF18
- 979 00e9 02       		.byte	0x2
- 980 00ea 8C       		.byte	0x8c
- 981 00eb 76000000 		.4byte	0x76
- 982 00ef 02       		.byte	0x2
- 983 00f0 23       		.byte	0x23
- 984 00f1 04       		.uleb128 0x4
- 985 00f2 09       		.uleb128 0x9
- 986 00f3 77040000 		.4byte	.LASF19
- 987 00f7 02       		.byte	0x2
- 988 00f8 8D       		.byte	0x8d
- 989 00f9 6B000000 		.4byte	0x6b
- 990 00fd 02       		.byte	0x2
- 991 00fe 23       		.byte	0x23
- 992 00ff 06       		.uleb128 0x6
- 993 0100 00       		.byte	0x0
- 994 0101 04       		.uleb128 0x4
- 995 0102 F6020000 		.4byte	.LASF20
- 996 0106 02       		.byte	0x2
- 997 0107 8E       		.byte	0x8e
- 998 0108 A0000000 		.4byte	0xa0
- 999 010c 08       		.uleb128 0x8
- 1000 010d D5000000 		.4byte	.LASF22
- 1001 0111 04       		.byte	0x4
- 1002 0112 02       		.byte	0x2
- 1003 0113 91       		.byte	0x91
- 1004 0114 35010000 		.4byte	0x135
- 1005 0118 09       		.uleb128 0x9
- 1006 0119 93000000 		.4byte	.LASF23
- 1007 011d 02       		.byte	0x2
- 1008 011e 92       		.byte	0x92
- 1009 011f 6B000000 		.4byte	0x6b
- 1010 0123 02       		.byte	0x2
- 1011 0124 23       		.byte	0x23
- 1012 0125 00       		.uleb128 0x0
- 1013 0126 09       		.uleb128 0x9
- 1014 0127 65040000 		.4byte	.LASF24
- 1015 012b 02       		.byte	0x2
- 1016 012c 93       		.byte	0x93
- 1017 012d 76000000 		.4byte	0x76
- 1018 0131 02       		.byte	0x2
- 1019 0132 23       		.byte	0x23
- 1020 0133 02       		.uleb128 0x2
- 1021 0134 00       		.byte	0x0
- 1022 0135 04       		.uleb128 0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 19
+ 966 01fd 39       		.byte	0x39
+ 967 01fe 09020000 		.4byte	0x209
+ 968 0202 01       		.byte	0x1
+ 969 0203 05       		.byte	0x5
+ 970 0204 03       		.byte	0x3
+ 971 0205 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_DESCR
+ 972 0209 0F       		.uleb128 0xf
+ 973 020a E7010000 		.4byte	0x1e7
+ 974 020e 0C       		.uleb128 0xc
+ 975 020f 6B000000 		.4byte	0x6b
+ 976 0213 1F020000 		.4byte	0x21f
+ 977 0217 10       		.uleb128 0x10
+ 978 0218 9B000000 		.4byte	0x9b
+ 979 021c 5801     		.2byte	0x158
+ 980 021e 00       		.byte	0x0
+ 981 021f 0E       		.uleb128 0xe
+ 982 0220 19010000 		.4byte	.LASF36
+ 983 0224 03       		.byte	0x3
+ 984 0225 E2       		.byte	0xe2
+ 985 0226 31020000 		.4byte	0x231
+ 986 022a 01       		.byte	0x1
+ 987 022b 05       		.byte	0x5
+ 988 022c 03       		.byte	0x3
+ 989 022d 00000000 		.4byte	USBFS_STRING_DESCRIPTORS
+ 990 0231 0F       		.uleb128 0xf
+ 991 0232 0E020000 		.4byte	0x20e
+ 992 0236 0C       		.uleb128 0xc
+ 993 0237 6B000000 		.4byte	0x6b
+ 994 023b 46020000 		.4byte	0x246
+ 995 023f 0D       		.uleb128 0xd
+ 996 0240 9B000000 		.4byte	0x9b
+ 997 0244 01       		.byte	0x1
+ 998 0245 00       		.byte	0x0
+ 999 0246 11       		.uleb128 0x11
+ 1000 0247 D5000000 		.4byte	.LASF37
+ 1001 024b 03       		.byte	0x3
+ 1002 024c 4201     		.2byte	0x142
+ 1003 024e 59020000 		.4byte	0x259
+ 1004 0252 01       		.byte	0x1
+ 1005 0253 05       		.byte	0x5
+ 1006 0254 03       		.byte	0x3
+ 1007 0255 00000000 		.4byte	USBFS_SN_STRING_DESCRIPTOR
+ 1008 0259 0F       		.uleb128 0xf
+ 1009 025a 36020000 		.4byte	0x236
+ 1010 025e 0C       		.uleb128 0xc
+ 1011 025f 6B000000 		.4byte	0x6b
+ 1012 0263 6E020000 		.4byte	0x26e
+ 1013 0267 0D       		.uleb128 0xd
+ 1014 0268 9B000000 		.4byte	0x9b
+ 1015 026c 1A       		.byte	0x1a
+ 1016 026d 00       		.byte	0x0
+ 1017 026e 11       		.uleb128 0x11
+ 1018 026f A6030000 		.4byte	.LASF38
+ 1019 0273 03       		.byte	0x3
+ 1020 0274 4A01     		.2byte	0x14a
+ 1021 0276 81020000 		.4byte	0x281
+ 1022 027a 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 19
 
 
- 1023 0136 10030000 		.4byte	.LASF25
- 1024 013a 02       		.byte	0x2
- 1025 013b 94       		.byte	0x94
- 1026 013c 0C010000 		.4byte	0x10c
- 1027 0140 08       		.uleb128 0x8
- 1028 0141 AF020000 		.4byte	.LASF26
- 1029 0145 0C       		.byte	0xc
- 1030 0146 02       		.byte	0x2
- 1031 0147 97       		.byte	0x97
- 1032 0148 77010000 		.4byte	0x177
- 1033 014c 09       		.uleb128 0x9
- 1034 014d 5F000000 		.4byte	.LASF27
- 1035 0151 02       		.byte	0x2
- 1036 0152 98       		.byte	0x98
- 1037 0153 76000000 		.4byte	0x76
- 1038 0157 02       		.byte	0x2
- 1039 0158 23       		.byte	0x23
- 1040 0159 00       		.uleb128 0x0
- 1041 015a 09       		.uleb128 0x9
- 1042 015b 9A000000 		.4byte	.LASF28
- 1043 015f 02       		.byte	0x2
- 1044 0160 99       		.byte	0x99
- 1045 0161 77010000 		.4byte	0x177
- 1046 0165 02       		.byte	0x2
- 1047 0166 23       		.byte	0x23
- 1048 0167 04       		.uleb128 0x4
- 1049 0168 09       		.uleb128 0x9
- 1050 0169 0E000000 		.4byte	.LASF29
- 1051 016d 02       		.byte	0x2
- 1052 016e 9A       		.byte	0x9a
- 1053 016f 7D010000 		.4byte	0x17d
- 1054 0173 02       		.byte	0x2
- 1055 0174 23       		.byte	0x23
- 1056 0175 08       		.uleb128 0x8
- 1057 0176 00       		.byte	0x0
- 1058 0177 0A       		.uleb128 0xa
- 1059 0178 04       		.byte	0x4
- 1060 0179 96000000 		.4byte	0x96
- 1061 017d 0A       		.uleb128 0xa
- 1062 017e 04       		.byte	0x4
- 1063 017f 35010000 		.4byte	0x135
- 1064 0183 04       		.uleb128 0x4
- 1065 0184 A0000000 		.4byte	.LASF30
- 1066 0188 02       		.byte	0x2
- 1067 0189 9B       		.byte	0x9b
- 1068 018a 40010000 		.4byte	0x140
- 1069 018e 08       		.uleb128 0x8
- 1070 018f 6C040000 		.4byte	.LASF31
- 1071 0193 08       		.byte	0x8
- 1072 0194 02       		.byte	0x2
- 1073 0195 9E       		.byte	0x9e
- 1074 0196 B5010000 		.4byte	0x1b5
- 1075 019a 0B       		.uleb128 0xb
- 1076 019b 6300     		.ascii	"c\000"
- 1077 019d 02       		.byte	0x2
- 1078 019e 9F       		.byte	0x9f
- 1079 019f 6B000000 		.4byte	0x6b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 20
+ 1023 027b 05       		.byte	0x5
+ 1024 027c 03       		.byte	0x3
+ 1025 027d 00000000 		.4byte	USBFS_HIDREPORT_DESCRIPTOR1
+ 1026 0281 0F       		.uleb128 0xf
+ 1027 0282 5E020000 		.4byte	0x25e
+ 1028 0286 11       		.uleb128 0x11
+ 1029 0287 43040000 		.4byte	.LASF39
+ 1030 028b 03       		.byte	0x3
+ 1031 028c 6101     		.2byte	0x161
+ 1032 028e 35010000 		.4byte	0x135
+ 1033 0292 01       		.byte	0x1
+ 1034 0293 05       		.byte	0x5
+ 1035 0294 03       		.byte	0x3
+ 1036 0295 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_SCB
+ 1037 0299 11       		.uleb128 0x11
+ 1038 029a D2020000 		.4byte	.LASF40
+ 1039 029e 03       		.byte	0x3
+ 1040 029f 6201     		.2byte	0x162
+ 1041 02a1 36020000 		.4byte	0x236
+ 1042 02a5 01       		.byte	0x1
+ 1043 02a6 05       		.byte	0x5
+ 1044 02a7 03       		.byte	0x3
+ 1045 02a8 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_BUF
+ 1046 02ac 0C       		.uleb128 0xc
+ 1047 02ad 83010000 		.4byte	0x183
+ 1048 02b1 BC020000 		.4byte	0x2bc
+ 1049 02b5 0D       		.uleb128 0xd
+ 1050 02b6 9B000000 		.4byte	0x9b
+ 1051 02ba 00       		.byte	0x0
+ 1052 02bb 00       		.byte	0x0
+ 1053 02bc 11       		.uleb128 0x11
+ 1054 02bd F9030000 		.4byte	.LASF41
+ 1055 02c1 03       		.byte	0x3
+ 1056 02c2 6801     		.2byte	0x168
+ 1057 02c4 CF020000 		.4byte	0x2cf
+ 1058 02c8 01       		.byte	0x1
+ 1059 02c9 05       		.byte	0x5
+ 1060 02ca 03       		.byte	0x3
+ 1061 02cb 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_IN_RPT_TABLE
+ 1062 02cf 0F       		.uleb128 0xf
+ 1063 02d0 AC020000 		.4byte	0x2ac
+ 1064 02d4 0C       		.uleb128 0xc
+ 1065 02d5 B5010000 		.4byte	0x1b5
+ 1066 02d9 E4020000 		.4byte	0x2e4
+ 1067 02dd 0D       		.uleb128 0xd
+ 1068 02de 9B000000 		.4byte	0x9b
+ 1069 02e2 04       		.byte	0x4
+ 1070 02e3 00       		.byte	0x0
+ 1071 02e4 11       		.uleb128 0x11
+ 1072 02e5 2D030000 		.4byte	.LASF42
+ 1073 02e9 03       		.byte	0x3
+ 1074 02ea 7501     		.2byte	0x175
+ 1075 02ec F7020000 		.4byte	0x2f7
+ 1076 02f0 01       		.byte	0x1
+ 1077 02f1 05       		.byte	0x5
+ 1078 02f2 03       		.byte	0x3
+ 1079 02f3 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_HID_TABLE
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 20
 
 
- 1080 01a3 02       		.byte	0x2
- 1081 01a4 23       		.byte	0x23
- 1082 01a5 00       		.uleb128 0x0
- 1083 01a6 09       		.uleb128 0x9
- 1084 01a7 EF020000 		.4byte	.LASF32
- 1085 01ab 02       		.byte	0x2
- 1086 01ac A0       		.byte	0xa0
- 1087 01ad 9E000000 		.4byte	0x9e
- 1088 01b1 02       		.byte	0x2
- 1089 01b2 23       		.byte	0x23
- 1090 01b3 04       		.uleb128 0x4
- 1091 01b4 00       		.byte	0x0
- 1092 01b5 04       		.uleb128 0x4
- 1093 01b6 58030000 		.4byte	.LASF33
- 1094 01ba 02       		.byte	0x2
- 1095 01bb A1       		.byte	0xa1
- 1096 01bc 8E010000 		.4byte	0x18e
- 1097 01c0 0C       		.uleb128 0xc
- 1098 01c1 6B000000 		.4byte	0x6b
- 1099 01c5 D0010000 		.4byte	0x1d0
- 1100 01c9 0D       		.uleb128 0xd
- 1101 01ca 9B000000 		.4byte	0x9b
- 1102 01ce 11       		.byte	0x11
- 1103 01cf 00       		.byte	0x0
- 1104 01d0 0E       		.uleb128 0xe
- 1105 01d1 38030000 		.4byte	.LASF34
- 1106 01d5 03       		.byte	0x3
- 1107 01d6 26       		.byte	0x26
- 1108 01d7 E2010000 		.4byte	0x1e2
- 1109 01db 01       		.byte	0x1
- 1110 01dc 05       		.byte	0x5
- 1111 01dd 03       		.byte	0x3
- 1112 01de 00000000 		.4byte	USBFS_DEVICE0_DESCR
- 1113 01e2 0F       		.uleb128 0xf
- 1114 01e3 C0010000 		.4byte	0x1c0
- 1115 01e7 0C       		.uleb128 0xc
- 1116 01e8 6B000000 		.4byte	0x6b
- 1117 01ec F8010000 		.4byte	0x1f8
- 1118 01f0 10       		.uleb128 0x10
- 1119 01f1 9B000000 		.4byte	0x9b
- 1120 01f5 1501     		.2byte	0x115
- 1121 01f7 00       		.byte	0x0
- 1122 01f8 0E       		.uleb128 0xe
- 1123 01f9 8C020000 		.4byte	.LASF35
- 1124 01fd 03       		.byte	0x3
- 1125 01fe 39       		.byte	0x39
- 1126 01ff 0A020000 		.4byte	0x20a
- 1127 0203 01       		.byte	0x1
- 1128 0204 05       		.byte	0x5
- 1129 0205 03       		.byte	0x3
- 1130 0206 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_DESCR
- 1131 020a 0F       		.uleb128 0xf
- 1132 020b E7010000 		.4byte	0x1e7
- 1133 020f 0C       		.uleb128 0xc
- 1134 0210 6B000000 		.4byte	0x6b
- 1135 0214 20020000 		.4byte	0x220
- 1136 0218 10       		.uleb128 0x10
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 21
+ 1080 02f7 0F       		.uleb128 0xf
+ 1081 02f8 D4020000 		.4byte	0x2d4
+ 1082 02fc 0C       		.uleb128 0xc
+ 1083 02fd B5010000 		.4byte	0x1b5
+ 1084 0301 0C030000 		.4byte	0x30c
+ 1085 0305 0D       		.uleb128 0xd
+ 1086 0306 9B000000 		.4byte	0x9b
+ 1087 030a 00       		.byte	0x0
+ 1088 030b 00       		.byte	0x0
+ 1089 030c 11       		.uleb128 0x11
+ 1090 030d BF010000 		.4byte	.LASF43
+ 1091 0311 03       		.byte	0x3
+ 1092 0312 8101     		.2byte	0x181
+ 1093 0314 1F030000 		.4byte	0x31f
+ 1094 0318 01       		.byte	0x1
+ 1095 0319 05       		.byte	0x5
+ 1096 031a 03       		.byte	0x3
+ 1097 031b 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE
+ 1098 031f 0F       		.uleb128 0xf
+ 1099 0320 FC020000 		.4byte	0x2fc
+ 1100 0324 0C       		.uleb128 0xc
+ 1101 0325 01010000 		.4byte	0x101
+ 1102 0329 34030000 		.4byte	0x334
+ 1103 032d 0D       		.uleb128 0xd
+ 1104 032e 9B000000 		.4byte	0x9b
+ 1105 0332 02       		.byte	0x2
+ 1106 0333 00       		.byte	0x0
+ 1107 0334 11       		.uleb128 0x11
+ 1108 0335 F4010000 		.4byte	.LASF44
+ 1109 0339 03       		.byte	0x3
+ 1110 033a 8C01     		.2byte	0x18c
+ 1111 033c 47030000 		.4byte	0x347
+ 1112 0340 01       		.byte	0x1
+ 1113 0341 05       		.byte	0x5
+ 1114 0342 03       		.byte	0x3
+ 1115 0343 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 1116 0347 0F       		.uleb128 0xf
+ 1117 0348 24030000 		.4byte	0x324
+ 1118 034c 0C       		.uleb128 0xc
+ 1119 034d 6B000000 		.4byte	0x6b
+ 1120 0351 5C030000 		.4byte	0x35c
+ 1121 0355 0D       		.uleb128 0xd
+ 1122 0356 9B000000 		.4byte	0x9b
+ 1123 035a 02       		.byte	0x2
+ 1124 035b 00       		.byte	0x0
+ 1125 035c 11       		.uleb128 0x11
+ 1126 035d 1B000000 		.4byte	.LASF45
+ 1127 0361 03       		.byte	0x3
+ 1128 0362 9201     		.2byte	0x192
+ 1129 0364 6F030000 		.4byte	0x36f
+ 1130 0368 01       		.byte	0x1
+ 1131 0369 05       		.byte	0x5
+ 1132 036a 03       		.byte	0x3
+ 1133 036b 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 1134 036f 0F       		.uleb128 0xf
+ 1135 0370 4C030000 		.4byte	0x34c
+ 1136 0374 0C       		.uleb128 0xc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 21
 
 
- 1137 0219 9B000000 		.4byte	0x9b
- 1138 021d 5801     		.2byte	0x158
- 1139 021f 00       		.byte	0x0
- 1140 0220 11       		.uleb128 0x11
- 1141 0221 BC000000 		.4byte	.LASF36
- 1142 0225 03       		.byte	0x3
- 1143 0226 8A01     		.2byte	0x18a
- 1144 0228 33020000 		.4byte	0x233
- 1145 022c 01       		.byte	0x1
- 1146 022d 05       		.byte	0x5
- 1147 022e 03       		.byte	0x3
- 1148 022f 00000000 		.4byte	USBFS_STRING_DESCRIPTORS
- 1149 0233 0F       		.uleb128 0xf
- 1150 0234 0F020000 		.4byte	0x20f
- 1151 0238 0C       		.uleb128 0xc
- 1152 0239 6B000000 		.4byte	0x6b
- 1153 023d 48020000 		.4byte	0x248
- 1154 0241 0D       		.uleb128 0xd
- 1155 0242 9B000000 		.4byte	0x9b
- 1156 0246 01       		.byte	0x1
- 1157 0247 00       		.byte	0x0
- 1158 0248 11       		.uleb128 0x11
- 1159 0249 78000000 		.4byte	.LASF37
- 1160 024d 03       		.byte	0x3
- 1161 024e EA01     		.2byte	0x1ea
- 1162 0250 5B020000 		.4byte	0x25b
- 1163 0254 01       		.byte	0x1
- 1164 0255 05       		.byte	0x5
- 1165 0256 03       		.byte	0x3
- 1166 0257 00000000 		.4byte	USBFS_SN_STRING_DESCRIPTOR
- 1167 025b 0F       		.uleb128 0xf
- 1168 025c 38020000 		.4byte	0x238
- 1169 0260 0C       		.uleb128 0xc
- 1170 0261 6B000000 		.4byte	0x6b
- 1171 0265 70020000 		.4byte	0x270
- 1172 0269 0D       		.uleb128 0xd
- 1173 026a 9B000000 		.4byte	0x9b
- 1174 026e 1A       		.byte	0x1a
- 1175 026f 00       		.byte	0x0
- 1176 0270 11       		.uleb128 0x11
- 1177 0271 A5030000 		.4byte	.LASF38
- 1178 0275 03       		.byte	0x3
- 1179 0276 F201     		.2byte	0x1f2
- 1180 0278 83020000 		.4byte	0x283
- 1181 027c 01       		.byte	0x1
- 1182 027d 05       		.byte	0x5
- 1183 027e 03       		.byte	0x3
- 1184 027f 00000000 		.4byte	USBFS_HIDREPORT_DESCRIPTOR1
- 1185 0283 0F       		.uleb128 0xf
- 1186 0284 60020000 		.4byte	0x260
- 1187 0288 11       		.uleb128 0x11
- 1188 0289 23040000 		.4byte	.LASF39
- 1189 028d 03       		.byte	0x3
- 1190 028e 0902     		.2byte	0x209
- 1191 0290 35010000 		.4byte	0x135
- 1192 0294 01       		.byte	0x1
- 1193 0295 05       		.byte	0x5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 22
+ 1137 0375 B5010000 		.4byte	0x1b5
+ 1138 0379 84030000 		.4byte	0x384
+ 1139 037d 0D       		.uleb128 0xd
+ 1140 037e 9B000000 		.4byte	0x9b
+ 1141 0382 05       		.byte	0x5
+ 1142 0383 00       		.byte	0x0
+ 1143 0384 11       		.uleb128 0x11
+ 1144 0385 6E010000 		.4byte	.LASF46
+ 1145 0389 03       		.byte	0x3
+ 1146 038a 9A01     		.2byte	0x19a
+ 1147 038c 97030000 		.4byte	0x397
+ 1148 0390 01       		.byte	0x1
+ 1149 0391 05       		.byte	0x5
+ 1150 0392 03       		.byte	0x3
+ 1151 0393 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 1152 0397 0F       		.uleb128 0xf
+ 1153 0398 74030000 		.4byte	0x374
+ 1154 039c 0C       		.uleb128 0xc
+ 1155 039d B5010000 		.4byte	0x1b5
+ 1156 03a1 AC030000 		.4byte	0x3ac
+ 1157 03a5 0D       		.uleb128 0xd
+ 1158 03a6 9B000000 		.4byte	0x9b
+ 1159 03aa 01       		.byte	0x1
+ 1160 03ab 00       		.byte	0x0
+ 1161 03ac 11       		.uleb128 0x11
+ 1162 03ad 96010000 		.4byte	.LASF47
+ 1163 03b1 03       		.byte	0x3
+ 1164 03b2 A601     		.2byte	0x1a6
+ 1165 03b4 BF030000 		.4byte	0x3bf
+ 1166 03b8 01       		.byte	0x1
+ 1167 03b9 05       		.byte	0x5
+ 1168 03ba 03       		.byte	0x3
+ 1169 03bb 00000000 		.4byte	USBFS_DEVICE0_TABLE
+ 1170 03bf 0F       		.uleb128 0xf
+ 1171 03c0 9C030000 		.4byte	0x39c
+ 1172 03c4 11       		.uleb128 0x11
+ 1173 03c5 B0000000 		.4byte	.LASF48
+ 1174 03c9 03       		.byte	0x3
+ 1175 03ca AD01     		.2byte	0x1ad
+ 1176 03cc D7030000 		.4byte	0x3d7
+ 1177 03d0 01       		.byte	0x1
+ 1178 03d1 05       		.byte	0x5
+ 1179 03d2 03       		.byte	0x3
+ 1180 03d3 00000000 		.4byte	USBFS_TABLE
+ 1181 03d7 0F       		.uleb128 0xf
+ 1182 03d8 FC020000 		.4byte	0x2fc
+ 1183 03dc 00       		.byte	0x0
+ 1184              		.section	.debug_abbrev
+ 1185 0000 01       		.uleb128 0x1
+ 1186 0001 11       		.uleb128 0x11
+ 1187 0002 01       		.byte	0x1
+ 1188 0003 25       		.uleb128 0x25
+ 1189 0004 0E       		.uleb128 0xe
+ 1190 0005 13       		.uleb128 0x13
+ 1191 0006 0B       		.uleb128 0xb
+ 1192 0007 03       		.uleb128 0x3
+ 1193 0008 0E       		.uleb128 0xe
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 22
 
 
- 1194 0296 03       		.byte	0x3
- 1195 0297 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB
- 1196 029b 11       		.uleb128 0x11
- 1197 029c 4C010000 		.4byte	.LASF40
- 1198 02a0 03       		.byte	0x3
- 1199 02a1 0A02     		.2byte	0x20a
- 1200 02a3 38020000 		.4byte	0x238
- 1201 02a7 01       		.byte	0x1
- 1202 02a8 05       		.byte	0x5
- 1203 02a9 03       		.byte	0x3
- 1204 02aa 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF
- 1205 02ae 0C       		.uleb128 0xc
- 1206 02af 83010000 		.4byte	0x183
- 1207 02b3 BE020000 		.4byte	0x2be
- 1208 02b7 0D       		.uleb128 0xd
- 1209 02b8 9B000000 		.4byte	0x9b
- 1210 02bc 00       		.byte	0x0
- 1211 02bd 00       		.byte	0x0
- 1212 02be 11       		.uleb128 0x11
- 1213 02bf F4010000 		.4byte	.LASF41
- 1214 02c3 03       		.byte	0x3
- 1215 02c4 1002     		.2byte	0x210
- 1216 02c6 D1020000 		.4byte	0x2d1
- 1217 02ca 01       		.byte	0x1
- 1218 02cb 05       		.byte	0x5
- 1219 02cc 03       		.byte	0x3
- 1220 02cd 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
- 1221 02d1 0F       		.uleb128 0xf
- 1222 02d2 AE020000 		.4byte	0x2ae
- 1223 02d6 0C       		.uleb128 0xc
- 1224 02d7 B5010000 		.4byte	0x1b5
- 1225 02db E6020000 		.4byte	0x2e6
- 1226 02df 0D       		.uleb128 0xd
- 1227 02e0 9B000000 		.4byte	0x9b
- 1228 02e4 04       		.byte	0x4
- 1229 02e5 00       		.byte	0x0
- 1230 02e6 11       		.uleb128 0x11
- 1231 02e7 C7030000 		.4byte	.LASF42
- 1232 02eb 03       		.byte	0x3
- 1233 02ec 1D02     		.2byte	0x21d
- 1234 02ee F9020000 		.4byte	0x2f9
- 1235 02f2 01       		.byte	0x1
- 1236 02f3 05       		.byte	0x5
- 1237 02f4 03       		.byte	0x3
- 1238 02f5 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
- 1239 02f9 0F       		.uleb128 0xf
- 1240 02fa D6020000 		.4byte	0x2d6
- 1241 02fe 0C       		.uleb128 0xc
- 1242 02ff B5010000 		.4byte	0x1b5
- 1243 0303 0E030000 		.4byte	0x30e
- 1244 0307 0D       		.uleb128 0xd
- 1245 0308 9B000000 		.4byte	0x9b
- 1246 030c 00       		.byte	0x0
- 1247 030d 00       		.byte	0x0
- 1248 030e 11       		.uleb128 0x11
- 1249 030f C6010000 		.4byte	.LASF43
- 1250 0313 03       		.byte	0x3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 23
+ 1194 0009 1B       		.uleb128 0x1b
+ 1195 000a 0E       		.uleb128 0xe
+ 1196 000b 11       		.uleb128 0x11
+ 1197 000c 01       		.uleb128 0x1
+ 1198 000d 12       		.uleb128 0x12
+ 1199 000e 01       		.uleb128 0x1
+ 1200 000f 10       		.uleb128 0x10
+ 1201 0010 06       		.uleb128 0x6
+ 1202 0011 00       		.byte	0x0
+ 1203 0012 00       		.byte	0x0
+ 1204 0013 02       		.uleb128 0x2
+ 1205 0014 24       		.uleb128 0x24
+ 1206 0015 00       		.byte	0x0
+ 1207 0016 0B       		.uleb128 0xb
+ 1208 0017 0B       		.uleb128 0xb
+ 1209 0018 3E       		.uleb128 0x3e
+ 1210 0019 0B       		.uleb128 0xb
+ 1211 001a 03       		.uleb128 0x3
+ 1212 001b 0E       		.uleb128 0xe
+ 1213 001c 00       		.byte	0x0
+ 1214 001d 00       		.byte	0x0
+ 1215 001e 03       		.uleb128 0x3
+ 1216 001f 24       		.uleb128 0x24
+ 1217 0020 00       		.byte	0x0
+ 1218 0021 0B       		.uleb128 0xb
+ 1219 0022 0B       		.uleb128 0xb
+ 1220 0023 3E       		.uleb128 0x3e
+ 1221 0024 0B       		.uleb128 0xb
+ 1222 0025 03       		.uleb128 0x3
+ 1223 0026 08       		.uleb128 0x8
+ 1224 0027 00       		.byte	0x0
+ 1225 0028 00       		.byte	0x0
+ 1226 0029 04       		.uleb128 0x4
+ 1227 002a 16       		.uleb128 0x16
+ 1228 002b 00       		.byte	0x0
+ 1229 002c 03       		.uleb128 0x3
+ 1230 002d 0E       		.uleb128 0xe
+ 1231 002e 3A       		.uleb128 0x3a
+ 1232 002f 0B       		.uleb128 0xb
+ 1233 0030 3B       		.uleb128 0x3b
+ 1234 0031 0B       		.uleb128 0xb
+ 1235 0032 49       		.uleb128 0x49
+ 1236 0033 13       		.uleb128 0x13
+ 1237 0034 00       		.byte	0x0
+ 1238 0035 00       		.byte	0x0
+ 1239 0036 05       		.uleb128 0x5
+ 1240 0037 35       		.uleb128 0x35
+ 1241 0038 00       		.byte	0x0
+ 1242 0039 49       		.uleb128 0x49
+ 1243 003a 13       		.uleb128 0x13
+ 1244 003b 00       		.byte	0x0
+ 1245 003c 00       		.byte	0x0
+ 1246 003d 06       		.uleb128 0x6
+ 1247 003e 24       		.uleb128 0x24
+ 1248 003f 00       		.byte	0x0
+ 1249 0040 0B       		.uleb128 0xb
+ 1250 0041 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 23
 
 
- 1251 0314 2902     		.2byte	0x229
- 1252 0316 21030000 		.4byte	0x321
- 1253 031a 01       		.byte	0x1
- 1254 031b 05       		.byte	0x5
- 1255 031c 03       		.byte	0x3
- 1256 031d 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
- 1257 0321 0F       		.uleb128 0xf
- 1258 0322 FE020000 		.4byte	0x2fe
- 1259 0326 0C       		.uleb128 0xc
- 1260 0327 01010000 		.4byte	0x101
- 1261 032b 36030000 		.4byte	0x336
- 1262 032f 0D       		.uleb128 0xd
- 1263 0330 9B000000 		.4byte	0x9b
- 1264 0334 04       		.byte	0x4
- 1265 0335 00       		.byte	0x0
- 1266 0336 11       		.uleb128 0x11
- 1267 0337 46020000 		.4byte	.LASF44
- 1268 033b 03       		.byte	0x3
- 1269 033c 3402     		.2byte	0x234
- 1270 033e 49030000 		.4byte	0x349
- 1271 0342 01       		.byte	0x1
- 1272 0343 05       		.byte	0x5
- 1273 0344 03       		.byte	0x3
- 1274 0345 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
- 1275 0349 0F       		.uleb128 0xf
- 1276 034a 26030000 		.4byte	0x326
- 1277 034e 0C       		.uleb128 0xc
- 1278 034f 6B000000 		.4byte	0x6b
- 1279 0353 5E030000 		.4byte	0x35e
- 1280 0357 0D       		.uleb128 0xd
- 1281 0358 9B000000 		.4byte	0x9b
- 1282 035c 03       		.byte	0x3
- 1283 035d 00       		.byte	0x0
- 1284 035e 11       		.uleb128 0x11
- 1285 035f 1B000000 		.4byte	.LASF45
- 1286 0363 03       		.byte	0x3
- 1287 0364 3C02     		.2byte	0x23c
- 1288 0366 71030000 		.4byte	0x371
- 1289 036a 01       		.byte	0x1
- 1290 036b 05       		.byte	0x5
- 1291 036c 03       		.byte	0x3
- 1292 036d 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
- 1293 0371 0F       		.uleb128 0xf
- 1294 0372 4E030000 		.4byte	0x34e
- 1295 0376 0C       		.uleb128 0xc
- 1296 0377 B5010000 		.4byte	0x1b5
- 1297 037b 86030000 		.4byte	0x386
- 1298 037f 0D       		.uleb128 0xd
- 1299 0380 9B000000 		.4byte	0x9b
- 1300 0384 06       		.byte	0x6
- 1301 0385 00       		.byte	0x0
- 1302 0386 11       		.uleb128 0x11
- 1303 0387 8A010000 		.4byte	.LASF46
- 1304 038b 03       		.byte	0x3
- 1305 038c 4402     		.2byte	0x244
- 1306 038e 99030000 		.4byte	0x399
- 1307 0392 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 24
+ 1251 0042 3E       		.uleb128 0x3e
+ 1252 0043 0B       		.uleb128 0xb
+ 1253 0044 00       		.byte	0x0
+ 1254 0045 00       		.byte	0x0
+ 1255 0046 07       		.uleb128 0x7
+ 1256 0047 0F       		.uleb128 0xf
+ 1257 0048 00       		.byte	0x0
+ 1258 0049 0B       		.uleb128 0xb
+ 1259 004a 0B       		.uleb128 0xb
+ 1260 004b 00       		.byte	0x0
+ 1261 004c 00       		.byte	0x0
+ 1262 004d 08       		.uleb128 0x8
+ 1263 004e 13       		.uleb128 0x13
+ 1264 004f 01       		.byte	0x1
+ 1265 0050 03       		.uleb128 0x3
+ 1266 0051 0E       		.uleb128 0xe
+ 1267 0052 0B       		.uleb128 0xb
+ 1268 0053 0B       		.uleb128 0xb
+ 1269 0054 3A       		.uleb128 0x3a
+ 1270 0055 0B       		.uleb128 0xb
+ 1271 0056 3B       		.uleb128 0x3b
+ 1272 0057 0B       		.uleb128 0xb
+ 1273 0058 01       		.uleb128 0x1
+ 1274 0059 13       		.uleb128 0x13
+ 1275 005a 00       		.byte	0x0
+ 1276 005b 00       		.byte	0x0
+ 1277 005c 09       		.uleb128 0x9
+ 1278 005d 0D       		.uleb128 0xd
+ 1279 005e 00       		.byte	0x0
+ 1280 005f 03       		.uleb128 0x3
+ 1281 0060 0E       		.uleb128 0xe
+ 1282 0061 3A       		.uleb128 0x3a
+ 1283 0062 0B       		.uleb128 0xb
+ 1284 0063 3B       		.uleb128 0x3b
+ 1285 0064 0B       		.uleb128 0xb
+ 1286 0065 49       		.uleb128 0x49
+ 1287 0066 13       		.uleb128 0x13
+ 1288 0067 38       		.uleb128 0x38
+ 1289 0068 0A       		.uleb128 0xa
+ 1290 0069 00       		.byte	0x0
+ 1291 006a 00       		.byte	0x0
+ 1292 006b 0A       		.uleb128 0xa
+ 1293 006c 0F       		.uleb128 0xf
+ 1294 006d 00       		.byte	0x0
+ 1295 006e 0B       		.uleb128 0xb
+ 1296 006f 0B       		.uleb128 0xb
+ 1297 0070 49       		.uleb128 0x49
+ 1298 0071 13       		.uleb128 0x13
+ 1299 0072 00       		.byte	0x0
+ 1300 0073 00       		.byte	0x0
+ 1301 0074 0B       		.uleb128 0xb
+ 1302 0075 0D       		.uleb128 0xd
+ 1303 0076 00       		.byte	0x0
+ 1304 0077 03       		.uleb128 0x3
+ 1305 0078 08       		.uleb128 0x8
+ 1306 0079 3A       		.uleb128 0x3a
+ 1307 007a 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 24
 
 
- 1308 0393 05       		.byte	0x5
- 1309 0394 03       		.byte	0x3
- 1310 0395 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_TABLE
- 1311 0399 0F       		.uleb128 0xf
- 1312 039a 76030000 		.4byte	0x376
- 1313 039e 0C       		.uleb128 0xc
- 1314 039f B5010000 		.4byte	0x1b5
- 1315 03a3 AE030000 		.4byte	0x3ae
- 1316 03a7 0D       		.uleb128 0xd
- 1317 03a8 9B000000 		.4byte	0x9b
- 1318 03ac 01       		.byte	0x1
- 1319 03ad 00       		.byte	0x0
- 1320 03ae 11       		.uleb128 0x11
- 1321 03af B2010000 		.4byte	.LASF47
- 1322 03b3 03       		.byte	0x3
- 1323 03b4 5102     		.2byte	0x251
- 1324 03b6 C1030000 		.4byte	0x3c1
- 1325 03ba 01       		.byte	0x1
- 1326 03bb 05       		.byte	0x5
- 1327 03bc 03       		.byte	0x3
- 1328 03bd 00000000 		.4byte	USBFS_DEVICE0_TABLE
- 1329 03c1 0F       		.uleb128 0xf
- 1330 03c2 9E030000 		.4byte	0x39e
- 1331 03c6 11       		.uleb128 0x11
- 1332 03c7 53000000 		.4byte	.LASF48
- 1333 03cb 03       		.byte	0x3
- 1334 03cc 5802     		.2byte	0x258
- 1335 03ce D9030000 		.4byte	0x3d9
- 1336 03d2 01       		.byte	0x1
- 1337 03d3 05       		.byte	0x5
- 1338 03d4 03       		.byte	0x3
- 1339 03d5 00000000 		.4byte	USBFS_TABLE
- 1340 03d9 0F       		.uleb128 0xf
- 1341 03da FE020000 		.4byte	0x2fe
- 1342 03de 00       		.byte	0x0
- 1343              		.section	.debug_abbrev
- 1344 0000 01       		.uleb128 0x1
- 1345 0001 11       		.uleb128 0x11
- 1346 0002 01       		.byte	0x1
- 1347 0003 25       		.uleb128 0x25
- 1348 0004 0E       		.uleb128 0xe
- 1349 0005 13       		.uleb128 0x13
- 1350 0006 0B       		.uleb128 0xb
- 1351 0007 03       		.uleb128 0x3
- 1352 0008 0E       		.uleb128 0xe
- 1353 0009 1B       		.uleb128 0x1b
- 1354 000a 0E       		.uleb128 0xe
- 1355 000b 11       		.uleb128 0x11
- 1356 000c 01       		.uleb128 0x1
- 1357 000d 12       		.uleb128 0x12
- 1358 000e 01       		.uleb128 0x1
- 1359 000f 10       		.uleb128 0x10
- 1360 0010 06       		.uleb128 0x6
- 1361 0011 00       		.byte	0x0
- 1362 0012 00       		.byte	0x0
- 1363 0013 02       		.uleb128 0x2
- 1364 0014 24       		.uleb128 0x24
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 25
+ 1308 007b 3B       		.uleb128 0x3b
+ 1309 007c 0B       		.uleb128 0xb
+ 1310 007d 49       		.uleb128 0x49
+ 1311 007e 13       		.uleb128 0x13
+ 1312 007f 38       		.uleb128 0x38
+ 1313 0080 0A       		.uleb128 0xa
+ 1314 0081 00       		.byte	0x0
+ 1315 0082 00       		.byte	0x0
+ 1316 0083 0C       		.uleb128 0xc
+ 1317 0084 01       		.uleb128 0x1
+ 1318 0085 01       		.byte	0x1
+ 1319 0086 49       		.uleb128 0x49
+ 1320 0087 13       		.uleb128 0x13
+ 1321 0088 01       		.uleb128 0x1
+ 1322 0089 13       		.uleb128 0x13
+ 1323 008a 00       		.byte	0x0
+ 1324 008b 00       		.byte	0x0
+ 1325 008c 0D       		.uleb128 0xd
+ 1326 008d 21       		.uleb128 0x21
+ 1327 008e 00       		.byte	0x0
+ 1328 008f 49       		.uleb128 0x49
+ 1329 0090 13       		.uleb128 0x13
+ 1330 0091 2F       		.uleb128 0x2f
+ 1331 0092 0B       		.uleb128 0xb
+ 1332 0093 00       		.byte	0x0
+ 1333 0094 00       		.byte	0x0
+ 1334 0095 0E       		.uleb128 0xe
+ 1335 0096 34       		.uleb128 0x34
+ 1336 0097 00       		.byte	0x0
+ 1337 0098 03       		.uleb128 0x3
+ 1338 0099 0E       		.uleb128 0xe
+ 1339 009a 3A       		.uleb128 0x3a
+ 1340 009b 0B       		.uleb128 0xb
+ 1341 009c 3B       		.uleb128 0x3b
+ 1342 009d 0B       		.uleb128 0xb
+ 1343 009e 49       		.uleb128 0x49
+ 1344 009f 13       		.uleb128 0x13
+ 1345 00a0 3F       		.uleb128 0x3f
+ 1346 00a1 0C       		.uleb128 0xc
+ 1347 00a2 02       		.uleb128 0x2
+ 1348 00a3 0A       		.uleb128 0xa
+ 1349 00a4 00       		.byte	0x0
+ 1350 00a5 00       		.byte	0x0
+ 1351 00a6 0F       		.uleb128 0xf
+ 1352 00a7 26       		.uleb128 0x26
+ 1353 00a8 00       		.byte	0x0
+ 1354 00a9 49       		.uleb128 0x49
+ 1355 00aa 13       		.uleb128 0x13
+ 1356 00ab 00       		.byte	0x0
+ 1357 00ac 00       		.byte	0x0
+ 1358 00ad 10       		.uleb128 0x10
+ 1359 00ae 21       		.uleb128 0x21
+ 1360 00af 00       		.byte	0x0
+ 1361 00b0 49       		.uleb128 0x49
+ 1362 00b1 13       		.uleb128 0x13
+ 1363 00b2 2F       		.uleb128 0x2f
+ 1364 00b3 05       		.uleb128 0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 25
 
 
- 1365 0015 00       		.byte	0x0
- 1366 0016 0B       		.uleb128 0xb
- 1367 0017 0B       		.uleb128 0xb
- 1368 0018 3E       		.uleb128 0x3e
- 1369 0019 0B       		.uleb128 0xb
- 1370 001a 03       		.uleb128 0x3
- 1371 001b 0E       		.uleb128 0xe
- 1372 001c 00       		.byte	0x0
- 1373 001d 00       		.byte	0x0
- 1374 001e 03       		.uleb128 0x3
- 1375 001f 24       		.uleb128 0x24
- 1376 0020 00       		.byte	0x0
- 1377 0021 0B       		.uleb128 0xb
- 1378 0022 0B       		.uleb128 0xb
- 1379 0023 3E       		.uleb128 0x3e
- 1380 0024 0B       		.uleb128 0xb
- 1381 0025 03       		.uleb128 0x3
- 1382 0026 08       		.uleb128 0x8
- 1383 0027 00       		.byte	0x0
- 1384 0028 00       		.byte	0x0
- 1385 0029 04       		.uleb128 0x4
- 1386 002a 16       		.uleb128 0x16
- 1387 002b 00       		.byte	0x0
- 1388 002c 03       		.uleb128 0x3
- 1389 002d 0E       		.uleb128 0xe
- 1390 002e 3A       		.uleb128 0x3a
- 1391 002f 0B       		.uleb128 0xb
- 1392 0030 3B       		.uleb128 0x3b
- 1393 0031 0B       		.uleb128 0xb
- 1394 0032 49       		.uleb128 0x49
- 1395 0033 13       		.uleb128 0x13
- 1396 0034 00       		.byte	0x0
- 1397 0035 00       		.byte	0x0
- 1398 0036 05       		.uleb128 0x5
- 1399 0037 35       		.uleb128 0x35
- 1400 0038 00       		.byte	0x0
- 1401 0039 49       		.uleb128 0x49
- 1402 003a 13       		.uleb128 0x13
- 1403 003b 00       		.byte	0x0
- 1404 003c 00       		.byte	0x0
- 1405 003d 06       		.uleb128 0x6
- 1406 003e 24       		.uleb128 0x24
- 1407 003f 00       		.byte	0x0
- 1408 0040 0B       		.uleb128 0xb
- 1409 0041 0B       		.uleb128 0xb
- 1410 0042 3E       		.uleb128 0x3e
- 1411 0043 0B       		.uleb128 0xb
- 1412 0044 00       		.byte	0x0
- 1413 0045 00       		.byte	0x0
- 1414 0046 07       		.uleb128 0x7
- 1415 0047 0F       		.uleb128 0xf
- 1416 0048 00       		.byte	0x0
- 1417 0049 0B       		.uleb128 0xb
- 1418 004a 0B       		.uleb128 0xb
- 1419 004b 00       		.byte	0x0
- 1420 004c 00       		.byte	0x0
- 1421 004d 08       		.uleb128 0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 26
+ 1365 00b4 00       		.byte	0x0
+ 1366 00b5 00       		.byte	0x0
+ 1367 00b6 11       		.uleb128 0x11
+ 1368 00b7 34       		.uleb128 0x34
+ 1369 00b8 00       		.byte	0x0
+ 1370 00b9 03       		.uleb128 0x3
+ 1371 00ba 0E       		.uleb128 0xe
+ 1372 00bb 3A       		.uleb128 0x3a
+ 1373 00bc 0B       		.uleb128 0xb
+ 1374 00bd 3B       		.uleb128 0x3b
+ 1375 00be 05       		.uleb128 0x5
+ 1376 00bf 49       		.uleb128 0x49
+ 1377 00c0 13       		.uleb128 0x13
+ 1378 00c1 3F       		.uleb128 0x3f
+ 1379 00c2 0C       		.uleb128 0xc
+ 1380 00c3 02       		.uleb128 0x2
+ 1381 00c4 0A       		.uleb128 0xa
+ 1382 00c5 00       		.byte	0x0
+ 1383 00c6 00       		.byte	0x0
+ 1384 00c7 00       		.byte	0x0
+ 1385              		.section	.debug_pubnames,"",%progbits
+ 1386 0000 9F020000 		.4byte	0x29f
+ 1387 0004 0200     		.2byte	0x2
+ 1388 0006 00000000 		.4byte	.Ldebug_info0
+ 1389 000a DD030000 		.4byte	0x3dd
+ 1390 000e D0010000 		.4byte	0x1d0
+ 1391 0012 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
+ 1391      535F4445 
+ 1391      56494345 
+ 1391      305F4445 
+ 1391      53435200 
+ 1392 0026 F7010000 		.4byte	0x1f7
+ 1393 002a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
+ 1393      535F4445 
+ 1393      56494345 
+ 1393      305F434F 
+ 1393      4E464947 
+ 1394 004d 1F020000 		.4byte	0x21f
+ 1395 0051 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
+ 1395      535F5354 
+ 1395      52494E47 
+ 1395      5F444553 
+ 1395      43524950 
+ 1396 006a 46020000 		.4byte	0x246
+ 1397 006e 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
+ 1397      535F534E 
+ 1397      5F535452 
+ 1397      494E475F 
+ 1397      44455343 
+ 1398 0089 6E020000 		.4byte	0x26e
+ 1399 008d 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
+ 1399      535F4849 
+ 1399      44524550 
+ 1399      4F52545F 
+ 1399      44455343 
+ 1400 00a9 86020000 		.4byte	0x286
+ 1401 00ad 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 26
 
 
- 1422 004e 13       		.uleb128 0x13
- 1423 004f 01       		.byte	0x1
- 1424 0050 03       		.uleb128 0x3
- 1425 0051 0E       		.uleb128 0xe
- 1426 0052 0B       		.uleb128 0xb
- 1427 0053 0B       		.uleb128 0xb
- 1428 0054 3A       		.uleb128 0x3a
- 1429 0055 0B       		.uleb128 0xb
- 1430 0056 3B       		.uleb128 0x3b
- 1431 0057 0B       		.uleb128 0xb
- 1432 0058 01       		.uleb128 0x1
- 1433 0059 13       		.uleb128 0x13
- 1434 005a 00       		.byte	0x0
- 1435 005b 00       		.byte	0x0
- 1436 005c 09       		.uleb128 0x9
- 1437 005d 0D       		.uleb128 0xd
- 1438 005e 00       		.byte	0x0
- 1439 005f 03       		.uleb128 0x3
- 1440 0060 0E       		.uleb128 0xe
- 1441 0061 3A       		.uleb128 0x3a
- 1442 0062 0B       		.uleb128 0xb
- 1443 0063 3B       		.uleb128 0x3b
- 1444 0064 0B       		.uleb128 0xb
- 1445 0065 49       		.uleb128 0x49
- 1446 0066 13       		.uleb128 0x13
- 1447 0067 38       		.uleb128 0x38
- 1448 0068 0A       		.uleb128 0xa
- 1449 0069 00       		.byte	0x0
- 1450 006a 00       		.byte	0x0
- 1451 006b 0A       		.uleb128 0xa
- 1452 006c 0F       		.uleb128 0xf
- 1453 006d 00       		.byte	0x0
- 1454 006e 0B       		.uleb128 0xb
- 1455 006f 0B       		.uleb128 0xb
- 1456 0070 49       		.uleb128 0x49
- 1457 0071 13       		.uleb128 0x13
- 1458 0072 00       		.byte	0x0
- 1459 0073 00       		.byte	0x0
- 1460 0074 0B       		.uleb128 0xb
- 1461 0075 0D       		.uleb128 0xd
- 1462 0076 00       		.byte	0x0
- 1463 0077 03       		.uleb128 0x3
- 1464 0078 08       		.uleb128 0x8
- 1465 0079 3A       		.uleb128 0x3a
- 1466 007a 0B       		.uleb128 0xb
- 1467 007b 3B       		.uleb128 0x3b
- 1468 007c 0B       		.uleb128 0xb
- 1469 007d 49       		.uleb128 0x49
- 1470 007e 13       		.uleb128 0x13
- 1471 007f 38       		.uleb128 0x38
- 1472 0080 0A       		.uleb128 0xa
- 1473 0081 00       		.byte	0x0
- 1474 0082 00       		.byte	0x0
- 1475 0083 0C       		.uleb128 0xc
- 1476 0084 01       		.uleb128 0x1
- 1477 0085 01       		.byte	0x1
- 1478 0086 49       		.uleb128 0x49
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 27
+ 1401      535F4445 
+ 1401      56494345 
+ 1401      305F434F 
+ 1401      4E464947 
+ 1402 00e0 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
+ 1402      494E5F52 
+ 1402      50545F53 
+ 1402      434200
+ 1403 00ef 99020000 		.4byte	0x299
+ 1404 00f3 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1404      535F4445 
+ 1404      56494345 
+ 1404      305F434F 
+ 1404      4E464947 
+ 1405 0126 4849445F 		.ascii	"HID_IN_BUF\000"
+ 1405      494E5F42 
+ 1405      554600
+ 1406 0131 BC020000 		.4byte	0x2bc
+ 1407 0135 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1407      535F4445 
+ 1407      56494345 
+ 1407      305F434F 
+ 1407      4E464947 
+ 1408 0168 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
+ 1408      494E5F52 
+ 1408      50545F54 
+ 1408      41424C45 
+ 1408      00
+ 1409 0179 E4020000 		.4byte	0x2e4
+ 1410 017d 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1410      535F4445 
+ 1410      56494345 
+ 1410      305F434F 
+ 1410      4E464947 
+ 1411 01b0 4849445F 		.ascii	"HID_TABLE\000"
+ 1411      5441424C 
+ 1411      4500
+ 1412 01ba 0C030000 		.4byte	0x30c
+ 1413 01be 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE\000"
+ 1413      535F4445 
+ 1413      56494345 
+ 1413      305F434F 
+ 1413      4E464947 
+ 1414 01ec 34030000 		.4byte	0x334
+ 1415 01f0 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 1415      535F4445 
+ 1415      56494345 
+ 1415      305F434F 
+ 1415      4E464947 
+ 1416 021f 5C030000 		.4byte	0x35c
+ 1417 0223 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 1417      535F4445 
+ 1417      56494345 
+ 1417      305F434F 
+ 1417      4E464947 
+ 1418 0250 84030000 		.4byte	0x384
+ 1419 0254 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 27
 
 
- 1479 0087 13       		.uleb128 0x13
- 1480 0088 01       		.uleb128 0x1
- 1481 0089 13       		.uleb128 0x13
- 1482 008a 00       		.byte	0x0
- 1483 008b 00       		.byte	0x0
- 1484 008c 0D       		.uleb128 0xd
- 1485 008d 21       		.uleb128 0x21
- 1486 008e 00       		.byte	0x0
- 1487 008f 49       		.uleb128 0x49
- 1488 0090 13       		.uleb128 0x13
- 1489 0091 2F       		.uleb128 0x2f
- 1490 0092 0B       		.uleb128 0xb
- 1491 0093 00       		.byte	0x0
- 1492 0094 00       		.byte	0x0
- 1493 0095 0E       		.uleb128 0xe
- 1494 0096 34       		.uleb128 0x34
- 1495 0097 00       		.byte	0x0
- 1496 0098 03       		.uleb128 0x3
- 1497 0099 0E       		.uleb128 0xe
- 1498 009a 3A       		.uleb128 0x3a
- 1499 009b 0B       		.uleb128 0xb
- 1500 009c 3B       		.uleb128 0x3b
- 1501 009d 0B       		.uleb128 0xb
- 1502 009e 49       		.uleb128 0x49
- 1503 009f 13       		.uleb128 0x13
- 1504 00a0 3F       		.uleb128 0x3f
- 1505 00a1 0C       		.uleb128 0xc
- 1506 00a2 02       		.uleb128 0x2
- 1507 00a3 0A       		.uleb128 0xa
- 1508 00a4 00       		.byte	0x0
- 1509 00a5 00       		.byte	0x0
- 1510 00a6 0F       		.uleb128 0xf
- 1511 00a7 26       		.uleb128 0x26
- 1512 00a8 00       		.byte	0x0
- 1513 00a9 49       		.uleb128 0x49
- 1514 00aa 13       		.uleb128 0x13
- 1515 00ab 00       		.byte	0x0
- 1516 00ac 00       		.byte	0x0
- 1517 00ad 10       		.uleb128 0x10
- 1518 00ae 21       		.uleb128 0x21
- 1519 00af 00       		.byte	0x0
- 1520 00b0 49       		.uleb128 0x49
- 1521 00b1 13       		.uleb128 0x13
- 1522 00b2 2F       		.uleb128 0x2f
- 1523 00b3 05       		.uleb128 0x5
- 1524 00b4 00       		.byte	0x0
- 1525 00b5 00       		.byte	0x0
- 1526 00b6 11       		.uleb128 0x11
- 1527 00b7 34       		.uleb128 0x34
- 1528 00b8 00       		.byte	0x0
- 1529 00b9 03       		.uleb128 0x3
- 1530 00ba 0E       		.uleb128 0xe
- 1531 00bb 3A       		.uleb128 0x3a
- 1532 00bc 0B       		.uleb128 0xb
- 1533 00bd 3B       		.uleb128 0x3b
- 1534 00be 05       		.uleb128 0x5
- 1535 00bf 49       		.uleb128 0x49
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 28
+ 1419      535F4445 
+ 1419      56494345 
+ 1419      305F434F 
+ 1419      4E464947 
+ 1420 0277 AC030000 		.4byte	0x3ac
+ 1421 027b 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
+ 1421      535F4445 
+ 1421      56494345 
+ 1421      305F5441 
+ 1421      424C4500 
+ 1422 028f C4030000 		.4byte	0x3c4
+ 1423 0293 55534246 		.ascii	"USBFS_TABLE\000"
+ 1423      535F5441 
+ 1423      424C4500 
+ 1424 029f 00000000 		.4byte	0x0
+ 1425              		.section	.debug_str,"MS",%progbits,1
+ 1426              	.LASF6:
+ 1427 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1427      206C6F6E 
+ 1427      6720696E 
+ 1427      7400
+ 1428              	.LASF29:
+ 1429 000e 70537461 		.ascii	"pStatusBlock\000"
+ 1429      74757342 
+ 1429      6C6F636B 
+ 1429      00
+ 1430              	.LASF45:
+ 1431 001b 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 1431      535F4445 
+ 1431      56494345 
+ 1431      305F434F 
+ 1431      4E464947 
+ 1432              	.LASF51:
+ 1433 0048 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 1433      665C486F 
+ 1433      6D655C44 
+ 1433      65736B74 
+ 1433      6F705C55 
+ 1434 0075 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 1434      6E656572 
+ 1434      4B69745F 
+ 1434      50354C50 
+ 1434      5F555342 
+ 1435 00a6 64696F2E 		.ascii	"dio.cydsn\000"
+ 1435      63796473 
+ 1435      6E00
+ 1436              	.LASF48:
+ 1437 00b0 55534246 		.ascii	"USBFS_TABLE\000"
+ 1437      535F5441 
+ 1437      424C4500 
+ 1438              	.LASF27:
+ 1439 00bc 636F756E 		.ascii	"count\000"
+ 1439      7400
+ 1440              	.LASF3:
+ 1441 00c2 73686F72 		.ascii	"short unsigned int\000"
+ 1441      7420756E 
+ 1441      7369676E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 28
 
 
- 1536 00c0 13       		.uleb128 0x13
- 1537 00c1 3F       		.uleb128 0x3f
- 1538 00c2 0C       		.uleb128 0xc
- 1539 00c3 02       		.uleb128 0x2
- 1540 00c4 0A       		.uleb128 0xa
- 1541 00c5 00       		.byte	0x0
- 1542 00c6 00       		.byte	0x0
- 1543 00c7 00       		.byte	0x0
- 1544              		.section	.debug_pubnames,"",%progbits
- 1545 0000 9F020000 		.4byte	0x29f
- 1546 0004 0200     		.2byte	0x2
- 1547 0006 00000000 		.4byte	.Ldebug_info0
- 1548 000a DF030000 		.4byte	0x3df
- 1549 000e D0010000 		.4byte	0x1d0
- 1550 0012 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
- 1550      535F4445 
- 1550      56494345 
- 1550      305F4445 
- 1550      53435200 
- 1551 0026 F8010000 		.4byte	0x1f8
- 1552 002a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
- 1552      535F4445 
- 1552      56494345 
- 1552      305F434F 
- 1552      4E464947 
- 1553 004d 20020000 		.4byte	0x220
- 1554 0051 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
- 1554      535F5354 
- 1554      52494E47 
- 1554      5F444553 
- 1554      43524950 
- 1555 006a 48020000 		.4byte	0x248
- 1556 006e 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
- 1556      535F534E 
- 1556      5F535452 
- 1556      494E475F 
- 1556      44455343 
- 1557 0089 70020000 		.4byte	0x270
- 1558 008d 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
- 1558      535F4849 
- 1558      44524550 
- 1558      4F52545F 
- 1558      44455343 
- 1559 00a9 88020000 		.4byte	0x288
- 1560 00ad 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1560      535F4445 
- 1560      56494345 
- 1560      305F434F 
- 1560      4E464947 
- 1561 00e0 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
- 1561      494E5F52 
- 1561      50545F53 
- 1561      434200
- 1562 00ef 9B020000 		.4byte	0x29b
- 1563 00f3 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1563      535F4445 
- 1563      56494345 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 29
+ 1441      65642069 
+ 1441      6E7400
+ 1442              	.LASF37:
+ 1443 00d5 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
+ 1443      535F534E 
+ 1443      5F535452 
+ 1443      494E475F 
+ 1443      44455343 
+ 1444              	.LASF23:
+ 1445 00f0 73746174 		.ascii	"status\000"
+ 1445      757300
+ 1446              	.LASF28:
+ 1447 00f7 70446174 		.ascii	"pData\000"
+ 1447      6100
+ 1448              	.LASF30:
+ 1449 00fd 545F5553 		.ascii	"T_USBFS_TD\000"
+ 1449      4246535F 
+ 1449      544400
+ 1450              	.LASF11:
+ 1451 0108 666C6F61 		.ascii	"float\000"
+ 1451      7400
+ 1452              	.LASF15:
+ 1453 010e 616C7453 		.ascii	"altSetting\000"
+ 1453      65747469 
+ 1453      6E6700
+ 1454              	.LASF36:
+ 1455 0119 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
+ 1455      535F5354 
+ 1455      52494E47 
+ 1455      5F444553 
+ 1455      43524950 
+ 1456              	.LASF22:
+ 1457 0132 5F555342 		.ascii	"_USBFS_XferStatusBlock\000"
+ 1457      46535F58 
+ 1457      66657253 
+ 1457      74617475 
+ 1457      73426C6F 
+ 1458              	.LASF17:
+ 1459 0149 61747472 		.ascii	"attributes\000"
+ 1459      69627574 
+ 1459      657300
+ 1460              	.LASF25:
+ 1461 0154 545F5553 		.ascii	"T_USBFS_XFER_STATUS_BLOCK\000"
+ 1461      4246535F 
+ 1461      58464552 
+ 1461      5F535441 
+ 1461      5455535F 
+ 1462              	.LASF46:
+ 1463 016e 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
+ 1463      535F4445 
+ 1463      56494345 
+ 1463      305F434F 
+ 1463      4E464947 
+ 1464              	.LASF16:
+ 1465 0191 61646472 		.ascii	"addr\000"
+ 1465      00
+ 1466              	.LASF47:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 29
 
 
- 1563      305F434F 
- 1563      4E464947 
- 1564 0126 4849445F 		.ascii	"HID_IN_BUF\000"
- 1564      494E5F42 
- 1564      554600
- 1565 0131 BE020000 		.4byte	0x2be
- 1566 0135 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1566      535F4445 
- 1566      56494345 
- 1566      305F434F 
- 1566      4E464947 
- 1567 0168 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
- 1567      494E5F52 
- 1567      50545F54 
- 1567      41424C45 
- 1567      00
- 1568 0179 E6020000 		.4byte	0x2e6
- 1569 017d 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1569      535F4445 
- 1569      56494345 
- 1569      305F434F 
- 1569      4E464947 
- 1570 01b0 4849445F 		.ascii	"HID_TABLE\000"
- 1570      5441424C 
- 1570      4500
- 1571 01ba 0E030000 		.4byte	0x30e
- 1572 01be 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE\000"
- 1572      535F4445 
- 1572      56494345 
- 1572      305F434F 
- 1572      4E464947 
- 1573 01ec 36030000 		.4byte	0x336
- 1574 01f0 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
- 1574      535F4445 
- 1574      56494345 
- 1574      305F434F 
- 1574      4E464947 
- 1575 021f 5E030000 		.4byte	0x35e
- 1576 0223 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
- 1576      535F4445 
- 1576      56494345 
- 1576      305F434F 
- 1576      4E464947 
- 1577 0250 86030000 		.4byte	0x386
- 1578 0254 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
- 1578      535F4445 
- 1578      56494345 
- 1578      305F434F 
- 1578      4E464947 
- 1579 0277 AE030000 		.4byte	0x3ae
- 1580 027b 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
- 1580      535F4445 
- 1580      56494345 
- 1580      305F5441 
- 1580      424C4500 
- 1581 028f C6030000 		.4byte	0x3c6
- 1582 0293 55534246 		.ascii	"USBFS_TABLE\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 30
+ 1467 0196 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
+ 1467      535F4445 
+ 1467      56494345 
+ 1467      305F5441 
+ 1467      424C4500 
+ 1468              	.LASF1:
+ 1469 01aa 756E7369 		.ascii	"unsigned char\000"
+ 1469      676E6564 
+ 1469      20636861 
+ 1469      7200
+ 1470              	.LASF12:
+ 1471 01b8 646F7562 		.ascii	"double\000"
+ 1471      6C6500
+ 1472              	.LASF43:
+ 1473 01bf 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_TABLE\000"
+ 1473      535F4445 
+ 1473      56494345 
+ 1473      305F434F 
+ 1473      4E464947 
+ 1474              	.LASF10:
+ 1475 01ed 75696E74 		.ascii	"uint16\000"
+ 1475      313600
+ 1476              	.LASF44:
+ 1477 01f4 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 1477      535F4445 
+ 1477      56494345 
+ 1477      305F434F 
+ 1477      4E464947 
+ 1478              	.LASF21:
+ 1479 0223 5F555342 		.ascii	"_USBFS_EpSettingsBlock\000"
+ 1479      46535F45 
+ 1479      70536574 
+ 1479      74696E67 
+ 1479      73426C6F 
+ 1480              	.LASF35:
+ 1481 023a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
+ 1481      535F4445 
+ 1481      56494345 
+ 1481      305F434F 
+ 1481      4E464947 
+ 1482              	.LASF26:
+ 1483 025d 5F555342 		.ascii	"_USBFS_Td\000"
+ 1483      46535F54 
+ 1483      6400
+ 1484              	.LASF5:
+ 1485 0267 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1485      20756E73 
+ 1485      69676E65 
+ 1485      6420696E 
+ 1485      7400
+ 1486              	.LASF8:
+ 1487 0279 756E7369 		.ascii	"unsigned int\000"
+ 1487      676E6564 
+ 1487      20696E74 
+ 1487      00
+ 1488              	.LASF7:
+ 1489 0286 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 30
 
 
- 1582      535F5441 
- 1582      424C4500 
- 1583 029f 00000000 		.4byte	0x0
- 1584              		.section	.debug_str,"MS",%progbits,1
- 1585              	.LASF6:
- 1586 0000 6C6F6E67 		.ascii	"long long int\000"
- 1586      206C6F6E 
- 1586      6720696E 
- 1586      7400
- 1587              	.LASF29:
- 1588 000e 70537461 		.ascii	"pStatusBlock\000"
- 1588      74757342 
- 1588      6C6F636B 
- 1588      00
- 1589              	.LASF45:
- 1590 001b 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
- 1590      535F4445 
- 1590      56494345 
- 1590      305F434F 
- 1590      4E464947 
- 1591              	.LASF17:
- 1592 0048 61747472 		.ascii	"attributes\000"
- 1592      69627574 
- 1592      657300
- 1593              	.LASF48:
- 1594 0053 55534246 		.ascii	"USBFS_TABLE\000"
- 1594      535F5441 
- 1594      424C4500 
- 1595              	.LASF27:
- 1596 005f 636F756E 		.ascii	"count\000"
- 1596      7400
- 1597              	.LASF3:
- 1598 0065 73686F72 		.ascii	"short unsigned int\000"
- 1598      7420756E 
- 1598      7369676E 
- 1598      65642069 
- 1598      6E7400
- 1599              	.LASF37:
- 1600 0078 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
- 1600      535F534E 
- 1600      5F535452 
- 1600      494E475F 
- 1600      44455343 
- 1601              	.LASF23:
- 1602 0093 73746174 		.ascii	"status\000"
- 1602      757300
- 1603              	.LASF28:
- 1604 009a 70446174 		.ascii	"pData\000"
- 1604      6100
- 1605              	.LASF30:
- 1606 00a0 545F5553 		.ascii	"T_USBFS_TD\000"
- 1606      4246535F 
- 1606      544400
- 1607              	.LASF11:
- 1608 00ab 666C6F61 		.ascii	"float\000"
- 1608      7400
- 1609              	.LASF15:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 31
+ 1489      206C6F6E 
+ 1489      6720756E 
+ 1489      7369676E 
+ 1489      65642069 
+ 1490              	.LASF32:
+ 1491 029d 705F6C69 		.ascii	"p_list\000"
+ 1491      737400
+ 1492              	.LASF20:
+ 1493 02a4 545F5553 		.ascii	"T_USBFS_EP_SETTINGS_BLOCK\000"
+ 1493      4246535F 
+ 1493      45505F53 
+ 1493      45545449 
+ 1493      4E47535F 
+ 1494              	.LASF34:
+ 1495 02be 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
+ 1495      535F4445 
+ 1495      56494345 
+ 1495      305F4445 
+ 1495      53435200 
+ 1496              	.LASF40:
+ 1497 02d2 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1497      535F4445 
+ 1497      56494345 
+ 1497      305F434F 
+ 1497      4E464947 
+ 1498 0305 4849445F 		.ascii	"HID_IN_BUF\000"
+ 1498      494E5F42 
+ 1498      554600
+ 1499              	.LASF49:
+ 1500 0310 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1500      4320342E 
+ 1500      342E3100 
+ 1501              	.LASF33:
+ 1502 031c 545F5553 		.ascii	"T_USBFS_LUT\000"
+ 1502      4246535F 
+ 1502      4C555400 
+ 1503              	.LASF13:
+ 1504 0328 63686172 		.ascii	"char\000"
+ 1504      00
+ 1505              	.LASF42:
+ 1506 032d 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1506      535F4445 
+ 1506      56494345 
+ 1506      305F434F 
+ 1506      4E464947 
+ 1507 0360 4849445F 		.ascii	"HID_TABLE\000"
+ 1507      5441424C 
+ 1507      4500
+ 1508              	.LASF50:
+ 1509 036a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBFS_descr.c\000"
+ 1509      6E657261 
+ 1509      7465645F 
+ 1509      536F7572 
+ 1509      63655C50 
+ 1510              	.LASF18:
+ 1511 0391 62756666 		.ascii	"bufferSize\000"
+ 1511      65725369 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 31
 
 
- 1610 00b1 616C7453 		.ascii	"altSetting\000"
- 1610      65747469 
- 1610      6E6700
- 1611              	.LASF36:
- 1612 00bc 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
- 1612      535F5354 
- 1612      52494E47 
- 1612      5F444553 
- 1612      43524950 
- 1613              	.LASF22:
- 1614 00d5 5F555342 		.ascii	"_USBFS_XferStatusBlock\000"
- 1614      46535F58 
- 1614      66657253 
- 1614      74617475 
- 1614      73426C6F 
- 1615              	.LASF51:
- 1616 00ec 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 1616      665C486F 
- 1616      6D655C44 
- 1616      65736B74 
- 1616      6F705C55 
- 1617 0118 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 1617      5F50354C 
- 1617      505F5553 
- 1617      425F4175 
- 1617      64696F5C 
- 1618 014a 6E00     		.ascii	"n\000"
- 1619              	.LASF40:
- 1620 014c 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1620      535F4445 
- 1620      56494345 
- 1620      305F434F 
- 1620      4E464947 
- 1621 017f 4849445F 		.ascii	"HID_IN_BUF\000"
- 1621      494E5F42 
- 1621      554600
- 1622              	.LASF46:
- 1623 018a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
- 1623      535F4445 
- 1623      56494345 
- 1623      305F434F 
- 1623      4E464947 
- 1624              	.LASF16:
- 1625 01ad 61646472 		.ascii	"addr\000"
- 1625      00
- 1626              	.LASF47:
- 1627 01b2 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
- 1627      535F4445 
- 1627      56494345 
- 1627      305F5441 
- 1627      424C4500 
- 1628              	.LASF43:
- 1629 01c6 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE\000"
- 1629      535F4445 
- 1629      56494345 
- 1629      305F434F 
- 1629      4E464947 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 32
+ 1511      7A6500
+ 1512              	.LASF2:
+ 1513 039c 73686F72 		.ascii	"short int\000"
+ 1513      7420696E 
+ 1513      7400
+ 1514              	.LASF38:
+ 1515 03a6 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
+ 1515      535F4849 
+ 1515      44524550 
+ 1515      4F52545F 
+ 1515      44455343 
+ 1516              	.LASF9:
+ 1517 03c2 75696E74 		.ascii	"uint8\000"
+ 1517      3800
+ 1518              	.LASF14:
+ 1519 03c8 696E7465 		.ascii	"interface\000"
+ 1519      72666163 
+ 1519      6500
+ 1520              	.LASF4:
+ 1521 03d2 6C6F6E67 		.ascii	"long int\000"
+ 1521      20696E74 
+ 1521      00
+ 1522              	.LASF0:
+ 1523 03db 7369676E 		.ascii	"signed char\000"
+ 1523      65642063 
+ 1523      68617200 
+ 1524              	.LASF24:
+ 1525 03e7 6C656E67 		.ascii	"length\000"
+ 1525      746800
+ 1526              	.LASF31:
+ 1527 03ee 5F555342 		.ascii	"_USBFS_Lut\000"
+ 1527      46535F4C 
+ 1527      757400
+ 1528              	.LASF41:
+ 1529 03f9 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1529      535F4445 
+ 1529      56494345 
+ 1529      305F434F 
+ 1529      4E464947 
+ 1530 042c 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
+ 1530      494E5F52 
+ 1530      50545F54 
+ 1530      41424C45 
+ 1530      00
+ 1531              	.LASF19:
+ 1532 043d 624D6973 		.ascii	"bMisc\000"
+ 1532      6300
+ 1533              	.LASF39:
+ 1534 0443 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE2_ALTERNATE0_"
+ 1534      535F4445 
+ 1534      56494345 
+ 1534      305F434F 
+ 1534      4E464947 
+ 1535 0476 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
+ 1535      494E5F52 
+ 1535      50545F53 
+ 1535      434200
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWGBLra.s 			page 32
 
 
- 1630              	.LASF41:
- 1631 01f4 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1631      535F4445 
- 1631      56494345 
- 1631      305F434F 
- 1631      4E464947 
- 1632 0227 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
- 1632      494E5F52 
- 1632      50545F54 
- 1632      41424C45 
- 1632      00
- 1633              	.LASF12:
- 1634 0238 646F7562 		.ascii	"double\000"
- 1634      6C6500
- 1635              	.LASF10:
- 1636 023f 75696E74 		.ascii	"uint16\000"
- 1636      313600
- 1637              	.LASF44:
- 1638 0246 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
- 1638      535F4445 
- 1638      56494345 
- 1638      305F434F 
- 1638      4E464947 
- 1639              	.LASF21:
- 1640 0275 5F555342 		.ascii	"_USBFS_EpSettingsBlock\000"
- 1640      46535F45 
- 1640      70536574 
- 1640      74696E67 
- 1640      73426C6F 
- 1641              	.LASF35:
- 1642 028c 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
- 1642      535F4445 
- 1642      56494345 
- 1642      305F434F 
- 1642      4E464947 
- 1643              	.LASF26:
- 1644 02af 5F555342 		.ascii	"_USBFS_Td\000"
- 1644      46535F54 
- 1644      6400
- 1645              	.LASF5:
- 1646 02b9 6C6F6E67 		.ascii	"long unsigned int\000"
- 1646      20756E73 
- 1646      69676E65 
- 1646      6420696E 
- 1646      7400
- 1647              	.LASF8:
- 1648 02cb 756E7369 		.ascii	"unsigned int\000"
- 1648      676E6564 
- 1648      20696E74 
- 1648      00
- 1649              	.LASF7:
- 1650 02d8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1650      206C6F6E 
- 1650      6720756E 
- 1650      7369676E 
- 1650      65642069 
- 1651              	.LASF32:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 33
-
-
- 1652 02ef 705F6C69 		.ascii	"p_list\000"
- 1652      737400
- 1653              	.LASF20:
- 1654 02f6 545F5553 		.ascii	"T_USBFS_EP_SETTINGS_BLOCK\000"
- 1654      4246535F 
- 1654      45505F53 
- 1654      45545449 
- 1654      4E47535F 
- 1655              	.LASF25:
- 1656 0310 545F5553 		.ascii	"T_USBFS_XFER_STATUS_BLOCK\000"
- 1656      4246535F 
- 1656      58464552 
- 1656      5F535441 
- 1656      5455535F 
- 1657              	.LASF1:
- 1658 032a 756E7369 		.ascii	"unsigned char\000"
- 1658      676E6564 
- 1658      20636861 
- 1658      7200
- 1659              	.LASF34:
- 1660 0338 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
- 1660      535F4445 
- 1660      56494345 
- 1660      305F4445 
- 1660      53435200 
- 1661              	.LASF49:
- 1662 034c 474E5520 		.ascii	"GNU C 4.4.1\000"
- 1662      4320342E 
- 1662      342E3100 
- 1663              	.LASF33:
- 1664 0358 545F5553 		.ascii	"T_USBFS_LUT\000"
- 1664      4246535F 
- 1664      4C555400 
- 1665              	.LASF13:
- 1666 0364 63686172 		.ascii	"char\000"
- 1666      00
- 1667              	.LASF50:
- 1668 0369 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBFS_descr.c\000"
- 1668      6E657261 
- 1668      7465645F 
- 1668      536F7572 
- 1668      63655C50 
- 1669              	.LASF18:
- 1670 0390 62756666 		.ascii	"bufferSize\000"
- 1670      65725369 
- 1670      7A6500
- 1671              	.LASF2:
- 1672 039b 73686F72 		.ascii	"short int\000"
- 1672      7420696E 
- 1672      7400
- 1673              	.LASF38:
- 1674 03a5 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
- 1674      535F4849 
- 1674      44524550 
- 1674      4F52545F 
- 1674      44455343 
- 1675              	.LASF9:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmgh1qV.s 			page 34
-
-
- 1676 03c1 75696E74 		.ascii	"uint8\000"
- 1676      3800
- 1677              	.LASF42:
- 1678 03c7 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1678      535F4445 
- 1678      56494345 
- 1678      305F434F 
- 1678      4E464947 
- 1679 03fa 4849445F 		.ascii	"HID_TABLE\000"
- 1679      5441424C 
- 1679      4500
- 1680              	.LASF14:
- 1681 0404 696E7465 		.ascii	"interface\000"
- 1681      72666163 
- 1681      6500
- 1682              	.LASF4:
- 1683 040e 6C6F6E67 		.ascii	"long int\000"
- 1683      20696E74 
- 1683      00
- 1684              	.LASF0:
- 1685 0417 7369676E 		.ascii	"signed char\000"
- 1685      65642063 
- 1685      68617200 
- 1686              	.LASF39:
- 1687 0423 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
- 1687      535F4445 
- 1687      56494345 
- 1687      305F434F 
- 1687      4E464947 
- 1688 0456 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
- 1688      494E5F52 
- 1688      50545F53 
- 1688      434200
- 1689              	.LASF24:
- 1690 0465 6C656E67 		.ascii	"length\000"
- 1690      746800
- 1691              	.LASF31:
- 1692 046c 5F555342 		.ascii	"_USBFS_Lut\000"
- 1692      46535F4C 
- 1692      757400
- 1693              	.LASF19:
- 1694 0477 624D6973 		.ascii	"bMisc\000"
- 1694      6300
- 1695              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 1536              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

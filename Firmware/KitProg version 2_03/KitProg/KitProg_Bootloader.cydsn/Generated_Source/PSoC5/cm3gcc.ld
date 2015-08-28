@@ -22,8 +22,8 @@ GROUP(-lgcc -lc -lcs3 -lcs3unhosted -lcs3micro)
 
 MEMORY
 {
-  rom (rx) : ORIGIN = 0, LENGTH = (65472 - 0)
-  ram (rwx) : ORIGIN = 0x20000000 - (16384 / 2), LENGTH = (16384 - 0x1000 - 0x1000)
+  rom (rx) : ORIGIN = 0, LENGTH = (131008 - 0)
+  ram (rwx) : ORIGIN = 0x20000000 - (32768 / 2), LENGTH = (32768 - 0x4000 - 0x1000)
 }
 
 /* These force the linker to search for particular symbols from
@@ -39,8 +39,8 @@ EXTERN(__cs3_start_c main __cs3_stack __cs3_heap_end)
 /* Provide fall-back values */
 PROVIDE(__cs3_heap_start = _end);
 PROVIDE(__cs3_region_num = (__cs3_regions_end - __cs3_regions) / 20);
-PROVIDE(__cs3_stack = 0x20000000 + (16384 / 2));
-PROVIDE(__cs3_heap_end = __cs3_stack - 0x1000);
+PROVIDE(__cs3_stack = 0x20000000 + (32768 / 2));
+PROVIDE(__cs3_heap_end = __cs3_stack - 0x4000);
 
 
 SECTIONS

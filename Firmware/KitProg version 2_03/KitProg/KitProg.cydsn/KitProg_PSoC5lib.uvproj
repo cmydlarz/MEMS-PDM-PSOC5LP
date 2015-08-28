@@ -8,9 +8,9 @@
       <ToolsetName>ARM-GNU</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>CY8C5666LTI-LP005</Device>
+          <Device>CY8C5667LTI-LP009</Device>
           <Vendor>Cypress</Vendor>
-          <Cpu>"IRAM(0x1FFFE000-0x20001FFF)IROM(0x4D00-0xFFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
+          <Cpu>"IRAM(0x1FFFC000-0x20003FFF)IROM(0x2700-0x1FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>"C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\export\ide\uVision\4.x\driver\cyuvdriver_arm.dll"("Cypress MiniProg3/FX2LP v2.2")</FlashDriverDll>
@@ -503,66 +503,6 @@
               <FilePath>.\Generated_Source\PSoC5\Pin_StatusLED.h</FilePath>
             </File>
             <File>
-              <FileName>ADC_Voltage_Target.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_PM.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_INT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_INT.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_theACLK.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_theACLK.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_theACLK.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_theACLK.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_Ext_CP_Clk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_Ext_CP_Clk.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_Ext_CP_Clk.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_Ext_CP_Clk.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_AMux.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_AMux.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_AMux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_AMux.h</FilePath>
-            </File>
-            <File>
-              <FileName>AMux.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\AMux.c</FilePath>
-            </File>
-            <File>
-              <FileName>AMux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\AMux.h</FilePath>
-            </File>
-            <File>
               <FileName>Clock_UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\Clock_UART.c</FilePath>
@@ -611,21 +551,6 @@
               <FileName>I2CHW_PVT.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\I2CHW_PVT.h</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget_aliases.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget_aliases.h</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget.c</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget.h</FilePath>
             </File>
             <File>
               <FileName>Pin_I2C_SCL_aliases.h</FileName>
@@ -1042,9 +967,9 @@
       <ToolsetName>ARM-GNU</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>CY8C5666LTI-LP005</Device>
+          <Device>CY8C5667LTI-LP009</Device>
           <Vendor>Cypress</Vendor>
-          <Cpu>"IRAM(0x1FFFE000-0x20001FFF)IROM(0x4D00-0xFFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
+          <Cpu>"IRAM(0x1FFFC000-0x20003FFF)IROM(0x2700-0x1FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>"C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\export\ide\uVision\4.x\driver\cyuvdriver_arm.dll"("Cypress MiniProg3/FX2LP v2.2")</FlashDriverDll>
@@ -1537,66 +1462,6 @@
               <FilePath>.\Generated_Source\PSoC5\Pin_StatusLED.h</FilePath>
             </File>
             <File>
-              <FileName>ADC_Voltage_Target.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_PM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_PM.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_INT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_INT.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_theACLK.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_theACLK.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_theACLK.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_theACLK.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_Ext_CP_Clk.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_Ext_CP_Clk.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_Ext_CP_Clk.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_Ext_CP_Clk.h</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_AMux.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_AMux.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Voltage_Target_AMux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\ADC_Voltage_Target_AMux.h</FilePath>
-            </File>
-            <File>
-              <FileName>AMux.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\AMux.c</FilePath>
-            </File>
-            <File>
-              <FileName>AMux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\AMux.h</FilePath>
-            </File>
-            <File>
               <FileName>Clock_UART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\Clock_UART.c</FilePath>
@@ -1645,21 +1510,6 @@
               <FileName>I2CHW_PVT.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\I2CHW_PVT.h</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget_aliases.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget_aliases.h</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget.c</FilePath>
-            </File>
-            <File>
-              <FileName>Pin_VTarget.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\Pin_VTarget.h</FilePath>
             </File>
             <File>
               <FileName>Pin_I2C_SCL_aliases.h</FileName>

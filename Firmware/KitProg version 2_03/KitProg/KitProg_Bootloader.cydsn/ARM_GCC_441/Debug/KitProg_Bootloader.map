@@ -401,8 +401,8 @@ Discarded input sections
 Memory Configuration
 
 Name             Origin             Length             Attributes
-rom              0x00000000         0x0000ffc0         xr
-ram              0x1fffe000         0x00002000         xrw
+rom              0x00000000         0x0001ffc0         xr
+ram              0x1fffc000         0x00003000         xrw
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
@@ -428,12 +428,12 @@ LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.
 LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3unhosted.a
 LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a
 END GROUP
-                0x1fffe3c0                PROVIDE (__cs3_heap_start, _end)
+                0x1fffc3c0                PROVIDE (__cs3_heap_start, _end)
                 0x00000001                PROVIDE (__cs3_region_num, ((__cs3_regions_end - __cs3_regions) / 0x14))
-                0x20002000                PROVIDE (__cs3_stack, 0x20002000)
-                0x20001000                PROVIDE (__cs3_heap_end, (__cs3_stack - 0x1000))
+                0x20004000                PROVIDE (__cs3_stack, 0x20004000)
+                0x20000000                PROVIDE (__cs3_heap_end, (__cs3_stack - 0x4000))
 
-.text           0x00000000     0x490c
+.text           0x00000000     0x492c
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cs3_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -494,312 +494,311 @@ END GROUP
                 0x00000538       0x28 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
                 0x00000538                Bootloader_LaunchApplication
  .text.CyBtldr_CheckLaunch
-                0x00000560       0x40 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x00000560       0x48 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
                 0x00000560                CyBtldr_CheckLaunch
  .text.LaunchApp
-                0x000005a0       0x14 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x000005a0                LaunchApp
+                0x000005a8       0x14 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x000005a8                LaunchApp
  .text.Bootloader_ValidateApplication
-                0x000005b4       0xf0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x000005b4                Bootloader_ValidateApplication
+                0x000005bc      0x108 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x000005bc                Bootloader_ValidateApplication
  .text.Bootloader_HostLink
-                0x000006a4      0x5bc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x000006a4                Bootloader_HostLink
+                0x000006c4      0x5c0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x000006c4                Bootloader_HostLink
  .text.Bootloader_WritePacket
-                0x00000c60       0xb0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x00000c60                Bootloader_WritePacket
+                0x00000c84       0xb0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x00000c84                Bootloader_WritePacket
  .text.USBFS_CyBtldrCommStart
-                0x00000d10       0x24 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                0x00000d10                USBFS_CyBtldrCommStart
+                0x00000d34       0x24 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                0x00000d34                USBFS_CyBtldrCommStart
  .text.USBFS_CyBtldrCommReset
-                0x00000d34       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                0x00000d34                USBFS_CyBtldrCommReset
+                0x00000d58       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                0x00000d58                USBFS_CyBtldrCommReset
  .text.USBFS_CyBtldrCommWrite
-                0x00000d44       0xa8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                0x00000d44                USBFS_CyBtldrCommWrite
+                0x00000d68       0xa8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                0x00000d68                USBFS_CyBtldrCommWrite
  .text.USBFS_CyBtldrCommRead
-                0x00000dec      0x148 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                0x00000dec                USBFS_CyBtldrCommRead
+                0x00000e10      0x148 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                0x00000e10                USBFS_CyBtldrCommRead
  .text.PWM_Init
-                0x00000f34       0xbc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x00000f34                PWM_Init
+                0x00000f58       0xbc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x00000f58                PWM_Init
  .text.PWM_Enable
-                0x00000ff0       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x00000ff0                PWM_Enable
+                0x00001014       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x00001014                PWM_Enable
  .text.PWM_WriteCounter
-                0x0000101c       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x0000101c                PWM_WriteCounter
+                0x00001040       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x00001040                PWM_WriteCounter
  .text.PWM_ClearFIFO
-                0x0000103c       0x1c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x0000103c                PWM_ClearFIFO
+                0x00001060       0x1c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x00001060                PWM_ClearFIFO
  .text.PWM_WritePeriod
-                0x00001058       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x00001058                PWM_WritePeriod
+                0x0000107c       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x0000107c                PWM_WritePeriod
  .text.PWM_WriteCompare
-                0x00001078       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x00001078                PWM_WriteCompare
+                0x0000109c       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x0000109c                PWM_WriteCompare
  .text.PWM_SetInterruptMode
-                0x00001098       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x00001098                PWM_SetInterruptMode
+                0x000010bc       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x000010bc                PWM_SetInterruptMode
  .text.PWM_ReadStatusRegister
-                0x000010b8       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x000010b8                PWM_ReadStatusRegister
+                0x000010dc       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x000010dc                PWM_ReadStatusRegister
  .text.PWM_ReadCapture
-                0x000010d8       0x18 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                0x000010d8                PWM_ReadCapture
+                0x000010fc       0x18 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                0x000010fc                PWM_ReadCapture
  .text.CYMEMZERO
-                0x000010f0       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x00001114       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00001110       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x00001134       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.CYCONFIGCPYCODE
-                0x00001130       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x00001154       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00001150       0x84 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x00001174       0x84 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000011d4       0xd8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x000011f8       0xd8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x000012ac       0x4c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x000012d0       0x4c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x000012f8      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
-                0x000012f8                cyfitter_cfg
- *fill*         0x0000149c        0x4 00
- .text          0x000014a0       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
-                0x000014a0                CyDelayCycles
-                0x000014b0                CyEnterCriticalSection
-                0x000014b8                CyExitCriticalSection
+                0x0000131c      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                0x0000131c                cyfitter_cfg
+ .text          0x000014c0       0x20 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
+                0x000014c0                CyDelayCycles
+                0x000014d0                CyEnterCriticalSection
+                0x000014d8                CyExitCriticalSection
  .text.CySetTempInt
-                0x000014c0       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                0x000014e0       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
  .text.CySetTemp
-                0x00001550       0x28 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
-                0x00001550                CySetTemp
+                0x00001570       0x28 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                0x00001570                CySetTemp
  .text.CySetFlashEEBuffer
-                0x00001578       0x50 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
-                0x00001578                CySetFlashEEBuffer
+                0x00001598       0x50 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                0x00001598                CySetFlashEEBuffer
  .text.CyWriteRowFull
-                0x000015c8      0x124 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
-                0x000015c8                CyWriteRowFull
+                0x000015e8      0x124 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                0x000015e8                CyWriteRowFull
  .text.CySpcStart
-                0x000016ec       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x000016ec                CySpcStart
+                0x0000170c       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x0000170c                CySpcStart
  .text.CySpcReadData
-                0x00001744       0x64 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x00001744                CySpcReadData
+                0x00001764       0x64 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x00001764                CySpcReadData
  .text.CySpcLoadRow
-                0x000017a8       0xbc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x000017a8                CySpcLoadRow
+                0x000017c8       0xbc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x000017c8                CySpcLoadRow
  .text.CySpcWriteRow
-                0x00001864       0xcc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x00001864                CySpcWriteRow
+                0x00001884       0xcc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x00001884                CySpcWriteRow
  .text.CySpcGetTemp
-                0x00001930       0x8c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x00001930                CySpcGetTemp
+                0x00001950       0x8c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x00001950                CySpcGetTemp
  .text.CySpcLock
-                0x000019bc       0x8c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x000019bc                CySpcLock
+                0x000019dc       0x8c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x000019dc                CySpcLock
  .text.CySpcUnlock
-                0x00001a48       0x68 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x00001a48                CySpcUnlock
+                0x00001a68       0x68 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x00001a68                CySpcUnlock
  .text.USBFS_Start
-                0x00001ab0       0x44 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001ab0                USBFS_Start
+                0x00001ad0       0x44 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001ad0                USBFS_Start
  .text.USBFS_Init
-                0x00001af4      0x210 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001af4                USBFS_Init
+                0x00001b14      0x210 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001b14                USBFS_Init
  .text.USBFS_InitComponent
-                0x00001d04      0x150 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001d04                USBFS_InitComponent
+                0x00001d24      0x150 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001d24                USBFS_InitComponent
  .text.USBFS_ReInitComponent
-                0x00001e54       0xb4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001e54                USBFS_ReInitComponent
+                0x00001e74       0xb4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001e74                USBFS_ReInitComponent
  .text.USBFS_GetConfiguration
-                0x00001f08       0x18 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001f08                USBFS_GetConfiguration
+                0x00001f28       0x18 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001f28                USBFS_GetConfiguration
  .text.USBFS_IsConfigurationChanged
-                0x00001f20       0x44 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001f20                USBFS_IsConfigurationChanged
+                0x00001f40       0x44 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001f40                USBFS_IsConfigurationChanged
  .text.USBFS_GetEPState
-                0x00001f64       0x34 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001f64                USBFS_GetEPState
+                0x00001f84       0x34 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001f84                USBFS_GetEPState
  .text.USBFS_GetEPCount
-                0x00001f98       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00001f98                USBFS_GetEPCount
+                0x00001fb8       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00001fb8                USBFS_GetEPCount
  .text.USBFS_LoadInEP
-                0x00002008      0x158 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00002008                USBFS_LoadInEP
+                0x00002028      0x158 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00002028                USBFS_LoadInEP
  .text.USBFS_ReadOutEP
-                0x00002160       0x98 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x00002160                USBFS_ReadOutEP
+                0x00002180       0x98 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00002180                USBFS_ReadOutEP
  .text.USBFS_EnableOutEP
-                0x000021f8       0x78 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x000021f8                USBFS_EnableOutEP
+                0x00002218       0x78 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x00002218                USBFS_EnableOutEP
  .text.USBFS_EP_0_ISR
-                0x00002270      0x144 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002270                USBFS_EP_0_ISR
+                0x00002290      0x144 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002290                USBFS_EP_0_ISR
  .text.USBFS_HandleSetup
-                0x000023b4       0xa4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x000023b4                USBFS_HandleSetup
+                0x000023d4       0xa4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x000023d4                USBFS_HandleSetup
  .text.USBFS_HandleIN
-                0x00002458       0x4c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002458                USBFS_HandleIN
+                0x00002478       0x4c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002478                USBFS_HandleIN
  .text.USBFS_HandleOUT
-                0x000024a4       0x5c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x000024a4                USBFS_HandleOUT
+                0x000024c4       0x5c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x000024c4                USBFS_HandleOUT
  .text.USBFS_LoadEP0
-                0x00002500      0x15c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002500                USBFS_LoadEP0
+                0x00002520      0x15c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002520                USBFS_LoadEP0
  .text.USBFS_InitControlRead
-                0x0000265c       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x0000265c                USBFS_InitControlRead
+                0x0000267c       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x0000267c                USBFS_InitControlRead
  .text.USBFS_InitZeroLengthControlTransfer
-                0x000026f0       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x000026f0                USBFS_InitZeroLengthControlTransfer
+                0x00002710       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002710                USBFS_InitZeroLengthControlTransfer
  .text.USBFS_ControlReadDataStage
-                0x00002748        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002748                USBFS_ControlReadDataStage
+                0x00002768        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002768                USBFS_ControlReadDataStage
  .text.USBFS_ControlReadStatusStage
-                0x00002754       0x54 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002754                USBFS_ControlReadStatusStage
+                0x00002774       0x54 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002774                USBFS_ControlReadStatusStage
  .text.USBFS_InitControlWrite
-                0x000027a8       0x88 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x000027a8                USBFS_InitControlWrite
+                0x000027c8       0x88 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x000027c8                USBFS_InitControlWrite
  .text.USBFS_ControlWriteDataStage
-                0x00002830      0x114 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002830                USBFS_ControlWriteDataStage
+                0x00002850      0x114 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002850                USBFS_ControlWriteDataStage
  .text.USBFS_ControlWriteStatusStage
-                0x00002944       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002944                USBFS_ControlWriteStatusStage
+                0x00002964       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002964                USBFS_ControlWriteStatusStage
  .text.USBFS_InitNoDataControlTransfer
-                0x00002970       0x48 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002970                USBFS_InitNoDataControlTransfer
+                0x00002990       0x48 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002990                USBFS_InitNoDataControlTransfer
  .text.USBFS_NoDataControlStatusStage
-                0x000029b8       0x68 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x000029b8                USBFS_NoDataControlStatusStage
+                0x000029d8       0x68 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x000029d8                USBFS_NoDataControlStatusStage
  .text.USBFS_UpdateStatusBlock
-                0x00002a20       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002a20                USBFS_UpdateStatusBlock
+                0x00002a40       0x58 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002a40                USBFS_UpdateStatusBlock
  .text.USBFS_InitializeStatusBlock
-                0x00002a78       0x48 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x00002a78                USBFS_InitializeStatusBlock
+                0x00002a98       0x48 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x00002a98                USBFS_InitializeStatusBlock
  .text.USBFS_EP_1_ISR
-                0x00002ac0       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
-                0x00002ac0                USBFS_EP_1_ISR
+                0x00002ae0       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+                0x00002ae0                USBFS_EP_1_ISR
  .text.USBFS_EP_2_ISR
-                0x00002b30       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
-                0x00002b30                USBFS_EP_2_ISR
+                0x00002b50       0x70 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+                0x00002b50                USBFS_EP_2_ISR
  .text.USBFS_SOF_ISR
-                0x00002ba0        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
-                0x00002ba0                USBFS_SOF_ISR
+                0x00002bc0        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+                0x00002bc0                USBFS_SOF_ISR
  .text.USBFS_BUS_RESET_ISR
-                0x00002bac        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
-                0x00002bac                USBFS_BUS_RESET_ISR
+                0x00002bcc        0xc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+                0x00002bcc                USBFS_BUS_RESET_ISR
  .text.USBFS_DispatchHIDClassRqst
-                0x00002bb8      0x2b8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                0x00002bb8                USBFS_DispatchHIDClassRqst
+                0x00002bd8      0x2b8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                0x00002bd8                USBFS_DispatchHIDClassRqst
  .text.USBFS_FindHidClassDecriptor
-                0x00002e70       0x9c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                0x00002e70                USBFS_FindHidClassDecriptor
+                0x00002e90       0x9c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                0x00002e90                USBFS_FindHidClassDecriptor
  .text.USBFS_FindReportDescriptor
-                0x00002f0c       0xb4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                0x00002f0c                USBFS_FindReportDescriptor
+                0x00002f2c       0xb4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                0x00002f2c                USBFS_FindReportDescriptor
  .text.USBFS_FindReport
-                0x00002fc0      0x104 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                0x00002fc0                USBFS_FindReport
+                0x00002fe0      0x104 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                0x00002fe0                USBFS_FindReport
  .text.USBFS_HandleStandardRqst
-                0x000030c4      0x638 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x000030c4                USBFS_HandleStandardRqst
+                0x000030e4      0x638 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000030e4                USBFS_HandleStandardRqst
  .text.USBFS_ReadDieID
-                0x000036fc       0x98 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x000036fc                USBFS_ReadDieID
+                0x0000371c       0x98 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x0000371c                USBFS_ReadDieID
  .text.USBFS_ConfigReg
-                0x00003794      0x208 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00003794                USBFS_ConfigReg
+                0x000037b4      0x208 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000037b4                USBFS_ConfigReg
  .text.USBFS_Config
-                0x0000399c      0x438 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x0000399c                USBFS_Config
+                0x000039bc      0x438 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000039bc                USBFS_Config
  .text.USBFS_ConfigAltChanged
-                0x00003dd4      0x360 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00003dd4                USBFS_ConfigAltChanged
+                0x00003df4      0x360 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x00003df4                USBFS_ConfigAltChanged
  .text.USBFS_GetConfigTablePtr
-                0x00004134       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00004134                USBFS_GetConfigTablePtr
+                0x00004154       0x2c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x00004154                USBFS_GetConfigTablePtr
  .text.USBFS_GetDeviceTablePtr
-                0x00004160       0x28 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00004160                USBFS_GetDeviceTablePtr
+                0x00004180       0x28 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x00004180                USBFS_GetDeviceTablePtr
  .text.USBFS_GetInterfaceClassTablePtr
-                0x00004188       0x50 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00004188                USBFS_GetInterfaceClassTablePtr
+                0x000041a8       0x50 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000041a8                USBFS_GetInterfaceClassTablePtr
  .text.USBFS_SetEndpointHalt
-                0x000041d8      0x130 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x000041d8                USBFS_SetEndpointHalt
+                0x000041f8      0x130 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000041f8                USBFS_SetEndpointHalt
  .text.USBFS_ClearEndpointHalt
-                0x00004308      0x1b8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x00004308                USBFS_ClearEndpointHalt
+                0x00004328      0x1b8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x00004328                USBFS_ClearEndpointHalt
  .text.USBFS_ValidateAlternateSetting
-                0x000044c0       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x000044c0                USBFS_ValidateAlternateSetting
+                0x000044e0       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x000044e0                USBFS_ValidateAlternateSetting
  .text.USBFS_HandleVendorRqst
-                0x00004554       0x38 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
-                0x00004554                USBFS_HandleVendorRqst
+                0x00004574       0x38 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
+                0x00004574                USBFS_HandleVendorRqst
  .text.USBFS_DispatchClassRqst
-                0x0000458c       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
-                0x0000458c                USBFS_DispatchClassRqst
- .text          0x0000461c      0x190 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
-                0x0000461c                memcpy
- .text          0x000047ac       0xd4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
-                0x000047ac                memset
- .text          0x00004880       0x30 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
-                0x00004880                __cs3_premain
- .text          0x000048b0        0x2 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
-                0x000048b0                __cs3_isr_external_24
-                0x000048b0                __cs3_isr_external_9
-                0x000048b0                __cs3_isr_external_14
-                0x000048b0                __cs3_isr_reserved_9
-                0x000048b0                __cs3_isr_external_4
-                0x000048b0                __cs3_isr_external_21
-                0x000048b0                __cs3_isr_external_0
-                0x000048b0                __cs3_isr_external_27
-                0x000048b0                __cs3_isr_external_11
-                0x000048b0                __cs3_isr_usage_fault
-                0x000048b0                __cs3_isr_svcall
-                0x000048b0                __cs3_isr_external_3
-                0x000048b0                __cs3_isr_mpu_fault
-                0x000048b0                __cs3_isr_external_16
-                0x000048b0                __cs3_isr_pendsv
-                0x000048b0                __cs3_isr_external_31
-                0x000048b0                __cs3_isr_nmi
-                0x000048b0                __cs3_isr_external_5
-                0x000048b0                __cs3_isr_external_6
-                0x000048b0                __cs3_isr_external_12
-                0x000048b0                __cs3_isr_hard_fault
-                0x000048b0                __cs3_isr_bus_fault
-                0x000048b0                __cs3_isr_external_1
-                0x000048b0                __cs3_isr_external_13
-                0x000048b0                __cs3_isr_external_30
-                0x000048b0                __cs3_isr_external_23
-                0x000048b0                __cs3_isr_external_20
-                0x000048b0                __cs3_isr_debug
-                0x000048b0                __cs3_isr_reserved_13
-                0x000048b0                __cs3_isr_external_8
-                0x000048b0                __cs3_isr_external_26
-                0x000048b0                __cs3_isr_reserved_8
-                0x000048b0                __cs3_isr_reserved_7
-                0x000048b0                __cs3_isr_external_7
-                0x000048b0                __cs3_isr_external_28
-                0x000048b0                __cs3_isr_systick
-                0x000048b0                __cs3_isr_external_22
-                0x000048b0                __cs3_isr_external_10
-                0x000048b0                __cs3_isr_external_15
-                0x000048b0                __cs3_isr_interrupt
-                0x000048b0                __cs3_isr_external_18
-                0x000048b0                __cs3_isr_external_29
-                0x000048b0                __cs3_isr_external_25
-                0x000048b0                __cs3_isr_reserved_10
-                0x000048b0                __cs3_isr_external_2
-                0x000048b0                __cs3_isr_external_17
-                0x000048b0                __cs3_isr_external_19
- *fill*         0x000048b2        0x2 00
- .text          0x000048b4       0x50 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
-                0x000048b4                __libc_init_array
+                0x000045ac       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
+                0x000045ac                USBFS_DispatchClassRqst
+ .text          0x0000463c      0x190 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x0000463c                memcpy
+ .text          0x000047cc       0xd4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x000047cc                memset
+ .text          0x000048a0       0x30 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+                0x000048a0                __cs3_premain
+ .text          0x000048d0        0x2 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+                0x000048d0                __cs3_isr_external_24
+                0x000048d0                __cs3_isr_external_9
+                0x000048d0                __cs3_isr_external_14
+                0x000048d0                __cs3_isr_reserved_9
+                0x000048d0                __cs3_isr_external_4
+                0x000048d0                __cs3_isr_external_21
+                0x000048d0                __cs3_isr_external_0
+                0x000048d0                __cs3_isr_external_27
+                0x000048d0                __cs3_isr_external_11
+                0x000048d0                __cs3_isr_usage_fault
+                0x000048d0                __cs3_isr_svcall
+                0x000048d0                __cs3_isr_external_3
+                0x000048d0                __cs3_isr_mpu_fault
+                0x000048d0                __cs3_isr_external_16
+                0x000048d0                __cs3_isr_pendsv
+                0x000048d0                __cs3_isr_external_31
+                0x000048d0                __cs3_isr_nmi
+                0x000048d0                __cs3_isr_external_5
+                0x000048d0                __cs3_isr_external_6
+                0x000048d0                __cs3_isr_external_12
+                0x000048d0                __cs3_isr_hard_fault
+                0x000048d0                __cs3_isr_bus_fault
+                0x000048d0                __cs3_isr_external_1
+                0x000048d0                __cs3_isr_external_13
+                0x000048d0                __cs3_isr_external_30
+                0x000048d0                __cs3_isr_external_23
+                0x000048d0                __cs3_isr_external_20
+                0x000048d0                __cs3_isr_debug
+                0x000048d0                __cs3_isr_reserved_13
+                0x000048d0                __cs3_isr_external_8
+                0x000048d0                __cs3_isr_external_26
+                0x000048d0                __cs3_isr_reserved_8
+                0x000048d0                __cs3_isr_reserved_7
+                0x000048d0                __cs3_isr_external_7
+                0x000048d0                __cs3_isr_external_28
+                0x000048d0                __cs3_isr_systick
+                0x000048d0                __cs3_isr_external_22
+                0x000048d0                __cs3_isr_external_10
+                0x000048d0                __cs3_isr_external_15
+                0x000048d0                __cs3_isr_interrupt
+                0x000048d0                __cs3_isr_external_18
+                0x000048d0                __cs3_isr_external_29
+                0x000048d0                __cs3_isr_external_25
+                0x000048d0                __cs3_isr_reserved_10
+                0x000048d0                __cs3_isr_external_2
+                0x000048d0                __cs3_isr_external_17
+                0x000048d0                __cs3_isr_external_19
+ *fill*         0x000048d2        0x2 00
+ .text          0x000048d4       0x50 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x000048d4                __libc_init_array
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -809,13 +808,13 @@ END GROUP
  *(.vfp11_veneer)
  .vfp11_veneer  0x00000000        0x0 linker stubs
  *(.bootloader)
- .bootloader    0x00004904        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x00004904                Bootloader_Checksum
-                0x00004908                Bootloader_SizeBytes
+ .bootloader    0x00004924        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x00004924                Bootloader_Checksum
+                0x00004928                Bootloader_SizeBytes
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x0000490c        0x0
+.v4_bx          0x0000492c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
 .eh_frame_hdr
@@ -823,182 +822,182 @@ END GROUP
 
 .eh_frame
  *(.eh_frame)
-                0x0000490c                PROVIDE (__exidx_start, .)
+                0x0000492c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000490c                __exidx_end = .
+                0x0000492c                __exidx_end = .
 
-.rodata         0x0000490c      0x384
+.rodata         0x0000492c      0x37c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000490c        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
- .rodata        0x00004914      0x18c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
- .rodata        0x00004aa0       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
- .rodata        0x00004ab0      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
-                0x00004ab0                USBFS_DEVICE0_DESCR
-                0x00004ac4                USBFS_DEVICE0_CONFIGURATION0_DESCR
-                0x00004af0                USBFS_STRING_DESCRIPTORS
-                0x00004b94                USBFS_SN_STRING_DESCRIPTOR
-                0x00004b98                USBFS_HIDREPORT_DESCRIPTOR1
-                0x00004bc0                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_TABLE
-                0x00004bcc                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_TABLE
-                0x00004bd8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_TABLE
-                0x00004c00                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_TABLE
-                0x00004c08                USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
-                0x00004c18                USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
-                0x00004c1c                USBFS_DEVICE0_CONFIGURATION0_TABLE
-                0x00004c3c                USBFS_DEVICE0_TABLE
-                0x00004c4c                USBFS_TABLE
-                0x00004c54                . = ALIGN (0x4)
+ .rodata        0x0000492c        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+ .rodata        0x00004934      0x184 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+ .rodata        0x00004ab8       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+ .rodata        0x00004ac8      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
+                0x00004ac8                USBFS_DEVICE0_DESCR
+                0x00004adc                USBFS_DEVICE0_CONFIGURATION0_DESCR
+                0x00004b08                USBFS_STRING_DESCRIPTORS
+                0x00004bac                USBFS_SN_STRING_DESCRIPTOR
+                0x00004bb0                USBFS_HIDREPORT_DESCRIPTOR1
+                0x00004bd8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_TABLE
+                0x00004be4                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_TABLE
+                0x00004bf0                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_TABLE
+                0x00004c18                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_TABLE
+                0x00004c20                USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x00004c30                USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x00004c34                USBFS_DEVICE0_CONFIGURATION0_TABLE
+                0x00004c54                USBFS_DEVICE0_TABLE
+                0x00004c64                USBFS_TABLE
+                0x00004c6c                . = ALIGN (0x4)
  *(.init)
- .init          0x00004c54        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x00004c54                _init
- .init          0x00004c58        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
-                0x00004c60                . = ALIGN (0x4)
-                0x00004c60                __preinit_array_start = .
+ .init          0x00004c6c        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00004c6c                _init
+ .init          0x00004c70        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x00004c78                . = ALIGN (0x4)
+                0x00004c78                __preinit_array_start = .
  *(.preinit_array)
-                0x00004c60                __preinit_array_end = .
-                0x00004c60                . = ALIGN (0x4)
-                0x00004c60                __init_array_start = .
+                0x00004c78                __preinit_array_end = .
+                0x00004c78                . = ALIGN (0x4)
+                0x00004c78                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00004c60        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .init_array    0x00004c64        0x4 .\ARM_GCC_441\Debug\Cm3Start.o
-                0x00004c68                __init_array_end = .
-                0x00004c68                . = ALIGN (0x4)
+ .init_array    0x00004c78        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .init_array    0x00004c7c        0x4 .\ARM_GCC_441\Debug\Cm3Start.o
+                0x00004c80                __init_array_end = .
+                0x00004c80                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00004c68        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x00004c68                _fini
- .fini          0x00004c6c        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
-                0x00004c74                . = ALIGN (0x4)
-                0x00004c74                __fini_array_start = .
+ .fini          0x00004c80        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x00004c80                _fini
+ .fini          0x00004c84        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x00004c8c                . = ALIGN (0x4)
+                0x00004c8c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00004c74        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .fini_array    0x00004c8c        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00004c78                __fini_array_end = .
-                0x00004c78                . = ALIGN (0x4)
+                0x00004c90                __fini_array_end = .
+                0x00004c90                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00004c78                . = ALIGN (0x4)
+                0x00004c90                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00004c78                . = ALIGN (0x4)
-                0x00004c78                __cs3_regions = .
-                0x00004c78        0x4 LONG 0x0
-                0x00004c7c        0x4 LONG 0x4c90 __cs3_region_init_ram
-                0x00004c80        0x4 LONG 0x1fffe108 __cs3_region_start_data
-                0x00004c84        0x4 LONG 0x40 __cs3_region_init_size_ram
-                0x00004c88        0x4 LONG 0x278 __cs3_region_zero_size_ram
-                0x00004c8c                __cs3_regions_end = .
-                0x00004c90                . = ALIGN (0x8)
- *fill*         0x00004c8c        0x4 00
-                0x00004c90                _etext = .
+                0x00004c90                . = ALIGN (0x4)
+                0x00004c90                __cs3_regions = .
+                0x00004c90        0x4 LONG 0x0
+                0x00004c94        0x4 LONG 0x4ca8 __cs3_region_init_ram
+                0x00004c98        0x4 LONG 0x1fffc108 __cs3_region_start_data
+                0x00004c9c        0x4 LONG 0x40 __cs3_region_init_size_ram
+                0x00004ca0        0x4 LONG 0x278 __cs3_region_zero_size_ram
+                0x00004ca4                __cs3_regions_end = .
+                0x00004ca8                . = ALIGN (0x8)
+ *fill*         0x00004ca4        0x4 00
+                0x00004ca8                _etext = .
 
-.ramvectors     0x1fffe000      0x100
-                0x1fffe000                __cs3_region_start_ram = .
+.ramvectors     0x1fffc000      0x100
+                0x1fffc000                __cs3_region_start_ram = .
  *(.cs3.region-head.ram)
-                0x1fffe001                ASSERT ((. == __cs3_region_start_ram), .cs3.region-head.ram not permitted)
+                0x1fffc001                ASSERT ((. == __cs3_region_start_ram), .cs3.region-head.ram not permitted)
  *(.ramvectors)
- .ramvectors    0x1fffe000      0x100 .\ARM_GCC_441\Debug\Cm3Start.o
-                0x1fffe000                CyRamVectors
+ .ramvectors    0x1fffc000      0x100 .\ARM_GCC_441\Debug\Cm3Start.o
+                0x1fffc000                CyRamVectors
 
-.noinit         0x1fffe100        0x4
+.noinit         0x1fffc100        0x4
  *(.noinit)
- .noinit        0x1fffe100        0x4 .\ARM_GCC_441\Debug\Cm3Start.o
+ .noinit        0x1fffc100        0x4 .\ARM_GCC_441\Debug\Cm3Start.o
 
-.data           0x1fffe108       0x40 load address 0x00004c90
-                0x1fffe108                __cs3_region_start_data = .
+.data           0x1fffc108       0x40 load address 0x00004ca8
+                0x1fffc108                __cs3_region_start_data = .
  *(.jcr)
- .jcr           0x1fffe108        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .jcr           0x1fffe108        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .jcr           0x1fffc108        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x1fffc108        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
  *(.got.plt)
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x1fffe10c       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
-                0x1fffe10c                cydelay_freq_hz
-                0x1fffe110                cydelay_freq_khz
-                0x1fffe114                cydelay_freq_mhz
-                0x1fffe118                cydelay_32k_ms
- .data          0x1fffe11c        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x1fffe11c                Bootloader_ChecksumAccess
-                0x1fffe120                Bootloader_SizeBytesAccess
- .data          0x1fffe124       0x24 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x1fffe124                USBFS_idSerialNumberStringDescriptor
-                0x1fffe148                . = ALIGN (0x8)
+ .data          0x1fffc10c       0x10 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
+                0x1fffc10c                cydelay_freq_hz
+                0x1fffc110                cydelay_freq_khz
+                0x1fffc114                cydelay_freq_mhz
+                0x1fffc118                cydelay_32k_ms
+ .data          0x1fffc11c        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x1fffc11c                Bootloader_ChecksumAccess
+                0x1fffc120                Bootloader_SizeBytesAccess
+ .data          0x1fffc124       0x24 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x1fffc124                USBFS_idSerialNumberStringDescriptor
+                0x1fffc148                . = ALIGN (0x8)
  *(.ram)
-                0x1fffe148                _edata = .
+                0x1fffc148                _edata = .
 
-.bss            0x1fffe148      0x278 load address 0x00004cd0
+.bss            0x1fffc148      0x278 load address 0x00004ce8
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x1fffe148        0x1 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- *fill*         0x1fffe149        0x1 00
- .bss           0x1fffe14a        0x4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                0x1fffe14a                USBFS_universalTime
-                0x1fffe14c                USBFS_started
- *fill*         0x1fffe14e        0x2 00
- .bss           0x1fffe150        0x4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
- .bss           0x1fffe154        0x2 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                0x1fffe154                SpcLockState
- .bss           0x1fffe156        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                0x1fffe156                USBFS_initVar
- .bss           0x1fffe157        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x1fffe157                USBFS_snStringConfirm
+ .bss           0x1fffc148        0x1 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x1fffc149        0x1 00
+ .bss           0x1fffc14a        0x4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                0x1fffc14a                USBFS_universalTime
+                0x1fffc14c                USBFS_started
+ *fill*         0x1fffc14e        0x2 00
+ .bss           0x1fffc150        0x4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+ .bss           0x1fffc154        0x2 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                0x1fffc154                SpcLockState
+ .bss           0x1fffc156        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                0x1fffc156                USBFS_initVar
+ .bss           0x1fffc157        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x1fffc157                USBFS_snStringConfirm
  *(COMMON)
- COMMON         0x1fffe158        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
-                0x1fffe158                CyResetStatus
- *fill*         0x1fffe159        0x3 00
- COMMON         0x1fffe15c      0x120 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                0x1fffe15c                flashBuffer
- COMMON         0x1fffe27c        0x2 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
-                0x1fffe27c                dieTemperature
- *fill*         0x1fffe27e        0x2 00
- COMMON         0x1fffe280       0x96 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                0x1fffe280                USBFS_deviceAddress
-                0x1fffe281                USBFS_ep0Mode
-                0x1fffe284                USBFS_interfaceSetting
-                0x1fffe288                USBFS_currentTD
-                0x1fffe294                USBFS_device
-                0x1fffe295                USBFS_interfaceNumber
-                0x1fffe296                USBFS_ep0Toggle
-                0x1fffe297                USBFS_deviceStatus
-                0x1fffe298                USBFS_configurationChanged
-                0x1fffe299                USBFS_configuration
-                0x1fffe29a                USBFS_transferState
-                0x1fffe29c                USBFS_interfaceStatus
-                0x1fffe2a0                USBFS_interfaceClass
-                0x1fffe2a4                USBFS_EP
-                0x1fffe310                USBFS_interfaceSetting_last
-                0x1fffe311                USBFS_lastPacketSize
-                0x1fffe312                USBFS_ep0Count
-                0x1fffe314                USBFS_transferByteCount
- *fill*         0x1fffe316        0x2 00
- COMMON         0x1fffe318        0x9 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                0x1fffe318                USBFS_hidIdleRate
-                0x1fffe31c                USBFS_hidIdleTimer
-                0x1fffe320                USBFS_hidProtocol
- *fill*         0x1fffe321        0x3 00
- COMMON         0x1fffe324        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                0x1fffe324                USBFS_tBuffer
-                0x1fffe328                USBFS_fwSerialNumberStringDescriptor
- COMMON         0x1fffe32c       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
-                0x1fffe32c                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_SCB
-                0x1fffe330                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_BUF
-                0x1fffe374                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF
-                0x1fffe3b8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB
-                0x1fffe3c0                . = ALIGN (0x8)
- *fill*         0x1fffe3bc        0x4 00
+ COMMON         0x1fffc158        0x1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
+                0x1fffc158                CyResetStatus
+ *fill*         0x1fffc159        0x3 00
+ COMMON         0x1fffc15c      0x120 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                0x1fffc15c                flashBuffer
+ COMMON         0x1fffc27c        0x2 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                0x1fffc27c                dieTemperature
+ *fill*         0x1fffc27e        0x2 00
+ COMMON         0x1fffc280       0x96 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                0x1fffc280                USBFS_deviceAddress
+                0x1fffc281                USBFS_ep0Mode
+                0x1fffc284                USBFS_interfaceSetting
+                0x1fffc288                USBFS_currentTD
+                0x1fffc294                USBFS_device
+                0x1fffc295                USBFS_interfaceNumber
+                0x1fffc296                USBFS_ep0Toggle
+                0x1fffc297                USBFS_deviceStatus
+                0x1fffc298                USBFS_configurationChanged
+                0x1fffc299                USBFS_configuration
+                0x1fffc29a                USBFS_transferState
+                0x1fffc29c                USBFS_interfaceStatus
+                0x1fffc2a0                USBFS_interfaceClass
+                0x1fffc2a4                USBFS_EP
+                0x1fffc310                USBFS_interfaceSetting_last
+                0x1fffc311                USBFS_lastPacketSize
+                0x1fffc312                USBFS_ep0Count
+                0x1fffc314                USBFS_transferByteCount
+ *fill*         0x1fffc316        0x2 00
+ COMMON         0x1fffc318        0x9 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                0x1fffc318                USBFS_hidIdleRate
+                0x1fffc31c                USBFS_hidIdleTimer
+                0x1fffc320                USBFS_hidProtocol
+ *fill*         0x1fffc321        0x3 00
+ COMMON         0x1fffc324        0x8 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                0x1fffc324                USBFS_tBuffer
+                0x1fffc328                USBFS_fwSerialNumberStringDescriptor
+ COMMON         0x1fffc32c       0x90 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
+                0x1fffc32c                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_SCB
+                0x1fffc330                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_BUF
+                0x1fffc374                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF
+                0x1fffc3b8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB
+                0x1fffc3c0                . = ALIGN (0x8)
+ *fill*         0x1fffc3bc        0x4 00
  *(.ram.b)
-                0x1fffe3c0                _end = .
-                0x1fffe3c0                __end = .
-                0x20000000                __cs3_region_end_ram = (__cs3_region_start_ram + 0x2000)
-                0x00002000                __cs3_region_size_ram = 0x2000
-                0x00004c90                __cs3_region_init_ram = LOADADDR (.data)
+                0x1fffc3c0                _end = .
+                0x1fffc3c0                __end = .
+                0x1ffff000                __cs3_region_end_ram = (__cs3_region_start_ram + 0x3000)
+                0x00003000                __cs3_region_size_ram = 0x3000
+                0x00004ca8                __cs3_region_init_ram = LOADADDR (.data)
                 0x00000040                __cs3_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000278                __cs3_region_zero_size_ram = (_end - _edata)
 
@@ -1124,7 +1123,7 @@ END GROUP
  .debug_pubnames
                 0x0000161f      0x376 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
 
-.debug_info     0x00000000     0x4b97
+.debug_info     0x00000000     0x4bb2
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x131 .\ARM_GCC_441\Debug\main.o
  .debug_info    0x00000131      0x168 .\ARM_GCC_441\Debug\Cm3Start.o
@@ -1135,17 +1134,17 @@ END GROUP
  .debug_info    0x00001bc6      0x1fc .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
  .debug_info    0x00001dc2      0x2d1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
  .debug_info    0x00002093      0x3fd .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
- .debug_info    0x00002490       0x9a .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
- .debug_info    0x0000252a      0x3ab .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
- .debug_info    0x000028d5      0x39f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
- .debug_info    0x00002c74      0x634 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
- .debug_info    0x000032a8      0x53f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
- .debug_info    0x000037e7      0x1a7 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
- .debug_info    0x0000398e      0x37c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
- .debug_info    0x00003d0a      0x816 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
- .debug_info    0x00004520       0xbb .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
- .debug_info    0x000045db      0x19d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
- .debug_info    0x00004778      0x41f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
+ .debug_info    0x00002490       0xb5 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
+ .debug_info    0x00002545      0x3ab .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+ .debug_info    0x000028f0      0x39f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+ .debug_info    0x00002c8f      0x634 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+ .debug_info    0x000032c3      0x53f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+ .debug_info    0x00003802      0x1a7 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+ .debug_info    0x000039a9      0x37c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+ .debug_info    0x00003d25      0x816 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+ .debug_info    0x0000453b       0xbb .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
+ .debug_info    0x000045f6      0x19d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
+ .debug_info    0x00004793      0x41f .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
 
 .debug_abbrev   0x00000000     0x1439
  *(.debug_abbrev)
@@ -1170,28 +1169,28 @@ END GROUP
  .debug_abbrev  0x000012c5       0xb5 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
  .debug_abbrev  0x0000137a       0xbf .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
 
-.debug_line     0x00000000     0x20fd
+.debug_line     0x00000000     0x20fe
  *(.debug_line)
  .debug_line    0x00000000       0x9c .\ARM_GCC_441\Debug\main.o
  .debug_line    0x0000009c       0xb8 .\ARM_GCC_441\Debug\Cm3Start.o
  .debug_line    0x00000154      0x659 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
  .debug_line    0x000007ad      0x34d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyPm.o)
  .debug_line    0x00000afa       0xba .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Pin_PSoC4A_XRES.o)
- .debug_line    0x00000bb4      0x227 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
- .debug_line    0x00000ddb       0xf1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
- .debug_line    0x00000ecc      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
- .debug_line    0x00001070      0x1b9 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
- .debug_line    0x00001229       0x67 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
- .debug_line    0x00001290      0x1ac .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
- .debug_line    0x0000143c      0x18d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
- .debug_line    0x000015c9      0x27d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
- .debug_line    0x00001846      0x21d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
- .debug_line    0x00001a63       0xd0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
- .debug_line    0x00001b33      0x163 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
- .debug_line    0x00001c96      0x2d7 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
- .debug_line    0x00001f6d       0x83 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
- .debug_line    0x00001ff0       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
- .debug_line    0x00002084       0x79 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
+ .debug_line    0x00000bb4      0x228 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+ .debug_line    0x00000ddc       0xf1 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+ .debug_line    0x00000ecd      0x1a4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+ .debug_line    0x00001071      0x1b9 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+ .debug_line    0x0000122a       0x67 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyBootAsmGnu.o)
+ .debug_line    0x00001291      0x1ac .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+ .debug_line    0x0000143d      0x18d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+ .debug_line    0x000015ca      0x27d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+ .debug_line    0x00001847      0x21d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+ .debug_line    0x00001a64       0xd0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+ .debug_line    0x00001b34      0x163 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+ .debug_line    0x00001c97      0x2d7 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+ .debug_line    0x00001f6e       0x83 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
+ .debug_line    0x00001ff1       0x94 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
+ .debug_line    0x00002085       0x79 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
 
 .debug_frame    0x00000000     0x1a40
  *(.debug_frame)
@@ -1218,46 +1217,46 @@ END GROUP
  .debug_frame   0x000019d4       0x40 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
  .debug_frame   0x00001a14       0x2c c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
 
-.debug_str      0x00000000     0x2200
+.debug_str      0x00000000     0x221b
  *(.debug_str)
- .debug_str     0x00000000      0x140 .\ARM_GCC_441\Debug\main.o
-                                0x179 (size before relaxing)
- .debug_str     0x00000140       0x8e .\ARM_GCC_441\Debug\Cm3Start.o
-                                0x18c (size before relaxing)
- .debug_str     0x000001ce      0x641 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
-                                0x779 (size before relaxing)
- .debug_str     0x0000080f      0x382 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyPm.o)
-                                0x49e (size before relaxing)
- .debug_str     0x00000b91       0xa0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Pin_PSoC4A_XRES.o)
-                                0x196 (size before relaxing)
- .debug_str     0x00000c31      0x29c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
-                                0x423 (size before relaxing)
- .debug_str     0x00000ecd       0xc4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
-                                0x1df (size before relaxing)
- .debug_str     0x00000f91      0x172 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
-                                0x272 (size before relaxing)
- .debug_str     0x00001103      0x15c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
-                                0x293 (size before relaxing)
- .debug_str     0x0000125f      0x131 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
-                                0x272 (size before relaxing)
- .debug_str     0x00001390       0xfe .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
-                                0x229 (size before relaxing)
- .debug_str     0x0000148e      0x313 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
-                                0x43a (size before relaxing)
- .debug_str     0x000017a1      0x2ce .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
-                                0x524 (size before relaxing)
- .debug_str     0x00001a6f       0x67 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
-                                0x1e0 (size before relaxing)
- .debug_str     0x00001ad6      0x114 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
-                                0x2ef (size before relaxing)
- .debug_str     0x00001bea      0x2ae .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
-                                0x5ba (size before relaxing)
- .debug_str     0x00001e98       0x3c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
-                                0x13c (size before relaxing)
- .debug_str     0x00001ed4       0x3d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
-                                0x1ea (size before relaxing)
- .debug_str     0x00001f11      0x2ef .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
-                                0x52d (size before relaxing)
+ .debug_str     0x00000000      0x15b .\ARM_GCC_441\Debug\main.o
+                                0x194 (size before relaxing)
+ .debug_str     0x0000015b       0x8e .\ARM_GCC_441\Debug\Cm3Start.o
+                                0x1a7 (size before relaxing)
+ .debug_str     0x000001e9      0x641 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyLib.o)
+                                0x794 (size before relaxing)
+ .debug_str     0x0000082a      0x382 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyPm.o)
+                                0x4b9 (size before relaxing)
+ .debug_str     0x00000bac       0xa0 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Pin_PSoC4A_XRES.o)
+                                0x1b1 (size before relaxing)
+ .debug_str     0x00000c4c      0x29c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(Bootloader.o)
+                                0x43e (size before relaxing)
+ .debug_str     0x00000ee8       0xc4 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_boot.o)
+                                0x1fa (size before relaxing)
+ .debug_str     0x00000fac      0x172 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(PWM.o)
+                                0x28d (size before relaxing)
+ .debug_str     0x0000111e      0x15c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(cyfitter_cfg.o)
+                                0x2ae (size before relaxing)
+ .debug_str     0x0000127a      0x131 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CyFlash.o)
+                                0x28d (size before relaxing)
+ .debug_str     0x000013ab       0xfe .\ARM_GCC_441\Debug\KitProg_Bootloader.a(CySpc.o)
+                                0x244 (size before relaxing)
+ .debug_str     0x000014a9      0x313 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS.o)
+                                0x455 (size before relaxing)
+ .debug_str     0x000017bc      0x2ce .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_drv.o)
+                                0x53f (size before relaxing)
+ .debug_str     0x00001a8a       0x67 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_episr.o)
+                                0x1fb (size before relaxing)
+ .debug_str     0x00001af1      0x114 .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_hid.o)
+                                0x30a (size before relaxing)
+ .debug_str     0x00001c05      0x2ae .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_std.o)
+                                0x5d5 (size before relaxing)
+ .debug_str     0x00001eb3       0x3c .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_vnd.o)
+                                0x157 (size before relaxing)
+ .debug_str     0x00001eef       0x3d .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_cls.o)
+                                0x205 (size before relaxing)
+ .debug_str     0x00001f2c      0x2ef .\ARM_GCC_441\Debug\KitProg_Bootloader.a(USBFS_descr.o)
+                                0x548 (size before relaxing)
 
 .debug_loc      0x00000000     0x29aa
  *(.debug_loc)

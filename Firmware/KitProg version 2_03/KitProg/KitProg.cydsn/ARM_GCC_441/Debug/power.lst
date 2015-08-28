@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 1
 
 
    1              		.syntax unified
@@ -20,7 +20,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
   17              	.Ldebug_info0:
   18              		.section	.debug_line,"",%progbits
   19              	.Ldebug_line0:
-  20 0000 24010000 		.text
+  20 0000 1E010000 		.text
   20      02006200 
   20      00000201 
   20      FB0E0D00 
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
    1:.\power.c     **** /*****************************************************************************
    2:.\power.c     **** * File Name: power.c
    3:.\power.c     **** * 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 2
 
 
    4:.\power.c     **** * Version 2.03
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
   58:.\power.c     **** uint16 GetVoltage(void);
   59:.\power.c     **** void GetRange(void);
   60:.\power.c     **** uint16 Convert_To_milliVolts(uint16 counts);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 3
 
 
   61:.\power.c     **** void SendPSoCToSleep(void);
@@ -162,32 +162,28 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
   60              		.cfi_offset 7, -8
   61              	.LCFI1:
   62              		.cfi_def_cfa_register 7
-  90:.\power.c     **** 	ADC_Voltage_Target_Start();
-  63              		.loc 1 90 0
-  64 0004 FFF7FEFF 		bl	ADC_Voltage_Target_Start
-  91:.\power.c     **** 	ADC_Voltage_Target_StartConvert();
-  65              		.loc 1 91 0
-  66 0008 FFF7FEFF 		bl	ADC_Voltage_Target_StartConvert
+  90:.\power.c     **** 	//ADC_Voltage_Target_Start();
+  91:.\power.c     **** 	//ADC_Voltage_Target_StartConvert();
   92:.\power.c     **** 	GetRange();
-  67              		.loc 1 92 0
-  68 000c FFF7FEFF 		bl	GetRange
+  63              		.loc 1 92 0
+  64 0004 FFF7FEFF 		bl	GetRange
   93:.\power.c     **** }
-  69              		.loc 1 93 0
-  70 0010 80BD     		pop	{r7, pc}
-  71              		.cfi_endproc
-  72              	.LFE29:
-  73              		.size	VoltageMonitorInit, .-VoltageMonitorInit
-  74 0012 00BF     		.section	.text.GetRange,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 4
+  65              		.loc 1 93 0
+  66 0008 80BD     		pop	{r7, pc}
+  67              		.cfi_endproc
+  68              	.LFE29:
+  69              		.size	VoltageMonitorInit, .-VoltageMonitorInit
+  70 000a 00BF     		.section	.text.GetRange,"ax",%progbits
+  71              		.align	2
+  72              		.global	GetRange
+  73              		.thumb
+  74              		.thumb_func
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 4
 
 
-  75              		.align	2
-  76              		.global	GetRange
-  77              		.thumb
-  78              		.thumb_func
-  79              		.type	GetRange, %function
-  80              	GetRange:
-  81              	.LFB30:
+  75              		.type	GetRange, %function
+  76              	GetRange:
+  77              	.LFB30:
   94:.\power.c     **** 
   95:.\power.c     **** /*******************************************************************************
   96:.\power.c     **** * Function Name: CalADC()
@@ -204,85 +200,73 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  107:.\power.c     **** *******************************************************************************/
  108:.\power.c     **** void GetRange(void)
  109:.\power.c     **** {
-  82              		.loc 1 109 0
-  83              		.cfi_startproc
-  84              		@ args = 0, pretend = 0, frame = 0
-  85              		@ frame_needed = 1, uses_anonymous_args = 0
-  86 0000 80B5     		push	{r7, lr}
-  87              	.LCFI2:
-  88              		.cfi_def_cfa_offset 8
-  89 0002 00AF     		add	r7, sp, #0
-  90              		.cfi_offset 14, -4
-  91              		.cfi_offset 7, -8
-  92              	.LCFI3:
-  93              		.cfi_def_cfa_register 7
+  78              		.loc 1 109 0
+  79              		.cfi_startproc
+  80              		@ args = 0, pretend = 0, frame = 0
+  81              		@ frame_needed = 1, uses_anonymous_args = 0
+  82              		@ link register save eliminated.
+  83 0000 80B4     		push	{r7}
+  84              	.LCFI2:
+  85              		.cfi_def_cfa_offset 4
+  86 0002 00AF     		add	r7, sp, #0
+  87              		.cfi_offset 7, -4
+  88              	.LCFI3:
+  89              		.cfi_def_cfa_register 7
  110:.\power.c     **** 	/* Select the known voltage source VRef for the ADC */
- 111:.\power.c     **** 	AMux_Select(0);
-  94              		.loc 1 111 0
-  95 0004 4FF00000 		mov	r0, #0
-  96 0008 FFF7FEFF 		bl	AMux_Select
+ 111:.\power.c     **** 	//AMux_Select(0);
  112:.\power.c     **** 	
  113:.\power.c     **** 	/* Calculate the counts for the known voltage source */
- 114:.\power.c     **** 	ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
-  97              		.loc 1 114 0
-  98 000c 4FF00000 		mov	r0, #0
-  99 0010 FFF7FEFF 		bl	ADC_Voltage_Target_IsEndConversion
- 115:.\power.c     **** 	result = ADC_Voltage_Target_GetResult16();
- 100              		.loc 1 115 0
- 101 0014 FFF7FEFF 		bl	ADC_Voltage_Target_GetResult16
- 102 0018 0346     		mov	r3, r0
- 103 001a 9BB2     		uxth	r3, r3
- 104 001c 9AB2     		uxth	r2, r3
- 105 001e 40F20003 		movw	r3, #:lower16:result
- 106 0022 C0F20003 		movt	r3, #:upper16:result
- 107 0026 1A80     		strh	r2, [r3, #0]	@ movhi
+ 114:.\power.c     **** 	//ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
+ 115:.\power.c     **** 	//result = ADC_Voltage_Target_GetResult16();
  116:.\power.c     **** 	
  117:.\power.c     **** 	/* Determine the VDD range based on the count value for known input source */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 5
-
-
  118:.\power.c     **** 	if(result < THRESHOLD)
- 108              		.loc 1 118 0
- 109 0028 40F20003 		movw	r3, #:lower16:result
- 110 002c C0F20003 		movt	r3, #:upper16:result
- 111 0030 1A88     		ldrh	r2, [r3, #0]
- 112 0032 40F2E733 		movw	r3, #999
- 113 0036 9A42     		cmp	r2, r3
- 114 0038 07D8     		bhi	.L4
+  90              		.loc 1 118 0
+  91 0004 40F20003 		movw	r3, #:lower16:result
+  92 0008 C0F20003 		movt	r3, #:upper16:result
+  93 000c 1A88     		ldrh	r2, [r3, #0]
+  94 000e 40F2E733 		movw	r3, #999
+  95 0012 9A42     		cmp	r2, r3
+  96 0014 07D8     		bhi	.L4
  119:.\power.c     **** 	{
  120:.\power.c     **** 		range = RANGE_5V0;
- 115              		.loc 1 120 0
- 116 003a 40F20003 		movw	r3, #:lower16:range
- 117 003e C0F20003 		movt	r3, #:upper16:range
- 118 0042 4FF00102 		mov	r2, #1
- 119 0046 1A70     		strb	r2, [r3, #0]
- 120 0048 06E0     		b	.L6
- 121              	.L4:
+  97              		.loc 1 120 0
+  98 0016 40F20003 		movw	r3, #:lower16:range
+  99 001a C0F20003 		movt	r3, #:upper16:range
+ 100 001e 4FF00102 		mov	r2, #1
+ 101 0022 1A70     		strb	r2, [r3, #0]
+ 102 0024 06E0     		b	.L6
+ 103              	.L4:
  121:.\power.c     **** 	}
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 5
+
+
  122:.\power.c     **** 	else
  123:.\power.c     **** 	{
  124:.\power.c     **** 		range = RANGE_3V3;
- 122              		.loc 1 124 0
- 123 004a 40F20003 		movw	r3, #:lower16:range
- 124 004e C0F20003 		movt	r3, #:upper16:range
- 125 0052 4FF00002 		mov	r2, #0
- 126 0056 1A70     		strb	r2, [r3, #0]
- 127              	.L6:
+ 104              		.loc 1 124 0
+ 105 0026 40F20003 		movw	r3, #:lower16:range
+ 106 002a C0F20003 		movt	r3, #:upper16:range
+ 107 002e 4FF00002 		mov	r2, #0
+ 108 0032 1A70     		strb	r2, [r3, #0]
+ 109              	.L6:
  125:.\power.c     **** 	}
  126:.\power.c     **** }
- 128              		.loc 1 126 0
- 129 0058 80BD     		pop	{r7, pc}
- 130              		.cfi_endproc
- 131              	.LFE30:
- 132              		.size	GetRange, .-GetRange
- 133 005a 00BF     		.section	.text.GetVoltage,"ax",%progbits
- 134              		.align	2
- 135              		.global	GetVoltage
- 136              		.thumb
- 137              		.thumb_func
- 138              		.type	GetVoltage, %function
- 139              	GetVoltage:
- 140              	.LFB31:
+ 110              		.loc 1 126 0
+ 111 0034 BD46     		mov	sp, r7
+ 112 0036 80BC     		pop	{r7}
+ 113 0038 7047     		bx	lr
+ 114              		.cfi_endproc
+ 115              	.LFE30:
+ 116              		.size	GetRange, .-GetRange
+ 117 003a 00BF     		.section	.text.GetVoltage,"ax",%progbits
+ 118              		.align	2
+ 119              		.global	GetVoltage
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.type	GetVoltage, %function
+ 123              	GetVoltage:
+ 124              	.LFB31:
  127:.\power.c     **** /*******************************************************************************
  128:.\power.c     **** * Function Name: GetVoltage()
  129:.\power.c     **** ********************************************************************************
@@ -298,95 +282,87 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  139:.\power.c     **** *******************************************************************************/
  140:.\power.c     **** uint16 GetVoltage(void)
  141:.\power.c     **** {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 6
-
-
- 141              		.loc 1 141 0
- 142              		.cfi_startproc
- 143              		@ args = 0, pretend = 0, frame = 8
- 144              		@ frame_needed = 1, uses_anonymous_args = 0
- 145 0000 80B5     		push	{r7, lr}
- 146              	.LCFI4:
- 147              		.cfi_def_cfa_offset 8
- 148 0002 82B0     		sub	sp, sp, #8
- 149              	.LCFI5:
- 150              		.cfi_def_cfa_offset 16
- 151 0004 00AF     		add	r7, sp, #0
- 152              		.cfi_offset 14, -4
- 153              		.cfi_offset 7, -8
- 154              	.LCFI6:
- 155              		.cfi_def_cfa_register 7
+ 125              		.loc 1 141 0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 8
+ 128              		@ frame_needed = 1, uses_anonymous_args = 0
+ 129 0000 80B5     		push	{r7, lr}
+ 130              	.LCFI4:
+ 131              		.cfi_def_cfa_offset 8
+ 132 0002 82B0     		sub	sp, sp, #8
+ 133              	.LCFI5:
+ 134              		.cfi_def_cfa_offset 16
+ 135 0004 00AF     		add	r7, sp, #0
+ 136              		.cfi_offset 14, -4
+ 137              		.cfi_offset 7, -8
+ 138              	.LCFI6:
+ 139              		.cfi_def_cfa_register 7
  142:.\power.c     **** 	uint16 targetVoltage = ZERO;
- 156              		.loc 1 142 0
- 157 0006 4FF00003 		mov	r3, #0
- 158 000a BB80     		strh	r3, [r7, #4]	@ movhi
- 143:.\power.c     **** 	uint16 targetValue;	
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 6
+
+
+ 140              		.loc 1 142 0
+ 141 0006 4FF00003 		mov	r3, #0
+ 142 000a BB80     		strh	r3, [r7, #4]	@ movhi
+ 143:.\power.c     **** 	uint16 targetValue = ZERO;	
+ 143              		.loc 1 143 0
+ 144 000c 4FF00003 		mov	r3, #0
+ 145 0010 FB80     		strh	r3, [r7, #6]	@ movhi
  144:.\power.c     **** 	
  145:.\power.c     **** 	/* Seelct the Vtarget input */
- 146:.\power.c     **** 	AMux_Select(1);
- 159              		.loc 1 146 0
- 160 000c 4FF00100 		mov	r0, #1
- 161 0010 FFF7FEFF 		bl	AMux_Select
+ 146:.\power.c     **** 	//AMux_Select(1);
  147:.\power.c     **** 	
  148:.\power.c     **** 	/* Calculate the ADC input value */
- 149:.\power.c     **** 	ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
- 162              		.loc 1 149 0
- 163 0014 4FF00000 		mov	r0, #0
- 164 0018 FFF7FEFF 		bl	ADC_Voltage_Target_IsEndConversion
- 150:.\power.c     **** 	targetValue = ADC_Voltage_Target_GetResult16();
- 165              		.loc 1 150 0
- 166 001c FFF7FEFF 		bl	ADC_Voltage_Target_GetResult16
- 167 0020 0346     		mov	r3, r0
- 168 0022 9BB2     		uxth	r3, r3
- 169 0024 FB80     		strh	r3, [r7, #6]	@ movhi
+ 149:.\power.c     **** 	//ADC_Voltage_Target_IsEndConversion(ADC_Voltage_Target_WAIT_FOR_RESULT);
+ 150:.\power.c     **** 	//targetValue = ADC_Voltage_Target_GetResult16();
  151:.\power.c     **** 	
  152:.\power.c     **** 	/* Convert to milliVolts */
  153:.\power.c     **** 	targetVoltage = Convert_To_milliVolts(targetValue);
- 170              		.loc 1 153 0
- 171 0026 FB88     		ldrh	r3, [r7, #6]
- 172 0028 1846     		mov	r0, r3
- 173 002a FFF7FEFF 		bl	Convert_To_milliVolts
- 174 002e 0346     		mov	r3, r0
- 175 0030 BB80     		strh	r3, [r7, #4]	@ movhi
+ 146              		.loc 1 153 0
+ 147 0012 FB88     		ldrh	r3, [r7, #6]
+ 148 0014 1846     		mov	r0, r3
+ 149 0016 FFF7FEFF 		bl	Convert_To_milliVolts
+ 150 001a 0346     		mov	r3, r0
+ 151 001c BB80     		strh	r3, [r7, #4]	@ movhi
  154:.\power.c     **** 	
  155:.\power.c     **** 	/* Account for the resistive divider in the hardware used to sample 
  156:.\power.c     **** 	* the input voltage (1.5K + 3K) */
  157:.\power.c     **** 	targetVoltage = targetVoltage * 3;
- 176              		.loc 1 157 0
- 177 0032 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 178 0034 1A46     		mov	r2, r3	@ movhi
- 179 0036 4FEA4202 		lsl	r2, r2, #1
- 180 003a 1344     		add	r3, r2, r3
- 181 003c BB80     		strh	r3, [r7, #4]	@ movhi
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 7
-
-
+ 152              		.loc 1 157 0
+ 153 001e BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 154 0020 1A46     		mov	r2, r3	@ movhi
+ 155 0022 4FEA4202 		lsl	r2, r2, #1
+ 156 0026 1344     		add	r3, r2, r3
+ 157 0028 BB80     		strh	r3, [r7, #4]	@ movhi
  158:.\power.c     **** 	targetVoltage = targetVoltage/2;
- 182              		.loc 1 158 0
- 183 003e BB88     		ldrh	r3, [r7, #4]
- 184 0040 4FEA5303 		lsr	r3, r3, #1
- 185 0044 BB80     		strh	r3, [r7, #4]	@ movhi
+ 158              		.loc 1 158 0
+ 159 002a BB88     		ldrh	r3, [r7, #4]
+ 160 002c 4FEA5303 		lsr	r3, r3, #1
+ 161 0030 BB80     		strh	r3, [r7, #4]	@ movhi
  159:.\power.c     **** 	
  160:.\power.c     **** 	return(targetVoltage);
- 186              		.loc 1 160 0
- 187 0046 BB88     		ldrh	r3, [r7, #4]
+ 162              		.loc 1 160 0
+ 163 0032 BB88     		ldrh	r3, [r7, #4]
  161:.\power.c     **** }
- 188              		.loc 1 161 0
- 189 0048 1846     		mov	r0, r3
- 190 004a 07F10807 		add	r7, r7, #8
- 191 004e BD46     		mov	sp, r7
- 192 0050 80BD     		pop	{r7, pc}
- 193              		.cfi_endproc
- 194              	.LFE31:
- 195              		.size	GetVoltage, .-GetVoltage
- 196 0052 00BF     		.section	.text.Convert_To_milliVolts,"ax",%progbits
- 197              		.align	2
- 198              		.global	Convert_To_milliVolts
- 199              		.thumb
- 200              		.thumb_func
- 201              		.type	Convert_To_milliVolts, %function
- 202              	Convert_To_milliVolts:
- 203              	.LFB32:
+ 164              		.loc 1 161 0
+ 165 0034 1846     		mov	r0, r3
+ 166 0036 07F10807 		add	r7, r7, #8
+ 167 003a BD46     		mov	sp, r7
+ 168 003c 80BD     		pop	{r7, pc}
+ 169              		.cfi_endproc
+ 170              	.LFE31:
+ 171              		.size	GetVoltage, .-GetVoltage
+ 172 003e 00BF     		.section	.text.Convert_To_milliVolts,"ax",%progbits
+ 173              		.align	2
+ 174              		.global	Convert_To_milliVolts
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.type	Convert_To_milliVolts, %function
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 7
+
+
+ 178              	Convert_To_milliVolts:
+ 179              	.LFB32:
  162:.\power.c     **** /*******************************************************************************
  163:.\power.c     **** * Function Name: Convert_To_milliVolts()
  164:.\power.c     **** ********************************************************************************
@@ -403,99 +379,96 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  175:.\power.c     **** *******************************************************************************/
  176:.\power.c     **** uint16 Convert_To_milliVolts(uint16 counts)
  177:.\power.c     **** {
- 204              		.loc 1 177 0
- 205              		.cfi_startproc
- 206              		@ args = 0, pretend = 0, frame = 16
- 207              		@ frame_needed = 1, uses_anonymous_args = 0
- 208              		@ link register save eliminated.
- 209 0000 80B4     		push	{r7}
- 210              	.LCFI7:
- 211              		.cfi_def_cfa_offset 4
- 212 0002 85B0     		sub	sp, sp, #20
- 213              	.LCFI8:
- 214              		.cfi_def_cfa_offset 24
- 215 0004 00AF     		add	r7, sp, #0
- 216              		.cfi_offset 7, -4
- 217              	.LCFI9:
- 218              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 8
-
-
- 219 0006 0346     		mov	r3, r0
- 220 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 180              		.loc 1 177 0
+ 181              		.cfi_startproc
+ 182              		@ args = 0, pretend = 0, frame = 16
+ 183              		@ frame_needed = 1, uses_anonymous_args = 0
+ 184              		@ link register save eliminated.
+ 185 0000 80B4     		push	{r7}
+ 186              	.LCFI7:
+ 187              		.cfi_def_cfa_offset 4
+ 188 0002 85B0     		sub	sp, sp, #20
+ 189              	.LCFI8:
+ 190              		.cfi_def_cfa_offset 24
+ 191 0004 00AF     		add	r7, sp, #0
+ 192              		.cfi_offset 7, -4
+ 193              	.LCFI9:
+ 194              		.cfi_def_cfa_register 7
+ 195 0006 0346     		mov	r3, r0
+ 196 0008 FB80     		strh	r3, [r7, #6]	@ movhi
  178:.\power.c     **** 	uint16 voltage = ZERO;
- 221              		.loc 1 178 0
- 222 000a 4FF00003 		mov	r3, #0
- 223 000e 7B81     		strh	r3, [r7, #10]	@ movhi
+ 197              		.loc 1 178 0
+ 198 000a 4FF00003 		mov	r3, #0
+ 199 000e 7B81     		strh	r3, [r7, #10]	@ movhi
  179:.\power.c     **** 	uint32 intermediate = ZERO;
- 224              		.loc 1 179 0
- 225 0010 4FF00003 		mov	r3, #0
- 226 0014 FB60     		str	r3, [r7, #12]
+ 200              		.loc 1 179 0
+ 201 0010 4FF00003 		mov	r3, #0
+ 202 0014 FB60     		str	r3, [r7, #12]
  180:.\power.c     **** 	
  181:.\power.c     **** 	/*Convert to millivolts based on the input voltage range */
  182:.\power.c     **** 	if(range == RANGE_5V0)
- 227              		.loc 1 182 0
- 228 0016 40F20003 		movw	r3, #:lower16:range
- 229 001a C0F20003 		movt	r3, #:upper16:range
- 230 001e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 231 0020 012B     		cmp	r3, #1
- 232 0022 06D1     		bne	.L10
+ 203              		.loc 1 182 0
+ 204 0016 40F20003 		movw	r3, #:lower16:range
+ 205 001a C0F20003 		movt	r3, #:upper16:range
+ 206 001e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 207 0020 012B     		cmp	r3, #1
+ 208 0022 06D1     		bne	.L10
  183:.\power.c     **** 	{
  184:.\power.c     **** 		intermediate = counts * FIVE_VOLT_MULTIPLIER;
- 233              		.loc 1 184 0
- 234 0024 FB88     		ldrh	r3, [r7, #6]
- 235 0026 41F28832 		movw	r2, #5000
- 236 002a 02FB03F3 		mul	r3, r2, r3
- 237 002e FB60     		str	r3, [r7, #12]
- 238 0030 05E0     		b	.L11
- 239              	.L10:
+ 209              		.loc 1 184 0
+ 210 0024 FB88     		ldrh	r3, [r7, #6]
+ 211 0026 41F28832 		movw	r2, #5000
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 8
+
+
+ 212 002a 02FB03F3 		mul	r3, r2, r3
+ 213 002e FB60     		str	r3, [r7, #12]
+ 214 0030 05E0     		b	.L11
+ 215              	.L10:
  185:.\power.c     **** 	}
  186:.\power.c     **** 	else
  187:.\power.c     **** 	{
  188:.\power.c     **** 		intermediate = counts * THREE_VOLT_MULTIPLIER;
- 240              		.loc 1 188 0
- 241 0032 FB88     		ldrh	r3, [r7, #6]
- 242 0034 40F6E442 		movw	r2, #3300
- 243 0038 02FB03F3 		mul	r3, r2, r3
- 244 003c FB60     		str	r3, [r7, #12]
- 245              	.L11:
+ 216              		.loc 1 188 0
+ 217 0032 FB88     		ldrh	r3, [r7, #6]
+ 218 0034 40F6E442 		movw	r2, #3300
+ 219 0038 02FB03F3 		mul	r3, r2, r3
+ 220 003c FB60     		str	r3, [r7, #12]
+ 221              	.L11:
  189:.\power.c     **** 	}
  190:.\power.c     **** 	intermediate = intermediate/TWELVE_BIT_DIVIDER;
- 246              		.loc 1 190 0
- 247 003e FB68     		ldr	r3, [r7, #12]
- 248 0040 4FEA1333 		lsr	r3, r3, #12
- 249 0044 FB60     		str	r3, [r7, #12]
+ 222              		.loc 1 190 0
+ 223 003e FB68     		ldr	r3, [r7, #12]
+ 224 0040 4FEA1333 		lsr	r3, r3, #12
+ 225 0044 FB60     		str	r3, [r7, #12]
  191:.\power.c     **** 	
  192:.\power.c     **** 	/* Convert to 16-bit value */
  193:.\power.c     **** 	voltage = (uint16)intermediate;	
- 250              		.loc 1 193 0
- 251 0046 FB68     		ldr	r3, [r7, #12]
- 252 0048 7B81     		strh	r3, [r7, #10]	@ movhi
+ 226              		.loc 1 193 0
+ 227 0046 FB68     		ldr	r3, [r7, #12]
+ 228 0048 7B81     		strh	r3, [r7, #10]	@ movhi
  194:.\power.c     **** 	
  195:.\power.c     **** 	return(voltage);
- 253              		.loc 1 195 0
- 254 004a 7B89     		ldrh	r3, [r7, #10]
+ 229              		.loc 1 195 0
+ 230 004a 7B89     		ldrh	r3, [r7, #10]
  196:.\power.c     **** }
- 255              		.loc 1 196 0
- 256 004c 1846     		mov	r0, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 9
-
-
- 257 004e 07F11407 		add	r7, r7, #20
- 258 0052 BD46     		mov	sp, r7
- 259 0054 80BC     		pop	{r7}
- 260 0056 7047     		bx	lr
- 261              		.cfi_endproc
- 262              	.LFE32:
- 263              		.size	Convert_To_milliVolts, .-Convert_To_milliVolts
- 264              		.section	.text.VoltageMonitorStop,"ax",%progbits
- 265              		.align	2
- 266              		.global	VoltageMonitorStop
- 267              		.thumb
- 268              		.thumb_func
- 269              		.type	VoltageMonitorStop, %function
- 270              	VoltageMonitorStop:
- 271              	.LFB33:
+ 231              		.loc 1 196 0
+ 232 004c 1846     		mov	r0, r3
+ 233 004e 07F11407 		add	r7, r7, #20
+ 234 0052 BD46     		mov	sp, r7
+ 235 0054 80BC     		pop	{r7}
+ 236 0056 7047     		bx	lr
+ 237              		.cfi_endproc
+ 238              	.LFE32:
+ 239              		.size	Convert_To_milliVolts, .-Convert_To_milliVolts
+ 240              		.section	.text.VoltageMonitorStop,"ax",%progbits
+ 241              		.align	2
+ 242              		.global	VoltageMonitorStop
+ 243              		.thumb
+ 244              		.thumb_func
+ 245              		.type	VoltageMonitorStop, %function
+ 246              	VoltageMonitorStop:
+ 247              	.LFB33:
  197:.\power.c     **** /*******************************************************************************
  198:.\power.c     **** * Function Name: VoltageMonitorStop()
  199:.\power.c     **** ********************************************************************************
@@ -505,44 +478,44 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  203:.\power.c     **** * Parameters:
  204:.\power.c     **** *  None
  205:.\power.c     **** *
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 9
+
+
  206:.\power.c     **** * Return:
  207:.\power.c     **** *  None
  208:.\power.c     **** *
  209:.\power.c     **** *******************************************************************************/
  210:.\power.c     **** void VoltageMonitorStop(void)
  211:.\power.c     **** {
- 272              		.loc 1 211 0
- 273              		.cfi_startproc
- 274              		@ args = 0, pretend = 0, frame = 0
- 275              		@ frame_needed = 1, uses_anonymous_args = 0
- 276 0000 80B5     		push	{r7, lr}
- 277              	.LCFI10:
- 278              		.cfi_def_cfa_offset 8
- 279 0002 00AF     		add	r7, sp, #0
- 280              		.cfi_offset 14, -4
- 281              		.cfi_offset 7, -8
- 282              	.LCFI11:
- 283              		.cfi_def_cfa_register 7
- 212:.\power.c     **** 	ADC_Voltage_Target_Sleep();
- 284              		.loc 1 212 0
- 285 0004 FFF7FEFF 		bl	ADC_Voltage_Target_Sleep
+ 248              		.loc 1 211 0
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 1, uses_anonymous_args = 0
+ 252              		@ link register save eliminated.
+ 253 0000 80B4     		push	{r7}
+ 254              	.LCFI10:
+ 255              		.cfi_def_cfa_offset 4
+ 256 0002 00AF     		add	r7, sp, #0
+ 257              		.cfi_offset 7, -4
+ 258              	.LCFI11:
+ 259              		.cfi_def_cfa_register 7
+ 212:.\power.c     **** 	//ADC_Voltage_Target_Sleep();
  213:.\power.c     **** }
- 286              		.loc 1 213 0
- 287 0008 80BD     		pop	{r7, pc}
- 288              		.cfi_endproc
- 289              	.LFE33:
- 290              		.size	VoltageMonitorStop, .-VoltageMonitorStop
- 291 000a 00BF     		.section	.text.SendPSoCToSleep,"ax",%progbits
- 292              		.align	2
- 293              		.global	SendPSoCToSleep
- 294              		.thumb
- 295              		.thumb_func
- 296              		.type	SendPSoCToSleep, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 10
-
-
- 297              	SendPSoCToSleep:
- 298              	.LFB34:
+ 260              		.loc 1 213 0
+ 261 0004 BD46     		mov	sp, r7
+ 262 0006 80BC     		pop	{r7}
+ 263 0008 7047     		bx	lr
+ 264              		.cfi_endproc
+ 265              	.LFE33:
+ 266              		.size	VoltageMonitorStop, .-VoltageMonitorStop
+ 267 000a 00BF     		.section	.text.SendPSoCToSleep,"ax",%progbits
+ 268              		.align	2
+ 269              		.global	SendPSoCToSleep
+ 270              		.thumb
+ 271              		.thumb_func
+ 272              		.type	SendPSoCToSleep, %function
+ 273              	SendPSoCToSleep:
+ 274              	.LFB34:
  214:.\power.c     **** /*******************************************************************************
  215:.\power.c     **** * Function Name: SendPSoCToSleep()
  216:.\power.c     **** ********************************************************************************
@@ -558,65 +531,65 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  226:.\power.c     **** *******************************************************************************/
  227:.\power.c     **** void SendPSoCToSleep(void)
  228:.\power.c     **** {
- 299              		.loc 1 228 0
- 300              		.cfi_startproc
- 301              		@ args = 0, pretend = 0, frame = 0
- 302              		@ frame_needed = 1, uses_anonymous_args = 0
- 303 0000 80B5     		push	{r7, lr}
- 304              	.LCFI12:
- 305              		.cfi_def_cfa_offset 8
- 306 0002 00AF     		add	r7, sp, #0
- 307              		.cfi_offset 14, -4
- 308              		.cfi_offset 7, -8
- 309              	.LCFI13:
- 310              		.cfi_def_cfa_register 7
+ 275              		.loc 1 228 0
+ 276              		.cfi_startproc
+ 277              		@ args = 0, pretend = 0, frame = 0
+ 278              		@ frame_needed = 1, uses_anonymous_args = 0
+ 279 0000 80B5     		push	{r7, lr}
+ 280              	.LCFI12:
+ 281              		.cfi_def_cfa_offset 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 10
+
+
+ 282 0002 00AF     		add	r7, sp, #0
+ 283              		.cfi_offset 14, -4
+ 284              		.cfi_offset 7, -8
+ 285              	.LCFI13:
+ 286              		.cfi_def_cfa_register 7
  229:.\power.c     **** 	Pin_StatusLED_Write(1);
- 311              		.loc 1 229 0
- 312 0004 4FF00100 		mov	r0, #1
- 313 0008 FFF7FEFF 		bl	Pin_StatusLED_Write
+ 287              		.loc 1 229 0
+ 288 0004 4FF00100 		mov	r0, #1
+ 289 0008 FFF7FEFF 		bl	Pin_StatusLED_Write
  230:.\power.c     **** 	Timer_UsbSuspend_Stop();	
- 314              		.loc 1 230 0
- 315 000c FFF7FEFF 		bl	Timer_UsbSuspend_Stop
+ 290              		.loc 1 230 0
+ 291 000c FFF7FEFF 		bl	Timer_UsbSuspend_Stop
  231:.\power.c     **** 	UART_Bridge_Stop();
- 316              		.loc 1 231 0
- 317 0010 FFF7FEFF 		bl	UART_Bridge_Stop
+ 292              		.loc 1 231 0
+ 293 0010 FFF7FEFF 		bl	UART_Bridge_Stop
  232:.\power.c     ****     VoltageMonitorStop();
- 318              		.loc 1 232 0
- 319 0014 FFF7FEFF 		bl	VoltageMonitorStop
+ 294              		.loc 1 232 0
+ 295 0014 FFF7FEFF 		bl	VoltageMonitorStop
  233:.\power.c     **** 	SWDHalt();
- 320              		.loc 1 233 0
- 321 0018 FFF7FEFF 		bl	SWDHalt
+ 296              		.loc 1 233 0
+ 297 0018 FFF7FEFF 		bl	SWDHalt
  234:.\power.c     **** 	HostCommStop();
- 322              		.loc 1 234 0
- 323 001c FFF7FEFF 		bl	HostCommStop
+ 298              		.loc 1 234 0
+ 299 001c FFF7FEFF 		bl	HostCommStop
  235:.\power.c     **** 	I2CPullUpDisable();		
- 324              		.loc 1 235 0
- 325 0020 FFF7FEFF 		bl	I2CPullUpDisable
+ 300              		.loc 1 235 0
+ 301 0020 FFF7FEFF 		bl	I2CPullUpDisable
  236:.\power.c     **** 	CyPmSaveClocks();
- 326              		.loc 1 236 0
- 327 0024 FFF7FEFF 		bl	CyPmSaveClocks
+ 302              		.loc 1 236 0
+ 303 0024 FFF7FEFF 		bl	CyPmSaveClocks
  237:.\power.c     **** 	CyPmSleep(PM_SLEEP_TIME_NONE, PM_SLEEP_SRC_PICU);	
- 328              		.loc 1 237 0
- 329 0028 4FF00000 		mov	r0, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 11
-
-
- 330 002c 4FF04001 		mov	r1, #64
- 331 0030 FFF7FEFF 		bl	CyPmSleep
+ 304              		.loc 1 237 0
+ 305 0028 4FF00000 		mov	r0, #0
+ 306 002c 4FF04001 		mov	r1, #64
+ 307 0030 FFF7FEFF 		bl	CyPmSleep
  238:.\power.c     **** }
- 332              		.loc 1 238 0
- 333 0034 80BD     		pop	{r7, pc}
- 334              		.cfi_endproc
- 335              	.LFE34:
- 336              		.size	SendPSoCToSleep, .-SendPSoCToSleep
- 337              		.section	.text.ResumeFromSleep,"ax",%progbits
- 338              		.align	2
- 339              		.global	ResumeFromSleep
- 340              		.thumb
- 341              		.thumb_func
- 342              		.type	ResumeFromSleep, %function
- 343              	ResumeFromSleep:
- 344              	.LFB35:
+ 308              		.loc 1 238 0
+ 309 0034 80BD     		pop	{r7, pc}
+ 310              		.cfi_endproc
+ 311              	.LFE34:
+ 312              		.size	SendPSoCToSleep, .-SendPSoCToSleep
+ 313              		.section	.text.ResumeFromSleep,"ax",%progbits
+ 314              		.align	2
+ 315              		.global	ResumeFromSleep
+ 316              		.thumb
+ 317              		.thumb_func
+ 318              		.type	ResumeFromSleep, %function
+ 319              	ResumeFromSleep:
+ 320              	.LFB35:
  239:.\power.c     **** /*******************************************************************************
  240:.\power.c     **** * Function Name: ResumeFromSleep()
  241:.\power.c     **** ********************************************************************************
@@ -625,6 +598,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  244:.\power.c     **** *
  245:.\power.c     **** * Parameters:
  246:.\power.c     **** *  None
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 11
+
+
  247:.\power.c     **** *
  248:.\power.c     **** * Return:
  249:.\power.c     **** *  None
@@ -632,73 +608,69 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  251:.\power.c     **** *******************************************************************************/
  252:.\power.c     **** void ResumeFromSleep(void)
  253:.\power.c     **** {
- 345              		.loc 1 253 0
- 346              		.cfi_startproc
- 347              		@ args = 0, pretend = 0, frame = 0
- 348              		@ frame_needed = 1, uses_anonymous_args = 0
- 349 0000 80B5     		push	{r7, lr}
- 350              	.LCFI14:
- 351              		.cfi_def_cfa_offset 8
- 352 0002 00AF     		add	r7, sp, #0
- 353              		.cfi_offset 14, -4
- 354              		.cfi_offset 7, -8
- 355              	.LCFI15:
- 356              		.cfi_def_cfa_register 7
+ 321              		.loc 1 253 0
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 0
+ 324              		@ frame_needed = 1, uses_anonymous_args = 0
+ 325 0000 80B5     		push	{r7, lr}
+ 326              	.LCFI14:
+ 327              		.cfi_def_cfa_offset 8
+ 328 0002 00AF     		add	r7, sp, #0
+ 329              		.cfi_offset 14, -4
+ 330              		.cfi_offset 7, -8
+ 331              	.LCFI15:
+ 332              		.cfi_def_cfa_register 7
  254:.\power.c     **** 	CyPmRestoreClocks();
- 357              		.loc 1 254 0
- 358 0004 FFF7FEFF 		bl	CyPmRestoreClocks
+ 333              		.loc 1 254 0
+ 334 0004 FFF7FEFF 		bl	CyPmRestoreClocks
  255:.\power.c     **** 	ProgramInit();
- 359              		.loc 1 255 0
- 360 0008 FFF7FEFF 		bl	ProgramInit
+ 335              		.loc 1 255 0
+ 336 0008 FFF7FEFF 		bl	ProgramInit
  256:.\power.c     **** 	HostCommInit();
- 361              		.loc 1 256 0
- 362 000c FFF7FEFF 		bl	HostCommInit
+ 337              		.loc 1 256 0
+ 338 000c FFF7FEFF 		bl	HostCommInit
  257:.\power.c     **** 	SWDInit();
- 363              		.loc 1 257 0
- 364 0010 FFF7FEFF 		bl	SWDInit
- 258:.\power.c     **** 	ADC_Voltage_Target_Wakeup();
- 365              		.loc 1 258 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 12
-
-
- 366 0014 FFF7FEFF 		bl	ADC_Voltage_Target_Wakeup
- 259:.\power.c     **** 	ADC_Voltage_Target_StartConvert();
- 367              		.loc 1 259 0
- 368 0018 FFF7FEFF 		bl	ADC_Voltage_Target_StartConvert
+ 339              		.loc 1 257 0
+ 340 0010 FFF7FEFF 		bl	SWDInit
+ 258:.\power.c     **** 	//ADC_Voltage_Target_Wakeup();
+ 259:.\power.c     **** 	//ADC_Voltage_Target_StartConvert();
  260:.\power.c     **** 	
  261:.\power.c     **** 	/* Initializes USB-UART interface */
  262:.\power.c     ****     USBUARTInit();
- 369              		.loc 1 262 0
- 370 001c FFF7FEFF 		bl	USBUARTInit
+ 341              		.loc 1 262 0
+ 342 0014 FFF7FEFF 		bl	USBUARTInit
  263:.\power.c     **** 	
  264:.\power.c     **** 	/* Initializes the timer for handling the USBFS Suspend Activity */
  265:.\power.c     **** 	Timer_UsbSuspend_Start();
- 371              		.loc 1 265 0
- 372 0020 FFF7FEFF 		bl	Timer_UsbSuspend_Start
+ 343              		.loc 1 265 0
+ 344 0018 FFF7FEFF 		bl	Timer_UsbSuspend_Start
  266:.\power.c     **** 	bUSBResetDetected = TRUE;
- 373              		.loc 1 266 0
- 374 0024 40F20003 		movw	r3, #:lower16:bUSBResetDetected
- 375 0028 C0F20003 		movt	r3, #:upper16:bUSBResetDetected
- 376 002c 4FF00102 		mov	r2, #1
- 377 0030 1A70     		strb	r2, [r3, #0]
+ 345              		.loc 1 266 0
+ 346 001c 40F20003 		movw	r3, #:lower16:bUSBResetDetected
+ 347 0020 C0F20003 		movt	r3, #:upper16:bUSBResetDetected
+ 348 0024 4FF00102 		mov	r2, #1
+ 349 0028 1A70     		strb	r2, [r3, #0]
  267:.\power.c     **** 	Pin_StatusLED_Write(0);
- 378              		.loc 1 267 0
- 379 0032 4FF00000 		mov	r0, #0
- 380 0036 FFF7FEFF 		bl	Pin_StatusLED_Write
+ 350              		.loc 1 267 0
+ 351 002a 4FF00000 		mov	r0, #0
+ 352 002e FFF7FEFF 		bl	Pin_StatusLED_Write
  268:.\power.c     **** }
- 381              		.loc 1 268 0
- 382 003a 80BD     		pop	{r7, pc}
- 383              		.cfi_endproc
- 384              	.LFE35:
- 385              		.size	ResumeFromSleep, .-ResumeFromSleep
- 386              		.section	.text.HandleUSBSuspend,"ax",%progbits
- 387              		.align	2
- 388              		.global	HandleUSBSuspend
- 389              		.thumb
- 390              		.thumb_func
- 391              		.type	HandleUSBSuspend, %function
- 392              	HandleUSBSuspend:
- 393              	.LFB36:
+ 353              		.loc 1 268 0
+ 354 0032 80BD     		pop	{r7, pc}
+ 355              		.cfi_endproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 12
+
+
+ 356              	.LFE35:
+ 357              		.size	ResumeFromSleep, .-ResumeFromSleep
+ 358              		.section	.text.HandleUSBSuspend,"ax",%progbits
+ 359              		.align	2
+ 360              		.global	HandleUSBSuspend
+ 361              		.thumb
+ 362              		.thumb_func
+ 363              		.type	HandleUSBSuspend, %function
+ 364              	HandleUSBSuspend:
+ 365              	.LFB36:
  269:.\power.c     **** /*******************************************************************************
  270:.\power.c     **** * Function Name: HandleUSBSuspend()
  271:.\power.c     **** ********************************************************************************
@@ -714,1014 +686,1014 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 1
  281:.\power.c     **** *******************************************************************************/
  282:.\power.c     **** void HandleUSBSuspend(void)
  283:.\power.c     **** {
- 394              		.loc 1 283 0
- 395              		.cfi_startproc
- 396              		@ args = 0, pretend = 0, frame = 0
- 397              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 13
-
-
- 398 0000 80B5     		push	{r7, lr}
- 399              	.LCFI16:
- 400              		.cfi_def_cfa_offset 8
- 401 0002 00AF     		add	r7, sp, #0
- 402              		.cfi_offset 14, -4
- 403              		.cfi_offset 7, -8
- 404              	.LCFI17:
- 405              		.cfi_def_cfa_register 7
+ 366              		.loc 1 283 0
+ 367              		.cfi_startproc
+ 368              		@ args = 0, pretend = 0, frame = 0
+ 369              		@ frame_needed = 1, uses_anonymous_args = 0
+ 370 0000 80B5     		push	{r7, lr}
+ 371              	.LCFI16:
+ 372              		.cfi_def_cfa_offset 8
+ 373 0002 00AF     		add	r7, sp, #0
+ 374              		.cfi_offset 14, -4
+ 375              		.cfi_offset 7, -8
+ 376              	.LCFI17:
+ 377              		.cfi_def_cfa_register 7
  284:.\power.c     **** 	if(checkActivityFlag == TRUE)
- 406              		.loc 1 284 0
- 407 0004 40F20003 		movw	r3, #:lower16:checkActivityFlag
- 408 0008 C0F20003 		movt	r3, #:upper16:checkActivityFlag
- 409 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
- 410 000e 012B     		cmp	r3, #1
- 411 0010 13D1     		bne	.L22
+ 378              		.loc 1 284 0
+ 379 0004 40F20003 		movw	r3, #:lower16:checkActivityFlag
+ 380 0008 C0F20003 		movt	r3, #:upper16:checkActivityFlag
+ 381 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 382 000e 012B     		cmp	r3, #1
+ 383 0010 13D1     		bne	.L22
  285:.\power.c     **** 	{	
  286:.\power.c     **** 		if(USBFS_CheckActivity() == 0)
- 412              		.loc 1 286 0
- 413 0012 FFF7FEFF 		bl	USBFS_CheckActivity
- 414 0016 0346     		mov	r3, r0
- 415 0018 002B     		cmp	r3, #0
- 416 001a 07D1     		bne	.L21
+ 384              		.loc 1 286 0
+ 385 0012 FFF7FEFF 		bl	USBFS_CheckActivity
+ 386 0016 0346     		mov	r3, r0
+ 387 0018 002B     		cmp	r3, #0
+ 388 001a 07D1     		bne	.L21
  287:.\power.c     **** 		{
  288:.\power.c     **** 
  289:.\power.c     **** 			USBFS_Suspend();
- 417              		.loc 1 289 0
- 418 001c FFF7FEFF 		bl	USBFS_Suspend
+ 389              		.loc 1 289 0
+ 390 001c FFF7FEFF 		bl	USBFS_Suspend
  290:.\power.c     **** 			SendPSoCToSleep();
- 419              		.loc 1 290 0
- 420 0020 FFF7FEFF 		bl	SendPSoCToSleep
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 13
+
+
+ 391              		.loc 1 290 0
+ 392 0020 FFF7FEFF 		bl	SendPSoCToSleep
  291:.\power.c     **** 			ResumeFromSleep();
- 421              		.loc 1 291 0
- 422 0024 FFF7FEFF 		bl	ResumeFromSleep
+ 393              		.loc 1 291 0
+ 394 0024 FFF7FEFF 		bl	ResumeFromSleep
  292:.\power.c     **** 			USBFS_Resume();
- 423              		.loc 1 292 0
- 424 0028 FFF7FEFF 		bl	USBFS_Resume
- 425              	.L21:
+ 395              		.loc 1 292 0
+ 396 0028 FFF7FEFF 		bl	USBFS_Resume
+ 397              	.L21:
  293:.\power.c     **** 		}
  294:.\power.c     **** 		else
  295:.\power.c     **** 		{
  296:.\power.c     **** 			/* Do nothing */
  297:.\power.c     **** 		}
  298:.\power.c     **** 		checkActivityFlag = FALSE;
- 426              		.loc 1 298 0
- 427 002c 40F20003 		movw	r3, #:lower16:checkActivityFlag
- 428 0030 C0F20003 		movt	r3, #:upper16:checkActivityFlag
- 429 0034 4FF00002 		mov	r2, #0
- 430 0038 1A70     		strb	r2, [r3, #0]
- 431              	.L22:
+ 398              		.loc 1 298 0
+ 399 002c 40F20003 		movw	r3, #:lower16:checkActivityFlag
+ 400 0030 C0F20003 		movt	r3, #:upper16:checkActivityFlag
+ 401 0034 4FF00002 		mov	r2, #0
+ 402 0038 1A70     		strb	r2, [r3, #0]
+ 403              	.L22:
  299:.\power.c     **** 	}
  300:.\power.c     **** }
- 432              		.loc 1 300 0
- 433 003a 80BD     		pop	{r7, pc}
- 434              		.cfi_endproc
- 435              	.LFE36:
- 436              		.size	HandleUSBSuspend, .-HandleUSBSuspend
- 437              		.text
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 14
+ 404              		.loc 1 300 0
+ 405 003a 80BD     		pop	{r7, pc}
+ 406              		.cfi_endproc
+ 407              	.LFE36:
+ 408              		.size	HandleUSBSuspend, .-HandleUSBSuspend
+ 409              		.text
+ 410              	.Letext0:
+ 411              		.section	.debug_loc,"",%progbits
+ 412              	.Ldebug_loc0:
+ 413              	.LLST0:
+ 414 0000 00000000 		.4byte	.LFB29
+ 415 0004 02000000 		.4byte	.LCFI0
+ 416 0008 0100     		.2byte	0x1
+ 417 000a 5D       		.byte	0x5d
+ 418 000b 02000000 		.4byte	.LCFI0
+ 419 000f 04000000 		.4byte	.LCFI1
+ 420 0013 0200     		.2byte	0x2
+ 421 0015 7D       		.byte	0x7d
+ 422 0016 08       		.sleb128 8
+ 423 0017 04000000 		.4byte	.LCFI1
+ 424 001b 0A000000 		.4byte	.LFE29
+ 425 001f 0200     		.2byte	0x2
+ 426 0021 77       		.byte	0x77
+ 427 0022 08       		.sleb128 8
+ 428 0023 00000000 		.4byte	0x0
+ 429 0027 00000000 		.4byte	0x0
+ 430              	.LLST1:
+ 431 002b 00000000 		.4byte	.LFB30
+ 432 002f 02000000 		.4byte	.LCFI2
+ 433 0033 0100     		.2byte	0x1
+ 434 0035 5D       		.byte	0x5d
+ 435 0036 02000000 		.4byte	.LCFI2
+ 436 003a 04000000 		.4byte	.LCFI3
+ 437 003e 0200     		.2byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 14
 
 
- 438              	.Letext0:
- 439              		.section	.debug_loc,"",%progbits
- 440              	.Ldebug_loc0:
- 441              	.LLST0:
- 442 0000 00000000 		.4byte	.LFB29
- 443 0004 02000000 		.4byte	.LCFI0
- 444 0008 0100     		.2byte	0x1
- 445 000a 5D       		.byte	0x5d
- 446 000b 02000000 		.4byte	.LCFI0
- 447 000f 04000000 		.4byte	.LCFI1
- 448 0013 0200     		.2byte	0x2
- 449 0015 7D       		.byte	0x7d
- 450 0016 08       		.sleb128 8
- 451 0017 04000000 		.4byte	.LCFI1
- 452 001b 12000000 		.4byte	.LFE29
- 453 001f 0200     		.2byte	0x2
- 454 0021 77       		.byte	0x77
- 455 0022 08       		.sleb128 8
- 456 0023 00000000 		.4byte	0x0
- 457 0027 00000000 		.4byte	0x0
- 458              	.LLST1:
- 459 002b 00000000 		.4byte	.LFB30
- 460 002f 02000000 		.4byte	.LCFI2
- 461 0033 0100     		.2byte	0x1
- 462 0035 5D       		.byte	0x5d
- 463 0036 02000000 		.4byte	.LCFI2
- 464 003a 04000000 		.4byte	.LCFI3
- 465 003e 0200     		.2byte	0x2
- 466 0040 7D       		.byte	0x7d
- 467 0041 08       		.sleb128 8
- 468 0042 04000000 		.4byte	.LCFI3
- 469 0046 5A000000 		.4byte	.LFE30
- 470 004a 0200     		.2byte	0x2
- 471 004c 77       		.byte	0x77
- 472 004d 08       		.sleb128 8
- 473 004e 00000000 		.4byte	0x0
- 474 0052 00000000 		.4byte	0x0
- 475              	.LLST2:
- 476 0056 00000000 		.4byte	.LFB31
- 477 005a 02000000 		.4byte	.LCFI4
- 478 005e 0100     		.2byte	0x1
- 479 0060 5D       		.byte	0x5d
- 480 0061 02000000 		.4byte	.LCFI4
- 481 0065 04000000 		.4byte	.LCFI5
- 482 0069 0200     		.2byte	0x2
- 483 006b 7D       		.byte	0x7d
- 484 006c 08       		.sleb128 8
- 485 006d 04000000 		.4byte	.LCFI5
- 486 0071 06000000 		.4byte	.LCFI6
- 487 0075 0200     		.2byte	0x2
- 488 0077 7D       		.byte	0x7d
- 489 0078 10       		.sleb128 16
- 490 0079 06000000 		.4byte	.LCFI6
- 491 007d 52000000 		.4byte	.LFE31
- 492 0081 0200     		.2byte	0x2
- 493 0083 77       		.byte	0x77
- 494 0084 10       		.sleb128 16
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 15
+ 438 0040 7D       		.byte	0x7d
+ 439 0041 04       		.sleb128 4
+ 440 0042 04000000 		.4byte	.LCFI3
+ 441 0046 3A000000 		.4byte	.LFE30
+ 442 004a 0200     		.2byte	0x2
+ 443 004c 77       		.byte	0x77
+ 444 004d 04       		.sleb128 4
+ 445 004e 00000000 		.4byte	0x0
+ 446 0052 00000000 		.4byte	0x0
+ 447              	.LLST2:
+ 448 0056 00000000 		.4byte	.LFB31
+ 449 005a 02000000 		.4byte	.LCFI4
+ 450 005e 0100     		.2byte	0x1
+ 451 0060 5D       		.byte	0x5d
+ 452 0061 02000000 		.4byte	.LCFI4
+ 453 0065 04000000 		.4byte	.LCFI5
+ 454 0069 0200     		.2byte	0x2
+ 455 006b 7D       		.byte	0x7d
+ 456 006c 08       		.sleb128 8
+ 457 006d 04000000 		.4byte	.LCFI5
+ 458 0071 06000000 		.4byte	.LCFI6
+ 459 0075 0200     		.2byte	0x2
+ 460 0077 7D       		.byte	0x7d
+ 461 0078 10       		.sleb128 16
+ 462 0079 06000000 		.4byte	.LCFI6
+ 463 007d 3E000000 		.4byte	.LFE31
+ 464 0081 0200     		.2byte	0x2
+ 465 0083 77       		.byte	0x77
+ 466 0084 10       		.sleb128 16
+ 467 0085 00000000 		.4byte	0x0
+ 468 0089 00000000 		.4byte	0x0
+ 469              	.LLST3:
+ 470 008d 00000000 		.4byte	.LFB32
+ 471 0091 02000000 		.4byte	.LCFI7
+ 472 0095 0100     		.2byte	0x1
+ 473 0097 5D       		.byte	0x5d
+ 474 0098 02000000 		.4byte	.LCFI7
+ 475 009c 04000000 		.4byte	.LCFI8
+ 476 00a0 0200     		.2byte	0x2
+ 477 00a2 7D       		.byte	0x7d
+ 478 00a3 04       		.sleb128 4
+ 479 00a4 04000000 		.4byte	.LCFI8
+ 480 00a8 06000000 		.4byte	.LCFI9
+ 481 00ac 0200     		.2byte	0x2
+ 482 00ae 7D       		.byte	0x7d
+ 483 00af 18       		.sleb128 24
+ 484 00b0 06000000 		.4byte	.LCFI9
+ 485 00b4 58000000 		.4byte	.LFE32
+ 486 00b8 0200     		.2byte	0x2
+ 487 00ba 77       		.byte	0x77
+ 488 00bb 18       		.sleb128 24
+ 489 00bc 00000000 		.4byte	0x0
+ 490 00c0 00000000 		.4byte	0x0
+ 491              	.LLST4:
+ 492 00c4 00000000 		.4byte	.LFB33
+ 493 00c8 02000000 		.4byte	.LCFI10
+ 494 00cc 0100     		.2byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 15
 
 
- 495 0085 00000000 		.4byte	0x0
- 496 0089 00000000 		.4byte	0x0
- 497              	.LLST3:
- 498 008d 00000000 		.4byte	.LFB32
- 499 0091 02000000 		.4byte	.LCFI7
- 500 0095 0100     		.2byte	0x1
- 501 0097 5D       		.byte	0x5d
- 502 0098 02000000 		.4byte	.LCFI7
- 503 009c 04000000 		.4byte	.LCFI8
- 504 00a0 0200     		.2byte	0x2
- 505 00a2 7D       		.byte	0x7d
- 506 00a3 04       		.sleb128 4
- 507 00a4 04000000 		.4byte	.LCFI8
- 508 00a8 06000000 		.4byte	.LCFI9
- 509 00ac 0200     		.2byte	0x2
- 510 00ae 7D       		.byte	0x7d
- 511 00af 18       		.sleb128 24
- 512 00b0 06000000 		.4byte	.LCFI9
- 513 00b4 58000000 		.4byte	.LFE32
- 514 00b8 0200     		.2byte	0x2
- 515 00ba 77       		.byte	0x77
- 516 00bb 18       		.sleb128 24
- 517 00bc 00000000 		.4byte	0x0
- 518 00c0 00000000 		.4byte	0x0
- 519              	.LLST4:
- 520 00c4 00000000 		.4byte	.LFB33
- 521 00c8 02000000 		.4byte	.LCFI10
- 522 00cc 0100     		.2byte	0x1
- 523 00ce 5D       		.byte	0x5d
- 524 00cf 02000000 		.4byte	.LCFI10
- 525 00d3 04000000 		.4byte	.LCFI11
- 526 00d7 0200     		.2byte	0x2
- 527 00d9 7D       		.byte	0x7d
- 528 00da 08       		.sleb128 8
- 529 00db 04000000 		.4byte	.LCFI11
- 530 00df 0A000000 		.4byte	.LFE33
- 531 00e3 0200     		.2byte	0x2
- 532 00e5 77       		.byte	0x77
- 533 00e6 08       		.sleb128 8
- 534 00e7 00000000 		.4byte	0x0
- 535 00eb 00000000 		.4byte	0x0
- 536              	.LLST5:
- 537 00ef 00000000 		.4byte	.LFB34
- 538 00f3 02000000 		.4byte	.LCFI12
- 539 00f7 0100     		.2byte	0x1
- 540 00f9 5D       		.byte	0x5d
- 541 00fa 02000000 		.4byte	.LCFI12
- 542 00fe 04000000 		.4byte	.LCFI13
- 543 0102 0200     		.2byte	0x2
- 544 0104 7D       		.byte	0x7d
- 545 0105 08       		.sleb128 8
- 546 0106 04000000 		.4byte	.LCFI13
- 547 010a 36000000 		.4byte	.LFE34
- 548 010e 0200     		.2byte	0x2
- 549 0110 77       		.byte	0x77
- 550 0111 08       		.sleb128 8
- 551 0112 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 16
+ 495 00ce 5D       		.byte	0x5d
+ 496 00cf 02000000 		.4byte	.LCFI10
+ 497 00d3 04000000 		.4byte	.LCFI11
+ 498 00d7 0200     		.2byte	0x2
+ 499 00d9 7D       		.byte	0x7d
+ 500 00da 04       		.sleb128 4
+ 501 00db 04000000 		.4byte	.LCFI11
+ 502 00df 0A000000 		.4byte	.LFE33
+ 503 00e3 0200     		.2byte	0x2
+ 504 00e5 77       		.byte	0x77
+ 505 00e6 04       		.sleb128 4
+ 506 00e7 00000000 		.4byte	0x0
+ 507 00eb 00000000 		.4byte	0x0
+ 508              	.LLST5:
+ 509 00ef 00000000 		.4byte	.LFB34
+ 510 00f3 02000000 		.4byte	.LCFI12
+ 511 00f7 0100     		.2byte	0x1
+ 512 00f9 5D       		.byte	0x5d
+ 513 00fa 02000000 		.4byte	.LCFI12
+ 514 00fe 04000000 		.4byte	.LCFI13
+ 515 0102 0200     		.2byte	0x2
+ 516 0104 7D       		.byte	0x7d
+ 517 0105 08       		.sleb128 8
+ 518 0106 04000000 		.4byte	.LCFI13
+ 519 010a 36000000 		.4byte	.LFE34
+ 520 010e 0200     		.2byte	0x2
+ 521 0110 77       		.byte	0x77
+ 522 0111 08       		.sleb128 8
+ 523 0112 00000000 		.4byte	0x0
+ 524 0116 00000000 		.4byte	0x0
+ 525              	.LLST6:
+ 526 011a 00000000 		.4byte	.LFB35
+ 527 011e 02000000 		.4byte	.LCFI14
+ 528 0122 0100     		.2byte	0x1
+ 529 0124 5D       		.byte	0x5d
+ 530 0125 02000000 		.4byte	.LCFI14
+ 531 0129 04000000 		.4byte	.LCFI15
+ 532 012d 0200     		.2byte	0x2
+ 533 012f 7D       		.byte	0x7d
+ 534 0130 08       		.sleb128 8
+ 535 0131 04000000 		.4byte	.LCFI15
+ 536 0135 34000000 		.4byte	.LFE35
+ 537 0139 0200     		.2byte	0x2
+ 538 013b 77       		.byte	0x77
+ 539 013c 08       		.sleb128 8
+ 540 013d 00000000 		.4byte	0x0
+ 541 0141 00000000 		.4byte	0x0
+ 542              	.LLST7:
+ 543 0145 00000000 		.4byte	.LFB36
+ 544 0149 02000000 		.4byte	.LCFI16
+ 545 014d 0100     		.2byte	0x1
+ 546 014f 5D       		.byte	0x5d
+ 547 0150 02000000 		.4byte	.LCFI16
+ 548 0154 04000000 		.4byte	.LCFI17
+ 549 0158 0200     		.2byte	0x2
+ 550 015a 7D       		.byte	0x7d
+ 551 015b 08       		.sleb128 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 16
 
 
- 552 0116 00000000 		.4byte	0x0
- 553              	.LLST6:
- 554 011a 00000000 		.4byte	.LFB35
- 555 011e 02000000 		.4byte	.LCFI14
- 556 0122 0100     		.2byte	0x1
- 557 0124 5D       		.byte	0x5d
- 558 0125 02000000 		.4byte	.LCFI14
- 559 0129 04000000 		.4byte	.LCFI15
- 560 012d 0200     		.2byte	0x2
- 561 012f 7D       		.byte	0x7d
- 562 0130 08       		.sleb128 8
- 563 0131 04000000 		.4byte	.LCFI15
- 564 0135 3C000000 		.4byte	.LFE35
- 565 0139 0200     		.2byte	0x2
- 566 013b 77       		.byte	0x77
- 567 013c 08       		.sleb128 8
- 568 013d 00000000 		.4byte	0x0
- 569 0141 00000000 		.4byte	0x0
- 570              	.LLST7:
- 571 0145 00000000 		.4byte	.LFB36
- 572 0149 02000000 		.4byte	.LCFI16
- 573 014d 0100     		.2byte	0x1
- 574 014f 5D       		.byte	0x5d
- 575 0150 02000000 		.4byte	.LCFI16
- 576 0154 04000000 		.4byte	.LCFI17
- 577 0158 0200     		.2byte	0x2
- 578 015a 7D       		.byte	0x7d
- 579 015b 08       		.sleb128 8
- 580 015c 04000000 		.4byte	.LCFI17
- 581 0160 3C000000 		.4byte	.LFE36
- 582 0164 0200     		.2byte	0x2
- 583 0166 77       		.byte	0x77
- 584 0167 08       		.sleb128 8
- 585 0168 00000000 		.4byte	0x0
- 586 016c 00000000 		.4byte	0x0
- 587              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
- 588              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
- 589              		.file 4 ".\\/power.h"
- 590              		.section	.debug_info
- 591 0000 01020000 		.4byte	0x201
- 592 0004 0200     		.2byte	0x2
- 593 0006 00000000 		.4byte	.Ldebug_abbrev0
- 594 000a 04       		.byte	0x4
- 595 000b 01       		.uleb128 0x1
- 596 000c 50010000 		.4byte	.LASF32
- 597 0010 01       		.byte	0x1
- 598 0011 55000000 		.4byte	.LASF33
- 599 0015 86010000 		.4byte	.LASF34
- 600 0019 00000000 		.4byte	0x0
- 601 001d 00000000 		.4byte	0x0
- 602 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
- 603 0025 00000000 		.4byte	.Ldebug_line0
- 604 0029 02       		.uleb128 0x2
- 605 002a 01       		.byte	0x1
- 606 002b 06       		.byte	0x6
- 607 002c 7A010000 		.4byte	.LASF0
- 608 0030 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 17
+ 552 015c 04000000 		.4byte	.LCFI17
+ 553 0160 3C000000 		.4byte	.LFE36
+ 554 0164 0200     		.2byte	0x2
+ 555 0166 77       		.byte	0x77
+ 556 0167 08       		.sleb128 8
+ 557 0168 00000000 		.4byte	0x0
+ 558 016c 00000000 		.4byte	0x0
+ 559              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
+ 560              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
+ 561              		.file 4 ".\\/power.h"
+ 562              		.section	.debug_info
+ 563 0000 01020000 		.4byte	0x201
+ 564 0004 0200     		.2byte	0x2
+ 565 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 566 000a 04       		.byte	0x4
+ 567 000b 01       		.uleb128 0x1
+ 568 000c A9010000 		.4byte	.LASF32
+ 569 0010 01       		.byte	0x1
+ 570 0011 55000000 		.4byte	.LASF33
+ 571 0015 50010000 		.4byte	.LASF34
+ 572 0019 00000000 		.4byte	0x0
+ 573 001d 00000000 		.4byte	0x0
+ 574 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 575 0025 00000000 		.4byte	.Ldebug_line0
+ 576 0029 02       		.uleb128 0x2
+ 577 002a 01       		.byte	0x1
+ 578 002b 06       		.byte	0x6
+ 579 002c D3010000 		.4byte	.LASF0
+ 580 0030 02       		.uleb128 0x2
+ 581 0031 01       		.byte	0x1
+ 582 0032 08       		.byte	0x8
+ 583 0033 5F000000 		.4byte	.LASF1
+ 584 0037 02       		.uleb128 0x2
+ 585 0038 02       		.byte	0x2
+ 586 0039 05       		.byte	0x5
+ 587 003a BA010000 		.4byte	.LASF2
+ 588 003e 02       		.uleb128 0x2
+ 589 003f 02       		.byte	0x2
+ 590 0040 07       		.byte	0x7
+ 591 0041 7F000000 		.4byte	.LASF3
+ 592 0045 02       		.uleb128 0x2
+ 593 0046 04       		.byte	0x4
+ 594 0047 05       		.byte	0x5
+ 595 0048 CA010000 		.4byte	.LASF4
+ 596 004c 02       		.uleb128 0x2
+ 597 004d 04       		.byte	0x4
+ 598 004e 07       		.byte	0x7
+ 599 004f 6D000000 		.4byte	.LASF5
+ 600 0053 02       		.uleb128 0x2
+ 601 0054 08       		.byte	0x8
+ 602 0055 05       		.byte	0x5
+ 603 0056 00000000 		.4byte	.LASF6
+ 604 005a 02       		.uleb128 0x2
+ 605 005b 08       		.byte	0x8
+ 606 005c 07       		.byte	0x7
+ 607 005d 0F010000 		.4byte	.LASF7
+ 608 0061 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 17
 
 
- 609 0031 01       		.byte	0x1
- 610 0032 08       		.byte	0x8
- 611 0033 5F000000 		.4byte	.LASF1
- 612 0037 02       		.uleb128 0x2
- 613 0038 02       		.byte	0x2
- 614 0039 05       		.byte	0x5
- 615 003a 61010000 		.4byte	.LASF2
- 616 003e 02       		.uleb128 0x2
- 617 003f 02       		.byte	0x2
- 618 0040 07       		.byte	0x7
- 619 0041 7F000000 		.4byte	.LASF3
- 620 0045 02       		.uleb128 0x2
- 621 0046 04       		.byte	0x4
- 622 0047 05       		.byte	0x5
- 623 0048 71010000 		.4byte	.LASF4
- 624 004c 02       		.uleb128 0x2
- 625 004d 04       		.byte	0x4
- 626 004e 07       		.byte	0x7
- 627 004f 6D000000 		.4byte	.LASF5
- 628 0053 02       		.uleb128 0x2
- 629 0054 08       		.byte	0x8
- 630 0055 05       		.byte	0x5
- 631 0056 00000000 		.4byte	.LASF6
- 632 005a 02       		.uleb128 0x2
- 633 005b 08       		.byte	0x8
- 634 005c 07       		.byte	0x7
- 635 005d 0F010000 		.4byte	.LASF7
- 636 0061 03       		.uleb128 0x3
- 637 0062 04       		.byte	0x4
- 638 0063 05       		.byte	0x5
- 639 0064 696E7400 		.ascii	"int\000"
- 640 0068 02       		.uleb128 0x2
- 641 0069 04       		.byte	0x4
- 642 006a 07       		.byte	0x7
- 643 006b FB000000 		.4byte	.LASF8
- 644 006f 04       		.uleb128 0x4
- 645 0070 6B010000 		.4byte	.LASF9
- 646 0074 02       		.byte	0x2
- 647 0075 4C       		.byte	0x4c
- 648 0076 30000000 		.4byte	0x30
- 649 007a 04       		.uleb128 0x4
- 650 007b ED000000 		.4byte	.LASF10
- 651 007f 02       		.byte	0x2
- 652 0080 4D       		.byte	0x4d
- 653 0081 3E000000 		.4byte	0x3e
- 654 0085 04       		.uleb128 0x4
- 655 0086 F4000000 		.4byte	.LASF11
- 656 008a 02       		.byte	0x2
- 657 008b 4E       		.byte	0x4e
- 658 008c 4C000000 		.4byte	0x4c
- 659 0090 02       		.uleb128 0x2
- 660 0091 04       		.byte	0x4
- 661 0092 04       		.byte	0x4
- 662 0093 4F000000 		.4byte	.LASF12
- 663 0097 02       		.uleb128 0x2
- 664 0098 08       		.byte	0x8
- 665 0099 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 18
+ 609 0062 04       		.byte	0x4
+ 610 0063 05       		.byte	0x5
+ 611 0064 696E7400 		.ascii	"int\000"
+ 612 0068 02       		.uleb128 0x2
+ 613 0069 04       		.byte	0x4
+ 614 006a 07       		.byte	0x7
+ 615 006b FB000000 		.4byte	.LASF8
+ 616 006f 04       		.uleb128 0x4
+ 617 0070 C4010000 		.4byte	.LASF9
+ 618 0074 02       		.byte	0x2
+ 619 0075 4C       		.byte	0x4c
+ 620 0076 30000000 		.4byte	0x30
+ 621 007a 04       		.uleb128 0x4
+ 622 007b ED000000 		.4byte	.LASF10
+ 623 007f 02       		.byte	0x2
+ 624 0080 4D       		.byte	0x4d
+ 625 0081 3E000000 		.4byte	0x3e
+ 626 0085 04       		.uleb128 0x4
+ 627 0086 F4000000 		.4byte	.LASF11
+ 628 008a 02       		.byte	0x2
+ 629 008b 4E       		.byte	0x4e
+ 630 008c 4C000000 		.4byte	0x4c
+ 631 0090 02       		.uleb128 0x2
+ 632 0091 04       		.byte	0x4
+ 633 0092 04       		.byte	0x4
+ 634 0093 4F000000 		.4byte	.LASF12
+ 635 0097 02       		.uleb128 0x2
+ 636 0098 08       		.byte	0x8
+ 637 0099 04       		.byte	0x4
+ 638 009a 2B000000 		.4byte	.LASF13
+ 639 009e 02       		.uleb128 0x2
+ 640 009f 01       		.byte	0x1
+ 641 00a0 08       		.byte	0x8
+ 642 00a1 B5010000 		.4byte	.LASF14
+ 643 00a5 05       		.uleb128 0x5
+ 644 00a6 6F000000 		.4byte	0x6f
+ 645 00aa 06       		.uleb128 0x6
+ 646 00ab 04       		.byte	0x4
+ 647 00ac 07       		.byte	0x7
+ 648 00ad 07       		.uleb128 0x7
+ 649 00ae 01       		.byte	0x1
+ 650 00af EF010000 		.4byte	.LASF15
+ 651 00b3 01       		.byte	0x1
+ 652 00b4 58       		.byte	0x58
+ 653 00b5 01       		.byte	0x1
+ 654 00b6 00000000 		.4byte	.LFB29
+ 655 00ba 0A000000 		.4byte	.LFE29
+ 656 00be 00000000 		.4byte	.LLST0
+ 657 00c2 07       		.uleb128 0x7
+ 658 00c3 01       		.byte	0x1
+ 659 00c4 D1000000 		.4byte	.LASF16
+ 660 00c8 01       		.byte	0x1
+ 661 00c9 6C       		.byte	0x6c
+ 662 00ca 01       		.byte	0x1
+ 663 00cb 00000000 		.4byte	.LFB30
+ 664 00cf 3A000000 		.4byte	.LFE30
+ 665 00d3 2B000000 		.4byte	.LLST1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 18
 
 
- 666 009a 2B000000 		.4byte	.LASF13
- 667 009e 02       		.uleb128 0x2
- 668 009f 01       		.byte	0x1
- 669 00a0 08       		.byte	0x8
- 670 00a1 5C010000 		.4byte	.LASF14
- 671 00a5 05       		.uleb128 0x5
- 672 00a6 6F000000 		.4byte	0x6f
- 673 00aa 06       		.uleb128 0x6
- 674 00ab 04       		.byte	0x4
- 675 00ac 07       		.byte	0x7
- 676 00ad 07       		.uleb128 0x7
- 677 00ae 01       		.byte	0x1
- 678 00af D4010000 		.4byte	.LASF15
- 679 00b3 01       		.byte	0x1
- 680 00b4 58       		.byte	0x58
- 681 00b5 01       		.byte	0x1
- 682 00b6 00000000 		.4byte	.LFB29
- 683 00ba 12000000 		.4byte	.LFE29
- 684 00be 00000000 		.4byte	.LLST0
- 685 00c2 07       		.uleb128 0x7
- 686 00c3 01       		.byte	0x1
- 687 00c4 D1000000 		.4byte	.LASF16
- 688 00c8 01       		.byte	0x1
- 689 00c9 6C       		.byte	0x6c
- 690 00ca 01       		.byte	0x1
- 691 00cb 00000000 		.4byte	.LFB30
- 692 00cf 5A000000 		.4byte	.LFE30
- 693 00d3 2B000000 		.4byte	.LLST1
- 694 00d7 08       		.uleb128 0x8
- 695 00d8 01       		.byte	0x1
- 696 00d9 44000000 		.4byte	.LASF19
- 697 00dd 01       		.byte	0x1
- 698 00de 8C       		.byte	0x8c
- 699 00df 01       		.byte	0x1
- 700 00e0 7A000000 		.4byte	0x7a
- 701 00e4 00000000 		.4byte	.LFB31
- 702 00e8 52000000 		.4byte	.LFE31
- 703 00ec 56000000 		.4byte	.LLST2
- 704 00f0 11010000 		.4byte	0x111
- 705 00f4 09       		.uleb128 0x9
- 706 00f5 AD000000 		.4byte	.LASF17
- 707 00f9 01       		.byte	0x1
- 708 00fa 8E       		.byte	0x8e
- 709 00fb 7A000000 		.4byte	0x7a
- 710 00ff 02       		.byte	0x2
- 711 0100 91       		.byte	0x91
- 712 0101 74       		.sleb128 -12
- 713 0102 09       		.uleb128 0x9
- 714 0103 E7010000 		.4byte	.LASF18
- 715 0107 01       		.byte	0x1
- 716 0108 8F       		.byte	0x8f
- 717 0109 7A000000 		.4byte	0x7a
- 718 010d 02       		.byte	0x2
- 719 010e 91       		.byte	0x91
- 720 010f 76       		.sleb128 -10
- 721 0110 00       		.byte	0x0
- 722 0111 08       		.uleb128 0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 19
+ 666 00d7 08       		.uleb128 0x8
+ 667 00d8 01       		.byte	0x1
+ 668 00d9 44000000 		.4byte	.LASF19
+ 669 00dd 01       		.byte	0x1
+ 670 00de 8C       		.byte	0x8c
+ 671 00df 01       		.byte	0x1
+ 672 00e0 7A000000 		.4byte	0x7a
+ 673 00e4 00000000 		.4byte	.LFB31
+ 674 00e8 3E000000 		.4byte	.LFE31
+ 675 00ec 56000000 		.4byte	.LLST2
+ 676 00f0 11010000 		.4byte	0x111
+ 677 00f4 09       		.uleb128 0x9
+ 678 00f5 AD000000 		.4byte	.LASF17
+ 679 00f9 01       		.byte	0x1
+ 680 00fa 8E       		.byte	0x8e
+ 681 00fb 7A000000 		.4byte	0x7a
+ 682 00ff 02       		.byte	0x2
+ 683 0100 91       		.byte	0x91
+ 684 0101 74       		.sleb128 -12
+ 685 0102 09       		.uleb128 0x9
+ 686 0103 02020000 		.4byte	.LASF18
+ 687 0107 01       		.byte	0x1
+ 688 0108 8F       		.byte	0x8f
+ 689 0109 7A000000 		.4byte	0x7a
+ 690 010d 02       		.byte	0x2
+ 691 010e 91       		.byte	0x91
+ 692 010f 76       		.sleb128 -10
+ 693 0110 00       		.byte	0x0
+ 694 0111 08       		.uleb128 0x8
+ 695 0112 01       		.byte	0x1
+ 696 0113 BB000000 		.4byte	.LASF20
+ 697 0117 01       		.byte	0x1
+ 698 0118 B0       		.byte	0xb0
+ 699 0119 01       		.byte	0x1
+ 700 011a 7A000000 		.4byte	0x7a
+ 701 011e 00000000 		.4byte	.LFB32
+ 702 0122 58000000 		.4byte	.LFE32
+ 703 0126 8D000000 		.4byte	.LLST3
+ 704 012a 59010000 		.4byte	0x159
+ 705 012e 0A       		.uleb128 0xa
+ 706 012f 08010000 		.4byte	.LASF35
+ 707 0133 01       		.byte	0x1
+ 708 0134 B0       		.byte	0xb0
+ 709 0135 7A000000 		.4byte	0x7a
+ 710 0139 02       		.byte	0x2
+ 711 013a 91       		.byte	0x91
+ 712 013b 6E       		.sleb128 -18
+ 713 013c 09       		.uleb128 0x9
+ 714 013d 92000000 		.4byte	.LASF21
+ 715 0141 01       		.byte	0x1
+ 716 0142 B2       		.byte	0xb2
+ 717 0143 7A000000 		.4byte	0x7a
+ 718 0147 02       		.byte	0x2
+ 719 0148 91       		.byte	0x91
+ 720 0149 72       		.sleb128 -14
+ 721 014a 09       		.uleb128 0x9
+ 722 014b 1E000000 		.4byte	.LASF22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 19
 
 
- 723 0112 01       		.byte	0x1
- 724 0113 BB000000 		.4byte	.LASF20
- 725 0117 01       		.byte	0x1
- 726 0118 B0       		.byte	0xb0
- 727 0119 01       		.byte	0x1
- 728 011a 7A000000 		.4byte	0x7a
- 729 011e 00000000 		.4byte	.LFB32
- 730 0122 58000000 		.4byte	.LFE32
- 731 0126 8D000000 		.4byte	.LLST3
- 732 012a 59010000 		.4byte	0x159
- 733 012e 0A       		.uleb128 0xa
- 734 012f 08010000 		.4byte	.LASF35
- 735 0133 01       		.byte	0x1
- 736 0134 B0       		.byte	0xb0
- 737 0135 7A000000 		.4byte	0x7a
- 738 0139 02       		.byte	0x2
- 739 013a 91       		.byte	0x91
- 740 013b 6E       		.sleb128 -18
- 741 013c 09       		.uleb128 0x9
- 742 013d 92000000 		.4byte	.LASF21
- 743 0141 01       		.byte	0x1
- 744 0142 B2       		.byte	0xb2
- 745 0143 7A000000 		.4byte	0x7a
- 746 0147 02       		.byte	0x2
- 747 0148 91       		.byte	0x91
- 748 0149 72       		.sleb128 -14
- 749 014a 09       		.uleb128 0x9
- 750 014b 1E000000 		.4byte	.LASF22
- 751 014f 01       		.byte	0x1
- 752 0150 B3       		.byte	0xb3
- 753 0151 85000000 		.4byte	0x85
- 754 0155 02       		.byte	0x2
- 755 0156 91       		.byte	0x91
- 756 0157 74       		.sleb128 -12
- 757 0158 00       		.byte	0x0
- 758 0159 07       		.uleb128 0x7
- 759 015a 01       		.byte	0x1
- 760 015b DA000000 		.4byte	.LASF23
- 761 015f 01       		.byte	0x1
- 762 0160 D2       		.byte	0xd2
- 763 0161 01       		.byte	0x1
- 764 0162 00000000 		.4byte	.LFB33
- 765 0166 0A000000 		.4byte	.LFE33
- 766 016a C4000000 		.4byte	.LLST4
- 767 016e 07       		.uleb128 0x7
- 768 016f 01       		.byte	0x1
- 769 0170 C4010000 		.4byte	.LASF24
- 770 0174 01       		.byte	0x1
- 771 0175 E3       		.byte	0xe3
- 772 0176 01       		.byte	0x1
- 773 0177 00000000 		.4byte	.LFB34
- 774 017b 36000000 		.4byte	.LFE34
- 775 017f EF000000 		.4byte	.LLST5
- 776 0183 07       		.uleb128 0x7
- 777 0184 01       		.byte	0x1
- 778 0185 0E000000 		.4byte	.LASF25
- 779 0189 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 20
+ 723 014f 01       		.byte	0x1
+ 724 0150 B3       		.byte	0xb3
+ 725 0151 85000000 		.4byte	0x85
+ 726 0155 02       		.byte	0x2
+ 727 0156 91       		.byte	0x91
+ 728 0157 74       		.sleb128 -12
+ 729 0158 00       		.byte	0x0
+ 730 0159 07       		.uleb128 0x7
+ 731 015a 01       		.byte	0x1
+ 732 015b DA000000 		.4byte	.LASF23
+ 733 015f 01       		.byte	0x1
+ 734 0160 D2       		.byte	0xd2
+ 735 0161 01       		.byte	0x1
+ 736 0162 00000000 		.4byte	.LFB33
+ 737 0166 0A000000 		.4byte	.LFE33
+ 738 016a C4000000 		.4byte	.LLST4
+ 739 016e 07       		.uleb128 0x7
+ 740 016f 01       		.byte	0x1
+ 741 0170 DF010000 		.4byte	.LASF24
+ 742 0174 01       		.byte	0x1
+ 743 0175 E3       		.byte	0xe3
+ 744 0176 01       		.byte	0x1
+ 745 0177 00000000 		.4byte	.LFB34
+ 746 017b 36000000 		.4byte	.LFE34
+ 747 017f EF000000 		.4byte	.LLST5
+ 748 0183 07       		.uleb128 0x7
+ 749 0184 01       		.byte	0x1
+ 750 0185 0E000000 		.4byte	.LASF25
+ 751 0189 01       		.byte	0x1
+ 752 018a FC       		.byte	0xfc
+ 753 018b 01       		.byte	0x1
+ 754 018c 00000000 		.4byte	.LFB35
+ 755 0190 34000000 		.4byte	.LFE35
+ 756 0194 1A010000 		.4byte	.LLST6
+ 757 0198 0B       		.uleb128 0xb
+ 758 0199 01       		.byte	0x1
+ 759 019a 2D010000 		.4byte	.LASF26
+ 760 019e 01       		.byte	0x1
+ 761 019f 1A01     		.2byte	0x11a
+ 762 01a1 01       		.byte	0x1
+ 763 01a2 00000000 		.4byte	.LFB36
+ 764 01a6 3C000000 		.4byte	.LFE36
+ 765 01aa 45010000 		.4byte	.LLST7
+ 766 01ae 0C       		.uleb128 0xc
+ 767 01af 9A000000 		.4byte	.LASF27
+ 768 01b3 03       		.byte	0x3
+ 769 01b4 CE06     		.2byte	0x6ce
+ 770 01b6 BC010000 		.4byte	0x1bc
+ 771 01ba 01       		.byte	0x1
+ 772 01bb 01       		.byte	0x1
+ 773 01bc 05       		.uleb128 0x5
+ 774 01bd 61000000 		.4byte	0x61
+ 775 01c1 0D       		.uleb128 0xd
+ 776 01c2 3E010000 		.4byte	.LASF28
+ 777 01c6 01       		.byte	0x1
+ 778 01c7 44       		.byte	0x44
+ 779 01c8 6F000000 		.4byte	0x6f
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 20
 
 
- 780 018a FC       		.byte	0xfc
- 781 018b 01       		.byte	0x1
- 782 018c 00000000 		.4byte	.LFB35
- 783 0190 3C000000 		.4byte	.LFE35
- 784 0194 1A010000 		.4byte	.LLST6
- 785 0198 0B       		.uleb128 0xb
- 786 0199 01       		.byte	0x1
- 787 019a 2D010000 		.4byte	.LASF26
- 788 019e 01       		.byte	0x1
- 789 019f 1A01     		.2byte	0x11a
- 790 01a1 01       		.byte	0x1
- 791 01a2 00000000 		.4byte	.LFB36
- 792 01a6 3C000000 		.4byte	.LFE36
- 793 01aa 45010000 		.4byte	.LLST7
- 794 01ae 0C       		.uleb128 0xc
- 795 01af 9A000000 		.4byte	.LASF27
- 796 01b3 03       		.byte	0x3
- 797 01b4 CE06     		.2byte	0x6ce
- 798 01b6 BC010000 		.4byte	0x1bc
- 799 01ba 01       		.byte	0x1
- 800 01bb 01       		.byte	0x1
- 801 01bc 05       		.uleb128 0x5
- 802 01bd 61000000 		.4byte	0x61
- 803 01c1 0D       		.uleb128 0xd
- 804 01c2 3E010000 		.4byte	.LASF28
- 805 01c6 01       		.byte	0x1
- 806 01c7 44       		.byte	0x44
- 807 01c8 6F000000 		.4byte	0x6f
- 808 01cc 01       		.byte	0x1
- 809 01cd 05       		.byte	0x5
- 810 01ce 03       		.byte	0x3
- 811 01cf 00000000 		.4byte	checkActivityFlag
- 812 01d3 0E       		.uleb128 0xe
- 813 01d4 32000000 		.4byte	.LASF29
- 814 01d8 04       		.byte	0x4
- 815 01d9 4A       		.byte	0x4a
- 816 01da A5000000 		.4byte	0xa5
- 817 01de 01       		.byte	0x1
- 818 01df 01       		.byte	0x1
- 819 01e0 0D       		.uleb128 0xd
- 820 01e1 A7000000 		.4byte	.LASF30
- 821 01e5 01       		.byte	0x1
- 822 01e6 49       		.byte	0x49
- 823 01e7 6F000000 		.4byte	0x6f
- 824 01eb 01       		.byte	0x1
- 825 01ec 05       		.byte	0x5
- 826 01ed 03       		.byte	0x3
- 827 01ee 00000000 		.4byte	range
- 828 01f2 0D       		.uleb128 0xd
- 829 01f3 26010000 		.4byte	.LASF31
- 830 01f7 01       		.byte	0x1
- 831 01f8 4A       		.byte	0x4a
- 832 01f9 7A000000 		.4byte	0x7a
- 833 01fd 01       		.byte	0x1
- 834 01fe 05       		.byte	0x5
- 835 01ff 03       		.byte	0x3
- 836 0200 00000000 		.4byte	result
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 21
+ 780 01cc 01       		.byte	0x1
+ 781 01cd 05       		.byte	0x5
+ 782 01ce 03       		.byte	0x3
+ 783 01cf 00000000 		.4byte	checkActivityFlag
+ 784 01d3 0E       		.uleb128 0xe
+ 785 01d4 32000000 		.4byte	.LASF29
+ 786 01d8 04       		.byte	0x4
+ 787 01d9 4A       		.byte	0x4a
+ 788 01da A5000000 		.4byte	0xa5
+ 789 01de 01       		.byte	0x1
+ 790 01df 01       		.byte	0x1
+ 791 01e0 0D       		.uleb128 0xd
+ 792 01e1 A7000000 		.4byte	.LASF30
+ 793 01e5 01       		.byte	0x1
+ 794 01e6 49       		.byte	0x49
+ 795 01e7 6F000000 		.4byte	0x6f
+ 796 01eb 01       		.byte	0x1
+ 797 01ec 05       		.byte	0x5
+ 798 01ed 03       		.byte	0x3
+ 799 01ee 00000000 		.4byte	range
+ 800 01f2 0D       		.uleb128 0xd
+ 801 01f3 26010000 		.4byte	.LASF31
+ 802 01f7 01       		.byte	0x1
+ 803 01f8 4A       		.byte	0x4a
+ 804 01f9 7A000000 		.4byte	0x7a
+ 805 01fd 01       		.byte	0x1
+ 806 01fe 05       		.byte	0x5
+ 807 01ff 03       		.byte	0x3
+ 808 0200 00000000 		.4byte	result
+ 809 0204 00       		.byte	0x0
+ 810              		.section	.debug_abbrev
+ 811 0000 01       		.uleb128 0x1
+ 812 0001 11       		.uleb128 0x11
+ 813 0002 01       		.byte	0x1
+ 814 0003 25       		.uleb128 0x25
+ 815 0004 0E       		.uleb128 0xe
+ 816 0005 13       		.uleb128 0x13
+ 817 0006 0B       		.uleb128 0xb
+ 818 0007 03       		.uleb128 0x3
+ 819 0008 0E       		.uleb128 0xe
+ 820 0009 1B       		.uleb128 0x1b
+ 821 000a 0E       		.uleb128 0xe
+ 822 000b 11       		.uleb128 0x11
+ 823 000c 01       		.uleb128 0x1
+ 824 000d 52       		.uleb128 0x52
+ 825 000e 01       		.uleb128 0x1
+ 826 000f 55       		.uleb128 0x55
+ 827 0010 06       		.uleb128 0x6
+ 828 0011 10       		.uleb128 0x10
+ 829 0012 06       		.uleb128 0x6
+ 830 0013 00       		.byte	0x0
+ 831 0014 00       		.byte	0x0
+ 832 0015 02       		.uleb128 0x2
+ 833 0016 24       		.uleb128 0x24
+ 834 0017 00       		.byte	0x0
+ 835 0018 0B       		.uleb128 0xb
+ 836 0019 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 21
 
 
- 837 0204 00       		.byte	0x0
- 838              		.section	.debug_abbrev
- 839 0000 01       		.uleb128 0x1
- 840 0001 11       		.uleb128 0x11
- 841 0002 01       		.byte	0x1
- 842 0003 25       		.uleb128 0x25
- 843 0004 0E       		.uleb128 0xe
- 844 0005 13       		.uleb128 0x13
- 845 0006 0B       		.uleb128 0xb
- 846 0007 03       		.uleb128 0x3
- 847 0008 0E       		.uleb128 0xe
- 848 0009 1B       		.uleb128 0x1b
- 849 000a 0E       		.uleb128 0xe
- 850 000b 11       		.uleb128 0x11
- 851 000c 01       		.uleb128 0x1
- 852 000d 52       		.uleb128 0x52
- 853 000e 01       		.uleb128 0x1
- 854 000f 55       		.uleb128 0x55
- 855 0010 06       		.uleb128 0x6
- 856 0011 10       		.uleb128 0x10
- 857 0012 06       		.uleb128 0x6
- 858 0013 00       		.byte	0x0
- 859 0014 00       		.byte	0x0
- 860 0015 02       		.uleb128 0x2
- 861 0016 24       		.uleb128 0x24
- 862 0017 00       		.byte	0x0
- 863 0018 0B       		.uleb128 0xb
- 864 0019 0B       		.uleb128 0xb
- 865 001a 3E       		.uleb128 0x3e
- 866 001b 0B       		.uleb128 0xb
- 867 001c 03       		.uleb128 0x3
- 868 001d 0E       		.uleb128 0xe
- 869 001e 00       		.byte	0x0
- 870 001f 00       		.byte	0x0
- 871 0020 03       		.uleb128 0x3
- 872 0021 24       		.uleb128 0x24
- 873 0022 00       		.byte	0x0
- 874 0023 0B       		.uleb128 0xb
- 875 0024 0B       		.uleb128 0xb
- 876 0025 3E       		.uleb128 0x3e
- 877 0026 0B       		.uleb128 0xb
- 878 0027 03       		.uleb128 0x3
- 879 0028 08       		.uleb128 0x8
- 880 0029 00       		.byte	0x0
- 881 002a 00       		.byte	0x0
- 882 002b 04       		.uleb128 0x4
- 883 002c 16       		.uleb128 0x16
- 884 002d 00       		.byte	0x0
- 885 002e 03       		.uleb128 0x3
- 886 002f 0E       		.uleb128 0xe
- 887 0030 3A       		.uleb128 0x3a
- 888 0031 0B       		.uleb128 0xb
- 889 0032 3B       		.uleb128 0x3b
- 890 0033 0B       		.uleb128 0xb
- 891 0034 49       		.uleb128 0x49
- 892 0035 13       		.uleb128 0x13
- 893 0036 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 22
+ 837 001a 3E       		.uleb128 0x3e
+ 838 001b 0B       		.uleb128 0xb
+ 839 001c 03       		.uleb128 0x3
+ 840 001d 0E       		.uleb128 0xe
+ 841 001e 00       		.byte	0x0
+ 842 001f 00       		.byte	0x0
+ 843 0020 03       		.uleb128 0x3
+ 844 0021 24       		.uleb128 0x24
+ 845 0022 00       		.byte	0x0
+ 846 0023 0B       		.uleb128 0xb
+ 847 0024 0B       		.uleb128 0xb
+ 848 0025 3E       		.uleb128 0x3e
+ 849 0026 0B       		.uleb128 0xb
+ 850 0027 03       		.uleb128 0x3
+ 851 0028 08       		.uleb128 0x8
+ 852 0029 00       		.byte	0x0
+ 853 002a 00       		.byte	0x0
+ 854 002b 04       		.uleb128 0x4
+ 855 002c 16       		.uleb128 0x16
+ 856 002d 00       		.byte	0x0
+ 857 002e 03       		.uleb128 0x3
+ 858 002f 0E       		.uleb128 0xe
+ 859 0030 3A       		.uleb128 0x3a
+ 860 0031 0B       		.uleb128 0xb
+ 861 0032 3B       		.uleb128 0x3b
+ 862 0033 0B       		.uleb128 0xb
+ 863 0034 49       		.uleb128 0x49
+ 864 0035 13       		.uleb128 0x13
+ 865 0036 00       		.byte	0x0
+ 866 0037 00       		.byte	0x0
+ 867 0038 05       		.uleb128 0x5
+ 868 0039 35       		.uleb128 0x35
+ 869 003a 00       		.byte	0x0
+ 870 003b 49       		.uleb128 0x49
+ 871 003c 13       		.uleb128 0x13
+ 872 003d 00       		.byte	0x0
+ 873 003e 00       		.byte	0x0
+ 874 003f 06       		.uleb128 0x6
+ 875 0040 24       		.uleb128 0x24
+ 876 0041 00       		.byte	0x0
+ 877 0042 0B       		.uleb128 0xb
+ 878 0043 0B       		.uleb128 0xb
+ 879 0044 3E       		.uleb128 0x3e
+ 880 0045 0B       		.uleb128 0xb
+ 881 0046 00       		.byte	0x0
+ 882 0047 00       		.byte	0x0
+ 883 0048 07       		.uleb128 0x7
+ 884 0049 2E       		.uleb128 0x2e
+ 885 004a 00       		.byte	0x0
+ 886 004b 3F       		.uleb128 0x3f
+ 887 004c 0C       		.uleb128 0xc
+ 888 004d 03       		.uleb128 0x3
+ 889 004e 0E       		.uleb128 0xe
+ 890 004f 3A       		.uleb128 0x3a
+ 891 0050 0B       		.uleb128 0xb
+ 892 0051 3B       		.uleb128 0x3b
+ 893 0052 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 22
 
 
- 894 0037 00       		.byte	0x0
- 895 0038 05       		.uleb128 0x5
- 896 0039 35       		.uleb128 0x35
- 897 003a 00       		.byte	0x0
- 898 003b 49       		.uleb128 0x49
- 899 003c 13       		.uleb128 0x13
- 900 003d 00       		.byte	0x0
- 901 003e 00       		.byte	0x0
- 902 003f 06       		.uleb128 0x6
- 903 0040 24       		.uleb128 0x24
- 904 0041 00       		.byte	0x0
- 905 0042 0B       		.uleb128 0xb
- 906 0043 0B       		.uleb128 0xb
- 907 0044 3E       		.uleb128 0x3e
- 908 0045 0B       		.uleb128 0xb
- 909 0046 00       		.byte	0x0
- 910 0047 00       		.byte	0x0
- 911 0048 07       		.uleb128 0x7
- 912 0049 2E       		.uleb128 0x2e
- 913 004a 00       		.byte	0x0
- 914 004b 3F       		.uleb128 0x3f
- 915 004c 0C       		.uleb128 0xc
- 916 004d 03       		.uleb128 0x3
- 917 004e 0E       		.uleb128 0xe
- 918 004f 3A       		.uleb128 0x3a
- 919 0050 0B       		.uleb128 0xb
- 920 0051 3B       		.uleb128 0x3b
- 921 0052 0B       		.uleb128 0xb
- 922 0053 27       		.uleb128 0x27
- 923 0054 0C       		.uleb128 0xc
- 924 0055 11       		.uleb128 0x11
- 925 0056 01       		.uleb128 0x1
- 926 0057 12       		.uleb128 0x12
- 927 0058 01       		.uleb128 0x1
- 928 0059 40       		.uleb128 0x40
- 929 005a 06       		.uleb128 0x6
- 930 005b 00       		.byte	0x0
- 931 005c 00       		.byte	0x0
- 932 005d 08       		.uleb128 0x8
- 933 005e 2E       		.uleb128 0x2e
- 934 005f 01       		.byte	0x1
- 935 0060 3F       		.uleb128 0x3f
- 936 0061 0C       		.uleb128 0xc
- 937 0062 03       		.uleb128 0x3
- 938 0063 0E       		.uleb128 0xe
- 939 0064 3A       		.uleb128 0x3a
- 940 0065 0B       		.uleb128 0xb
- 941 0066 3B       		.uleb128 0x3b
- 942 0067 0B       		.uleb128 0xb
- 943 0068 27       		.uleb128 0x27
- 944 0069 0C       		.uleb128 0xc
- 945 006a 49       		.uleb128 0x49
- 946 006b 13       		.uleb128 0x13
- 947 006c 11       		.uleb128 0x11
- 948 006d 01       		.uleb128 0x1
- 949 006e 12       		.uleb128 0x12
- 950 006f 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 23
+ 894 0053 27       		.uleb128 0x27
+ 895 0054 0C       		.uleb128 0xc
+ 896 0055 11       		.uleb128 0x11
+ 897 0056 01       		.uleb128 0x1
+ 898 0057 12       		.uleb128 0x12
+ 899 0058 01       		.uleb128 0x1
+ 900 0059 40       		.uleb128 0x40
+ 901 005a 06       		.uleb128 0x6
+ 902 005b 00       		.byte	0x0
+ 903 005c 00       		.byte	0x0
+ 904 005d 08       		.uleb128 0x8
+ 905 005e 2E       		.uleb128 0x2e
+ 906 005f 01       		.byte	0x1
+ 907 0060 3F       		.uleb128 0x3f
+ 908 0061 0C       		.uleb128 0xc
+ 909 0062 03       		.uleb128 0x3
+ 910 0063 0E       		.uleb128 0xe
+ 911 0064 3A       		.uleb128 0x3a
+ 912 0065 0B       		.uleb128 0xb
+ 913 0066 3B       		.uleb128 0x3b
+ 914 0067 0B       		.uleb128 0xb
+ 915 0068 27       		.uleb128 0x27
+ 916 0069 0C       		.uleb128 0xc
+ 917 006a 49       		.uleb128 0x49
+ 918 006b 13       		.uleb128 0x13
+ 919 006c 11       		.uleb128 0x11
+ 920 006d 01       		.uleb128 0x1
+ 921 006e 12       		.uleb128 0x12
+ 922 006f 01       		.uleb128 0x1
+ 923 0070 40       		.uleb128 0x40
+ 924 0071 06       		.uleb128 0x6
+ 925 0072 01       		.uleb128 0x1
+ 926 0073 13       		.uleb128 0x13
+ 927 0074 00       		.byte	0x0
+ 928 0075 00       		.byte	0x0
+ 929 0076 09       		.uleb128 0x9
+ 930 0077 34       		.uleb128 0x34
+ 931 0078 00       		.byte	0x0
+ 932 0079 03       		.uleb128 0x3
+ 933 007a 0E       		.uleb128 0xe
+ 934 007b 3A       		.uleb128 0x3a
+ 935 007c 0B       		.uleb128 0xb
+ 936 007d 3B       		.uleb128 0x3b
+ 937 007e 0B       		.uleb128 0xb
+ 938 007f 49       		.uleb128 0x49
+ 939 0080 13       		.uleb128 0x13
+ 940 0081 02       		.uleb128 0x2
+ 941 0082 0A       		.uleb128 0xa
+ 942 0083 00       		.byte	0x0
+ 943 0084 00       		.byte	0x0
+ 944 0085 0A       		.uleb128 0xa
+ 945 0086 05       		.uleb128 0x5
+ 946 0087 00       		.byte	0x0
+ 947 0088 03       		.uleb128 0x3
+ 948 0089 0E       		.uleb128 0xe
+ 949 008a 3A       		.uleb128 0x3a
+ 950 008b 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 23
 
 
- 951 0070 40       		.uleb128 0x40
- 952 0071 06       		.uleb128 0x6
- 953 0072 01       		.uleb128 0x1
- 954 0073 13       		.uleb128 0x13
- 955 0074 00       		.byte	0x0
- 956 0075 00       		.byte	0x0
- 957 0076 09       		.uleb128 0x9
- 958 0077 34       		.uleb128 0x34
- 959 0078 00       		.byte	0x0
- 960 0079 03       		.uleb128 0x3
- 961 007a 0E       		.uleb128 0xe
- 962 007b 3A       		.uleb128 0x3a
- 963 007c 0B       		.uleb128 0xb
- 964 007d 3B       		.uleb128 0x3b
- 965 007e 0B       		.uleb128 0xb
- 966 007f 49       		.uleb128 0x49
- 967 0080 13       		.uleb128 0x13
- 968 0081 02       		.uleb128 0x2
- 969 0082 0A       		.uleb128 0xa
- 970 0083 00       		.byte	0x0
- 971 0084 00       		.byte	0x0
- 972 0085 0A       		.uleb128 0xa
- 973 0086 05       		.uleb128 0x5
- 974 0087 00       		.byte	0x0
- 975 0088 03       		.uleb128 0x3
- 976 0089 0E       		.uleb128 0xe
- 977 008a 3A       		.uleb128 0x3a
- 978 008b 0B       		.uleb128 0xb
- 979 008c 3B       		.uleb128 0x3b
- 980 008d 0B       		.uleb128 0xb
- 981 008e 49       		.uleb128 0x49
- 982 008f 13       		.uleb128 0x13
- 983 0090 02       		.uleb128 0x2
- 984 0091 0A       		.uleb128 0xa
- 985 0092 00       		.byte	0x0
- 986 0093 00       		.byte	0x0
- 987 0094 0B       		.uleb128 0xb
- 988 0095 2E       		.uleb128 0x2e
- 989 0096 00       		.byte	0x0
- 990 0097 3F       		.uleb128 0x3f
- 991 0098 0C       		.uleb128 0xc
- 992 0099 03       		.uleb128 0x3
- 993 009a 0E       		.uleb128 0xe
- 994 009b 3A       		.uleb128 0x3a
- 995 009c 0B       		.uleb128 0xb
- 996 009d 3B       		.uleb128 0x3b
- 997 009e 05       		.uleb128 0x5
- 998 009f 27       		.uleb128 0x27
- 999 00a0 0C       		.uleb128 0xc
- 1000 00a1 11       		.uleb128 0x11
- 1001 00a2 01       		.uleb128 0x1
- 1002 00a3 12       		.uleb128 0x12
- 1003 00a4 01       		.uleb128 0x1
- 1004 00a5 40       		.uleb128 0x40
- 1005 00a6 06       		.uleb128 0x6
- 1006 00a7 00       		.byte	0x0
- 1007 00a8 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 24
+ 951 008c 3B       		.uleb128 0x3b
+ 952 008d 0B       		.uleb128 0xb
+ 953 008e 49       		.uleb128 0x49
+ 954 008f 13       		.uleb128 0x13
+ 955 0090 02       		.uleb128 0x2
+ 956 0091 0A       		.uleb128 0xa
+ 957 0092 00       		.byte	0x0
+ 958 0093 00       		.byte	0x0
+ 959 0094 0B       		.uleb128 0xb
+ 960 0095 2E       		.uleb128 0x2e
+ 961 0096 00       		.byte	0x0
+ 962 0097 3F       		.uleb128 0x3f
+ 963 0098 0C       		.uleb128 0xc
+ 964 0099 03       		.uleb128 0x3
+ 965 009a 0E       		.uleb128 0xe
+ 966 009b 3A       		.uleb128 0x3a
+ 967 009c 0B       		.uleb128 0xb
+ 968 009d 3B       		.uleb128 0x3b
+ 969 009e 05       		.uleb128 0x5
+ 970 009f 27       		.uleb128 0x27
+ 971 00a0 0C       		.uleb128 0xc
+ 972 00a1 11       		.uleb128 0x11
+ 973 00a2 01       		.uleb128 0x1
+ 974 00a3 12       		.uleb128 0x12
+ 975 00a4 01       		.uleb128 0x1
+ 976 00a5 40       		.uleb128 0x40
+ 977 00a6 06       		.uleb128 0x6
+ 978 00a7 00       		.byte	0x0
+ 979 00a8 00       		.byte	0x0
+ 980 00a9 0C       		.uleb128 0xc
+ 981 00aa 34       		.uleb128 0x34
+ 982 00ab 00       		.byte	0x0
+ 983 00ac 03       		.uleb128 0x3
+ 984 00ad 0E       		.uleb128 0xe
+ 985 00ae 3A       		.uleb128 0x3a
+ 986 00af 0B       		.uleb128 0xb
+ 987 00b0 3B       		.uleb128 0x3b
+ 988 00b1 05       		.uleb128 0x5
+ 989 00b2 49       		.uleb128 0x49
+ 990 00b3 13       		.uleb128 0x13
+ 991 00b4 3F       		.uleb128 0x3f
+ 992 00b5 0C       		.uleb128 0xc
+ 993 00b6 3C       		.uleb128 0x3c
+ 994 00b7 0C       		.uleb128 0xc
+ 995 00b8 00       		.byte	0x0
+ 996 00b9 00       		.byte	0x0
+ 997 00ba 0D       		.uleb128 0xd
+ 998 00bb 34       		.uleb128 0x34
+ 999 00bc 00       		.byte	0x0
+ 1000 00bd 03       		.uleb128 0x3
+ 1001 00be 0E       		.uleb128 0xe
+ 1002 00bf 3A       		.uleb128 0x3a
+ 1003 00c0 0B       		.uleb128 0xb
+ 1004 00c1 3B       		.uleb128 0x3b
+ 1005 00c2 0B       		.uleb128 0xb
+ 1006 00c3 49       		.uleb128 0x49
+ 1007 00c4 13       		.uleb128 0x13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 24
 
 
- 1008 00a9 0C       		.uleb128 0xc
- 1009 00aa 34       		.uleb128 0x34
- 1010 00ab 00       		.byte	0x0
- 1011 00ac 03       		.uleb128 0x3
- 1012 00ad 0E       		.uleb128 0xe
- 1013 00ae 3A       		.uleb128 0x3a
- 1014 00af 0B       		.uleb128 0xb
- 1015 00b0 3B       		.uleb128 0x3b
- 1016 00b1 05       		.uleb128 0x5
- 1017 00b2 49       		.uleb128 0x49
- 1018 00b3 13       		.uleb128 0x13
- 1019 00b4 3F       		.uleb128 0x3f
- 1020 00b5 0C       		.uleb128 0xc
- 1021 00b6 3C       		.uleb128 0x3c
- 1022 00b7 0C       		.uleb128 0xc
- 1023 00b8 00       		.byte	0x0
- 1024 00b9 00       		.byte	0x0
- 1025 00ba 0D       		.uleb128 0xd
- 1026 00bb 34       		.uleb128 0x34
- 1027 00bc 00       		.byte	0x0
- 1028 00bd 03       		.uleb128 0x3
- 1029 00be 0E       		.uleb128 0xe
- 1030 00bf 3A       		.uleb128 0x3a
- 1031 00c0 0B       		.uleb128 0xb
- 1032 00c1 3B       		.uleb128 0x3b
- 1033 00c2 0B       		.uleb128 0xb
- 1034 00c3 49       		.uleb128 0x49
- 1035 00c4 13       		.uleb128 0x13
- 1036 00c5 3F       		.uleb128 0x3f
- 1037 00c6 0C       		.uleb128 0xc
- 1038 00c7 02       		.uleb128 0x2
- 1039 00c8 0A       		.uleb128 0xa
- 1040 00c9 00       		.byte	0x0
- 1041 00ca 00       		.byte	0x0
- 1042 00cb 0E       		.uleb128 0xe
- 1043 00cc 34       		.uleb128 0x34
- 1044 00cd 00       		.byte	0x0
- 1045 00ce 03       		.uleb128 0x3
- 1046 00cf 0E       		.uleb128 0xe
- 1047 00d0 3A       		.uleb128 0x3a
- 1048 00d1 0B       		.uleb128 0xb
- 1049 00d2 3B       		.uleb128 0x3b
- 1050 00d3 0B       		.uleb128 0xb
- 1051 00d4 49       		.uleb128 0x49
- 1052 00d5 13       		.uleb128 0x13
- 1053 00d6 3F       		.uleb128 0x3f
- 1054 00d7 0C       		.uleb128 0xc
- 1055 00d8 3C       		.uleb128 0x3c
- 1056 00d9 0C       		.uleb128 0xc
- 1057 00da 00       		.byte	0x0
- 1058 00db 00       		.byte	0x0
- 1059 00dc 00       		.byte	0x0
- 1060              		.section	.debug_pubnames,"",%progbits
- 1061 0000 DA000000 		.4byte	0xda
+ 1008 00c5 3F       		.uleb128 0x3f
+ 1009 00c6 0C       		.uleb128 0xc
+ 1010 00c7 02       		.uleb128 0x2
+ 1011 00c8 0A       		.uleb128 0xa
+ 1012 00c9 00       		.byte	0x0
+ 1013 00ca 00       		.byte	0x0
+ 1014 00cb 0E       		.uleb128 0xe
+ 1015 00cc 34       		.uleb128 0x34
+ 1016 00cd 00       		.byte	0x0
+ 1017 00ce 03       		.uleb128 0x3
+ 1018 00cf 0E       		.uleb128 0xe
+ 1019 00d0 3A       		.uleb128 0x3a
+ 1020 00d1 0B       		.uleb128 0xb
+ 1021 00d2 3B       		.uleb128 0x3b
+ 1022 00d3 0B       		.uleb128 0xb
+ 1023 00d4 49       		.uleb128 0x49
+ 1024 00d5 13       		.uleb128 0x13
+ 1025 00d6 3F       		.uleb128 0x3f
+ 1026 00d7 0C       		.uleb128 0xc
+ 1027 00d8 3C       		.uleb128 0x3c
+ 1028 00d9 0C       		.uleb128 0xc
+ 1029 00da 00       		.byte	0x0
+ 1030 00db 00       		.byte	0x0
+ 1031 00dc 00       		.byte	0x0
+ 1032              		.section	.debug_pubnames,"",%progbits
+ 1033 0000 DA000000 		.4byte	0xda
+ 1034 0004 0200     		.2byte	0x2
+ 1035 0006 00000000 		.4byte	.Ldebug_info0
+ 1036 000a 05020000 		.4byte	0x205
+ 1037 000e AD000000 		.4byte	0xad
+ 1038 0012 566F6C74 		.ascii	"VoltageMonitorInit\000"
+ 1038      6167654D 
+ 1038      6F6E6974 
+ 1038      6F72496E 
+ 1038      697400
+ 1039 0025 C2000000 		.4byte	0xc2
+ 1040 0029 47657452 		.ascii	"GetRange\000"
+ 1040      616E6765 
+ 1040      00
+ 1041 0032 D7000000 		.4byte	0xd7
+ 1042 0036 47657456 		.ascii	"GetVoltage\000"
+ 1042      6F6C7461 
+ 1042      676500
+ 1043 0041 11010000 		.4byte	0x111
+ 1044 0045 436F6E76 		.ascii	"Convert_To_milliVolts\000"
+ 1044      6572745F 
+ 1044      546F5F6D 
+ 1044      696C6C69 
+ 1044      566F6C74 
+ 1045 005b 59010000 		.4byte	0x159
+ 1046 005f 566F6C74 		.ascii	"VoltageMonitorStop\000"
+ 1046      6167654D 
+ 1046      6F6E6974 
+ 1046      6F725374 
+ 1046      6F7000
+ 1047 0072 6E010000 		.4byte	0x16e
+ 1048 0076 53656E64 		.ascii	"SendPSoCToSleep\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 25
+
+
+ 1048      50536F43 
+ 1048      546F536C 
+ 1048      65657000 
+ 1049 0086 83010000 		.4byte	0x183
+ 1050 008a 52657375 		.ascii	"ResumeFromSleep\000"
+ 1050      6D654672 
+ 1050      6F6D536C 
+ 1050      65657000 
+ 1051 009a 98010000 		.4byte	0x198
+ 1052 009e 48616E64 		.ascii	"HandleUSBSuspend\000"
+ 1052      6C655553 
+ 1052      42537573 
+ 1052      70656E64 
+ 1052      00
+ 1053 00af C1010000 		.4byte	0x1c1
+ 1054 00b3 63686563 		.ascii	"checkActivityFlag\000"
+ 1054      6B416374 
+ 1054      69766974 
+ 1054      79466C61 
+ 1054      6700
+ 1055 00c5 E0010000 		.4byte	0x1e0
+ 1056 00c9 72616E67 		.ascii	"range\000"
+ 1056      6500
+ 1057 00cf F2010000 		.4byte	0x1f2
+ 1058 00d3 72657375 		.ascii	"result\000"
+ 1058      6C7400
+ 1059 00da 00000000 		.4byte	0x0
+ 1060              		.section	.debug_aranges,"",%progbits
+ 1061 0000 54000000 		.4byte	0x54
  1062 0004 0200     		.2byte	0x2
  1063 0006 00000000 		.4byte	.Ldebug_info0
- 1064 000a 05020000 		.4byte	0x205
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 25
+ 1064 000a 04       		.byte	0x4
+ 1065 000b 00       		.byte	0x0
+ 1066 000c 0000     		.2byte	0x0
+ 1067 000e 0000     		.2byte	0x0
+ 1068 0010 00000000 		.4byte	.LFB29
+ 1069 0014 0A000000 		.4byte	.LFE29-.LFB29
+ 1070 0018 00000000 		.4byte	.LFB30
+ 1071 001c 3A000000 		.4byte	.LFE30-.LFB30
+ 1072 0020 00000000 		.4byte	.LFB31
+ 1073 0024 3E000000 		.4byte	.LFE31-.LFB31
+ 1074 0028 00000000 		.4byte	.LFB32
+ 1075 002c 58000000 		.4byte	.LFE32-.LFB32
+ 1076 0030 00000000 		.4byte	.LFB33
+ 1077 0034 0A000000 		.4byte	.LFE33-.LFB33
+ 1078 0038 00000000 		.4byte	.LFB34
+ 1079 003c 36000000 		.4byte	.LFE34-.LFB34
+ 1080 0040 00000000 		.4byte	.LFB35
+ 1081 0044 34000000 		.4byte	.LFE35-.LFB35
+ 1082 0048 00000000 		.4byte	.LFB36
+ 1083 004c 3C000000 		.4byte	.LFE36-.LFB36
+ 1084 0050 00000000 		.4byte	0x0
+ 1085 0054 00000000 		.4byte	0x0
+ 1086              		.section	.debug_ranges,"",%progbits
+ 1087              	.Ldebug_ranges0:
+ 1088 0000 00000000 		.4byte	.Ltext0
+ 1089 0004 00000000 		.4byte	.Letext0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 26
 
 
- 1065 000e AD000000 		.4byte	0xad
- 1066 0012 566F6C74 		.ascii	"VoltageMonitorInit\000"
- 1066      6167654D 
- 1066      6F6E6974 
- 1066      6F72496E 
- 1066      697400
- 1067 0025 C2000000 		.4byte	0xc2
- 1068 0029 47657452 		.ascii	"GetRange\000"
- 1068      616E6765 
- 1068      00
- 1069 0032 D7000000 		.4byte	0xd7
- 1070 0036 47657456 		.ascii	"GetVoltage\000"
- 1070      6F6C7461 
- 1070      676500
- 1071 0041 11010000 		.4byte	0x111
- 1072 0045 436F6E76 		.ascii	"Convert_To_milliVolts\000"
- 1072      6572745F 
- 1072      546F5F6D 
- 1072      696C6C69 
- 1072      566F6C74 
- 1073 005b 59010000 		.4byte	0x159
- 1074 005f 566F6C74 		.ascii	"VoltageMonitorStop\000"
- 1074      6167654D 
- 1074      6F6E6974 
- 1074      6F725374 
- 1074      6F7000
- 1075 0072 6E010000 		.4byte	0x16e
- 1076 0076 53656E64 		.ascii	"SendPSoCToSleep\000"
- 1076      50536F43 
- 1076      546F536C 
- 1076      65657000 
- 1077 0086 83010000 		.4byte	0x183
- 1078 008a 52657375 		.ascii	"ResumeFromSleep\000"
- 1078      6D654672 
- 1078      6F6D536C 
- 1078      65657000 
- 1079 009a 98010000 		.4byte	0x198
- 1080 009e 48616E64 		.ascii	"HandleUSBSuspend\000"
- 1080      6C655553 
- 1080      42537573 
- 1080      70656E64 
- 1080      00
- 1081 00af C1010000 		.4byte	0x1c1
- 1082 00b3 63686563 		.ascii	"checkActivityFlag\000"
- 1082      6B416374 
- 1082      69766974 
- 1082      79466C61 
- 1082      6700
- 1083 00c5 E0010000 		.4byte	0x1e0
- 1084 00c9 72616E67 		.ascii	"range\000"
- 1084      6500
- 1085 00cf F2010000 		.4byte	0x1f2
- 1086 00d3 72657375 		.ascii	"result\000"
- 1086      6C7400
- 1087 00da 00000000 		.4byte	0x0
- 1088              		.section	.debug_aranges,"",%progbits
- 1089 0000 54000000 		.4byte	0x54
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 26
+ 1090 0008 00000000 		.4byte	.LFB29
+ 1091 000c 0A000000 		.4byte	.LFE29
+ 1092 0010 00000000 		.4byte	.LFB30
+ 1093 0014 3A000000 		.4byte	.LFE30
+ 1094 0018 00000000 		.4byte	.LFB31
+ 1095 001c 3E000000 		.4byte	.LFE31
+ 1096 0020 00000000 		.4byte	.LFB32
+ 1097 0024 58000000 		.4byte	.LFE32
+ 1098 0028 00000000 		.4byte	.LFB33
+ 1099 002c 0A000000 		.4byte	.LFE33
+ 1100 0030 00000000 		.4byte	.LFB34
+ 1101 0034 36000000 		.4byte	.LFE34
+ 1102 0038 00000000 		.4byte	.LFB35
+ 1103 003c 34000000 		.4byte	.LFE35
+ 1104 0040 00000000 		.4byte	.LFB36
+ 1105 0044 3C000000 		.4byte	.LFE36
+ 1106 0048 00000000 		.4byte	0x0
+ 1107 004c 00000000 		.4byte	0x0
+ 1108              		.section	.debug_str,"MS",%progbits,1
+ 1109              	.LASF6:
+ 1110 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1110      206C6F6E 
+ 1110      6720696E 
+ 1110      7400
+ 1111              	.LASF25:
+ 1112 000e 52657375 		.ascii	"ResumeFromSleep\000"
+ 1112      6D654672 
+ 1112      6F6D536C 
+ 1112      65657000 
+ 1113              	.LASF22:
+ 1114 001e 696E7465 		.ascii	"intermediate\000"
+ 1114      726D6564 
+ 1114      69617465 
+ 1114      00
+ 1115              	.LASF13:
+ 1116 002b 646F7562 		.ascii	"double\000"
+ 1116      6C6500
+ 1117              	.LASF29:
+ 1118 0032 62555342 		.ascii	"bUSBResetDetected\000"
+ 1118      52657365 
+ 1118      74446574 
+ 1118      65637465 
+ 1118      6400
+ 1119              	.LASF19:
+ 1120 0044 47657456 		.ascii	"GetVoltage\000"
+ 1120      6F6C7461 
+ 1120      676500
+ 1121              	.LASF12:
+ 1122 004f 666C6F61 		.ascii	"float\000"
+ 1122      7400
+ 1123              	.LASF33:
+ 1124 0055 2E5C706F 		.ascii	".\\power.c\000"
+ 1124      7765722E 
+ 1124      6300
+ 1125              	.LASF1:
+ 1126 005f 756E7369 		.ascii	"unsigned char\000"
+ 1126      676E6564 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 27
 
 
- 1090 0004 0200     		.2byte	0x2
- 1091 0006 00000000 		.4byte	.Ldebug_info0
- 1092 000a 04       		.byte	0x4
- 1093 000b 00       		.byte	0x0
- 1094 000c 0000     		.2byte	0x0
- 1095 000e 0000     		.2byte	0x0
- 1096 0010 00000000 		.4byte	.LFB29
- 1097 0014 12000000 		.4byte	.LFE29-.LFB29
- 1098 0018 00000000 		.4byte	.LFB30
- 1099 001c 5A000000 		.4byte	.LFE30-.LFB30
- 1100 0020 00000000 		.4byte	.LFB31
- 1101 0024 52000000 		.4byte	.LFE31-.LFB31
- 1102 0028 00000000 		.4byte	.LFB32
- 1103 002c 58000000 		.4byte	.LFE32-.LFB32
- 1104 0030 00000000 		.4byte	.LFB33
- 1105 0034 0A000000 		.4byte	.LFE33-.LFB33
- 1106 0038 00000000 		.4byte	.LFB34
- 1107 003c 36000000 		.4byte	.LFE34-.LFB34
- 1108 0040 00000000 		.4byte	.LFB35
- 1109 0044 3C000000 		.4byte	.LFE35-.LFB35
- 1110 0048 00000000 		.4byte	.LFB36
- 1111 004c 3C000000 		.4byte	.LFE36-.LFB36
- 1112 0050 00000000 		.4byte	0x0
- 1113 0054 00000000 		.4byte	0x0
- 1114              		.section	.debug_ranges,"",%progbits
- 1115              	.Ldebug_ranges0:
- 1116 0000 00000000 		.4byte	.Ltext0
- 1117 0004 00000000 		.4byte	.Letext0
- 1118 0008 00000000 		.4byte	.LFB29
- 1119 000c 12000000 		.4byte	.LFE29
- 1120 0010 00000000 		.4byte	.LFB30
- 1121 0014 5A000000 		.4byte	.LFE30
- 1122 0018 00000000 		.4byte	.LFB31
- 1123 001c 52000000 		.4byte	.LFE31
- 1124 0020 00000000 		.4byte	.LFB32
- 1125 0024 58000000 		.4byte	.LFE32
- 1126 0028 00000000 		.4byte	.LFB33
- 1127 002c 0A000000 		.4byte	.LFE33
- 1128 0030 00000000 		.4byte	.LFB34
- 1129 0034 36000000 		.4byte	.LFE34
- 1130 0038 00000000 		.4byte	.LFB35
- 1131 003c 3C000000 		.4byte	.LFE35
- 1132 0040 00000000 		.4byte	.LFB36
- 1133 0044 3C000000 		.4byte	.LFE36
- 1134 0048 00000000 		.4byte	0x0
- 1135 004c 00000000 		.4byte	0x0
- 1136              		.section	.debug_str,"MS",%progbits,1
- 1137              	.LASF6:
- 1138 0000 6C6F6E67 		.ascii	"long long int\000"
- 1138      206C6F6E 
- 1138      6720696E 
- 1138      7400
- 1139              	.LASF25:
- 1140 000e 52657375 		.ascii	"ResumeFromSleep\000"
- 1140      6D654672 
- 1140      6F6D536C 
- 1140      65657000 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 27
-
-
- 1141              	.LASF22:
- 1142 001e 696E7465 		.ascii	"intermediate\000"
- 1142      726D6564 
- 1142      69617465 
+ 1126      20636861 
+ 1126      7200
+ 1127              	.LASF5:
+ 1128 006d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1128      20756E73 
+ 1128      69676E65 
+ 1128      6420696E 
+ 1128      7400
+ 1129              	.LASF3:
+ 1130 007f 73686F72 		.ascii	"short unsigned int\000"
+ 1130      7420756E 
+ 1130      7369676E 
+ 1130      65642069 
+ 1130      6E7400
+ 1131              	.LASF21:
+ 1132 0092 766F6C74 		.ascii	"voltage\000"
+ 1132      61676500 
+ 1133              	.LASF27:
+ 1134 009a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1134      52784275 
+ 1134      66666572 
+ 1134      00
+ 1135              	.LASF30:
+ 1136 00a7 72616E67 		.ascii	"range\000"
+ 1136      6500
+ 1137              	.LASF17:
+ 1138 00ad 74617267 		.ascii	"targetVoltage\000"
+ 1138      6574566F 
+ 1138      6C746167 
+ 1138      6500
+ 1139              	.LASF20:
+ 1140 00bb 436F6E76 		.ascii	"Convert_To_milliVolts\000"
+ 1140      6572745F 
+ 1140      546F5F6D 
+ 1140      696C6C69 
+ 1140      566F6C74 
+ 1141              	.LASF16:
+ 1142 00d1 47657452 		.ascii	"GetRange\000"
+ 1142      616E6765 
  1142      00
- 1143              	.LASF13:
- 1144 002b 646F7562 		.ascii	"double\000"
- 1144      6C6500
- 1145              	.LASF29:
- 1146 0032 62555342 		.ascii	"bUSBResetDetected\000"
- 1146      52657365 
- 1146      74446574 
- 1146      65637465 
- 1146      6400
- 1147              	.LASF19:
- 1148 0044 47657456 		.ascii	"GetVoltage\000"
- 1148      6F6C7461 
- 1148      676500
- 1149              	.LASF12:
- 1150 004f 666C6F61 		.ascii	"float\000"
- 1150      7400
- 1151              	.LASF33:
- 1152 0055 2E5C706F 		.ascii	".\\power.c\000"
- 1152      7765722E 
- 1152      6300
- 1153              	.LASF1:
- 1154 005f 756E7369 		.ascii	"unsigned char\000"
- 1154      676E6564 
- 1154      20636861 
- 1154      7200
- 1155              	.LASF5:
- 1156 006d 6C6F6E67 		.ascii	"long unsigned int\000"
- 1156      20756E73 
- 1156      69676E65 
- 1156      6420696E 
- 1156      7400
- 1157              	.LASF3:
- 1158 007f 73686F72 		.ascii	"short unsigned int\000"
- 1158      7420756E 
- 1158      7369676E 
- 1158      65642069 
- 1158      6E7400
- 1159              	.LASF21:
- 1160 0092 766F6C74 		.ascii	"voltage\000"
- 1160      61676500 
- 1161              	.LASF27:
- 1162 009a 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1162      52784275 
- 1162      66666572 
- 1162      00
- 1163              	.LASF30:
- 1164 00a7 72616E67 		.ascii	"range\000"
- 1164      6500
- 1165              	.LASF17:
- 1166 00ad 74617267 		.ascii	"targetVoltage\000"
- 1166      6574566F 
- 1166      6C746167 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 28
+ 1143              	.LASF23:
+ 1144 00da 566F6C74 		.ascii	"VoltageMonitorStop\000"
+ 1144      6167654D 
+ 1144      6F6E6974 
+ 1144      6F725374 
+ 1144      6F7000
+ 1145              	.LASF10:
+ 1146 00ed 75696E74 		.ascii	"uint16\000"
+ 1146      313600
+ 1147              	.LASF11:
+ 1148 00f4 75696E74 		.ascii	"uint32\000"
+ 1148      333200
+ 1149              	.LASF8:
+ 1150 00fb 756E7369 		.ascii	"unsigned int\000"
+ 1150      676E6564 
+ 1150      20696E74 
+ 1150      00
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 28
 
 
- 1166      6500
- 1167              	.LASF20:
- 1168 00bb 436F6E76 		.ascii	"Convert_To_milliVolts\000"
- 1168      6572745F 
- 1168      546F5F6D 
- 1168      696C6C69 
- 1168      566F6C74 
- 1169              	.LASF16:
- 1170 00d1 47657452 		.ascii	"GetRange\000"
- 1170      616E6765 
- 1170      00
- 1171              	.LASF23:
- 1172 00da 566F6C74 		.ascii	"VoltageMonitorStop\000"
- 1172      6167654D 
- 1172      6F6E6974 
- 1172      6F725374 
- 1172      6F7000
- 1173              	.LASF10:
- 1174 00ed 75696E74 		.ascii	"uint16\000"
- 1174      313600
- 1175              	.LASF11:
- 1176 00f4 75696E74 		.ascii	"uint32\000"
- 1176      333200
- 1177              	.LASF8:
- 1178 00fb 756E7369 		.ascii	"unsigned int\000"
- 1178      676E6564 
- 1178      20696E74 
- 1178      00
- 1179              	.LASF35:
- 1180 0108 636F756E 		.ascii	"counts\000"
- 1180      747300
- 1181              	.LASF7:
- 1182 010f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1182      206C6F6E 
- 1182      6720756E 
- 1182      7369676E 
- 1182      65642069 
- 1183              	.LASF31:
- 1184 0126 72657375 		.ascii	"result\000"
- 1184      6C7400
- 1185              	.LASF26:
- 1186 012d 48616E64 		.ascii	"HandleUSBSuspend\000"
- 1186      6C655553 
- 1186      42537573 
- 1186      70656E64 
- 1186      00
- 1187              	.LASF28:
- 1188 013e 63686563 		.ascii	"checkActivityFlag\000"
- 1188      6B416374 
- 1188      69766974 
- 1188      79466C61 
- 1188      6700
- 1189              	.LASF32:
- 1190 0150 474E5520 		.ascii	"GNU C 4.4.1\000"
- 1190      4320342E 
- 1190      342E3100 
- 1191              	.LASF14:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccuIKdub.s 			page 29
+ 1151              	.LASF35:
+ 1152 0108 636F756E 		.ascii	"counts\000"
+ 1152      747300
+ 1153              	.LASF7:
+ 1154 010f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1154      206C6F6E 
+ 1154      6720756E 
+ 1154      7369676E 
+ 1154      65642069 
+ 1155              	.LASF31:
+ 1156 0126 72657375 		.ascii	"result\000"
+ 1156      6C7400
+ 1157              	.LASF26:
+ 1158 012d 48616E64 		.ascii	"HandleUSBSuspend\000"
+ 1158      6C655553 
+ 1158      42537573 
+ 1158      70656E64 
+ 1158      00
+ 1159              	.LASF28:
+ 1160 013e 63686563 		.ascii	"checkActivityFlag\000"
+ 1160      6B416374 
+ 1160      69766974 
+ 1160      79466C61 
+ 1160      6700
+ 1161              	.LASF34:
+ 1162 0150 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 1162      665C486F 
+ 1162      6D655C44 
+ 1162      65736B74 
+ 1162      6F705C55 
+ 1163 017d 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg.cydsn\000"
+ 1163      50726F67 
+ 1163      20766572 
+ 1163      73696F6E 
+ 1163      20325F30 
+ 1164              	.LASF32:
+ 1165 01a9 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1165      4320342E 
+ 1165      342E3100 
+ 1166              	.LASF14:
+ 1167 01b5 63686172 		.ascii	"char\000"
+ 1167      00
+ 1168              	.LASF2:
+ 1169 01ba 73686F72 		.ascii	"short int\000"
+ 1169      7420696E 
+ 1169      7400
+ 1170              	.LASF9:
+ 1171 01c4 75696E74 		.ascii	"uint8\000"
+ 1171      3800
+ 1172              	.LASF4:
+ 1173 01ca 6C6F6E67 		.ascii	"long int\000"
+ 1173      20696E74 
+ 1173      00
+ 1174              	.LASF0:
+ 1175 01d3 7369676E 		.ascii	"signed char\000"
+ 1175      65642063 
+ 1175      68617200 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccU9a7Cp.s 			page 29
 
 
- 1192 015c 63686172 		.ascii	"char\000"
- 1192      00
- 1193              	.LASF2:
- 1194 0161 73686F72 		.ascii	"short int\000"
- 1194      7420696E 
- 1194      7400
- 1195              	.LASF9:
- 1196 016b 75696E74 		.ascii	"uint8\000"
- 1196      3800
- 1197              	.LASF4:
- 1198 0171 6C6F6E67 		.ascii	"long int\000"
- 1198      20696E74 
- 1198      00
- 1199              	.LASF0:
- 1200 017a 7369676E 		.ascii	"signed char\000"
- 1200      65642063 
- 1200      68617200 
- 1201              	.LASF34:
- 1202 0186 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 1202      665C486F 
- 1202      6D655C44 
- 1202      65736B74 
- 1202      6F705C4B 
- 1203 01b3 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
- 1203      69745072 
- 1203      6F672E63 
- 1203      7964736E 
- 1203      00
- 1204              	.LASF24:
- 1205 01c4 53656E64 		.ascii	"SendPSoCToSleep\000"
- 1205      50536F43 
- 1205      546F536C 
- 1205      65657000 
- 1206              	.LASF15:
- 1207 01d4 566F6C74 		.ascii	"VoltageMonitorInit\000"
- 1207      6167654D 
- 1207      6F6E6974 
- 1207      6F72496E 
- 1207      697400
- 1208              	.LASF18:
- 1209 01e7 74617267 		.ascii	"targetValue\000"
- 1209      65745661 
- 1209      6C756500 
- 1210              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 1176              	.LASF24:
+ 1177 01df 53656E64 		.ascii	"SendPSoCToSleep\000"
+ 1177      50536F43 
+ 1177      546F536C 
+ 1177      65657000 
+ 1178              	.LASF15:
+ 1179 01ef 566F6C74 		.ascii	"VoltageMonitorInit\000"
+ 1179      6167654D 
+ 1179      6F6E6974 
+ 1179      6F72496E 
+ 1179      697400
+ 1180              	.LASF18:
+ 1181 0202 74617267 		.ascii	"targetValue\000"
+ 1181      65745661 
+ 1181      6C756500 
+ 1182              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

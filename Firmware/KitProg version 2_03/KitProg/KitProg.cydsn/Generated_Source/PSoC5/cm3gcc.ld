@@ -22,8 +22,8 @@ GROUP(-lgcc -lc -lcs3 -lcs3unhosted -lcs3micro)
 
 MEMORY
 {
-  rom (rx) : ORIGIN = 19712, LENGTH = (65472 - 19712)
-  ram (rwx) : ORIGIN = 0x20000000 - (16384 / 2), LENGTH = (16384 - 0x1000 - 0x1000)
+  rom (rx) : ORIGIN = 9984, LENGTH = (131008 - 9984)
+  ram (rwx) : ORIGIN = 0x20000000 - (32768 / 2), LENGTH = (32768 - 0x4000 - 0x1000)
 }
 
 /* These force the linker to search for particular symbols from
@@ -39,8 +39,8 @@ EXTERN(__cs3_start_c main __cs3_stack __cs3_heap_end)
 /* Provide fall-back values */
 PROVIDE(__cs3_heap_start = _end);
 PROVIDE(__cs3_region_num = (__cs3_regions_end - __cs3_regions) / 20);
-PROVIDE(__cs3_stack = 0x20000000 + (16384 / 2));
-PROVIDE(__cs3_heap_end = __cs3_stack - 0x1000);
+PROVIDE(__cs3_stack = 0x20000000 + (32768 / 2));
+PROVIDE(__cs3_heap_end = __cs3_stack - 0x4000);
 
 
 SECTIONS
@@ -62,7 +62,7 @@ SECTIONS
 
 	/* Place the DMA initialization before text to ensure it gets placed in first 64K of flash */
     *(.dma_init)
-    ASSERT(19712 + . <= 0x10000 || !0, "DMA Init must be within the first 64k of flash");
+    ASSERT(9984 + . <= 0x10000 || !0, "DMA Init must be within the first 64k of flash");
 		
     *(.text.cs3.init)
     *(.text .text.* .gnu.linkonce.t.*)

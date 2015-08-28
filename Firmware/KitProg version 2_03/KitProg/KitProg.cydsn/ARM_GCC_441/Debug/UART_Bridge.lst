@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
   51              		.global	UART_Bridge_rxBufferLoopDetect
   52              		.type	UART_Bridge_rxBufferLoopDetect, %object
   53              		.size	UART_Bridge_rxBufferLoopDetect, 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 2
 
 
   54              	UART_Bridge_rxBufferLoopDetect:
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
   39:.\Generated_Source\PSoC5/UART_Bridge.c ****     volatile uint8 UART_Bridge_rxBufferLoopDetect = 0u;
   40:.\Generated_Source\PSoC5/UART_Bridge.c ****     volatile uint8 UART_Bridge_rxBufferOverflow = 0u;
   41:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if (UART_Bridge_RXHW_ADDRESS_ENABLED)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 3
 
 
   42:.\Generated_Source\PSoC5/UART_Bridge.c ****         volatile uint8 UART_Bridge_rxAddressMode = UART_Bridge_RXADDRESSMODE;
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
   78:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_Init();
   88              		.loc 1 78 0
   89 0012 FFF7FEFF 		bl	UART_Bridge_Init
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 4
 
 
   79:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_initVar = 1u;
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  120              		.cfi_offset 7, -8
  121              	.LCFI3:
  122              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 5
 
 
  103:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if(UART_Bridge_RX_ENABLED || UART_Bridge_HD_ENABLED)
@@ -267,15 +267,15 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  117:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* Init Count7 period */
  118:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXBITCTR_PERIOD_REG = UART_Bridge_RXBITCTR_INIT;
  132              		.loc 1 118 0
- 133 0020 46F28753 		movw	r3, #:lower16:1073767815
- 134 0024 C4F20003 		movt	r3, #:upper16:1073767815
+ 133 0020 46F28553 		movw	r3, #:lower16:1073767813
+ 134 0024 C4F20003 		movt	r3, #:upper16:1073767813
  135 0028 4FF07202 		mov	r2, #114
  136 002c 1A70     		strb	r2, [r3, #0]
  119:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* Configure the Initial RX interrupt mask */
  120:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXSTATUS_MASK_REG  = UART_Bridge_INIT_RX_INTERRUPTS_MASK;
  137              		.loc 1 120 0
- 138 002e 46F28443 		movw	r3, #:lower16:1073767556
- 139 0032 C4F20003 		movt	r3, #:upper16:1073767556
+ 138 002e 46F28543 		movw	r3, #:lower16:1073767557
+ 139 0032 C4F20003 		movt	r3, #:upper16:1073767557
  140 0036 4FF02002 		mov	r2, #32
  141 003a 1A70     		strb	r2, [r3, #0]
  121:.\Generated_Source\PSoC5/UART_Bridge.c ****     #endif /* End UART_Bridge_RX_ENABLED || UART_Bridge_HD_ENABLED*/
@@ -298,19 +298,19 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  129:.\Generated_Source\PSoC5/UART_Bridge.c **** 
  130:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* Write Counter Value for TX Bit Clk Generator*/
  131:.\Generated_Source\PSoC5/UART_Bridge.c ****         #if(UART_Bridge_TXCLKGEN_DP)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 6
 
 
  132:.\Generated_Source\PSoC5/UART_Bridge.c ****             UART_Bridge_TXBITCLKGEN_CTR_REG = UART_Bridge_BIT_CENTER;
  151              		.loc 1 132 0
- 152 0058 46F22643 		movw	r3, #:lower16:1073767462
- 153 005c C4F20003 		movt	r3, #:upper16:1073767462
+ 152 0058 46F22F43 		movw	r3, #:lower16:1073767471
+ 153 005c C4F20003 		movt	r3, #:upper16:1073767471
  154 0060 4FF00702 		mov	r2, #7
  155 0064 1A70     		strb	r2, [r3, #0]
  133:.\Generated_Source\PSoC5/UART_Bridge.c ****             UART_Bridge_TXBITCLKTX_COMPLETE_REG = (UART_Bridge_NUMBER_OF_DATA_BITS +
  156              		.loc 1 133 0
- 157 0066 46F23643 		movw	r3, #:lower16:1073767478
- 158 006a C4F20003 		movt	r3, #:upper16:1073767478
+ 157 0066 46F23F43 		movw	r3, #:lower16:1073767487
+ 158 006a C4F20003 		movt	r3, #:upper16:1073767487
  159 006e 4FF04802 		mov	r2, #72
  160 0072 1A70     		strb	r2, [r3, #0]
  134:.\Generated_Source\PSoC5/UART_Bridge.c ****                         UART_Bridge_NUMBER_OF_START_BIT) * UART_Bridge_OVER_SAMPLE_COUNT;
@@ -323,8 +323,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  141:.\Generated_Source\PSoC5/UART_Bridge.c ****         #if(UART_Bridge_TX_INTERRUPT_ENABLED && (UART_Bridge_TXBUFFERSIZE > UART_Bridge_FIFO_LENGTH
  142:.\Generated_Source\PSoC5/UART_Bridge.c ****             UART_Bridge_TXSTATUS_MASK_REG = UART_Bridge_TX_STS_FIFO_EMPTY;
  161              		.loc 1 142 0
- 162 0074 46F28243 		movw	r3, #:lower16:1073767554
- 163 0078 C4F20003 		movt	r3, #:upper16:1073767554
+ 162 0074 46F28E43 		movw	r3, #:lower16:1073767566
+ 163 0078 C4F20003 		movt	r3, #:upper16:1073767566
  164 007c 4FF00202 		mov	r2, #2
  165 0080 1A70     		strb	r2, [r3, #0]
  143:.\Generated_Source\PSoC5/UART_Bridge.c ****         #else
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  158:.\Generated_Source\PSoC5/UART_Bridge.c **** * Function Name: UART_Bridge_Enable
  159:.\Generated_Source\PSoC5/UART_Bridge.c **** ********************************************************************************
  160:.\Generated_Source\PSoC5/UART_Bridge.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 7
 
 
  161:.\Generated_Source\PSoC5/UART_Bridge.c **** * Summary:
@@ -402,10 +402,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  180:.\Generated_Source\PSoC5/UART_Bridge.c ****         /*RX Counter (Count7) Enable */
  181:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXBITCTR_CONTROL_REG |= UART_Bridge_CNTR_ENABLE;
  198              		.loc 1 181 0
- 199 000e 46F29753 		movw	r3, #:lower16:1073767831
- 200 0012 C4F20003 		movt	r3, #:upper16:1073767831
- 201 0016 46F29752 		movw	r2, #:lower16:1073767831
- 202 001a C4F20002 		movt	r2, #:upper16:1073767831
+ 199 000e 46F29553 		movw	r3, #:lower16:1073767829
+ 200 0012 C4F20003 		movt	r3, #:upper16:1073767829
+ 201 0016 46F29552 		movw	r2, #:lower16:1073767829
+ 202 001a C4F20002 		movt	r2, #:upper16:1073767829
  203 001e 1278     		ldrb	r2, [r2, #0]
  204 0020 D2B2     		uxtb	r2, r2
  205 0022 42F02002 		orr	r2, r2, #32
@@ -414,11 +414,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  182:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* Enable the RX Interrupt. */
  183:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXSTATUS_ACTL_REG  |= UART_Bridge_INT_ENABLE;
  208              		.loc 1 183 0
- 209 002a 46F29443 		movw	r3, #:lower16:1073767572
- 210 002e C4F20003 		movt	r3, #:upper16:1073767572
- 211 0032 46F29442 		movw	r2, #:lower16:1073767572
- 212 0036 C4F20002 		movt	r2, #:upper16:1073767572
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 8
+ 209 002a 46F29543 		movw	r3, #:lower16:1073767573
+ 210 002e C4F20003 		movt	r3, #:upper16:1073767573
+ 211 0032 46F29542 		movw	r2, #:lower16:1073767573
+ 212 0036 C4F20002 		movt	r2, #:upper16:1073767573
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 8
 
 
  213 003a 1278     		ldrb	r2, [r2, #0]
@@ -447,10 +447,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  197:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* Enable the TX Interrupt. */
  198:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_TXSTATUS_ACTL_REG |= UART_Bridge_INT_ENABLE;
  223              		.loc 1 198 0
- 224 0054 46F29243 		movw	r3, #:lower16:1073767570
- 225 0058 C4F20003 		movt	r3, #:upper16:1073767570
- 226 005c 46F29242 		movw	r2, #:lower16:1073767570
- 227 0060 C4F20002 		movt	r2, #:upper16:1073767570
+ 224 0054 46F29E43 		movw	r3, #:lower16:1073767582
+ 225 0058 C4F20003 		movt	r3, #:upper16:1073767582
+ 226 005c 46F29E42 		movw	r2, #:lower16:1073767582
+ 227 0060 C4F20002 		movt	r2, #:upper16:1073767582
  228 0064 1278     		ldrb	r2, [r2, #0]
  229 0066 D2B2     		uxtb	r2, r2
  230 0068 42F01002 		orr	r2, r2, #16
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  241 0082 FFF7FEFF 		bl	CyExitCriticalSection
  210:.\Generated_Source\PSoC5/UART_Bridge.c **** }
  242              		.loc 1 210 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 9
 
 
  243 0086 07F10807 		add	r7, r7, #8
@@ -538,14 +538,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  232:.\Generated_Source\PSoC5/UART_Bridge.c ****     /* Write Bit Counter Disable */
  233:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if(UART_Bridge_RX_ENABLED || UART_Bridge_HD_ENABLED)
  234:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXBITCTR_CONTROL_REG &= (uint8)~UART_Bridge_CNTR_ENABLE;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 10
 
 
  276              		.loc 1 234 0
- 277 000e 46F29753 		movw	r3, #:lower16:1073767831
- 278 0012 C4F20003 		movt	r3, #:upper16:1073767831
- 279 0016 46F29752 		movw	r2, #:lower16:1073767831
- 280 001a C4F20002 		movt	r2, #:upper16:1073767831
+ 277 000e 46F29553 		movw	r3, #:lower16:1073767829
+ 278 0012 C4F20003 		movt	r3, #:upper16:1073767829
+ 279 0016 46F29552 		movw	r2, #:lower16:1073767829
+ 280 001a C4F20002 		movt	r2, #:upper16:1073767829
  281 001e 1278     		ldrb	r2, [r2, #0]
  282 0020 D2B2     		uxtb	r2, r2
  283 0022 02F0DF02 		and	r2, r2, #223
@@ -567,10 +567,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  249:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if(UART_Bridge_RX_ENABLED || UART_Bridge_HD_ENABLED)
  250:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXSTATUS_ACTL_REG  &= (uint8)~UART_Bridge_INT_ENABLE;
  285              		.loc 1 250 0
- 286 0028 46F29443 		movw	r3, #:lower16:1073767572
- 287 002c C4F20003 		movt	r3, #:upper16:1073767572
- 288 0030 46F29442 		movw	r2, #:lower16:1073767572
- 289 0034 C4F20002 		movt	r2, #:upper16:1073767572
+ 286 0028 46F29543 		movw	r3, #:lower16:1073767573
+ 287 002c C4F20003 		movt	r3, #:upper16:1073767573
+ 288 0030 46F29542 		movw	r2, #:lower16:1073767573
+ 289 0034 C4F20002 		movt	r2, #:upper16:1073767573
  290 0038 1278     		ldrb	r2, [r2, #0]
  291 003a D2B2     		uxtb	r2, r2
  292 003c 02F0EF02 		and	r2, r2, #239
@@ -585,10 +585,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  256:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if(UART_Bridge_TX_ENABLED)
  257:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_TXSTATUS_ACTL_REG &= (uint8)~UART_Bridge_INT_ENABLE;
  296              		.loc 1 257 0
- 297 0046 46F29243 		movw	r3, #:lower16:1073767570
- 298 004a C4F20003 		movt	r3, #:upper16:1073767570
- 299 004e 46F29242 		movw	r2, #:lower16:1073767570
- 300 0052 C4F20002 		movt	r2, #:upper16:1073767570
+ 297 0046 46F29E43 		movw	r3, #:lower16:1073767582
+ 298 004a C4F20003 		movt	r3, #:upper16:1073767582
+ 299 004e 46F29E42 		movw	r2, #:lower16:1073767582
+ 300 0052 C4F20002 		movt	r2, #:upper16:1073767582
  301 0056 1278     		ldrb	r2, [r2, #0]
  302 0058 D2B2     		uxtb	r2, r2
  303 005a 02F0EF02 		and	r2, r2, #239
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  305              		.loc 1 259 0
  306 0060 FFF7FEFF 		bl	UART_Bridge_DisableTxInt
  260:.\Generated_Source\PSoC5/UART_Bridge.c ****         #endif /* End UART_Bridge_TX_INTERRUPT_ENABLED */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 11
 
 
  261:.\Generated_Source\PSoC5/UART_Bridge.c ****     #endif /* End UART_Bridge_TX_ENABLED */
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  284:.\Generated_Source\PSoC5/UART_Bridge.c ****         return(0u);
  338              		.loc 1 284 0
  339 0004 4FF00003 		mov	r3, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 12
 
 
  285:.\Generated_Source\PSoC5/UART_Bridge.c ****     #else
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  372 0008 FB71     		strb	r3, [r7, #7]
  307:.\Generated_Source\PSoC5/UART_Bridge.c ****     #if( UART_Bridge_CONTROL_REG_REMOVED )
  308:.\Generated_Source\PSoC5/UART_Bridge.c ****         if(control != 0u) { }      /* release compiler warning */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 13
 
 
  309:.\Generated_Source\PSoC5/UART_Bridge.c ****     #else
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  398              		.cfi_offset 7, -4
  399              	.LCFI16:
  400              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 14
 
 
  338:.\Generated_Source\PSoC5/UART_Bridge.c ****             CyIntEnable(UART_Bridge_RX_VECT_NUM);
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  432              		.cfi_def_cfa_register 7
  361:.\Generated_Source\PSoC5/UART_Bridge.c ****             CyIntDisable(UART_Bridge_RX_VECT_NUM);
  433              		.loc 1 361 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 15
 
 
  434 0004 4EF28013 		movw	r3, #:lower16:-536813184
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  463              		.cfi_def_cfa_offset 16
  464 0004 00AF     		add	r7, sp, #0
  465              		.cfi_offset 7, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 16
 
 
  466              	.LCFI21:
@@ -907,8 +907,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  469 0008 FB71     		strb	r3, [r7, #7]
  387:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXSTATUS_MASK_REG  = intSrc;
  470              		.loc 1 387 0
- 471 000a 46F28443 		movw	r3, #:lower16:1073767556
- 472 000e C4F20003 		movt	r3, #:upper16:1073767556
+ 471 000a 46F28543 		movw	r3, #:lower16:1073767557
+ 472 000e C4F20003 		movt	r3, #:upper16:1073767557
  473 0012 FA79     		ldrb	r2, [r7, #7]
  474 0014 1A70     		strb	r2, [r3, #0]
  388:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  416:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
  417:.\Generated_Source\PSoC5/UART_Bridge.c ****     *******************************************************************************/
  418:.\Generated_Source\PSoC5/UART_Bridge.c ****     uint8 UART_Bridge_ReadRxData(void) 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 17
 
 
  419:.\Generated_Source\PSoC5/UART_Bridge.c ****     {
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  434:.\Generated_Source\PSoC5/UART_Bridge.c ****             {
  435:.\Generated_Source\PSoC5/UART_Bridge.c ****                 rxData = UART_Bridge_rxBuffer[loc_rxBufferRead];
  530              		.loc 1 435 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 18
 
 
  531 003a BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  452:.\Generated_Source\PSoC5/UART_Bridge.c ****                             if((UART_Bridge_CONTROL_REG & UART_Bridge_CTRL_HD_SEND) == 0u)
  453:.\Generated_Source\PSoC5/UART_Bridge.c ****                             {   /* In Half duplex mode return RX mask only in RX
  454:.\Generated_Source\PSoC5/UART_Bridge.c ****                                 *  configuration set, otherwise
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 19
 
 
  455:.\Generated_Source\PSoC5/UART_Bridge.c ****                                 *  mask will be returned in LoadRxConfig() API.
@@ -1095,8 +1095,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  466:.\Generated_Source\PSoC5/UART_Bridge.c ****             {   /* Needs to check status for RX_STS_FIFO_NOTEMPTY bit*/
  467:.\Generated_Source\PSoC5/UART_Bridge.c ****                 rxData = UART_Bridge_RXDATA_REG;
  569              		.loc 1 467 0
- 570 008a 46F24043 		movw	r3, #:lower16:1073767488
- 571 008e C4F20003 		movt	r3, #:upper16:1073767488
+ 570 008a 46F24643 		movw	r3, #:lower16:1073767494
+ 571 008e C4F20003 		movt	r3, #:upper16:1073767494
  572 0092 1B78     		ldrb	r3, [r3, #0]
  573 0094 7B71     		strb	r3, [r7, #5]
  574 0096 00E0     		b	.L25
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  594              		.thumb
  595              		.thumb_func
  596              		.type	UART_Bridge_ReadRxStatus, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 20
 
 
  597              	UART_Bridge_ReadRxStatus:
@@ -1189,8 +1189,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  512:.\Generated_Source\PSoC5/UART_Bridge.c **** 
  513:.\Generated_Source\PSoC5/UART_Bridge.c ****         status = UART_Bridge_RXSTATUS_REG & UART_Bridge_RX_HW_MASK;
  614              		.loc 1 513 0
- 615 0006 46F26443 		movw	r3, #:lower16:1073767524
- 616 000a C4F20003 		movt	r3, #:upper16:1073767524
+ 615 0006 46F26543 		movw	r3, #:lower16:1073767525
+ 616 000a C4F20003 		movt	r3, #:upper16:1073767525
  617 000e 1B78     		ldrb	r3, [r3, #0]
  618 0010 DBB2     		uxtb	r3, r3
  619 0012 03F07F03 		and	r3, r3, #127
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  514:.\Generated_Source\PSoC5/UART_Bridge.c **** 
  515:.\Generated_Source\PSoC5/UART_Bridge.c ****         #if(UART_Bridge_RXBUFFERSIZE > UART_Bridge_FIFO_LENGTH)
  516:.\Generated_Source\PSoC5/UART_Bridge.c ****             if( UART_Bridge_rxBufferOverflow != 0u )
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 21
 
 
  621              		.loc 1 516 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  534:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  returned.
  535:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
  536:.\Generated_Source\PSoC5/UART_Bridge.c ****     * Parameters:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 22
 
 
  537:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  None.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  679 0010 40F20003 		movw	r3, #:lower16:UART_Bridge_rxBufferRead
  680 0014 C0F20003 		movt	r3, #:upper16:UART_Bridge_rxBufferRead
  681 0018 1B78     		ldrb	r3, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 23
 
 
  682 001a BB71     		strb	r3, [r7, #6]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  582:.\Generated_Source\PSoC5/UART_Bridge.c **** 
  583:.\Generated_Source\PSoC5/UART_Bridge.c ****                 if(UART_Bridge_rxBufferLoopDetect > 0u )
  724              		.loc 1 583 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 24
 
 
  725 0070 40F20003 		movw	r3, #:lower16:UART_Bridge_rxBufferLoopDetect
@@ -1417,8 +1417,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  603:.\Generated_Source\PSoC5/UART_Bridge.c ****             else
  604:.\Generated_Source\PSoC5/UART_Bridge.c ****             {   rxStatus = UART_Bridge_RXSTATUS_REG;
  739              		.loc 1 604 0
- 740 0090 46F26443 		movw	r3, #:lower16:1073767524
- 741 0094 C4F20003 		movt	r3, #:upper16:1073767524
+ 740 0090 46F26543 		movw	r3, #:lower16:1073767525
+ 741 0094 C4F20003 		movt	r3, #:upper16:1073767525
  742 0098 1B78     		ldrb	r3, [r3, #0]
  743 009a 7B71     		strb	r3, [r7, #5]
  605:.\Generated_Source\PSoC5/UART_Bridge.c ****                 if((rxStatus & UART_Bridge_RX_STS_FIFO_NOTEMPTY) != 0u)
@@ -1430,15 +1430,15 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  606:.\Generated_Source\PSoC5/UART_Bridge.c ****                 {   /* Read received data from FIFO*/
  607:.\Generated_Source\PSoC5/UART_Bridge.c ****                     rxData = UART_Bridge_RXDATA_REG;
  749              		.loc 1 607 0
- 750 00a6 46F24043 		movw	r3, #:lower16:1073767488
- 751 00aa C4F20003 		movt	r3, #:upper16:1073767488
+ 750 00a6 46F24643 		movw	r3, #:lower16:1073767494
+ 751 00aa C4F20003 		movt	r3, #:upper16:1073767494
  752 00ae 1B78     		ldrb	r3, [r3, #0]
  753 00b0 3B71     		strb	r3, [r7, #4]
  608:.\Generated_Source\PSoC5/UART_Bridge.c ****                     /*Check status on error*/
  609:.\Generated_Source\PSoC5/UART_Bridge.c ****                     if((rxStatus & (UART_Bridge_RX_STS_BREAK | UART_Bridge_RX_STS_PAR_ERROR |
  754              		.loc 1 609 0
  755 00b2 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 25
 
 
  756 00b4 03F01E03 		and	r3, r3, #30
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  781              		.global	UART_Bridge_GetByte
  782              		.thumb
  783              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 26
 
 
  784              		.type	UART_Bridge_GetByte, %function
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  815              		.cfi_endproc
  816              	.LFE12:
  817              		.size	UART_Bridge_GetByte, .-UART_Bridge_GetByte
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 27
 
 
  818              		.section	.text.UART_Bridge_GetRxBufferSize,"ax",%progbits
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  840              		.cfi_def_cfa_register 7
  694:.\Generated_Source\PSoC5/UART_Bridge.c ****         uint8 size;
  695:.\Generated_Source\PSoC5/UART_Bridge.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 28
 
 
  696:.\Generated_Source\PSoC5/UART_Bridge.c ****         #if(UART_Bridge_RXBUFFERSIZE > UART_Bridge_FIFO_LENGTH)
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  875 0050 DAB2     		uxtb	r2, r3
  876 0052 40F20003 		movw	r3, #:lower16:UART_Bridge_rxBufferWrite
  877 0056 C0F20003 		movt	r3, #:upper16:UART_Bridge_rxBufferWrite
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 29
 
 
  878 005a 1B78     		ldrb	r3, [r3, #0]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  911              		.loc 1 736 0
  912 00aa FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  737:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 30
 
 
  913              		.loc 1 737 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  932              		@ frame_needed = 1, uses_anonymous_args = 0
  933 0000 80B5     		push	{r7, lr}
  934              	.LCFI36:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 31
 
 
  935              		.cfi_def_cfa_offset 8
@@ -1821,10 +1821,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  947 000c FB71     		strb	r3, [r7, #7]
  778:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXDATA_AUX_CTL_REG |=  UART_Bridge_RX_FIFO_CLR;
  948              		.loc 1 778 0
- 949 000e 46F29043 		movw	r3, #:lower16:1073767568
- 950 0012 C4F20003 		movt	r3, #:upper16:1073767568
- 951 0016 46F29042 		movw	r2, #:lower16:1073767568
- 952 001a C4F20002 		movt	r2, #:upper16:1073767568
+ 949 000e 46F29643 		movw	r3, #:lower16:1073767574
+ 950 0012 C4F20003 		movt	r3, #:upper16:1073767574
+ 951 0016 46F29642 		movw	r2, #:lower16:1073767574
+ 952 001a C4F20002 		movt	r2, #:upper16:1073767574
  953 001e 1278     		ldrb	r2, [r2, #0]
  954 0020 D2B2     		uxtb	r2, r2
  955 0022 42F00102 		orr	r2, r2, #1
@@ -1832,10 +1832,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  957 0028 1A70     		strb	r2, [r3, #0]
  779:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXDATA_AUX_CTL_REG &= (uint8)~UART_Bridge_RX_FIFO_CLR;
  958              		.loc 1 779 0
- 959 002a 46F29043 		movw	r3, #:lower16:1073767568
- 960 002e C4F20003 		movt	r3, #:upper16:1073767568
- 961 0032 46F29042 		movw	r2, #:lower16:1073767568
- 962 0036 C4F20002 		movt	r2, #:upper16:1073767568
+ 959 002a 46F29643 		movw	r3, #:lower16:1073767574
+ 960 002e C4F20003 		movt	r3, #:upper16:1073767574
+ 961 0032 46F29642 		movw	r2, #:lower16:1073767574
+ 962 0036 C4F20002 		movt	r2, #:upper16:1073767574
  963 003a 1278     		ldrb	r2, [r2, #0]
  964 003c D2B2     		uxtb	r2, r2
  965 003e 02F0FE02 		and	r2, r2, #254
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  789:.\Generated_Source\PSoC5/UART_Bridge.c **** 
  790:.\Generated_Source\PSoC5/UART_Bridge.c ****             UART_Bridge_rxBufferRead = 0u;
  973              		.loc 1 790 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 32
 
 
  974 0050 40F20003 		movw	r3, #:lower16:UART_Bridge_rxBufferRead
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  809:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  Set the receive addressing mode
  810:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
  811:.\Generated_Source\PSoC5/UART_Bridge.c ****     * Parameters:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 33
 
 
  812:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  addressMode: Enumerated value indicating the mode of RX addressing
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  849:.\Generated_Source\PSoC5/UART_Bridge.c ****         #else /* UART_Bridge_RXHW_ADDRESS_ENABLED */
  850:.\Generated_Source\PSoC5/UART_Bridge.c ****             if(addressMode != 0u) { }     /* release compiler warning */
  851:.\Generated_Source\PSoC5/UART_Bridge.c ****         #endif /* End UART_Bridge_RXHW_ADDRESS_ENABLED */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 34
 
 
  852:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
@@ -2036,9 +2036,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1059 0008 FB71     		strb	r3, [r7, #7]
  872:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXADDRESS1_REG = address;
  1060              		.loc 1 872 0
- 1061 000a 46F22043 		movw	r3, #:lower16:1073767456
- 1062 000e C4F20003 		movt	r3, #:upper16:1073767456
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 35
+ 1061 000a 46F22643 		movw	r3, #:lower16:1073767462
+ 1062 000e C4F20003 		movt	r3, #:upper16:1073767462
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 35
 
 
  1063 0012 FA79     		ldrb	r2, [r7, #7]
@@ -2097,11 +2097,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1097 0008 FB71     		strb	r3, [r7, #7]
  892:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_RXADDRESS2_REG = address;
  1098              		.loc 1 892 0
- 1099 000a 46F23043 		movw	r3, #:lower16:1073767472
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 36
+ 1099 000a 46F23643 		movw	r3, #:lower16:1073767478
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 36
 
 
- 1100 000e C4F20003 		movt	r3, #:upper16:1073767472
+ 1100 000e C4F20003 		movt	r3, #:upper16:1073767478
  1101 0012 FA79     		ldrb	r2, [r7, #7]
  1102 0014 1A70     		strb	r2, [r3, #0]
  893:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1126              		.cfi_def_cfa_offset 4
  1127 0002 00AF     		add	r7, sp, #0
  1128              		.cfi_offset 7, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 37
 
 
  1129              	.LCFI49:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1160              		.cfi_offset 7, -4
  1161              	.LCFI51:
  1162              		.cfi_def_cfa_register 7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 38
 
 
  944:.\Generated_Source\PSoC5/UART_Bridge.c ****             CyIntDisable(UART_Bridge_TX_VECT_NUM);
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1191 0002 83B0     		sub	sp, sp, #12
  1192              	.LCFI53:
  1193              		.cfi_def_cfa_offset 16
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 39
 
 
  1194 0004 00AF     		add	r7, sp, #0
@@ -2289,8 +2289,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1199 0008 FB71     		strb	r3, [r7, #7]
  970:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_TXSTATUS_MASK_REG = intSrc;
  1200              		.loc 1 970 0
- 1201 000a 46F28243 		movw	r3, #:lower16:1073767554
- 1202 000e C4F20003 		movt	r3, #:upper16:1073767554
+ 1201 000a 46F28E43 		movw	r3, #:lower16:1073767566
+ 1202 000e C4F20003 		movt	r3, #:upper16:1073767566
  1203 0012 FA79     		ldrb	r2, [r7, #7]
  1204 0014 1A70     		strb	r2, [r3, #0]
  971:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  997:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
  998:.\Generated_Source\PSoC5/UART_Bridge.c ****     * Reentrant:
  999:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  No.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 40
 
 
 1000:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
@@ -2394,11 +2394,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1255 0034 10D1     		bne	.L64
 1016:.\Generated_Source\PSoC5/UART_Bridge.c ****                     ((UART_Bridge_TXSTATUS_REG & UART_Bridge_TX_STS_FIFO_FULL) == 0u) )
  1256              		.loc 1 1016 0
- 1257 0036 46F26243 		movw	r3, #:lower16:1073767522
- 1258 003a C4F20003 		movt	r3, #:upper16:1073767522
+ 1257 0036 46F26E43 		movw	r3, #:lower16:1073767534
+ 1258 003a C4F20003 		movt	r3, #:upper16:1073767534
  1259 003e 1B78     		ldrb	r3, [r3, #0]
  1260 0040 DBB2     		uxtb	r3, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 41
 
 
  1261 0042 03F00403 		and	r3, r3, #4
@@ -2409,8 +2409,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1018:.\Generated_Source\PSoC5/UART_Bridge.c ****                     /* Add directly to the FIFO. */
 1019:.\Generated_Source\PSoC5/UART_Bridge.c ****                     UART_Bridge_TXDATA_REG = txDataByte;
  1265              		.loc 1 1019 0
- 1266 004a 46F24243 		movw	r3, #:lower16:1073767490
- 1267 004e C4F20003 		movt	r3, #:upper16:1073767490
+ 1266 004a 46F24E43 		movw	r3, #:lower16:1073767502
+ 1267 004e C4F20003 		movt	r3, #:upper16:1073767502
  1268 0052 FA79     		ldrb	r2, [r7, #7]
  1269 0054 1A70     		strb	r2, [r3, #0]
  1270              		.loc 1 1015 0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1300 009c DAB2     		uxtb	r2, r3
  1301 009e 40F20003 		movw	r3, #:lower16:UART_Bridge_txBufferWrite
  1302 00a2 C0F20003 		movt	r3, #:upper16:UART_Bridge_txBufferWrite
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 42
 
 
  1303 00a6 1A70     		strb	r2, [r3, #0]
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1066:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  was not enabled as an interrupt source the event happened and must be handled
 1067:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  accordingly.
 1068:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 43
 
 
 1069:.\Generated_Source\PSoC5/UART_Bridge.c ****     *******************************************************************************/
@@ -2538,8 +2538,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1334              		.cfi_def_cfa_register 7
 1072:.\Generated_Source\PSoC5/UART_Bridge.c ****         return(UART_Bridge_TXSTATUS_REG);
  1335              		.loc 1 1072 0
- 1336 0004 46F26243 		movw	r3, #:lower16:1073767522
- 1337 0008 C4F20003 		movt	r3, #:upper16:1073767522
+ 1336 0004 46F26E43 		movw	r3, #:lower16:1073767534
+ 1337 0008 C4F20003 		movt	r3, #:upper16:1073767534
  1338 000c 1B78     		ldrb	r3, [r3, #0]
  1339 000e DBB2     		uxtb	r3, r3
 1073:.\Generated_Source\PSoC5/UART_Bridge.c ****     }
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1090:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  UART_Bridge_txBuffer - RAM buffer pointer for save data for transmission
 1091:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  UART_Bridge_txBufferWrite - cyclic index for write to txBuffer,
 1092:.\Generated_Source\PSoC5/UART_Bridge.c ****     *     checked to identify free space in txBuffer and incremented after each byte
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 44
 
 
 1093:.\Generated_Source\PSoC5/UART_Bridge.c ****     *     saved to buffer.
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1379              		.loc 1 1123 0
  1380 0016 40F20003 		movw	r3, #:lower16:UART_Bridge_txBufferRead
  1381 001a C0F20003 		movt	r3, #:upper16:UART_Bridge_txBufferRead
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 45
 
 
  1382 001e 1B78     		ldrb	r3, [r3, #0]
@@ -2689,8 +2689,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1418 005a 10D1     		bne	.L74
 1133:.\Generated_Source\PSoC5/UART_Bridge.c ****                     ((UART_Bridge_TXSTATUS_REG & UART_Bridge_TX_STS_FIFO_FULL) == 0u) )
  1419              		.loc 1 1133 0
- 1420 005c 46F26243 		movw	r3, #:lower16:1073767522
- 1421 0060 C4F20003 		movt	r3, #:upper16:1073767522
+ 1420 005c 46F26E43 		movw	r3, #:lower16:1073767534
+ 1421 0060 C4F20003 		movt	r3, #:upper16:1073767534
  1422 0064 1B78     		ldrb	r3, [r3, #0]
  1423 0066 DBB2     		uxtb	r3, r3
  1424 0068 03F00403 		and	r3, r3, #4
@@ -2698,14 +2698,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1426 006c 002B     		cmp	r3, #0
  1427 006e 06D1     		bne	.L74
 1134:.\Generated_Source\PSoC5/UART_Bridge.c ****                 {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 46
 
 
 1135:.\Generated_Source\PSoC5/UART_Bridge.c ****                     /* Add directly to the FIFO. */
 1136:.\Generated_Source\PSoC5/UART_Bridge.c ****                     UART_Bridge_TXDATA_REG = txDataByte;
  1428              		.loc 1 1136 0
- 1429 0070 46F24243 		movw	r3, #:lower16:1073767490
- 1430 0074 C4F20003 		movt	r3, #:upper16:1073767490
+ 1429 0070 46F24E43 		movw	r3, #:lower16:1073767502
+ 1430 0074 C4F20003 		movt	r3, #:upper16:1073767502
  1431 0078 FA79     		ldrb	r2, [r7, #7]
  1432 007a 1A70     		strb	r2, [r3, #0]
  1433              		.loc 1 1132 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1156:.\Generated_Source\PSoC5/UART_Bridge.c ****                 }
 1157:.\Generated_Source\PSoC5/UART_Bridge.c **** 
 1158:.\Generated_Source\PSoC5/UART_Bridge.c ****             #else /* UART_Bridge_TXBUFFERSIZE > UART_Bridge_FIFO_LENGTH */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 47
 
 
 1159:.\Generated_Source\PSoC5/UART_Bridge.c **** 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1197:.\Generated_Source\PSoC5/UART_Bridge.c ****     *******************************************************************************/
 1198:.\Generated_Source\PSoC5/UART_Bridge.c ****     void UART_Bridge_PutString(const char8 string[]) 
 1199:.\Generated_Source\PSoC5/UART_Bridge.c ****     {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 48
 
 
  1477              		.loc 1 1199 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1522 003c 002B     		cmp	r3, #0
  1523 003e EED1     		bne	.L81
  1524              	.L82:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 49
 
 
 1209:.\Generated_Source\PSoC5/UART_Bridge.c ****             }
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1549              		.cfi_def_cfa_offset 24
  1550 0004 00AF     		add	r7, sp, #0
  1551              		.cfi_offset 14, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 50
 
 
  1552              		.cfi_offset 7, -8
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1595              		.thumb
  1596              		.thumb_func
  1597              		.type	UART_Bridge_PutCRLF, %function
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 51
 
 
  1598              	UART_Bridge_PutCRLF:
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1623              		.loc 1 1278 0
  1624 0018 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1625 001a 1846     		mov	r0, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 52
 
 
  1626 001c FFF7FEFF 		bl	UART_Bridge_PutChar
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1310:.\Generated_Source\PSoC5/UART_Bridge.c ****     uint8 UART_Bridge_GetTxBufferSize(void)
 1311:.\Generated_Source\PSoC5/UART_Bridge.c ****                                                             
 1312:.\Generated_Source\PSoC5/UART_Bridge.c ****     {
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 53
 
 
  1649              		.loc 1 1312 0
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1688 0040 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  1689 0042 9A42     		cmp	r2, r3
  1690 0044 0ED2     		bcs	.L93
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 54
 
 
 1328:.\Generated_Source\PSoC5/UART_Bridge.c ****             {
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1355:.\Generated_Source\PSoC5/UART_Bridge.c ****             {
 1356:.\Generated_Source\PSoC5/UART_Bridge.c ****                 /* We only know there is data in the fifo. */
 1357:.\Generated_Source\PSoC5/UART_Bridge.c ****                 size = 1u;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 55
 
 
 1358:.\Generated_Source\PSoC5/UART_Bridge.c ****             }
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1394:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
 1395:.\Generated_Source\PSoC5/UART_Bridge.c ****     *******************************************************************************/
 1396:.\Generated_Source\PSoC5/UART_Bridge.c ****     void UART_Bridge_ClearTxBuffer(void) 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 56
 
 
 1397:.\Generated_Source\PSoC5/UART_Bridge.c ****     {
@@ -3328,10 +3328,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1402:.\Generated_Source\PSoC5/UART_Bridge.c ****         /* clear the HW FIFO */
 1403:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_TXDATA_AUX_CTL_REG |=  UART_Bridge_TX_FIFO_CLR;
  1755              		.loc 1 1403 0
- 1756 000e 46F29243 		movw	r3, #:lower16:1073767570
- 1757 0012 C4F20003 		movt	r3, #:upper16:1073767570
- 1758 0016 46F29242 		movw	r2, #:lower16:1073767570
- 1759 001a C4F20002 		movt	r2, #:upper16:1073767570
+ 1756 000e 46F29E43 		movw	r3, #:lower16:1073767582
+ 1757 0012 C4F20003 		movt	r3, #:upper16:1073767582
+ 1758 0016 46F29E42 		movw	r2, #:lower16:1073767582
+ 1759 001a C4F20002 		movt	r2, #:upper16:1073767582
  1760 001e 1278     		ldrb	r2, [r2, #0]
  1761 0020 D2B2     		uxtb	r2, r2
  1762 0022 42F00102 		orr	r2, r2, #1
@@ -3339,10 +3339,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1764 0028 1A70     		strb	r2, [r3, #0]
 1404:.\Generated_Source\PSoC5/UART_Bridge.c ****         UART_Bridge_TXDATA_AUX_CTL_REG &= (uint8)~UART_Bridge_TX_FIFO_CLR;
  1765              		.loc 1 1404 0
- 1766 002a 46F29243 		movw	r3, #:lower16:1073767570
- 1767 002e C4F20003 		movt	r3, #:upper16:1073767570
- 1768 0032 46F29242 		movw	r2, #:lower16:1073767570
- 1769 0036 C4F20002 		movt	r2, #:upper16:1073767570
+ 1766 002a 46F29E43 		movw	r3, #:lower16:1073767582
+ 1767 002e C4F20003 		movt	r3, #:upper16:1073767582
+ 1768 0032 46F29E42 		movw	r2, #:lower16:1073767582
+ 1769 0036 C4F20002 		movt	r2, #:upper16:1073767582
  1770 003a 1278     		ldrb	r2, [r2, #0]
  1771 003c D2B2     		uxtb	r2, r2
  1772 003e 02F0FE02 		and	r2, r2, #254
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1409:.\Generated_Source\PSoC5/UART_Bridge.c **** 
 1410:.\Generated_Source\PSoC5/UART_Bridge.c ****             /* Disable Tx interrupt. */
 1411:.\Generated_Source\PSoC5/UART_Bridge.c ****             /* Protect variables that could change on interrupt. */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 57
 
 
 1412:.\Generated_Source\PSoC5/UART_Bridge.c ****             #if(UART_Bridge_TX_INTERRUPT_ENABLED)
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1437:.\Generated_Source\PSoC5/UART_Bridge.c ****     *   0 - Initialize registers for Break, sends the Break signal and return
 1438:.\Generated_Source\PSoC5/UART_Bridge.c ****     *       imediately.
 1439:.\Generated_Source\PSoC5/UART_Bridge.c ****     *   1 - Wait until Break sending is complete, reinitialize registers to normal
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 58
 
 
 1440:.\Generated_Source\PSoC5/UART_Bridge.c ****     *       transmission mode then return.
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1814              		.cfi_def_cfa_offset 4
  1815 0002 85B0     		sub	sp, sp, #20
  1816              	.LCFI79:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 59
 
 
  1817              		.cfi_def_cfa_offset 24
@@ -3538,7 +3538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1527:.\Generated_Source\PSoC5/UART_Bridge.c ****                 }
 1528:.\Generated_Source\PSoC5/UART_Bridge.c **** 
 1529:.\Generated_Source\PSoC5/UART_Bridge.c ****             #else /* UART_Bridge_HD_ENABLED Full Duplex mode */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 60
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 60
 
 
 1530:.\Generated_Source\PSoC5/UART_Bridge.c **** 
@@ -3565,8 +3565,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1543:.\Generated_Source\PSoC5/UART_Bridge.c ****                     #if(UART_Bridge_TXCLKGEN_DP)
 1544:.\Generated_Source\PSoC5/UART_Bridge.c ****                         tx_period = UART_Bridge_TXBITCLKTX_COMPLETE_REG;
  1839              		.loc 1 1544 0
- 1840 0024 46F23643 		movw	r3, #:lower16:1073767478
- 1841 0028 C4F20003 		movt	r3, #:upper16:1073767478
+ 1840 0024 46F23F43 		movw	r3, #:lower16:1073767487
+ 1841 0028 C4F20003 		movt	r3, #:upper16:1073767487
  1842 002c 1B78     		ldrb	r3, [r3, #0]
  1843 002e DAB2     		uxtb	r2, r3
  1844 0030 40F20003 		movw	r3, #:lower16:tx_period.2388
@@ -3574,8 +3574,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1846 0038 1A70     		strb	r2, [r3, #0]
 1545:.\Generated_Source\PSoC5/UART_Bridge.c ****                         UART_Bridge_TXBITCLKTX_COMPLETE_REG = UART_Bridge_TXBITCTR_BREAKBITS;
  1847              		.loc 1 1545 0
- 1848 003a 46F23643 		movw	r3, #:lower16:1073767478
- 1849 003e C4F20003 		movt	r3, #:upper16:1073767478
+ 1848 003a 46F23F43 		movw	r3, #:lower16:1073767487
+ 1849 003e C4F20003 		movt	r3, #:upper16:1073767487
  1850 0042 4FF06702 		mov	r2, #103
  1851 0046 1A70     		strb	r2, [r3, #0]
 1546:.\Generated_Source\PSoC5/UART_Bridge.c ****                     #else
@@ -3586,8 +3586,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1551:.\Generated_Source\PSoC5/UART_Bridge.c ****                     /* Send zeros*/
 1552:.\Generated_Source\PSoC5/UART_Bridge.c ****                     UART_Bridge_TXDATA_REG = 0u;
  1852              		.loc 1 1552 0
- 1853 0048 46F24243 		movw	r3, #:lower16:1073767490
- 1854 004c C4F20003 		movt	r3, #:upper16:1073767490
+ 1853 0048 46F24E43 		movw	r3, #:lower16:1073767502
+ 1854 004c C4F20003 		movt	r3, #:upper16:1073767502
  1855 0050 4FF00002 		mov	r2, #0
  1856 0054 1A70     		strb	r2, [r3, #0]
  1857              	.L101:
@@ -3596,9 +3596,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1555:.\Generated_Source\PSoC5/UART_Bridge.c ****                     {
 1556:.\Generated_Source\PSoC5/UART_Bridge.c ****                         tmpStat = UART_Bridge_TXSTATUS_REG;
  1858              		.loc 1 1556 0
- 1859 0056 46F26243 		movw	r3, #:lower16:1073767522
- 1860 005a C4F20003 		movt	r3, #:upper16:1073767522
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 61
+ 1859 0056 46F26E43 		movw	r3, #:lower16:1073767534
+ 1860 005a C4F20003 		movt	r3, #:upper16:1073767534
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 61
 
 
  1861 005e 1B78     		ldrb	r3, [r3, #0]
@@ -3627,8 +3627,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1564:.\Generated_Source\PSoC5/UART_Bridge.c ****                     {
 1565:.\Generated_Source\PSoC5/UART_Bridge.c ****                         tmpStat = UART_Bridge_TXSTATUS_REG;
  1877              		.loc 1 1565 0
- 1878 0078 46F26243 		movw	r3, #:lower16:1073767522
- 1879 007c C4F20003 		movt	r3, #:upper16:1073767522
+ 1878 0078 46F26E43 		movw	r3, #:lower16:1073767534
+ 1879 007c C4F20003 		movt	r3, #:upper16:1073767534
  1880 0080 1B78     		ldrb	r3, [r3, #0]
  1881 0082 FB73     		strb	r3, [r7, #15]
 1566:.\Generated_Source\PSoC5/UART_Bridge.c ****                     }while(((uint8)~tmpStat & UART_Bridge_TX_STS_COMPLETE) != 0u);
@@ -3658,7 +3658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1902 00a8 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1903 00aa 032B     		cmp	r3, #3
  1904 00ac 09D1     		bne	.L107
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 62
 
 
  1905              	.L106:
@@ -3669,8 +3669,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1574:.\Generated_Source\PSoC5/UART_Bridge.c ****                     #if(UART_Bridge_TXCLKGEN_DP)
 1575:.\Generated_Source\PSoC5/UART_Bridge.c ****                         UART_Bridge_TXBITCLKTX_COMPLETE_REG = tx_period;
  1906              		.loc 1 1575 0
- 1907 00ae 46F23643 		movw	r3, #:lower16:1073767478
- 1908 00b2 C4F20003 		movt	r3, #:upper16:1073767478
+ 1907 00ae 46F23F43 		movw	r3, #:lower16:1073767487
+ 1908 00b2 C4F20003 		movt	r3, #:upper16:1073767487
  1909 00b6 40F20002 		movw	r2, #:lower16:tx_period.2388
  1910 00ba C0F20002 		movt	r2, #:upper16:tx_period.2388
  1911 00be 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
@@ -3718,7 +3718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
 1598:.\Generated_Source\PSoC5/UART_Bridge.c ****     * Parameters:
 1599:.\Generated_Source\PSoC5/UART_Bridge.c ****     *  addressMode: 0 -> Space
 1600:.\Generated_Source\PSoC5/UART_Bridge.c ****     *               1 -> Mark
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 63
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 63
 
 
 1601:.\Generated_Source\PSoC5/UART_Bridge.c ****     *
@@ -3778,7 +3778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  1962              	.Ldebug_loc0:
  1963              	.LLST0:
  1964 0000 00000000 		.4byte	.LFB0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 64
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 64
 
 
  1965 0004 02000000 		.4byte	.LCFI0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2019              	.LLST3:
  2020 008d 00000000 		.4byte	.LFB3
  2021 0091 02000000 		.4byte	.LCFI7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 65
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 65
 
 
  2022 0095 0100     		.2byte	0x1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2076 011c 77       		.byte	0x77
  2077 011d 10       		.sleb128 16
  2078 011e 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 66
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 66
 
 
  2079 0122 00000000 		.4byte	0x0
@@ -3958,7 +3958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2133 01aa 10       		.sleb128 16
  2134 01ab 00000000 		.4byte	0x0
  2135 01af 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 67
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 67
 
 
  2136              	.LLST9:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2190 0238 04000000 		.4byte	.LCFI29
  2191 023c 06000000 		.4byte	.LCFI30
  2192 0240 0200     		.2byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 68
 
 
  2193 0242 7D       		.byte	0x7d
@@ -4078,7 +4078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2247 02c9 04000000 		.4byte	.LCFI37
  2248 02cd 0200     		.2byte	0x2
  2249 02cf 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 69
 
 
  2250 02d0 08       		.sleb128 8
@@ -4138,7 +4138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2304 0356 10       		.sleb128 16
  2305 0357 00000000 		.4byte	0x0
  2306 035b 00000000 		.4byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 70
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 70
 
 
  2307              	.LLST17:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2361 03e4 00000000 		.4byte	0x0
  2362 03e8 00000000 		.4byte	0x0
  2363              	.LLST20:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 71
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 71
 
 
  2364 03ec 00000000 		.4byte	.LFB20
@@ -4258,7 +4258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2418 0475 18000000 		.4byte	.LFE22
  2419 0479 0200     		.2byte	0x2
  2420 047b 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 72
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 72
 
 
  2421 047c 04       		.sleb128 4
@@ -4318,7 +4318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2475 0506 0200     		.2byte	0x2
  2476 0508 7D       		.byte	0x7d
  2477 0509 08       		.sleb128 8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 73
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 73
 
 
  2478 050a 04000000 		.4byte	.LCFI67
@@ -4378,7 +4378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2532 0590 00000000 		.4byte	0x0
  2533 0594 00000000 		.4byte	0x0
  2534              	.LLST28:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 74
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 74
 
 
  2535 0598 00000000 		.4byte	.LFB28
@@ -4438,7 +4438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2589 0621 06000000 		.4byte	.LCFI83
  2590 0625 0200     		.2byte	0x2
  2591 0627 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 75
 
 
  2592 0628 10       		.sleb128 16
@@ -4456,10 +4456,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2604 0006 00000000 		.4byte	.Ldebug_abbrev0
  2605 000a 04       		.byte	0x4
  2606 000b 01       		.uleb128 0x1
- 2607 000c 9F000000 		.4byte	.LASF75
+ 2607 000c 61000000 		.4byte	.LASF75
  2608 0010 01       		.byte	0x1
- 2609 0011 37020000 		.4byte	.LASF76
- 2610 0015 4A000000 		.4byte	.LASF77
+ 2609 0011 F9010000 		.4byte	.LASF76
+ 2610 0015 52040000 		.4byte	.LASF77
  2611 0019 00000000 		.4byte	0x0
  2612 001d 00000000 		.4byte	0x0
  2613 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -4467,38 +4467,38 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2615 0029 02       		.uleb128 0x2
  2616 002a 01       		.byte	0x1
  2617 002b 06       		.byte	0x6
- 2618 002c D1000000 		.4byte	.LASF0
+ 2618 002c 93000000 		.4byte	.LASF0
  2619 0030 02       		.uleb128 0x2
  2620 0031 01       		.byte	0x1
  2621 0032 08       		.byte	0x8
- 2622 0033 17040000 		.4byte	.LASF1
+ 2622 0033 D9030000 		.4byte	.LASF1
  2623 0037 02       		.uleb128 0x2
  2624 0038 02       		.byte	0x2
  2625 0039 05       		.byte	0x5
- 2626 003a 25040000 		.4byte	.LASF2
+ 2626 003a E7030000 		.4byte	.LASF2
  2627 003e 02       		.uleb128 0x2
  2628 003f 02       		.byte	0x2
  2629 0040 07       		.byte	0x7
- 2630 0041 78020000 		.4byte	.LASF3
+ 2630 0041 3A020000 		.4byte	.LASF3
  2631 0045 02       		.uleb128 0x2
  2632 0046 04       		.byte	0x4
  2633 0047 05       		.byte	0x5
- 2634 0048 F1000000 		.4byte	.LASF4
+ 2634 0048 B3000000 		.4byte	.LASF4
  2635 004c 02       		.uleb128 0x2
  2636 004d 04       		.byte	0x4
  2637 004e 07       		.byte	0x7
- 2638 004f E2010000 		.4byte	.LASF5
+ 2638 004f A4010000 		.4byte	.LASF5
  2639 0053 02       		.uleb128 0x2
  2640 0054 08       		.byte	0x8
  2641 0055 05       		.byte	0x5
- 2642 0056 C3000000 		.4byte	.LASF6
+ 2642 0056 85000000 		.4byte	.LASF6
  2643 005a 02       		.uleb128 0x2
  2644 005b 08       		.byte	0x8
  2645 005c 07       		.byte	0x7
- 2646 005d 88000000 		.4byte	.LASF7
+ 2646 005d 4A000000 		.4byte	.LASF7
  2647 0061 03       		.uleb128 0x3
  2648 0062 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 76
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 76
 
 
  2649 0063 05       		.byte	0x5
@@ -4506,9 +4506,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2651 0068 02       		.uleb128 0x2
  2652 0069 04       		.byte	0x4
  2653 006a 07       		.byte	0x7
- 2654 006b D5010000 		.4byte	.LASF8
+ 2654 006b 97010000 		.4byte	.LASF8
  2655 006f 04       		.uleb128 0x4
- 2656 0070 FA000000 		.4byte	.LASF9
+ 2656 0070 BC000000 		.4byte	.LASF9
  2657 0074 02       		.byte	0x2
  2658 0075 4C       		.byte	0x4c
  2659 0076 30000000 		.4byte	0x30
@@ -4520,20 +4520,20 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2665 0085 02       		.uleb128 0x2
  2666 0086 04       		.byte	0x4
  2667 0087 04       		.byte	0x4
- 2668 0088 FD030000 		.4byte	.LASF11
+ 2668 0088 BF030000 		.4byte	.LASF11
  2669 008c 02       		.uleb128 0x2
  2670 008d 08       		.byte	0x8
  2671 008e 04       		.byte	0x4
- 2672 008f 19010000 		.4byte	.LASF12
+ 2672 008f DB000000 		.4byte	.LASF12
  2673 0093 04       		.uleb128 0x4
- 2674 0094 90040000 		.4byte	.LASF13
+ 2674 0094 AB040000 		.4byte	.LASF13
  2675 0098 02       		.byte	0x2
  2676 0099 5D       		.byte	0x5d
  2677 009a 9E000000 		.4byte	0x9e
  2678 009e 02       		.uleb128 0x2
  2679 009f 01       		.byte	0x1
  2680 00a0 08       		.byte	0x8
- 2681 00a1 71040000 		.4byte	.LASF14
+ 2681 00a1 33040000 		.4byte	.LASF14
  2682 00a5 05       		.uleb128 0x5
  2683 00a6 6F000000 		.4byte	0x6f
  2684 00aa 06       		.uleb128 0x6
@@ -4541,7 +4541,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2686 00ac 07       		.byte	0x7
  2687 00ad 07       		.uleb128 0x7
  2688 00ae 01       		.byte	0x1
- 2689 00af 5C050000 		.4byte	.LASF15
+ 2689 00af 77050000 		.4byte	.LASF15
  2690 00b3 01       		.byte	0x1
  2691 00b4 49       		.byte	0x49
  2692 00b5 01       		.byte	0x1
@@ -4550,7 +4550,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2695 00be 00000000 		.4byte	.LLST0
  2696 00c2 07       		.uleb128 0x7
  2697 00c3 01       		.byte	0x1
- 2698 00c4 43010000 		.4byte	.LASF16
+ 2698 00c4 05010000 		.4byte	.LASF16
  2699 00c8 01       		.byte	0x1
  2700 00c9 65       		.byte	0x65
  2701 00ca 01       		.byte	0x1
@@ -4558,11 +4558,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2703 00cf 84000000 		.4byte	.LFE1
  2704 00d3 2B000000 		.4byte	.LLST1
  2705 00d7 08       		.uleb128 0x8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 77
 
 
  2706 00d8 01       		.byte	0x1
- 2707 00d9 F0040000 		.4byte	.LASF17
+ 2707 00d9 0B050000 		.4byte	.LASF17
  2708 00dd 01       		.byte	0x1
  2709 00de AE       		.byte	0xae
  2710 00df 01       		.byte	0x1
@@ -4571,7 +4571,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2713 00e8 56000000 		.4byte	.LLST2
  2714 00ec FF000000 		.4byte	0xff
  2715 00f0 09       		.uleb128 0x9
- 2716 00f1 03050000 		.4byte	.LASF19
+ 2716 00f1 1E050000 		.4byte	.LASF19
  2717 00f5 01       		.byte	0x1
  2718 00f6 B0       		.byte	0xb0
  2719 00f7 6F000000 		.4byte	0x6f
@@ -4581,7 +4581,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2723 00fe 00       		.byte	0x0
  2724 00ff 08       		.uleb128 0x8
  2725 0100 01       		.byte	0x1
- 2726 0101 CB040000 		.4byte	.LASF18
+ 2726 0101 E6040000 		.4byte	.LASF18
  2727 0105 01       		.byte	0x1
  2728 0106 E3       		.byte	0xe3
  2729 0107 01       		.byte	0x1
@@ -4590,7 +4590,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2732 0110 8D000000 		.4byte	.LLST3
  2733 0114 27010000 		.4byte	0x127
  2734 0118 09       		.uleb128 0x9
- 2735 0119 03050000 		.4byte	.LASF19
+ 2735 0119 1E050000 		.4byte	.LASF19
  2736 011d 01       		.byte	0x1
  2737 011e E5       		.byte	0xe5
  2738 011f 6F000000 		.4byte	0x6f
@@ -4600,7 +4600,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2742 0126 00       		.byte	0x0
  2743 0127 0A       		.uleb128 0xa
  2744 0128 01       		.byte	0x1
- 2745 0129 1B050000 		.4byte	.LASF34
+ 2745 0129 36050000 		.4byte	.LASF34
  2746 012d 01       		.byte	0x1
  2747 012e 1901     		.2byte	0x119
  2748 0130 01       		.byte	0x1
@@ -4610,7 +4610,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2752 013d C4000000 		.4byte	.LLST4
  2753 0141 0B       		.uleb128 0xb
  2754 0142 01       		.byte	0x1
- 2755 0143 73030000 		.4byte	.LASF20
+ 2755 0143 35030000 		.4byte	.LASF20
  2756 0147 01       		.byte	0x1
  2757 0148 3101     		.2byte	0x131
  2758 014a 01       		.byte	0x1
@@ -4618,11 +4618,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2760 014f 14000000 		.4byte	.LFE5
  2761 0153 EF000000 		.4byte	.LLST5
  2762 0157 6B010000 		.4byte	0x16b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 78
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 78
 
 
  2763 015b 0C       		.uleb128 0xc
- 2764 015c 54010000 		.4byte	.LASF24
+ 2764 015c 16010000 		.4byte	.LASF24
  2765 0160 01       		.byte	0x1
  2766 0161 3101     		.2byte	0x131
  2767 0163 6F000000 		.4byte	0x6f
@@ -4632,7 +4632,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2771 016a 00       		.byte	0x0
  2772 016b 0D       		.uleb128 0xd
  2773 016c 01       		.byte	0x1
- 2774 016d AB000000 		.4byte	.LASF21
+ 2774 016d 6D000000 		.4byte	.LASF21
  2775 0171 01       		.byte	0x1
  2776 0172 5001     		.2byte	0x150
  2777 0174 01       		.byte	0x1
@@ -4641,7 +4641,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2780 017d 26010000 		.4byte	.LLST6
  2781 0181 0D       		.uleb128 0xd
  2782 0182 01       		.byte	0x1
- 2783 0183 95010000 		.4byte	.LASF22
+ 2783 0183 57010000 		.4byte	.LASF22
  2784 0187 01       		.byte	0x1
  2785 0188 6701     		.2byte	0x167
  2786 018a 01       		.byte	0x1
@@ -4659,7 +4659,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2798 01a9 7C010000 		.4byte	.LLST8
  2799 01ad C1010000 		.4byte	0x1c1
  2800 01b1 0C       		.uleb128 0xc
- 2801 01b2 ED020000 		.4byte	.LASF25
+ 2801 01b2 AF020000 		.4byte	.LASF25
  2802 01b6 01       		.byte	0x1
  2803 01b7 8101     		.2byte	0x181
  2804 01b9 6F000000 		.4byte	0x6f
@@ -4669,7 +4669,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2808 01c0 00       		.byte	0x0
  2809 01c1 0E       		.uleb128 0xe
  2810 01c2 01       		.byte	0x1
- 2811 01c3 2C010000 		.4byte	.LASF29
+ 2811 01c3 EE000000 		.4byte	.LASF29
  2812 01c7 01       		.byte	0x1
  2813 01c8 A201     		.2byte	0x1a2
  2814 01ca 01       		.byte	0x1
@@ -4678,11 +4678,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2817 01d3 AA000000 		.4byte	.LFE9
  2818 01d7 B3010000 		.4byte	.LLST9
  2819 01db 0D020000 		.4byte	0x20d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 79
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 79
 
 
  2820 01df 0F       		.uleb128 0xf
- 2821 01e0 56040000 		.4byte	.LASF26
+ 2821 01e0 18040000 		.4byte	.LASF26
  2822 01e4 01       		.byte	0x1
  2823 01e5 A401     		.2byte	0x1a4
  2824 01e7 6F000000 		.4byte	0x6f
@@ -4690,7 +4690,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2826 01ec 91       		.byte	0x91
  2827 01ed 75       		.sleb128 -11
  2828 01ee 0F       		.uleb128 0xf
- 2829 01ef B5020000 		.4byte	.LASF27
+ 2829 01ef 77020000 		.4byte	.LASF27
  2830 01f3 01       		.byte	0x1
  2831 01f4 A701     		.2byte	0x1a7
  2832 01f6 6F000000 		.4byte	0x6f
@@ -4708,7 +4708,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2844 020c 00       		.byte	0x0
  2845 020d 0E       		.uleb128 0xe
  2846 020e 01       		.byte	0x1
- 2847 020f C8030000 		.4byte	.LASF30
+ 2847 020f 8A030000 		.4byte	.LASF30
  2848 0213 01       		.byte	0x1
  2849 0214 FD01     		.2byte	0x1fd
  2850 0216 01       		.byte	0x1
@@ -4718,7 +4718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2854 0223 EA010000 		.4byte	.LLST10
  2855 0227 3B020000 		.4byte	0x23b
  2856 022b 0F       		.uleb128 0xf
- 2857 022c 14050000 		.4byte	.LASF31
+ 2857 022c 2F050000 		.4byte	.LASF31
  2858 0230 01       		.byte	0x1
  2859 0231 FF01     		.2byte	0x1ff
  2860 0233 6F000000 		.4byte	0x6f
@@ -4728,7 +4728,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2864 023a 00       		.byte	0x0
  2865 023b 0E       		.uleb128 0xe
  2866 023c 01       		.byte	0x1
- 2867 023d 03040000 		.4byte	.LASF32
+ 2867 023d C5030000 		.4byte	.LASF32
  2868 0241 01       		.byte	0x1
  2869 0242 2C02     		.2byte	0x22c
  2870 0244 01       		.byte	0x1
@@ -4738,10 +4738,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2874 0251 21020000 		.4byte	.LLST11
  2875 0255 96020000 		.4byte	0x296
  2876 0259 0F       		.uleb128 0xf
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 80
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 80
 
 
- 2877 025a 56040000 		.4byte	.LASF26
+ 2877 025a 18040000 		.4byte	.LASF26
  2878 025e 01       		.byte	0x1
  2879 025f 2E02     		.2byte	0x22e
  2880 0261 6F000000 		.4byte	0x6f
@@ -4749,7 +4749,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2882 0266 91       		.byte	0x91
  2883 0267 74       		.sleb128 -12
  2884 0268 0F       		.uleb128 0xf
- 2885 0269 53050000 		.4byte	.LASF33
+ 2885 0269 6E050000 		.4byte	.LASF33
  2886 026d 01       		.byte	0x1
  2887 026e 2F02     		.2byte	0x22f
  2888 0270 6F000000 		.4byte	0x6f
@@ -4757,7 +4757,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2890 0275 91       		.byte	0x91
  2891 0276 75       		.sleb128 -11
  2892 0277 0F       		.uleb128 0xf
- 2893 0278 B5020000 		.4byte	.LASF27
+ 2893 0278 77020000 		.4byte	.LASF27
  2894 027c 01       		.byte	0x1
  2895 027d 3202     		.2byte	0x232
  2896 027f 6F000000 		.4byte	0x6f
@@ -4775,7 +4775,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2908 0295 00       		.byte	0x0
  2909 0296 0A       		.uleb128 0xa
  2910 0297 01       		.byte	0x1
- 2911 0298 DD000000 		.4byte	.LASF35
+ 2911 0298 9F000000 		.4byte	.LASF35
  2912 029c 01       		.byte	0x1
  2913 029d 9202     		.2byte	0x292
  2914 029f 01       		.byte	0x1
@@ -4785,7 +4785,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2918 02ac 58020000 		.4byte	.LLST12
  2919 02b0 0E       		.uleb128 0xe
  2920 02b1 01       		.byte	0x1
- 2921 02b2 AF040000 		.4byte	.LASF36
+ 2921 02b2 CA040000 		.4byte	.LASF36
  2922 02b6 01       		.byte	0x1
  2923 02b7 B302     		.2byte	0x2b3
  2924 02b9 01       		.byte	0x1
@@ -4795,10 +4795,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2928 02c6 83020000 		.4byte	.LLST13
  2929 02ca DE020000 		.4byte	0x2de
  2930 02ce 0F       		.uleb128 0xf
- 2931 02cf 73020000 		.4byte	.LASF37
+ 2931 02cf 35020000 		.4byte	.LASF37
  2932 02d3 01       		.byte	0x1
  2933 02d4 B602     		.2byte	0x2b6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 81
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 81
 
 
  2934 02d6 6F000000 		.4byte	0x6f
@@ -4808,7 +4808,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2938 02dd 00       		.byte	0x0
  2939 02de 0B       		.uleb128 0xb
  2940 02df 01       		.byte	0x1
- 2941 02e0 8B050000 		.4byte	.LASF38
+ 2941 02e0 A6050000 		.4byte	.LASF38
  2942 02e4 01       		.byte	0x1
  2943 02e5 0303     		.2byte	0x303
  2944 02e7 01       		.byte	0x1
@@ -4817,7 +4817,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2947 02f0 BA020000 		.4byte	.LLST14
  2948 02f4 08030000 		.4byte	0x308
  2949 02f8 0F       		.uleb128 0xf
- 2950 02f9 03050000 		.4byte	.LASF19
+ 2950 02f9 1E050000 		.4byte	.LASF19
  2951 02fd 01       		.byte	0x1
  2952 02fe 0503     		.2byte	0x305
  2953 0300 6F000000 		.4byte	0x6f
@@ -4827,7 +4827,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2957 0307 00       		.byte	0x0
  2958 0308 0B       		.uleb128 0xb
  2959 0309 01       		.byte	0x1
- 2960 030a 6E050000 		.4byte	.LASF39
+ 2960 030a 89050000 		.4byte	.LASF39
  2961 030e 01       		.byte	0x1
  2962 030f 4003     		.2byte	0x340
  2963 0311 01       		.byte	0x1
@@ -4836,7 +4836,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2966 031a F1020000 		.4byte	.LLST15
  2967 031e 32030000 		.4byte	0x332
  2968 0322 0C       		.uleb128 0xc
- 2969 0323 20010000 		.4byte	.LASF40
+ 2969 0323 E2000000 		.4byte	.LASF40
  2970 0327 01       		.byte	0x1
  2971 0328 4003     		.2byte	0x340
  2972 032a 6F000000 		.4byte	0x6f
@@ -4846,7 +4846,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2976 0331 00       		.byte	0x0
  2977 0332 0B       		.uleb128 0xb
  2978 0333 01       		.byte	0x1
- 2979 0334 94030000 		.4byte	.LASF41
+ 2979 0334 56030000 		.4byte	.LASF41
  2980 0338 01       		.byte	0x1
  2981 0339 6503     		.2byte	0x365
  2982 033b 01       		.byte	0x1
@@ -4855,10 +4855,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2985 0344 28030000 		.4byte	.LLST16
  2986 0348 5C030000 		.4byte	0x35c
  2987 034c 0C       		.uleb128 0xc
- 2988 034d 39030000 		.4byte	.LASF42
+ 2988 034d FB020000 		.4byte	.LASF42
  2989 0351 01       		.byte	0x1
  2990 0352 6503     		.2byte	0x365
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 82
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 82
 
 
  2991 0354 6F000000 		.4byte	0x6f
@@ -4868,7 +4868,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  2995 035b 00       		.byte	0x0
  2996 035c 0B       		.uleb128 0xb
  2997 035d 01       		.byte	0x1
- 2998 035e AE030000 		.4byte	.LASF43
+ 2998 035e 70030000 		.4byte	.LASF43
  2999 0362 01       		.byte	0x1
  3000 0363 7A03     		.2byte	0x37a
  3001 0365 01       		.byte	0x1
@@ -4877,7 +4877,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3004 036e 5F030000 		.4byte	.LLST17
  3005 0372 86030000 		.4byte	0x386
  3006 0376 0C       		.uleb128 0xc
- 3007 0377 39030000 		.4byte	.LASF42
+ 3007 0377 FB020000 		.4byte	.LASF42
  3008 037b 01       		.byte	0x1
  3009 037c 7A03     		.2byte	0x37a
  3010 037e 6F000000 		.4byte	0x6f
@@ -4887,7 +4887,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3014 0385 00       		.byte	0x0
  3015 0386 0D       		.uleb128 0xd
  3016 0387 01       		.byte	0x1
- 3017 0388 1F020000 		.4byte	.LASF44
+ 3017 0388 E1010000 		.4byte	.LASF44
  3018 038c 01       		.byte	0x1
  3019 038d 9703     		.2byte	0x397
  3020 038f 01       		.byte	0x1
@@ -4896,7 +4896,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3023 0398 96030000 		.4byte	.LLST18
  3024 039c 0D       		.uleb128 0xd
  3025 039d 01       		.byte	0x1
- 3026 039e 5A030000 		.4byte	.LASF45
+ 3026 039e 1C030000 		.4byte	.LASF45
  3027 03a2 01       		.byte	0x1
  3028 03a3 AE03     		.2byte	0x3ae
  3029 03a5 01       		.byte	0x1
@@ -4905,7 +4905,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3032 03ae C1030000 		.4byte	.LLST19
  3033 03b2 0B       		.uleb128 0xb
  3034 03b3 01       		.byte	0x1
- 3035 03b4 AE010000 		.4byte	.LASF46
+ 3035 03b4 70010000 		.4byte	.LASF46
  3036 03b8 01       		.byte	0x1
  3037 03b9 C803     		.2byte	0x3c8
  3038 03bb 01       		.byte	0x1
@@ -4914,11 +4914,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3041 03c4 EC030000 		.4byte	.LLST20
  3042 03c8 DC030000 		.4byte	0x3dc
  3043 03cc 0C       		.uleb128 0xc
- 3044 03cd ED020000 		.4byte	.LASF25
+ 3044 03cd AF020000 		.4byte	.LASF25
  3045 03d1 01       		.byte	0x1
  3046 03d2 C803     		.2byte	0x3c8
  3047 03d4 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 83
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 83
 
 
  3048 03d8 02       		.byte	0x2
@@ -4927,7 +4927,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3051 03db 00       		.byte	0x0
  3052 03dc 0B       		.uleb128 0xb
  3053 03dd 01       		.byte	0x1
- 3054 03de 3B050000 		.4byte	.LASF47
+ 3054 03de 56050000 		.4byte	.LASF47
  3055 03e2 01       		.byte	0x1
  3056 03e3 EA03     		.2byte	0x3ea
  3057 03e5 01       		.byte	0x1
@@ -4946,7 +4946,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3070 0405 00       		.byte	0x0
  3071 0406 0A       		.uleb128 0xa
  3072 0407 01       		.byte	0x1
- 3073 0408 41030000 		.4byte	.LASF49
+ 3073 0408 03030000 		.4byte	.LASF49
  3074 040c 01       		.byte	0x1
  3075 040d 2E04     		.2byte	0x42e
  3076 040f 01       		.byte	0x1
@@ -4956,7 +4956,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3080 041c 5A040000 		.4byte	.LLST22
  3081 0420 0B       		.uleb128 0xb
  3082 0421 01       		.byte	0x1
- 3083 0422 5D040000 		.4byte	.LASF50
+ 3083 0422 1F040000 		.4byte	.LASF50
  3084 0426 01       		.byte	0x1
  3085 0427 5204     		.2byte	0x452
  3086 0429 01       		.byte	0x1
@@ -4973,18 +4973,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3097 0447 91       		.byte	0x91
  3098 0448 6F       		.sleb128 -17
  3099 0449 0F       		.uleb128 0xf
- 3100 044a 27030000 		.4byte	.LASF51
+ 3100 044a E9020000 		.4byte	.LASF51
  3101 044e 01       		.byte	0x1
  3102 044f 5904     		.2byte	0x459
  3103 0451 6F000000 		.4byte	0x6f
  3104 0455 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 84
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 84
 
 
  3105 0456 91       		.byte	0x91
  3106 0457 76       		.sleb128 -10
  3107 0458 0F       		.uleb128 0xf
- 3108 0459 0E020000 		.4byte	.LASF52
+ 3108 0459 D0010000 		.4byte	.LASF52
  3109 045d 01       		.byte	0x1
  3110 045e 5A04     		.2byte	0x45a
  3111 0460 6F000000 		.4byte	0x6f
@@ -4994,7 +4994,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3115 0467 00       		.byte	0x0
  3116 0468 0B       		.uleb128 0xb
  3117 0469 01       		.byte	0x1
- 3118 046a 11030000 		.4byte	.LASF53
+ 3118 046a D3020000 		.4byte	.LASF53
  3119 046e 01       		.byte	0x1
  3120 046f AE04     		.2byte	0x4ae
  3121 0471 01       		.byte	0x1
@@ -5011,7 +5011,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3132 048f 91       		.byte	0x91
  3133 0490 6C       		.sleb128 -20
  3134 0491 0F       		.uleb128 0xf
- 3135 0492 A5050000 		.4byte	.LASF55
+ 3135 0492 C0050000 		.4byte	.LASF55
  3136 0496 01       		.byte	0x1
  3137 0497 B004     		.2byte	0x4b0
  3138 0499 7A000000 		.4byte	0x7a
@@ -5026,7 +5026,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3147 04a8 93000000 		.4byte	0x93
  3148 04ac 0B       		.uleb128 0xb
  3149 04ad 01       		.byte	0x1
- 3150 04ae F4020000 		.4byte	.LASF56
+ 3150 04ae B6020000 		.4byte	.LASF56
  3151 04b2 01       		.byte	0x1
  3152 04b3 D404     		.2byte	0x4d4
  3153 04b5 01       		.byte	0x1
@@ -5038,7 +5038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3159 04c7 43000000 		.4byte	.LASF54
  3160 04cb 01       		.byte	0x1
  3161 04cc D404     		.2byte	0x4d4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 85
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 85
 
 
  3162 04ce F4040000 		.4byte	0x4f4
@@ -5046,7 +5046,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3164 04d3 91       		.byte	0x91
  3165 04d4 6C       		.sleb128 -20
  3166 04d5 0C       		.uleb128 0xc
- 3167 04d6 2F040000 		.4byte	.LASF57
+ 3167 04d6 F1030000 		.4byte	.LASF57
  3168 04da 01       		.byte	0x1
  3169 04db D404     		.2byte	0x4d4
  3170 04dd 6F000000 		.4byte	0x6f
@@ -5054,7 +5054,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3172 04e2 91       		.byte	0x91
  3173 04e3 6B       		.sleb128 -21
  3174 04e4 0F       		.uleb128 0xf
- 3175 04e5 A5050000 		.4byte	.LASF55
+ 3175 04e5 C0050000 		.4byte	.LASF55
  3176 04e9 01       		.byte	0x1
  3177 04ea D704     		.2byte	0x4d7
  3178 04ec 6F000000 		.4byte	0x6f
@@ -5069,7 +5069,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3187 04fb 6F000000 		.4byte	0x6f
  3188 04ff 0B       		.uleb128 0xb
  3189 0500 01       		.byte	0x1
- 3190 0501 DC040000 		.4byte	.LASF58
+ 3190 0501 F7040000 		.4byte	.LASF58
  3191 0505 01       		.byte	0x1
  3192 0506 F904     		.2byte	0x4f9
  3193 0508 01       		.byte	0x1
@@ -5088,7 +5088,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3206 0528 00       		.byte	0x0
  3207 0529 0E       		.uleb128 0xe
  3208 052a 01       		.byte	0x1
- 3209 052b E1030000 		.4byte	.LASF59
+ 3209 052b A3030000 		.4byte	.LASF59
  3210 052f 01       		.byte	0x1
  3211 0530 1E05     		.2byte	0x51e
  3212 0532 01       		.byte	0x1
@@ -5098,10 +5098,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3216 053f 61050000 		.4byte	.LLST27
  3217 0543 57050000 		.4byte	0x557
  3218 0547 0F       		.uleb128 0xf
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 86
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 86
 
 
- 3219 0548 73020000 		.4byte	.LASF37
+ 3219 0548 35020000 		.4byte	.LASF37
  3220 054c 01       		.byte	0x1
  3221 054d 2105     		.2byte	0x521
  3222 054f 6F000000 		.4byte	0x6f
@@ -5111,7 +5111,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3226 0556 00       		.byte	0x0
  3227 0557 0B       		.uleb128 0xb
  3228 0558 01       		.byte	0x1
- 3229 0559 F4010000 		.4byte	.LASF60
+ 3229 0559 B6010000 		.4byte	.LASF60
  3230 055d 01       		.byte	0x1
  3231 055e 7405     		.2byte	0x574
  3232 0560 01       		.byte	0x1
@@ -5120,7 +5120,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3235 0569 98050000 		.4byte	.LLST28
  3236 056d 81050000 		.4byte	0x581
  3237 0571 0F       		.uleb128 0xf
- 3238 0572 03050000 		.4byte	.LASF19
+ 3238 0572 1E050000 		.4byte	.LASF19
  3239 0576 01       		.byte	0x1
  3240 0577 7605     		.2byte	0x576
  3241 0579 6F000000 		.4byte	0x6f
@@ -5130,7 +5130,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3245 0580 00       		.byte	0x0
  3246 0581 0B       		.uleb128 0xb
  3247 0582 01       		.byte	0x1
- 3248 0583 9F020000 		.4byte	.LASF61
+ 3248 0583 61020000 		.4byte	.LASF61
  3249 0587 01       		.byte	0x1
  3250 0588 CD05     		.2byte	0x5cd
  3251 058a 01       		.byte	0x1
@@ -5139,7 +5139,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3254 0593 CF050000 		.4byte	.LLST29
  3255 0597 D6050000 		.4byte	0x5d6
  3256 059b 0C       		.uleb128 0xc
- 3257 059c CD010000 		.4byte	.LASF62
+ 3257 059c 8F010000 		.4byte	.LASF62
  3258 05a0 01       		.byte	0x1
  3259 05a1 CD05     		.2byte	0x5cd
  3260 05a3 6F000000 		.4byte	0x6f
@@ -5150,7 +5150,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3265 05ab 18000000 		.4byte	.LBB2
  3266 05af C2000000 		.4byte	.LBE2
  3267 05b3 0F       		.uleb128 0xf
- 3268 05b4 09030000 		.4byte	.LASF63
+ 3268 05b4 CB020000 		.4byte	.LASF63
  3269 05b8 01       		.byte	0x1
  3270 05b9 D505     		.2byte	0x5d5
  3271 05bb 6F000000 		.4byte	0x6f
@@ -5158,10 +5158,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3273 05c0 91       		.byte	0x91
  3274 05c1 77       		.sleb128 -9
  3275 05c2 0F       		.uleb128 0xf
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 87
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 87
 
 
- 3276 05c3 E3020000 		.4byte	.LASF64
+ 3276 05c3 A5020000 		.4byte	.LASF64
  3277 05c7 01       		.byte	0x1
  3278 05c8 FB05     		.2byte	0x5fb
  3279 05ca 6F000000 		.4byte	0x6f
@@ -5172,7 +5172,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3284 05d5 00       		.byte	0x0
  3285 05d6 0B       		.uleb128 0xb
  3286 05d7 01       		.byte	0x1
- 3287 05d8 39040000 		.4byte	.LASF65
+ 3287 05d8 FB030000 		.4byte	.LASF65
  3288 05dc 01       		.byte	0x1
  3289 05dd 4606     		.2byte	0x646
  3290 05df 01       		.byte	0x1
@@ -5181,7 +5181,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3293 05e8 06060000 		.4byte	.LLST30
  3294 05ec 00060000 		.4byte	0x600
  3295 05f0 0C       		.uleb128 0xc
- 3296 05f1 20010000 		.4byte	.LASF40
+ 3296 05f1 E2000000 		.4byte	.LASF40
  3297 05f5 01       		.byte	0x1
  3298 05f6 4606     		.2byte	0x646
  3299 05f8 6F000000 		.4byte	0x6f
@@ -5190,7 +5190,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3302 05fe 77       		.sleb128 -9
  3303 05ff 00       		.byte	0x0
  3304 0600 13       		.uleb128 0x13
- 3305 0601 8B020000 		.4byte	.LASF66
+ 3305 0601 4D020000 		.4byte	.LASF66
  3306 0605 01       		.byte	0x1
  3307 0606 1C       		.byte	0x1c
  3308 0607 6F000000 		.4byte	0x6f
@@ -5206,7 +5206,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3318 0620 7F       		.byte	0x7f
  3319 0621 00       		.byte	0x0
  3320 0622 13       		.uleb128 0x13
- 3321 0623 5E020000 		.4byte	.LASF67
+ 3321 0623 20020000 		.4byte	.LASF67
  3322 0627 01       		.byte	0x1
  3323 0628 1E       		.byte	0x1e
  3324 0629 34060000 		.4byte	0x634
@@ -5217,8 +5217,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3329 0634 05       		.uleb128 0x5
  3330 0635 12060000 		.4byte	0x612
  3331 0639 13       		.uleb128 0x13
- 3332 063a 00010000 		.4byte	.LASF68
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 88
+ 3332 063a C2000000 		.4byte	.LASF68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 88
 
 
  3333 063e 01       		.byte	0x1
@@ -5229,7 +5229,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3338 0646 03       		.byte	0x3
  3339 0647 00000000 		.4byte	UART_Bridge_txBufferRead
  3340 064b 13       		.uleb128 0x13
- 3341 064c 76040000 		.4byte	.LASF69
+ 3341 064c 38040000 		.4byte	.LASF69
  3342 0650 01       		.byte	0x1
  3343 0651 20       		.byte	0x20
  3344 0652 6F000000 		.4byte	0x6f
@@ -5238,7 +5238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3347 0658 03       		.byte	0x3
  3348 0659 00000000 		.4byte	UART_Bridge_txBufferWrite
  3349 065d 13       		.uleb128 0x13
- 3350 065e AF050000 		.4byte	.LASF70
+ 3350 065e CA050000 		.4byte	.LASF70
  3351 0662 01       		.byte	0x1
  3352 0663 24       		.byte	0x24
  3353 0664 6F060000 		.4byte	0x66f
@@ -5249,7 +5249,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3358 066f 05       		.uleb128 0x5
  3359 0670 12060000 		.4byte	0x612
  3360 0674 13       		.uleb128 0x13
- 3361 0675 96040000 		.4byte	.LASF71
+ 3361 0675 B1040000 		.4byte	.LASF71
  3362 0679 01       		.byte	0x1
  3363 067a 25       		.byte	0x25
  3364 067b A5000000 		.4byte	0xa5
@@ -5258,7 +5258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3367 0681 03       		.byte	0x3
  3368 0682 00000000 		.4byte	UART_Bridge_rxBufferRead
  3369 0686 13       		.uleb128 0x13
- 3370 0687 5C010000 		.4byte	.LASF72
+ 3370 0687 1E010000 		.4byte	.LASF72
  3371 068b 01       		.byte	0x1
  3372 068c 26       		.byte	0x26
  3373 068d A5000000 		.4byte	0xa5
@@ -5267,7 +5267,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3376 0693 03       		.byte	0x3
  3377 0694 00000000 		.4byte	UART_Bridge_rxBufferWrite
  3378 0698 13       		.uleb128 0x13
- 3379 0699 76010000 		.4byte	.LASF73
+ 3379 0699 38010000 		.4byte	.LASF73
  3380 069d 01       		.byte	0x1
  3381 069e 27       		.byte	0x27
  3382 069f A5000000 		.4byte	0xa5
@@ -5276,9 +5276,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3385 06a5 03       		.byte	0x3
  3386 06a6 00000000 		.4byte	UART_Bridge_rxBufferLoopDetect
  3387 06aa 13       		.uleb128 0x13
- 3388 06ab C6020000 		.4byte	.LASF74
+ 3388 06ab 88020000 		.4byte	.LASF74
  3389 06af 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 89
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 89
 
 
  3390 06b0 28       		.byte	0x28
@@ -5338,7 +5338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3444 002e 03       		.uleb128 0x3
  3445 002f 0E       		.uleb128 0xe
  3446 0030 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 90
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 90
 
 
  3447 0031 0B       		.uleb128 0xb
@@ -5398,7 +5398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3501 0067 0B       		.uleb128 0xb
  3502 0068 27       		.uleb128 0x27
  3503 0069 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 91
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 91
 
 
  3504 006a 11       		.uleb128 0x11
@@ -5458,7 +5458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3558 00a0 0E       		.uleb128 0xe
  3559 00a1 3A       		.uleb128 0x3a
  3560 00a2 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 92
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 92
 
 
  3561 00a3 3B       		.uleb128 0x3b
@@ -5518,7 +5518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3615 00d9 0C       		.uleb128 0xc
  3616 00da 03       		.uleb128 0x3
  3617 00db 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 93
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 93
 
 
  3618 00dc 3A       		.uleb128 0x3a
@@ -5578,7 +5578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3672 0112 12       		.uleb128 0x12
  3673 0113 01       		.uleb128 0x1
  3674 0114 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 94
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 94
 
 
  3675 0115 00       		.byte	0x0
@@ -5638,7 +5638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3721 0039 D7000000 		.4byte	0xd7
  3722 003d 55415254 		.ascii	"UART_Bridge_Enable\000"
  3722      5F427269 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 95
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 95
 
 
  3722      6467655F 
@@ -5698,7 +5698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3740      6467655F 
  3740      47657443 
  3740      68617200 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 96
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 96
 
 
  3741 015a 96020000 		.4byte	0x296
@@ -5758,7 +5758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3759 0269 DC030000 		.4byte	0x3dc
  3760 026d 55415254 		.ascii	"UART_Bridge_WriteTxData\000"
  3760      5F427269 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 97
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 97
 
 
  3760      6467655F 
@@ -5818,7 +5818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3778      6467655F 
  3778      53657454 
  3778      78416464 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 98
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 98
 
 
  3779 037e 00060000 		.4byte	0x600
@@ -5878,7 +5878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3797 0482 00000000 		.4byte	0x0
  3798              		.section	.debug_aranges,"",%progbits
  3799 0000 0C010000 		.4byte	0x10c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 99
 
 
  3800 0004 0200     		.2byte	0x2
@@ -5938,7 +5938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3854 00d0 00000000 		.4byte	.LFB24
  3855 00d4 48000000 		.4byte	.LFE24-.LFB24
  3856 00d8 00000000 		.4byte	.LFB25
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 100
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 100
 
 
  3857 00dc 46000000 		.4byte	.LFE25-.LFB25
@@ -5998,7 +5998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3911 009c 18000000 		.4byte	.LFE18
  3912 00a0 00000000 		.4byte	.LFB19
  3913 00a4 18000000 		.4byte	.LFE19
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 101
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 101
 
 
  3914 00a8 00000000 		.4byte	.LFB20
@@ -6048,406 +6048,406 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 1
  3947              	.LASF54:
  3948 0043 73747269 		.ascii	"string\000"
  3948      6E6700
- 3949              	.LASF77:
- 3950 004a 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 3950      665C486F 
- 3950      6D655C44 
- 3950      65736B74 
- 3950      6F705C4B 
- 3951 0077 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
- 3951      69745072 
- 3951      6F672E63 
- 3951      7964736E 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 102
+ 3949              	.LASF7:
+ 3950 004a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 3950      206C6F6E 
+ 3950      6720756E 
+ 3950      7369676E 
+ 3950      65642069 
+ 3951              	.LASF75:
+ 3952 0061 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 3952      4320342E 
+ 3952      342E3100 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 102
 
 
- 3951      00
- 3952              	.LASF7:
- 3953 0088 6C6F6E67 		.ascii	"long long unsigned int\000"
- 3953      206C6F6E 
- 3953      6720756E 
- 3953      7369676E 
- 3953      65642069 
- 3954              	.LASF75:
- 3955 009f 474E5520 		.ascii	"GNU C 4.4.1\000"
- 3955      4320342E 
- 3955      342E3100 
- 3956              	.LASF21:
- 3957 00ab 55415254 		.ascii	"UART_Bridge_EnableRxInt\000"
- 3957      5F427269 
- 3957      6467655F 
- 3957      456E6162 
- 3957      6C655278 
- 3958              	.LASF6:
- 3959 00c3 6C6F6E67 		.ascii	"long long int\000"
- 3959      206C6F6E 
- 3959      6720696E 
- 3959      7400
- 3960              	.LASF0:
- 3961 00d1 7369676E 		.ascii	"signed char\000"
- 3961      65642063 
- 3961      68617200 
- 3962              	.LASF35:
- 3963 00dd 55415254 		.ascii	"UART_Bridge_GetByte\000"
- 3963      5F427269 
- 3963      6467655F 
- 3963      47657442 
- 3963      79746500 
- 3964              	.LASF4:
- 3965 00f1 6C6F6E67 		.ascii	"long int\000"
- 3965      20696E74 
- 3965      00
- 3966              	.LASF9:
- 3967 00fa 75696E74 		.ascii	"uint8\000"
- 3967      3800
- 3968              	.LASF68:
- 3969 0100 55415254 		.ascii	"UART_Bridge_txBufferRead\000"
- 3969      5F427269 
- 3969      6467655F 
- 3969      74784275 
- 3969      66666572 
- 3970              	.LASF12:
- 3971 0119 646F7562 		.ascii	"double\000"
- 3971      6C6500
- 3972              	.LASF40:
- 3973 0120 61646472 		.ascii	"addressMode\000"
- 3973      6573734D 
- 3973      6F646500 
- 3974              	.LASF29:
- 3975 012c 55415254 		.ascii	"UART_Bridge_ReadRxData\000"
- 3975      5F427269 
- 3975      6467655F 
- 3975      52656164 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 103
+ 3953              	.LASF21:
+ 3954 006d 55415254 		.ascii	"UART_Bridge_EnableRxInt\000"
+ 3954      5F427269 
+ 3954      6467655F 
+ 3954      456E6162 
+ 3954      6C655278 
+ 3955              	.LASF6:
+ 3956 0085 6C6F6E67 		.ascii	"long long int\000"
+ 3956      206C6F6E 
+ 3956      6720696E 
+ 3956      7400
+ 3957              	.LASF0:
+ 3958 0093 7369676E 		.ascii	"signed char\000"
+ 3958      65642063 
+ 3958      68617200 
+ 3959              	.LASF35:
+ 3960 009f 55415254 		.ascii	"UART_Bridge_GetByte\000"
+ 3960      5F427269 
+ 3960      6467655F 
+ 3960      47657442 
+ 3960      79746500 
+ 3961              	.LASF4:
+ 3962 00b3 6C6F6E67 		.ascii	"long int\000"
+ 3962      20696E74 
+ 3962      00
+ 3963              	.LASF9:
+ 3964 00bc 75696E74 		.ascii	"uint8\000"
+ 3964      3800
+ 3965              	.LASF68:
+ 3966 00c2 55415254 		.ascii	"UART_Bridge_txBufferRead\000"
+ 3966      5F427269 
+ 3966      6467655F 
+ 3966      74784275 
+ 3966      66666572 
+ 3967              	.LASF12:
+ 3968 00db 646F7562 		.ascii	"double\000"
+ 3968      6C6500
+ 3969              	.LASF40:
+ 3970 00e2 61646472 		.ascii	"addressMode\000"
+ 3970      6573734D 
+ 3970      6F646500 
+ 3971              	.LASF29:
+ 3972 00ee 55415254 		.ascii	"UART_Bridge_ReadRxData\000"
+ 3972      5F427269 
+ 3972      6467655F 
+ 3972      52656164 
+ 3972      52784461 
+ 3973              	.LASF16:
+ 3974 0105 55415254 		.ascii	"UART_Bridge_Init\000"
+ 3974      5F427269 
+ 3974      6467655F 
+ 3974      496E6974 
+ 3974      00
+ 3975              	.LASF24:
+ 3976 0116 636F6E74 		.ascii	"control\000"
+ 3976      726F6C00 
+ 3977              	.LASF72:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 103
 
 
- 3975      52784461 
- 3976              	.LASF16:
- 3977 0143 55415254 		.ascii	"UART_Bridge_Init\000"
- 3977      5F427269 
- 3977      6467655F 
- 3977      496E6974 
- 3977      00
- 3978              	.LASF24:
- 3979 0154 636F6E74 		.ascii	"control\000"
- 3979      726F6C00 
- 3980              	.LASF72:
- 3981 015c 55415254 		.ascii	"UART_Bridge_rxBufferWrite\000"
- 3981      5F427269 
- 3981      6467655F 
- 3981      72784275 
- 3981      66666572 
- 3982              	.LASF73:
- 3983 0176 55415254 		.ascii	"UART_Bridge_rxBufferLoopDetect\000"
- 3983      5F427269 
- 3983      6467655F 
- 3983      72784275 
- 3983      66666572 
- 3984              	.LASF22:
- 3985 0195 55415254 		.ascii	"UART_Bridge_DisableRxInt\000"
- 3985      5F427269 
- 3985      6467655F 
- 3985      44697361 
- 3985      626C6552 
- 3986              	.LASF46:
- 3987 01ae 55415254 		.ascii	"UART_Bridge_SetTxInterruptMode\000"
- 3987      5F427269 
- 3987      6467655F 
- 3987      53657454 
- 3987      78496E74 
- 3988              	.LASF62:
- 3989 01cd 7265744D 		.ascii	"retMode\000"
- 3989      6F646500 
- 3990              	.LASF8:
- 3991 01d5 756E7369 		.ascii	"unsigned int\000"
- 3991      676E6564 
- 3991      20696E74 
- 3991      00
- 3992              	.LASF5:
- 3993 01e2 6C6F6E67 		.ascii	"long unsigned int\000"
- 3993      20756E73 
- 3993      69676E65 
- 3993      6420696E 
- 3993      7400
- 3994              	.LASF60:
- 3995 01f4 55415254 		.ascii	"UART_Bridge_ClearTxBuffer\000"
- 3995      5F427269 
- 3995      6467655F 
- 3995      436C6561 
- 3995      72547842 
- 3996              	.LASF52:
- 3997 020e 6C6F635F 		.ascii	"loc_txBufferRead\000"
- 3997      74784275 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 104
+ 3978 011e 55415254 		.ascii	"UART_Bridge_rxBufferWrite\000"
+ 3978      5F427269 
+ 3978      6467655F 
+ 3978      72784275 
+ 3978      66666572 
+ 3979              	.LASF73:
+ 3980 0138 55415254 		.ascii	"UART_Bridge_rxBufferLoopDetect\000"
+ 3980      5F427269 
+ 3980      6467655F 
+ 3980      72784275 
+ 3980      66666572 
+ 3981              	.LASF22:
+ 3982 0157 55415254 		.ascii	"UART_Bridge_DisableRxInt\000"
+ 3982      5F427269 
+ 3982      6467655F 
+ 3982      44697361 
+ 3982      626C6552 
+ 3983              	.LASF46:
+ 3984 0170 55415254 		.ascii	"UART_Bridge_SetTxInterruptMode\000"
+ 3984      5F427269 
+ 3984      6467655F 
+ 3984      53657454 
+ 3984      78496E74 
+ 3985              	.LASF62:
+ 3986 018f 7265744D 		.ascii	"retMode\000"
+ 3986      6F646500 
+ 3987              	.LASF8:
+ 3988 0197 756E7369 		.ascii	"unsigned int\000"
+ 3988      676E6564 
+ 3988      20696E74 
+ 3988      00
+ 3989              	.LASF5:
+ 3990 01a4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3990      20756E73 
+ 3990      69676E65 
+ 3990      6420696E 
+ 3990      7400
+ 3991              	.LASF60:
+ 3992 01b6 55415254 		.ascii	"UART_Bridge_ClearTxBuffer\000"
+ 3992      5F427269 
+ 3992      6467655F 
+ 3992      436C6561 
+ 3992      72547842 
+ 3993              	.LASF52:
+ 3994 01d0 6C6F635F 		.ascii	"loc_txBufferRead\000"
+ 3994      74784275 
+ 3994      66666572 
+ 3994      52656164 
+ 3994      00
+ 3995              	.LASF44:
+ 3996 01e1 55415254 		.ascii	"UART_Bridge_EnableTxInt\000"
+ 3996      5F427269 
+ 3996      6467655F 
+ 3996      456E6162 
+ 3996      6C655478 
+ 3997              	.LASF76:
+ 3998 01f9 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_Bridge.c\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 104
 
 
- 3997      66666572 
- 3997      52656164 
- 3997      00
- 3998              	.LASF44:
- 3999 021f 55415254 		.ascii	"UART_Bridge_EnableTxInt\000"
- 3999      5F427269 
- 3999      6467655F 
- 3999      456E6162 
- 3999      6C655478 
- 4000              	.LASF76:
- 4001 0237 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_Bridge.c\000"
- 4001      6E657261 
- 4001      7465645F 
- 4001      536F7572 
- 4001      63655C50 
- 4002              	.LASF67:
- 4003 025e 55415254 		.ascii	"UART_Bridge_txBuffer\000"
- 4003      5F427269 
- 4003      6467655F 
- 4003      74784275 
- 4003      66666572 
- 4004              	.LASF37:
- 4005 0273 73697A65 		.ascii	"size\000"
- 4005      00
- 4006              	.LASF3:
- 4007 0278 73686F72 		.ascii	"short unsigned int\000"
- 4007      7420756E 
- 4007      7369676E 
- 4007      65642069 
- 4007      6E7400
- 4008              	.LASF66:
- 4009 028b 55415254 		.ascii	"UART_Bridge_initVar\000"
- 4009      5F427269 
- 4009      6467655F 
- 4009      696E6974 
- 4009      56617200 
- 4010              	.LASF61:
- 4011 029f 55415254 		.ascii	"UART_Bridge_SendBreak\000"
- 4011      5F427269 
- 4011      6467655F 
- 4011      53656E64 
- 4011      42726561 
- 4012              	.LASF27:
- 4013 02b5 6C6F635F 		.ascii	"loc_rxBufferRead\000"
- 4013      72784275 
- 4013      66666572 
- 4013      52656164 
- 4013      00
- 4014              	.LASF74:
- 4015 02c6 55415254 		.ascii	"UART_Bridge_rxBufferOverflow\000"
- 4015      5F427269 
- 4015      6467655F 
- 4015      72784275 
- 4015      66666572 
- 4016              	.LASF64:
- 4017 02e3 74785F70 		.ascii	"tx_period\000"
- 4017      6572696F 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 105
+ 3998      6E657261 
+ 3998      7465645F 
+ 3998      536F7572 
+ 3998      63655C50 
+ 3999              	.LASF67:
+ 4000 0220 55415254 		.ascii	"UART_Bridge_txBuffer\000"
+ 4000      5F427269 
+ 4000      6467655F 
+ 4000      74784275 
+ 4000      66666572 
+ 4001              	.LASF37:
+ 4002 0235 73697A65 		.ascii	"size\000"
+ 4002      00
+ 4003              	.LASF3:
+ 4004 023a 73686F72 		.ascii	"short unsigned int\000"
+ 4004      7420756E 
+ 4004      7369676E 
+ 4004      65642069 
+ 4004      6E7400
+ 4005              	.LASF66:
+ 4006 024d 55415254 		.ascii	"UART_Bridge_initVar\000"
+ 4006      5F427269 
+ 4006      6467655F 
+ 4006      696E6974 
+ 4006      56617200 
+ 4007              	.LASF61:
+ 4008 0261 55415254 		.ascii	"UART_Bridge_SendBreak\000"
+ 4008      5F427269 
+ 4008      6467655F 
+ 4008      53656E64 
+ 4008      42726561 
+ 4009              	.LASF27:
+ 4010 0277 6C6F635F 		.ascii	"loc_rxBufferRead\000"
+ 4010      72784275 
+ 4010      66666572 
+ 4010      52656164 
+ 4010      00
+ 4011              	.LASF74:
+ 4012 0288 55415254 		.ascii	"UART_Bridge_rxBufferOverflow\000"
+ 4012      5F427269 
+ 4012      6467655F 
+ 4012      72784275 
+ 4012      66666572 
+ 4013              	.LASF64:
+ 4014 02a5 74785F70 		.ascii	"tx_period\000"
+ 4014      6572696F 
+ 4014      6400
+ 4015              	.LASF25:
+ 4016 02af 696E7453 		.ascii	"intSrc\000"
+ 4016      726300
+ 4017              	.LASF56:
+ 4018 02b6 55415254 		.ascii	"UART_Bridge_PutArray\000"
+ 4018      5F427269 
+ 4018      6467655F 
+ 4018      50757441 
+ 4018      72726179 
+ 4019              	.LASF63:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 105
 
 
- 4017      6400
- 4018              	.LASF25:
- 4019 02ed 696E7453 		.ascii	"intSrc\000"
- 4019      726300
- 4020              	.LASF56:
- 4021 02f4 55415254 		.ascii	"UART_Bridge_PutArray\000"
- 4021      5F427269 
- 4021      6467655F 
- 4021      50757441 
- 4021      72726179 
- 4022              	.LASF63:
- 4023 0309 746D7053 		.ascii	"tmpStat\000"
- 4023      74617400 
- 4024              	.LASF53:
- 4025 0311 55415254 		.ascii	"UART_Bridge_PutString\000"
- 4025      5F427269 
- 4025      6467655F 
- 4025      50757453 
- 4025      7472696E 
- 4026              	.LASF51:
- 4027 0327 6C6F635F 		.ascii	"loc_txBufferWrite\000"
- 4027      74784275 
- 4027      66666572 
- 4027      57726974 
- 4027      6500
- 4028              	.LASF42:
- 4029 0339 61646472 		.ascii	"address\000"
- 4029      65737300 
- 4030              	.LASF49:
- 4031 0341 55415254 		.ascii	"UART_Bridge_ReadTxStatus\000"
- 4031      5F427269 
- 4031      6467655F 
- 4031      52656164 
- 4031      54785374 
- 4032              	.LASF45:
- 4033 035a 55415254 		.ascii	"UART_Bridge_DisableTxInt\000"
- 4033      5F427269 
- 4033      6467655F 
- 4033      44697361 
- 4033      626C6554 
- 4034              	.LASF20:
- 4035 0373 55415254 		.ascii	"UART_Bridge_WriteControlRegister\000"
- 4035      5F427269 
- 4035      6467655F 
- 4035      57726974 
- 4035      65436F6E 
- 4036              	.LASF41:
- 4037 0394 55415254 		.ascii	"UART_Bridge_SetRxAddress1\000"
- 4037      5F427269 
- 4037      6467655F 
- 4037      53657452 
- 4037      78416464 
- 4038              	.LASF43:
- 4039 03ae 55415254 		.ascii	"UART_Bridge_SetRxAddress2\000"
- 4039      5F427269 
- 4039      6467655F 
- 4039      53657452 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 106
+ 4020 02cb 746D7053 		.ascii	"tmpStat\000"
+ 4020      74617400 
+ 4021              	.LASF53:
+ 4022 02d3 55415254 		.ascii	"UART_Bridge_PutString\000"
+ 4022      5F427269 
+ 4022      6467655F 
+ 4022      50757453 
+ 4022      7472696E 
+ 4023              	.LASF51:
+ 4024 02e9 6C6F635F 		.ascii	"loc_txBufferWrite\000"
+ 4024      74784275 
+ 4024      66666572 
+ 4024      57726974 
+ 4024      6500
+ 4025              	.LASF42:
+ 4026 02fb 61646472 		.ascii	"address\000"
+ 4026      65737300 
+ 4027              	.LASF49:
+ 4028 0303 55415254 		.ascii	"UART_Bridge_ReadTxStatus\000"
+ 4028      5F427269 
+ 4028      6467655F 
+ 4028      52656164 
+ 4028      54785374 
+ 4029              	.LASF45:
+ 4030 031c 55415254 		.ascii	"UART_Bridge_DisableTxInt\000"
+ 4030      5F427269 
+ 4030      6467655F 
+ 4030      44697361 
+ 4030      626C6554 
+ 4031              	.LASF20:
+ 4032 0335 55415254 		.ascii	"UART_Bridge_WriteControlRegister\000"
+ 4032      5F427269 
+ 4032      6467655F 
+ 4032      57726974 
+ 4032      65436F6E 
+ 4033              	.LASF41:
+ 4034 0356 55415254 		.ascii	"UART_Bridge_SetRxAddress1\000"
+ 4034      5F427269 
+ 4034      6467655F 
+ 4034      53657452 
+ 4034      78416464 
+ 4035              	.LASF43:
+ 4036 0370 55415254 		.ascii	"UART_Bridge_SetRxAddress2\000"
+ 4036      5F427269 
+ 4036      6467655F 
+ 4036      53657452 
+ 4036      78416464 
+ 4037              	.LASF30:
+ 4038 038a 55415254 		.ascii	"UART_Bridge_ReadRxStatus\000"
+ 4038      5F427269 
+ 4038      6467655F 
+ 4038      52656164 
+ 4038      52785374 
+ 4039              	.LASF59:
+ 4040 03a3 55415254 		.ascii	"UART_Bridge_GetTxBufferSize\000"
+ 4040      5F427269 
+ 4040      6467655F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 106
 
 
- 4039      78416464 
- 4040              	.LASF30:
- 4041 03c8 55415254 		.ascii	"UART_Bridge_ReadRxStatus\000"
- 4041      5F427269 
- 4041      6467655F 
- 4041      52656164 
- 4041      52785374 
- 4042              	.LASF59:
- 4043 03e1 55415254 		.ascii	"UART_Bridge_GetTxBufferSize\000"
- 4043      5F427269 
- 4043      6467655F 
- 4043      47657454 
- 4043      78427566 
- 4044              	.LASF11:
- 4045 03fd 666C6F61 		.ascii	"float\000"
- 4045      7400
- 4046              	.LASF32:
- 4047 0403 55415254 		.ascii	"UART_Bridge_GetChar\000"
- 4047      5F427269 
- 4047      6467655F 
- 4047      47657443 
- 4047      68617200 
- 4048              	.LASF1:
- 4049 0417 756E7369 		.ascii	"unsigned char\000"
- 4049      676E6564 
- 4049      20636861 
- 4049      7200
- 4050              	.LASF2:
- 4051 0425 73686F72 		.ascii	"short int\000"
- 4051      7420696E 
- 4051      7400
- 4052              	.LASF57:
- 4053 042f 62797465 		.ascii	"byteCount\000"
- 4053      436F756E 
- 4053      7400
- 4054              	.LASF65:
- 4055 0439 55415254 		.ascii	"UART_Bridge_SetTxAddressMode\000"
- 4055      5F427269 
- 4055      6467655F 
- 4055      53657454 
- 4055      78416464 
- 4056              	.LASF26:
- 4057 0456 72784461 		.ascii	"rxData\000"
- 4057      746100
- 4058              	.LASF50:
- 4059 045d 55415254 		.ascii	"UART_Bridge_PutChar\000"
- 4059      5F427269 
- 4059      6467655F 
- 4059      50757443 
- 4059      68617200 
- 4060              	.LASF14:
- 4061 0471 63686172 		.ascii	"char\000"
- 4061      00
- 4062              	.LASF69:
- 4063 0476 55415254 		.ascii	"UART_Bridge_txBufferWrite\000"
- 4063      5F427269 
- 4063      6467655F 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 107
+ 4040      47657454 
+ 4040      78427566 
+ 4041              	.LASF11:
+ 4042 03bf 666C6F61 		.ascii	"float\000"
+ 4042      7400
+ 4043              	.LASF32:
+ 4044 03c5 55415254 		.ascii	"UART_Bridge_GetChar\000"
+ 4044      5F427269 
+ 4044      6467655F 
+ 4044      47657443 
+ 4044      68617200 
+ 4045              	.LASF1:
+ 4046 03d9 756E7369 		.ascii	"unsigned char\000"
+ 4046      676E6564 
+ 4046      20636861 
+ 4046      7200
+ 4047              	.LASF2:
+ 4048 03e7 73686F72 		.ascii	"short int\000"
+ 4048      7420696E 
+ 4048      7400
+ 4049              	.LASF57:
+ 4050 03f1 62797465 		.ascii	"byteCount\000"
+ 4050      436F756E 
+ 4050      7400
+ 4051              	.LASF65:
+ 4052 03fb 55415254 		.ascii	"UART_Bridge_SetTxAddressMode\000"
+ 4052      5F427269 
+ 4052      6467655F 
+ 4052      53657454 
+ 4052      78416464 
+ 4053              	.LASF26:
+ 4054 0418 72784461 		.ascii	"rxData\000"
+ 4054      746100
+ 4055              	.LASF50:
+ 4056 041f 55415254 		.ascii	"UART_Bridge_PutChar\000"
+ 4056      5F427269 
+ 4056      6467655F 
+ 4056      50757443 
+ 4056      68617200 
+ 4057              	.LASF14:
+ 4058 0433 63686172 		.ascii	"char\000"
+ 4058      00
+ 4059              	.LASF69:
+ 4060 0438 55415254 		.ascii	"UART_Bridge_txBufferWrite\000"
+ 4060      5F427269 
+ 4060      6467655F 
+ 4060      74784275 
+ 4060      66666572 
+ 4061              	.LASF77:
+ 4062 0452 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 4062      665C486F 
+ 4062      6D655C44 
+ 4062      65736B74 
+ 4062      6F705C55 
+ 4063 047f 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg.cydsn\000"
+ 4063      50726F67 
+ 4063      20766572 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 107
 
 
- 4063      74784275 
- 4063      66666572 
+ 4063      73696F6E 
+ 4063      20325F30 
  4064              	.LASF13:
- 4065 0490 63686172 		.ascii	"char8\000"
+ 4065 04ab 63686172 		.ascii	"char8\000"
  4065      3800
  4066              	.LASF71:
- 4067 0496 55415254 		.ascii	"UART_Bridge_rxBufferRead\000"
+ 4067 04b1 55415254 		.ascii	"UART_Bridge_rxBufferRead\000"
  4067      5F427269 
  4067      6467655F 
  4067      72784275 
  4067      66666572 
  4068              	.LASF36:
- 4069 04af 55415254 		.ascii	"UART_Bridge_GetRxBufferSize\000"
+ 4069 04ca 55415254 		.ascii	"UART_Bridge_GetRxBufferSize\000"
  4069      5F427269 
  4069      6467655F 
  4069      47657452 
  4069      78427566 
  4070              	.LASF18:
- 4071 04cb 55415254 		.ascii	"UART_Bridge_Stop\000"
+ 4071 04e6 55415254 		.ascii	"UART_Bridge_Stop\000"
  4071      5F427269 
  4071      6467655F 
  4071      53746F70 
  4071      00
  4072              	.LASF58:
- 4073 04dc 55415254 		.ascii	"UART_Bridge_PutCRLF\000"
+ 4073 04f7 55415254 		.ascii	"UART_Bridge_PutCRLF\000"
  4073      5F427269 
  4073      6467655F 
  4073      50757443 
  4073      524C4600 
  4074              	.LASF17:
- 4075 04f0 55415254 		.ascii	"UART_Bridge_Enable\000"
+ 4075 050b 55415254 		.ascii	"UART_Bridge_Enable\000"
  4075      5F427269 
  4075      6467655F 
  4075      456E6162 
  4075      6C6500
  4076              	.LASF19:
- 4077 0503 656E6162 		.ascii	"enableInterrupts\000"
+ 4077 051e 656E6162 		.ascii	"enableInterrupts\000"
  4077      6C65496E 
  4077      74657272 
  4077      75707473 
  4077      00
  4078              	.LASF31:
- 4079 0514 73746174 		.ascii	"status\000"
+ 4079 052f 73746174 		.ascii	"status\000"
  4079      757300
  4080              	.LASF34:
- 4081 051b 55415254 		.ascii	"UART_Bridge_ReadControlRegister\000"
+ 4081 0536 55415254 		.ascii	"UART_Bridge_ReadControlRegister\000"
  4081      5F427269 
  4081      6467655F 
  4081      52656164 
  4081      436F6E74 
  4082              	.LASF47:
- 4083 053b 55415254 		.ascii	"UART_Bridge_WriteTxData\000"
+ 4083 0556 55415254 		.ascii	"UART_Bridge_WriteTxData\000"
  4083      5F427269 
  4083      6467655F 
  4083      57726974 
  4083      65547844 
  4084              	.LASF33:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccmzObDW.s 			page 108
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTmPqfn.s 			page 108
 
 
- 4085 0553 72785374 		.ascii	"rxStatus\000"
+ 4085 056e 72785374 		.ascii	"rxStatus\000"
  4085      61747573 
  4085      00
  4086              	.LASF15:
- 4087 055c 55415254 		.ascii	"UART_Bridge_Start\000"
+ 4087 0577 55415254 		.ascii	"UART_Bridge_Start\000"
  4087      5F427269 
  4087      6467655F 
  4087      53746172 
  4087      7400
  4088              	.LASF39:
- 4089 056e 55415254 		.ascii	"UART_Bridge_SetRxAddressMode\000"
+ 4089 0589 55415254 		.ascii	"UART_Bridge_SetRxAddressMode\000"
  4089      5F427269 
  4089      6467655F 
  4089      53657452 
  4089      78416464 
  4090              	.LASF38:
- 4091 058b 55415254 		.ascii	"UART_Bridge_ClearRxBuffer\000"
+ 4091 05a6 55415254 		.ascii	"UART_Bridge_ClearRxBuffer\000"
  4091      5F427269 
  4091      6467655F 
  4091      436C6561 
  4091      72527842 
  4092              	.LASF55:
- 4093 05a5 6275665F 		.ascii	"buf_index\000"
+ 4093 05c0 6275665F 		.ascii	"buf_index\000"
  4093      696E6465 
  4093      7800
  4094              	.LASF70:
- 4095 05af 55415254 		.ascii	"UART_Bridge_rxBuffer\000"
+ 4095 05ca 55415254 		.ascii	"UART_Bridge_rxBuffer\000"
  4095      5F427269 
  4095      6467655F 
  4095      72784275 

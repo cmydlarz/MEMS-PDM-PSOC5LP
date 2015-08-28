@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
   20:.\Generated_Source\PSoC5/USBFS_vnd.c **** 
   21:.\Generated_Source\PSoC5/USBFS_vnd.c **** 
   22:.\Generated_Source\PSoC5/USBFS_vnd.c **** /***************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/USBFS_vnd.c **** * Vendor Specific Declarations
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
   37              		.loc 1 71 0
   38 0000 044B     		ldr	r3, .L4
   39 0002 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 3
 
 
   40 0004 13F0800F 		tst	r3, #128
@@ -168,41 +168,41 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
   62 0006 00000000 		.4byte	.Ldebug_abbrev0
   63 000a 04       		.byte	0x4
   64 000b 01       		.uleb128 0x1
-  65 000c DE000000 		.4byte	.LASF12
+  65 000c 95000000 		.4byte	.LASF12
   66 0010 01       		.byte	0x1
   67 0011 1B000000 		.4byte	.LASF13
-  68 0015 40000000 		.4byte	.LASF14
+  68 0015 F3000000 		.4byte	.LASF14
   69 0019 00000000 		.4byte	0x0
   70 001d 00000000 		.4byte	0x0
   71 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
   72 0025 00000000 		.4byte	.Ldebug_line0
   73 0029 02       		.uleb128 0x2
   74 002a 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 4
 
 
   75 002b 06       		.byte	0x6
-  76 002c 20010000 		.4byte	.LASF0
+  76 002c D7000000 		.4byte	.LASF0
   77 0030 02       		.uleb128 0x2
   78 0031 01       		.byte	0x1
   79 0032 08       		.byte	0x8
-  80 0033 EA000000 		.4byte	.LASF1
+  80 0033 A1000000 		.4byte	.LASF1
   81 0037 02       		.uleb128 0x2
   82 0038 02       		.byte	0x2
   83 0039 05       		.byte	0x5
-  84 003a 32010000 		.4byte	.LASF2
+  84 003a E9000000 		.4byte	.LASF2
   85 003e 02       		.uleb128 0x2
   86 003f 02       		.byte	0x2
   87 0040 07       		.byte	0x7
-  88 0041 0D010000 		.4byte	.LASF3
+  88 0041 C4000000 		.4byte	.LASF3
   89 0045 02       		.uleb128 0x2
   90 0046 04       		.byte	0x4
   91 0047 05       		.byte	0x5
-  92 0048 FD000000 		.4byte	.LASF4
+  92 0048 B4000000 		.4byte	.LASF4
   93 004c 02       		.uleb128 0x2
   94 004d 04       		.byte	0x4
   95 004e 07       		.byte	0x7
-  96 004f A6000000 		.4byte	.LASF5
+  96 004f 5D000000 		.4byte	.LASF5
   97 0053 02       		.uleb128 0x2
   98 0054 08       		.byte	0x8
   99 0055 05       		.byte	0x5
@@ -210,7 +210,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  101 005a 02       		.uleb128 0x2
  102 005b 08       		.byte	0x8
  103 005c 07       		.byte	0x7
- 104 005d C7000000 		.4byte	.LASF7
+ 104 005d 7E000000 		.4byte	.LASF7
  105 0061 03       		.uleb128 0x3
  106 0062 04       		.byte	0x4
  107 0063 05       		.byte	0x5
@@ -220,31 +220,31 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  111 006a 07       		.byte	0x7
  112 006b 0E000000 		.4byte	.LASF8
  113 006f 04       		.uleb128 0x4
- 114 0070 A0000000 		.4byte	.LASF15
+ 114 0070 57000000 		.4byte	.LASF15
  115 0074 02       		.byte	0x2
  116 0075 4C       		.byte	0x4c
  117 0076 30000000 		.4byte	0x30
  118 007a 02       		.uleb128 0x2
  119 007b 04       		.byte	0x4
  120 007c 04       		.byte	0x4
- 121 007d 2C010000 		.4byte	.LASF9
+ 121 007d E3000000 		.4byte	.LASF9
  122 0081 02       		.uleb128 0x2
  123 0082 08       		.byte	0x8
  124 0083 04       		.byte	0x4
- 125 0084 06010000 		.4byte	.LASF10
+ 125 0084 BD000000 		.4byte	.LASF10
  126 0088 02       		.uleb128 0x2
  127 0089 01       		.byte	0x1
  128 008a 08       		.byte	0x8
- 129 008b F8000000 		.4byte	.LASF11
+ 129 008b AF000000 		.4byte	.LASF11
  130 008f 05       		.uleb128 0x5
  131 0090 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 5
 
 
  132 0091 07       		.byte	0x7
  133 0092 06       		.uleb128 0x6
  134 0093 01       		.byte	0x1
- 135 0094 89000000 		.4byte	.LASF16
+ 135 0094 40000000 		.4byte	.LASF16
  136 0098 01       		.byte	0x1
  137 0099 43       		.byte	0x43
  138 009a 01       		.byte	0x1
@@ -254,7 +254,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  142 00a7 01       		.byte	0x1
  143 00a8 5D       		.byte	0x5d
  144 00a9 07       		.uleb128 0x7
- 145 00aa B8000000 		.4byte	.LASF17
+ 145 00aa 6F000000 		.4byte	.LASF17
  146 00ae 01       		.byte	0x1
  147 00af 45       		.byte	0x45
  148 00b0 6F000000 		.4byte	0x6f
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  186 0022 00       		.byte	0x0
  187 0023 0B       		.uleb128 0xb
  188 0024 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 6
 
 
  189 0025 3E       		.uleb128 0x3e
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  243 005b 03       		.uleb128 0x3
  244 005c 0E       		.uleb128 0xe
  245 005d 3A       		.uleb128 0x3a
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 7
 
 
  246 005e 0B       		.uleb128 0xb
@@ -418,83 +418,85 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 1
  288      7465645F 
  288      536F7572 
  288      63655C50 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 8
 
 
- 289              	.LASF14:
- 290 0040 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 290      665C486F 
- 290      6D655C44 
- 290      65736B74 
- 290      6F705C4B 
- 291 006d 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
- 291      69745072 
- 291      6F675F42 
- 291      6F6F746C 
- 291      6F616465 
- 292              	.LASF16:
- 293 0089 55534246 		.ascii	"USBFS_HandleVendorRqst\000"
- 293      535F4861 
- 293      6E646C65 
- 293      56656E64 
- 293      6F725271 
- 294              	.LASF15:
- 295 00a0 75696E74 		.ascii	"uint8\000"
- 295      3800
- 296              	.LASF5:
- 297 00a6 6C6F6E67 		.ascii	"long unsigned int\000"
- 297      20756E73 
- 297      69676E65 
- 297      6420696E 
- 297      7400
- 298              	.LASF17:
- 299 00b8 72657175 		.ascii	"requestHandled\000"
- 299      65737448 
- 299      616E646C 
- 299      656400
- 300              	.LASF7:
- 301 00c7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 301      206C6F6E 
- 301      6720756E 
- 301      7369676E 
- 301      65642069 
- 302              	.LASF12:
- 303 00de 474E5520 		.ascii	"GNU C 4.4.1\000"
- 303      4320342E 
- 303      342E3100 
- 304              	.LASF1:
- 305 00ea 756E7369 		.ascii	"unsigned char\000"
- 305      676E6564 
- 305      20636861 
- 305      7200
- 306              	.LASF11:
- 307 00f8 63686172 		.ascii	"char\000"
- 307      00
- 308              	.LASF4:
- 309 00fd 6C6F6E67 		.ascii	"long int\000"
- 309      20696E74 
- 309      00
- 310              	.LASF10:
- 311 0106 646F7562 		.ascii	"double\000"
- 311      6C6500
- 312              	.LASF3:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccE5sMLw.s 			page 9
+ 289              	.LASF16:
+ 290 0040 55534246 		.ascii	"USBFS_HandleVendorRqst\000"
+ 290      535F4861 
+ 290      6E646C65 
+ 290      56656E64 
+ 290      6F725271 
+ 291              	.LASF15:
+ 292 0057 75696E74 		.ascii	"uint8\000"
+ 292      3800
+ 293              	.LASF5:
+ 294 005d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 294      20756E73 
+ 294      69676E65 
+ 294      6420696E 
+ 294      7400
+ 295              	.LASF17:
+ 296 006f 72657175 		.ascii	"requestHandled\000"
+ 296      65737448 
+ 296      616E646C 
+ 296      656400
+ 297              	.LASF7:
+ 298 007e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 298      206C6F6E 
+ 298      6720756E 
+ 298      7369676E 
+ 298      65642069 
+ 299              	.LASF12:
+ 300 0095 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 300      4320342E 
+ 300      342E3100 
+ 301              	.LASF1:
+ 302 00a1 756E7369 		.ascii	"unsigned char\000"
+ 302      676E6564 
+ 302      20636861 
+ 302      7200
+ 303              	.LASF11:
+ 304 00af 63686172 		.ascii	"char\000"
+ 304      00
+ 305              	.LASF4:
+ 306 00b4 6C6F6E67 		.ascii	"long int\000"
+ 306      20696E74 
+ 306      00
+ 307              	.LASF10:
+ 308 00bd 646F7562 		.ascii	"double\000"
+ 308      6C6500
+ 309              	.LASF3:
+ 310 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 310      7420756E 
+ 310      7369676E 
+ 310      65642069 
+ 310      6E7400
+ 311              	.LASF0:
+ 312 00d7 7369676E 		.ascii	"signed char\000"
+ 312      65642063 
+ 312      68617200 
+ 313              	.LASF9:
+ 314 00e3 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc8wl9aE.s 			page 9
 
 
- 313 010d 73686F72 		.ascii	"short unsigned int\000"
- 313      7420756E 
- 313      7369676E 
- 313      65642069 
- 313      6E7400
- 314              	.LASF0:
- 315 0120 7369676E 		.ascii	"signed char\000"
- 315      65642063 
- 315      68617200 
- 316              	.LASF9:
- 317 012c 666C6F61 		.ascii	"float\000"
- 317      7400
- 318              	.LASF2:
- 319 0132 73686F72 		.ascii	"short int\000"
- 319      7420696E 
- 319      7400
- 320              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 314      7400
+ 315              	.LASF2:
+ 316 00e9 73686F72 		.ascii	"short int\000"
+ 316      7420696E 
+ 316      7400
+ 317              	.LASF14:
+ 318 00f3 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 318      665C486F 
+ 318      6D655C44 
+ 318      65736B74 
+ 318      6F705C55 
+ 319 0120 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg_Bootloader"
+ 319      50726F67 
+ 319      20766572 
+ 319      73696F6E 
+ 319      20325F30 
+ 320 0150 2E637964 		.ascii	".cydsn\000"
+ 320      736E00
+ 321              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

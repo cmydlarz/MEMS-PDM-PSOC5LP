@@ -1,5 +1,5 @@
 -- Project:   KitProg
--- Generated: 08/26/2015 19:31:32
+-- Generated: 08/28/2015 18:33:31
 -- 
 
 ENTITY KitProg IS
@@ -58,7 +58,6 @@ ARCHITECTURE __DEFAULT__ OF KitProg IS
     SIGNAL Net_486 : bit;
     SIGNAL Net_487 : bit;
     SIGNAL Net_494 : bit;
-    SIGNAL Net_617 : bit;
     SIGNAL Net_828 : bit;
     SIGNAL Net_828_SYNCOUT : bit;
     SIGNAL Net_834 : bit;
@@ -79,32 +78,9 @@ ARCHITECTURE __DEFAULT__ OF KitProg IS
     SIGNAL Pin_StatusLED(0)__PA : bit;
     SIGNAL Pin_UART_Rx(0)__PA : bit;
     SIGNAL Pin_UART_Tx(0)__PA : bit;
-    SIGNAL Pin_VTarget(0)__PA : bit;
     SIGNAL SWDCLK(0)__PA : bit;
     SIGNAL SWDIO(0)__PA : bit;
     SIGNAL SWDXRES(0)__PA : bit;
-    SIGNAL \ADC_Voltage_Target:Net_40\ : bit;
-    ATTRIBUTE global_signal OF \ADC_Voltage_Target:Net_40\ : SIGNAL IS true;
-    SIGNAL \ADC_Voltage_Target:Net_40_adig\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_40_adig_local\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_40_local\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_487\ : bit;
-    ATTRIBUTE global_signal OF \ADC_Voltage_Target:Net_487\ : SIGNAL IS true;
-    SIGNAL \ADC_Voltage_Target:Net_487_local\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_0\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_1\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_2\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_3\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_4\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_5\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_6\ : bit;
-    SIGNAL \ADC_Voltage_Target:Net_9_7\ : bit;
-    SIGNAL \ADC_Voltage_Target:aclock\ : bit;
-    SIGNAL \ADC_Voltage_Target:mod_dat_0\ : bit;
-    SIGNAL \ADC_Voltage_Target:mod_dat_1\ : bit;
-    SIGNAL \ADC_Voltage_Target:mod_dat_2\ : bit;
-    SIGNAL \ADC_Voltage_Target:mod_dat_3\ : bit;
-    SIGNAL \ADC_Voltage_Target:mod_reset\ : bit;
     SIGNAL \I2CHW:Net_697\ : bit;
     SIGNAL \I2CHW:bI2C_UDB:bus_busy_reg\ : bit;
     SIGNAL \I2CHW:bI2C_UDB:clk_eq_reg\ : bit;
@@ -225,8 +201,7 @@ ARCHITECTURE __DEFAULT__ OF KitProg IS
     ATTRIBUTE POWER OF one : SIGNAL IS true;
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
-    SIGNAL \ClockBlock.aclk_glb_ff_0__sig\ : bit;
-    SIGNAL \ClockBlock.dclk_glb_ff_3__sig\ : bit;
+    SIGNAL \ClockBlock.dclk_glb_ff_2__sig\ : bit;
     ATTRIBUTE lib_model OF Net_451 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF Net_834 : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF Net_835 : LABEL IS "macrocell3";
@@ -256,15 +231,12 @@ ARCHITECTURE __DEFAULT__ OF KitProg IS
     ATTRIBUTE Location OF Pin_UART_Rx(0) : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF Pin_UART_Tx(0) : LABEL IS "iocell13";
     ATTRIBUTE Location OF Pin_UART_Tx(0) : LABEL IS "P12[7]";
-    ATTRIBUTE lib_model OF Pin_VTarget(0) : LABEL IS "iocell14";
-    ATTRIBUTE Location OF Pin_VTarget(0) : LABEL IS "P1[7]";
-    ATTRIBUTE lib_model OF SWDCLK(0) : LABEL IS "iocell15";
+    ATTRIBUTE lib_model OF SWDCLK(0) : LABEL IS "iocell14";
     ATTRIBUTE Location OF SWDCLK(0) : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF SWDIO(0) : LABEL IS "iocell16";
+    ATTRIBUTE lib_model OF SWDIO(0) : LABEL IS "iocell15";
     ATTRIBUTE Location OF SWDIO(0) : LABEL IS "P2[0]";
-    ATTRIBUTE lib_model OF SWDXRES(0) : LABEL IS "iocell17";
+    ATTRIBUTE lib_model OF SWDXRES(0) : LABEL IS "iocell16";
     ATTRIBUTE Location OF SWDXRES(0) : LABEL IS "P2[4]";
-    ATTRIBUTE Location OF \ADC_Voltage_Target:DSM4\ : LABEL IS "F(DSM,0)";
     ATTRIBUTE lib_model OF \I2CHW:bI2C_UDB:Master:ClkGen:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE lib_model OF \I2CHW:bI2C_UDB:Shifter:u0\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \I2CHW:bI2C_UDB:StsReg\ : LABEL IS "statusicell1";
@@ -329,15 +301,14 @@ ARCHITECTURE __DEFAULT__ OF KitProg IS
     ATTRIBUTE lib_model OF \UART_Bridge:BUART:tx_status_0\ : LABEL IS "macrocell56";
     ATTRIBUTE lib_model OF \UART_Bridge:BUART:tx_status_2\ : LABEL IS "macrocell57";
     ATTRIBUTE lib_model OF \UART_Bridge:BUART:txn\ : LABEL IS "macrocell58";
-    ATTRIBUTE lib_model OF \USBFS:Dm(0)\ : LABEL IS "iocell18";
+    ATTRIBUTE lib_model OF \USBFS:Dm(0)\ : LABEL IS "iocell17";
     ATTRIBUTE Location OF \USBFS:Dm(0)\ : LABEL IS "P15[7]";
-    ATTRIBUTE lib_model OF \USBFS:Dp(0)\ : LABEL IS "iocell19";
+    ATTRIBUTE lib_model OF \USBFS:Dp(0)\ : LABEL IS "iocell18";
     ATTRIBUTE Location OF \USBFS:Dp(0)\ : LABEL IS "P15[6]";
     ATTRIBUTE Location OF \USBFS:USB\ : LABEL IS "F(USB,0)";
-    ATTRIBUTE lib_model OF \USBFS:VBUS(0)\ : LABEL IS "iocell20";
+    ATTRIBUTE lib_model OF \USBFS:VBUS(0)\ : LABEL IS "iocell19";
     ATTRIBUTE Location OF \USBFS:VBUS(0)\ : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell59";
-    ATTRIBUTE Location OF autoVrefComparator_0 : LABEL IS "F(Comparator,2)";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT boostcell
@@ -1282,16 +1253,9 @@ BEGIN
             dclk_0 => Net_1677_local,
             dclk_glb_1 => Net_485,
             dclk_1 => Net_485_local,
-            dclk_glb_2 => \ADC_Voltage_Target:Net_487\,
-            dclk_2 => \ADC_Voltage_Target:Net_487_local\,
-            aclk_glb_0 => \ADC_Voltage_Target:Net_40\,
-            aclk_0 => \ADC_Voltage_Target:Net_40_local\,
-            clk_a_dig_glb_0 => \ADC_Voltage_Target:Net_40_adig\,
-            clk_a_dig_0 => \ADC_Voltage_Target:Net_40_adig_local\,
-            dclk_glb_3 => Net_10,
-            dclk_3 => Net_10_local,
-            aclk_glb_ff_0 => \ClockBlock.aclk_glb_ff_0__sig\,
-            dclk_glb_ff_3 => \ClockBlock.dclk_glb_ff_3__sig\);
+            dclk_glb_2 => Net_10,
+            dclk_2 => Net_10_local,
+            dclk_glb_ff_2 => \ClockBlock.dclk_glb_ff_2__sig\);
 
     Net_451:macrocell
         GENERIC MAP(
@@ -2483,90 +2447,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Pin_VTarget:logicalport
-        GENERIC MAP(
-            drive_mode => "000",
-            ibuf_enabled => "0",
-            id => "05a9c8de-3ba2-4909-8250-95fdc61c0bf4",
-            init_dr_st => "0",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "A",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "0",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    Pin_VTarget(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "Pin_VTarget",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
-        PORT MAP(
-            pa_out => Pin_VTarget(0)__PA,
-            oe => open,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
     SWDCLK:logicalport
         GENERIC MAP(
             drive_mode => "001",
@@ -2824,50 +2704,6 @@ BEGIN
             out_clock => open,
             out_clock_en => '1',
             out_reset => '0');
-
-    \ADC_Voltage_Target:DEC\:decimatorcell
-        GENERIC MAP(
-            cy_registers => "")
-        PORT MAP(
-            aclock => \ADC_Voltage_Target:aclock\,
-            mod_dat_3 => \ADC_Voltage_Target:mod_dat_3\,
-            mod_dat_2 => \ADC_Voltage_Target:mod_dat_2\,
-            mod_dat_1 => \ADC_Voltage_Target:mod_dat_1\,
-            mod_dat_0 => \ADC_Voltage_Target:mod_dat_0\,
-            ext_start => __ONE__,
-            modrst => \ADC_Voltage_Target:mod_reset\,
-            interrupt => Net_617);
-
-    \ADC_Voltage_Target:DSM4\:dsmodcell
-        GENERIC MAP(
-            cy_registers => "",
-            resolution => 12)
-        PORT MAP(
-            aclock => \ClockBlock.aclk_glb_ff_0__sig\,
-            modbitin_udb => open,
-            reset_udb => open,
-            reset_dec => \ADC_Voltage_Target:mod_reset\,
-            extclk_cp_udb => \ADC_Voltage_Target:Net_487_local\,
-            dec_clock => \ADC_Voltage_Target:aclock\,
-            mod_dat_3 => \ADC_Voltage_Target:mod_dat_3\,
-            mod_dat_2 => \ADC_Voltage_Target:mod_dat_2\,
-            mod_dat_1 => \ADC_Voltage_Target:mod_dat_1\,
-            mod_dat_0 => \ADC_Voltage_Target:mod_dat_0\,
-            dout_udb_7 => \ADC_Voltage_Target:Net_9_7\,
-            dout_udb_6 => \ADC_Voltage_Target:Net_9_6\,
-            dout_udb_5 => \ADC_Voltage_Target:Net_9_5\,
-            dout_udb_4 => \ADC_Voltage_Target:Net_9_4\,
-            dout_udb_3 => \ADC_Voltage_Target:Net_9_3\,
-            dout_udb_2 => \ADC_Voltage_Target:Net_9_2\,
-            dout_udb_1 => \ADC_Voltage_Target:Net_9_1\,
-            dout_udb_0 => \ADC_Voltage_Target:Net_9_0\);
-
-    \ADC_Voltage_Target:IRQ\:interrupt
-        GENERIC MAP(
-            int_type => "10")
-        PORT MAP(
-            interrupt => Net_617,
-            clock => ClockBlock_BUS_CLK);
 
     \I2CHW:I2C_IRQ\:interrupt
         GENERIC MAP(
@@ -3388,7 +3224,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            clock => \ClockBlock.dclk_glb_ff_3__sig\,
+            clock => \ClockBlock.dclk_glb_ff_2__sig\,
             kill => open,
             enable => __ONE__,
             capture => open,
@@ -4240,10 +4076,6 @@ BEGIN
             eqn_main => "1'b0")
         PORT MAP(
             q => __ONE__);
-
-    autoVrefComparator_0:comparatorcell
-        PORT MAP(
-            clock => open);
 
     isr_UsbSuspend:interrupt
         GENERIC MAP(

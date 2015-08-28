@@ -8,9 +8,9 @@
       <ToolsetName>ARM-GNU</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>CY8C5868LTI-LP039</Device>
+          <Device>CY8C5667LTI-LP009</Device>
           <Vendor>Cypress</Vendor>
-          <Cpu>"IRAM(0x1FFF8000-0x20007FFF)IROM(0x2800-0x3FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
+          <Cpu>"IRAM(0x1FFFC000-0x20003FFF)IROM(0x4D00-0x1FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>"C:\Program Files (x86)\Cypress\PSoC Creator\2.2\PSoC Creator\export\ide\uVision\4.x\driver\cyuvdriver_arm.dll"("Cypress MiniProg3/FX2LP v2.2")</FlashDriverDll>
@@ -973,16 +973,6 @@
               <FilePath>.\Generated_Source\PSoC5\USBFS_Dp.h</FilePath>
             </File>
             <File>
-              <FileName>USBFS_ep1_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\USBFS_ep1_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>USBFS_ep1_dma.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\USBFS_ep1_dma.h</FilePath>
-            </File>
-            <File>
               <FileName>USBFS_ep2_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Generated_Source\PSoC5\USBFS_ep2_dma.c</FilePath>
@@ -1147,9 +1137,9 @@
       <ToolsetName>ARM-GNU</ToolsetName>
       <TargetOption>
         <TargetCommonOption>
-          <Device>CY8C5868LTI-LP039</Device>
+          <Device>CY8C5667LTI-LP009</Device>
           <Vendor>Cypress</Vendor>
-          <Cpu>"IRAM(0x1FFF8000-0x20007FFF)IROM(0x2800-0x3FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
+          <Cpu>"IRAM(0x1FFFC000-0x20003FFF)IROM(0x4D00-0x1FFBF)CLOCK(67000000)CPUTYPE( "Cortex-M3") ESEL ELITTLE"</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>"C:\Program Files (x86)\Cypress\PSoC Creator\2.2\PSoC Creator\export\ide\uVision\4.x\driver\cyuvdriver_arm.dll"("Cypress MiniProg3/FX2LP v2.2")</FlashDriverDll>
@@ -2110,16 +2100,6 @@
               <FileName>USBFS_Dp.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Generated_Source\PSoC5\USBFS_Dp.h</FilePath>
-            </File>
-            <File>
-              <FileName>USBFS_ep1_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Generated_Source\PSoC5\USBFS_ep1_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>USBFS_ep1_dma.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Generated_Source\PSoC5\USBFS_ep1_dma.h</FilePath>
             </File>
             <File>
               <FileName>USBFS_ep2_dma.c</FileName>

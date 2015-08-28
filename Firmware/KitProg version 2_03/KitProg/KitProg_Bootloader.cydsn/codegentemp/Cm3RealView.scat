@@ -27,7 +27,7 @@
 ;* the software package with which this file was provided.
 ;********************************************************************************/
 
-LOAD_ROM 0 (65472 - 0)
+LOAD_ROM 0 (131008 - 0)
 {
     VECTORS +0
     {
@@ -39,7 +39,7 @@ LOAD_ROM 0 (65472 - 0)
         * (+RO)
     }
 
-    ISRVECTORS (0x20000000 - (16384 / 2)) UNINIT
+    ISRVECTORS (0x20000000 - (32768 / 2)) UNINIT
     {
         * (.ramvectors)
     }
@@ -54,11 +54,11 @@ LOAD_ROM 0 (65472 - 0)
         * (+RW, +ZI)
     }
 
-    ARM_LIB_HEAP (0x20000000 + (16384 / 2) - 0x1000 - 0x1000) EMPTY 0x1000
+    ARM_LIB_HEAP (0x20000000 + (32768 / 2) - 0x1000 - 0x4000) EMPTY 0x1000
     {
     }
 
-    ARM_LIB_STACK (0x20000000 + (16384 / 2)) EMPTY -0x1000
+    ARM_LIB_STACK (0x20000000 + (32768 / 2)) EMPTY -0x4000
     {
     }
 }

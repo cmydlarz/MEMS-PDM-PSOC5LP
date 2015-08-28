@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
   16:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * the software package with which this file was provided.
   17:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************/
   18:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 2
 
 
   19:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** #include "Timer_UsbSuspend.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
   61:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Backup non retention registers, interrupt mask and capture counter for CY_UDB_V1 
   62:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
   63:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if(!Timer_UsbSuspend_ControlRegRemoved)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 3
 
 
   64:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerControlRegister = Timer_UsbSuspend_ReadControlRegister();
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
   91:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         /* Restore the UDB non-rentention registers for CY_UDB_V0 */
   92:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if (CY_UDB_V0)
   93:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Interrupt State Backup for Critical Region*/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 4
 
 
   94:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             uint8 Timer_UsbSuspend_interruptState;
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  133:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Parameters:
  134:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
  135:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 5
 
 
  136:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Return:
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  123              	.L7:
  157:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         }
  158:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #endif /* Back up enable state from the Timer control register */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 6
 
 
  159:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     Timer_UsbSuspend_Stop();
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  184:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     Timer_UsbSuspend_RestoreConfig();
  153              		.loc 1 184 0
  154 0004 FFF7FEFF 		bl	Timer_UsbSuspend_RestoreConfig
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 7
 
 
  185:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #if(!Timer_UsbSuspend_ControlRegRemoved)
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  202 004a 0200     		.2byte	0x2
  203 004c 77       		.byte	0x77
  204 004d 04       		.sleb128 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 8
 
 
  205 004e 00000000 		.4byte	0x0
@@ -465,10 +465,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  246 0006 00000000 		.4byte	.Ldebug_abbrev0
  247 000a 04       		.byte	0x4
  248 000b 01       		.uleb128 0x1
- 249 000c 4C010000 		.4byte	.LASF18
+ 249 000c 92000000 		.4byte	.LASF18
  250 0010 01       		.byte	0x1
- 251 0011 0D010000 		.4byte	.LASF19
- 252 0015 6A000000 		.4byte	.LASF20
+ 251 0011 DB000000 		.4byte	.LASF19
+ 252 0015 39010000 		.4byte	.LASF20
  253 0019 00000000 		.4byte	0x0
  254 001d 00000000 		.4byte	0x0
  255 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -476,26 +476,26 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  257 0029 02       		.uleb128 0x2
  258 002a 01       		.byte	0x1
  259 002b 06       		.byte	0x6
- 260 002c 6B010000 		.4byte	.LASF0
+ 260 002c 2D010000 		.4byte	.LASF0
  261 0030 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 9
 
 
  262 0031 01       		.byte	0x1
  263 0032 08       		.byte	0x8
- 264 0033 D0000000 		.4byte	.LASF1
+ 264 0033 9E000000 		.4byte	.LASF1
  265 0037 02       		.uleb128 0x2
  266 0038 02       		.byte	0x2
  267 0039 05       		.byte	0x5
- 268 003a 7D010000 		.4byte	.LASF2
+ 268 003a 98010000 		.4byte	.LASF2
  269 003e 02       		.uleb128 0x2
  270 003f 02       		.byte	0x2
  271 0040 07       		.byte	0x7
- 272 0041 58010000 		.4byte	.LASF3
+ 272 0041 1A010000 		.4byte	.LASF3
  273 0045 02       		.uleb128 0x2
  274 0046 04       		.byte	0x4
  275 0047 05       		.byte	0x5
- 276 0048 3C010000 		.4byte	.LASF4
+ 276 0048 0A010000 		.4byte	.LASF4
  277 004c 02       		.uleb128 0x2
  278 004d 04       		.byte	0x4
  279 004e 07       		.byte	0x7
@@ -507,7 +507,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  285 005a 02       		.uleb128 0x2
  286 005b 08       		.byte	0x8
  287 005c 07       		.byte	0x7
- 288 005d B9000000 		.4byte	.LASF7
+ 288 005d 6A000000 		.4byte	.LASF7
  289 0061 03       		.uleb128 0x3
  290 0062 04       		.byte	0x4
  291 0063 05       		.byte	0x5
@@ -524,28 +524,28 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  302 007a 02       		.uleb128 0x2
  303 007b 04       		.byte	0x4
  304 007c 04       		.byte	0x4
- 305 007d 77010000 		.4byte	.LASF9
+ 305 007d 92010000 		.4byte	.LASF9
  306 0081 02       		.uleb128 0x2
  307 0082 08       		.byte	0x8
  308 0083 04       		.byte	0x4
- 309 0084 45010000 		.4byte	.LASF10
+ 309 0084 13010000 		.4byte	.LASF10
  310 0088 02       		.uleb128 0x2
  311 0089 01       		.byte	0x1
  312 008a 08       		.byte	0x8
- 313 008b A5010000 		.4byte	.LASF11
+ 313 008b C0010000 		.4byte	.LASF11
  314 008f 05       		.uleb128 0x5
  315 0090 04       		.byte	0x4
  316 0091 07       		.byte	0x7
  317 0092 06       		.uleb128 0x6
  318 0093 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 10
 
 
  319 0094 03       		.byte	0x3
  320 0095 3C       		.byte	0x3c
  321 0096 A9000000 		.4byte	0xa9
  322 009a 07       		.uleb128 0x7
- 323 009b A8000000 		.4byte	.LASF21
+ 323 009b 81000000 		.4byte	.LASF21
  324 009f 03       		.byte	0x3
  325 00a0 3D       		.byte	0x3d
  326 00a1 6F000000 		.4byte	0x6f
@@ -554,13 +554,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  329 00a7 00       		.uleb128 0x0
  330 00a8 00       		.byte	0x0
  331 00a9 04       		.uleb128 0x4
- 332 00aa 87010000 		.4byte	.LASF13
+ 332 00aa A2010000 		.4byte	.LASF13
  333 00ae 03       		.byte	0x3
  334 00af 54       		.byte	0x54
  335 00b0 92000000 		.4byte	0x92
  336 00b4 08       		.uleb128 0x8
  337 00b5 01       		.byte	0x1
- 338 00b6 AA010000 		.4byte	.LASF14
+ 338 00b6 C5010000 		.4byte	.LASF14
  339 00ba 01       		.byte	0x1
  340 00bb 2A       		.byte	0x2a
  341 00bc 01       		.byte	0x1
@@ -578,7 +578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  353 00da 2B000000 		.4byte	.LLST1
  354 00de 08       		.uleb128 0x8
  355 00df 01       		.byte	0x1
- 356 00e0 DE000000 		.4byte	.LASF16
+ 356 00e0 AC000000 		.4byte	.LASF16
  357 00e4 01       		.byte	0x1
  358 00e5 90       		.byte	0x90
  359 00e6 01       		.byte	0x1
@@ -587,7 +587,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  362 00ef 56000000 		.4byte	.LLST2
  363 00f3 08       		.uleb128 0x8
  364 00f4 01       		.byte	0x1
- 365 00f5 F5000000 		.4byte	.LASF17
+ 365 00f5 C3000000 		.4byte	.LASF17
  366 00f9 01       		.byte	0x1
  367 00fa B6       		.byte	0xb6
  368 00fb 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  373 0109 3A000000 		.4byte	.LASF22
  374 010d 01       		.byte	0x1
  375 010e 14       		.byte	0x14
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 11
 
 
  376 010f A9000000 		.4byte	0xa9
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  430 0030 3A       		.uleb128 0x3a
  431 0031 0B       		.uleb128 0xb
  432 0032 3B       		.uleb128 0x3b
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 12
 
 
  433 0033 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  487 0069 0C       		.uleb128 0xc
  488 006a 11       		.uleb128 0x11
  489 006b 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 13
 
 
  490 006c 12       		.uleb128 0x12
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  528 0004 0200     		.2byte	0x2
  529 0006 00000000 		.4byte	.Ldebug_info0
  530 000a 04       		.byte	0x4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 14
 
 
  531 000b 00       		.byte	0x0
@@ -838,99 +838,99 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 1
  570 0058 6C6F6E67 		.ascii	"long unsigned int\000"
  570      20756E73 
  570      69676E65 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 15
 
 
  570      6420696E 
  570      7400
- 571              	.LASF20:
- 572 006a 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 572      665C486F 
- 572      6D655C44 
- 572      65736B74 
- 572      6F705C4B 
- 573 0097 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
- 573      69745072 
- 573      6F672E63 
- 573      7964736E 
- 573      00
- 574              	.LASF21:
- 575 00a8 54696D65 		.ascii	"TimerEnableState\000"
- 575      72456E61 
- 575      626C6553 
- 575      74617465 
- 575      00
- 576              	.LASF7:
- 577 00b9 6C6F6E67 		.ascii	"long long unsigned int\000"
- 577      206C6F6E 
- 577      6720756E 
- 577      7369676E 
- 577      65642069 
- 578              	.LASF1:
- 579 00d0 756E7369 		.ascii	"unsigned char\000"
- 579      676E6564 
- 579      20636861 
- 579      7200
- 580              	.LASF16:
- 581 00de 54696D65 		.ascii	"Timer_UsbSuspend_Sleep\000"
- 581      725F5573 
- 581      62537573 
- 581      70656E64 
- 581      5F536C65 
- 582              	.LASF17:
- 583 00f5 54696D65 		.ascii	"Timer_UsbSuspend_Wakeup\000"
- 583      725F5573 
- 583      62537573 
- 583      70656E64 
- 583      5F57616B 
- 584              	.LASF19:
- 585 010d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Timer_UsbSuspend_PM.c\000"
- 585      6E657261 
- 585      7465645F 
- 585      536F7572 
- 585      63655C50 
- 586              	.LASF4:
- 587 013c 6C6F6E67 		.ascii	"long int\000"
- 587      20696E74 
- 587      00
- 588              	.LASF10:
- 589 0145 646F7562 		.ascii	"double\000"
- 589      6C6500
- 590              	.LASF18:
- 591 014c 474E5520 		.ascii	"GNU C 4.4.1\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpUUEJb.s 			page 16
+ 571              	.LASF7:
+ 572 006a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 572      206C6F6E 
+ 572      6720756E 
+ 572      7369676E 
+ 572      65642069 
+ 573              	.LASF21:
+ 574 0081 54696D65 		.ascii	"TimerEnableState\000"
+ 574      72456E61 
+ 574      626C6553 
+ 574      74617465 
+ 574      00
+ 575              	.LASF18:
+ 576 0092 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 576      4320342E 
+ 576      342E3100 
+ 577              	.LASF1:
+ 578 009e 756E7369 		.ascii	"unsigned char\000"
+ 578      676E6564 
+ 578      20636861 
+ 578      7200
+ 579              	.LASF16:
+ 580 00ac 54696D65 		.ascii	"Timer_UsbSuspend_Sleep\000"
+ 580      725F5573 
+ 580      62537573 
+ 580      70656E64 
+ 580      5F536C65 
+ 581              	.LASF17:
+ 582 00c3 54696D65 		.ascii	"Timer_UsbSuspend_Wakeup\000"
+ 582      725F5573 
+ 582      62537573 
+ 582      70656E64 
+ 582      5F57616B 
+ 583              	.LASF19:
+ 584 00db 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Timer_UsbSuspend_PM.c\000"
+ 584      6E657261 
+ 584      7465645F 
+ 584      536F7572 
+ 584      63655C50 
+ 585              	.LASF4:
+ 586 010a 6C6F6E67 		.ascii	"long int\000"
+ 586      20696E74 
+ 586      00
+ 587              	.LASF10:
+ 588 0113 646F7562 		.ascii	"double\000"
+ 588      6C6500
+ 589              	.LASF3:
+ 590 011a 73686F72 		.ascii	"short unsigned int\000"
+ 590      7420756E 
+ 590      7369676E 
+ 590      65642069 
+ 590      6E7400
+ 591              	.LASF0:
+ 592 012d 7369676E 		.ascii	"signed char\000"
+ 592      65642063 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccpWd9CW.s 			page 16
 
 
- 591      4320342E 
- 591      342E3100 
- 592              	.LASF3:
- 593 0158 73686F72 		.ascii	"short unsigned int\000"
- 593      7420756E 
- 593      7369676E 
- 593      65642069 
- 593      6E7400
- 594              	.LASF0:
- 595 016b 7369676E 		.ascii	"signed char\000"
- 595      65642063 
- 595      68617200 
+ 592      68617200 
+ 593              	.LASF20:
+ 594 0139 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 594      665C486F 
+ 594      6D655C44 
+ 594      65736B74 
+ 594      6F705C55 
+ 595 0166 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg.cydsn\000"
+ 595      50726F67 
+ 595      20766572 
+ 595      73696F6E 
+ 595      20325F30 
  596              	.LASF9:
- 597 0177 666C6F61 		.ascii	"float\000"
+ 597 0192 666C6F61 		.ascii	"float\000"
  597      7400
  598              	.LASF2:
- 599 017d 73686F72 		.ascii	"short int\000"
+ 599 0198 73686F72 		.ascii	"short int\000"
  599      7420696E 
  599      7400
  600              	.LASF13:
- 601 0187 54696D65 		.ascii	"Timer_UsbSuspend_backupStruct\000"
+ 601 01a2 54696D65 		.ascii	"Timer_UsbSuspend_backupStruct\000"
  601      725F5573 
  601      62537573 
  601      70656E64 
  601      5F626163 
  602              	.LASF11:
- 603 01a5 63686172 		.ascii	"char\000"
+ 603 01c0 63686172 		.ascii	"char\000"
  603      00
  604              	.LASF14:
- 605 01aa 54696D65 		.ascii	"Timer_UsbSuspend_SaveConfig\000"
+ 605 01c5 54696D65 		.ascii	"Timer_UsbSuspend_SaveConfig\000"
  605      725F5573 
  605      62537573 
  605      70656E64 

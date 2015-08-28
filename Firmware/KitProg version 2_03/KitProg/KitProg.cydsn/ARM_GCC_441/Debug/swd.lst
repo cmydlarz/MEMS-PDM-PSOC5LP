@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
   51              		.size	ack2, 1
   52              	ack2:
   53 0003 00       		.space	1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 2
 
 
   54              		.section	.text.SWDInit,"ax",%progbits
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
   46:.\swd.c       **** * systems where a malfunction or failure may reasonably be expected to result in
   47:.\swd.c       **** * significant injury to the user. The inclusion of Cypress' product in a life-
   48:.\swd.c       **** * support systems application implies that the manufacturer assumes all risk of
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 3
 
 
   49:.\swd.c       **** * such use and in doing so indemnifies Cypress against all charges. Use may be
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  103:.\swd.c       **** uint8 gbParity;
  104:.\swd.c       **** /* 3-bit ACK response */
  105:.\swd.c       **** uint8 gbAck;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 4
 
 
  106:.\swd.c       **** uint8 ack0=0;
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  160:.\swd.c       ****             - if target detects parity error in either header or data (target sets wd_error bit DBG
  161:.\swd.c       ****       - else if WAIT
  162:.\swd.c       ****          - if Overrun Detection then (Sticky behavior)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 5
 
 
  163:.\swd.c       ****             - continue with PUT_DATA for ACK - data will be ignored by target
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  217:.\swd.c       **** * Summary:
  218:.\swd.c       **** * Initializes SWD side of communication for PSoC 5LP
  219:.\swd.c       **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 6
 
 
  220:.\swd.c       **** * Parameters:
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  239:.\swd.c       ****    		/* 32-bit data */
  240:.\swd.c       ****     	gbData[count] = 0;    
   98              		.loc 1 240 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 7
 
 
   99 0038 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  145 00b0 C4F20A23 		movt	r3, #:upper16:1107960836
  146 00b4 4FF00102 		mov	r2, #1
  147 00b8 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 8
 
 
  249:.\swd.c       **** 	return;
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  184 001a 02F0F102 		and	r2, r2, #241
  185 001e 42F00202 		orr	r2, r2, #2
  186 0022 D2B2     		uxtb	r2, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 9
 
 
  187 0024 D2B2     		uxtb	r2, r2
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  278:.\swd.c       **** *
  279:.\swd.c       **** * Return:
  280:.\swd.c       **** *  void
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 10
 
 
  281:.\swd.c       **** *
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  277              	@ 287 ".\swd.c" 1
  278 004a 00BF     		NOP
  279              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 11
 
 
  280              	@ 0 "" 2
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  305:.\swd.c       ****     SWD_SET_SDA_LO;
  317              		.loc 1 305 0
  318 0004 42F20043 		movw	r3, #:lower16:1107960832
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 12
 
 
  319 0008 C4F20A23 		movt	r3, #:upper16:1107960832
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  368              	@ 310 ".\swd.c" 1
  369 005c 00BF     		NOP
  370              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 13
 
 
  371              	@ 0 "" 2
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  423              	
  424              	@ 0 "" 2
  425              	@ 312 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 14
 
 
  426 009a 00BF     		NOP
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  479              	
  480              	@ 0 "" 2
  481              	@ 313 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 15
 
 
  482 00d8 00BF     		NOP
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  534              	@ 315 ".\swd.c" 1
  535 0114 00BF     		NOP
  536              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 16
 
 
  537              	@ 0 "" 2
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  317:.\swd.c       ****     SWD_CLOCK_BIT;
  590              		.loc 1 317 0
  591              		.thumb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 17
 
 
  592 0152 42F20443 		movw	r3, #:lower16:1107960836
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  645 0192 C4F20A23 		movt	r3, #:upper16:1107960836
  646 0196 4FF00102 		mov	r2, #1
  647 019a 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 18
 
 
  648              	@ 318 ".\swd.c" 1
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  700 01d6 1A70     		strb	r2, [r3, #0]
  701              	@ 320 ".\swd.c" 1
  702 01d8 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 19
 
 
  703              	
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  756              	@ 0 "" 2
  757              	@ 321 ".\swd.c" 1
  758 0216 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 20
 
 
  759              	
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  811 0252 00BF     		NOP
  812              	
  813              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 21
 
 
  814              	@ 323 ".\swd.c" 1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  867 0290 00BF     		NOP
  868              	
  869              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 22
 
 
  325:.\swd.c       ****     SWD_CLOCK_BIT;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  922              	@ 0 "" 2
  923              		.thumb
  924 02ce 42F20443 		movw	r3, #:lower16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 23
 
 
  925 02d2 C4F20A23 		movt	r3, #:upper16:1107960836
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  977 030a 42F20443 		movw	r3, #:lower16:1107960836
  978 030e C4F20A23 		movt	r3, #:upper16:1107960836
  979 0312 4FF00002 		mov	r2, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 24
 
 
  980 0316 1A70     		strb	r2, [r3, #0]
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1033              	@ 329 ".\swd.c" 1
  1034 0354 00BF     		NOP
  1035              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 25
 
 
  1036              	@ 0 "" 2
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  342:.\swd.c       **** *
  343:.\swd.c       **** * Parameters:
  344:.\swd.c       **** *  void
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 26
 
 
  345:.\swd.c       **** *
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1119 0054 4FF00102 		mov	r2, #1
  1120 0058 1A70     		strb	r2, [r3, #0]
  358:.\swd.c       ****     
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 27
 
 
  359:.\swd.c       ****     SWD_SET_SCK_LO;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1166              		.global	SWDPutDataSegment
  1167              		.thumb
  1168              		.thumb_func
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 28
 
 
  1169              		.type	SWDPutDataSegment, %function
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1203 002e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
  1204 0030 7A68     		ldr	r2, [r7, #4]
  1205 0032 02F10102 		add	r2, r2, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 29
 
 
  1206 0036 7A60     		str	r2, [r7, #4]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  403:.\swd.c       **** * Return:
  404:.\swd.c       **** *  void
  405:.\swd.c       **** *
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 30
 
 
  406:.\swd.c       **** *******************************************************************************/
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1292              		.loc 1 412 0
  1293 0054 FFF7FEFF 		bl	SWDGetByte
  1294 0058 0346     		mov	r3, r0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 31
 
 
  1295 005a 1A46     		mov	r2, r3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1329              		.cfi_def_cfa_offset 8
  1330 0002 82B0     		sub	sp, sp, #8
  1331              	.LCFI18:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 32
 
 
  1332              		.cfi_def_cfa_offset 16
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1380 005e 03F00103 		and	r3, r3, #1
  1381 0062 DBB2     		uxtb	r3, r3
  1382 0064 002B     		cmp	r3, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 33
 
 
  1383 0066 02D0     		beq	.L21
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1433 00d4 DCB2     		uxtb	r4, r3
  1434              	.L25:
  1435 00d6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 34
 
 
  1436 00d8 4FEA5303 		lsr	r3, r3, #1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1473 0008 FB71     		strb	r3, [r7, #7]
  460:.\swd.c       **** 	
  461:.\swd.c       **** 	SWDByte = bPutData;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 35
 
 
  1474              		.loc 1 461 0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1524 00a2 C4F20A23 		movt	r3, #:upper16:1107960836
  1525 00a6 4FF00102 		mov	r2, #1
  1526 00aa 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 36
 
 
  466:.\swd.c       ****     SWD_SET_SCK_LO; SWD_SDA = B3; SWD_SET_SCK_HI;
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1577 0146 C4F20A23 		movt	r3, #:upper16:1107960836
  1578 014a 4FF00002 		mov	r2, #0
  1579 014e 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 37
 
 
  1580 0150 42F20043 		movw	r3, #:lower16:1107960832
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  481:.\swd.c       **** *
  482:.\swd.c       **** * Return:
  483:.\swd.c       **** *  SWDByte: Byte read from the SWD lines.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 38
 
 
  484:.\swd.c       **** *
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1670 0070 4FF00002 		mov	r2, #0
  1671 0074 1A70     		strb	r2, [r3, #0]
  1672 0076 42F20803 		movw	r3, #:lower16:570433544
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 39
 
 
  1673 007a C2F20023 		movt	r3, #:upper16:570433544
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1724 011c 1278     		ldrb	r2, [r2, #0]
  1725 011e D2B2     		uxtb	r2, r2
  1726 0120 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 40
 
 
  1727 0122 42F20443 		movw	r3, #:lower16:1107960836
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1776              		.section	.text.SWDResetBus,"ax",%progbits
  1777              		.align	2
  1778              		.global	SWDResetBus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 41
 
 
  1779              		.thumb
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1813 002a FFF7FEFF 		bl	CyEnterCriticalSection
  1814 002e 0346     		mov	r3, r0
  1815 0030 FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 42
 
 
  519:.\swd.c       ****     /* see 001-11605  4.2.1.2. Clocks more than 52 times to reset the SWD bus */
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1866              	
  1867              	@ 0 "" 2
  523:.\swd.c       ****     SWD_CLOCK_BIT; //  2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 43
 
 
  1868              		.loc 1 523 0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1921              		.thumb
  1922 00c8 42F20443 		movw	r3, #:lower16:1107960836
  1923 00cc C4F20A23 		movt	r3, #:upper16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 44
 
 
  1924 00d0 4FF00102 		mov	r2, #1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  1976 0108 C4F20A23 		movt	r3, #:upper16:1107960836
  1977 010c 4FF00002 		mov	r2, #0
  1978 0110 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 45
 
 
  1979              	@ 526 ".\swd.c" 1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2032 014e 00BF     		NOP
  2033              	
  2034              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 46
 
 
  2035              	@ 527 ".\swd.c" 1
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2087              	@ 0 "" 2
  2088              	@ 529 ".\swd.c" 1
  2089 018c 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 47
 
 
  2090              	
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2143              	@ 0 "" 2
  2144              	@ 530 ".\swd.c" 1
  2145 01ca 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 48
 
 
  2146              	
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2198 0206 00BF     		NOP
  2199              	
  2200              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 49
 
 
  2201              		.thumb
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2253              		.loc 1 534 0
  2254              		.thumb
  2255 0244 42F20443 		movw	r3, #:lower16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 50
 
 
  2256 0248 C4F20A23 		movt	r3, #:upper16:1107960836
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2309 0288 4FF00102 		mov	r2, #1
  2310 028c 1A70     		strb	r2, [r3, #0]
  2311              	@ 535 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 51
 
 
  2312 028e 00BF     		NOP
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2364              	@ 537 ".\swd.c" 1
  2365 02ca 00BF     		NOP
  2366              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 52
 
 
  2367              	@ 0 "" 2
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2420              	@ 538 ".\swd.c" 1
  2421 0308 00BF     		NOP
  2422              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 53
 
 
  2423              	@ 0 "" 2
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2475              	
  2476              	@ 0 "" 2
  2477              	@ 540 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 54
 
 
  2478 0346 00BF     		NOP
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2531              	
  2532              	@ 0 "" 2
  542:.\swd.c       ****     SWD_CLOCK_BIT; //  21
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 55
 
 
  2533              		.loc 1 542 0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2586              		.thumb
  2587 03c0 42F20443 		movw	r3, #:lower16:1107960836
  2588 03c4 C4F20A23 		movt	r3, #:upper16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 56
 
 
  2589 03c8 4FF00102 		mov	r2, #1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2641 0400 C4F20A23 		movt	r3, #:upper16:1107960836
  2642 0404 4FF00002 		mov	r2, #0
  2643 0408 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 57
 
 
  2644              	@ 545 ".\swd.c" 1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2697 0446 00BF     		NOP
  2698              	
  2699              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 58
 
 
  2700              	@ 546 ".\swd.c" 1
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2752              	@ 0 "" 2
  2753              	@ 548 ".\swd.c" 1
  2754 0484 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 59
 
 
  2755              	
@@ -3538,7 +3538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2808              	@ 0 "" 2
  2809              	@ 549 ".\swd.c" 1
  2810 04c2 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 60
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 60
 
 
  2811              	
@@ -3598,7 +3598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2863 04fe 00BF     		NOP
  2864              	
  2865              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 61
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 61
 
 
  2866              		.thumb
@@ -3658,7 +3658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2918              		.loc 1 553 0
  2919              		.thumb
  2920 053c 42F20443 		movw	r3, #:lower16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 62
 
 
  2921 0540 C4F20A23 		movt	r3, #:upper16:1107960836
@@ -3718,7 +3718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  2974 0580 4FF00102 		mov	r2, #1
  2975 0584 1A70     		strb	r2, [r3, #0]
  2976              	@ 554 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 63
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 63
 
 
  2977 0586 00BF     		NOP
@@ -3778,7 +3778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3029              	@ 556 ".\swd.c" 1
  3030 05c2 00BF     		NOP
  3031              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 64
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 64
 
 
  3032              	@ 0 "" 2
@@ -3838,7 +3838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3085              	@ 557 ".\swd.c" 1
  3086 0600 00BF     		NOP
  3087              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 65
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 65
 
 
  3088              	@ 0 "" 2
@@ -3898,7 +3898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3140              	
  3141              	@ 0 "" 2
  3142              	@ 559 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 66
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 66
 
 
  3143 063e 00BF     		NOP
@@ -3958,7 +3958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3196              	
  3197              	@ 0 "" 2
  561:.\swd.c       ****     SWD_CLOCK_BIT; //  40
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 67
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 67
 
 
  3198              		.loc 1 561 0
@@ -4018,7 +4018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3251              		.thumb
  3252 06b8 42F20443 		movw	r3, #:lower16:1107960836
  3253 06bc C4F20A23 		movt	r3, #:upper16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 68
 
 
  3254 06c0 4FF00102 		mov	r2, #1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3306 06f8 C4F20A23 		movt	r3, #:upper16:1107960836
  3307 06fc 4FF00002 		mov	r2, #0
  3308 0700 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 69
 
 
  3309              	@ 564 ".\swd.c" 1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3362 073e 00BF     		NOP
  3363              	
  3364              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 70
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 70
 
 
  3365              	@ 565 ".\swd.c" 1
@@ -4198,7 +4198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3417              	@ 0 "" 2
  3418              	@ 567 ".\swd.c" 1
  3419 077c 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 71
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 71
 
 
  3420              	
@@ -4258,7 +4258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3473              	@ 0 "" 2
  3474              	@ 568 ".\swd.c" 1
  3475 07ba 00BF     		NOP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 72
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 72
 
 
  3476              	
@@ -4318,7 +4318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3528 07f6 00BF     		NOP
  3529              	
  3530              	@ 0 "" 2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 73
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 73
 
 
  3531              		.thumb
@@ -4378,7 +4378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3583              		.loc 1 572 0
  3584              		.thumb
  3585 0834 42F20443 		movw	r3, #:lower16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 74
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 74
 
 
  3586 0838 C4F20A23 		movt	r3, #:upper16:1107960836
@@ -4438,7 +4438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3639 0878 4FF00102 		mov	r2, #1
  3640 087c 1A70     		strb	r2, [r3, #0]
  3641              	@ 573 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 75
 
 
  3642 087e 00BF     		NOP
@@ -4498,7 +4498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3694              	@ 575 ".\swd.c" 1
  3695 08ba 00BF     		NOP
  3696              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 76
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 76
 
 
  3697              	@ 0 "" 2
@@ -4558,7 +4558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3750              	@ 576 ".\swd.c" 1
  3751 08f8 00BF     		NOP
  3752              	
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 77
 
 
  3753              	@ 0 "" 2
@@ -4618,7 +4618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3805              	
  3806              	@ 0 "" 2
  3807              	@ 578 ".\swd.c" 1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 78
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 78
 
 
  3808 0936 00BF     		NOP
@@ -4678,7 +4678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3861              	
  3862              	@ 0 "" 2
  580:.\swd.c       ****     SWD_CLOCK_BIT; //  59
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 79
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 79
 
 
  3863              		.loc 1 580 0
@@ -4738,7 +4738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  3916              		.thumb
  3917 09b0 42F20443 		movw	r3, #:lower16:1107960836
  3918 09b4 C4F20A23 		movt	r3, #:upper16:1107960836
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 80
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 80
 
 
  3919 09b8 4FF00102 		mov	r2, #1
@@ -4798,7 +4798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  589:.\swd.c       **** /*******************************************************************************
  590:.\swd.c       **** * Function Name: SWDComputeDataParity()
  591:.\swd.c       **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 81
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 81
 
 
  592:.\swd.c       **** * Summary:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4005 0038 FFF7FEFF 		bl	SWDCountBits
  4006 003c 0346     		mov	r3, r0
  4007 003e 1A46     		mov	r2, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 82
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 82
 
 
  4008 0040 FB7B     		ldrb	r3, [r7, #15]
@@ -4918,7 +4918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  613:.\swd.c       **** ********************************************************************************
  614:.\swd.c       **** * Summary:
  615:.\swd.c       **** * Acquires PSoC 4.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 83
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 83
 
 
  616:.\swd.c       **** *
@@ -4978,7 +4978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4086 0022 4FF00003 		mov	r3, #0
  4087 0026 7B74     		strb	r3, [r7, #17]
  4088 0028 38E1     		b	.L36
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 84
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 84
 
 
  4089              	.L48:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4133 009e C4F20002 		movt	r2, #:upper16:1073762320
  4134 00a2 1278     		ldrb	r2, [r2, #0]
  4135 00a4 D2B2     		uxtb	r2, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 85
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 85
 
 
  4136 00a6 D2B2     		uxtb	r2, r2
@@ -5098,7 +5098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4175              	.L40:
  665:.\swd.c       **** 		do { 
  666:.\swd.c       **** 			/* Reset SWD bus */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 86
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 86
 
 
  667:.\swd.c       **** 			SWDResetBus();
@@ -5158,7 +5158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  682:.\swd.c       **** 		bData[0] = 0xA9; 
  4215              		.loc 1 682 0
  4216 0162 6FF05603 		mvn	r3, #86
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 87
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 87
 
 
  4217 0166 3B73     		strb	r3, [r7, #12]
@@ -5218,7 +5218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4260 01ce 012B     		cmp	r3, #1
  4261 01d0 59D1     		bne	.L51
  4262              	.L43:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 88
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 88
 
 
  694:.\swd.c       **** 		{
@@ -5278,7 +5278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4300 0228 07F10C02 		add	r2, r7, #12
  4301 022c 07F10B03 		add	r3, r7, #11
  4302 0230 1046     		mov	r0, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 89
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 89
 
 
  4303 0232 1946     		mov	r1, r3
@@ -5338,7 +5338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4340              	.L50:
  4341              		.loc 1 688 0
  4342 0282 00BF     		nop
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 90
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 90
 
 
  4343 0284 06E0     		b	.L42
@@ -5398,7 +5398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  733:.\swd.c       **** /*******************************************************************************
  734:.\swd.c       **** * Function Name: SWDPutData()
  735:.\swd.c       **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 91
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 91
 
 
  736:.\swd.c       **** * Summary:
@@ -5458,7 +5458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  758:.\swd.c       ****     SWDClockTrn();
  4424              		.loc 1 758 0
  4425 002c FFF7FEFF 		bl	SWDClockTrn
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 92
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 92
 
 
  759:.\swd.c       ****     SWDGetAckSegment();
@@ -5518,7 +5518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  769:.\swd.c       **** 				SWD_SET_SDA_HI;
  4470              		.loc 1 769 0
  4471 009e 42F20043 		movw	r3, #:lower16:1107960832
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 93
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 93
 
 
  4472 00a2 C4F20A23 		movt	r3, #:upper16:1107960832
@@ -5578,7 +5578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  779:.\swd.c       **** 			/* keep Data low to not start next SWD transaction on 47th clock */
  780:.\swd.c       ****             SWD_SET_SDA_LO;
  4517              		.loc 1 780 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 94
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 94
 
 
  4518              		.thumb
@@ -5638,7 +5638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4567 0134 42F00202 		orr	r2, r2, #2
  4568 0138 D2B2     		uxtb	r2, r2
  4569 013a D2B2     		uxtb	r2, r2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 95
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 95
 
 
  4570 013c 1A70     		strb	r2, [r3, #0]
@@ -5698,7 +5698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4613 01b0 1A70     		strb	r2, [r3, #0]
  797:.\swd.c       ****             SWD_SET_SCK_HI;
  4614              		.loc 1 797 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 96
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 96
 
 
  4615 01b2 42F20443 		movw	r3, #:lower16:1107960836
@@ -5758,7 +5758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4658 0226 40F20003 		movw	r3, #:lower16:gbStatsReg
  4659 022a C0F20003 		movt	r3, #:upper16:gbStatsReg
  4660 022e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 97
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 97
 
 
  4661 0230 43F00703 		orr	r3, r3, #7
@@ -5818,7 +5818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4692              		.cfi_def_cfa_offset 12
  4693 0002 85B0     		sub	sp, sp, #20
  4694              	.LCFI38:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 98
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 98
 
 
  4695              		.cfi_def_cfa_offset 32
@@ -5878,7 +5878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4739 006a 1A70     		strb	r2, [r3, #0]
  842:.\swd.c       ****     switch (gbAck)
  4740              		.loc 1 842 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 99
 
 
  4741 006c 40F20003 		movw	r3, #:lower16:gbAck
@@ -5938,7 +5938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  856:.\swd.c       ****             {
  857:.\swd.c       ****                 gbStatsReg |= SWD_PERR;
  4782              		.loc 1 857 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 100
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 100
 
 
  4783 00d6 40F20003 		movw	r3, #:lower16:gbStatsReg
@@ -5998,7 +5998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  865:.\swd.c       ****         }
  866:.\swd.c       **** 
  867:.\swd.c       ****         case SWD_WAIT:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 101
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 101
 
 
  868:.\swd.c       ****         case SWD_FAULT:
@@ -6058,7 +6058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4874 01be C0F20003 		movt	r3, #:upper16:gbStatsReg
  4875 01c2 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
  4876 01c4 40F20003 		movw	r3, #:lower16:gbAck
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 102
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 102
 
 
  4877 01c8 C0F20003 		movt	r3, #:upper16:gbAck
@@ -6118,7 +6118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4920 023c 1A70     		strb	r2, [r3, #0]
  4921              	.L70:
  889:.\swd.c       ****             break;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 103
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 103
 
 
  890:.\swd.c       ****         }
@@ -6178,7 +6178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4950              		.cfi_def_cfa_offset 32
  4951 0004 00AF     		add	r7, sp, #0
  4952              		.cfi_offset 14, -4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 104
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 104
 
 
  4953              		.cfi_offset 7, -8
@@ -6238,7 +6238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  4992 0048 DCB2     		uxtb	r4, r3
  4993 004a 002C     		cmp	r4, #0
  4994 004c 08D0     		beq	.L77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 105
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 105
 
 
  4995 004e 40F20003 		movw	r3, #:lower16:gbStatsReg
@@ -6298,7 +6298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5028              		@ args = 0, pretend = 0, frame = 8
  5029              		@ frame_needed = 1, uses_anonymous_args = 0
  5030 0000 90B5     		push	{r4, r7, lr}
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 106
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 106
 
 
  5031              	.LCFI43:
@@ -6358,7 +6358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5074 004e 43F02003 		orr	r3, r3, #32
  5075 0052 DAB2     		uxtb	r2, r3
  5076 0054 3B68     		ldr	r3, [r7, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 107
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 107
 
 
  5077 0056 1A70     		strb	r2, [r3, #0]
@@ -6418,7 +6418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5110 000a 7A60     		str	r2, [r7, #4]
  984:.\swd.c       **** 	int16 size = USBFS_GetEPCount(SWD_OUT_EP);
  5111              		.loc 1 984 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 108
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 108
 
 
  5112 000c 4FF00200 		mov	r0, #2
@@ -6478,7 +6478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5155 006e 1A70     		strb	r2, [r3, #0]
  5156              	.L87:
  996:.\swd.c       **** 	}
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 109
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 109
 
 
  997:.\swd.c       **** 	return;
@@ -6538,7 +6538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5187 0006 F860     		str	r0, [r7, #12]
  5188 0008 B960     		str	r1, [r7, #8]
  5189 000a 7A60     		str	r2, [r7, #4]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 110
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 110
 
 
  5190 000c 3B60     		str	r3, [r7, #0]
@@ -6598,7 +6598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5232 0060 7B8A     		ldrh	r3, [r7, #18]
  5233 0062 03F10103 		add	r3, r3, #1
  5234 0066 9BB2     		uxth	r3, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 111
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 111
 
 
  5235 0068 7B82     		strh	r3, [r7, #18]	@ movhi
@@ -6658,7 +6658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5275 00b8 0A44     		add	r2, r1, r2
  5276 00ba 1146     		mov	r1, r2
  5277 00bc FA68     		ldr	r2, [r7, #12]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 112
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 112
 
 
  5278 00be 0A44     		add	r2, r1, r2
@@ -6718,7 +6718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5321 0116 002B     		cmp	r3, #0
  5322 0118 04D1     		bne	.L97
 1058:.\swd.c       **** 				{
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 113
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 113
 
 
 1059:.\swd.c       ****                     *bufOutOffset = 0;
@@ -6778,7 +6778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5364              	.LFE47:
  5365              		.size	ProcessSWDRequest, .-ProcessSWDRequest
  5366 015a 00BF     		.section	.text.SWDLoadUsbIn,"ax",%progbits
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 114
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 114
 
 
  5367              		.align	2
@@ -6838,7 +6838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5400 001a 7B88     		ldrh	r3, [r7, #2]
  5401 001c 4FF00100 		mov	r0, #1
  5402 0020 7968     		ldr	r1, [r7, #4]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 115
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 115
 
 
  5403 0022 1A46     		mov	r2, r3
@@ -6898,7 +6898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5437 000a 7A60     		str	r2, [r7, #4]
 1113:.\swd.c       ****     int16 i = 0;
  5438              		.loc 1 1113 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 116
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 116
 
 
  5439 000c 4FF00003 		mov	r3, #0
@@ -6958,7 +6958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5486              	.L107:
  5487 0078 B7F91220 		ldrsh	r2, [r7, #18]
  5488 007c B7F91630 		ldrsh	r3, [r7, #22]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 117
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 117
 
 
  5489 0080 9A42     		cmp	r2, r3
@@ -7018,7 +7018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5531 00d6 7B8A     		ldrh	r3, [r7, #18]	@ movhi
  5532 00d8 03F10103 		add	r3, r3, #1
  5533 00dc 7B82     		strh	r3, [r7, #18]	@ movhi
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 118
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 118
 
 
  5534              	.L111:
@@ -7078,7 +7078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5568              		.cfi_offset 14, -4
  5569              		.cfi_offset 7, -8
  5570              	.LCFI60:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 119
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 119
 
 
  5571              		.cfi_def_cfa 7, 8
@@ -7138,7 +7138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
 1163:.\swd.c       **** * Summary:
 1164:.\swd.c       **** * Calls the SWDAcquirePSoC4() according to the requests initiated by 
 1165:.\swd.c       **** * PSoC Programmer via USB lines.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 120
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 120
 
 
 1166:.\swd.c       **** *
@@ -7198,7 +7198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
 1184:.\swd.c       **** 	/* Number of retries */
 1185:.\swd.c       **** 	attempts = pifData[1];
  5651              		.loc 1 1185 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 121
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 121
 
 
  5652 0038 40F20003 		movw	r3, #:lower16:pifData
@@ -7258,7 +7258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
 1203:.\swd.c       **** }
  5689              		.loc 1 1203 0
  5690 008a 07F10807 		add	r7, r7, #8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 122
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 122
 
 
  5691 008e BD46     		mov	sp, r7
@@ -7318,7 +7318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5745 0071 04000000 		.4byte	.LCFI6
  5746 0075 0200     		.2byte	0x2
  5747 0077 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 123
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 123
 
 
  5748 0078 04       		.sleb128 4
@@ -7378,7 +7378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5802 0102 0200     		.2byte	0x2
  5803 0104 7D       		.byte	0x7d
  5804 0105 10       		.sleb128 16
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 124
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 124
 
 
  5805 0106 06000000 		.4byte	.LCFI13
@@ -7438,7 +7438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5859 0190 0100     		.2byte	0x1
  5860 0192 5D       		.byte	0x5d
  5861 0193 02000000 		.4byte	.LCFI20
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 125
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 125
 
 
  5862 0197 04000000 		.4byte	.LCFI21
@@ -7498,7 +7498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5916 021d 00000000 		.4byte	0x0
  5917              	.LLST11:
  5918 0221 00000000 		.4byte	.LFB40
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 126
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 126
 
 
  5919 0225 02000000 		.4byte	.LCFI28
@@ -7558,7 +7558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  5973 02ae 0200     		.2byte	0x2
  5974 02b0 7D       		.byte	0x7d
  5975 02b1 18       		.sleb128 24
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 127
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 127
 
 
  5976 02b2 06000000 		.4byte	.LCFI36
@@ -7618,7 +7618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6030 033c 0100     		.2byte	0x1
  6031 033e 5D       		.byte	0x5d
  6032 033f 02000000 		.4byte	.LCFI43
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 128
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 128
 
 
  6033 0343 04000000 		.4byte	.LCFI44
@@ -7678,7 +7678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6087 03c9 5A010000 		.4byte	.LFE47
  6088 03cd 0200     		.2byte	0x2
  6089 03cf 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 129
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 129
 
 
  6090 03d0 20       		.sleb128 32
@@ -7738,7 +7738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6144 045a 0200     		.2byte	0x2
  6145 045c 7D       		.byte	0x7d
  6146 045d 08       		.sleb128 8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 130
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 130
 
 
  6147 045e 04000000 		.4byte	.LCFI59
@@ -7784,10 +7784,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6187 0006 00000000 		.4byte	.Ldebug_abbrev0
  6188 000a 04       		.byte	0x4
  6189 000b 01       		.uleb128 0x1
- 6190 000c EF020000 		.4byte	.LASF75
+ 6190 000c 3F030000 		.4byte	.LASF75
  6191 0010 01       		.byte	0x1
  6192 0011 CE010000 		.4byte	.LASF76
- 6193 0015 08030000 		.4byte	.LASF77
+ 6193 0015 B5020000 		.4byte	.LASF77
  6194 0019 00000000 		.4byte	0x0
  6195 001d 00000000 		.4byte	0x0
  6196 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -7798,7 +7798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6201 002c 66010000 		.4byte	.LASF0
  6202 0030 02       		.uleb128 0x2
  6203 0031 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 131
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 131
 
 
  6204 0032 08       		.byte	0x8
@@ -7836,7 +7836,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6236 006a 07       		.byte	0x7
  6237 006b 91010000 		.4byte	.LASF8
  6238 006f 04       		.uleb128 0x4
- 6239 0070 E9020000 		.4byte	.LASF9
+ 6239 0070 39030000 		.4byte	.LASF9
  6240 0074 02       		.byte	0x2
  6241 0075 4C       		.byte	0x4c
  6242 0076 30000000 		.4byte	0x30
@@ -7858,7 +7858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6258 0098 08       		.byte	0x8
  6259 0099 04       		.byte	0x4
  6260 009a 78020000 		.4byte	.LASF13
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 132
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 132
 
 
  6261 009e 02       		.uleb128 0x2
@@ -7914,11 +7914,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6311 0108 62000000 		.4byte	.LLST2
  6312 010c 0A       		.uleb128 0xa
  6313 010d 01       		.byte	0x1
- 6314 010e D5020000 		.4byte	.LASF17
+ 6314 010e 25030000 		.4byte	.LASF17
  6315 0112 01       		.byte	0x1
  6316 0113 2F01     		.2byte	0x12f
  6317 0115 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 133
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 133
 
 
  6318 0116 00000000 		.4byte	.LFB32
@@ -7978,7 +7978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6372 0193 01       		.byte	0x1
  6373 0194 22020000 		.4byte	.LASF30
  6374 0198 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 134
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 134
 
 
  6375 0199 AF01     		.2byte	0x1af
@@ -8038,7 +8038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6429 0214 9B000000 		.4byte	.LASF28
  6430 0218 01       		.byte	0x1
  6431 0219 0002     		.2byte	0x200
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 135
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 135
 
 
  6432 021b 01       		.byte	0x1
@@ -8098,7 +8098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6486 0298 D6010000 		.4byte	.LASF33
  6487 029c 01       		.byte	0x1
  6488 029d 7102     		.2byte	0x271
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 136
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 136
 
 
  6489 029f 6F000000 		.4byte	0x6f
@@ -8122,7 +8122,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6507 02c2 91       		.byte	0x91
  6508 02c3 71       		.sleb128 -15
  6509 02c4 0F       		.uleb128 0xf
- 6510 02c5 74030000 		.4byte	.LASF35
+ 6510 02c5 8F030000 		.4byte	.LASF35
  6511 02c9 01       		.byte	0x1
  6512 02ca 7402     		.2byte	0x274
  6513 02cc 6F000000 		.4byte	0x6f
@@ -8138,7 +8138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6523 02e0 91       		.byte	0x91
  6524 02e1 73       		.sleb128 -13
  6525 02e2 0F       		.uleb128 0xf
- 6526 02e3 64030000 		.4byte	.LASF37
+ 6526 02e3 7F030000 		.4byte	.LASF37
  6527 02e7 01       		.byte	0x1
  6528 02e8 7702     		.2byte	0x277
  6529 02ea 7A000000 		.4byte	0x7a
@@ -8158,7 +8158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6543 0305 01       		.byte	0x1
  6544 0306 7902     		.2byte	0x279
  6545 0308 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 137
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 137
 
 
  6546 030c 02       		.byte	0x2
@@ -8199,7 +8199,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6581 0356 91       		.byte	0x91
  6582 0357 6C       		.sleb128 -20
  6583 0358 0F       		.uleb128 0xf
- 6584 0359 6C030000 		.4byte	.LASF40
+ 6584 0359 87030000 		.4byte	.LASF40
  6585 035d 01       		.byte	0x1
  6586 035e EE02     		.2byte	0x2ee
  6587 0360 6F000000 		.4byte	0x6f
@@ -8217,8 +8217,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6599 0376 00       		.byte	0x0
  6600 0377 0B       		.uleb128 0xb
  6601 0378 01       		.byte	0x1
- 6602 0379 A3020000 		.4byte	.LASF41
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 138
+ 6602 0379 9A020000 		.4byte	.LASF41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 138
 
 
  6603 037d 01       		.byte	0x1
@@ -8244,7 +8244,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6623 03aa 01       		.byte	0x1
  6624 03ab 54       		.byte	0x54
  6625 03ac 0F       		.uleb128 0xf
- 6626 03ad 6C030000 		.4byte	.LASF40
+ 6626 03ad 87030000 		.4byte	.LASF40
  6627 03b1 01       		.byte	0x1
  6628 03b2 4103     		.2byte	0x341
  6629 03b4 6F000000 		.4byte	0x6f
@@ -8278,7 +8278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6657 03f1 91       		.byte	0x91
  6658 03f2 64       		.sleb128 -28
  6659 03f3 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 139
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 139
 
 
  6660 03f4 04010000 		.4byte	.LASF44
@@ -8306,7 +8306,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6682 041d 00       		.byte	0x0
  6683 041e 0B       		.uleb128 0xb
  6684 041f 01       		.byte	0x1
- 6685 0420 9A020000 		.4byte	.LASF46
+ 6685 0420 58030000 		.4byte	.LASF46
  6686 0424 01       		.byte	0x1
  6687 0425 B603     		.2byte	0x3b6
  6688 0427 01       		.byte	0x1
@@ -8338,7 +8338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6714 0462 01       		.byte	0x1
  6715 0463 54       		.byte	0x54
  6716 0464 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 140
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 140
 
 
  6717 0465 0B       		.uleb128 0xb
@@ -8360,7 +8360,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6733 048c 91       		.byte	0x91
  6734 048d 6C       		.sleb128 -20
  6735 048e 0C       		.uleb128 0xc
- 6736 048f 57030000 		.4byte	.LASF49
+ 6736 048f 72030000 		.4byte	.LASF49
  6737 0493 01       		.byte	0x1
  6738 0494 D603     		.2byte	0x3d6
  6739 0496 BC040000 		.4byte	0x4bc
@@ -8368,7 +8368,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6741 049b 91       		.byte	0x91
  6742 049c 68       		.sleb128 -24
  6743 049d 0C       		.uleb128 0xc
- 6744 049e AE020000 		.4byte	.LASF50
+ 6744 049e A5020000 		.4byte	.LASF50
  6745 04a2 01       		.byte	0x1
  6746 04a3 D603     		.2byte	0x3d6
  6747 04a5 BC040000 		.4byte	0x4bc
@@ -8398,7 +8398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6771 04d4 A2030000 		.4byte	.LLST18
  6772 04d8 5B050000 		.4byte	0x55b
  6773 04dc 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 141
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 141
 
 
  6774 04dd 0E020000 		.4byte	.LASF43
@@ -8409,7 +8409,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6779 04e9 91       		.byte	0x91
  6780 04ea 6C       		.sleb128 -20
  6781 04eb 0C       		.uleb128 0xc
- 6782 04ec B8020000 		.4byte	.LASF53
+ 6782 04ec AF020000 		.4byte	.LASF53
  6783 04f0 01       		.byte	0x1
  6784 04f1 FA03     		.2byte	0x3fa
  6785 04f3 62010000 		.4byte	0x162
@@ -8417,7 +8417,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6787 04f8 91       		.byte	0x91
  6788 04f9 68       		.sleb128 -24
  6789 04fa 0C       		.uleb128 0xc
- 6790 04fb 57030000 		.4byte	.LASF49
+ 6790 04fb 72030000 		.4byte	.LASF49
  6791 04ff 01       		.byte	0x1
  6792 0500 FA03     		.2byte	0x3fa
  6793 0502 BC040000 		.4byte	0x4bc
@@ -8425,7 +8425,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6795 0507 91       		.byte	0x91
  6796 0508 64       		.sleb128 -28
  6797 0509 0C       		.uleb128 0xc
- 6798 050a C9020000 		.4byte	.LASF54
+ 6798 050a 19030000 		.4byte	.LASF54
  6799 050e 01       		.byte	0x1
  6800 050f FB03     		.2byte	0x3fb
  6801 0511 BC040000 		.4byte	0x4bc
@@ -8433,7 +8433,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6803 0516 91       		.byte	0x91
  6804 0517 60       		.sleb128 -32
  6805 0518 0C       		.uleb128 0xc
- 6806 0519 AE020000 		.4byte	.LASF50
+ 6806 0519 A5020000 		.4byte	.LASF50
  6807 051d 01       		.byte	0x1
  6808 051e FB03     		.2byte	0x3fb
  6809 0520 BC040000 		.4byte	0x4bc
@@ -8458,7 +8458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6828 0540 74       		.sleb128 -12
  6829 0541 12       		.uleb128 0x12
  6830 0542 82000000 		.4byte	.LBB2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 142
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 142
 
 
  6831 0546 40010000 		.4byte	.LBE2
@@ -8483,7 +8483,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6850 056d D9030000 		.4byte	.LLST19
  6851 0571 94050000 		.4byte	0x594
  6852 0575 0C       		.uleb128 0xc
- 6853 0576 B8020000 		.4byte	.LASF53
+ 6853 0576 AF020000 		.4byte	.LASF53
  6854 057a 01       		.byte	0x1
  6855 057b 3E04     		.2byte	0x43e
  6856 057d 62010000 		.4byte	0x162
@@ -8510,7 +8510,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6877 05a6 10040000 		.4byte	.LLST20
  6878 05aa 07060000 		.4byte	0x607
  6879 05ae 0C       		.uleb128 0xc
- 6880 05af B8020000 		.4byte	.LASF53
+ 6880 05af AF020000 		.4byte	.LASF53
  6881 05b3 01       		.byte	0x1
  6882 05b4 5704     		.2byte	0x457
  6883 05b6 62010000 		.4byte	0x162
@@ -8518,10 +8518,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6885 05bb 91       		.byte	0x91
  6886 05bc 6C       		.sleb128 -20
  6887 05bd 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 143
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 143
 
 
- 6888 05be 57030000 		.4byte	.LASF49
+ 6888 05be 72030000 		.4byte	.LASF49
  6889 05c2 01       		.byte	0x1
  6890 05c3 5704     		.2byte	0x457
  6891 05c5 BC040000 		.4byte	0x4bc
@@ -8563,7 +8563,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6927 0606 00       		.byte	0x0
  6928 0607 0A       		.uleb128 0xa
  6929 0608 01       		.byte	0x1
- 6930 0609 46030000 		.4byte	.LASF60
+ 6930 0609 61030000 		.4byte	.LASF60
  6931 060d 01       		.byte	0x1
  6932 060e 7F04     		.2byte	0x47f
  6933 0610 01       		.byte	0x1
@@ -8578,7 +8578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6942 0626 01       		.byte	0x1
  6943 0627 00000000 		.4byte	.LFB51
  6944 062b 92000000 		.4byte	.LFE51
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 144
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 144
 
 
  6945 062f 7E040000 		.4byte	.LLST22
@@ -8609,7 +8609,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6970 0663 77       		.sleb128 -9
  6971 0664 00       		.byte	0x0
  6972 0665 13       		.uleb128 0x13
- 6973 0666 FB020000 		.4byte	.LASF63
+ 6973 0666 4B030000 		.4byte	.LASF63
  6974 066a 03       		.byte	0x3
  6975 066b CE06     		.2byte	0x6ce
  6976 066d 73060000 		.4byte	0x673
@@ -8638,7 +8638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  6999 069f A5000000 		.4byte	0xa5
  7000 06a3 3F       		.byte	0x3f
  7001 06a4 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 145
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 145
 
 
  7002 06a5 15       		.uleb128 0x15
@@ -8649,7 +8649,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7007 06b0 01       		.byte	0x1
  7008 06b1 01       		.byte	0x1
  7009 06b2 16       		.uleb128 0x16
- 7010 06b3 57030000 		.4byte	.LASF49
+ 7010 06b3 72030000 		.4byte	.LASF49
  7011 06b7 01       		.byte	0x1
  7012 06b8 5C       		.byte	0x5c
  7013 06b9 85000000 		.4byte	0x85
@@ -8658,7 +8658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7016 06bf 03       		.byte	0x3
  7017 06c0 00000000 		.4byte	bufOutOffset
  7018 06c4 16       		.uleb128 0x16
- 7019 06c5 C9020000 		.4byte	.LASF54
+ 7019 06c5 19030000 		.4byte	.LASF54
  7020 06c9 01       		.byte	0x1
  7021 06ca 5D       		.byte	0x5d
  7022 06cb 85000000 		.4byte	0x85
@@ -8667,7 +8667,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7025 06d1 03       		.byte	0x3
  7026 06d2 00000000 		.4byte	bufInOffset
  7027 06d6 16       		.uleb128 0x16
- 7028 06d7 AE020000 		.4byte	.LASF50
+ 7028 06d7 A5020000 		.4byte	.LASF50
  7029 06db 01       		.byte	0x1
  7030 06dc 5E       		.byte	0x5e
  7031 06dd 85000000 		.4byte	0x85
@@ -8698,11 +8698,11 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7056 0714 A5000000 		.4byte	0xa5
  7057 0718 7F01     		.2byte	0x17f
  7058 071a 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 146
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 146
 
 
  7059 071b 16       		.uleb128 0x16
- 7060 071c B8020000 		.4byte	.LASF53
+ 7060 071c AF020000 		.4byte	.LASF53
  7061 0720 01       		.byte	0x1
  7062 0721 5B       		.byte	0x5b
  7063 0722 0A070000 		.4byte	0x70a
@@ -8738,7 +8738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7093 075e 03       		.byte	0x3
  7094 075f 00000000 		.4byte	gbData
  7095 0763 16       		.uleb128 0x16
- 7096 0764 BE020000 		.4byte	.LASF69
+ 7096 0764 0E030000 		.4byte	.LASF69
  7097 0768 01       		.byte	0x1
  7098 0769 66       		.byte	0x66
  7099 076a 6F000000 		.4byte	0x6f
@@ -8758,7 +8758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7113 0787 16       		.uleb128 0x16
  7114 0788 30010000 		.4byte	.LASF71
  7115 078c 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 147
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 147
 
 
  7116 078d 69       		.byte	0x69
@@ -8818,7 +8818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7170 0013 00       		.byte	0x0
  7171 0014 00       		.byte	0x0
  7172 0015 02       		.uleb128 0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 148
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 148
 
 
  7173 0016 24       		.uleb128 0x24
@@ -8878,7 +8878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7227 004c 00       		.byte	0x0
  7228 004d 49       		.uleb128 0x49
  7229 004e 13       		.uleb128 0x13
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 149
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 149
 
 
  7230 004f 2F       		.uleb128 0x2f
@@ -8938,7 +8938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7284 0085 0C       		.uleb128 0xc
  7285 0086 11       		.uleb128 0x11
  7286 0087 01       		.uleb128 0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 150
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 150
 
 
  7287 0088 12       		.uleb128 0x12
@@ -8998,7 +8998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7341 00be 2E       		.uleb128 0x2e
  7342 00bf 01       		.byte	0x1
  7343 00c0 3F       		.uleb128 0x3f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 151
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 151
 
 
  7344 00c1 0C       		.uleb128 0xc
@@ -9058,7 +9058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7398 00f7 01       		.uleb128 0x1
  7399 00f8 40       		.uleb128 0x40
  7400 00f9 06       		.uleb128 0x6
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 152
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 152
 
 
  7401 00fa 00       		.byte	0x0
@@ -9118,7 +9118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7455 0130 0E       		.uleb128 0xe
  7456 0131 3A       		.uleb128 0x3a
  7457 0132 0B       		.uleb128 0xb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 153
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 153
 
 
  7458 0133 3B       		.uleb128 0x3b
@@ -9178,7 +9178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7507      75744865 
  7507      61646572 
  7507      5365676D 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 154
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 154
 
 
  7507      656E7400 
@@ -9238,7 +9238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7529      746100
  7530 0119 CA030000 		.4byte	0x3ca
  7531 011d 52656164 		.ascii	"ReadSWD\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 155
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 155
 
 
  7531      53574400 
@@ -9298,7 +9298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7554 01e2 1B070000 		.4byte	0x71b
  7555 01e6 62756649 		.ascii	"bufIn\000"
  7555      6E00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 156
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 156
 
 
  7556 01ec 2D070000 		.4byte	0x72d
@@ -9358,7 +9358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7597 0048 00000000 		.4byte	.LFB36
  7598 004c EC000000 		.4byte	.LFE36-.LFB36
  7599 0050 00000000 		.4byte	.LFB37
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 157
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 157
 
 
  7600 0054 B0010000 		.4byte	.LFE37-.LFB37
@@ -9418,7 +9418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7654 0054 A8010000 		.4byte	.LFE38
  7655 0058 00000000 		.4byte	.LFB39
  7656 005c F8090000 		.4byte	.LFE39
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 158
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 158
 
 
  7657 0060 00000000 		.4byte	.LFB40
@@ -9478,7 +9478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7699 003e 61636B31 		.ascii	"ack1\000"
  7699      00
  7700              	.LASF74:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 159
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 159
 
 
  7701 0043 61636B32 		.ascii	"ack2\000"
@@ -9538,7 +9538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7727      746500
  7728              	.LASF6:
  7729 00d0 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 160
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 160
 
 
  7729      206C6F6E 
@@ -9598,7 +9598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7755      7400
  7756              	.LASF0:
  7757 0166 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 161
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 161
 
 
  7757      65642063 
@@ -9658,7 +9658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7781      75707473 
  7781      00
  7782              	.LASF43:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 162
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 162
 
 
  7783 020e 6275664F 		.ascii	"bufOut\000"
@@ -9714,82 +9714,82 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 1
  7808              	.LASF24:
  7809 0294 636F756E 		.ascii	"count\000"
  7809      7400
- 7810              	.LASF46:
- 7811 029a 57726974 		.ascii	"WriteSWD\000"
- 7811      65535744 
- 7811      00
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 163
+ 7810              	.LASF41:
+ 7811 029a 53574447 		.ascii	"SWDGetData\000"
+ 7811      65744461 
+ 7811      746100
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 163
 
 
- 7812              	.LASF41:
- 7813 02a3 53574447 		.ascii	"SWDGetData\000"
- 7813      65744461 
- 7813      746100
- 7814              	.LASF50:
- 7815 02ae 6275664F 		.ascii	"bufOutLen\000"
- 7815      75744C65 
+ 7812              	.LASF50:
+ 7813 02a5 6275664F 		.ascii	"bufOutLen\000"
+ 7813      75744C65 
+ 7813      6E00
+ 7814              	.LASF53:
+ 7815 02af 62756649 		.ascii	"bufIn\000"
  7815      6E00
- 7816              	.LASF53:
- 7817 02b8 62756649 		.ascii	"bufIn\000"
- 7817      6E00
- 7818              	.LASF69:
- 7819 02be 67625374 		.ascii	"gbStatsReg\000"
- 7819      61747352 
- 7819      656700
- 7820              	.LASF54:
- 7821 02c9 62756649 		.ascii	"bufInOffset\000"
- 7821      6E4F6666 
- 7821      73657400 
- 7822              	.LASF17:
- 7823 02d5 53574450 		.ascii	"SWDPutHeaderSegment\000"
- 7823      75744865 
- 7823      61646572 
- 7823      5365676D 
- 7823      656E7400 
- 7824              	.LASF9:
- 7825 02e9 75696E74 		.ascii	"uint8\000"
- 7825      3800
- 7826              	.LASF75:
- 7827 02ef 474E5520 		.ascii	"GNU C 4.4.1\000"
- 7827      4320342E 
- 7827      342E3100 
- 7828              	.LASF63:
- 7829 02fb 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 7829      52784275 
- 7829      66666572 
- 7829      00
- 7830              	.LASF77:
- 7831 0308 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 7831      665C486F 
- 7831      6D655C44 
- 7831      65736B74 
- 7831      6F705C4B 
- 7832 0335 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
- 7832      69745072 
- 7832      6F672E63 
- 7832      7964736E 
+ 7816              	.LASF77:
+ 7817 02b5 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 7817      665C486F 
+ 7817      6D655C44 
+ 7817      65736B74 
+ 7817      6F705C55 
+ 7818 02e2 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg.cydsn\000"
+ 7818      50726F67 
+ 7818      20766572 
+ 7818      73696F6E 
+ 7818      20325F30 
+ 7819              	.LASF69:
+ 7820 030e 67625374 		.ascii	"gbStatsReg\000"
+ 7820      61747352 
+ 7820      656700
+ 7821              	.LASF54:
+ 7822 0319 62756649 		.ascii	"bufInOffset\000"
+ 7822      6E4F6666 
+ 7822      73657400 
+ 7823              	.LASF17:
+ 7824 0325 53574450 		.ascii	"SWDPutHeaderSegment\000"
+ 7824      75744865 
+ 7824      61646572 
+ 7824      5365676D 
+ 7824      656E7400 
+ 7825              	.LASF9:
+ 7826 0339 75696E74 		.ascii	"uint8\000"
+ 7826      3800
+ 7827              	.LASF75:
+ 7828 033f 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 7828      4320342E 
+ 7828      342E3100 
+ 7829              	.LASF63:
+ 7830 034b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 7830      52784275 
+ 7830      66666572 
+ 7830      00
+ 7831              	.LASF46:
+ 7832 0358 57726974 		.ascii	"WriteSWD\000"
+ 7832      65535744 
  7832      00
  7833              	.LASF60:
- 7834 0346 48616E64 		.ascii	"HandleSWDRequest\000"
+ 7834 0361 48616E64 		.ascii	"HandleSWDRequest\000"
  7834      6C655357 
  7834      44526571 
  7834      75657374 
  7834      00
  7835              	.LASF49:
- 7836 0357 6275664F 		.ascii	"bufOutOffset\000"
+ 7836 0372 6275664F 		.ascii	"bufOutOffset\000"
  7836      75744F66 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEhuacP.s 			page 164
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYSc5Fc.s 			page 164
 
 
  7836      66736574 
  7836      00
  7837              	.LASF37:
- 7838 0364 74696D65 		.ascii	"timeout\000"
+ 7838 037f 74696D65 		.ascii	"timeout\000"
  7838      6F757400 
  7839              	.LASF40:
- 7840 036c 62506172 		.ascii	"bParity\000"
+ 7840 0387 62506172 		.ascii	"bParity\000"
  7840      69747900 
  7841              	.LASF35:
- 7842 0374 62526574 		.ascii	"bRet\000"
+ 7842 038f 62526574 		.ascii	"bRet\000"
  7842      00
  7843              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

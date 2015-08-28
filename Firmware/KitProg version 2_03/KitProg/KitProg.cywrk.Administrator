@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="KitProg\KitProg_Bootloader">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="KitProg\KitProg">
 <ExpandedNodeIds>
 <v>KitProg</v>
 <v>KitProg\KitProg</v>
@@ -77,13 +77,6 @@
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_AMux.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_Ext_CP_Clk.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_INT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_PM.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_theACLK.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\AMux.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Bootloadable.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Clock_I2C.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Clock_UART.lst</v>
@@ -120,7 +113,6 @@
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_StatusLED.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_UART_Rx.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_UART_Tx.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_VTarget.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\power.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\swd.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\SWDCLK.lst</v>
@@ -158,13 +150,6 @@
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\KitProg.map</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target_AMux.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target_Ext_CP_Clk.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target_INT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target_PM.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\ADC_Voltage_Target_theACLK.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\AMux.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Bootloadable.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Clock_I2C.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Clock_UART.lst</v>
@@ -201,7 +186,6 @@
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Pin_StatusLED.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Pin_UART_Rx.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Pin_UART_Tx.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\Pin_VTarget.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\power.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\swd.lst</v>
 <v>KitProg\KitProg\CortexM3\ARM_GCC_441\Release\Listing Files\SWDCLK.lst</v>
@@ -322,64 +306,6 @@
 <VisibleNodeIds>
 <v>KitProg</v>
 <v>KitProg\KitProg</v>
-<v>KitProg\KitProg\CortexM3</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_AMux.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_Ext_CP_Clk.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_INT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_PM.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\ADC_Voltage_Target_theACLK.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\AMux.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Bootloadable.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Clock_I2C.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Clock_UART.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Clock_UsbSuspend.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Cm3Start.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\commandprocessor.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\core_cm3.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\CyDmac.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\CyFlash.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\CyLib.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\cyPm.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\CySpc.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\cyutils.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW_BOOT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW_INT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW_MASTER.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW_PM.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\I2CHW_SLAVE.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\isr_UsbSuspend.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\main.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionA.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionB.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionC.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionD.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionE.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_HWVersionF.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_I2C_SCL.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_I2C_SDA.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_SCLPullUp_Enable.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_SDAPullUp_Enable.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_StatusLED.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_UART_Rx.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_UART_Tx.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Pin_VTarget.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\power.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\swd.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\SWDCLK.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\SWDIO.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\SWDXRES.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Timer_UsbSuspend.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\Timer_UsbSuspend_PM.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\UART_Bridge.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\UART_Bridge_BOOT.lst</v>
-<v>KitProg\KitProg\CortexM3\ARM_GCC_441\Debug\Listing Files\UART_Bridge_INT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -387,21 +313,18 @@
 <v>Datasheet</v>
 </TreeKeysV2>
 <TreeStatesV2>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="KitProg\KitProg_Bootloader">
 <ExpandedNodeIds>
 <v>KitProg</v>
 <v>KitProg\KitProg</v>
 <v>KitProg\KitProg\PSoC 5 Architecture TRM</v>
 <v>KitProg\KitProg\CY8C56LP Family Datasheet</v>
 <v>KitProg\KitProg\System Reference Guide v3_40</v>
-<v>KitProg\KitProg\ADC_DelSig_v2_30</v>
-<v>KitProg\KitProg\AMux_v1_70</v>
 <v>KitProg\KitProg\Bootloadable_v1_10</v>
 <v>KitProg\KitProg\cy_bufoe_v1_10</v>
 <v>KitProg\KitProg\cy_clock_v2_0</v>
 <v>KitProg\KitProg\cy_isr_v1_70</v>
 <v>KitProg\KitProg\cy_pins_v1_90</v>
-<v>KitProg\KitProg\cy_vref_v1_60</v>
 <v>KitProg\KitProg\I2C_v3_30</v>
 <v>KitProg\KitProg\OneTerminal</v>
 <v>KitProg\KitProg\Timer_v2_50</v>
@@ -425,14 +348,11 @@
 <v>KitProg\KitProg\PSoC 5 Architecture TRM</v>
 <v>KitProg\KitProg\CY8C56LP Family Datasheet</v>
 <v>KitProg\KitProg\System Reference Guide v3_40</v>
-<v>KitProg\KitProg\ADC_DelSig_v2_30</v>
-<v>KitProg\KitProg\AMux_v1_70</v>
 <v>KitProg\KitProg\Bootloadable_v1_10</v>
 <v>KitProg\KitProg\cy_bufoe_v1_10</v>
 <v>KitProg\KitProg\cy_clock_v2_0</v>
 <v>KitProg\KitProg\cy_isr_v1_70</v>
 <v>KitProg\KitProg\cy_pins_v1_90</v>
-<v>KitProg\KitProg\cy_vref_v1_60</v>
 <v>KitProg\KitProg\I2C_v3_30</v>
 <v>KitProg\KitProg\OneTerminal</v>
 <v>KitProg\KitProg\Timer_v2_50</v>
@@ -465,7 +385,8 @@
 <name v=".\KitProg.cydsn\version.h" />
 <name v=".\KitProg.cydsn\commandprocessor.c" />
 <name v=".\KitProg.cydsn\main.c" />
+<name v=".\KitProg.cydsn\power.c" />
 </OpenDocs>
-<config v="Release" />
+<config v="Debug" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
 </CyXmlSerializer>

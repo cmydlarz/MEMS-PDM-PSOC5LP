@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
   14:.\Generated_Source\PSoC5/USBFS.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
   15:.\Generated_Source\PSoC5/USBFS.c **** * You may use this file only in accordance with the license, terms, conditions,
   16:.\Generated_Source\PSoC5/USBFS.c **** * disclaimers, and limitations in the end user license agreement accompanying
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 2
 
 
   17:.\Generated_Source\PSoC5/USBFS.c **** * the software package with which this file was provided.
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
   71:.\Generated_Source\PSoC5/USBFS.c **** /***************************************
   72:.\Generated_Source\PSoC5/USBFS.c **** * External function references
   73:.\Generated_Source\PSoC5/USBFS.c **** ***************************************/
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 3
 
 
   74:.\Generated_Source\PSoC5/USBFS.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  128:.\Generated_Source\PSoC5/USBFS.c **** * Parameters:
  129:.\Generated_Source\PSoC5/USBFS.c **** *  device: Contains the device number of the desired device descriptor.
  130:.\Generated_Source\PSoC5/USBFS.c **** *          The device number can be found in the Device Descriptor Tab of 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 4
 
 
  131:.\Generated_Source\PSoC5/USBFS.c **** *          "Configure" dialog, under the settings of desired Device Descriptor,
@@ -238,7 +238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
   56 000c BB71     		strb	r3, [r7, #6]
  167:.\Generated_Source\PSoC5/USBFS.c ****     /* If not Initialized then initialize all required hardware and software */
  168:.\Generated_Source\PSoC5/USBFS.c ****     if(USBFS_initVar == 0u)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 5
 
 
   57              		.loc 1 168 0
@@ -298,7 +298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  188:.\Generated_Source\PSoC5/USBFS.c **** *  None.
  189:.\Generated_Source\PSoC5/USBFS.c **** *
  190:.\Generated_Source\PSoC5/USBFS.c **** * Reentrant:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 6
 
 
  191:.\Generated_Source\PSoC5/USBFS.c **** *  No.
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  130 0044 1A70     		strb	r2, [r3, #0]
  207:.\Generated_Source\PSoC5/USBFS.c **** 
  208:.\Generated_Source\PSoC5/USBFS.c ****     #if(CY_PSOC5A)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 7
 
 
  209:.\Generated_Source\PSoC5/USBFS.c ****         /* Disable USBIO for TO3 */
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  159 0096 D2B2     		uxtb	r2, r2
  160 0098 02F0F902 		and	r2, r2, #249
  161 009c 1A70     		strb	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 8
 
 
  235:.\Generated_Source\PSoC5/USBFS.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  203 0112 02F0BF02 		and	r2, r2, #191
  204 0116 1A70     		strb	r2, [r3, #0]
  248:.\Generated_Source\PSoC5/USBFS.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 9
 
 
  249:.\Generated_Source\PSoC5/USBFS.c ****         /* Enable USBIO */
@@ -538,7 +538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  238              		.loc 1 269 0
  239 0174 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  240 0176 1846     		mov	r0, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 10
 
 
  241 0178 FFF7FEFF 		bl	CyExitCriticalSection
@@ -598,7 +598,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  275 01e0 4FF00000 		mov	r0, #0
  276 01e4 4FF00701 		mov	r1, #7
  277 01e8 FFF7FEFF 		bl	CyIntSetPriority
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 11
 
 
  290:.\Generated_Source\PSoC5/USBFS.c ****     #endif   /* End USBFS_EP1_ISR_REMOVE */
@@ -658,7 +658,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  335:.\Generated_Source\PSoC5/USBFS.c ****         /* Set the ARB Interrupt. */
  336:.\Generated_Source\PSoC5/USBFS.c ****         CyIntSetVector(USBFS_ARB_VECT_NUM,   USBFS_ARB_ISR);
  337:.\Generated_Source\PSoC5/USBFS.c ****         CyIntSetPriority(USBFS_ARB_VECT_NUM, USBFS_ARB_PRIOR);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 12
 
 
  338:.\Generated_Source\PSoC5/USBFS.c ****     #endif   /* End USBFS_EP_MM != USBFS__EP_MANUAL */
@@ -718,7 +718,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  377:.\Generated_Source\PSoC5/USBFS.c **** *       TRANS_STATE_IDLE in this API.
  378:.\Generated_Source\PSoC5/USBFS.c **** *   USBFS_configuration: Contains current configuration number
  379:.\Generated_Source\PSoC5/USBFS.c **** *       which is set by the Host using SET_CONFIGURATION request.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 13
 
 
  380:.\Generated_Source\PSoC5/USBFS.c **** *       Initialized to zero in this API.
@@ -778,7 +778,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  329 001c C0F20003 		movt	r3, #:upper16:USBFS_hidProtocol
  330 0020 4FF00101 		mov	r1, #1
  331 0024 9954     		strb	r1, [r3, r2]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 14
 
 
  332              		.loc 1 404 0
@@ -838,7 +838,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  433:.\Generated_Source\PSoC5/USBFS.c ****     #endif   /* End USBFS_EP7_ISR_REMOVE */
  434:.\Generated_Source\PSoC5/USBFS.c ****     #if(USBFS_EP8_ISR_REMOVE == 0u)
  435:.\Generated_Source\PSoC5/USBFS.c ****         CyIntEnable(USBFS_EP_8_VECT_NUM);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 15
 
 
  436:.\Generated_Source\PSoC5/USBFS.c ****     #endif   /* End USBFS_EP8_ISR_REMOVE */
@@ -898,7 +898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  385 00a2 1A70     		strb	r2, [r3, #0]
  465:.\Generated_Source\PSoC5/USBFS.c ****             break;
  386              		.loc 1 465 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 16
 
 
  387 00a4 06E0     		b	.L12
@@ -958,7 +958,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  423 0100 4FF00002 		mov	r2, #0
  424 0104 1A70     		strb	r2, [r3, #0]
  484:.\Generated_Source\PSoC5/USBFS.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 17
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 17
 
 
  485:.\Generated_Source\PSoC5/USBFS.c ****     USBFS_lastPacketSize = 0u;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  501:.\Generated_Source\PSoC5/USBFS.c **** /*******************************************************************************
  502:.\Generated_Source\PSoC5/USBFS.c **** * Function Name: USBFS_ReInitComponent
  503:.\Generated_Source\PSoC5/USBFS.c **** ********************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 18
 
 
  504:.\Generated_Source\PSoC5/USBFS.c **** *
@@ -1078,7 +1078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  543:.\Generated_Source\PSoC5/USBFS.c ****     *  Request: "When initialized, all devices default to report protocol."
  544:.\Generated_Source\PSoC5/USBFS.c ****     */
  545:.\Generated_Source\PSoC5/USBFS.c ****     #if defined(USBFS_ENABLE_HID_CLASS)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 19
 
 
  546:.\Generated_Source\PSoC5/USBFS.c ****         uint8 interface;
@@ -1138,7 +1138,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  517              		.loc 1 560 0
  518 0064 40F20003 		movw	r3, #:lower16:USBFS_deviceAddress
  519 0068 C0F20003 		movt	r3, #:upper16:USBFS_deviceAddress
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 20
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 20
 
 
  520 006c 4FF00002 		mov	r2, #0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  577:.\Generated_Source\PSoC5/USBFS.c **** ********************************************************************************
  578:.\Generated_Source\PSoC5/USBFS.c **** *
  579:.\Generated_Source\PSoC5/USBFS.c **** * Summary:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 21
 
 
  580:.\Generated_Source\PSoC5/USBFS.c **** *  This function shuts down the USB function including to release
@@ -1258,7 +1258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  577 0018 02F07F02 		and	r2, r2, #127
  578 001c 1A70     		strb	r2, [r3, #0]
  615:.\Generated_Source\PSoC5/USBFS.c ****     /* Disable the d+ pullup */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 22
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 22
 
 
  616:.\Generated_Source\PSoC5/USBFS.c ****     USBFS_USBIO_CR1_REG &= ~USBFS_USBIO_CR1_USBPUEN;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  618 008c CEF20003 		movt	r3, #:upper16:-536813184
  619 0090 4FF00102 		mov	r2, #1
  620 0094 1A60     		str	r2, [r3, #0]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 23
 
 
  631:.\Generated_Source\PSoC5/USBFS.c ****     #endif   /* End USBFS_EP1_ISR_REMOVE */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  646              		.loc 1 659 0
  647 00dc 40F20003 		movw	r3, #:lower16:USBFS_deviceStatus
  648 00e0 C0F20003 		movt	r3, #:upper16:USBFS_deviceStatus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 24
 
 
  649 00e4 4FF00002 		mov	r2, #0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  680              	.LCFI15:
  681              		.cfi_def_cfa_offset 16
  682 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 25
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 25
 
 
  683              		.cfi_offset 7, -4
@@ -1498,7 +1498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  701:.\Generated_Source\PSoC5/USBFS.c **** *
  702:.\Generated_Source\PSoC5/USBFS.c **** * Return:
  703:.\Generated_Source\PSoC5/USBFS.c **** *  configuration.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 26
 
 
  704:.\Generated_Source\PSoC5/USBFS.c **** *
@@ -1558,7 +1558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  725:.\Generated_Source\PSoC5/USBFS.c **** *  returned.
  726:.\Generated_Source\PSoC5/USBFS.c **** *
  727:.\Generated_Source\PSoC5/USBFS.c **** * Global variables:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 27
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 27
 
 
  728:.\Generated_Source\PSoC5/USBFS.c **** *   USBFS_configurationChanged: This variable is set to one after
@@ -1618,7 +1618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  790              		.loc 1 743 0
  791 0038 1846     		mov	r0, r3
  792 003a 07F10C07 		add	r7, r7, #12
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 28
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 28
 
 
  793 003e BD46     		mov	sp, r7
@@ -1678,7 +1678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  827 0010 C0F20003 		movt	r3, #:upper16:USBFS_interfaceSetting
  828 0014 9B5C     		ldrb	r3, [r3, r2]
  829 0016 DBB2     		uxtb	r3, r3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 29
 
 
  764:.\Generated_Source\PSoC5/USBFS.c **** }
@@ -1738,7 +1738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  864              		.loc 1 783 0
  865 000a F979     		ldrb	r1, [r7, #7]	@ zero_extendqisi2
  866 000c 40F20002 		movw	r2, #:lower16:USBFS_EP
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 30
 
 
  867 0010 C0F20002 		movt	r2, #:upper16:USBFS_EP
@@ -1798,7 +1798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  897 0000 80B4     		push	{r7}
  898              	.LCFI28:
  899              		.cfi_def_cfa_offset 4
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 31
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 31
 
 
  900 0002 85B0     		sub	sp, sp, #20
@@ -1858,7 +1858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  945 005a A3F10203 		sub	r3, r3, #2
  946 005e FB81     		strh	r3, [r7, #14]	@ movhi
  947              	.L33:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 32
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 32
 
 
  817:.\Generated_Source\PSoC5/USBFS.c ****                          - USBFS_EPX_CNTX_CRC_COUNT;
@@ -1918,7 +1918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  852:.\Generated_Source\PSoC5/USBFS.c ****             pData = pData;
  853:.\Generated_Source\PSoC5/USBFS.c ****         #else                           /* PSoC 5 */
  854:.\Generated_Source\PSoC5/USBFS.c ****             if((USBFS_EP[epNumber].addr & USBFS_DIR_IN) != 0u )
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 33
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 33
 
 
  855:.\Generated_Source\PSoC5/USBFS.c ****             {   /* for the IN EP source is the flash memory buffer */
@@ -1978,7 +1978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  909:.\Generated_Source\PSoC5/USBFS.c ****             case USBFS_EP8:
  910:.\Generated_Source\PSoC5/USBFS.c ****                 #if(USBFS_DMA8_REMOVE == 0u)
  911:.\Generated_Source\PSoC5/USBFS.c ****                     USBFS_DmaChan[epNumber] = USBFS_ep8_DmaInitialize(
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 34
 
 
  912:.\Generated_Source\PSoC5/USBFS.c ****                         USBFS_DMA_BYTES_PER_BURST, USBFS_DMA_REQUEST_PER_BURST, src, dst);
@@ -2038,7 +2038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  966:.\Generated_Source\PSoC5/USBFS.c **** * Summary:
  967:.\Generated_Source\PSoC5/USBFS.c **** *  Loads and enables the specified USB data endpoint for an IN interrupt or bulk
  968:.\Generated_Source\PSoC5/USBFS.c **** *  transfer.
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 35
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 35
 
 
  969:.\Generated_Source\PSoC5/USBFS.c **** *
@@ -2098,7 +2098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  996:.\Generated_Source\PSoC5/USBFS.c ****         ri = ((epNumber - USBFS_EP1) << USBFS_EPX_CNTX_ADDR_SHIFT);
  994              		.loc 1 996 0
  995 0020 FB7B     		ldrb	r3, [r7, #15]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 36
 
 
  996 0022 03F1FF33 		add	r3, r3, #-1
@@ -2158,7 +2158,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1038 008c FA7D     		ldrb	r2, [r7, #23]	@ zero_extendqisi2
  1039 008e 46F20C03 		movw	r3, #:lower16:1073766412
  1040 0092 C4F20003 		movt	r3, #:upper16:1073766412
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 37
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 37
 
 
  1041 0096 1344     		add	r3, r2, r3
@@ -2218,7 +2218,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1086 00fa FB83     		strh	r3, [r7, #30]	@ movhi
  1087              	.L39:
  1088 00fc FA8B     		ldrh	r2, [r7, #30]
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 38
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 38
 
 
  1089 00fe FB88     		ldrh	r3, [r7, #6]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1040:.\Generated_Source\PSoC5/USBFS.c ****                 /* Enable the DMA */
 1041:.\Generated_Source\PSoC5/USBFS.c ****                 CyDmaChSetInitialTd(USBFS_DmaChan[epNumber], USBFS_DmaTd[epNumber]);
 1042:.\Generated_Source\PSoC5/USBFS.c ****                 CyDmaChEnable(USBFS_DmaChan[epNumber], 1);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 39
 
 
 1043:.\Generated_Source\PSoC5/USBFS.c ****                 /* Generate DMA request */
@@ -2338,7 +2338,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1130              		.align	2
  1131              		.global	USBFS_ReadOutEP
  1132              		.thumb
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 40
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 40
 
 
  1133              		.thumb_func
@@ -2398,7 +2398,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1118:.\Generated_Source\PSoC5/USBFS.c ****     uint8 ri;
 1119:.\Generated_Source\PSoC5/USBFS.c ****     uint8 *p;
 1120:.\Generated_Source\PSoC5/USBFS.c ****     #if(USBFS_EP_MM == USBFS__EP_MANUAL)
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 41
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 41
 
 
 1121:.\Generated_Source\PSoC5/USBFS.c ****         uint16 i;
@@ -2458,7 +2458,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1138:.\Generated_Source\PSoC5/USBFS.c ****             }
 1139:.\Generated_Source\PSoC5/USBFS.c ****         #endif /* End USBFS_EP_MM != USBFS__EP_DMAAUTO */
 1140:.\Generated_Source\PSoC5/USBFS.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 42
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 42
 
 
 1141:.\Generated_Source\PSoC5/USBFS.c ****         #if(USBFS_EP_MM == USBFS__EP_MANUAL)
@@ -2518,7 +2518,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1166:.\Generated_Source\PSoC5/USBFS.c ****             CyDmaChEnable(USBFS_DmaChan[epNumber], 1);
 1167:.\Generated_Source\PSoC5/USBFS.c **** 
 1168:.\Generated_Source\PSoC5/USBFS.c ****             /* Generate DMA request */
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 43
 
 
 1169:.\Generated_Source\PSoC5/USBFS.c ****             USBFS_ARB_EP1_CFG_PTR[ri] |= USBFS_ARB_EPX_CFG_DMA_REQ;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1201:.\Generated_Source\PSoC5/USBFS.c **** ********************************************************************************
 1202:.\Generated_Source\PSoC5/USBFS.c **** *
 1203:.\Generated_Source\PSoC5/USBFS.c **** * Summary:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 44
 
 
 1204:.\Generated_Source\PSoC5/USBFS.c **** *  This function enables an OUT endpoint.  It should not be
@@ -2638,7 +2638,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1228:.\Generated_Source\PSoC5/USBFS.c ****         USBFS_EP[epNumber].apiEpState = USBFS_NO_EVENT_PENDING;
  1275              		.loc 1 1228 0
  1276 0024 F979     		ldrb	r1, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 45
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 45
 
 
  1277 0026 40F20002 		movw	r2, #:lower16:USBFS_EP
@@ -2698,7 +2698,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1241:.\Generated_Source\PSoC5/USBFS.c **** *  called for an IN endpoint.
 1242:.\Generated_Source\PSoC5/USBFS.c **** *
 1243:.\Generated_Source\PSoC5/USBFS.c **** * Parameters:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 46
 
 
 1244:.\Generated_Source\PSoC5/USBFS.c **** *  epNumber: Endpoint Number
@@ -2758,7 +2758,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1260:.\Generated_Source\PSoC5/USBFS.c ****     }
 1261:.\Generated_Source\PSoC5/USBFS.c **** }
  1357              		.loc 1 1261 0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 47
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 47
 
 
  1358 0036 07F11407 		add	r7, r7, #20
@@ -2818,7 +2818,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1284:.\Generated_Source\PSoC5/USBFS.c ****     CY_SET_REG8(USBFS_USBIO_CR0_PTR, bState);
  1390              		.loc 1 1284 0
  1391 000a 46F21003 		movw	r3, #:lower16:1073766416
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 48
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 48
 
 
  1392 000e C4F20003 		movt	r3, #:upper16:1073766416
@@ -2878,7 +2878,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1426 0006 0346     		mov	r3, r0
  1427 0008 FB71     		strb	r3, [r7, #7]
 1305:.\Generated_Source\PSoC5/USBFS.c ****     uint8 ri;
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 49
 
 
 1306:.\Generated_Source\PSoC5/USBFS.c ****     uint8 cr = 0;
@@ -2938,7 +2938,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1472              	.LFB17:
 1316:.\Generated_Source\PSoC5/USBFS.c **** 
 1317:.\Generated_Source\PSoC5/USBFS.c **** 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 50
 
 
 1318:.\Generated_Source\PSoC5/USBFS.c **** /*******************************************************************************
@@ -2998,7 +2998,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1500 0020 DAB2     		uxtb	r2, r3
  1501 0022 40F20003 		movw	r3, #:lower16:USBFS_deviceStatus
  1502 0026 C0F20003 		movt	r3, #:upper16:USBFS_deviceStatus
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 51
 
 
  1503 002a 1A70     		strb	r2, [r3, #0]
@@ -3058,7 +3058,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1369:.\Generated_Source\PSoC5/USBFS.c ****     uint8 USBFS_VBusPresent(void) 
 1370:.\Generated_Source\PSoC5/USBFS.c ****     {
 1371:.\Generated_Source\PSoC5/USBFS.c ****         return((CY_GET_REG8(USBFS_VBUS_PS_PTR) & USBFS_VBUS_MASK) ? 1u : 0u);
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 52
 
 
 1372:.\Generated_Source\PSoC5/USBFS.c ****     }
@@ -3118,7 +3118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
 1400:.\Generated_Source\PSoC5/USBFS.c ****         result = USBFS_TRUE;
  1559              		.loc 1 1400 0
  1560 0020 4FF00103 		mov	r3, #1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 53
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 53
 
 
  1561 0024 FB71     		strb	r3, [r7, #7]
@@ -3178,7 +3178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1611 0052 06000000 		.4byte	.LCFI5
  1612 0056 0200     		.2byte	0x2
  1613 0058 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 54
 
 
  1614 0059 10       		.sleb128 16
@@ -3238,7 +3238,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1668 00e0 02000000 		.4byte	.LCFI12
  1669 00e4 0100     		.2byte	0x1
  1670 00e6 5D       		.byte	0x5d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 55
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 55
 
 
  1671 00e7 02000000 		.4byte	.LCFI12
@@ -3298,7 +3298,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1725 0171 0100     		.2byte	0x1
  1726 0173 5D       		.byte	0x5d
  1727 0174 02000000 		.4byte	.LCFI19
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 56
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 56
 
 
  1728 0178 04000000 		.4byte	.LCFI20
@@ -3358,7 +3358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1782 01fe 32000000 		.4byte	.LFE9
  1783 0202 0200     		.2byte	0x2
  1784 0204 77       		.byte	0x77
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 57
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 57
 
 
  1785 0205 10       		.sleb128 16
@@ -3418,7 +3418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1839 028f 0200     		.2byte	0x2
  1840 0291 7D       		.byte	0x7d
  1841 0292 08       		.sleb128 8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 58
 
 
  1842 0293 04000000 		.4byte	.LCFI35
@@ -3478,7 +3478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1896 0319 00000000 		.4byte	0x0
  1897 031d 00000000 		.4byte	0x0
  1898              	.LLST15:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 59
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 59
 
 
  1899 0321 00000000 		.4byte	.LFB15
@@ -3538,7 +3538,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1953 03aa 06000000 		.4byte	.LCFI51
  1954 03ae 0200     		.2byte	0x2
  1955 03b0 7D       		.byte	0x7d
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 60
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 60
 
 
  1956 03b1 10       		.sleb128 16
@@ -3582,7 +3582,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  1994 000c 69000000 		.4byte	.LASF64
  1995 0010 01       		.byte	0x1
  1996 0011 AF000000 		.4byte	.LASF65
- 1997 0015 26020000 		.4byte	.LASF66
+ 1997 0015 CF010000 		.4byte	.LASF66
  1998 0019 00000000 		.4byte	0x0
  1999 001d 00000000 		.4byte	0x0
  2000 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -3594,18 +3594,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2006 0030 02       		.uleb128 0x2
  2007 0031 01       		.byte	0x1
  2008 0032 08       		.byte	0x8
- 2009 0033 B9020000 		.4byte	.LASF1
+ 2009 0033 C7020000 		.4byte	.LASF1
  2010 0037 02       		.uleb128 0x2
  2011 0038 02       		.byte	0x2
  2012 0039 05       		.byte	0x5
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 61
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 61
 
 
- 2013 003a C7020000 		.4byte	.LASF2
+ 2013 003a D5020000 		.4byte	.LASF2
  2014 003e 02       		.uleb128 0x2
  2015 003f 02       		.byte	0x2
  2016 0040 07       		.byte	0x7
- 2017 0041 EE010000 		.4byte	.LASF3
+ 2017 0041 45020000 		.4byte	.LASF3
  2018 0045 02       		.uleb128 0x2
  2019 0046 04       		.byte	0x4
  2020 0047 05       		.byte	0x5
@@ -3613,7 +3613,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2022 004c 02       		.uleb128 0x2
  2023 004d 04       		.byte	0x4
  2024 004e 07       		.byte	0x7
- 2025 004f DC010000 		.4byte	.LASF5
+ 2025 004f 33020000 		.4byte	.LASF5
  2026 0053 02       		.uleb128 0x2
  2027 0054 08       		.byte	0x8
  2028 0055 05       		.byte	0x5
@@ -3629,7 +3629,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2038 0068 02       		.uleb128 0x2
  2039 0069 04       		.byte	0x4
  2040 006a 07       		.byte	0x7
- 2041 006b CF010000 		.4byte	.LASF8
+ 2041 006b 7C030000 		.4byte	.LASF8
  2042 006f 04       		.uleb128 0x4
  2043 0070 68010000 		.4byte	.LASF9
  2044 0074 02       		.byte	0x2
@@ -3643,7 +3643,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2052 0085 02       		.uleb128 0x2
  2053 0086 04       		.byte	0x4
  2054 0087 04       		.byte	0x4
- 2055 0088 8B020000 		.4byte	.LASF11
+ 2055 0088 99020000 		.4byte	.LASF11
  2056 008c 02       		.uleb128 0x2
  2057 008d 08       		.byte	0x8
  2058 008e 04       		.byte	0x4
@@ -3651,23 +3651,23 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2060 0093 02       		.uleb128 0x2
  2061 0094 01       		.byte	0x1
  2062 0095 08       		.byte	0x8
- 2063 0096 59030000 		.4byte	.LASF13
+ 2063 0096 67030000 		.4byte	.LASF13
  2064 009a 05       		.uleb128 0x5
  2065 009b 6F000000 		.4byte	0x6f
  2066 009f 06       		.uleb128 0x6
  2067 00a0 04       		.byte	0x4
  2068 00a1 07       		.byte	0x7
  2069 00a2 07       		.uleb128 0x7
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 62
 
 
- 2070 00a3 85030000 		.4byte	.LASF67
+ 2070 00a3 A0030000 		.4byte	.LASF67
  2071 00a7 0C       		.byte	0xc
  2072 00a8 03       		.byte	0x3
  2073 00a9 7A       		.byte	0x7a
  2074 00aa 2D010000 		.4byte	0x12d
  2075 00ae 08       		.uleb128 0x8
- 2076 00af 79020000 		.4byte	.LASF14
+ 2076 00af 87020000 		.4byte	.LASF14
  2077 00b3 03       		.byte	0x3
  2078 00b4 7B       		.byte	0x7b
  2079 00b5 6F000000 		.4byte	0x6f
@@ -3675,7 +3675,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2081 00ba 23       		.byte	0x23
  2082 00bb 00       		.uleb128 0x0
  2083 00bc 08       		.uleb128 0x8
- 2084 00bd 91020000 		.4byte	.LASF15
+ 2084 00bd 9F020000 		.4byte	.LASF15
  2085 00c1 03       		.byte	0x3
  2086 00c2 7C       		.byte	0x7c
  2087 00c3 6F000000 		.4byte	0x6f
@@ -3683,7 +3683,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2089 00c8 23       		.byte	0x23
  2090 00c9 01       		.uleb128 0x1
  2091 00ca 08       		.uleb128 0x8
- 2092 00cb 6F020000 		.4byte	.LASF16
+ 2092 00cb 7D020000 		.4byte	.LASF16
  2093 00cf 03       		.byte	0x3
  2094 00d0 7D       		.byte	0x7d
  2095 00d1 6F000000 		.4byte	0x6f
@@ -3715,10 +3715,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2121 0100 23       		.byte	0x23
  2122 0101 05       		.uleb128 0x5
  2123 0102 08       		.uleb128 0x8
- 2124 0103 7A030000 		.4byte	.LASF20
+ 2124 0103 95030000 		.4byte	.LASF20
  2125 0107 03       		.byte	0x3
  2126 0108 81       		.byte	0x81
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 63
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 63
 
 
  2127 0109 7A000000 		.4byte	0x7a
@@ -3726,7 +3726,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2129 010e 23       		.byte	0x23
  2130 010f 06       		.uleb128 0x6
  2131 0110 08       		.uleb128 0x8
- 2132 0111 63030000 		.4byte	.LASF21
+ 2132 0111 71030000 		.4byte	.LASF21
  2133 0115 03       		.byte	0x3
  2134 0116 82       		.byte	0x82
  2135 0117 7A000000 		.4byte	0x7a
@@ -3734,7 +3734,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2137 011c 23       		.byte	0x23
  2138 011d 08       		.uleb128 0x8
  2139 011e 08       		.uleb128 0x8
- 2140 011f 01020000 		.4byte	.LASF22
+ 2140 011f 58020000 		.4byte	.LASF22
  2141 0123 03       		.byte	0x3
  2142 0124 83       		.byte	0x83
  2143 0125 6F000000 		.4byte	0x6f
@@ -3743,13 +3743,13 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2146 012b 0A       		.uleb128 0xa
  2147 012c 00       		.byte	0x0
  2148 012d 04       		.uleb128 0x4
- 2149 012e 29030000 		.4byte	.LASF23
+ 2149 012e 37030000 		.4byte	.LASF23
  2150 0132 03       		.byte	0x3
  2151 0133 84       		.byte	0x84
  2152 0134 A2000000 		.4byte	0xa2
  2153 0138 09       		.uleb128 0x9
  2154 0139 01       		.byte	0x1
- 2155 013a 6E030000 		.4byte	.LASF26
+ 2155 013a 89030000 		.4byte	.LASF26
  2156 013e 01       		.byte	0x1
  2157 013f A5       		.byte	0xa5
  2158 0140 01       		.byte	0x1
@@ -3766,7 +3766,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2169 015d 91       		.byte	0x91
  2170 015e 77       		.sleb128 -9
  2171 015f 0A       		.uleb128 0xa
- 2172 0160 5E030000 		.4byte	.LASF25
+ 2172 0160 6C030000 		.4byte	.LASF25
  2173 0164 01       		.byte	0x1
  2174 0165 A5       		.byte	0xa5
  2175 0166 6F000000 		.4byte	0x6f
@@ -3776,9 +3776,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2179 016d 00       		.byte	0x0
  2180 016e 09       		.uleb128 0x9
  2181 016f 01       		.byte	0x1
- 2182 0170 80020000 		.4byte	.LASF27
+ 2182 0170 8E020000 		.4byte	.LASF27
  2183 0174 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 64
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 64
 
 
  2184 0175 C2       		.byte	0xc2
@@ -3788,7 +3788,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2188 017f 37000000 		.4byte	.LLST1
  2189 0183 96010000 		.4byte	0x196
  2190 0187 0B       		.uleb128 0xb
- 2191 0188 D1030000 		.4byte	.LASF29
+ 2191 0188 EC030000 		.4byte	.LASF29
  2192 018c 01       		.byte	0x1
  2193 018d C4       		.byte	0xc4
  2194 018e 6F000000 		.4byte	0x6f
@@ -3815,7 +3815,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2215 01bd 91       		.byte	0x91
  2216 01be 6F       		.sleb128 -17
  2217 01bf 0D       		.uleb128 0xd
- 2218 01c0 5E030000 		.4byte	.LASF25
+ 2218 01c0 6C030000 		.4byte	.LASF25
  2219 01c4 01       		.byte	0x1
  2220 01c5 8B01     		.2byte	0x18b
  2221 01c7 6F000000 		.4byte	0x6f
@@ -3823,7 +3823,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2223 01cc 91       		.byte	0x91
  2224 01cd 6E       		.sleb128 -18
  2225 01ce 0E       		.uleb128 0xe
- 2226 01cf 01020000 		.4byte	.LASF22
+ 2226 01cf 58020000 		.4byte	.LASF22
  2227 01d3 01       		.byte	0x1
  2228 01d4 9201     		.2byte	0x192
  2229 01d6 6F000000 		.4byte	0x6f
@@ -3833,18 +3833,18 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2233 01dd 00       		.byte	0x0
  2234 01de 0F       		.uleb128 0xf
  2235 01df 01       		.byte	0x1
- 2236 01e0 BB030000 		.4byte	.LASF68
+ 2236 01e0 D6030000 		.4byte	.LASF68
  2237 01e4 01       		.byte	0x1
  2238 01e5 1C02     		.2byte	0x21c
  2239 01e7 00000000 		.4byte	.LFB3
  2240 01eb B4000000 		.4byte	.LFE3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 65
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 65
 
 
  2241 01ef A5000000 		.4byte	.LLST3
  2242 01f3 07020000 		.4byte	0x207
  2243 01f7 0E       		.uleb128 0xe
- 2244 01f8 01020000 		.4byte	.LASF22
+ 2244 01f8 58020000 		.4byte	.LASF22
  2245 01fc 01       		.byte	0x1
  2246 01fd 2202     		.2byte	0x222
  2247 01ff 6F000000 		.4byte	0x6f
@@ -3863,7 +3863,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2260 0219 DC000000 		.4byte	.LLST4
  2261 021d 11       		.uleb128 0x11
  2262 021e 01       		.byte	0x1
- 2263 021f E2030000 		.4byte	.LASF30
+ 2263 021f FD030000 		.4byte	.LASF30
  2264 0223 01       		.byte	0x1
  2265 0224 A902     		.2byte	0x2a9
  2266 0226 01       		.byte	0x1
@@ -3898,7 +3898,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2295 026a DC02     		.2byte	0x2dc
  2296 026c 01       		.byte	0x1
  2297 026d 6F000000 		.4byte	0x6f
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 66
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 66
 
 
  2298 0271 00000000 		.4byte	.LFB7
@@ -3916,7 +3916,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2310 0290 00       		.byte	0x0
  2311 0291 11       		.uleb128 0x11
  2312 0292 01       		.byte	0x1
- 2313 0293 E3020000 		.4byte	.LASF32
+ 2313 0293 F1020000 		.4byte	.LASF32
  2314 0297 01       		.byte	0x1
  2315 0298 F802     		.2byte	0x2f8
  2316 029a 01       		.byte	0x1
@@ -3936,7 +3936,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2330 02be 00       		.byte	0x0
  2331 02bf 11       		.uleb128 0x11
  2332 02c0 01       		.byte	0x1
- 2333 02c1 AA030000 		.4byte	.LASF34
+ 2333 02c1 C5030000 		.4byte	.LASF34
  2334 02c5 01       		.byte	0x1
  2335 02c6 0D03     		.2byte	0x30d
  2336 02c8 01       		.byte	0x1
@@ -3956,9 +3956,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2350 02ec 00       		.byte	0x0
  2351 02ed 11       		.uleb128 0x11
  2352 02ee 01       		.byte	0x1
- 2353 02ef 22040000 		.4byte	.LASF36
+ 2353 02ef 3D040000 		.4byte	.LASF36
  2354 02f3 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 67
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 67
 
 
  2355 02f4 2603     		.2byte	0x326
@@ -3995,7 +3995,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2386 0337 00       		.byte	0x0
  2387 0338 0C       		.uleb128 0xc
  2388 0339 01       		.byte	0x1
- 2389 033a 13040000 		.4byte	.LASF38
+ 2389 033a 2E040000 		.4byte	.LASF38
  2390 033e 01       		.byte	0x1
  2391 033f D903     		.2byte	0x3d9
  2392 0341 01       		.byte	0x1
@@ -4018,12 +4018,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2409 0369 A8030000 		.4byte	0x3a8
  2410 036d 02       		.byte	0x2
  2411 036e 91       		.byte	0x91
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 68
 
 
  2412 036f 60       		.sleb128 -32
  2413 0370 0D       		.uleb128 0xd
- 2414 0371 52030000 		.4byte	.LASF40
+ 2414 0371 60030000 		.4byte	.LASF40
  2415 0375 01       		.byte	0x1
  2416 0376 D903     		.2byte	0x3d9
  2417 0378 7A000000 		.4byte	0x7a
@@ -4078,7 +4078,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2466 03d9 91       		.byte	0x91
  2467 03da 67       		.sleb128 -25
  2468 03db 0D       		.uleb128 0xd
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 69
 
 
  2469 03dc 9E010000 		.4byte	.LASF39
@@ -4089,7 +4089,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2474 03e8 91       		.byte	0x91
  2475 03e9 60       		.sleb128 -32
  2476 03ea 0D       		.uleb128 0xd
- 2477 03eb 52030000 		.4byte	.LASF40
+ 2477 03eb 60030000 		.4byte	.LASF40
  2478 03ef 01       		.byte	0x1
  2479 03f0 5B04     		.2byte	0x45b
  2480 03f2 7A000000 		.4byte	0x7a
@@ -4121,7 +4121,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2506 041f 91       		.byte	0x91
  2507 0420 74       		.sleb128 -12
  2508 0421 0E       		.uleb128 0xe
- 2509 0422 F6030000 		.4byte	.LASF42
+ 2509 0422 11040000 		.4byte	.LASF42
  2510 0426 01       		.byte	0x1
  2511 0427 6404     		.2byte	0x464
  2512 0429 7A000000 		.4byte	0x7a
@@ -4131,14 +4131,14 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2516 0430 00       		.byte	0x0
  2517 0431 0C       		.uleb128 0xc
  2518 0432 01       		.byte	0x1
- 2519 0433 D1020000 		.4byte	.LASF43
+ 2519 0433 DF020000 		.4byte	.LASF43
  2520 0437 01       		.byte	0x1
  2521 0438 C504     		.2byte	0x4c5
  2522 043a 01       		.byte	0x1
  2523 043b 00000000 		.4byte	.LFB13
  2524 043f 76000000 		.4byte	.LFE13
  2525 0443 B3020000 		.4byte	.LLST13
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 70
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 70
 
 
  2526 0447 69040000 		.4byte	0x469
@@ -4161,7 +4161,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2543 0468 00       		.byte	0x0
  2544 0469 0C       		.uleb128 0xc
  2545 046a 01       		.byte	0x1
- 2546 046b 00040000 		.4byte	.LASF44
+ 2546 046b 1B040000 		.4byte	.LASF44
  2547 046f 01       		.byte	0x1
  2548 0470 E304     		.2byte	0x4e3
  2549 0472 01       		.byte	0x1
@@ -4197,8 +4197,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2579 04b3 21030000 		.4byte	.LLST15
  2580 04b7 CB040000 		.4byte	0x4cb
  2581 04bb 0D       		.uleb128 0xd
- 2582 04bc 4B030000 		.4byte	.LASF46
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 71
+ 2582 04bc 59030000 		.4byte	.LASF46
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 71
 
 
  2583 04c0 01       		.byte	0x1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2637 0530 7E010000 		.4byte	.LASF49
  2638 0534 01       		.byte	0x1
  2639 0535 3C05     		.2byte	0x53c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 72
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 72
 
 
  2640 0537 6F000000 		.4byte	0x6f
@@ -4278,7 +4278,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2654 0555 C6030000 		.4byte	.LLST18
  2655 0559 6D050000 		.4byte	0x56d
  2656 055d 0E       		.uleb128 0xe
- 2657 055e 33040000 		.4byte	.LASF51
+ 2657 055e 4E040000 		.4byte	.LASF51
  2658 0562 01       		.byte	0x1
  2659 0563 7505     		.2byte	0x575
  2660 0565 6F000000 		.4byte	0x6f
@@ -4301,7 +4301,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2677 0585 01       		.byte	0x1
  2678 0586 01       		.byte	0x1
  2679 0587 15       		.uleb128 0x15
- 2680 0588 0B020000 		.4byte	.LASF54
+ 2680 0588 62020000 		.4byte	.LASF54
  2681 058c 01       		.byte	0x1
  2682 058d 37       		.byte	0x37
  2683 058e 9A000000 		.4byte	0x9a
@@ -4313,12 +4313,12 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2689 059d 17       		.uleb128 0x17
  2690 059e 00       		.byte	0x0
  2691 059f 15       		.uleb128 0x15
- 2692 05a0 12030000 		.4byte	.LASF55
+ 2692 05a0 20030000 		.4byte	.LASF55
  2693 05a4 01       		.byte	0x1
  2694 05a5 38       		.byte	0x38
  2695 05a6 AC050000 		.4byte	0x5ac
  2696 05aa 01       		.byte	0x1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 73
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 73
 
 
  2697 05ab 01       		.byte	0x1
@@ -4332,28 +4332,28 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2705 05bc 01       		.byte	0x1
  2706 05bd 01       		.byte	0x1
  2707 05be 15       		.uleb128 0x15
- 2708 05bf 97030000 		.4byte	.LASF57
+ 2708 05bf B2030000 		.4byte	.LASF57
  2709 05c3 01       		.byte	0x1
  2710 05c4 3B       		.byte	0x3b
  2711 05c5 9A000000 		.4byte	0x9a
  2712 05c9 01       		.byte	0x1
  2713 05ca 01       		.byte	0x1
  2714 05cb 15       		.uleb128 0x15
- 2715 05cc 3E030000 		.4byte	.LASF58
+ 2715 05cc 4C030000 		.4byte	.LASF58
  2716 05d0 01       		.byte	0x1
  2717 05d1 3C       		.byte	0x3c
  2718 05d2 9A000000 		.4byte	0x9a
  2719 05d6 01       		.byte	0x1
  2720 05d7 01       		.byte	0x1
  2721 05d8 15       		.uleb128 0x15
- 2722 05d9 A5020000 		.4byte	.LASF59
+ 2722 05d9 B3020000 		.4byte	.LASF59
  2723 05dd 01       		.byte	0x1
  2724 05de 3D       		.byte	0x3d
  2725 05df 9A000000 		.4byte	0x9a
  2726 05e3 01       		.byte	0x1
  2727 05e4 01       		.byte	0x1
  2728 05e5 15       		.uleb128 0x15
- 2729 05e6 FD020000 		.4byte	.LASF60
+ 2729 05e6 0B030000 		.4byte	.LASF60
  2730 05ea 01       		.byte	0x1
  2731 05eb 3E       		.byte	0x3e
  2732 05ec 9A000000 		.4byte	0x9a
@@ -4365,7 +4365,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2738 05fb 17       		.uleb128 0x17
  2739 05fc 00       		.byte	0x0
  2740 05fd 15       		.uleb128 0x15
- 2741 05fe 9C020000 		.4byte	.LASF61
+ 2741 05fe AA020000 		.4byte	.LASF61
  2742 0602 01       		.byte	0x1
  2743 0603 40       		.byte	0x40
  2744 0604 0A060000 		.4byte	0x60a
@@ -4378,7 +4378,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2751 0614 01       		.byte	0x1
  2752 0615 43       		.byte	0x43
  2753 0616 1C060000 		.4byte	0x61c
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 74
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 74
 
 
  2754 061a 01       		.byte	0x1
@@ -4438,7 +4438,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2808 0027 03       		.uleb128 0x3
  2809 0028 08       		.uleb128 0x8
  2810 0029 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 75
 
 
  2811 002a 00       		.byte	0x0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2865 0060 49       		.uleb128 0x49
  2866 0061 13       		.uleb128 0x13
  2867 0062 38       		.uleb128 0x38
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 76
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 76
 
 
  2868 0063 0A       		.uleb128 0xa
@@ -4558,7 +4558,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2922 0099 00       		.byte	0x0
  2923 009a 00       		.byte	0x0
  2924 009b 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 77
 
 
  2925 009c 2E       		.uleb128 0x2e
@@ -4618,7 +4618,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  2979 00d2 01       		.byte	0x1
  2980 00d3 3F       		.uleb128 0x3f
  2981 00d4 0C       		.uleb128 0xc
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 78
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 78
 
 
  2982 00d5 03       		.uleb128 0x3
@@ -4678,7 +4678,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3036 010b 12       		.uleb128 0x12
  3037 010c 01       		.uleb128 0x1
  3038 010d 40       		.uleb128 0x40
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 79
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 79
 
 
  3039 010e 06       		.uleb128 0x6
@@ -4738,7 +4738,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3093 0144 00       		.byte	0x0
  3094 0145 03       		.uleb128 0x3
  3095 0146 0E       		.uleb128 0xe
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 80
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 80
 
 
  3096 0147 3A       		.uleb128 0x3a
@@ -4798,7 +4798,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3148 0022 55534246 		.ascii	"USBFS_Init\000"
  3148      535F496E 
  3148      697400
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 81
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 81
 
 
  3149 002d 96010000 		.4byte	0x196
@@ -4858,7 +4858,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3168      535F4C6F 
  3168      6164496E 
  3168      455000
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 82
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 82
 
 
  3169 011d AE030000 		.4byte	0x3ae
@@ -4918,7 +4918,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3195 0014 42000000 		.4byte	.LFE0-.LFB0
  3196 0018 00000000 		.4byte	.LFB1
  3197 001c 10020000 		.4byte	.LFE1-.LFB1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 83
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 83
 
 
  3198 0020 00000000 		.4byte	.LFB2
@@ -4978,7 +4978,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3252 0040 00000000 		.4byte	.LFB7
  3253 0044 44000000 		.4byte	.LFE7
  3254 0048 00000000 		.4byte	.LFB8
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 84
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 84
 
 
  3255 004c 24000000 		.4byte	.LFE8
@@ -5038,7 +5038,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3292      74455041 
  3292      636B5374 
  3292      61746500 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 85
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 85
 
 
  3293              	.LASF18:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3316      535F5257 
  3316      55456E61 
  3316      626C6564 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 86
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 86
 
 
  3316      00
@@ -5158,211 +5158,213 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 1
  3342 01bf 55534246 		.ascii	"USBFS_ReadOutEP\000"
  3342      535F5265 
  3342      61644F75 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 87
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 87
 
 
  3342      74455000 
- 3343              	.LASF8:
- 3344 01cf 756E7369 		.ascii	"unsigned int\000"
- 3344      676E6564 
- 3344      20696E74 
- 3344      00
- 3345              	.LASF5:
- 3346 01dc 6C6F6E67 		.ascii	"long unsigned int\000"
- 3346      20756E73 
- 3346      69676E65 
- 3346      6420696E 
- 3346      7400
- 3347              	.LASF3:
- 3348 01ee 73686F72 		.ascii	"short unsigned int\000"
- 3348      7420756E 
- 3348      7369676E 
- 3348      65642069 
- 3348      6E7400
- 3349              	.LASF22:
- 3350 0201 696E7465 		.ascii	"interface\000"
- 3350      72666163 
- 3350      6500
- 3351              	.LASF54:
- 3352 020b 55534246 		.ascii	"USBFS_configurationChanged\000"
- 3352      535F636F 
- 3352      6E666967 
- 3352      75726174 
- 3352      696F6E43 
- 3353              	.LASF66:
- 3354 0226 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
- 3354      665C486F 
- 3354      6D655C44 
- 3354      65736B74 
- 3354      6F705C4B 
- 3355 0253 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
- 3355      69745072 
- 3355      6F675F42 
- 3355      6F6F746C 
- 3355      6F616465 
- 3356              	.LASF16:
- 3357 026f 68774570 		.ascii	"hwEpState\000"
- 3357      53746174 
- 3357      6500
- 3358              	.LASF14:
- 3359 0279 61747472 		.ascii	"attrib\000"
- 3359      696200
- 3360              	.LASF27:
- 3361 0280 55534246 		.ascii	"USBFS_Init\000"
- 3361      535F496E 
- 3361      697400
- 3362              	.LASF11:
- 3363 028b 666C6F61 		.ascii	"float\000"
- 3363      7400
- 3364              	.LASF15:
- 3365 0291 61706945 		.ascii	"apiEpState\000"
- 3365      70537461 
- 3365      746500
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 88
+ 3343              	.LASF66:
+ 3344 01cf 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 3344      665C486F 
+ 3344      6D655C44 
+ 3344      65736B74 
+ 3344      6F705C55 
+ 3345 01fc 5C4B6974 		.ascii	"\\KitProg version 2_03\\KitProg\\KitProg_Bootloader"
+ 3345      50726F67 
+ 3345      20766572 
+ 3345      73696F6E 
+ 3345      20325F30 
+ 3346 022c 2E637964 		.ascii	".cydsn\000"
+ 3346      736E00
+ 3347              	.LASF5:
+ 3348 0233 6C6F6E67 		.ascii	"long unsigned int\000"
+ 3348      20756E73 
+ 3348      69676E65 
+ 3348      6420696E 
+ 3348      7400
+ 3349              	.LASF3:
+ 3350 0245 73686F72 		.ascii	"short unsigned int\000"
+ 3350      7420756E 
+ 3350      7369676E 
+ 3350      65642069 
+ 3350      6E7400
+ 3351              	.LASF22:
+ 3352 0258 696E7465 		.ascii	"interface\000"
+ 3352      72666163 
+ 3352      6500
+ 3353              	.LASF54:
+ 3354 0262 55534246 		.ascii	"USBFS_configurationChanged\000"
+ 3354      535F636F 
+ 3354      6E666967 
+ 3354      75726174 
+ 3354      696F6E43 
+ 3355              	.LASF16:
+ 3356 027d 68774570 		.ascii	"hwEpState\000"
+ 3356      53746174 
+ 3356      6500
+ 3357              	.LASF14:
+ 3358 0287 61747472 		.ascii	"attrib\000"
+ 3358      696200
+ 3359              	.LASF27:
+ 3360 028e 55534246 		.ascii	"USBFS_Init\000"
+ 3360      535F496E 
+ 3360      697400
+ 3361              	.LASF11:
+ 3362 0299 666C6F61 		.ascii	"float\000"
+ 3362      7400
+ 3363              	.LASF15:
+ 3364 029f 61706945 		.ascii	"apiEpState\000"
+ 3364      70537461 
+ 3364      746500
+ 3365              	.LASF61:
+ 3366 02aa 55534246 		.ascii	"USBFS_EP\000"
+ 3366      535F4550 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 88
 
 
- 3366              	.LASF61:
- 3367 029c 55534246 		.ascii	"USBFS_EP\000"
- 3367      535F4550 
- 3367      00
- 3368              	.LASF59:
- 3369 02a5 55534246 		.ascii	"USBFS_transferState\000"
- 3369      535F7472 
- 3369      616E7366 
- 3369      65725374 
- 3369      61746500 
- 3370              	.LASF1:
- 3371 02b9 756E7369 		.ascii	"unsigned char\000"
- 3371      676E6564 
- 3371      20636861 
- 3371      7200
- 3372              	.LASF2:
- 3373 02c7 73686F72 		.ascii	"short int\000"
- 3373      7420696E 
- 3373      7400
- 3374              	.LASF43:
- 3375 02d1 55534246 		.ascii	"USBFS_EnableOutEP\000"
- 3375      535F456E 
- 3375      61626C65 
- 3375      4F757445 
- 3375      5000
- 3376              	.LASF32:
- 3377 02e3 55534246 		.ascii	"USBFS_GetInterfaceSetting\000"
- 3377      535F4765 
- 3377      74496E74 
- 3377      65726661 
- 3377      63655365 
- 3378              	.LASF60:
- 3379 02fd 55534246 		.ascii	"USBFS_lastPacketSize\000"
- 3379      535F6C61 
- 3379      73745061 
- 3379      636B6574 
- 3379      53697A65 
- 3380              	.LASF55:
- 3381 0312 55534246 		.ascii	"USBFS_interfaceSetting\000"
- 3381      535F696E 
- 3381      74657266 
- 3381      61636553 
- 3381      65747469 
- 3382              	.LASF23:
- 3383 0329 545F5553 		.ascii	"T_USBFS_EP_CTL_BLOCK\000"
- 3383      4246535F 
- 3383      45505F43 
- 3383      544C5F42 
- 3383      4C4F434B 
- 3384              	.LASF58:
- 3385 033e 55534246 		.ascii	"USBFS_device\000"
- 3385      535F6465 
- 3385      76696365 
- 3385      00
- 3386              	.LASF46:
- 3387 034b 62537461 		.ascii	"bState\000"
- 3387      746500
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 89
+ 3366      00
+ 3367              	.LASF59:
+ 3368 02b3 55534246 		.ascii	"USBFS_transferState\000"
+ 3368      535F7472 
+ 3368      616E7366 
+ 3368      65725374 
+ 3368      61746500 
+ 3369              	.LASF1:
+ 3370 02c7 756E7369 		.ascii	"unsigned char\000"
+ 3370      676E6564 
+ 3370      20636861 
+ 3370      7200
+ 3371              	.LASF2:
+ 3372 02d5 73686F72 		.ascii	"short int\000"
+ 3372      7420696E 
+ 3372      7400
+ 3373              	.LASF43:
+ 3374 02df 55534246 		.ascii	"USBFS_EnableOutEP\000"
+ 3374      535F456E 
+ 3374      61626C65 
+ 3374      4F757445 
+ 3374      5000
+ 3375              	.LASF32:
+ 3376 02f1 55534246 		.ascii	"USBFS_GetInterfaceSetting\000"
+ 3376      535F4765 
+ 3376      74496E74 
+ 3376      65726661 
+ 3376      63655365 
+ 3377              	.LASF60:
+ 3378 030b 55534246 		.ascii	"USBFS_lastPacketSize\000"
+ 3378      535F6C61 
+ 3378      73745061 
+ 3378      636B6574 
+ 3378      53697A65 
+ 3379              	.LASF55:
+ 3380 0320 55534246 		.ascii	"USBFS_interfaceSetting\000"
+ 3380      535F696E 
+ 3380      74657266 
+ 3380      61636553 
+ 3380      65747469 
+ 3381              	.LASF23:
+ 3382 0337 545F5553 		.ascii	"T_USBFS_EP_CTL_BLOCK\000"
+ 3382      4246535F 
+ 3382      45505F43 
+ 3382      544C5F42 
+ 3382      4C4F434B 
+ 3383              	.LASF58:
+ 3384 034c 55534246 		.ascii	"USBFS_device\000"
+ 3384      535F6465 
+ 3384      76696365 
+ 3384      00
+ 3385              	.LASF46:
+ 3386 0359 62537461 		.ascii	"bState\000"
+ 3386      746500
+ 3387              	.LASF40:
+ 3388 0360 6C656E67 		.ascii	"length\000"
+ 3388      746800
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 89
 
 
- 3388              	.LASF40:
- 3389 0352 6C656E67 		.ascii	"length\000"
- 3389      746800
- 3390              	.LASF13:
- 3391 0359 63686172 		.ascii	"char\000"
- 3391      00
- 3392              	.LASF25:
- 3393 035e 6D6F6465 		.ascii	"mode\000"
- 3393      00
- 3394              	.LASF21:
- 3395 0363 62756666 		.ascii	"bufferSize\000"
- 3395      65725369 
- 3395      7A6500
- 3396              	.LASF26:
- 3397 036e 55534246 		.ascii	"USBFS_Start\000"
- 3397      535F5374 
- 3397      61727400 
- 3398              	.LASF20:
- 3399 037a 62756666 		.ascii	"buffOffset\000"
- 3399      4F666673 
- 3399      657400
- 3400              	.LASF67:
- 3401 0385 5F555342 		.ascii	"_USBFS_EpCtlBlock\000"
- 3401      46535F45 
- 3401      7043746C 
- 3401      426C6F63 
- 3401      6B00
- 3402              	.LASF57:
- 3403 0397 55534246 		.ascii	"USBFS_deviceStatus\000"
- 3403      535F6465 
- 3403      76696365 
- 3403      53746174 
- 3403      757300
- 3404              	.LASF34:
- 3405 03aa 55534246 		.ascii	"USBFS_GetEPState\000"
- 3405      535F4765 
- 3405      74455053 
- 3405      74617465 
- 3405      00
- 3406              	.LASF68:
- 3407 03bb 55534246 		.ascii	"USBFS_ReInitComponent\000"
- 3407      535F5265 
- 3407      496E6974 
- 3407      436F6D70 
- 3407      6F6E656E 
- 3408              	.LASF29:
- 3409 03d1 656E6162 		.ascii	"enableInterrupts\000"
- 3409      6C65496E 
- 3409      74657272 
- 3409      75707473 
- 3409      00
- 3410              	.LASF30:
- 3411 03e2 55534246 		.ascii	"USBFS_CheckActivity\000"
- 3411      535F4368 
- 3411      65636B41 
- 3411      63746976 
- 3411      69747900 
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccRXt4Fc.s 			page 90
+ 3389              	.LASF13:
+ 3390 0367 63686172 		.ascii	"char\000"
+ 3390      00
+ 3391              	.LASF25:
+ 3392 036c 6D6F6465 		.ascii	"mode\000"
+ 3392      00
+ 3393              	.LASF21:
+ 3394 0371 62756666 		.ascii	"bufferSize\000"
+ 3394      65725369 
+ 3394      7A6500
+ 3395              	.LASF8:
+ 3396 037c 756E7369 		.ascii	"unsigned int\000"
+ 3396      676E6564 
+ 3396      20696E74 
+ 3396      00
+ 3397              	.LASF26:
+ 3398 0389 55534246 		.ascii	"USBFS_Start\000"
+ 3398      535F5374 
+ 3398      61727400 
+ 3399              	.LASF20:
+ 3400 0395 62756666 		.ascii	"buffOffset\000"
+ 3400      4F666673 
+ 3400      657400
+ 3401              	.LASF67:
+ 3402 03a0 5F555342 		.ascii	"_USBFS_EpCtlBlock\000"
+ 3402      46535F45 
+ 3402      7043746C 
+ 3402      426C6F63 
+ 3402      6B00
+ 3403              	.LASF57:
+ 3404 03b2 55534246 		.ascii	"USBFS_deviceStatus\000"
+ 3404      535F6465 
+ 3404      76696365 
+ 3404      53746174 
+ 3404      757300
+ 3405              	.LASF34:
+ 3406 03c5 55534246 		.ascii	"USBFS_GetEPState\000"
+ 3406      535F4765 
+ 3406      74455053 
+ 3406      74617465 
+ 3406      00
+ 3407              	.LASF68:
+ 3408 03d6 55534246 		.ascii	"USBFS_ReInitComponent\000"
+ 3408      535F5265 
+ 3408      496E6974 
+ 3408      436F6D70 
+ 3408      6F6E656E 
+ 3409              	.LASF29:
+ 3410 03ec 656E6162 		.ascii	"enableInterrupts\000"
+ 3410      6C65496E 
+ 3410      74657272 
+ 3410      75707473 
+ 3410      00
+ 3411              	.LASF30:
+ 3412 03fd 55534246 		.ascii	"USBFS_CheckActivity\000"
+ 3412      535F4368 
+ 3412      65636B41 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccIwl9aE.s 			page 90
 
 
- 3412              	.LASF42:
- 3413 03f6 78666572 		.ascii	"xferCount\000"
- 3413      436F756E 
- 3413      7400
- 3414              	.LASF44:
- 3415 0400 55534246 		.ascii	"USBFS_DisableOutEP\000"
- 3415      535F4469 
- 3415      7361626C 
- 3415      654F7574 
- 3415      455000
- 3416              	.LASF38:
- 3417 0413 55534246 		.ascii	"USBFS_LoadInEP\000"
- 3417      535F4C6F 
- 3417      6164496E 
- 3417      455000
- 3418              	.LASF36:
- 3419 0422 55534246 		.ascii	"USBFS_GetEPCount\000"
- 3419      535F4765 
- 3419      74455043 
- 3419      6F756E74 
- 3419      00
- 3420              	.LASF51:
- 3421 0433 72657375 		.ascii	"result\000"
- 3421      6C7400
- 3422              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ 3412      63746976 
+ 3412      69747900 
+ 3413              	.LASF42:
+ 3414 0411 78666572 		.ascii	"xferCount\000"
+ 3414      436F756E 
+ 3414      7400
+ 3415              	.LASF44:
+ 3416 041b 55534246 		.ascii	"USBFS_DisableOutEP\000"
+ 3416      535F4469 
+ 3416      7361626C 
+ 3416      654F7574 
+ 3416      455000
+ 3417              	.LASF38:
+ 3418 042e 55534246 		.ascii	"USBFS_LoadInEP\000"
+ 3418      535F4C6F 
+ 3418      6164496E 
+ 3418      455000
+ 3419              	.LASF36:
+ 3420 043d 55534246 		.ascii	"USBFS_GetEPCount\000"
+ 3420      535F4765 
+ 3420      74455043 
+ 3420      6F756E74 
+ 3420      00
+ 3421              	.LASF51:
+ 3422 044e 72657375 		.ascii	"result\000"
+ 3422      6C7400
+ 3423              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

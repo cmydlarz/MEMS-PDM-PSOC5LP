@@ -1,4 +1,4 @@
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
   20:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** 
   21:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** /*******************************************************************************
   22:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** * Function Name: PDM_CIC_Int_Ctrl_Reg_Write
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 2
 
 
   23:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** ********************************************************************************
@@ -94,8 +94,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
   48 0008 FB71     		strb	r3, [r7, #7]
   37:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c ****     PDM_CIC_Int_Ctrl_Reg_Control = control;
   49              		.loc 1 37 0
-  50 000a 46F27E43 		movw	r3, #:lower16:1073767550
-  51 000e C4F20003 		movt	r3, #:upper16:1073767550
+  50 000a 46F27853 		movw	r3, #:lower16:1073767800
+  51 000e C4F20003 		movt	r3, #:upper16:1073767800
   52 0012 FA79     		ldrb	r2, [r7, #7]
   53 0014 1A70     		strb	r2, [r3, #0]
   38:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** }
@@ -118,7 +118,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
   39:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** 
   40:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** 
   41:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** /*******************************************************************************
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 3
 
 
   42:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** * Function Name: PDM_CIC_Int_Ctrl_Reg_Read
@@ -150,8 +150,8 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
   81              		.cfi_def_cfa_register 7
   57:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c ****     return PDM_CIC_Int_Ctrl_Reg_Control;
   82              		.loc 1 57 0
-  83 0004 46F27E43 		movw	r3, #:lower16:1073767550
-  84 0008 C4F20003 		movt	r3, #:upper16:1073767550
+  83 0004 46F27853 		movw	r3, #:lower16:1073767800
+  84 0008 C4F20003 		movt	r3, #:upper16:1073767800
   85 000c 1B78     		ldrb	r3, [r3, #0]
   86 000e DBB2     		uxtb	r3, r3
   58:.\Generated_Source\PSoC5/PDM_CIC_Int_Ctrl_Reg.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  107 0015 7D       		.byte	0x7d
  108 0016 04       		.sleb128 4
  109 0017 04000000 		.4byte	.LCFI1
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 4
 
 
  110 001b 06000000 		.4byte	.LCFI2
@@ -216,10 +216,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
  143 000a 04       		.byte	0x4
  144 000b 01       		.uleb128 0x1
- 145 000c 3F010000 		.4byte	.LASF12
+ 145 000c DF000000 		.4byte	.LASF12
  146 0010 01       		.byte	0x1
- 147 0011 D1000000 		.4byte	.LASF13
- 148 0015 29000000 		.4byte	.LASF14
+ 147 0011 71000000 		.4byte	.LASF13
+ 148 0015 F0000000 		.4byte	.LASF14
  149 0019 00000000 		.4byte	0x0
  150 001d 00000000 		.4byte	0x0
  151 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
@@ -227,7 +227,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  153 0029 02       		.uleb128 0x2
  154 002a 01       		.byte	0x1
  155 002b 06       		.byte	0x6
- 156 002c 69010000 		.4byte	.LASF0
+ 156 002c 71010000 		.4byte	.LASF0
  157 0030 02       		.uleb128 0x2
  158 0031 01       		.byte	0x1
  159 0032 08       		.byte	0x8
@@ -235,22 +235,22 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  161 0037 02       		.uleb128 0x2
  162 0038 02       		.byte	0x2
  163 0039 05       		.byte	0x5
- 164 003a 50010000 		.4byte	.LASF2
+ 164 003a 58010000 		.4byte	.LASF2
  165 003e 02       		.uleb128 0x2
  166 003f 02       		.byte	0x2
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 5
 
 
  167 0040 07       		.byte	0x7
- 168 0041 9B000000 		.4byte	.LASF3
+ 168 0041 3B000000 		.4byte	.LASF3
  169 0045 02       		.uleb128 0x2
  170 0046 04       		.byte	0x4
  171 0047 05       		.byte	0x5
- 172 0048 60010000 		.4byte	.LASF4
+ 172 0048 68010000 		.4byte	.LASF4
  173 004c 02       		.uleb128 0x2
  174 004d 04       		.byte	0x4
  175 004e 07       		.byte	0x7
- 176 004f 89000000 		.4byte	.LASF5
+ 176 004f 29000000 		.4byte	.LASF5
  177 0053 02       		.uleb128 0x2
  178 0054 08       		.byte	0x8
  179 0055 05       		.byte	0x5
@@ -258,7 +258,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  181 005a 02       		.uleb128 0x2
  182 005b 08       		.byte	0x8
  183 005c 07       		.byte	0x7
- 184 005d 0E010000 		.4byte	.LASF7
+ 184 005d AE000000 		.4byte	.LASF7
  185 0061 03       		.uleb128 0x3
  186 0062 04       		.byte	0x4
  187 0063 05       		.byte	0x5
@@ -266,9 +266,9 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  189 0068 02       		.uleb128 0x2
  190 0069 04       		.byte	0x4
  191 006a 07       		.byte	0x7
- 192 006b 01010000 		.4byte	.LASF8
+ 192 006b A1000000 		.4byte	.LASF8
  193 006f 04       		.uleb128 0x4
- 194 0070 5A010000 		.4byte	.LASF15
+ 194 0070 62010000 		.4byte	.LASF15
  195 0074 02       		.byte	0x2
  196 0075 4C       		.byte	0x4c
  197 0076 30000000 		.4byte	0x30
@@ -283,10 +283,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  206 0088 02       		.uleb128 0x2
  207 0089 01       		.byte	0x1
  208 008a 08       		.byte	0x8
- 209 008b 4B010000 		.4byte	.LASF11
+ 209 008b EB000000 		.4byte	.LASF11
  210 008f 05       		.uleb128 0x5
  211 0090 01       		.byte	0x1
- 212 0091 B6000000 		.4byte	.LASF16
+ 212 0091 56000000 		.4byte	.LASF16
  213 0095 01       		.byte	0x1
  214 0096 23       		.byte	0x23
  215 0097 01       		.byte	0x1
@@ -295,10 +295,10 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  218 00a0 00000000 		.4byte	.LLST0
  219 00a4 B7000000 		.4byte	0xb7
  220 00a8 06       		.uleb128 0x6
- 221 00a9 AE000000 		.4byte	.LASF17
+ 221 00a9 4E000000 		.4byte	.LASF17
  222 00ad 01       		.byte	0x1
  223 00ae 23       		.byte	0x23
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 6
 
 
  224 00af 6F000000 		.4byte	0x6f
@@ -308,7 +308,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  228 00b6 00       		.byte	0x0
  229 00b7 07       		.uleb128 0x7
  230 00b8 01       		.byte	0x1
- 231 00b9 25010000 		.4byte	.LASF18
+ 231 00b9 C5000000 		.4byte	.LASF18
  232 00bd 01       		.byte	0x1
  233 00be 37       		.byte	0x37
  234 00bf 01       		.byte	0x1
@@ -358,7 +358,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  278 0025 3E       		.uleb128 0x3e
  279 0026 0B       		.uleb128 0xb
  280 0027 03       		.uleb128 0x3
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 7
 
 
  281 0028 08       		.uleb128 0x8
@@ -418,7 +418,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  335 005e 07       		.uleb128 0x7
  336 005f 2E       		.uleb128 0x2e
  337 0060 00       		.byte	0x0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 8
 
 
  338 0061 3F       		.uleb128 0x3f
@@ -478,7 +478,7 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  384              	.Ldebug_ranges0:
  385 0000 00000000 		.4byte	.Ltext0
  386 0004 00000000 		.4byte	.Letext0
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 9
 
 
  387 0008 00000000 		.4byte	.LFB0
@@ -504,85 +504,87 @@ ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 1
  401      676E6564 
  401      20636861 
  401      7200
- 402              	.LASF14:
- 403 0029 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
- 403      665C486F 
- 403      6D655C44 
- 403      65736B74 
- 403      6F705C55 
- 404 0055 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
- 404      5F50354C 
- 404      505F5553 
- 404      425F4175 
- 404      64696F5C 
- 405 0087 6E00     		.ascii	"n\000"
- 406              	.LASF5:
- 407 0089 6C6F6E67 		.ascii	"long unsigned int\000"
- 407      20756E73 
- 407      69676E65 
- 407      6420696E 
- 407      7400
- 408              	.LASF3:
- 409 009b 73686F72 		.ascii	"short unsigned int\000"
- 409      7420756E 
- 409      7369676E 
- 409      65642069 
- 409      6E7400
- 410              	.LASF17:
- 411 00ae 636F6E74 		.ascii	"control\000"
- 411      726F6C00 
- 412              	.LASF16:
- 413 00b6 50444D5F 		.ascii	"PDM_CIC_Int_Ctrl_Reg_Write\000"
- 413      4349435F 
- 413      496E745F 
- 413      4374726C 
- 413      5F526567 
- 414              	.LASF13:
-ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccTrBFje.s 			page 10
+ 402              	.LASF5:
+ 403 0029 6C6F6E67 		.ascii	"long unsigned int\000"
+ 403      20756E73 
+ 403      69676E65 
+ 403      6420696E 
+ 403      7400
+ 404              	.LASF3:
+ 405 003b 73686F72 		.ascii	"short unsigned int\000"
+ 405      7420756E 
+ 405      7369676E 
+ 405      65642069 
+ 405      6E7400
+ 406              	.LASF17:
+ 407 004e 636F6E74 		.ascii	"control\000"
+ 407      726F6C00 
+ 408              	.LASF16:
+ 409 0056 50444D5F 		.ascii	"PDM_CIC_Int_Ctrl_Reg_Write\000"
+ 409      4349435F 
+ 409      496E745F 
+ 409      4374726C 
+ 409      5F526567 
+ 410              	.LASF13:
+ 411 0071 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PDM_CIC_Int_Ctrl_Reg.c\000"
+ 411      6E657261 
+ 411      7465645F 
+ 411      536F7572 
+ 411      63655C50 
+ 412              	.LASF8:
+ 413 00a1 756E7369 		.ascii	"unsigned int\000"
+ 413      676E6564 
+ 413      20696E74 
+ 413      00
+ 414              	.LASF7:
+ 415 00ae 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccluNgio.s 			page 10
 
 
- 415 00d1 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PDM_CIC_Int_Ctrl_Reg.c\000"
- 415      6E657261 
- 415      7465645F 
- 415      536F7572 
- 415      63655C50 
- 416              	.LASF8:
- 417 0101 756E7369 		.ascii	"unsigned int\000"
- 417      676E6564 
- 417      20696E74 
- 417      00
- 418              	.LASF7:
- 419 010e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 419      206C6F6E 
- 419      6720756E 
- 419      7369676E 
- 419      65642069 
- 420              	.LASF18:
- 421 0125 50444D5F 		.ascii	"PDM_CIC_Int_Ctrl_Reg_Read\000"
- 421      4349435F 
- 421      496E745F 
- 421      4374726C 
- 421      5F526567 
- 422              	.LASF12:
- 423 013f 474E5520 		.ascii	"GNU C 4.4.1\000"
- 423      4320342E 
- 423      342E3100 
- 424              	.LASF11:
- 425 014b 63686172 		.ascii	"char\000"
- 425      00
+ 415      206C6F6E 
+ 415      6720756E 
+ 415      7369676E 
+ 415      65642069 
+ 416              	.LASF18:
+ 417 00c5 50444D5F 		.ascii	"PDM_CIC_Int_Ctrl_Reg_Read\000"
+ 417      4349435F 
+ 417      496E745F 
+ 417      4374726C 
+ 417      5F526567 
+ 418              	.LASF12:
+ 419 00df 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 419      4320342E 
+ 419      342E3100 
+ 420              	.LASF11:
+ 421 00eb 63686172 		.ascii	"char\000"
+ 421      00
+ 422              	.LASF14:
+ 423 00f0 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-Audio-PSOC5LP\\Firmware"
+ 423      665C486F 
+ 423      6D655C44 
+ 423      65736B74 
+ 423      6F705C55 
+ 424 011d 5C50696F 		.ascii	"\\PioneerKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Au"
+ 424      6E656572 
+ 424      4B69745F 
+ 424      50354C50 
+ 424      5F555342 
+ 425 014e 64696F2E 		.ascii	"dio.cydsn\000"
+ 425      63796473 
+ 425      6E00
  426              	.LASF2:
- 427 0150 73686F72 		.ascii	"short int\000"
+ 427 0158 73686F72 		.ascii	"short int\000"
  427      7420696E 
  427      7400
  428              	.LASF15:
- 429 015a 75696E74 		.ascii	"uint8\000"
+ 429 0162 75696E74 		.ascii	"uint8\000"
  429      3800
  430              	.LASF4:
- 431 0160 6C6F6E67 		.ascii	"long int\000"
+ 431 0168 6C6F6E67 		.ascii	"long int\000"
  431      20696E74 
  431      00
  432              	.LASF0:
- 433 0169 7369676E 		.ascii	"signed char\000"
+ 433 0171 7369676E 		.ascii	"signed char\000"
  433      65642063 
  433      68617200 
  434              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
