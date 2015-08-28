@@ -1,0 +1,1868 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"isr_UsbSuspend.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 7B010000 		.text
+  20      02008100 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.isr_UsbSuspend_SetVector,"ax",%progbits
+  24              		.align	1
+  25              		.global	isr_UsbSuspend_SetVector
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	isr_UsbSuspend_SetVector, %function
+  29              	isr_UsbSuspend_SetVector:
+  30              	.LFB33:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\isr_UsbSuspend.c"
+   1:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * File Name: isr_UsbSuspend.c  
+   3:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Version 1.70
+   4:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+   5:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *  Description:
+   6:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   API for controlling the state of an interrupt.
+   7:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+   8:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+   9:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *  Note:
+  10:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  11:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  18:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  19:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #include <CYDEVICE_TRM.H>
+  20:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #include <CYLIB.H>
+  21:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #include <isr_UsbSuspend.H>
+  22:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #if !defined(isr_UsbSuspend__REMOVED) /* Check for removal by optimization */
+  24:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  25:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+  26:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *  Place your includes, defines and code here 
+  27:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************/
+  28:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /* `#START isr_UsbSuspend_intc` */
+  29:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #include "kitprog.h"
+  30:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /* `#END` */
+  31:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  32:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #ifndef CYINT_IRQ_BASE
+  33:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #define CYINT_IRQ_BASE      16
+  34:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #endif /* CYINT_IRQ_BASE */
+  35:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #ifndef CYINT_VECT_TABLE
+  36:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  37:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** #endif /* CYINT_VECT_TABLE */
+  38:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  39:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /* Declared in startup, used to set unused interrupts to. */
+  40:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** CY_ISR_PROTO(IntDefaultHandler);
+  41:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  42:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  43:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+  44:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_Start
+  45:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  47:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+  48:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *  Set up the interrupt and enable it.
+  49:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  50:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:  
+  51:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+  52:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  53:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+  54:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+  55:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  56:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_Start(void)
+  58:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+  59:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* For all we know the interrupt is active. */
+  60:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_Disable();
+  61:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  62:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Set the ISR to point to the isr_UsbSuspend Interrupt. */
+  63:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_SetVector(&isr_UsbSuspend_Interrupt);
+  64:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  65:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Set the priority. */
+  66:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_SetPriority((uint8)isr_UsbSuspend_INTC_PRIOR_NUMBER);
+  67:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  68:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Enable it. */
+  69:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_Enable();
+  70:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+  71:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  72:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  73:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+  74:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_StartEx
+  75:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+  76:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  77:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+  78:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *  Set up the interrupt and enable it.
+  79:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 3
+
+
+  80:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:  
+  81:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  82:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  83:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+  84:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+  85:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+  86:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+  87:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_StartEx(cyisraddress address)
+  88:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+  89:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* For all we know the interrupt is active. */
+  90:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_Disable();
+  91:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  92:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Set the ISR to point to the isr_UsbSuspend Interrupt. */
+  93:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_SetVector(address);
+  94:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  95:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Set the priority. */
+  96:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_SetPriority((uint8)isr_UsbSuspend_INTC_PRIOR_NUMBER);
+  97:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+  98:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Enable it. */
+  99:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_Enable();
+ 100:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 101:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 102:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 103:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 104:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_Stop
+ 105:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 106:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 107:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 108:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Disables and removes the interrupt.
+ 109:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 110:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:  
+ 111:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 112:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 113:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 114:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 115:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 116:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_Stop(void)
+ 117:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 118:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Disable this interrupt. */
+ 119:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_Disable();
+ 120:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 121:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Set the ISR to point to the passive one. */
+ 122:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     isr_UsbSuspend_SetVector(&IntDefaultHandler);
+ 123:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 124:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 125:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 126:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 127:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_Interrupt
+ 128:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 129:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 130:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 131:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   The default Interrupt Service Routine for isr_UsbSuspend.
+ 132:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 133:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Add custom code between the coments to keep the next version of this file
+ 134:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   from over writting your code.
+ 135:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 136:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:  
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 4
+
+
+ 137:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 138:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 139:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 140:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 141:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 142:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** CY_ISR(isr_UsbSuspend_Interrupt)
+ 143:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 144:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /*  Place your Interrupt code here. */
+ 145:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* `#START isr_UsbSuspend_Interrupt` */
+ 146:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 	checkActivityFlag = TRUE;
+ 147:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 	Timer_UsbSuspend_ReadStatusRegister();
+ 148:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* `#END` */
+ 149:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 150:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 151:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 152:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 153:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_SetVector
+ 154:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 155:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 156:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 157:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Change the ISR vector for the Interrupt. Note calling isr_UsbSuspend_Start
+ 158:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   will override any effect this method would have had. To set the vector 
+ 159:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   before the component has been started use isr_UsbSuspend_StartEx instead.
+ 160:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 161:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 162:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 163:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 164:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 165:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 166:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 167:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 168:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_SetVector(cyisraddress address)
+ 169:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+  32              		.loc 1 169 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37              	.LVL0:
+ 170:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     cyisraddress * ramVectorTable;
+ 171:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 172:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  38              		.loc 1 172 0
+  39 0000 024B     		ldr	r3, .L3
+  40 0002 1B68     		ldr	r3, [r3, #0]
+  41              	.LVL1:
+ 173:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 174:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_UsbSuspend__INTC_NUMBER] = address;
+  42              		.loc 1 174 0
+  43 0004 C3F88400 		str	r0, [r3, #132]
+ 175:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+  44              		.loc 1 175 0
+  45 0008 7047     		bx	lr
+  46              	.L4:
+  47 000a 00BF     		.align	2
+  48              	.L3:
+  49 000c 08ED00E0 		.word	-536810232
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 5
+
+
+  50              		.cfi_endproc
+  51              	.LFE33:
+  52              		.size	isr_UsbSuspend_SetVector, .-isr_UsbSuspend_SetVector
+  53              		.section	.text.isr_UsbSuspend_GetVector,"ax",%progbits
+  54              		.align	1
+  55              		.global	isr_UsbSuspend_GetVector
+  56              		.thumb
+  57              		.thumb_func
+  58              		.type	isr_UsbSuspend_GetVector, %function
+  59              	isr_UsbSuspend_GetVector:
+  60              	.LFB34:
+ 176:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 177:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 178:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 179:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_GetVector
+ 180:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 181:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 182:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 183:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 184:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 185:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 186:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 187:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 188:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 189:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Address of the ISR in the interrupt vector table.
+ 190:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 191:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 192:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** cyisraddress isr_UsbSuspend_GetVector(void)
+ 193:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+  61              		.loc 1 193 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 0, uses_anonymous_args = 0
+  65              		@ link register save eliminated.
+ 194:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     cyisraddress * ramVectorTable;
+ 195:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 196:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  66              		.loc 1 196 0
+  67 0000 024B     		ldr	r3, .L7
+  68 0002 1B68     		ldr	r3, [r3, #0]
+  69              	.LVL2:
+ 197:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 198:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_UsbSuspend__INTC_NUMBER];
+ 199:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+  70              		.loc 1 199 0
+  71 0004 D3F88400 		ldr	r0, [r3, #132]
+  72 0008 7047     		bx	lr
+  73              	.L8:
+  74 000a 00BF     		.align	2
+  75              	.L7:
+  76 000c 08ED00E0 		.word	-536810232
+  77              		.cfi_endproc
+  78              	.LFE34:
+  79              		.size	isr_UsbSuspend_GetVector, .-isr_UsbSuspend_GetVector
+  80              		.section	.text.isr_UsbSuspend_SetPriority,"ax",%progbits
+  81              		.align	1
+  82              		.global	isr_UsbSuspend_SetPriority
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 6
+
+
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	isr_UsbSuspend_SetPriority, %function
+  86              	isr_UsbSuspend_SetPriority:
+  87              	.LFB35:
+ 200:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 201:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 202:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 203:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_SetPriority
+ 204:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 205:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 206:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 207:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Sets the Priority of the Interrupt. Note calling isr_UsbSuspend_Start
+ 208:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   or isr_UsbSuspend_StartEx will override any effect this method 
+ 209:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   would have had. This method should only be called after 
+ 210:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   isr_UsbSuspend_Start or isr_UsbSuspend_StartEx has been called. To set 
+ 211:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   the initial priority for the component use the cydwr file in the tool.
+ 212:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 213:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 214:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   priority: Priority of the interrupt. 0 - 7, 0 being the highest.
+ 215:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 216:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 217:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 218:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 219:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 220:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_SetPriority(uint8 priority)
+ 221:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+  88              		.loc 1 221 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93              	.LVL3:
+ 222:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     *isr_UsbSuspend_INTC_PRIOR = priority << 5;
+  94              		.loc 1 222 0
+  95 0000 4001     		lsls	r0, r0, #5
+  96              	.LVL4:
+  97 0002 024B     		ldr	r3, .L11
+  98 0004 C0B2     		uxtb	r0, r0
+  99 0006 1870     		strb	r0, [r3, #0]
+ 223:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 100              		.loc 1 223 0
+ 101 0008 7047     		bx	lr
+ 102              	.L12:
+ 103 000a 00BF     		.align	2
+ 104              	.L11:
+ 105 000c 11E400E0 		.word	-536812527
+ 106              		.cfi_endproc
+ 107              	.LFE35:
+ 108              		.size	isr_UsbSuspend_SetPriority, .-isr_UsbSuspend_SetPriority
+ 109              		.section	.text.isr_UsbSuspend_GetPriority,"ax",%progbits
+ 110              		.align	1
+ 111              		.global	isr_UsbSuspend_GetPriority
+ 112              		.thumb
+ 113              		.thumb_func
+ 114              		.type	isr_UsbSuspend_GetPriority, %function
+ 115              	isr_UsbSuspend_GetPriority:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 7
+
+
+ 116              	.LFB36:
+ 224:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 225:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 226:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 227:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_GetPriority
+ 228:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 229:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 230:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 231:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Gets the Priority of the Interrupt.
+ 232:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 233:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 234:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 235:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 236:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 237:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Priority of the interrupt. 0 - 7, 0 being the highest.
+ 238:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 239:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 240:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** uint8 isr_UsbSuspend_GetPriority(void)
+ 241:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 117              		.loc 1 241 0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		@ link register save eliminated.
+ 242:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     uint8 priority;
+ 243:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 244:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 245:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     priority = *isr_UsbSuspend_INTC_PRIOR >> 5;
+ 122              		.loc 1 245 0
+ 123 0000 014B     		ldr	r3, .L15
+ 124 0002 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+ 246:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 247:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     return priority;
+ 248:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 125              		.loc 1 248 0
+ 126 0004 4009     		lsrs	r0, r0, #5
+ 127 0006 7047     		bx	lr
+ 128              	.L16:
+ 129              		.align	2
+ 130              	.L15:
+ 131 0008 11E400E0 		.word	-536812527
+ 132              		.cfi_endproc
+ 133              	.LFE36:
+ 134              		.size	isr_UsbSuspend_GetPriority, .-isr_UsbSuspend_GetPriority
+ 135              		.section	.text.isr_UsbSuspend_Enable,"ax",%progbits
+ 136              		.align	1
+ 137              		.global	isr_UsbSuspend_Enable
+ 138              		.thumb
+ 139              		.thumb_func
+ 140              		.type	isr_UsbSuspend_Enable, %function
+ 141              	isr_UsbSuspend_Enable:
+ 142              	.LFB37:
+ 249:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 250:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 251:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 252:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_Enable
+ 253:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 8
+
+
+ 254:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 255:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 256:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Enables the interrupt.
+ 257:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 258:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 259:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 260:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 261:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 262:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 263:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 264:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 265:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_Enable(void)
+ 266:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 143              		.loc 1 266 0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+ 267:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Enable the general interrupt. */
+ 268:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     *isr_UsbSuspend_INTC_SET_EN = isr_UsbSuspend__INTC_MASK;
+ 148              		.loc 1 268 0
+ 149 0000 024B     		ldr	r3, .L19
+ 150 0002 4FF40032 		mov	r2, #131072
+ 151 0006 1A60     		str	r2, [r3, #0]
+ 269:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 152              		.loc 1 269 0
+ 153 0008 7047     		bx	lr
+ 154              	.L20:
+ 155 000a 00BF     		.align	2
+ 156              	.L19:
+ 157 000c 00E100E0 		.word	-536813312
+ 158              		.cfi_endproc
+ 159              	.LFE37:
+ 160              		.size	isr_UsbSuspend_Enable, .-isr_UsbSuspend_Enable
+ 161              		.section	.text.isr_UsbSuspend_GetState,"ax",%progbits
+ 162              		.align	1
+ 163              		.global	isr_UsbSuspend_GetState
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.type	isr_UsbSuspend_GetState, %function
+ 167              	isr_UsbSuspend_GetState:
+ 168              	.LFB38:
+ 270:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 271:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 272:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 273:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_GetState
+ 274:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 275:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 276:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 277:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 278:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 279:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 280:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 281:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 282:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 283:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   1 if enabled, 0 if disabled.
+ 284:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 9
+
+
+ 285:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 286:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** uint8 isr_UsbSuspend_GetState(void)
+ 287:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 169              		.loc 1 287 0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173              		@ link register save eliminated.
+ 288:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Get the state of the general interrupt. */
+ 289:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     return ((*isr_UsbSuspend_INTC_SET_EN & (uint32)isr_UsbSuspend__INTC_MASK) != 0u) ? 1u:0u;
+ 174              		.loc 1 289 0
+ 175 0000 024B     		ldr	r3, .L23
+ 176 0002 1868     		ldr	r0, [r3, #0]
+ 177 0004 400C     		lsrs	r0, r0, #17
+ 290:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 178              		.loc 1 290 0
+ 179 0006 00F00100 		and	r0, r0, #1
+ 180 000a 7047     		bx	lr
+ 181              	.L24:
+ 182              		.align	2
+ 183              	.L23:
+ 184 000c 00E100E0 		.word	-536813312
+ 185              		.cfi_endproc
+ 186              	.LFE38:
+ 187              		.size	isr_UsbSuspend_GetState, .-isr_UsbSuspend_GetState
+ 188              		.section	.text.isr_UsbSuspend_Disable,"ax",%progbits
+ 189              		.align	1
+ 190              		.global	isr_UsbSuspend_Disable
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.type	isr_UsbSuspend_Disable, %function
+ 194              	isr_UsbSuspend_Disable:
+ 195              	.LFB39:
+ 291:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 292:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 293:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 294:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_Disable
+ 295:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 296:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 297:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 298:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Disables the Interrupt.
+ 299:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 300:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 301:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 302:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 303:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 304:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 305:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 306:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 307:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_Disable(void)
+ 308:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 196              		.loc 1 308 0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              		@ link register save eliminated.
+ 309:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     /* Disable the general interrupt. */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 10
+
+
+ 310:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     *isr_UsbSuspend_INTC_CLR_EN = isr_UsbSuspend__INTC_MASK;
+ 201              		.loc 1 310 0
+ 202 0000 024B     		ldr	r3, .L27
+ 203 0002 4FF40032 		mov	r2, #131072
+ 204 0006 1A60     		str	r2, [r3, #0]
+ 311:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 205              		.loc 1 311 0
+ 206 0008 7047     		bx	lr
+ 207              	.L28:
+ 208 000a 00BF     		.align	2
+ 209              	.L27:
+ 210 000c 80E100E0 		.word	-536813184
+ 211              		.cfi_endproc
+ 212              	.LFE39:
+ 213              		.size	isr_UsbSuspend_Disable, .-isr_UsbSuspend_Disable
+ 214              		.section	.text.isr_UsbSuspend_Stop,"ax",%progbits
+ 215              		.align	1
+ 216              		.global	isr_UsbSuspend_Stop
+ 217              		.thumb
+ 218              		.thumb_func
+ 219              		.type	isr_UsbSuspend_Stop, %function
+ 220              	isr_UsbSuspend_Stop:
+ 221              	.LFB31:
+ 222              		.loc 1 117 0
+ 223              		.cfi_startproc
+ 224              		@ args = 0, pretend = 0, frame = 0
+ 225              		@ frame_needed = 0, uses_anonymous_args = 0
+ 226 0000 10B5     		push	{r4, lr}
+ 227              	.LCFI0:
+ 228              		.cfi_def_cfa_offset 8
+ 229              		.loc 1 119 0
+ 230              		.cfi_offset 14, -4
+ 231              		.cfi_offset 4, -8
+ 232 0002 FFF7FEFF 		bl	isr_UsbSuspend_Disable
+ 233              		.loc 1 122 0
+ 234 0006 0248     		ldr	r0, .L31
+ 235              		.loc 1 123 0
+ 236 0008 BDE81040 		pop	{r4, lr}
+ 237              		.loc 1 122 0
+ 238 000c FFF7FEBF 		b	isr_UsbSuspend_SetVector
+ 239              	.L32:
+ 240              		.align	2
+ 241              	.L31:
+ 242 0010 00000000 		.word	IntDefaultHandler
+ 243              		.cfi_endproc
+ 244              	.LFE31:
+ 245              		.size	isr_UsbSuspend_Stop, .-isr_UsbSuspend_Stop
+ 246              		.section	.text.isr_UsbSuspend_StartEx,"ax",%progbits
+ 247              		.align	1
+ 248              		.global	isr_UsbSuspend_StartEx
+ 249              		.thumb
+ 250              		.thumb_func
+ 251              		.type	isr_UsbSuspend_StartEx, %function
+ 252              	isr_UsbSuspend_StartEx:
+ 253              	.LFB30:
+ 254              		.loc 1 88 0
+ 255              		.cfi_startproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 11
+
+
+ 256              		@ args = 0, pretend = 0, frame = 0
+ 257              		@ frame_needed = 0, uses_anonymous_args = 0
+ 258              	.LVL5:
+ 259 0000 10B5     		push	{r4, lr}
+ 260              	.LCFI1:
+ 261              		.cfi_def_cfa_offset 8
+ 262              		.loc 1 88 0
+ 263 0002 0446     		mov	r4, r0
+ 264              		.cfi_offset 14, -4
+ 265              		.cfi_offset 4, -8
+ 266              		.loc 1 90 0
+ 267 0004 FFF7FEFF 		bl	isr_UsbSuspend_Disable
+ 268              	.LVL6:
+ 269              		.loc 1 93 0
+ 270 0008 2046     		mov	r0, r4
+ 271 000a FFF7FEFF 		bl	isr_UsbSuspend_SetVector
+ 272              		.loc 1 96 0
+ 273 000e 0720     		movs	r0, #7
+ 274 0010 FFF7FEFF 		bl	isr_UsbSuspend_SetPriority
+ 275              		.loc 1 100 0
+ 276 0014 BDE81040 		pop	{r4, lr}
+ 277              		.loc 1 99 0
+ 278 0018 FFF7FEBF 		b	isr_UsbSuspend_Enable
+ 279              		.cfi_endproc
+ 280              	.LFE30:
+ 281              		.size	isr_UsbSuspend_StartEx, .-isr_UsbSuspend_StartEx
+ 282              		.section	.text.isr_UsbSuspend_Start,"ax",%progbits
+ 283              		.align	1
+ 284              		.global	isr_UsbSuspend_Start
+ 285              		.thumb
+ 286              		.thumb_func
+ 287              		.type	isr_UsbSuspend_Start, %function
+ 288              	isr_UsbSuspend_Start:
+ 289              	.LFB29:
+ 290              		.loc 1 58 0
+ 291              		.cfi_startproc
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294 0000 10B5     		push	{r4, lr}
+ 295              	.LCFI2:
+ 296              		.cfi_def_cfa_offset 8
+ 297              		.loc 1 60 0
+ 298              		.cfi_offset 14, -4
+ 299              		.cfi_offset 4, -8
+ 300 0002 FFF7FEFF 		bl	isr_UsbSuspend_Disable
+ 301              		.loc 1 63 0
+ 302 0006 0548     		ldr	r0, .L37
+ 303 0008 FFF7FEFF 		bl	isr_UsbSuspend_SetVector
+ 304              		.loc 1 66 0
+ 305 000c 0720     		movs	r0, #7
+ 306 000e FFF7FEFF 		bl	isr_UsbSuspend_SetPriority
+ 307              		.loc 1 70 0
+ 308 0012 BDE81040 		pop	{r4, lr}
+ 309              		.loc 1 69 0
+ 310 0016 FFF7FEBF 		b	isr_UsbSuspend_Enable
+ 311              	.L38:
+ 312 001a 00BF     		.align	2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 12
+
+
+ 313              	.L37:
+ 314 001c 00000000 		.word	isr_UsbSuspend_Interrupt
+ 315              		.cfi_endproc
+ 316              	.LFE29:
+ 317              		.size	isr_UsbSuspend_Start, .-isr_UsbSuspend_Start
+ 318              		.section	.text.isr_UsbSuspend_SetPending,"ax",%progbits
+ 319              		.align	1
+ 320              		.global	isr_UsbSuspend_SetPending
+ 321              		.thumb
+ 322              		.thumb_func
+ 323              		.type	isr_UsbSuspend_SetPending, %function
+ 324              	isr_UsbSuspend_SetPending:
+ 325              	.LFB40:
+ 312:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 313:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 314:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 315:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_SetPending
+ 316:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 317:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 318:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 319:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 320:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   generating the interrupt.
+ 321:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 322:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 323:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 324:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 325:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 326:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 327:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 328:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 329:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_SetPending(void)
+ 330:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 326              		.loc 1 330 0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		@ link register save eliminated.
+ 331:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     *isr_UsbSuspend_INTC_SET_PD = isr_UsbSuspend__INTC_MASK;
+ 331              		.loc 1 331 0
+ 332 0000 024B     		ldr	r3, .L41
+ 333 0002 4FF40032 		mov	r2, #131072
+ 334 0006 1A60     		str	r2, [r3, #0]
+ 332:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 335              		.loc 1 332 0
+ 336 0008 7047     		bx	lr
+ 337              	.L42:
+ 338 000a 00BF     		.align	2
+ 339              	.L41:
+ 340 000c 00E200E0 		.word	-536813056
+ 341              		.cfi_endproc
+ 342              	.LFE40:
+ 343              		.size	isr_UsbSuspend_SetPending, .-isr_UsbSuspend_SetPending
+ 344              		.section	.text.isr_UsbSuspend_ClearPending,"ax",%progbits
+ 345              		.align	1
+ 346              		.global	isr_UsbSuspend_ClearPending
+ 347              		.thumb
+ 348              		.thumb_func
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 13
+
+
+ 349              		.type	isr_UsbSuspend_ClearPending, %function
+ 350              	isr_UsbSuspend_ClearPending:
+ 351              	.LFB41:
+ 333:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 334:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** 
+ 335:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** /*******************************************************************************
+ 336:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Function Name: isr_UsbSuspend_ClearPending
+ 337:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** ********************************************************************************
+ 338:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 339:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Summary:
+ 340:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   Clears a pending interrupt.
+ 341:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 342:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Parameters:
+ 343:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 344:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 345:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** * Return:
+ 346:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *   None
+ 347:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *
+ 348:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** *******************************************************************************/
+ 349:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** void isr_UsbSuspend_ClearPending(void)
+ 350:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** {
+ 352              		.loc 1 350 0
+ 353              		.cfi_startproc
+ 354              		@ args = 0, pretend = 0, frame = 0
+ 355              		@ frame_needed = 0, uses_anonymous_args = 0
+ 356              		@ link register save eliminated.
+ 351:.\Generated_Source\PSoC5/isr_UsbSuspend.c ****     *isr_UsbSuspend_INTC_CLR_PD = isr_UsbSuspend__INTC_MASK;
+ 357              		.loc 1 351 0
+ 358 0000 024B     		ldr	r3, .L45
+ 359 0002 4FF40032 		mov	r2, #131072
+ 360 0006 1A60     		str	r2, [r3, #0]
+ 352:.\Generated_Source\PSoC5/isr_UsbSuspend.c **** }
+ 361              		.loc 1 352 0
+ 362 0008 7047     		bx	lr
+ 363              	.L46:
+ 364 000a 00BF     		.align	2
+ 365              	.L45:
+ 366 000c 80E200E0 		.word	-536812928
+ 367              		.cfi_endproc
+ 368              	.LFE41:
+ 369              		.size	isr_UsbSuspend_ClearPending, .-isr_UsbSuspend_ClearPending
+ 370              		.section	.text.isr_UsbSuspend_Interrupt,"ax",%progbits
+ 371              		.align	1
+ 372              		.global	isr_UsbSuspend_Interrupt
+ 373              		.thumb
+ 374              		.thumb_func
+ 375              		.type	isr_UsbSuspend_Interrupt, %function
+ 376              	isr_UsbSuspend_Interrupt:
+ 377              	.LFB32:
+ 378              		.loc 1 143 0
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382              		@ link register save eliminated.
+ 383              		.loc 1 146 0
+ 384 0000 024B     		ldr	r3, .L49
+ 385 0002 0122     		movs	r2, #1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 14
+
+
+ 386 0004 1A70     		strb	r2, [r3, #0]
+ 387              		.loc 1 149 0
+ 388              		.loc 1 147 0
+ 389 0006 FFF7FEBF 		b	Timer_UsbSuspend_ReadStatusRegister
+ 390              	.L50:
+ 391 000a 00BF     		.align	2
+ 392              	.L49:
+ 393 000c 00000000 		.word	checkActivityFlag
+ 394              		.cfi_endproc
+ 395              	.LFE32:
+ 396              		.size	isr_UsbSuspend_Interrupt, .-isr_UsbSuspend_Interrupt
+ 397              		.text
+ 398              	.Letext0:
+ 399              		.section	.debug_loc,"",%progbits
+ 400              	.Ldebug_loc0:
+ 401              	.LLST3:
+ 402 0000 00000000 		.4byte	.LVL3
+ 403 0004 02000000 		.4byte	.LVL4
+ 404 0008 0100     		.2byte	0x1
+ 405 000a 50       		.byte	0x50
+ 406 000b 00000000 		.4byte	0x0
+ 407 000f 00000000 		.4byte	0x0
+ 408              	.LLST8:
+ 409 0013 00000000 		.4byte	.LFB31
+ 410 0017 02000000 		.4byte	.LCFI0
+ 411 001b 0100     		.2byte	0x1
+ 412 001d 5D       		.byte	0x5d
+ 413 001e 02000000 		.4byte	.LCFI0
+ 414 0022 14000000 		.4byte	.LFE31
+ 415 0026 0200     		.2byte	0x2
+ 416 0028 7D       		.byte	0x7d
+ 417 0029 08       		.sleb128 8
+ 418 002a 00000000 		.4byte	0x0
+ 419 002e 00000000 		.4byte	0x0
+ 420              	.LLST9:
+ 421 0032 00000000 		.4byte	.LFB30
+ 422 0036 02000000 		.4byte	.LCFI1
+ 423 003a 0100     		.2byte	0x1
+ 424 003c 5D       		.byte	0x5d
+ 425 003d 02000000 		.4byte	.LCFI1
+ 426 0041 1C000000 		.4byte	.LFE30
+ 427 0045 0200     		.2byte	0x2
+ 428 0047 7D       		.byte	0x7d
+ 429 0048 08       		.sleb128 8
+ 430 0049 00000000 		.4byte	0x0
+ 431 004d 00000000 		.4byte	0x0
+ 432              	.LLST10:
+ 433 0051 00000000 		.4byte	.LVL5
+ 434 0055 08000000 		.4byte	.LVL6
+ 435 0059 0100     		.2byte	0x1
+ 436 005b 50       		.byte	0x50
+ 437 005c 08000000 		.4byte	.LVL6
+ 438 0060 1C000000 		.4byte	.LFE30
+ 439 0064 0100     		.2byte	0x1
+ 440 0066 54       		.byte	0x54
+ 441 0067 00000000 		.4byte	0x0
+ 442 006b 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 15
+
+
+ 443              	.LLST11:
+ 444 006f 00000000 		.4byte	.LFB29
+ 445 0073 02000000 		.4byte	.LCFI2
+ 446 0077 0100     		.2byte	0x1
+ 447 0079 5D       		.byte	0x5d
+ 448 007a 02000000 		.4byte	.LCFI2
+ 449 007e 20000000 		.4byte	.LFE29
+ 450 0082 0200     		.2byte	0x2
+ 451 0084 7D       		.byte	0x7d
+ 452 0085 08       		.sleb128 8
+ 453 0086 00000000 		.4byte	0x0
+ 454 008a 00000000 		.4byte	0x0
+ 455              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
+ 456              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
+ 457              		.file 4 "./power.h"
+ 458              		.section	.debug_info
+ 459 0000 3F020000 		.4byte	0x23f
+ 460 0004 0200     		.2byte	0x2
+ 461 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 462 000a 04       		.byte	0x4
+ 463 000b 01       		.uleb128 0x1
+ 464 000c E1010000 		.4byte	.LASF31
+ 465 0010 01       		.byte	0x1
+ 466 0011 0E000000 		.4byte	.LASF32
+ 467 0015 3F020000 		.4byte	.LASF33
+ 468 0019 00000000 		.4byte	0x0
+ 469 001d 00000000 		.4byte	0x0
+ 470 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 471 0025 00000000 		.4byte	.Ldebug_line0
+ 472 0029 02       		.uleb128 0x2
+ 473 002a 01       		.byte	0x1
+ 474 002b 06       		.byte	0x6
+ 475 002c 33020000 		.4byte	.LASF0
+ 476 0030 02       		.uleb128 0x2
+ 477 0031 01       		.byte	0x1
+ 478 0032 08       		.byte	0x8
+ 479 0033 E5000000 		.4byte	.LASF1
+ 480 0037 02       		.uleb128 0x2
+ 481 0038 02       		.byte	0x2
+ 482 0039 05       		.byte	0x5
+ 483 003a 1A020000 		.4byte	.LASF2
+ 484 003e 02       		.uleb128 0x2
+ 485 003f 02       		.byte	0x2
+ 486 0040 07       		.byte	0x7
+ 487 0041 1C010000 		.4byte	.LASF3
+ 488 0045 03       		.uleb128 0x3
+ 489 0046 04       		.byte	0x4
+ 490 0047 05       		.byte	0x5
+ 491 0048 696E7400 		.ascii	"int\000"
+ 492 004c 02       		.uleb128 0x2
+ 493 004d 04       		.byte	0x4
+ 494 004e 07       		.byte	0x7
+ 495 004f 7B010000 		.4byte	.LASF4
+ 496 0053 02       		.uleb128 0x2
+ 497 0054 08       		.byte	0x8
+ 498 0055 05       		.byte	0x5
+ 499 0056 00000000 		.4byte	.LASF5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 16
+
+
+ 500 005a 02       		.uleb128 0x2
+ 501 005b 08       		.byte	0x8
+ 502 005c 07       		.byte	0x7
+ 503 005d 90010000 		.4byte	.LASF6
+ 504 0061 02       		.uleb128 0x2
+ 505 0062 04       		.byte	0x4
+ 506 0063 05       		.byte	0x5
+ 507 0064 2A020000 		.4byte	.LASF7
+ 508 0068 04       		.uleb128 0x4
+ 509 0069 04       		.byte	0x4
+ 510 006a 07       		.byte	0x7
+ 511 006b 02       		.uleb128 0x2
+ 512 006c 04       		.byte	0x4
+ 513 006d 07       		.byte	0x7
+ 514 006e 0A010000 		.4byte	.LASF8
+ 515 0072 05       		.uleb128 0x5
+ 516 0073 01       		.byte	0x1
+ 517 0074 06       		.uleb128 0x6
+ 518 0075 04       		.byte	0x4
+ 519 0076 72000000 		.4byte	0x72
+ 520 007a 02       		.uleb128 0x2
+ 521 007b 01       		.byte	0x1
+ 522 007c 08       		.byte	0x8
+ 523 007d 06020000 		.4byte	.LASF9
+ 524 0081 07       		.uleb128 0x7
+ 525 0082 24020000 		.4byte	.LASF12
+ 526 0086 02       		.byte	0x2
+ 527 0087 4C       		.byte	0x4c
+ 528 0088 30000000 		.4byte	0x30
+ 529 008c 02       		.uleb128 0x2
+ 530 008d 04       		.byte	0x4
+ 531 008e 04       		.byte	0x4
+ 532 008f DF000000 		.4byte	.LASF10
+ 533 0093 02       		.uleb128 0x2
+ 534 0094 08       		.byte	0x8
+ 535 0095 04       		.byte	0x4
+ 536 0096 54010000 		.4byte	.LASF11
+ 537 009a 07       		.uleb128 0x7
+ 538 009b A7010000 		.4byte	.LASF13
+ 539 009f 02       		.byte	0x2
+ 540 00a0 EB       		.byte	0xeb
+ 541 00a1 74000000 		.4byte	0x74
+ 542 00a5 08       		.uleb128 0x8
+ 543 00a6 01       		.byte	0x1
+ 544 00a7 ED010000 		.4byte	.LASF15
+ 545 00ab 01       		.byte	0x1
+ 546 00ac A8       		.byte	0xa8
+ 547 00ad 01       		.byte	0x1
+ 548 00ae 00000000 		.4byte	.LFB33
+ 549 00b2 10000000 		.4byte	.LFE33
+ 550 00b6 01       		.byte	0x1
+ 551 00b7 5D       		.byte	0x5d
+ 552 00b8 D7000000 		.4byte	0xd7
+ 553 00bc 09       		.uleb128 0x9
+ 554 00bd 88010000 		.4byte	.LASF17
+ 555 00c1 01       		.byte	0x1
+ 556 00c2 A8       		.byte	0xa8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 17
+
+
+ 557 00c3 9A000000 		.4byte	0x9a
+ 558 00c7 01       		.byte	0x1
+ 559 00c8 50       		.byte	0x50
+ 560 00c9 0A       		.uleb128 0xa
+ 561 00ca 0B020000 		.4byte	.LASF14
+ 562 00ce 01       		.byte	0x1
+ 563 00cf AA       		.byte	0xaa
+ 564 00d0 D7000000 		.4byte	0xd7
+ 565 00d4 01       		.byte	0x1
+ 566 00d5 53       		.byte	0x53
+ 567 00d6 00       		.byte	0x0
+ 568 00d7 06       		.uleb128 0x6
+ 569 00d8 04       		.byte	0x4
+ 570 00d9 9A000000 		.4byte	0x9a
+ 571 00dd 0B       		.uleb128 0xb
+ 572 00de 01       		.byte	0x1
+ 573 00df 54000000 		.4byte	.LASF19
+ 574 00e3 01       		.byte	0x1
+ 575 00e4 C0       		.byte	0xc0
+ 576 00e5 01       		.byte	0x1
+ 577 00e6 9A000000 		.4byte	0x9a
+ 578 00ea 00000000 		.4byte	.LFB34
+ 579 00ee 10000000 		.4byte	.LFE34
+ 580 00f2 01       		.byte	0x1
+ 581 00f3 5D       		.byte	0x5d
+ 582 00f4 06010000 		.4byte	0x106
+ 583 00f8 0A       		.uleb128 0xa
+ 584 00f9 0B020000 		.4byte	.LASF14
+ 585 00fd 01       		.byte	0x1
+ 586 00fe C2       		.byte	0xc2
+ 587 00ff D7000000 		.4byte	0xd7
+ 588 0103 01       		.byte	0x1
+ 589 0104 53       		.byte	0x53
+ 590 0105 00       		.byte	0x0
+ 591 0106 08       		.uleb128 0x8
+ 592 0107 01       		.byte	0x1
+ 593 0108 7D020000 		.4byte	.LASF16
+ 594 010c 01       		.byte	0x1
+ 595 010d DC       		.byte	0xdc
+ 596 010e 01       		.byte	0x1
+ 597 010f 00000000 		.4byte	.LFB35
+ 598 0113 10000000 		.4byte	.LFE35
+ 599 0117 01       		.byte	0x1
+ 600 0118 5D       		.byte	0x5d
+ 601 0119 2D010000 		.4byte	0x12d
+ 602 011d 0C       		.uleb128 0xc
+ 603 011e 72010000 		.4byte	.LASF18
+ 604 0122 01       		.byte	0x1
+ 605 0123 DC       		.byte	0xdc
+ 606 0124 81000000 		.4byte	0x81
+ 607 0128 00000000 		.4byte	.LLST3
+ 608 012c 00       		.byte	0x0
+ 609 012d 0B       		.uleb128 0xb
+ 610 012e 01       		.byte	0x1
+ 611 012f C6010000 		.4byte	.LASF20
+ 612 0133 01       		.byte	0x1
+ 613 0134 F0       		.byte	0xf0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 18
+
+
+ 614 0135 01       		.byte	0x1
+ 615 0136 81000000 		.4byte	0x81
+ 616 013a 00000000 		.4byte	.LFB36
+ 617 013e 0C000000 		.4byte	.LFE36
+ 618 0142 01       		.byte	0x1
+ 619 0143 5D       		.byte	0x5d
+ 620 0144 54010000 		.4byte	0x154
+ 621 0148 0D       		.uleb128 0xd
+ 622 0149 72010000 		.4byte	.LASF18
+ 623 014d 01       		.byte	0x1
+ 624 014e F2       		.byte	0xf2
+ 625 014f 81000000 		.4byte	0x81
+ 626 0153 00       		.byte	0x0
+ 627 0154 0E       		.uleb128 0xe
+ 628 0155 01       		.byte	0x1
+ 629 0156 A0000000 		.4byte	.LASF21
+ 630 015a 01       		.byte	0x1
+ 631 015b 0901     		.2byte	0x109
+ 632 015d 01       		.byte	0x1
+ 633 015e 00000000 		.4byte	.LFB37
+ 634 0162 10000000 		.4byte	.LFE37
+ 635 0166 01       		.byte	0x1
+ 636 0167 5D       		.byte	0x5d
+ 637 0168 0F       		.uleb128 0xf
+ 638 0169 01       		.byte	0x1
+ 639 016a 2F010000 		.4byte	.LASF34
+ 640 016e 01       		.byte	0x1
+ 641 016f 1E01     		.2byte	0x11e
+ 642 0171 01       		.byte	0x1
+ 643 0172 81000000 		.4byte	0x81
+ 644 0176 00000000 		.4byte	.LFB38
+ 645 017a 10000000 		.4byte	.LFE38
+ 646 017e 01       		.byte	0x1
+ 647 017f 5D       		.byte	0x5d
+ 648 0180 0E       		.uleb128 0xe
+ 649 0181 01       		.byte	0x1
+ 650 0182 5B010000 		.4byte	.LASF22
+ 651 0186 01       		.byte	0x1
+ 652 0187 3301     		.2byte	0x133
+ 653 0189 01       		.byte	0x1
+ 654 018a 00000000 		.4byte	.LFB39
+ 655 018e 10000000 		.4byte	.LFE39
+ 656 0192 01       		.byte	0x1
+ 657 0193 5D       		.byte	0x5d
+ 658 0194 10       		.uleb128 0x10
+ 659 0195 01       		.byte	0x1
+ 660 0196 B6000000 		.4byte	.LASF23
+ 661 019a 01       		.byte	0x1
+ 662 019b 74       		.byte	0x74
+ 663 019c 01       		.byte	0x1
+ 664 019d 00000000 		.4byte	.LFB31
+ 665 01a1 14000000 		.4byte	.LFE31
+ 666 01a5 13000000 		.4byte	.LLST8
+ 667 01a9 11       		.uleb128 0x11
+ 668 01aa 01       		.byte	0x1
+ 669 01ab F3000000 		.4byte	.LASF24
+ 670 01af 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 19
+
+
+ 671 01b0 57       		.byte	0x57
+ 672 01b1 01       		.byte	0x1
+ 673 01b2 00000000 		.4byte	.LFB30
+ 674 01b6 1C000000 		.4byte	.LFE30
+ 675 01ba 32000000 		.4byte	.LLST9
+ 676 01be D2010000 		.4byte	0x1d2
+ 677 01c2 0C       		.uleb128 0xc
+ 678 01c3 88010000 		.4byte	.LASF17
+ 679 01c7 01       		.byte	0x1
+ 680 01c8 57       		.byte	0x57
+ 681 01c9 9A000000 		.4byte	0x9a
+ 682 01cd 51000000 		.4byte	.LLST10
+ 683 01d1 00       		.byte	0x0
+ 684 01d2 10       		.uleb128 0x10
+ 685 01d3 01       		.byte	0x1
+ 686 01d4 CA000000 		.4byte	.LASF25
+ 687 01d8 01       		.byte	0x1
+ 688 01d9 39       		.byte	0x39
+ 689 01da 01       		.byte	0x1
+ 690 01db 00000000 		.4byte	.LFB29
+ 691 01df 20000000 		.4byte	.LFE29
+ 692 01e3 6F000000 		.4byte	.LLST11
+ 693 01e7 0E       		.uleb128 0xe
+ 694 01e8 01       		.byte	0x1
+ 695 01e9 6D000000 		.4byte	.LASF26
+ 696 01ed 01       		.byte	0x1
+ 697 01ee 4901     		.2byte	0x149
+ 698 01f0 01       		.byte	0x1
+ 699 01f1 00000000 		.4byte	.LFB40
+ 700 01f5 10000000 		.4byte	.LFE40
+ 701 01f9 01       		.byte	0x1
+ 702 01fa 5D       		.byte	0x5d
+ 703 01fb 0E       		.uleb128 0xe
+ 704 01fc 01       		.byte	0x1
+ 705 01fd 38000000 		.4byte	.LASF27
+ 706 0201 01       		.byte	0x1
+ 707 0202 5D01     		.2byte	0x15d
+ 708 0204 01       		.byte	0x1
+ 709 0205 00000000 		.4byte	.LFB41
+ 710 0209 10000000 		.4byte	.LFE41
+ 711 020d 01       		.byte	0x1
+ 712 020e 5D       		.byte	0x5d
+ 713 020f 12       		.uleb128 0x12
+ 714 0210 01       		.byte	0x1
+ 715 0211 87000000 		.4byte	.LASF28
+ 716 0215 01       		.byte	0x1
+ 717 0216 8E       		.byte	0x8e
+ 718 0217 01       		.byte	0x1
+ 719 0218 00000000 		.4byte	.LFB32
+ 720 021c 10000000 		.4byte	.LFE32
+ 721 0220 01       		.byte	0x1
+ 722 0221 5D       		.byte	0x5d
+ 723 0222 13       		.uleb128 0x13
+ 724 0223 47010000 		.4byte	.LASF29
+ 725 0227 03       		.byte	0x3
+ 726 0228 CE06     		.2byte	0x6ce
+ 727 022a 30020000 		.4byte	0x230
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 20
+
+
+ 728 022e 01       		.byte	0x1
+ 729 022f 01       		.byte	0x1
+ 730 0230 14       		.uleb128 0x14
+ 731 0231 45000000 		.4byte	0x45
+ 732 0235 15       		.uleb128 0x15
+ 733 0236 B4010000 		.4byte	.LASF30
+ 734 023a 04       		.byte	0x4
+ 735 023b 49       		.byte	0x49
+ 736 023c 81000000 		.4byte	0x81
+ 737 0240 01       		.byte	0x1
+ 738 0241 01       		.byte	0x1
+ 739 0242 00       		.byte	0x0
+ 740              		.section	.debug_abbrev
+ 741 0000 01       		.uleb128 0x1
+ 742 0001 11       		.uleb128 0x11
+ 743 0002 01       		.byte	0x1
+ 744 0003 25       		.uleb128 0x25
+ 745 0004 0E       		.uleb128 0xe
+ 746 0005 13       		.uleb128 0x13
+ 747 0006 0B       		.uleb128 0xb
+ 748 0007 03       		.uleb128 0x3
+ 749 0008 0E       		.uleb128 0xe
+ 750 0009 1B       		.uleb128 0x1b
+ 751 000a 0E       		.uleb128 0xe
+ 752 000b 11       		.uleb128 0x11
+ 753 000c 01       		.uleb128 0x1
+ 754 000d 52       		.uleb128 0x52
+ 755 000e 01       		.uleb128 0x1
+ 756 000f 55       		.uleb128 0x55
+ 757 0010 06       		.uleb128 0x6
+ 758 0011 10       		.uleb128 0x10
+ 759 0012 06       		.uleb128 0x6
+ 760 0013 00       		.byte	0x0
+ 761 0014 00       		.byte	0x0
+ 762 0015 02       		.uleb128 0x2
+ 763 0016 24       		.uleb128 0x24
+ 764 0017 00       		.byte	0x0
+ 765 0018 0B       		.uleb128 0xb
+ 766 0019 0B       		.uleb128 0xb
+ 767 001a 3E       		.uleb128 0x3e
+ 768 001b 0B       		.uleb128 0xb
+ 769 001c 03       		.uleb128 0x3
+ 770 001d 0E       		.uleb128 0xe
+ 771 001e 00       		.byte	0x0
+ 772 001f 00       		.byte	0x0
+ 773 0020 03       		.uleb128 0x3
+ 774 0021 24       		.uleb128 0x24
+ 775 0022 00       		.byte	0x0
+ 776 0023 0B       		.uleb128 0xb
+ 777 0024 0B       		.uleb128 0xb
+ 778 0025 3E       		.uleb128 0x3e
+ 779 0026 0B       		.uleb128 0xb
+ 780 0027 03       		.uleb128 0x3
+ 781 0028 08       		.uleb128 0x8
+ 782 0029 00       		.byte	0x0
+ 783 002a 00       		.byte	0x0
+ 784 002b 04       		.uleb128 0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 21
+
+
+ 785 002c 24       		.uleb128 0x24
+ 786 002d 00       		.byte	0x0
+ 787 002e 0B       		.uleb128 0xb
+ 788 002f 0B       		.uleb128 0xb
+ 789 0030 3E       		.uleb128 0x3e
+ 790 0031 0B       		.uleb128 0xb
+ 791 0032 00       		.byte	0x0
+ 792 0033 00       		.byte	0x0
+ 793 0034 05       		.uleb128 0x5
+ 794 0035 15       		.uleb128 0x15
+ 795 0036 00       		.byte	0x0
+ 796 0037 27       		.uleb128 0x27
+ 797 0038 0C       		.uleb128 0xc
+ 798 0039 00       		.byte	0x0
+ 799 003a 00       		.byte	0x0
+ 800 003b 06       		.uleb128 0x6
+ 801 003c 0F       		.uleb128 0xf
+ 802 003d 00       		.byte	0x0
+ 803 003e 0B       		.uleb128 0xb
+ 804 003f 0B       		.uleb128 0xb
+ 805 0040 49       		.uleb128 0x49
+ 806 0041 13       		.uleb128 0x13
+ 807 0042 00       		.byte	0x0
+ 808 0043 00       		.byte	0x0
+ 809 0044 07       		.uleb128 0x7
+ 810 0045 16       		.uleb128 0x16
+ 811 0046 00       		.byte	0x0
+ 812 0047 03       		.uleb128 0x3
+ 813 0048 0E       		.uleb128 0xe
+ 814 0049 3A       		.uleb128 0x3a
+ 815 004a 0B       		.uleb128 0xb
+ 816 004b 3B       		.uleb128 0x3b
+ 817 004c 0B       		.uleb128 0xb
+ 818 004d 49       		.uleb128 0x49
+ 819 004e 13       		.uleb128 0x13
+ 820 004f 00       		.byte	0x0
+ 821 0050 00       		.byte	0x0
+ 822 0051 08       		.uleb128 0x8
+ 823 0052 2E       		.uleb128 0x2e
+ 824 0053 01       		.byte	0x1
+ 825 0054 3F       		.uleb128 0x3f
+ 826 0055 0C       		.uleb128 0xc
+ 827 0056 03       		.uleb128 0x3
+ 828 0057 0E       		.uleb128 0xe
+ 829 0058 3A       		.uleb128 0x3a
+ 830 0059 0B       		.uleb128 0xb
+ 831 005a 3B       		.uleb128 0x3b
+ 832 005b 0B       		.uleb128 0xb
+ 833 005c 27       		.uleb128 0x27
+ 834 005d 0C       		.uleb128 0xc
+ 835 005e 11       		.uleb128 0x11
+ 836 005f 01       		.uleb128 0x1
+ 837 0060 12       		.uleb128 0x12
+ 838 0061 01       		.uleb128 0x1
+ 839 0062 40       		.uleb128 0x40
+ 840 0063 0A       		.uleb128 0xa
+ 841 0064 01       		.uleb128 0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 22
+
+
+ 842 0065 13       		.uleb128 0x13
+ 843 0066 00       		.byte	0x0
+ 844 0067 00       		.byte	0x0
+ 845 0068 09       		.uleb128 0x9
+ 846 0069 05       		.uleb128 0x5
+ 847 006a 00       		.byte	0x0
+ 848 006b 03       		.uleb128 0x3
+ 849 006c 0E       		.uleb128 0xe
+ 850 006d 3A       		.uleb128 0x3a
+ 851 006e 0B       		.uleb128 0xb
+ 852 006f 3B       		.uleb128 0x3b
+ 853 0070 0B       		.uleb128 0xb
+ 854 0071 49       		.uleb128 0x49
+ 855 0072 13       		.uleb128 0x13
+ 856 0073 02       		.uleb128 0x2
+ 857 0074 0A       		.uleb128 0xa
+ 858 0075 00       		.byte	0x0
+ 859 0076 00       		.byte	0x0
+ 860 0077 0A       		.uleb128 0xa
+ 861 0078 34       		.uleb128 0x34
+ 862 0079 00       		.byte	0x0
+ 863 007a 03       		.uleb128 0x3
+ 864 007b 0E       		.uleb128 0xe
+ 865 007c 3A       		.uleb128 0x3a
+ 866 007d 0B       		.uleb128 0xb
+ 867 007e 3B       		.uleb128 0x3b
+ 868 007f 0B       		.uleb128 0xb
+ 869 0080 49       		.uleb128 0x49
+ 870 0081 13       		.uleb128 0x13
+ 871 0082 02       		.uleb128 0x2
+ 872 0083 0A       		.uleb128 0xa
+ 873 0084 00       		.byte	0x0
+ 874 0085 00       		.byte	0x0
+ 875 0086 0B       		.uleb128 0xb
+ 876 0087 2E       		.uleb128 0x2e
+ 877 0088 01       		.byte	0x1
+ 878 0089 3F       		.uleb128 0x3f
+ 879 008a 0C       		.uleb128 0xc
+ 880 008b 03       		.uleb128 0x3
+ 881 008c 0E       		.uleb128 0xe
+ 882 008d 3A       		.uleb128 0x3a
+ 883 008e 0B       		.uleb128 0xb
+ 884 008f 3B       		.uleb128 0x3b
+ 885 0090 0B       		.uleb128 0xb
+ 886 0091 27       		.uleb128 0x27
+ 887 0092 0C       		.uleb128 0xc
+ 888 0093 49       		.uleb128 0x49
+ 889 0094 13       		.uleb128 0x13
+ 890 0095 11       		.uleb128 0x11
+ 891 0096 01       		.uleb128 0x1
+ 892 0097 12       		.uleb128 0x12
+ 893 0098 01       		.uleb128 0x1
+ 894 0099 40       		.uleb128 0x40
+ 895 009a 0A       		.uleb128 0xa
+ 896 009b 01       		.uleb128 0x1
+ 897 009c 13       		.uleb128 0x13
+ 898 009d 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 23
+
+
+ 899 009e 00       		.byte	0x0
+ 900 009f 0C       		.uleb128 0xc
+ 901 00a0 05       		.uleb128 0x5
+ 902 00a1 00       		.byte	0x0
+ 903 00a2 03       		.uleb128 0x3
+ 904 00a3 0E       		.uleb128 0xe
+ 905 00a4 3A       		.uleb128 0x3a
+ 906 00a5 0B       		.uleb128 0xb
+ 907 00a6 3B       		.uleb128 0x3b
+ 908 00a7 0B       		.uleb128 0xb
+ 909 00a8 49       		.uleb128 0x49
+ 910 00a9 13       		.uleb128 0x13
+ 911 00aa 02       		.uleb128 0x2
+ 912 00ab 06       		.uleb128 0x6
+ 913 00ac 00       		.byte	0x0
+ 914 00ad 00       		.byte	0x0
+ 915 00ae 0D       		.uleb128 0xd
+ 916 00af 34       		.uleb128 0x34
+ 917 00b0 00       		.byte	0x0
+ 918 00b1 03       		.uleb128 0x3
+ 919 00b2 0E       		.uleb128 0xe
+ 920 00b3 3A       		.uleb128 0x3a
+ 921 00b4 0B       		.uleb128 0xb
+ 922 00b5 3B       		.uleb128 0x3b
+ 923 00b6 0B       		.uleb128 0xb
+ 924 00b7 49       		.uleb128 0x49
+ 925 00b8 13       		.uleb128 0x13
+ 926 00b9 00       		.byte	0x0
+ 927 00ba 00       		.byte	0x0
+ 928 00bb 0E       		.uleb128 0xe
+ 929 00bc 2E       		.uleb128 0x2e
+ 930 00bd 00       		.byte	0x0
+ 931 00be 3F       		.uleb128 0x3f
+ 932 00bf 0C       		.uleb128 0xc
+ 933 00c0 03       		.uleb128 0x3
+ 934 00c1 0E       		.uleb128 0xe
+ 935 00c2 3A       		.uleb128 0x3a
+ 936 00c3 0B       		.uleb128 0xb
+ 937 00c4 3B       		.uleb128 0x3b
+ 938 00c5 05       		.uleb128 0x5
+ 939 00c6 27       		.uleb128 0x27
+ 940 00c7 0C       		.uleb128 0xc
+ 941 00c8 11       		.uleb128 0x11
+ 942 00c9 01       		.uleb128 0x1
+ 943 00ca 12       		.uleb128 0x12
+ 944 00cb 01       		.uleb128 0x1
+ 945 00cc 40       		.uleb128 0x40
+ 946 00cd 0A       		.uleb128 0xa
+ 947 00ce 00       		.byte	0x0
+ 948 00cf 00       		.byte	0x0
+ 949 00d0 0F       		.uleb128 0xf
+ 950 00d1 2E       		.uleb128 0x2e
+ 951 00d2 00       		.byte	0x0
+ 952 00d3 3F       		.uleb128 0x3f
+ 953 00d4 0C       		.uleb128 0xc
+ 954 00d5 03       		.uleb128 0x3
+ 955 00d6 0E       		.uleb128 0xe
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 24
+
+
+ 956 00d7 3A       		.uleb128 0x3a
+ 957 00d8 0B       		.uleb128 0xb
+ 958 00d9 3B       		.uleb128 0x3b
+ 959 00da 05       		.uleb128 0x5
+ 960 00db 27       		.uleb128 0x27
+ 961 00dc 0C       		.uleb128 0xc
+ 962 00dd 49       		.uleb128 0x49
+ 963 00de 13       		.uleb128 0x13
+ 964 00df 11       		.uleb128 0x11
+ 965 00e0 01       		.uleb128 0x1
+ 966 00e1 12       		.uleb128 0x12
+ 967 00e2 01       		.uleb128 0x1
+ 968 00e3 40       		.uleb128 0x40
+ 969 00e4 0A       		.uleb128 0xa
+ 970 00e5 00       		.byte	0x0
+ 971 00e6 00       		.byte	0x0
+ 972 00e7 10       		.uleb128 0x10
+ 973 00e8 2E       		.uleb128 0x2e
+ 974 00e9 00       		.byte	0x0
+ 975 00ea 3F       		.uleb128 0x3f
+ 976 00eb 0C       		.uleb128 0xc
+ 977 00ec 03       		.uleb128 0x3
+ 978 00ed 0E       		.uleb128 0xe
+ 979 00ee 3A       		.uleb128 0x3a
+ 980 00ef 0B       		.uleb128 0xb
+ 981 00f0 3B       		.uleb128 0x3b
+ 982 00f1 0B       		.uleb128 0xb
+ 983 00f2 27       		.uleb128 0x27
+ 984 00f3 0C       		.uleb128 0xc
+ 985 00f4 11       		.uleb128 0x11
+ 986 00f5 01       		.uleb128 0x1
+ 987 00f6 12       		.uleb128 0x12
+ 988 00f7 01       		.uleb128 0x1
+ 989 00f8 40       		.uleb128 0x40
+ 990 00f9 06       		.uleb128 0x6
+ 991 00fa 00       		.byte	0x0
+ 992 00fb 00       		.byte	0x0
+ 993 00fc 11       		.uleb128 0x11
+ 994 00fd 2E       		.uleb128 0x2e
+ 995 00fe 01       		.byte	0x1
+ 996 00ff 3F       		.uleb128 0x3f
+ 997 0100 0C       		.uleb128 0xc
+ 998 0101 03       		.uleb128 0x3
+ 999 0102 0E       		.uleb128 0xe
+ 1000 0103 3A       		.uleb128 0x3a
+ 1001 0104 0B       		.uleb128 0xb
+ 1002 0105 3B       		.uleb128 0x3b
+ 1003 0106 0B       		.uleb128 0xb
+ 1004 0107 27       		.uleb128 0x27
+ 1005 0108 0C       		.uleb128 0xc
+ 1006 0109 11       		.uleb128 0x11
+ 1007 010a 01       		.uleb128 0x1
+ 1008 010b 12       		.uleb128 0x12
+ 1009 010c 01       		.uleb128 0x1
+ 1010 010d 40       		.uleb128 0x40
+ 1011 010e 06       		.uleb128 0x6
+ 1012 010f 01       		.uleb128 0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 25
+
+
+ 1013 0110 13       		.uleb128 0x13
+ 1014 0111 00       		.byte	0x0
+ 1015 0112 00       		.byte	0x0
+ 1016 0113 12       		.uleb128 0x12
+ 1017 0114 2E       		.uleb128 0x2e
+ 1018 0115 00       		.byte	0x0
+ 1019 0116 3F       		.uleb128 0x3f
+ 1020 0117 0C       		.uleb128 0xc
+ 1021 0118 03       		.uleb128 0x3
+ 1022 0119 0E       		.uleb128 0xe
+ 1023 011a 3A       		.uleb128 0x3a
+ 1024 011b 0B       		.uleb128 0xb
+ 1025 011c 3B       		.uleb128 0x3b
+ 1026 011d 0B       		.uleb128 0xb
+ 1027 011e 27       		.uleb128 0x27
+ 1028 011f 0C       		.uleb128 0xc
+ 1029 0120 11       		.uleb128 0x11
+ 1030 0121 01       		.uleb128 0x1
+ 1031 0122 12       		.uleb128 0x12
+ 1032 0123 01       		.uleb128 0x1
+ 1033 0124 40       		.uleb128 0x40
+ 1034 0125 0A       		.uleb128 0xa
+ 1035 0126 00       		.byte	0x0
+ 1036 0127 00       		.byte	0x0
+ 1037 0128 13       		.uleb128 0x13
+ 1038 0129 34       		.uleb128 0x34
+ 1039 012a 00       		.byte	0x0
+ 1040 012b 03       		.uleb128 0x3
+ 1041 012c 0E       		.uleb128 0xe
+ 1042 012d 3A       		.uleb128 0x3a
+ 1043 012e 0B       		.uleb128 0xb
+ 1044 012f 3B       		.uleb128 0x3b
+ 1045 0130 05       		.uleb128 0x5
+ 1046 0131 49       		.uleb128 0x49
+ 1047 0132 13       		.uleb128 0x13
+ 1048 0133 3F       		.uleb128 0x3f
+ 1049 0134 0C       		.uleb128 0xc
+ 1050 0135 3C       		.uleb128 0x3c
+ 1051 0136 0C       		.uleb128 0xc
+ 1052 0137 00       		.byte	0x0
+ 1053 0138 00       		.byte	0x0
+ 1054 0139 14       		.uleb128 0x14
+ 1055 013a 35       		.uleb128 0x35
+ 1056 013b 00       		.byte	0x0
+ 1057 013c 49       		.uleb128 0x49
+ 1058 013d 13       		.uleb128 0x13
+ 1059 013e 00       		.byte	0x0
+ 1060 013f 00       		.byte	0x0
+ 1061 0140 15       		.uleb128 0x15
+ 1062 0141 34       		.uleb128 0x34
+ 1063 0142 00       		.byte	0x0
+ 1064 0143 03       		.uleb128 0x3
+ 1065 0144 0E       		.uleb128 0xe
+ 1066 0145 3A       		.uleb128 0x3a
+ 1067 0146 0B       		.uleb128 0xb
+ 1068 0147 3B       		.uleb128 0x3b
+ 1069 0148 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 26
+
+
+ 1070 0149 49       		.uleb128 0x49
+ 1071 014a 13       		.uleb128 0x13
+ 1072 014b 3F       		.uleb128 0x3f
+ 1073 014c 0C       		.uleb128 0xc
+ 1074 014d 3C       		.uleb128 0x3c
+ 1075 014e 0C       		.uleb128 0xc
+ 1076 014f 00       		.byte	0x0
+ 1077 0150 00       		.byte	0x0
+ 1078 0151 00       		.byte	0x0
+ 1079              		.section	.debug_pubnames,"",%progbits
+ 1080 0000 7E010000 		.4byte	0x17e
+ 1081 0004 0200     		.2byte	0x2
+ 1082 0006 00000000 		.4byte	.Ldebug_info0
+ 1083 000a 43020000 		.4byte	0x243
+ 1084 000e A5000000 		.4byte	0xa5
+ 1085 0012 6973725F 		.ascii	"isr_UsbSuspend_SetVector\000"
+ 1085      55736253 
+ 1085      75737065 
+ 1085      6E645F53 
+ 1085      65745665 
+ 1086 002b DD000000 		.4byte	0xdd
+ 1087 002f 6973725F 		.ascii	"isr_UsbSuspend_GetVector\000"
+ 1087      55736253 
+ 1087      75737065 
+ 1087      6E645F47 
+ 1087      65745665 
+ 1088 0048 06010000 		.4byte	0x106
+ 1089 004c 6973725F 		.ascii	"isr_UsbSuspend_SetPriority\000"
+ 1089      55736253 
+ 1089      75737065 
+ 1089      6E645F53 
+ 1089      65745072 
+ 1090 0067 2D010000 		.4byte	0x12d
+ 1091 006b 6973725F 		.ascii	"isr_UsbSuspend_GetPriority\000"
+ 1091      55736253 
+ 1091      75737065 
+ 1091      6E645F47 
+ 1091      65745072 
+ 1092 0086 54010000 		.4byte	0x154
+ 1093 008a 6973725F 		.ascii	"isr_UsbSuspend_Enable\000"
+ 1093      55736253 
+ 1093      75737065 
+ 1093      6E645F45 
+ 1093      6E61626C 
+ 1094 00a0 68010000 		.4byte	0x168
+ 1095 00a4 6973725F 		.ascii	"isr_UsbSuspend_GetState\000"
+ 1095      55736253 
+ 1095      75737065 
+ 1095      6E645F47 
+ 1095      65745374 
+ 1096 00bc 80010000 		.4byte	0x180
+ 1097 00c0 6973725F 		.ascii	"isr_UsbSuspend_Disable\000"
+ 1097      55736253 
+ 1097      75737065 
+ 1097      6E645F44 
+ 1097      69736162 
+ 1098 00d7 94010000 		.4byte	0x194
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 27
+
+
+ 1099 00db 6973725F 		.ascii	"isr_UsbSuspend_Stop\000"
+ 1099      55736253 
+ 1099      75737065 
+ 1099      6E645F53 
+ 1099      746F7000 
+ 1100 00ef A9010000 		.4byte	0x1a9
+ 1101 00f3 6973725F 		.ascii	"isr_UsbSuspend_StartEx\000"
+ 1101      55736253 
+ 1101      75737065 
+ 1101      6E645F53 
+ 1101      74617274 
+ 1102 010a D2010000 		.4byte	0x1d2
+ 1103 010e 6973725F 		.ascii	"isr_UsbSuspend_Start\000"
+ 1103      55736253 
+ 1103      75737065 
+ 1103      6E645F53 
+ 1103      74617274 
+ 1104 0123 E7010000 		.4byte	0x1e7
+ 1105 0127 6973725F 		.ascii	"isr_UsbSuspend_SetPending\000"
+ 1105      55736253 
+ 1105      75737065 
+ 1105      6E645F53 
+ 1105      65745065 
+ 1106 0141 FB010000 		.4byte	0x1fb
+ 1107 0145 6973725F 		.ascii	"isr_UsbSuspend_ClearPending\000"
+ 1107      55736253 
+ 1107      75737065 
+ 1107      6E645F43 
+ 1107      6C656172 
+ 1108 0161 0F020000 		.4byte	0x20f
+ 1109 0165 6973725F 		.ascii	"isr_UsbSuspend_Interrupt\000"
+ 1109      55736253 
+ 1109      75737065 
+ 1109      6E645F49 
+ 1109      6E746572 
+ 1110 017e 00000000 		.4byte	0x0
+ 1111              		.section	.debug_aranges,"",%progbits
+ 1112 0000 7C000000 		.4byte	0x7c
+ 1113 0004 0200     		.2byte	0x2
+ 1114 0006 00000000 		.4byte	.Ldebug_info0
+ 1115 000a 04       		.byte	0x4
+ 1116 000b 00       		.byte	0x0
+ 1117 000c 0000     		.2byte	0x0
+ 1118 000e 0000     		.2byte	0x0
+ 1119 0010 00000000 		.4byte	.LFB33
+ 1120 0014 10000000 		.4byte	.LFE33-.LFB33
+ 1121 0018 00000000 		.4byte	.LFB34
+ 1122 001c 10000000 		.4byte	.LFE34-.LFB34
+ 1123 0020 00000000 		.4byte	.LFB35
+ 1124 0024 10000000 		.4byte	.LFE35-.LFB35
+ 1125 0028 00000000 		.4byte	.LFB36
+ 1126 002c 0C000000 		.4byte	.LFE36-.LFB36
+ 1127 0030 00000000 		.4byte	.LFB37
+ 1128 0034 10000000 		.4byte	.LFE37-.LFB37
+ 1129 0038 00000000 		.4byte	.LFB38
+ 1130 003c 10000000 		.4byte	.LFE38-.LFB38
+ 1131 0040 00000000 		.4byte	.LFB39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 28
+
+
+ 1132 0044 10000000 		.4byte	.LFE39-.LFB39
+ 1133 0048 00000000 		.4byte	.LFB31
+ 1134 004c 14000000 		.4byte	.LFE31-.LFB31
+ 1135 0050 00000000 		.4byte	.LFB30
+ 1136 0054 1C000000 		.4byte	.LFE30-.LFB30
+ 1137 0058 00000000 		.4byte	.LFB29
+ 1138 005c 20000000 		.4byte	.LFE29-.LFB29
+ 1139 0060 00000000 		.4byte	.LFB40
+ 1140 0064 10000000 		.4byte	.LFE40-.LFB40
+ 1141 0068 00000000 		.4byte	.LFB41
+ 1142 006c 10000000 		.4byte	.LFE41-.LFB41
+ 1143 0070 00000000 		.4byte	.LFB32
+ 1144 0074 10000000 		.4byte	.LFE32-.LFB32
+ 1145 0078 00000000 		.4byte	0x0
+ 1146 007c 00000000 		.4byte	0x0
+ 1147              		.section	.debug_ranges,"",%progbits
+ 1148              	.Ldebug_ranges0:
+ 1149 0000 00000000 		.4byte	.Ltext0
+ 1150 0004 00000000 		.4byte	.Letext0
+ 1151 0008 00000000 		.4byte	.LFB33
+ 1152 000c 10000000 		.4byte	.LFE33
+ 1153 0010 00000000 		.4byte	.LFB34
+ 1154 0014 10000000 		.4byte	.LFE34
+ 1155 0018 00000000 		.4byte	.LFB35
+ 1156 001c 10000000 		.4byte	.LFE35
+ 1157 0020 00000000 		.4byte	.LFB36
+ 1158 0024 0C000000 		.4byte	.LFE36
+ 1159 0028 00000000 		.4byte	.LFB37
+ 1160 002c 10000000 		.4byte	.LFE37
+ 1161 0030 00000000 		.4byte	.LFB38
+ 1162 0034 10000000 		.4byte	.LFE38
+ 1163 0038 00000000 		.4byte	.LFB39
+ 1164 003c 10000000 		.4byte	.LFE39
+ 1165 0040 00000000 		.4byte	.LFB31
+ 1166 0044 14000000 		.4byte	.LFE31
+ 1167 0048 00000000 		.4byte	.LFB30
+ 1168 004c 1C000000 		.4byte	.LFE30
+ 1169 0050 00000000 		.4byte	.LFB29
+ 1170 0054 20000000 		.4byte	.LFE29
+ 1171 0058 00000000 		.4byte	.LFB40
+ 1172 005c 10000000 		.4byte	.LFE40
+ 1173 0060 00000000 		.4byte	.LFB41
+ 1174 0064 10000000 		.4byte	.LFE41
+ 1175 0068 00000000 		.4byte	.LFB32
+ 1176 006c 10000000 		.4byte	.LFE32
+ 1177 0070 00000000 		.4byte	0x0
+ 1178 0074 00000000 		.4byte	0x0
+ 1179              		.section	.debug_str,"MS",%progbits,1
+ 1180              	.LASF5:
+ 1181 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1181      206C6F6E 
+ 1181      6720696E 
+ 1181      7400
+ 1182              	.LASF32:
+ 1183 000e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\isr_UsbSuspend.c\000"
+ 1183      6E657261 
+ 1183      7465645F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 29
+
+
+ 1183      536F7572 
+ 1183      63655C50 
+ 1184              	.LASF27:
+ 1185 0038 6973725F 		.ascii	"isr_UsbSuspend_ClearPending\000"
+ 1185      55736253 
+ 1185      75737065 
+ 1185      6E645F43 
+ 1185      6C656172 
+ 1186              	.LASF19:
+ 1187 0054 6973725F 		.ascii	"isr_UsbSuspend_GetVector\000"
+ 1187      55736253 
+ 1187      75737065 
+ 1187      6E645F47 
+ 1187      65745665 
+ 1188              	.LASF26:
+ 1189 006d 6973725F 		.ascii	"isr_UsbSuspend_SetPending\000"
+ 1189      55736253 
+ 1189      75737065 
+ 1189      6E645F53 
+ 1189      65745065 
+ 1190              	.LASF28:
+ 1191 0087 6973725F 		.ascii	"isr_UsbSuspend_Interrupt\000"
+ 1191      55736253 
+ 1191      75737065 
+ 1191      6E645F49 
+ 1191      6E746572 
+ 1192              	.LASF21:
+ 1193 00a0 6973725F 		.ascii	"isr_UsbSuspend_Enable\000"
+ 1193      55736253 
+ 1193      75737065 
+ 1193      6E645F45 
+ 1193      6E61626C 
+ 1194              	.LASF23:
+ 1195 00b6 6973725F 		.ascii	"isr_UsbSuspend_Stop\000"
+ 1195      55736253 
+ 1195      75737065 
+ 1195      6E645F53 
+ 1195      746F7000 
+ 1196              	.LASF25:
+ 1197 00ca 6973725F 		.ascii	"isr_UsbSuspend_Start\000"
+ 1197      55736253 
+ 1197      75737065 
+ 1197      6E645F53 
+ 1197      74617274 
+ 1198              	.LASF10:
+ 1199 00df 666C6F61 		.ascii	"float\000"
+ 1199      7400
+ 1200              	.LASF1:
+ 1201 00e5 756E7369 		.ascii	"unsigned char\000"
+ 1201      676E6564 
+ 1201      20636861 
+ 1201      7200
+ 1202              	.LASF24:
+ 1203 00f3 6973725F 		.ascii	"isr_UsbSuspend_StartEx\000"
+ 1203      55736253 
+ 1203      75737065 
+ 1203      6E645F53 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 30
+
+
+ 1203      74617274 
+ 1204              	.LASF8:
+ 1205 010a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1205      20756E73 
+ 1205      69676E65 
+ 1205      6420696E 
+ 1205      7400
+ 1206              	.LASF3:
+ 1207 011c 73686F72 		.ascii	"short unsigned int\000"
+ 1207      7420756E 
+ 1207      7369676E 
+ 1207      65642069 
+ 1207      6E7400
+ 1208              	.LASF34:
+ 1209 012f 6973725F 		.ascii	"isr_UsbSuspend_GetState\000"
+ 1209      55736253 
+ 1209      75737065 
+ 1209      6E645F47 
+ 1209      65745374 
+ 1210              	.LASF29:
+ 1211 0147 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1211      52784275 
+ 1211      66666572 
+ 1211      00
+ 1212              	.LASF11:
+ 1213 0154 646F7562 		.ascii	"double\000"
+ 1213      6C6500
+ 1214              	.LASF22:
+ 1215 015b 6973725F 		.ascii	"isr_UsbSuspend_Disable\000"
+ 1215      55736253 
+ 1215      75737065 
+ 1215      6E645F44 
+ 1215      69736162 
+ 1216              	.LASF18:
+ 1217 0172 7072696F 		.ascii	"priority\000"
+ 1217      72697479 
+ 1217      00
+ 1218              	.LASF4:
+ 1219 017b 756E7369 		.ascii	"unsigned int\000"
+ 1219      676E6564 
+ 1219      20696E74 
+ 1219      00
+ 1220              	.LASF17:
+ 1221 0188 61646472 		.ascii	"address\000"
+ 1221      65737300 
+ 1222              	.LASF6:
+ 1223 0190 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1223      206C6F6E 
+ 1223      6720756E 
+ 1223      7369676E 
+ 1223      65642069 
+ 1224              	.LASF13:
+ 1225 01a7 63796973 		.ascii	"cyisraddress\000"
+ 1225      72616464 
+ 1225      72657373 
+ 1225      00
+ 1226              	.LASF30:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 31
+
+
+ 1227 01b4 63686563 		.ascii	"checkActivityFlag\000"
+ 1227      6B416374 
+ 1227      69766974 
+ 1227      79466C61 
+ 1227      6700
+ 1228              	.LASF20:
+ 1229 01c6 6973725F 		.ascii	"isr_UsbSuspend_GetPriority\000"
+ 1229      55736253 
+ 1229      75737065 
+ 1229      6E645F47 
+ 1229      65745072 
+ 1230              	.LASF31:
+ 1231 01e1 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1231      4320342E 
+ 1231      342E3100 
+ 1232              	.LASF15:
+ 1233 01ed 6973725F 		.ascii	"isr_UsbSuspend_SetVector\000"
+ 1233      55736253 
+ 1233      75737065 
+ 1233      6E645F53 
+ 1233      65745665 
+ 1234              	.LASF9:
+ 1235 0206 63686172 		.ascii	"char\000"
+ 1235      00
+ 1236              	.LASF14:
+ 1237 020b 72616D56 		.ascii	"ramVectorTable\000"
+ 1237      6563746F 
+ 1237      72546162 
+ 1237      6C6500
+ 1238              	.LASF2:
+ 1239 021a 73686F72 		.ascii	"short int\000"
+ 1239      7420696E 
+ 1239      7400
+ 1240              	.LASF12:
+ 1241 0224 75696E74 		.ascii	"uint8\000"
+ 1241      3800
+ 1242              	.LASF7:
+ 1243 022a 6C6F6E67 		.ascii	"long int\000"
+ 1243      20696E74 
+ 1243      00
+ 1244              	.LASF0:
+ 1245 0233 7369676E 		.ascii	"signed char\000"
+ 1245      65642063 
+ 1245      68617200 
+ 1246              	.LASF33:
+ 1247 023f 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 1247      665C486F 
+ 1247      6D655C44 
+ 1247      65736B74 
+ 1247      6F705C4B 
+ 1248 026c 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 1248      69745072 
+ 1248      6F672E63 
+ 1248      7964736E 
+ 1248      00
+ 1249              	.LASF16:
+ 1250 027d 6973725F 		.ascii	"isr_UsbSuspend_SetPriority\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccYBPvqZ.s 			page 32
+
+
+ 1250      55736253 
+ 1250      75737065 
+ 1250      6E645F53 
+ 1250      65745072 
+ 1251              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

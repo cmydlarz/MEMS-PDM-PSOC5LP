@@ -1,0 +1,1001 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"PDM_CIC_Status_Reg.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 CE000000 		.text
+  20      02006B00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.PDM_CIC_Status_Reg_Read,"ax",%progbits
+  24              		.align	2
+  25              		.global	PDM_CIC_Status_Reg_Read
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	PDM_CIC_Status_Reg_Read, %function
+  29              	PDM_CIC_Status_Reg_Read:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\PDM_CIC_Status_Reg.c"
+   1:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * File Name: PDM_CIC_Status_Reg.c  
+   3:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Version 1.80
+   4:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+   5:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Description:
+   6:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  This file contains API to enable firmware to read the value of a Status 
+   7:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Register.
+   8:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+   9:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Note:
+  10:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  11:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  18:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** #include "PDM_CIC_Status_Reg.h"
+  19:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  20:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** #if !defined(PDM_CIC_Status_Reg_sts_intr_sts_reg__REMOVED) /* Check for removal by optimization */
+  21:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  22:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_Read
+  25:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  27:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
+  28:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Reads the current value assigned to the Status Register.
+  29:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  30:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+  32:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  33:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Return:
+  34:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  The current value in the Status Register.
+  35:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  36:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** uint8 PDM_CIC_Status_Reg_Read(void) 
+  38:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** { 
+  32              		.loc 1 38 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37 0000 80B4     		push	{r7}
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 4
+  40 0002 00AF     		add	r7, sp, #0
+  41              		.cfi_offset 7, -4
+  42              	.LCFI1:
+  43              		.cfi_def_cfa_register 7
+  39:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     return PDM_CIC_Status_Reg_Status;
+  44              		.loc 1 39 0
+  45 0004 46F26C43 		movw	r3, #:lower16:1073767532
+  46 0008 C4F20003 		movt	r3, #:upper16:1073767532
+  47 000c 1B78     		ldrb	r3, [r3, #0]
+  48 000e DBB2     		uxtb	r3, r3
+  40:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
+  49              		.loc 1 40 0
+  50 0010 1846     		mov	r0, r3
+  51 0012 BD46     		mov	sp, r7
+  52 0014 80BC     		pop	{r7}
+  53 0016 7047     		bx	lr
+  54              		.cfi_endproc
+  55              	.LFE0:
+  56              		.size	PDM_CIC_Status_Reg_Read, .-PDM_CIC_Status_Reg_Read
+  57              		.section	.text.PDM_CIC_Status_Reg_InterruptEnable,"ax",%progbits
+  58              		.align	2
+  59              		.global	PDM_CIC_Status_Reg_InterruptEnable
+  60              		.thumb
+  61              		.thumb_func
+  62              		.type	PDM_CIC_Status_Reg_InterruptEnable, %function
+  63              	PDM_CIC_Status_Reg_InterruptEnable:
+  64              	.LFB1:
+  41:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  42:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  43:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+  44:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_InterruptEnable
+  45:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 3
+
+
+  47:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
+  48:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Enables the Status Register interrupt.
+  49:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  50:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Parameters:
+  51:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+  52:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  53:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Return:
+  54:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+  55:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  56:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** void PDM_CIC_Status_Reg_InterruptEnable(void) 
+  58:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** {
+  65              		.loc 1 58 0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 8
+  68              		@ frame_needed = 1, uses_anonymous_args = 0
+  69 0000 80B5     		push	{r7, lr}
+  70              	.LCFI2:
+  71              		.cfi_def_cfa_offset 8
+  72 0002 82B0     		sub	sp, sp, #8
+  73              	.LCFI3:
+  74              		.cfi_def_cfa_offset 16
+  75 0004 00AF     		add	r7, sp, #0
+  76              		.cfi_offset 14, -4
+  77              		.cfi_offset 7, -8
+  78              	.LCFI4:
+  79              		.cfi_def_cfa_register 7
+  59:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     uint8 interruptState;
+  60:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     interruptState = CyEnterCriticalSection();
+  80              		.loc 1 60 0
+  81 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+  82 000a 0346     		mov	r3, r0
+  83 000c FB71     		strb	r3, [r7, #7]
+  61:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Aux_Ctrl |= PDM_CIC_Status_Reg_STATUS_INTR_ENBL;
+  84              		.loc 1 61 0
+  85 000e 46F29C43 		movw	r3, #:lower16:1073767580
+  86 0012 C4F20003 		movt	r3, #:upper16:1073767580
+  87 0016 46F29C42 		movw	r2, #:lower16:1073767580
+  88 001a C4F20002 		movt	r2, #:upper16:1073767580
+  89 001e 1278     		ldrb	r2, [r2, #0]
+  90 0020 D2B2     		uxtb	r2, r2
+  91 0022 42F01002 		orr	r2, r2, #16
+  92 0026 D2B2     		uxtb	r2, r2
+  93 0028 1A70     		strb	r2, [r3, #0]
+  62:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     CyExitCriticalSection(interruptState);
+  94              		.loc 1 62 0
+  95 002a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  96 002c 1846     		mov	r0, r3
+  97 002e FFF7FEFF 		bl	CyExitCriticalSection
+  63:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
+  98              		.loc 1 63 0
+  99 0032 07F10807 		add	r7, r7, #8
+ 100 0036 BD46     		mov	sp, r7
+ 101 0038 80BD     		pop	{r7, pc}
+ 102              		.cfi_endproc
+ 103              	.LFE1:
+ 104              		.size	PDM_CIC_Status_Reg_InterruptEnable, .-PDM_CIC_Status_Reg_InterruptEnable
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 4
+
+
+ 105 003a 00BF     		.section	.text.PDM_CIC_Status_Reg_InterruptDisable,"ax",%progbits
+ 106              		.align	2
+ 107              		.global	PDM_CIC_Status_Reg_InterruptDisable
+ 108              		.thumb
+ 109              		.thumb_func
+ 110              		.type	PDM_CIC_Status_Reg_InterruptDisable, %function
+ 111              	PDM_CIC_Status_Reg_InterruptDisable:
+ 112              	.LFB2:
+  64:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  65:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  66:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_InterruptDisable
+  68:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  70:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
+  71:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Disables the Status Register interrupt.
+  72:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  73:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Parameters:
+  74:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+  75:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  76:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Return:
+  77:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+  78:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  79:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+  80:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** void PDM_CIC_Status_Reg_InterruptDisable(void) 
+  81:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** {
+ 113              		.loc 1 81 0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 8
+ 116              		@ frame_needed = 1, uses_anonymous_args = 0
+ 117 0000 80B5     		push	{r7, lr}
+ 118              	.LCFI5:
+ 119              		.cfi_def_cfa_offset 8
+ 120 0002 82B0     		sub	sp, sp, #8
+ 121              	.LCFI6:
+ 122              		.cfi_def_cfa_offset 16
+ 123 0004 00AF     		add	r7, sp, #0
+ 124              		.cfi_offset 14, -4
+ 125              		.cfi_offset 7, -8
+ 126              	.LCFI7:
+ 127              		.cfi_def_cfa_register 7
+  82:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     uint8 interruptState;
+  83:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     interruptState = CyEnterCriticalSection();
+ 128              		.loc 1 83 0
+ 129 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 130 000a 0346     		mov	r3, r0
+ 131 000c FB71     		strb	r3, [r7, #7]
+  84:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Aux_Ctrl &= (uint8)(~PDM_CIC_Status_Reg_STATUS_INTR_ENBL);
+ 132              		.loc 1 84 0
+ 133 000e 46F29C43 		movw	r3, #:lower16:1073767580
+ 134 0012 C4F20003 		movt	r3, #:upper16:1073767580
+ 135 0016 46F29C42 		movw	r2, #:lower16:1073767580
+ 136 001a C4F20002 		movt	r2, #:upper16:1073767580
+ 137 001e 1278     		ldrb	r2, [r2, #0]
+ 138 0020 D2B2     		uxtb	r2, r2
+ 139 0022 02F0EF02 		and	r2, r2, #239
+ 140 0026 1A70     		strb	r2, [r3, #0]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 5
+
+
+  85:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     CyExitCriticalSection(interruptState);
+ 141              		.loc 1 85 0
+ 142 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 143 002a 1846     		mov	r0, r3
+ 144 002c FFF7FEFF 		bl	CyExitCriticalSection
+  86:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
+ 145              		.loc 1 86 0
+ 146 0030 07F10807 		add	r7, r7, #8
+ 147 0034 BD46     		mov	sp, r7
+ 148 0036 80BD     		pop	{r7, pc}
+ 149              		.cfi_endproc
+ 150              	.LFE2:
+ 151              		.size	PDM_CIC_Status_Reg_InterruptDisable, .-PDM_CIC_Status_Reg_InterruptDisable
+ 152              		.section	.text.PDM_CIC_Status_Reg_WriteMask,"ax",%progbits
+ 153              		.align	2
+ 154              		.global	PDM_CIC_Status_Reg_WriteMask
+ 155              		.thumb
+ 156              		.thumb_func
+ 157              		.type	PDM_CIC_Status_Reg_WriteMask, %function
+ 158              	PDM_CIC_Status_Reg_WriteMask:
+ 159              	.LFB3:
+  87:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  88:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+  89:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+  90:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_WriteMask
+  91:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+  92:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  93:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
+  94:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Writes the current mask value assigned to the Status Register.
+  95:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  96:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Parameters:
+  97:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  mask:  Value to write into the mask register.
+  98:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+  99:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Return:
+ 100:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+ 101:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ 102:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+ 103:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** void PDM_CIC_Status_Reg_WriteMask(uint8 mask) 
+ 104:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** {
+ 160              		.loc 1 104 0
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 8
+ 163              		@ frame_needed = 1, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 165 0000 80B4     		push	{r7}
+ 166              	.LCFI8:
+ 167              		.cfi_def_cfa_offset 4
+ 168 0002 83B0     		sub	sp, sp, #12
+ 169              	.LCFI9:
+ 170              		.cfi_def_cfa_offset 16
+ 171 0004 00AF     		add	r7, sp, #0
+ 172              		.cfi_offset 7, -4
+ 173              	.LCFI10:
+ 174              		.cfi_def_cfa_register 7
+ 175 0006 0346     		mov	r3, r0
+ 176 0008 FB71     		strb	r3, [r7, #7]
+ 105:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     #if(PDM_CIC_Status_Reg_INPUTS < 8u)
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 6
+
+
+ 106:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     	mask &= (uint8)((((uint8)1u) << PDM_CIC_Status_Reg_INPUTS) - 1u);
+ 177              		.loc 1 106 0
+ 178 000a FB79     		ldrb	r3, [r7, #7]
+ 179 000c 03F00F03 		and	r3, r3, #15
+ 180 0010 FB71     		strb	r3, [r7, #7]
+ 107:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 	#endif /* End PDM_CIC_Status_Reg_INPUTS < 8u */
+ 108:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     PDM_CIC_Status_Reg_Status_Mask = mask;
+ 181              		.loc 1 108 0
+ 182 0012 46F28C43 		movw	r3, #:lower16:1073767564
+ 183 0016 C4F20003 		movt	r3, #:upper16:1073767564
+ 184 001a FA79     		ldrb	r2, [r7, #7]
+ 185 001c 1A70     		strb	r2, [r3, #0]
+ 109:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
+ 186              		.loc 1 109 0
+ 187 001e 07F10C07 		add	r7, r7, #12
+ 188 0022 BD46     		mov	sp, r7
+ 189 0024 80BC     		pop	{r7}
+ 190 0026 7047     		bx	lr
+ 191              		.cfi_endproc
+ 192              	.LFE3:
+ 193              		.size	PDM_CIC_Status_Reg_WriteMask, .-PDM_CIC_Status_Reg_WriteMask
+ 194              		.section	.text.PDM_CIC_Status_Reg_ReadMask,"ax",%progbits
+ 195              		.align	2
+ 196              		.global	PDM_CIC_Status_Reg_ReadMask
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.type	PDM_CIC_Status_Reg_ReadMask, %function
+ 200              	PDM_CIC_Status_Reg_ReadMask:
+ 201              	.LFB4:
+ 110:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+ 111:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** 
+ 112:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** /*******************************************************************************
+ 113:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Function Name: PDM_CIC_Status_Reg_ReadMask
+ 114:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** ********************************************************************************
+ 115:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ 116:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Summary:
+ 117:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  Reads the current interrupt mask assigned to the Status Register.
+ 118:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ 119:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Parameters:
+ 120:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  None.
+ 121:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ 122:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** * Return:
+ 123:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *  The value of the interrupt mask of the Status Register.
+ 124:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *
+ 125:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** *******************************************************************************/
+ 126:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** uint8 PDM_CIC_Status_Reg_ReadMask(void) 
+ 127:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** {
+ 202              		.loc 1 127 0
+ 203              		.cfi_startproc
+ 204              		@ args = 0, pretend = 0, frame = 0
+ 205              		@ frame_needed = 1, uses_anonymous_args = 0
+ 206              		@ link register save eliminated.
+ 207 0000 80B4     		push	{r7}
+ 208              	.LCFI11:
+ 209              		.cfi_def_cfa_offset 4
+ 210 0002 00AF     		add	r7, sp, #0
+ 211              		.cfi_offset 7, -4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 7
+
+
+ 212              	.LCFI12:
+ 213              		.cfi_def_cfa_register 7
+ 128:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c ****     return PDM_CIC_Status_Reg_Status_Mask;
+ 214              		.loc 1 128 0
+ 215 0004 46F28C43 		movw	r3, #:lower16:1073767564
+ 216 0008 C4F20003 		movt	r3, #:upper16:1073767564
+ 217 000c 1B78     		ldrb	r3, [r3, #0]
+ 218 000e DBB2     		uxtb	r3, r3
+ 129:.\Generated_Source\PSoC5/PDM_CIC_Status_Reg.c **** }
+ 219              		.loc 1 129 0
+ 220 0010 1846     		mov	r0, r3
+ 221 0012 BD46     		mov	sp, r7
+ 222 0014 80BC     		pop	{r7}
+ 223 0016 7047     		bx	lr
+ 224              		.cfi_endproc
+ 225              	.LFE4:
+ 226              		.size	PDM_CIC_Status_Reg_ReadMask, .-PDM_CIC_Status_Reg_ReadMask
+ 227              		.text
+ 228              	.Letext0:
+ 229              		.section	.debug_loc,"",%progbits
+ 230              	.Ldebug_loc0:
+ 231              	.LLST0:
+ 232 0000 00000000 		.4byte	.LFB0
+ 233 0004 02000000 		.4byte	.LCFI0
+ 234 0008 0100     		.2byte	0x1
+ 235 000a 5D       		.byte	0x5d
+ 236 000b 02000000 		.4byte	.LCFI0
+ 237 000f 04000000 		.4byte	.LCFI1
+ 238 0013 0200     		.2byte	0x2
+ 239 0015 7D       		.byte	0x7d
+ 240 0016 04       		.sleb128 4
+ 241 0017 04000000 		.4byte	.LCFI1
+ 242 001b 18000000 		.4byte	.LFE0
+ 243 001f 0200     		.2byte	0x2
+ 244 0021 77       		.byte	0x77
+ 245 0022 04       		.sleb128 4
+ 246 0023 00000000 		.4byte	0x0
+ 247 0027 00000000 		.4byte	0x0
+ 248              	.LLST1:
+ 249 002b 00000000 		.4byte	.LFB1
+ 250 002f 02000000 		.4byte	.LCFI2
+ 251 0033 0100     		.2byte	0x1
+ 252 0035 5D       		.byte	0x5d
+ 253 0036 02000000 		.4byte	.LCFI2
+ 254 003a 04000000 		.4byte	.LCFI3
+ 255 003e 0200     		.2byte	0x2
+ 256 0040 7D       		.byte	0x7d
+ 257 0041 08       		.sleb128 8
+ 258 0042 04000000 		.4byte	.LCFI3
+ 259 0046 06000000 		.4byte	.LCFI4
+ 260 004a 0200     		.2byte	0x2
+ 261 004c 7D       		.byte	0x7d
+ 262 004d 10       		.sleb128 16
+ 263 004e 06000000 		.4byte	.LCFI4
+ 264 0052 3A000000 		.4byte	.LFE1
+ 265 0056 0200     		.2byte	0x2
+ 266 0058 77       		.byte	0x77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 8
+
+
+ 267 0059 10       		.sleb128 16
+ 268 005a 00000000 		.4byte	0x0
+ 269 005e 00000000 		.4byte	0x0
+ 270              	.LLST2:
+ 271 0062 00000000 		.4byte	.LFB2
+ 272 0066 02000000 		.4byte	.LCFI5
+ 273 006a 0100     		.2byte	0x1
+ 274 006c 5D       		.byte	0x5d
+ 275 006d 02000000 		.4byte	.LCFI5
+ 276 0071 04000000 		.4byte	.LCFI6
+ 277 0075 0200     		.2byte	0x2
+ 278 0077 7D       		.byte	0x7d
+ 279 0078 08       		.sleb128 8
+ 280 0079 04000000 		.4byte	.LCFI6
+ 281 007d 06000000 		.4byte	.LCFI7
+ 282 0081 0200     		.2byte	0x2
+ 283 0083 7D       		.byte	0x7d
+ 284 0084 10       		.sleb128 16
+ 285 0085 06000000 		.4byte	.LCFI7
+ 286 0089 38000000 		.4byte	.LFE2
+ 287 008d 0200     		.2byte	0x2
+ 288 008f 77       		.byte	0x77
+ 289 0090 10       		.sleb128 16
+ 290 0091 00000000 		.4byte	0x0
+ 291 0095 00000000 		.4byte	0x0
+ 292              	.LLST3:
+ 293 0099 00000000 		.4byte	.LFB3
+ 294 009d 02000000 		.4byte	.LCFI8
+ 295 00a1 0100     		.2byte	0x1
+ 296 00a3 5D       		.byte	0x5d
+ 297 00a4 02000000 		.4byte	.LCFI8
+ 298 00a8 04000000 		.4byte	.LCFI9
+ 299 00ac 0200     		.2byte	0x2
+ 300 00ae 7D       		.byte	0x7d
+ 301 00af 04       		.sleb128 4
+ 302 00b0 04000000 		.4byte	.LCFI9
+ 303 00b4 06000000 		.4byte	.LCFI10
+ 304 00b8 0200     		.2byte	0x2
+ 305 00ba 7D       		.byte	0x7d
+ 306 00bb 10       		.sleb128 16
+ 307 00bc 06000000 		.4byte	.LCFI10
+ 308 00c0 28000000 		.4byte	.LFE3
+ 309 00c4 0200     		.2byte	0x2
+ 310 00c6 77       		.byte	0x77
+ 311 00c7 10       		.sleb128 16
+ 312 00c8 00000000 		.4byte	0x0
+ 313 00cc 00000000 		.4byte	0x0
+ 314              	.LLST4:
+ 315 00d0 00000000 		.4byte	.LFB4
+ 316 00d4 02000000 		.4byte	.LCFI11
+ 317 00d8 0100     		.2byte	0x1
+ 318 00da 5D       		.byte	0x5d
+ 319 00db 02000000 		.4byte	.LCFI11
+ 320 00df 04000000 		.4byte	.LCFI12
+ 321 00e3 0200     		.2byte	0x2
+ 322 00e5 7D       		.byte	0x7d
+ 323 00e6 04       		.sleb128 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 9
+
+
+ 324 00e7 04000000 		.4byte	.LCFI12
+ 325 00eb 18000000 		.4byte	.LFE4
+ 326 00ef 0200     		.2byte	0x2
+ 327 00f1 77       		.byte	0x77
+ 328 00f2 04       		.sleb128 4
+ 329 00f3 00000000 		.4byte	0x0
+ 330 00f7 00000000 		.4byte	0x0
+ 331              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 332              		.section	.debug_info
+ 333 0000 39010000 		.4byte	0x139
+ 334 0004 0200     		.2byte	0x2
+ 335 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 336 000a 04       		.byte	0x4
+ 337 000b 01       		.uleb128 0x1
+ 338 000c D6000000 		.4byte	.LASF18
+ 339 0010 01       		.byte	0x1
+ 340 0011 38000000 		.4byte	.LASF19
+ 341 0015 05010000 		.4byte	.LASF20
+ 342 0019 00000000 		.4byte	0x0
+ 343 001d 00000000 		.4byte	0x0
+ 344 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 345 0025 00000000 		.4byte	.Ldebug_line0
+ 346 0029 02       		.uleb128 0x2
+ 347 002a 01       		.byte	0x1
+ 348 002b 06       		.byte	0x6
+ 349 002c 78010000 		.4byte	.LASF0
+ 350 0030 02       		.uleb128 0x2
+ 351 0031 01       		.byte	0x1
+ 352 0032 08       		.byte	0x8
+ 353 0033 E2000000 		.4byte	.LASF1
+ 354 0037 02       		.uleb128 0x2
+ 355 0038 02       		.byte	0x2
+ 356 0039 05       		.byte	0x5
+ 357 003a A6010000 		.4byte	.LASF2
+ 358 003e 02       		.uleb128 0x2
+ 359 003f 02       		.byte	0x2
+ 360 0040 07       		.byte	0x7
+ 361 0041 65010000 		.4byte	.LASF3
+ 362 0045 02       		.uleb128 0x2
+ 363 0046 04       		.byte	0x4
+ 364 0047 05       		.byte	0x5
+ 365 0048 F5000000 		.4byte	.LASF4
+ 366 004c 02       		.uleb128 0x2
+ 367 004d 04       		.byte	0x4
+ 368 004e 07       		.byte	0x7
+ 369 004f 6C000000 		.4byte	.LASF5
+ 370 0053 02       		.uleb128 0x2
+ 371 0054 08       		.byte	0x8
+ 372 0055 05       		.byte	0x5
+ 373 0056 00000000 		.4byte	.LASF6
+ 374 005a 02       		.uleb128 0x2
+ 375 005b 08       		.byte	0x8
+ 376 005c 07       		.byte	0x7
+ 377 005d 96000000 		.4byte	.LASF7
+ 378 0061 03       		.uleb128 0x3
+ 379 0062 04       		.byte	0x4
+ 380 0063 05       		.byte	0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 10
+
+
+ 381 0064 696E7400 		.ascii	"int\000"
+ 382 0068 02       		.uleb128 0x2
+ 383 0069 04       		.byte	0x4
+ 384 006a 07       		.byte	0x7
+ 385 006b 0E000000 		.4byte	.LASF8
+ 386 006f 04       		.uleb128 0x4
+ 387 0070 66000000 		.4byte	.LASF21
+ 388 0074 02       		.byte	0x2
+ 389 0075 4C       		.byte	0x4c
+ 390 0076 30000000 		.4byte	0x30
+ 391 007a 02       		.uleb128 0x2
+ 392 007b 04       		.byte	0x4
+ 393 007c 04       		.byte	0x4
+ 394 007d A0010000 		.4byte	.LASF9
+ 395 0081 02       		.uleb128 0x2
+ 396 0082 08       		.byte	0x8
+ 397 0083 04       		.byte	0x4
+ 398 0084 FE000000 		.4byte	.LASF10
+ 399 0088 02       		.uleb128 0x2
+ 400 0089 01       		.byte	0x1
+ 401 008a 08       		.byte	0x8
+ 402 008b F0000000 		.4byte	.LASF11
+ 403 008f 05       		.uleb128 0x5
+ 404 0090 04       		.byte	0x4
+ 405 0091 07       		.byte	0x7
+ 406 0092 06       		.uleb128 0x6
+ 407 0093 01       		.byte	0x1
+ 408 0094 7E000000 		.4byte	.LASF16
+ 409 0098 01       		.byte	0x1
+ 410 0099 25       		.byte	0x25
+ 411 009a 01       		.byte	0x1
+ 412 009b 6F000000 		.4byte	0x6f
+ 413 009f 00000000 		.4byte	.LFB0
+ 414 00a3 18000000 		.4byte	.LFE0
+ 415 00a7 00000000 		.4byte	.LLST0
+ 416 00ab 07       		.uleb128 0x7
+ 417 00ac 01       		.byte	0x1
+ 418 00ad B0010000 		.4byte	.LASF12
+ 419 00b1 01       		.byte	0x1
+ 420 00b2 39       		.byte	0x39
+ 421 00b3 01       		.byte	0x1
+ 422 00b4 00000000 		.4byte	.LFB1
+ 423 00b8 3A000000 		.4byte	.LFE1
+ 424 00bc 2B000000 		.4byte	.LLST1
+ 425 00c0 D3000000 		.4byte	0xd3
+ 426 00c4 08       		.uleb128 0x8
+ 427 00c5 D3010000 		.4byte	.LASF14
+ 428 00c9 01       		.byte	0x1
+ 429 00ca 3B       		.byte	0x3b
+ 430 00cb 6F000000 		.4byte	0x6f
+ 431 00cf 02       		.byte	0x2
+ 432 00d0 91       		.byte	0x91
+ 433 00d1 77       		.sleb128 -9
+ 434 00d2 00       		.byte	0x0
+ 435 00d3 07       		.uleb128 0x7
+ 436 00d4 01       		.byte	0x1
+ 437 00d5 AD000000 		.4byte	.LASF13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 11
+
+
+ 438 00d9 01       		.byte	0x1
+ 439 00da 50       		.byte	0x50
+ 440 00db 01       		.byte	0x1
+ 441 00dc 00000000 		.4byte	.LFB2
+ 442 00e0 38000000 		.4byte	.LFE2
+ 443 00e4 62000000 		.4byte	.LLST2
+ 444 00e8 FB000000 		.4byte	0xfb
+ 445 00ec 08       		.uleb128 0x8
+ 446 00ed D3010000 		.4byte	.LASF14
+ 447 00f1 01       		.byte	0x1
+ 448 00f2 52       		.byte	0x52
+ 449 00f3 6F000000 		.4byte	0x6f
+ 450 00f7 02       		.byte	0x2
+ 451 00f8 91       		.byte	0x91
+ 452 00f9 77       		.sleb128 -9
+ 453 00fa 00       		.byte	0x0
+ 454 00fb 07       		.uleb128 0x7
+ 455 00fc 01       		.byte	0x1
+ 456 00fd 1B000000 		.4byte	.LASF15
+ 457 0101 01       		.byte	0x1
+ 458 0102 67       		.byte	0x67
+ 459 0103 01       		.byte	0x1
+ 460 0104 00000000 		.4byte	.LFB3
+ 461 0108 28000000 		.4byte	.LFE3
+ 462 010c 99000000 		.4byte	.LLST3
+ 463 0110 23010000 		.4byte	0x123
+ 464 0114 09       		.uleb128 0x9
+ 465 0115 D1000000 		.4byte	.LASF22
+ 466 0119 01       		.byte	0x1
+ 467 011a 67       		.byte	0x67
+ 468 011b 6F000000 		.4byte	0x6f
+ 469 011f 02       		.byte	0x2
+ 470 0120 91       		.byte	0x91
+ 471 0121 77       		.sleb128 -9
+ 472 0122 00       		.byte	0x0
+ 473 0123 06       		.uleb128 0x6
+ 474 0124 01       		.byte	0x1
+ 475 0125 84010000 		.4byte	.LASF17
+ 476 0129 01       		.byte	0x1
+ 477 012a 7E       		.byte	0x7e
+ 478 012b 01       		.byte	0x1
+ 479 012c 6F000000 		.4byte	0x6f
+ 480 0130 00000000 		.4byte	.LFB4
+ 481 0134 18000000 		.4byte	.LFE4
+ 482 0138 D0000000 		.4byte	.LLST4
+ 483 013c 00       		.byte	0x0
+ 484              		.section	.debug_abbrev
+ 485 0000 01       		.uleb128 0x1
+ 486 0001 11       		.uleb128 0x11
+ 487 0002 01       		.byte	0x1
+ 488 0003 25       		.uleb128 0x25
+ 489 0004 0E       		.uleb128 0xe
+ 490 0005 13       		.uleb128 0x13
+ 491 0006 0B       		.uleb128 0xb
+ 492 0007 03       		.uleb128 0x3
+ 493 0008 0E       		.uleb128 0xe
+ 494 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 12
+
+
+ 495 000a 0E       		.uleb128 0xe
+ 496 000b 11       		.uleb128 0x11
+ 497 000c 01       		.uleb128 0x1
+ 498 000d 52       		.uleb128 0x52
+ 499 000e 01       		.uleb128 0x1
+ 500 000f 55       		.uleb128 0x55
+ 501 0010 06       		.uleb128 0x6
+ 502 0011 10       		.uleb128 0x10
+ 503 0012 06       		.uleb128 0x6
+ 504 0013 00       		.byte	0x0
+ 505 0014 00       		.byte	0x0
+ 506 0015 02       		.uleb128 0x2
+ 507 0016 24       		.uleb128 0x24
+ 508 0017 00       		.byte	0x0
+ 509 0018 0B       		.uleb128 0xb
+ 510 0019 0B       		.uleb128 0xb
+ 511 001a 3E       		.uleb128 0x3e
+ 512 001b 0B       		.uleb128 0xb
+ 513 001c 03       		.uleb128 0x3
+ 514 001d 0E       		.uleb128 0xe
+ 515 001e 00       		.byte	0x0
+ 516 001f 00       		.byte	0x0
+ 517 0020 03       		.uleb128 0x3
+ 518 0021 24       		.uleb128 0x24
+ 519 0022 00       		.byte	0x0
+ 520 0023 0B       		.uleb128 0xb
+ 521 0024 0B       		.uleb128 0xb
+ 522 0025 3E       		.uleb128 0x3e
+ 523 0026 0B       		.uleb128 0xb
+ 524 0027 03       		.uleb128 0x3
+ 525 0028 08       		.uleb128 0x8
+ 526 0029 00       		.byte	0x0
+ 527 002a 00       		.byte	0x0
+ 528 002b 04       		.uleb128 0x4
+ 529 002c 16       		.uleb128 0x16
+ 530 002d 00       		.byte	0x0
+ 531 002e 03       		.uleb128 0x3
+ 532 002f 0E       		.uleb128 0xe
+ 533 0030 3A       		.uleb128 0x3a
+ 534 0031 0B       		.uleb128 0xb
+ 535 0032 3B       		.uleb128 0x3b
+ 536 0033 0B       		.uleb128 0xb
+ 537 0034 49       		.uleb128 0x49
+ 538 0035 13       		.uleb128 0x13
+ 539 0036 00       		.byte	0x0
+ 540 0037 00       		.byte	0x0
+ 541 0038 05       		.uleb128 0x5
+ 542 0039 24       		.uleb128 0x24
+ 543 003a 00       		.byte	0x0
+ 544 003b 0B       		.uleb128 0xb
+ 545 003c 0B       		.uleb128 0xb
+ 546 003d 3E       		.uleb128 0x3e
+ 547 003e 0B       		.uleb128 0xb
+ 548 003f 00       		.byte	0x0
+ 549 0040 00       		.byte	0x0
+ 550 0041 06       		.uleb128 0x6
+ 551 0042 2E       		.uleb128 0x2e
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 13
+
+
+ 552 0043 00       		.byte	0x0
+ 553 0044 3F       		.uleb128 0x3f
+ 554 0045 0C       		.uleb128 0xc
+ 555 0046 03       		.uleb128 0x3
+ 556 0047 0E       		.uleb128 0xe
+ 557 0048 3A       		.uleb128 0x3a
+ 558 0049 0B       		.uleb128 0xb
+ 559 004a 3B       		.uleb128 0x3b
+ 560 004b 0B       		.uleb128 0xb
+ 561 004c 27       		.uleb128 0x27
+ 562 004d 0C       		.uleb128 0xc
+ 563 004e 49       		.uleb128 0x49
+ 564 004f 13       		.uleb128 0x13
+ 565 0050 11       		.uleb128 0x11
+ 566 0051 01       		.uleb128 0x1
+ 567 0052 12       		.uleb128 0x12
+ 568 0053 01       		.uleb128 0x1
+ 569 0054 40       		.uleb128 0x40
+ 570 0055 06       		.uleb128 0x6
+ 571 0056 00       		.byte	0x0
+ 572 0057 00       		.byte	0x0
+ 573 0058 07       		.uleb128 0x7
+ 574 0059 2E       		.uleb128 0x2e
+ 575 005a 01       		.byte	0x1
+ 576 005b 3F       		.uleb128 0x3f
+ 577 005c 0C       		.uleb128 0xc
+ 578 005d 03       		.uleb128 0x3
+ 579 005e 0E       		.uleb128 0xe
+ 580 005f 3A       		.uleb128 0x3a
+ 581 0060 0B       		.uleb128 0xb
+ 582 0061 3B       		.uleb128 0x3b
+ 583 0062 0B       		.uleb128 0xb
+ 584 0063 27       		.uleb128 0x27
+ 585 0064 0C       		.uleb128 0xc
+ 586 0065 11       		.uleb128 0x11
+ 587 0066 01       		.uleb128 0x1
+ 588 0067 12       		.uleb128 0x12
+ 589 0068 01       		.uleb128 0x1
+ 590 0069 40       		.uleb128 0x40
+ 591 006a 06       		.uleb128 0x6
+ 592 006b 01       		.uleb128 0x1
+ 593 006c 13       		.uleb128 0x13
+ 594 006d 00       		.byte	0x0
+ 595 006e 00       		.byte	0x0
+ 596 006f 08       		.uleb128 0x8
+ 597 0070 34       		.uleb128 0x34
+ 598 0071 00       		.byte	0x0
+ 599 0072 03       		.uleb128 0x3
+ 600 0073 0E       		.uleb128 0xe
+ 601 0074 3A       		.uleb128 0x3a
+ 602 0075 0B       		.uleb128 0xb
+ 603 0076 3B       		.uleb128 0x3b
+ 604 0077 0B       		.uleb128 0xb
+ 605 0078 49       		.uleb128 0x49
+ 606 0079 13       		.uleb128 0x13
+ 607 007a 02       		.uleb128 0x2
+ 608 007b 0A       		.uleb128 0xa
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 14
+
+
+ 609 007c 00       		.byte	0x0
+ 610 007d 00       		.byte	0x0
+ 611 007e 09       		.uleb128 0x9
+ 612 007f 05       		.uleb128 0x5
+ 613 0080 00       		.byte	0x0
+ 614 0081 03       		.uleb128 0x3
+ 615 0082 0E       		.uleb128 0xe
+ 616 0083 3A       		.uleb128 0x3a
+ 617 0084 0B       		.uleb128 0xb
+ 618 0085 3B       		.uleb128 0x3b
+ 619 0086 0B       		.uleb128 0xb
+ 620 0087 49       		.uleb128 0x49
+ 621 0088 13       		.uleb128 0x13
+ 622 0089 02       		.uleb128 0x2
+ 623 008a 0A       		.uleb128 0xa
+ 624 008b 00       		.byte	0x0
+ 625 008c 00       		.byte	0x0
+ 626 008d 00       		.byte	0x0
+ 627              		.section	.debug_pubnames,"",%progbits
+ 628 0000 BA000000 		.4byte	0xba
+ 629 0004 0200     		.2byte	0x2
+ 630 0006 00000000 		.4byte	.Ldebug_info0
+ 631 000a 3D010000 		.4byte	0x13d
+ 632 000e 92000000 		.4byte	0x92
+ 633 0012 50444D5F 		.ascii	"PDM_CIC_Status_Reg_Read\000"
+ 633      4349435F 
+ 633      53746174 
+ 633      75735F52 
+ 633      65675F52 
+ 634 002a AB000000 		.4byte	0xab
+ 635 002e 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptEnable\000"
+ 635      4349435F 
+ 635      53746174 
+ 635      75735F52 
+ 635      65675F49 
+ 636 0051 D3000000 		.4byte	0xd3
+ 637 0055 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptDisable\000"
+ 637      4349435F 
+ 637      53746174 
+ 637      75735F52 
+ 637      65675F49 
+ 638 0079 FB000000 		.4byte	0xfb
+ 639 007d 50444D5F 		.ascii	"PDM_CIC_Status_Reg_WriteMask\000"
+ 639      4349435F 
+ 639      53746174 
+ 639      75735F52 
+ 639      65675F57 
+ 640 009a 23010000 		.4byte	0x123
+ 641 009e 50444D5F 		.ascii	"PDM_CIC_Status_Reg_ReadMask\000"
+ 641      4349435F 
+ 641      53746174 
+ 641      75735F52 
+ 641      65675F52 
+ 642 00ba 00000000 		.4byte	0x0
+ 643              		.section	.debug_aranges,"",%progbits
+ 644 0000 3C000000 		.4byte	0x3c
+ 645 0004 0200     		.2byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 15
+
+
+ 646 0006 00000000 		.4byte	.Ldebug_info0
+ 647 000a 04       		.byte	0x4
+ 648 000b 00       		.byte	0x0
+ 649 000c 0000     		.2byte	0x0
+ 650 000e 0000     		.2byte	0x0
+ 651 0010 00000000 		.4byte	.LFB0
+ 652 0014 18000000 		.4byte	.LFE0-.LFB0
+ 653 0018 00000000 		.4byte	.LFB1
+ 654 001c 3A000000 		.4byte	.LFE1-.LFB1
+ 655 0020 00000000 		.4byte	.LFB2
+ 656 0024 38000000 		.4byte	.LFE2-.LFB2
+ 657 0028 00000000 		.4byte	.LFB3
+ 658 002c 28000000 		.4byte	.LFE3-.LFB3
+ 659 0030 00000000 		.4byte	.LFB4
+ 660 0034 18000000 		.4byte	.LFE4-.LFB4
+ 661 0038 00000000 		.4byte	0x0
+ 662 003c 00000000 		.4byte	0x0
+ 663              		.section	.debug_ranges,"",%progbits
+ 664              	.Ldebug_ranges0:
+ 665 0000 00000000 		.4byte	.Ltext0
+ 666 0004 00000000 		.4byte	.Letext0
+ 667 0008 00000000 		.4byte	.LFB0
+ 668 000c 18000000 		.4byte	.LFE0
+ 669 0010 00000000 		.4byte	.LFB1
+ 670 0014 3A000000 		.4byte	.LFE1
+ 671 0018 00000000 		.4byte	.LFB2
+ 672 001c 38000000 		.4byte	.LFE2
+ 673 0020 00000000 		.4byte	.LFB3
+ 674 0024 28000000 		.4byte	.LFE3
+ 675 0028 00000000 		.4byte	.LFB4
+ 676 002c 18000000 		.4byte	.LFE4
+ 677 0030 00000000 		.4byte	0x0
+ 678 0034 00000000 		.4byte	0x0
+ 679              		.section	.debug_str,"MS",%progbits,1
+ 680              	.LASF6:
+ 681 0000 6C6F6E67 		.ascii	"long long int\000"
+ 681      206C6F6E 
+ 681      6720696E 
+ 681      7400
+ 682              	.LASF8:
+ 683 000e 756E7369 		.ascii	"unsigned int\000"
+ 683      676E6564 
+ 683      20696E74 
+ 683      00
+ 684              	.LASF15:
+ 685 001b 50444D5F 		.ascii	"PDM_CIC_Status_Reg_WriteMask\000"
+ 685      4349435F 
+ 685      53746174 
+ 685      75735F52 
+ 685      65675F57 
+ 686              	.LASF19:
+ 687 0038 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PDM_CIC_Status_Reg.c\000"
+ 687      6E657261 
+ 687      7465645F 
+ 687      536F7572 
+ 687      63655C50 
+ 688              	.LASF21:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 16
+
+
+ 689 0066 75696E74 		.ascii	"uint8\000"
+ 689      3800
+ 690              	.LASF5:
+ 691 006c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 691      20756E73 
+ 691      69676E65 
+ 691      6420696E 
+ 691      7400
+ 692              	.LASF16:
+ 693 007e 50444D5F 		.ascii	"PDM_CIC_Status_Reg_Read\000"
+ 693      4349435F 
+ 693      53746174 
+ 693      75735F52 
+ 693      65675F52 
+ 694              	.LASF7:
+ 695 0096 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 695      206C6F6E 
+ 695      6720756E 
+ 695      7369676E 
+ 695      65642069 
+ 696              	.LASF13:
+ 697 00ad 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptDisable\000"
+ 697      4349435F 
+ 697      53746174 
+ 697      75735F52 
+ 697      65675F49 
+ 698              	.LASF22:
+ 699 00d1 6D61736B 		.ascii	"mask\000"
+ 699      00
+ 700              	.LASF18:
+ 701 00d6 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 701      4320342E 
+ 701      342E3100 
+ 702              	.LASF1:
+ 703 00e2 756E7369 		.ascii	"unsigned char\000"
+ 703      676E6564 
+ 703      20636861 
+ 703      7200
+ 704              	.LASF11:
+ 705 00f0 63686172 		.ascii	"char\000"
+ 705      00
+ 706              	.LASF4:
+ 707 00f5 6C6F6E67 		.ascii	"long int\000"
+ 707      20696E74 
+ 707      00
+ 708              	.LASF10:
+ 709 00fe 646F7562 		.ascii	"double\000"
+ 709      6C6500
+ 710              	.LASF20:
+ 711 0105 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
+ 711      665C486F 
+ 711      6D655C44 
+ 711      65736B74 
+ 711      6F705C55 
+ 712 0131 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
+ 712      5F50354C 
+ 712      505F5553 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccs6jo2a.s 			page 17
+
+
+ 712      425F4175 
+ 712      64696F5C 
+ 713 0163 6E00     		.ascii	"n\000"
+ 714              	.LASF3:
+ 715 0165 73686F72 		.ascii	"short unsigned int\000"
+ 715      7420756E 
+ 715      7369676E 
+ 715      65642069 
+ 715      6E7400
+ 716              	.LASF0:
+ 717 0178 7369676E 		.ascii	"signed char\000"
+ 717      65642063 
+ 717      68617200 
+ 718              	.LASF17:
+ 719 0184 50444D5F 		.ascii	"PDM_CIC_Status_Reg_ReadMask\000"
+ 719      4349435F 
+ 719      53746174 
+ 719      75735F52 
+ 719      65675F52 
+ 720              	.LASF9:
+ 721 01a0 666C6F61 		.ascii	"float\000"
+ 721      7400
+ 722              	.LASF2:
+ 723 01a6 73686F72 		.ascii	"short int\000"
+ 723      7420696E 
+ 723      7400
+ 724              	.LASF12:
+ 725 01b0 50444D5F 		.ascii	"PDM_CIC_Status_Reg_InterruptEnable\000"
+ 725      4349435F 
+ 725      53746174 
+ 725      75735F52 
+ 725      65675F49 
+ 726              	.LASF14:
+ 727 01d3 696E7465 		.ascii	"interruptState\000"
+ 727      72727570 
+ 727      74537461 
+ 727      746500
+ 728              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

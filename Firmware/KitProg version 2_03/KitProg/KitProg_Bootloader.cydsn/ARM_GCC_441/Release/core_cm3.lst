@@ -1,0 +1,2865 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"core_cm3.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 74020000 		.text
+  20      0200DA00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.__get_PSP,"ax",%progbits
+  24              		.align	1
+  25              		.global	__get_PSP
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	__get_PSP, %function
+  29              	__get_PSP:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\core_cm3.c"
+   1:.\Generated_Source\PSoC5/core_cm3.c **** /**************************************************************************//**
+   2:.\Generated_Source\PSoC5/core_cm3.c ****  * @file     core_cm3.c
+   3:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief    CMSIS Cortex-M3 Core Peripheral Access Layer Source File
+   4:.\Generated_Source\PSoC5/core_cm3.c ****  * @version  V1.30
+   5:.\Generated_Source\PSoC5/core_cm3.c ****  * @date     30. October 2009
+   6:.\Generated_Source\PSoC5/core_cm3.c ****  *
+   7:.\Generated_Source\PSoC5/core_cm3.c ****  * @note
+   8:.\Generated_Source\PSoC5/core_cm3.c ****  * Copyright (C) 2009 ARM Limited. All rights reserved.
+   9:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  10:.\Generated_Source\PSoC5/core_cm3.c ****  * @par
+  11:.\Generated_Source\PSoC5/core_cm3.c ****  * ARM Limited (ARM) is supplying this software for use with Cortex-M 
+  12:.\Generated_Source\PSoC5/core_cm3.c ****  * processor based microcontrollers.  This file can be freely distributed 
+  13:.\Generated_Source\PSoC5/core_cm3.c ****  * within development tools that are supporting such ARM based processors. 
+  14:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  15:.\Generated_Source\PSoC5/core_cm3.c ****  * @par
+  16:.\Generated_Source\PSoC5/core_cm3.c ****  * THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+  17:.\Generated_Source\PSoC5/core_cm3.c ****  * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
+  18:.\Generated_Source\PSoC5/core_cm3.c ****  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
+  19:.\Generated_Source\PSoC5/core_cm3.c ****  * ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR
+  20:.\Generated_Source\PSoC5/core_cm3.c ****  * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+  21:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  22:.\Generated_Source\PSoC5/core_cm3.c ****  ******************************************************************************/
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/core_cm3.c **** 
+  24:.\Generated_Source\PSoC5/core_cm3.c **** #include <stdint.h>
+  25:.\Generated_Source\PSoC5/core_cm3.c **** 
+  26:.\Generated_Source\PSoC5/core_cm3.c **** /* define compiler specific symbols */
+  27:.\Generated_Source\PSoC5/core_cm3.c **** #if defined ( __CC_ARM   )
+  28:.\Generated_Source\PSoC5/core_cm3.c ****   #define __ASM            __asm                                      /*!< asm keyword for ARM Comp
+  29:.\Generated_Source\PSoC5/core_cm3.c ****   #define __INLINE         __inline                                   /*!< inline keyword for ARM C
+  30:.\Generated_Source\PSoC5/core_cm3.c **** 
+  31:.\Generated_Source\PSoC5/core_cm3.c **** #elif defined ( __ICCARM__ )
+  32:.\Generated_Source\PSoC5/core_cm3.c ****   #define __ASM           __asm                                       /*!< asm keyword for IAR Comp
+  33:.\Generated_Source\PSoC5/core_cm3.c ****   #define __INLINE        inline                                      /*!< inline keyword for IAR C
+  34:.\Generated_Source\PSoC5/core_cm3.c **** 
+  35:.\Generated_Source\PSoC5/core_cm3.c **** #elif defined   (  __GNUC__  )
+  36:.\Generated_Source\PSoC5/core_cm3.c ****   #define __ASM            __asm                                      /*!< asm keyword for GNU Comp
+  37:.\Generated_Source\PSoC5/core_cm3.c ****   #define __INLINE         inline                                     /*!< inline keyword for GNU C
+  38:.\Generated_Source\PSoC5/core_cm3.c **** 
+  39:.\Generated_Source\PSoC5/core_cm3.c **** #elif defined   (  __TASKING__  )
+  40:.\Generated_Source\PSoC5/core_cm3.c ****   #define __ASM            __asm                                      /*!< asm keyword for TASKING 
+  41:.\Generated_Source\PSoC5/core_cm3.c ****   #define __INLINE         inline                                     /*!< inline keyword for TASKI
+  42:.\Generated_Source\PSoC5/core_cm3.c **** 
+  43:.\Generated_Source\PSoC5/core_cm3.c **** #endif
+  44:.\Generated_Source\PSoC5/core_cm3.c **** 
+  45:.\Generated_Source\PSoC5/core_cm3.c **** 
+  46:.\Generated_Source\PSoC5/core_cm3.c **** /* ###################  Compiler specific Intrinsics  ########################### */
+  47:.\Generated_Source\PSoC5/core_cm3.c **** 
+  48:.\Generated_Source\PSoC5/core_cm3.c **** #if defined ( __CC_ARM   ) /*------------------RealView Compiler -----------------*/
+  49:.\Generated_Source\PSoC5/core_cm3.c **** /* ARM armcc specific functions */
+  50:.\Generated_Source\PSoC5/core_cm3.c **** 
+  51:.\Generated_Source\PSoC5/core_cm3.c **** /**
+  52:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Process Stack Pointer
+  53:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  54:.\Generated_Source\PSoC5/core_cm3.c ****  * @return ProcessStackPointer
+  55:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  56:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the actual process stack pointer
+  57:.\Generated_Source\PSoC5/core_cm3.c ****  */
+  58:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t __get_PSP(void)
+  59:.\Generated_Source\PSoC5/core_cm3.c **** {
+  60:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, psp
+  61:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+  62:.\Generated_Source\PSoC5/core_cm3.c **** }
+  63:.\Generated_Source\PSoC5/core_cm3.c **** 
+  64:.\Generated_Source\PSoC5/core_cm3.c **** /**
+  65:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Process Stack Pointer
+  66:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  67:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfProcStack  Process Stack Pointer
+  68:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  69:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value ProcessStackPointer to the MSP 
+  70:.\Generated_Source\PSoC5/core_cm3.c ****  * (process stack pointer) Cortex processor register
+  71:.\Generated_Source\PSoC5/core_cm3.c ****  */
+  72:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_PSP(uint32_t topOfProcStack)
+  73:.\Generated_Source\PSoC5/core_cm3.c **** {
+  74:.\Generated_Source\PSoC5/core_cm3.c ****   msr psp, r0
+  75:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+  76:.\Generated_Source\PSoC5/core_cm3.c **** }
+  77:.\Generated_Source\PSoC5/core_cm3.c **** 
+  78:.\Generated_Source\PSoC5/core_cm3.c **** /**
+  79:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Main Stack Pointer
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 3
+
+
+  80:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  81:.\Generated_Source\PSoC5/core_cm3.c ****  * @return Main Stack Pointer
+  82:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  83:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the current value of the MSP (main stack pointer)
+  84:.\Generated_Source\PSoC5/core_cm3.c ****  * Cortex processor register
+  85:.\Generated_Source\PSoC5/core_cm3.c ****  */
+  86:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t __get_MSP(void)
+  87:.\Generated_Source\PSoC5/core_cm3.c **** {
+  88:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, msp
+  89:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+  90:.\Generated_Source\PSoC5/core_cm3.c **** }
+  91:.\Generated_Source\PSoC5/core_cm3.c **** 
+  92:.\Generated_Source\PSoC5/core_cm3.c **** /**
+  93:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Main Stack Pointer
+  94:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  95:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfMainStack  Main Stack Pointer
+  96:.\Generated_Source\PSoC5/core_cm3.c ****  *
+  97:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value mainStackPointer to the MSP 
+  98:.\Generated_Source\PSoC5/core_cm3.c ****  * (main stack pointer) Cortex processor register
+  99:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 100:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_MSP(uint32_t mainStackPointer)
+ 101:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 102:.\Generated_Source\PSoC5/core_cm3.c ****   msr msp, r0
+ 103:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 104:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 105:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 106:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 107:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in unsigned short value
+ 108:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 109:.\Generated_Source\PSoC5/core_cm3.c ****  * @param   value  value to reverse
+ 110:.\Generated_Source\PSoC5/core_cm3.c ****  * @return         reversed value
+ 111:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 112:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in unsigned short value
+ 113:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 114:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t __REV16(uint16_t value)
+ 115:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 116:.\Generated_Source\PSoC5/core_cm3.c ****   rev16 r0, r0
+ 117:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 118:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 119:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 120:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 121:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in signed short value with sign extension to integer
+ 122:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 123:.\Generated_Source\PSoC5/core_cm3.c ****  * @param   value  value to reverse
+ 124:.\Generated_Source\PSoC5/core_cm3.c ****  * @return         reversed value
+ 125:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 126:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in signed short value with sign extension to integer
+ 127:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 128:.\Generated_Source\PSoC5/core_cm3.c **** __ASM int32_t __REVSH(int16_t value)
+ 129:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 130:.\Generated_Source\PSoC5/core_cm3.c ****   revsh r0, r0
+ 131:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 132:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 133:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 134:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 135:.\Generated_Source\PSoC5/core_cm3.c **** #if (__ARMCC_VERSION < 400000)
+ 136:.\Generated_Source\PSoC5/core_cm3.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 4
+
+
+ 137:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 138:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Remove the exclusive lock created by ldrex
+ 139:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 140:.\Generated_Source\PSoC5/core_cm3.c ****  * Removes the exclusive lock which is created by ldrex.
+ 141:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 142:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __CLREX(void)
+ 143:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 144:.\Generated_Source\PSoC5/core_cm3.c ****   clrex
+ 145:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 146:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 147:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 148:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Base Priority value
+ 149:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 150:.\Generated_Source\PSoC5/core_cm3.c ****  * @return BasePriority
+ 151:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 152:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the base priority register
+ 153:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 154:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t  __get_BASEPRI(void)
+ 155:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 156:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, basepri
+ 157:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 158:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 159:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 160:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 161:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Base Priority value
+ 162:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 163:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  basePri  BasePriority
+ 164:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 165:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the base priority register
+ 166:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 167:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_BASEPRI(uint32_t basePri)
+ 168:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 169:.\Generated_Source\PSoC5/core_cm3.c ****   msr basepri, r0
+ 170:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 171:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 172:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 173:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 174:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Priority Mask value
+ 175:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 176:.\Generated_Source\PSoC5/core_cm3.c ****  * @return PriMask
+ 177:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 178:.\Generated_Source\PSoC5/core_cm3.c ****  * Return state of the priority mask bit from the priority mask register
+ 179:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 180:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t __get_PRIMASK(void)
+ 181:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 182:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, primask
+ 183:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 184:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 185:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 186:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 187:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Priority Mask value
+ 188:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 189:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  priMask  PriMask
+ 190:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 191:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the priority mask bit in the priority mask register
+ 192:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 193:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_PRIMASK(uint32_t priMask)
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 5
+
+
+ 194:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 195:.\Generated_Source\PSoC5/core_cm3.c ****   msr primask, r0
+ 196:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 197:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 198:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 199:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 200:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Fault Mask value
+ 201:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 202:.\Generated_Source\PSoC5/core_cm3.c ****  * @return FaultMask
+ 203:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 204:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the fault mask register
+ 205:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 206:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t  __get_FAULTMASK(void)
+ 207:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 208:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, faultmask
+ 209:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 210:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 211:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 212:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 213:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Fault Mask value
+ 214:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 215:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  faultMask  faultMask value
+ 216:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 217:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the fault mask register
+ 218:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 219:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_FAULTMASK(uint32_t faultMask)
+ 220:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 221:.\Generated_Source\PSoC5/core_cm3.c ****   msr faultmask, r0
+ 222:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 223:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 224:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 225:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 226:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Control Register value
+ 227:.\Generated_Source\PSoC5/core_cm3.c ****  * 
+ 228:.\Generated_Source\PSoC5/core_cm3.c ****  * @return Control value
+ 229:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 230:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the control register
+ 231:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 232:.\Generated_Source\PSoC5/core_cm3.c **** __ASM uint32_t __get_CONTROL(void)
+ 233:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 234:.\Generated_Source\PSoC5/core_cm3.c ****   mrs r0, control
+ 235:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 236:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 237:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 238:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 239:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Control Register value
+ 240:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 241:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  control  Control value
+ 242:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 243:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the control register
+ 244:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 245:.\Generated_Source\PSoC5/core_cm3.c **** __ASM void __set_CONTROL(uint32_t control)
+ 246:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 247:.\Generated_Source\PSoC5/core_cm3.c ****   msr control, r0
+ 248:.\Generated_Source\PSoC5/core_cm3.c ****   bx lr
+ 249:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 250:.\Generated_Source\PSoC5/core_cm3.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 6
+
+
+ 251:.\Generated_Source\PSoC5/core_cm3.c **** #endif /* __ARMCC_VERSION  */ 
+ 252:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 253:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 254:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 255:.\Generated_Source\PSoC5/core_cm3.c **** #elif (defined (__ICCARM__)) /*------------------ ICC Compiler -------------------*/
+ 256:.\Generated_Source\PSoC5/core_cm3.c **** /* IAR iccarm specific functions */
+ 257:.\Generated_Source\PSoC5/core_cm3.c **** #pragma diag_suppress=Pe940
+ 258:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 259:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 260:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Process Stack Pointer
+ 261:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 262:.\Generated_Source\PSoC5/core_cm3.c ****  * @return ProcessStackPointer
+ 263:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 264:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the actual process stack pointer
+ 265:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 266:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_PSP(void)
+ 267:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 268:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("mrs r0, psp");
+ 269:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 270:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 271:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 272:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 273:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Process Stack Pointer
+ 274:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 275:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfProcStack  Process Stack Pointer
+ 276:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 277:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value ProcessStackPointer to the MSP 
+ 278:.\Generated_Source\PSoC5/core_cm3.c ****  * (process stack pointer) Cortex processor register
+ 279:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 280:.\Generated_Source\PSoC5/core_cm3.c **** void __set_PSP(uint32_t topOfProcStack)
+ 281:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 282:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("msr psp, r0");
+ 283:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 284:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 285:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 286:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 287:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Main Stack Pointer
+ 288:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 289:.\Generated_Source\PSoC5/core_cm3.c ****  * @return Main Stack Pointer
+ 290:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 291:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the current value of the MSP (main stack pointer)
+ 292:.\Generated_Source\PSoC5/core_cm3.c ****  * Cortex processor register
+ 293:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 294:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_MSP(void)
+ 295:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 296:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("mrs r0, msp");
+ 297:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 298:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 299:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 300:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 301:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Main Stack Pointer
+ 302:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 303:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfMainStack  Main Stack Pointer
+ 304:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 305:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value mainStackPointer to the MSP 
+ 306:.\Generated_Source\PSoC5/core_cm3.c ****  * (main stack pointer) Cortex processor register
+ 307:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 7
+
+
+ 308:.\Generated_Source\PSoC5/core_cm3.c **** void __set_MSP(uint32_t topOfMainStack)
+ 309:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 310:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("msr msp, r0");
+ 311:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 312:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 313:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 314:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 315:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in unsigned short value
+ 316:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 317:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 318:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 319:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 320:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in unsigned short value
+ 321:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 322:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __REV16(uint16_t value)
+ 323:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 324:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("rev16 r0, r0");
+ 325:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 326:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 327:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 328:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 329:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse bit order of value
+ 330:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 331:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 332:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 333:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 334:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse bit order of value
+ 335:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 336:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __RBIT(uint32_t value)
+ 337:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 338:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("rbit r0, r0");
+ 339:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 340:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 341:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 342:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 343:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (8 bit)
+ 344:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 345:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 346:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 347:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 348:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 8 bit values)
+ 349:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 350:.\Generated_Source\PSoC5/core_cm3.c **** uint8_t __LDREXB(uint8_t *addr)
+ 351:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 352:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("ldrexb r0, [r0]");
+ 353:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr"); 
+ 354:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 355:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 356:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 357:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (16 bit)
+ 358:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 359:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 360:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 361:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 362:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 16 bit values
+ 363:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 364:.\Generated_Source\PSoC5/core_cm3.c **** uint16_t __LDREXH(uint16_t *addr)
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 8
+
+
+ 365:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 366:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("ldrexh r0, [r0]");
+ 367:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 368:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 369:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 370:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 371:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (32 bit)
+ 372:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 373:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 374:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 375:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 376:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 32 bit values
+ 377:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 378:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __LDREXW(uint32_t *addr)
+ 379:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 380:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("ldrex r0, [r0]");
+ 381:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 382:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 383:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 384:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 385:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (8 bit)
+ 386:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 387:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 388:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 389:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 390:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 391:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 8 bit values
+ 392:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 393:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXB(uint8_t value, uint8_t *addr)
+ 394:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 395:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("strexb r0, r0, [r1]");
+ 396:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 397:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 398:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 399:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 400:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (16 bit)
+ 401:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 402:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 403:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 404:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 405:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 406:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 16 bit values
+ 407:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 408:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXH(uint16_t value, uint16_t *addr)
+ 409:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 410:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("strexh r0, r0, [r1]");
+ 411:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 412:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 413:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 414:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 415:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (32 bit)
+ 416:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 417:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 418:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 419:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 420:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 421:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 32 bit values
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 9
+
+
+ 422:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 423:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXW(uint32_t value, uint32_t *addr)
+ 424:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 425:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("strex r0, r0, [r1]");
+ 426:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM("bx lr");
+ 427:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 428:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 429:.\Generated_Source\PSoC5/core_cm3.c **** #pragma diag_default=Pe940
+ 430:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 431:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 432:.\Generated_Source\PSoC5/core_cm3.c **** #elif (defined (__GNUC__)) /*------------------ GNU Compiler ---------------------*/
+ 433:.\Generated_Source\PSoC5/core_cm3.c **** /* GNU gcc specific functions */
+ 434:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 435:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 436:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Process Stack Pointer
+ 437:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 438:.\Generated_Source\PSoC5/core_cm3.c ****  * @return ProcessStackPointer
+ 439:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 440:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the actual process stack pointer
+ 441:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 442:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_PSP(void) __attribute__( ( naked ) );
+ 443:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_PSP(void)
+ 444:.\Generated_Source\PSoC5/core_cm3.c **** {
+  32              		.loc 1 444 0
+  33              		.cfi_startproc
+  34              		@ Naked Function: prologue and epilogue provided by programmer.
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 446:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 447:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, psp\n\t" 
+  37              		.loc 1 447 0
+  38              	@ 447 ".\Generated_Source\PSoC5\core_cm3.c" 1
+  39 0000 EFF30980 		MRS r0, psp
+  40 0004 0046     		MOV r0, r0 
+  41 0006 7047     		BX  lr     
+  42              		
+  43              	@ 0 "" 2
+  44              	.LVL0:
+  45              	.LVL1:
+ 448:.\Generated_Source\PSoC5/core_cm3.c ****                   "MOV r0, %0 \n\t"
+ 449:.\Generated_Source\PSoC5/core_cm3.c ****                   "BX  lr     \n\t"  : "=r" (result) );
+ 450:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 451:.\Generated_Source\PSoC5/core_cm3.c **** }
+  46              		.loc 1 451 0
+  47              		.thumb
+  48              		.cfi_endproc
+  49              	.LFE0:
+  50              		.size	__get_PSP, .-__get_PSP
+  51              		.section	.text.__set_PSP,"ax",%progbits
+  52              		.align	1
+  53              		.global	__set_PSP
+  54              		.thumb
+  55              		.thumb_func
+  56              		.type	__set_PSP, %function
+  57              	__set_PSP:
+  58              	.LFB1:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 10
+
+
+ 452:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 453:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 454:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Process Stack Pointer
+ 455:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 456:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfProcStack  Process Stack Pointer
+ 457:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 458:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value ProcessStackPointer to the MSP 
+ 459:.\Generated_Source\PSoC5/core_cm3.c ****  * (process stack pointer) Cortex processor register
+ 460:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 461:.\Generated_Source\PSoC5/core_cm3.c **** void __set_PSP(uint32_t topOfProcStack) __attribute__( ( naked ) );
+ 462:.\Generated_Source\PSoC5/core_cm3.c **** void __set_PSP(uint32_t topOfProcStack)
+ 463:.\Generated_Source\PSoC5/core_cm3.c **** {
+  59              		.loc 1 463 0
+  60              		.cfi_startproc
+  61              		@ Naked Function: prologue and epilogue provided by programmer.
+  62              		@ args = 0, pretend = 0, frame = 0
+  63              		@ frame_needed = 0, uses_anonymous_args = 0
+  64              	.LVL2:
+ 464:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR psp, %0\n\t"
+  65              		.loc 1 464 0
+  66              	@ 464 ".\Generated_Source\PSoC5\core_cm3.c" 1
+  67 0000 80F30988 		MSR psp, r0
+  68 0004 7047     		BX  lr     
+  69              		
+  70              	@ 0 "" 2
+ 465:.\Generated_Source\PSoC5/core_cm3.c ****                   "BX  lr     \n\t" : : "r" (topOfProcStack) );
+ 466:.\Generated_Source\PSoC5/core_cm3.c **** }
+  71              		.loc 1 466 0
+  72              		.thumb
+  73              		.cfi_endproc
+  74              	.LFE1:
+  75              		.size	__set_PSP, .-__set_PSP
+  76              		.section	.text.__get_MSP,"ax",%progbits
+  77              		.align	1
+  78              		.global	__get_MSP
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	__get_MSP, %function
+  82              	__get_MSP:
+  83              	.LFB2:
+ 467:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 468:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 469:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Main Stack Pointer
+ 470:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 471:.\Generated_Source\PSoC5/core_cm3.c ****  * @return Main Stack Pointer
+ 472:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 473:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the current value of the MSP (main stack pointer)
+ 474:.\Generated_Source\PSoC5/core_cm3.c ****  * Cortex processor register
+ 475:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 476:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_MSP(void) __attribute__( ( naked ) );
+ 477:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_MSP(void)
+ 478:.\Generated_Source\PSoC5/core_cm3.c **** {
+  84              		.loc 1 478 0
+  85              		.cfi_startproc
+  86              		@ Naked Function: prologue and epilogue provided by programmer.
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 11
+
+
+ 479:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 480:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 481:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, msp\n\t" 
+  89              		.loc 1 481 0
+  90              	@ 481 ".\Generated_Source\PSoC5\core_cm3.c" 1
+  91 0000 EFF30880 		MRS r0, msp
+  92 0004 0046     		MOV r0, r0 
+  93 0006 7047     		BX  lr     
+  94              		
+  95              	@ 0 "" 2
+  96              	.LVL3:
+  97              	.LVL4:
+ 482:.\Generated_Source\PSoC5/core_cm3.c ****                   "MOV r0, %0 \n\t"
+ 483:.\Generated_Source\PSoC5/core_cm3.c ****                   "BX  lr     \n\t"  : "=r" (result) );
+ 484:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 485:.\Generated_Source\PSoC5/core_cm3.c **** }
+  98              		.loc 1 485 0
+  99              		.thumb
+ 100              		.cfi_endproc
+ 101              	.LFE2:
+ 102              		.size	__get_MSP, .-__get_MSP
+ 103              		.section	.text.__set_MSP,"ax",%progbits
+ 104              		.align	1
+ 105              		.global	__set_MSP
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.type	__set_MSP, %function
+ 109              	__set_MSP:
+ 110              	.LFB3:
+ 486:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 487:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 488:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Main Stack Pointer
+ 489:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 490:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  topOfMainStack  Main Stack Pointer
+ 491:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 492:.\Generated_Source\PSoC5/core_cm3.c ****  * Assign the value mainStackPointer to the MSP 
+ 493:.\Generated_Source\PSoC5/core_cm3.c ****  * (main stack pointer) Cortex processor register
+ 494:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 495:.\Generated_Source\PSoC5/core_cm3.c **** void __set_MSP(uint32_t topOfMainStack) __attribute__( ( naked ) );
+ 496:.\Generated_Source\PSoC5/core_cm3.c **** void __set_MSP(uint32_t topOfMainStack)
+ 497:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 111              		.loc 1 497 0
+ 112              		.cfi_startproc
+ 113              		@ Naked Function: prologue and epilogue provided by programmer.
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              	.LVL5:
+ 498:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR msp, %0\n\t"
+ 117              		.loc 1 498 0
+ 118              	@ 498 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 119 0000 80F30888 		MSR msp, r0
+ 120 0004 7047     		BX  lr     
+ 121              		
+ 122              	@ 0 "" 2
+ 499:.\Generated_Source\PSoC5/core_cm3.c ****                   "BX  lr     \n\t" : : "r" (topOfMainStack) );
+ 500:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 123              		.loc 1 500 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 12
+
+
+ 124              		.thumb
+ 125              		.cfi_endproc
+ 126              	.LFE3:
+ 127              		.size	__set_MSP, .-__set_MSP
+ 128              		.section	.text.__get_BASEPRI,"ax",%progbits
+ 129              		.align	1
+ 130              		.global	__get_BASEPRI
+ 131              		.thumb
+ 132              		.thumb_func
+ 133              		.type	__get_BASEPRI, %function
+ 134              	__get_BASEPRI:
+ 135              	.LFB4:
+ 501:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 502:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 503:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Base Priority value
+ 504:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 505:.\Generated_Source\PSoC5/core_cm3.c ****  * @return BasePriority
+ 506:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 507:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the base priority register
+ 508:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 509:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_BASEPRI(void)
+ 510:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 136              		.loc 1 510 0
+ 137              		.cfi_startproc
+ 138              		@ args = 0, pretend = 0, frame = 0
+ 139              		@ frame_needed = 0, uses_anonymous_args = 0
+ 140              		@ link register save eliminated.
+ 511:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 512:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 513:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, basepri_max" : "=r" (result) );
+ 141              		.loc 1 513 0
+ 142              	@ 513 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 143 0000 EFF31280 		MRS r0, basepri_max
+ 144              	@ 0 "" 2
+ 145              	.LVL6:
+ 146              	.LVL7:
+ 514:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 515:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 147              		.loc 1 515 0
+ 148              		.thumb
+ 149 0004 7047     		bx	lr
+ 150              		.cfi_endproc
+ 151              	.LFE4:
+ 152              		.size	__get_BASEPRI, .-__get_BASEPRI
+ 153              		.section	.text.__set_BASEPRI,"ax",%progbits
+ 154              		.align	1
+ 155              		.global	__set_BASEPRI
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.type	__set_BASEPRI, %function
+ 159              	__set_BASEPRI:
+ 160              	.LFB5:
+ 516:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 517:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 518:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Base Priority value
+ 519:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 520:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  basePri  BasePriority
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 13
+
+
+ 521:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 522:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the base priority register
+ 523:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 524:.\Generated_Source\PSoC5/core_cm3.c **** void __set_BASEPRI(uint32_t value)
+ 525:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 161              		.loc 1 525 0
+ 162              		.cfi_startproc
+ 163              		@ args = 0, pretend = 0, frame = 0
+ 164              		@ frame_needed = 0, uses_anonymous_args = 0
+ 165              		@ link register save eliminated.
+ 166              	.LVL8:
+ 526:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR basepri, %0" : : "r" (value) );
+ 167              		.loc 1 526 0
+ 168              	@ 526 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 169 0000 80F31188 		MSR basepri, r0
+ 170              	@ 0 "" 2
+ 527:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 171              		.loc 1 527 0
+ 172              		.thumb
+ 173 0004 7047     		bx	lr
+ 174              		.cfi_endproc
+ 175              	.LFE5:
+ 176              		.size	__set_BASEPRI, .-__set_BASEPRI
+ 177              		.section	.text.__get_PRIMASK,"ax",%progbits
+ 178              		.align	1
+ 179              		.global	__get_PRIMASK
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.type	__get_PRIMASK, %function
+ 183              	__get_PRIMASK:
+ 184              	.LFB6:
+ 528:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 529:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 530:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Priority Mask value
+ 531:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 532:.\Generated_Source\PSoC5/core_cm3.c ****  * @return PriMask
+ 533:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 534:.\Generated_Source\PSoC5/core_cm3.c ****  * Return state of the priority mask bit from the priority mask register
+ 535:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 536:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_PRIMASK(void)
+ 537:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 185              		.loc 1 537 0
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 0, uses_anonymous_args = 0
+ 189              		@ link register save eliminated.
+ 538:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 539:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 540:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 190              		.loc 1 540 0
+ 191              	@ 540 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 192 0000 EFF31080 		MRS r0, primask
+ 193              	@ 0 "" 2
+ 194              	.LVL9:
+ 195              	.LVL10:
+ 541:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 542:.\Generated_Source\PSoC5/core_cm3.c **** }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 14
+
+
+ 196              		.loc 1 542 0
+ 197              		.thumb
+ 198 0004 7047     		bx	lr
+ 199              		.cfi_endproc
+ 200              	.LFE6:
+ 201              		.size	__get_PRIMASK, .-__get_PRIMASK
+ 202              		.section	.text.__set_PRIMASK,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	__set_PRIMASK
+ 205              		.thumb
+ 206              		.thumb_func
+ 207              		.type	__set_PRIMASK, %function
+ 208              	__set_PRIMASK:
+ 209              	.LFB7:
+ 543:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 544:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 545:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Priority Mask value
+ 546:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 547:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  priMask  PriMask
+ 548:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 549:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the priority mask bit in the priority mask register
+ 550:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 551:.\Generated_Source\PSoC5/core_cm3.c **** void __set_PRIMASK(uint32_t priMask)
+ 552:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 210              		.loc 1 552 0
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 0, uses_anonymous_args = 0
+ 214              		@ link register save eliminated.
+ 215              	.LVL11:
+ 553:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) );
+ 216              		.loc 1 553 0
+ 217              	@ 553 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 218 0000 80F31088 		MSR primask, r0
+ 219              	@ 0 "" 2
+ 554:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 220              		.loc 1 554 0
+ 221              		.thumb
+ 222 0004 7047     		bx	lr
+ 223              		.cfi_endproc
+ 224              	.LFE7:
+ 225              		.size	__set_PRIMASK, .-__set_PRIMASK
+ 226              		.section	.text.__get_FAULTMASK,"ax",%progbits
+ 227              		.align	1
+ 228              		.global	__get_FAULTMASK
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.type	__get_FAULTMASK, %function
+ 232              	__get_FAULTMASK:
+ 233              	.LFB8:
+ 555:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 556:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 557:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Fault Mask value
+ 558:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 559:.\Generated_Source\PSoC5/core_cm3.c ****  * @return FaultMask
+ 560:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 561:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the fault mask register
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 15
+
+
+ 562:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 563:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_FAULTMASK(void)
+ 564:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 234              		.loc 1 564 0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		@ link register save eliminated.
+ 565:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 566:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 567:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
+ 239              		.loc 1 567 0
+ 240              	@ 567 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 241 0000 EFF31380 		MRS r0, faultmask
+ 242              	@ 0 "" 2
+ 243              	.LVL12:
+ 244              	.LVL13:
+ 568:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 569:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 245              		.loc 1 569 0
+ 246              		.thumb
+ 247 0004 7047     		bx	lr
+ 248              		.cfi_endproc
+ 249              	.LFE8:
+ 250              		.size	__get_FAULTMASK, .-__get_FAULTMASK
+ 251              		.section	.text.__set_FAULTMASK,"ax",%progbits
+ 252              		.align	1
+ 253              		.global	__set_FAULTMASK
+ 254              		.thumb
+ 255              		.thumb_func
+ 256              		.type	__set_FAULTMASK, %function
+ 257              	__set_FAULTMASK:
+ 258              	.LFB9:
+ 570:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 571:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 572:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Fault Mask value
+ 573:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 574:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  faultMask  faultMask value
+ 575:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 576:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the fault mask register
+ 577:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 578:.\Generated_Source\PSoC5/core_cm3.c **** void __set_FAULTMASK(uint32_t faultMask)
+ 579:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 259              		.loc 1 579 0
+ 260              		.cfi_startproc
+ 261              		@ args = 0, pretend = 0, frame = 0
+ 262              		@ frame_needed = 0, uses_anonymous_args = 0
+ 263              		@ link register save eliminated.
+ 264              	.LVL14:
+ 580:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR faultmask, %0" : : "r" (faultMask) );
+ 265              		.loc 1 580 0
+ 266              	@ 580 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 267 0000 80F31388 		MSR faultmask, r0
+ 268              	@ 0 "" 2
+ 581:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 269              		.loc 1 581 0
+ 270              		.thumb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 16
+
+
+ 271 0004 7047     		bx	lr
+ 272              		.cfi_endproc
+ 273              	.LFE9:
+ 274              		.size	__set_FAULTMASK, .-__set_FAULTMASK
+ 275              		.section	.text.__get_CONTROL,"ax",%progbits
+ 276              		.align	1
+ 277              		.global	__get_CONTROL
+ 278              		.thumb
+ 279              		.thumb_func
+ 280              		.type	__get_CONTROL, %function
+ 281              	__get_CONTROL:
+ 282              	.LFB10:
+ 582:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 583:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 584:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Return the Control Register value
+ 585:.\Generated_Source\PSoC5/core_cm3.c **** * 
+ 586:.\Generated_Source\PSoC5/core_cm3.c **** *  @return Control value
+ 587:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 588:.\Generated_Source\PSoC5/core_cm3.c ****  * Return the content of the control register
+ 589:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 590:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __get_CONTROL(void)
+ 591:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 283              		.loc 1 591 0
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 0, uses_anonymous_args = 0
+ 287              		@ link register save eliminated.
+ 592:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 593:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 594:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 288              		.loc 1 594 0
+ 289              	@ 594 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 290 0000 EFF31480 		MRS r0, control
+ 291              	@ 0 "" 2
+ 292              	.LVL15:
+ 293              	.LVL16:
+ 595:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 596:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 294              		.loc 1 596 0
+ 295              		.thumb
+ 296 0004 7047     		bx	lr
+ 297              		.cfi_endproc
+ 298              	.LFE10:
+ 299              		.size	__get_CONTROL, .-__get_CONTROL
+ 300              		.section	.text.__set_CONTROL,"ax",%progbits
+ 301              		.align	1
+ 302              		.global	__set_CONTROL
+ 303              		.thumb
+ 304              		.thumb_func
+ 305              		.type	__set_CONTROL, %function
+ 306              	__set_CONTROL:
+ 307              	.LFB11:
+ 597:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 598:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 599:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Set the Control Register value
+ 600:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 601:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  control  Control value
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 17
+
+
+ 602:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 603:.\Generated_Source\PSoC5/core_cm3.c ****  * Set the control register
+ 604:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 605:.\Generated_Source\PSoC5/core_cm3.c **** void __set_CONTROL(uint32_t control)
+ 606:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 308              		.loc 1 606 0
+ 309              		.cfi_startproc
+ 310              		@ args = 0, pretend = 0, frame = 0
+ 311              		@ frame_needed = 0, uses_anonymous_args = 0
+ 312              		@ link register save eliminated.
+ 313              	.LVL17:
+ 607:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("MSR control, %0" : : "r" (control) );
+ 314              		.loc 1 607 0
+ 315              	@ 607 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 316 0000 80F31488 		MSR control, r0
+ 317              	@ 0 "" 2
+ 608:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 318              		.loc 1 608 0
+ 319              		.thumb
+ 320 0004 7047     		bx	lr
+ 321              		.cfi_endproc
+ 322              	.LFE11:
+ 323              		.size	__set_CONTROL, .-__set_CONTROL
+ 324              		.section	.text.__REV,"ax",%progbits
+ 325              		.align	1
+ 326              		.global	__REV
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.type	__REV, %function
+ 330              	__REV:
+ 331              	.LFB12:
+ 609:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 610:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 611:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 612:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in integer value
+ 613:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 614:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 615:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 616:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 617:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in integer value
+ 618:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 619:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __REV(uint32_t value)
+ 620:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 332              		.loc 1 620 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 337              	.LVL18:
+ 621:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 622:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 623:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("rev %0, %1" : "=r" (result) : "r" (value) );
+ 338              		.loc 1 623 0
+ 339              	@ 623 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 340 0000 00BA     		rev r0, r0
+ 341              	@ 0 "" 2
+ 342              	.LVL19:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 18
+
+
+ 343              	.LVL20:
+ 624:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 625:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 344              		.loc 1 625 0
+ 345              		.thumb
+ 346 0002 7047     		bx	lr
+ 347              		.cfi_endproc
+ 348              	.LFE12:
+ 349              		.size	__REV, .-__REV
+ 350              		.section	.text.__REV16,"ax",%progbits
+ 351              		.align	1
+ 352              		.global	__REV16
+ 353              		.thumb
+ 354              		.thumb_func
+ 355              		.type	__REV16, %function
+ 356              	__REV16:
+ 357              	.LFB13:
+ 626:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 627:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 628:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in unsigned short value
+ 629:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 630:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 631:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 632:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 633:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in unsigned short value
+ 634:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 635:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __REV16(uint16_t value)
+ 636:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 358              		.loc 1 636 0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		@ link register save eliminated.
+ 363              	.LVL21:
+ 637:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 638:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 639:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("rev16 %0, %1" : "=r" (result) : "r" (value) );
+ 364              		.loc 1 639 0
+ 365              	@ 639 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 366 0000 40BA     		rev16 r0, r0
+ 367              	@ 0 "" 2
+ 368              	.LVL22:
+ 369              	.LVL23:
+ 640:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 641:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 370              		.loc 1 641 0
+ 371              		.thumb
+ 372 0002 7047     		bx	lr
+ 373              		.cfi_endproc
+ 374              	.LFE13:
+ 375              		.size	__REV16, .-__REV16
+ 376              		.section	.text.__REVSH,"ax",%progbits
+ 377              		.align	1
+ 378              		.global	__REVSH
+ 379              		.thumb
+ 380              		.thumb_func
+ 381              		.type	__REVSH, %function
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 19
+
+
+ 382              	__REVSH:
+ 383              	.LFB14:
+ 642:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 643:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 644:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse byte order in signed short value with sign extension to integer
+ 645:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 646:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 647:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 648:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 649:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse byte order in signed short value with sign extension to integer
+ 650:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 651:.\Generated_Source\PSoC5/core_cm3.c **** int32_t __REVSH(int16_t value)
+ 652:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 384              		.loc 1 652 0
+ 385              		.cfi_startproc
+ 386              		@ args = 0, pretend = 0, frame = 0
+ 387              		@ frame_needed = 0, uses_anonymous_args = 0
+ 388              		@ link register save eliminated.
+ 389              	.LVL24:
+ 653:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 654:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 655:.\Generated_Source\PSoC5/core_cm3.c ****   __ASM volatile ("revsh %0, %1" : "=r" (result) : "r" (value) );
+ 390              		.loc 1 655 0
+ 391              	@ 655 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 392 0000 C0BA     		revsh r0, r0
+ 393              	@ 0 "" 2
+ 394              	.LVL25:
+ 395              	.LVL26:
+ 656:.\Generated_Source\PSoC5/core_cm3.c ****   return(result);
+ 657:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 396              		.loc 1 657 0
+ 397              		.thumb
+ 398 0002 7047     		bx	lr
+ 399              		.cfi_endproc
+ 400              	.LFE14:
+ 401              		.size	__REVSH, .-__REVSH
+ 402              		.section	.text.__RBIT,"ax",%progbits
+ 403              		.align	1
+ 404              		.global	__RBIT
+ 405              		.thumb
+ 406              		.thumb_func
+ 407              		.type	__RBIT, %function
+ 408              	__RBIT:
+ 409              	.LFB15:
+ 658:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 659:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 660:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  Reverse bit order of value
+ 661:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 662:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to reverse
+ 663:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        reversed value
+ 664:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 665:.\Generated_Source\PSoC5/core_cm3.c ****  * Reverse bit order of value
+ 666:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 667:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __RBIT(uint32_t value)
+ 668:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 410              		.loc 1 668 0
+ 411              		.cfi_startproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 20
+
+
+ 412              		@ args = 0, pretend = 0, frame = 0
+ 413              		@ frame_needed = 0, uses_anonymous_args = 0
+ 414              		@ link register save eliminated.
+ 415              	.LVL27:
+ 669:.\Generated_Source\PSoC5/core_cm3.c ****   uint32_t result=0;
+ 670:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 671:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("rbit %0, %1" : "=r" (result) : "r" (value) );
+ 416              		.loc 1 671 0
+ 417              	@ 671 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 418 0000 90FAA0F0 		rbit r0, r0
+ 419              	@ 0 "" 2
+ 420              	.LVL28:
+ 421              	.LVL29:
+ 672:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 673:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 422              		.loc 1 673 0
+ 423              		.thumb
+ 424 0004 7047     		bx	lr
+ 425              		.cfi_endproc
+ 426              	.LFE15:
+ 427              		.size	__RBIT, .-__RBIT
+ 428              		.section	.text.__LDREXB,"ax",%progbits
+ 429              		.align	1
+ 430              		.global	__LDREXB
+ 431              		.thumb
+ 432              		.thumb_func
+ 433              		.type	__LDREXB, %function
+ 434              	__LDREXB:
+ 435              	.LFB16:
+ 674:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 675:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 676:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (8 bit)
+ 677:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 678:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 679:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 680:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 681:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 8 bit value
+ 682:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 683:.\Generated_Source\PSoC5/core_cm3.c **** uint8_t __LDREXB(uint8_t *addr)
+ 684:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 436              		.loc 1 684 0
+ 437              		.cfi_startproc
+ 438              		@ args = 0, pretend = 0, frame = 0
+ 439              		@ frame_needed = 0, uses_anonymous_args = 0
+ 440              		@ link register save eliminated.
+ 441              	.LVL30:
+ 685:.\Generated_Source\PSoC5/core_cm3.c ****     uint8_t result=0;
+ 686:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 687:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("ldrexb %0, [%1]" : "=r" (result) : "r" (addr) );
+ 442              		.loc 1 687 0
+ 443              	@ 687 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 444 0000 D0E84F0F 		ldrexb r0, [r0]
+ 445              	@ 0 "" 2
+ 446              	.LVL31:
+ 688:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 689:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 447              		.loc 1 689 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 21
+
+
+ 448              		.thumb
+ 449 0004 C0B2     		uxtb	r0, r0
+ 450 0006 7047     		bx	lr
+ 451              		.cfi_endproc
+ 452              	.LFE16:
+ 453              		.size	__LDREXB, .-__LDREXB
+ 454              		.section	.text.__LDREXH,"ax",%progbits
+ 455              		.align	1
+ 456              		.global	__LDREXH
+ 457              		.thumb
+ 458              		.thumb_func
+ 459              		.type	__LDREXH, %function
+ 460              	__LDREXH:
+ 461              	.LFB17:
+ 690:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 691:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 692:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (16 bit)
+ 693:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 694:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 695:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 696:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 697:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 16 bit values
+ 698:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 699:.\Generated_Source\PSoC5/core_cm3.c **** uint16_t __LDREXH(uint16_t *addr)
+ 700:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 462              		.loc 1 700 0
+ 463              		.cfi_startproc
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466              		@ link register save eliminated.
+ 467              	.LVL32:
+ 701:.\Generated_Source\PSoC5/core_cm3.c ****     uint16_t result=0;
+ 702:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 703:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("ldrexh %0, [%1]" : "=r" (result) : "r" (addr) );
+ 468              		.loc 1 703 0
+ 469              	@ 703 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 470 0000 D0E85F0F 		ldrexh r0, [r0]
+ 471              	@ 0 "" 2
+ 472              	.LVL33:
+ 704:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 705:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 473              		.loc 1 705 0
+ 474              		.thumb
+ 475 0004 80B2     		uxth	r0, r0
+ 476 0006 7047     		bx	lr
+ 477              		.cfi_endproc
+ 478              	.LFE17:
+ 479              		.size	__LDREXH, .-__LDREXH
+ 480              		.section	.text.__LDREXW,"ax",%progbits
+ 481              		.align	1
+ 482              		.global	__LDREXW
+ 483              		.thumb
+ 484              		.thumb_func
+ 485              		.type	__LDREXW, %function
+ 486              	__LDREXW:
+ 487              	.LFB18:
+ 706:.\Generated_Source\PSoC5/core_cm3.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 22
+
+
+ 707:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 708:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  LDR Exclusive (32 bit)
+ 709:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 710:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 711:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        value of (*address)
+ 712:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 713:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive LDR command for 32 bit values
+ 714:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 715:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __LDREXW(uint32_t *addr)
+ 716:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 488              		.loc 1 716 0
+ 489              		.cfi_startproc
+ 490              		@ args = 0, pretend = 0, frame = 0
+ 491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 492              		@ link register save eliminated.
+ 493              	.LVL34:
+ 717:.\Generated_Source\PSoC5/core_cm3.c ****     uint32_t result=0;
+ 718:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 719:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("ldrex %0, [%1]" : "=r" (result) : "r" (addr) );
+ 494              		.loc 1 719 0
+ 495              	@ 719 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 496 0000 50E8000F 		ldrex r0, [r0]
+ 497              	@ 0 "" 2
+ 498              	.LVL35:
+ 499              	.LVL36:
+ 720:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 721:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 500              		.loc 1 721 0
+ 501              		.thumb
+ 502 0004 7047     		bx	lr
+ 503              		.cfi_endproc
+ 504              	.LFE18:
+ 505              		.size	__LDREXW, .-__LDREXW
+ 506              		.section	.text.__STREXB,"ax",%progbits
+ 507              		.align	1
+ 508              		.global	__STREXB
+ 509              		.thumb
+ 510              		.thumb_func
+ 511              		.type	__STREXB, %function
+ 512              	__STREXB:
+ 513              	.LFB19:
+ 722:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 723:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 724:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (8 bit)
+ 725:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 726:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 727:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 728:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 729:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 730:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 8 bit values
+ 731:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 732:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXB(uint8_t value, uint8_t *addr)
+ 733:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 514              		.loc 1 733 0
+ 515              		.cfi_startproc
+ 516              		@ args = 0, pretend = 0, frame = 0
+ 517              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 23
+
+
+ 518              		@ link register save eliminated.
+ 519              	.LVL37:
+ 734:.\Generated_Source\PSoC5/core_cm3.c ****    uint32_t result=0;
+ 735:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 736:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("strexb %0, %2, [%1]" : "=r" (result) : "r" (addr), "r" (value) );
+ 520              		.loc 1 736 0
+ 521              	@ 736 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 522 0000 C1E8400F 		strexb r0, r0, [r1]
+ 523              	@ 0 "" 2
+ 524              	.LVL38:
+ 525              	.LVL39:
+ 737:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 738:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 526              		.loc 1 738 0
+ 527              		.thumb
+ 528 0004 7047     		bx	lr
+ 529              		.cfi_endproc
+ 530              	.LFE19:
+ 531              		.size	__STREXB, .-__STREXB
+ 532              		.section	.text.__STREXH,"ax",%progbits
+ 533              		.align	1
+ 534              		.global	__STREXH
+ 535              		.thumb
+ 536              		.thumb_func
+ 537              		.type	__STREXH, %function
+ 538              	__STREXH:
+ 539              	.LFB20:
+ 739:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 740:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 741:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (16 bit)
+ 742:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 743:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 744:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 745:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 746:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 747:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 16 bit values
+ 748:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 749:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXH(uint16_t value, uint16_t *addr)
+ 750:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 540              		.loc 1 750 0
+ 541              		.cfi_startproc
+ 542              		@ args = 0, pretend = 0, frame = 0
+ 543              		@ frame_needed = 0, uses_anonymous_args = 0
+ 544              		@ link register save eliminated.
+ 545              	.LVL40:
+ 751:.\Generated_Source\PSoC5/core_cm3.c ****    uint32_t result=0;
+ 752:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 753:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("strexh %0, %2, [%1]" : "=r" (result) : "r" (addr), "r" (value) );
+ 546              		.loc 1 753 0
+ 547              	@ 753 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 548 0000 C1E8500F 		strexh r0, r0, [r1]
+ 549              	@ 0 "" 2
+ 550              	.LVL41:
+ 551              	.LVL42:
+ 754:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 755:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 552              		.loc 1 755 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 24
+
+
+ 553              		.thumb
+ 554 0004 7047     		bx	lr
+ 555              		.cfi_endproc
+ 556              	.LFE20:
+ 557              		.size	__STREXH, .-__STREXH
+ 558              		.section	.text.__STREXW,"ax",%progbits
+ 559              		.align	1
+ 560              		.global	__STREXW
+ 561              		.thumb
+ 562              		.thumb_func
+ 563              		.type	__STREXW, %function
+ 564              	__STREXW:
+ 565              	.LFB21:
+ 756:.\Generated_Source\PSoC5/core_cm3.c **** 
+ 757:.\Generated_Source\PSoC5/core_cm3.c **** /**
+ 758:.\Generated_Source\PSoC5/core_cm3.c ****  * @brief  STR Exclusive (32 bit)
+ 759:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 760:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  value  value to store
+ 761:.\Generated_Source\PSoC5/core_cm3.c ****  * @param  *addr  address pointer
+ 762:.\Generated_Source\PSoC5/core_cm3.c ****  * @return        successful / failed
+ 763:.\Generated_Source\PSoC5/core_cm3.c ****  *
+ 764:.\Generated_Source\PSoC5/core_cm3.c ****  * Exclusive STR command for 32 bit values
+ 765:.\Generated_Source\PSoC5/core_cm3.c ****  */
+ 766:.\Generated_Source\PSoC5/core_cm3.c **** uint32_t __STREXW(uint32_t value, uint32_t *addr)
+ 767:.\Generated_Source\PSoC5/core_cm3.c **** {
+ 566              		.loc 1 767 0
+ 567              		.cfi_startproc
+ 568              		@ args = 0, pretend = 0, frame = 0
+ 569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 570              		@ link register save eliminated.
+ 571              	.LVL43:
+ 768:.\Generated_Source\PSoC5/core_cm3.c ****    uint32_t result=0;
+ 769:.\Generated_Source\PSoC5/core_cm3.c ****   
+ 770:.\Generated_Source\PSoC5/core_cm3.c ****    __ASM volatile ("strex %0, %2, [%1]" : "=r" (result) : "r" (addr), "r" (value) );
+ 572              		.loc 1 770 0
+ 573              	@ 770 ".\Generated_Source\PSoC5\core_cm3.c" 1
+ 574 0000 41E80000 		strex r0, r0, [r1]
+ 575              	@ 0 "" 2
+ 576              	.LVL44:
+ 577              	.LVL45:
+ 771:.\Generated_Source\PSoC5/core_cm3.c ****    return(result);
+ 772:.\Generated_Source\PSoC5/core_cm3.c **** }
+ 578              		.loc 1 772 0
+ 579              		.thumb
+ 580 0004 7047     		bx	lr
+ 581              		.cfi_endproc
+ 582              	.LFE21:
+ 583              		.size	__STREXW, .-__STREXW
+ 584              		.text
+ 585              	.Letext0:
+ 586              		.section	.debug_loc,"",%progbits
+ 587              	.Ldebug_loc0:
+ 588              	.LLST1:
+ 589 0000 08000000 		.4byte	.LVL0
+ 590 0004 08000000 		.4byte	.LVL1
+ 591 0008 0100     		.2byte	0x1
+ 592 000a 50       		.byte	0x50
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 25
+
+
+ 593 000b 00000000 		.4byte	0x0
+ 594 000f 00000000 		.4byte	0x0
+ 595              	.LLST4:
+ 596 0013 08000000 		.4byte	.LVL3
+ 597 0017 08000000 		.4byte	.LVL4
+ 598 001b 0100     		.2byte	0x1
+ 599 001d 50       		.byte	0x50
+ 600 001e 00000000 		.4byte	0x0
+ 601 0022 00000000 		.4byte	0x0
+ 602              	.LLST7:
+ 603 0026 04000000 		.4byte	.LVL6
+ 604 002a 04000000 		.4byte	.LVL7
+ 605 002e 0100     		.2byte	0x1
+ 606 0030 50       		.byte	0x50
+ 607 0031 00000000 		.4byte	0x0
+ 608 0035 00000000 		.4byte	0x0
+ 609              	.LLST10:
+ 610 0039 04000000 		.4byte	.LVL9
+ 611 003d 04000000 		.4byte	.LVL10
+ 612 0041 0100     		.2byte	0x1
+ 613 0043 50       		.byte	0x50
+ 614 0044 00000000 		.4byte	0x0
+ 615 0048 00000000 		.4byte	0x0
+ 616              	.LLST13:
+ 617 004c 04000000 		.4byte	.LVL12
+ 618 0050 04000000 		.4byte	.LVL13
+ 619 0054 0100     		.2byte	0x1
+ 620 0056 50       		.byte	0x50
+ 621 0057 00000000 		.4byte	0x0
+ 622 005b 00000000 		.4byte	0x0
+ 623              	.LLST16:
+ 624 005f 04000000 		.4byte	.LVL15
+ 625 0063 04000000 		.4byte	.LVL16
+ 626 0067 0100     		.2byte	0x1
+ 627 0069 50       		.byte	0x50
+ 628 006a 00000000 		.4byte	0x0
+ 629 006e 00000000 		.4byte	0x0
+ 630              	.LLST19:
+ 631 0072 00000000 		.4byte	.LVL18
+ 632 0076 02000000 		.4byte	.LVL19
+ 633 007a 0100     		.2byte	0x1
+ 634 007c 50       		.byte	0x50
+ 635 007d 00000000 		.4byte	0x0
+ 636 0081 00000000 		.4byte	0x0
+ 637              	.LLST20:
+ 638 0085 02000000 		.4byte	.LVL19
+ 639 0089 02000000 		.4byte	.LVL20
+ 640 008d 0100     		.2byte	0x1
+ 641 008f 50       		.byte	0x50
+ 642 0090 00000000 		.4byte	0x0
+ 643 0094 00000000 		.4byte	0x0
+ 644              	.LLST22:
+ 645 0098 00000000 		.4byte	.LVL21
+ 646 009c 02000000 		.4byte	.LVL22
+ 647 00a0 0100     		.2byte	0x1
+ 648 00a2 50       		.byte	0x50
+ 649 00a3 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 26
+
+
+ 650 00a7 00000000 		.4byte	0x0
+ 651              	.LLST23:
+ 652 00ab 02000000 		.4byte	.LVL22
+ 653 00af 02000000 		.4byte	.LVL23
+ 654 00b3 0100     		.2byte	0x1
+ 655 00b5 50       		.byte	0x50
+ 656 00b6 00000000 		.4byte	0x0
+ 657 00ba 00000000 		.4byte	0x0
+ 658              	.LLST25:
+ 659 00be 00000000 		.4byte	.LVL24
+ 660 00c2 02000000 		.4byte	.LVL25
+ 661 00c6 0100     		.2byte	0x1
+ 662 00c8 50       		.byte	0x50
+ 663 00c9 00000000 		.4byte	0x0
+ 664 00cd 00000000 		.4byte	0x0
+ 665              	.LLST26:
+ 666 00d1 02000000 		.4byte	.LVL25
+ 667 00d5 02000000 		.4byte	.LVL26
+ 668 00d9 0100     		.2byte	0x1
+ 669 00db 50       		.byte	0x50
+ 670 00dc 00000000 		.4byte	0x0
+ 671 00e0 00000000 		.4byte	0x0
+ 672              	.LLST28:
+ 673 00e4 00000000 		.4byte	.LVL27
+ 674 00e8 04000000 		.4byte	.LVL28
+ 675 00ec 0100     		.2byte	0x1
+ 676 00ee 50       		.byte	0x50
+ 677 00ef 00000000 		.4byte	0x0
+ 678 00f3 00000000 		.4byte	0x0
+ 679              	.LLST29:
+ 680 00f7 04000000 		.4byte	.LVL28
+ 681 00fb 04000000 		.4byte	.LVL29
+ 682 00ff 0100     		.2byte	0x1
+ 683 0101 50       		.byte	0x50
+ 684 0102 00000000 		.4byte	0x0
+ 685 0106 00000000 		.4byte	0x0
+ 686              	.LLST31:
+ 687 010a 00000000 		.4byte	.LVL30
+ 688 010e 04000000 		.4byte	.LVL31
+ 689 0112 0100     		.2byte	0x1
+ 690 0114 50       		.byte	0x50
+ 691 0115 00000000 		.4byte	0x0
+ 692 0119 00000000 		.4byte	0x0
+ 693              	.LLST33:
+ 694 011d 00000000 		.4byte	.LVL32
+ 695 0121 04000000 		.4byte	.LVL33
+ 696 0125 0100     		.2byte	0x1
+ 697 0127 50       		.byte	0x50
+ 698 0128 00000000 		.4byte	0x0
+ 699 012c 00000000 		.4byte	0x0
+ 700              	.LLST35:
+ 701 0130 00000000 		.4byte	.LVL34
+ 702 0134 04000000 		.4byte	.LVL35
+ 703 0138 0100     		.2byte	0x1
+ 704 013a 50       		.byte	0x50
+ 705 013b 00000000 		.4byte	0x0
+ 706 013f 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 27
+
+
+ 707              	.LLST36:
+ 708 0143 04000000 		.4byte	.LVL35
+ 709 0147 04000000 		.4byte	.LVL36
+ 710 014b 0100     		.2byte	0x1
+ 711 014d 50       		.byte	0x50
+ 712 014e 00000000 		.4byte	0x0
+ 713 0152 00000000 		.4byte	0x0
+ 714              	.LLST38:
+ 715 0156 00000000 		.4byte	.LVL37
+ 716 015a 04000000 		.4byte	.LVL38
+ 717 015e 0100     		.2byte	0x1
+ 718 0160 50       		.byte	0x50
+ 719 0161 00000000 		.4byte	0x0
+ 720 0165 00000000 		.4byte	0x0
+ 721              	.LLST39:
+ 722 0169 04000000 		.4byte	.LVL38
+ 723 016d 04000000 		.4byte	.LVL39
+ 724 0171 0100     		.2byte	0x1
+ 725 0173 50       		.byte	0x50
+ 726 0174 00000000 		.4byte	0x0
+ 727 0178 00000000 		.4byte	0x0
+ 728              	.LLST41:
+ 729 017c 00000000 		.4byte	.LVL40
+ 730 0180 04000000 		.4byte	.LVL41
+ 731 0184 0100     		.2byte	0x1
+ 732 0186 50       		.byte	0x50
+ 733 0187 00000000 		.4byte	0x0
+ 734 018b 00000000 		.4byte	0x0
+ 735              	.LLST42:
+ 736 018f 04000000 		.4byte	.LVL41
+ 737 0193 04000000 		.4byte	.LVL42
+ 738 0197 0100     		.2byte	0x1
+ 739 0199 50       		.byte	0x50
+ 740 019a 00000000 		.4byte	0x0
+ 741 019e 00000000 		.4byte	0x0
+ 742              	.LLST44:
+ 743 01a2 00000000 		.4byte	.LVL43
+ 744 01a6 04000000 		.4byte	.LVL44
+ 745 01aa 0100     		.2byte	0x1
+ 746 01ac 50       		.byte	0x50
+ 747 01ad 00000000 		.4byte	0x0
+ 748 01b1 00000000 		.4byte	0x0
+ 749              	.LLST45:
+ 750 01b5 04000000 		.4byte	.LVL44
+ 751 01b9 04000000 		.4byte	.LVL45
+ 752 01bd 0100     		.2byte	0x1
+ 753 01bf 50       		.byte	0x50
+ 754 01c0 00000000 		.4byte	0x0
+ 755 01c4 00000000 		.4byte	0x0
+ 756              		.file 2 "c:\\program files\\cypress\\psoc creator\\2.2\\psoc creator\\import\\gnu_cs\\arm\\4.4.1\\
+ 757              		.section	.debug_info
+ 758 0000 2D050000 		.4byte	0x52d
+ 759 0004 0200     		.2byte	0x2
+ 760 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 761 000a 04       		.byte	0x4
+ 762 000b 01       		.uleb128 0x1
+ 763 000c B8010000 		.4byte	.LASF44
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 28
+
+
+ 764 0010 01       		.byte	0x1
+ 765 0011 65000000 		.4byte	.LASF45
+ 766 0015 F4000000 		.4byte	.LASF46
+ 767 0019 00000000 		.4byte	0x0
+ 768 001d 00000000 		.4byte	0x0
+ 769 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 770 0025 00000000 		.4byte	.Ldebug_line0
+ 771 0029 02       		.uleb128 0x2
+ 772 002a 01       		.byte	0x1
+ 773 002b 06       		.byte	0x6
+ 774 002c 29020000 		.4byte	.LASF0
+ 775 0030 03       		.uleb128 0x3
+ 776 0031 6F010000 		.4byte	.LASF2
+ 777 0035 02       		.byte	0x2
+ 778 0036 2A       		.byte	0x2a
+ 779 0037 3B000000 		.4byte	0x3b
+ 780 003b 02       		.uleb128 0x2
+ 781 003c 01       		.byte	0x1
+ 782 003d 08       		.byte	0x8
+ 783 003e 9B000000 		.4byte	.LASF1
+ 784 0042 03       		.uleb128 0x3
+ 785 0043 88010000 		.4byte	.LASF3
+ 786 0047 02       		.byte	0x2
+ 787 0048 35       		.byte	0x35
+ 788 0049 4D000000 		.4byte	0x4d
+ 789 004d 02       		.uleb128 0x2
+ 790 004e 02       		.byte	0x2
+ 791 004f 05       		.byte	0x5
+ 792 0050 FB010000 		.4byte	.LASF4
+ 793 0054 03       		.uleb128 0x3
+ 794 0055 05020000 		.4byte	.LASF5
+ 795 0059 02       		.byte	0x2
+ 796 005a 36       		.byte	0x36
+ 797 005b 5F000000 		.4byte	0x5f
+ 798 005f 02       		.uleb128 0x2
+ 799 0060 02       		.byte	0x2
+ 800 0061 07       		.byte	0x7
+ 801 0062 D9000000 		.4byte	.LASF6
+ 802 0066 03       		.uleb128 0x3
+ 803 0067 99010000 		.4byte	.LASF7
+ 804 006b 02       		.byte	0x2
+ 805 006c 4F       		.byte	0x4f
+ 806 006d 71000000 		.4byte	0x71
+ 807 0071 02       		.uleb128 0x2
+ 808 0072 04       		.byte	0x4
+ 809 0073 05       		.byte	0x5
+ 810 0074 17020000 		.4byte	.LASF8
+ 811 0078 03       		.uleb128 0x3
+ 812 0079 0E020000 		.4byte	.LASF9
+ 813 007d 02       		.byte	0x2
+ 814 007e 50       		.byte	0x50
+ 815 007f 83000000 		.4byte	0x83
+ 816 0083 02       		.uleb128 0x2
+ 817 0084 04       		.byte	0x4
+ 818 0085 07       		.byte	0x7
+ 819 0086 C7000000 		.4byte	.LASF10
+ 820 008a 02       		.uleb128 0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 29
+
+
+ 821 008b 08       		.byte	0x8
+ 822 008c 05       		.byte	0x5
+ 823 008d 00000000 		.4byte	.LASF11
+ 824 0091 02       		.uleb128 0x2
+ 825 0092 08       		.byte	0x8
+ 826 0093 07       		.byte	0x7
+ 827 0094 58010000 		.4byte	.LASF12
+ 828 0098 04       		.uleb128 0x4
+ 829 0099 04       		.byte	0x4
+ 830 009a 05       		.byte	0x5
+ 831 009b 696E7400 		.ascii	"int\000"
+ 832 009f 02       		.uleb128 0x2
+ 833 00a0 04       		.byte	0x4
+ 834 00a1 07       		.byte	0x7
+ 835 00a2 4B010000 		.4byte	.LASF13
+ 836 00a6 05       		.uleb128 0x5
+ 837 00a7 01       		.byte	0x1
+ 838 00a8 7E010000 		.4byte	.LASF14
+ 839 00ac 01       		.byte	0x1
+ 840 00ad BB01     		.2byte	0x1bb
+ 841 00af 01       		.byte	0x1
+ 842 00b0 78000000 		.4byte	0x78
+ 843 00b4 00000000 		.4byte	.LFB0
+ 844 00b8 08000000 		.4byte	.LFE0
+ 845 00bc 01       		.byte	0x1
+ 846 00bd 5D       		.byte	0x5d
+ 847 00be D3000000 		.4byte	0xd3
+ 848 00c2 06       		.uleb128 0x6
+ 849 00c3 77010000 		.4byte	.LASF16
+ 850 00c7 01       		.byte	0x1
+ 851 00c8 BD01     		.2byte	0x1bd
+ 852 00ca 78000000 		.4byte	0x78
+ 853 00ce 00000000 		.4byte	.LLST1
+ 854 00d2 00       		.byte	0x0
+ 855 00d3 07       		.uleb128 0x7
+ 856 00d4 01       		.byte	0x1
+ 857 00d5 89000000 		.4byte	.LASF17
+ 858 00d9 01       		.byte	0x1
+ 859 00da CE01     		.2byte	0x1ce
+ 860 00dc 01       		.byte	0x1
+ 861 00dd 00000000 		.4byte	.LFB1
+ 862 00e1 06000000 		.4byte	.LFE1
+ 863 00e5 01       		.byte	0x1
+ 864 00e6 5D       		.byte	0x5d
+ 865 00e7 FA000000 		.4byte	0xfa
+ 866 00eb 08       		.uleb128 0x8
+ 867 00ec 38000000 		.4byte	.LASF19
+ 868 00f0 01       		.byte	0x1
+ 869 00f1 CE01     		.2byte	0x1ce
+ 870 00f3 78000000 		.4byte	0x78
+ 871 00f7 01       		.byte	0x1
+ 872 00f8 50       		.byte	0x50
+ 873 00f9 00       		.byte	0x0
+ 874 00fa 05       		.uleb128 0x5
+ 875 00fb 01       		.byte	0x1
+ 876 00fc 51000000 		.4byte	.LASF15
+ 877 0100 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 30
+
+
+ 878 0101 DD01     		.2byte	0x1dd
+ 879 0103 01       		.byte	0x1
+ 880 0104 78000000 		.4byte	0x78
+ 881 0108 00000000 		.4byte	.LFB2
+ 882 010c 08000000 		.4byte	.LFE2
+ 883 0110 01       		.byte	0x1
+ 884 0111 5D       		.byte	0x5d
+ 885 0112 27010000 		.4byte	0x127
+ 886 0116 06       		.uleb128 0x6
+ 887 0117 77010000 		.4byte	.LASF16
+ 888 011b 01       		.byte	0x1
+ 889 011c DF01     		.2byte	0x1df
+ 890 011e 78000000 		.4byte	0x78
+ 891 0122 13000000 		.4byte	.LLST4
+ 892 0126 00       		.byte	0x0
+ 893 0127 07       		.uleb128 0x7
+ 894 0128 01       		.byte	0x1
+ 895 0129 5B000000 		.4byte	.LASF18
+ 896 012d 01       		.byte	0x1
+ 897 012e F001     		.2byte	0x1f0
+ 898 0130 01       		.byte	0x1
+ 899 0131 00000000 		.4byte	.LFB3
+ 900 0135 06000000 		.4byte	.LFE3
+ 901 0139 01       		.byte	0x1
+ 902 013a 5D       		.byte	0x5d
+ 903 013b 4E010000 		.4byte	0x14e
+ 904 013f 08       		.uleb128 0x8
+ 905 0140 A9010000 		.4byte	.LASF20
+ 906 0144 01       		.byte	0x1
+ 907 0145 F001     		.2byte	0x1f0
+ 908 0147 78000000 		.4byte	0x78
+ 909 014b 01       		.byte	0x1
+ 910 014c 50       		.byte	0x50
+ 911 014d 00       		.byte	0x0
+ 912 014e 05       		.uleb128 0x5
+ 913 014f 01       		.byte	0x1
+ 914 0150 ED010000 		.4byte	.LASF21
+ 915 0154 01       		.byte	0x1
+ 916 0155 FD01     		.2byte	0x1fd
+ 917 0157 01       		.byte	0x1
+ 918 0158 78000000 		.4byte	0x78
+ 919 015c 00000000 		.4byte	.LFB4
+ 920 0160 06000000 		.4byte	.LFE4
+ 921 0164 01       		.byte	0x1
+ 922 0165 5D       		.byte	0x5d
+ 923 0166 7B010000 		.4byte	0x17b
+ 924 016a 06       		.uleb128 0x6
+ 925 016b 77010000 		.4byte	.LASF16
+ 926 016f 01       		.byte	0x1
+ 927 0170 FF01     		.2byte	0x1ff
+ 928 0172 78000000 		.4byte	0x78
+ 929 0176 26000000 		.4byte	.LLST7
+ 930 017a 00       		.byte	0x0
+ 931 017b 07       		.uleb128 0x7
+ 932 017c 01       		.byte	0x1
+ 933 017d 3D010000 		.4byte	.LASF22
+ 934 0181 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 31
+
+
+ 935 0182 0C02     		.2byte	0x20c
+ 936 0184 01       		.byte	0x1
+ 937 0185 00000000 		.4byte	.LFB5
+ 938 0189 06000000 		.4byte	.LFE5
+ 939 018d 01       		.byte	0x1
+ 940 018e 5D       		.byte	0x5d
+ 941 018f A2010000 		.4byte	0x1a2
+ 942 0193 08       		.uleb128 0x8
+ 943 0194 21000000 		.4byte	.LASF23
+ 944 0198 01       		.byte	0x1
+ 945 0199 0C02     		.2byte	0x20c
+ 946 019b 78000000 		.4byte	0x78
+ 947 019f 01       		.byte	0x1
+ 948 01a0 50       		.byte	0x50
+ 949 01a1 00       		.byte	0x0
+ 950 01a2 05       		.uleb128 0x5
+ 951 01a3 01       		.byte	0x1
+ 952 01a4 A9000000 		.4byte	.LASF24
+ 953 01a8 01       		.byte	0x1
+ 954 01a9 1802     		.2byte	0x218
+ 955 01ab 01       		.byte	0x1
+ 956 01ac 78000000 		.4byte	0x78
+ 957 01b0 00000000 		.4byte	.LFB6
+ 958 01b4 06000000 		.4byte	.LFE6
+ 959 01b8 01       		.byte	0x1
+ 960 01b9 5D       		.byte	0x5d
+ 961 01ba CF010000 		.4byte	0x1cf
+ 962 01be 06       		.uleb128 0x6
+ 963 01bf 77010000 		.4byte	.LASF16
+ 964 01c3 01       		.byte	0x1
+ 965 01c4 1A02     		.2byte	0x21a
+ 966 01c6 78000000 		.4byte	0x78
+ 967 01ca 39000000 		.4byte	.LLST10
+ 968 01ce 00       		.byte	0x0
+ 969 01cf 07       		.uleb128 0x7
+ 970 01d0 01       		.byte	0x1
+ 971 01d1 C4010000 		.4byte	.LASF25
+ 972 01d5 01       		.byte	0x1
+ 973 01d6 2702     		.2byte	0x227
+ 974 01d8 01       		.byte	0x1
+ 975 01d9 00000000 		.4byte	.LFB7
+ 976 01dd 06000000 		.4byte	.LFE7
+ 977 01e1 01       		.byte	0x1
+ 978 01e2 5D       		.byte	0x5d
+ 979 01e3 F6010000 		.4byte	0x1f6
+ 980 01e7 08       		.uleb128 0x8
+ 981 01e8 30000000 		.4byte	.LASF26
+ 982 01ec 01       		.byte	0x1
+ 983 01ed 2702     		.2byte	0x227
+ 984 01ef 78000000 		.4byte	0x78
+ 985 01f3 01       		.byte	0x1
+ 986 01f4 50       		.byte	0x50
+ 987 01f5 00       		.byte	0x0
+ 988 01f6 05       		.uleb128 0x5
+ 989 01f7 01       		.byte	0x1
+ 990 01f8 47020000 		.4byte	.LASF27
+ 991 01fc 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 32
+
+
+ 992 01fd 3302     		.2byte	0x233
+ 993 01ff 01       		.byte	0x1
+ 994 0200 78000000 		.4byte	0x78
+ 995 0204 00000000 		.4byte	.LFB8
+ 996 0208 06000000 		.4byte	.LFE8
+ 997 020c 01       		.byte	0x1
+ 998 020d 5D       		.byte	0x5d
+ 999 020e 23020000 		.4byte	0x223
+ 1000 0212 06       		.uleb128 0x6
+ 1001 0213 77010000 		.4byte	.LASF16
+ 1002 0217 01       		.byte	0x1
+ 1003 0218 3502     		.2byte	0x235
+ 1004 021a 78000000 		.4byte	0x78
+ 1005 021e 4C000000 		.4byte	.LLST13
+ 1006 0222 00       		.byte	0x0
+ 1007 0223 07       		.uleb128 0x7
+ 1008 0224 01       		.byte	0x1
+ 1009 0225 B7000000 		.4byte	.LASF28
+ 1010 0229 01       		.byte	0x1
+ 1011 022a 4202     		.2byte	0x242
+ 1012 022c 01       		.byte	0x1
+ 1013 022d 00000000 		.4byte	.LFB9
+ 1014 0231 06000000 		.4byte	.LFE9
+ 1015 0235 01       		.byte	0x1
+ 1016 0236 5D       		.byte	0x5d
+ 1017 0237 4A020000 		.4byte	0x24a
+ 1018 023b 08       		.uleb128 0x8
+ 1019 023c 47000000 		.4byte	.LASF29
+ 1020 0240 01       		.byte	0x1
+ 1021 0241 4202     		.2byte	0x242
+ 1022 0243 78000000 		.4byte	0x78
+ 1023 0247 01       		.byte	0x1
+ 1024 0248 50       		.byte	0x50
+ 1025 0249 00       		.byte	0x0
+ 1026 024a 05       		.uleb128 0x5
+ 1027 024b 01       		.byte	0x1
+ 1028 024c D8010000 		.4byte	.LASF30
+ 1029 0250 01       		.byte	0x1
+ 1030 0251 4E02     		.2byte	0x24e
+ 1031 0253 01       		.byte	0x1
+ 1032 0254 78000000 		.4byte	0x78
+ 1033 0258 00000000 		.4byte	.LFB10
+ 1034 025c 06000000 		.4byte	.LFE10
+ 1035 0260 01       		.byte	0x1
+ 1036 0261 5D       		.byte	0x5d
+ 1037 0262 77020000 		.4byte	0x277
+ 1038 0266 06       		.uleb128 0x6
+ 1039 0267 77010000 		.4byte	.LASF16
+ 1040 026b 01       		.byte	0x1
+ 1041 026c 5002     		.2byte	0x250
+ 1042 026e 78000000 		.4byte	0x78
+ 1043 0272 5F000000 		.4byte	.LLST16
+ 1044 0276 00       		.byte	0x0
+ 1045 0277 07       		.uleb128 0x7
+ 1046 0278 01       		.byte	0x1
+ 1047 0279 13000000 		.4byte	.LASF31
+ 1048 027d 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 33
+
+
+ 1049 027e 5D02     		.2byte	0x25d
+ 1050 0280 01       		.byte	0x1
+ 1051 0281 00000000 		.4byte	.LFB11
+ 1052 0285 06000000 		.4byte	.LFE11
+ 1053 0289 01       		.byte	0x1
+ 1054 028a 5D       		.byte	0x5d
+ 1055 028b 9E020000 		.4byte	0x29e
+ 1056 028f 08       		.uleb128 0x8
+ 1057 0290 EC000000 		.4byte	.LASF32
+ 1058 0294 01       		.byte	0x1
+ 1059 0295 5D02     		.2byte	0x25d
+ 1060 0297 78000000 		.4byte	0x78
+ 1061 029b 01       		.byte	0x1
+ 1062 029c 50       		.byte	0x50
+ 1063 029d 00       		.byte	0x0
+ 1064 029e 05       		.uleb128 0x5
+ 1065 029f 01       		.byte	0x1
+ 1066 02a0 D2010000 		.4byte	.LASF33
+ 1067 02a4 01       		.byte	0x1
+ 1068 02a5 6B02     		.2byte	0x26b
+ 1069 02a7 01       		.byte	0x1
+ 1070 02a8 78000000 		.4byte	0x78
+ 1071 02ac 00000000 		.4byte	.LFB12
+ 1072 02b0 04000000 		.4byte	.LFE12
+ 1073 02b4 01       		.byte	0x1
+ 1074 02b5 5D       		.byte	0x5d
+ 1075 02b6 DB020000 		.4byte	0x2db
+ 1076 02ba 09       		.uleb128 0x9
+ 1077 02bb 21000000 		.4byte	.LASF23
+ 1078 02bf 01       		.byte	0x1
+ 1079 02c0 6B02     		.2byte	0x26b
+ 1080 02c2 78000000 		.4byte	0x78
+ 1081 02c6 72000000 		.4byte	.LLST19
+ 1082 02ca 06       		.uleb128 0x6
+ 1083 02cb 77010000 		.4byte	.LASF16
+ 1084 02cf 01       		.byte	0x1
+ 1085 02d0 6D02     		.2byte	0x26d
+ 1086 02d2 78000000 		.4byte	0x78
+ 1087 02d6 85000000 		.4byte	.LLST20
+ 1088 02da 00       		.byte	0x0
+ 1089 02db 05       		.uleb128 0x5
+ 1090 02dc 01       		.byte	0x1
+ 1091 02dd 93000000 		.4byte	.LASF34
+ 1092 02e1 01       		.byte	0x1
+ 1093 02e2 7B02     		.2byte	0x27b
+ 1094 02e4 01       		.byte	0x1
+ 1095 02e5 78000000 		.4byte	0x78
+ 1096 02e9 00000000 		.4byte	.LFB13
+ 1097 02ed 04000000 		.4byte	.LFE13
+ 1098 02f1 01       		.byte	0x1
+ 1099 02f2 5D       		.byte	0x5d
+ 1100 02f3 18030000 		.4byte	0x318
+ 1101 02f7 09       		.uleb128 0x9
+ 1102 02f8 21000000 		.4byte	.LASF23
+ 1103 02fc 01       		.byte	0x1
+ 1104 02fd 7B02     		.2byte	0x27b
+ 1105 02ff 54000000 		.4byte	0x54
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 34
+
+
+ 1106 0303 98000000 		.4byte	.LLST22
+ 1107 0307 06       		.uleb128 0x6
+ 1108 0308 77010000 		.4byte	.LASF16
+ 1109 030c 01       		.byte	0x1
+ 1110 030d 7D02     		.2byte	0x27d
+ 1111 030f 78000000 		.4byte	0x78
+ 1112 0313 AB000000 		.4byte	.LLST23
+ 1113 0317 00       		.byte	0x0
+ 1114 0318 05       		.uleb128 0x5
+ 1115 0319 01       		.byte	0x1
+ 1116 031a A1010000 		.4byte	.LASF35
+ 1117 031e 01       		.byte	0x1
+ 1118 031f 8B02     		.2byte	0x28b
+ 1119 0321 01       		.byte	0x1
+ 1120 0322 66000000 		.4byte	0x66
+ 1121 0326 00000000 		.4byte	.LFB14
+ 1122 032a 04000000 		.4byte	.LFE14
+ 1123 032e 01       		.byte	0x1
+ 1124 032f 5D       		.byte	0x5d
+ 1125 0330 55030000 		.4byte	0x355
+ 1126 0334 09       		.uleb128 0x9
+ 1127 0335 21000000 		.4byte	.LASF23
+ 1128 0339 01       		.byte	0x1
+ 1129 033a 8B02     		.2byte	0x28b
+ 1130 033c 42000000 		.4byte	0x42
+ 1131 0340 BE000000 		.4byte	.LLST25
+ 1132 0344 06       		.uleb128 0x6
+ 1133 0345 77010000 		.4byte	.LASF16
+ 1134 0349 01       		.byte	0x1
+ 1135 034a 8D02     		.2byte	0x28d
+ 1136 034c 78000000 		.4byte	0x78
+ 1137 0350 D1000000 		.4byte	.LLST26
+ 1138 0354 00       		.byte	0x0
+ 1139 0355 05       		.uleb128 0x5
+ 1140 0356 01       		.byte	0x1
+ 1141 0357 E6010000 		.4byte	.LASF36
+ 1142 035b 01       		.byte	0x1
+ 1143 035c 9B02     		.2byte	0x29b
+ 1144 035e 01       		.byte	0x1
+ 1145 035f 78000000 		.4byte	0x78
+ 1146 0363 00000000 		.4byte	.LFB15
+ 1147 0367 06000000 		.4byte	.LFE15
+ 1148 036b 01       		.byte	0x1
+ 1149 036c 5D       		.byte	0x5d
+ 1150 036d 92030000 		.4byte	0x392
+ 1151 0371 09       		.uleb128 0x9
+ 1152 0372 21000000 		.4byte	.LASF23
+ 1153 0376 01       		.byte	0x1
+ 1154 0377 9B02     		.2byte	0x29b
+ 1155 0379 78000000 		.4byte	0x78
+ 1156 037d E4000000 		.4byte	.LLST28
+ 1157 0381 06       		.uleb128 0x6
+ 1158 0382 77010000 		.4byte	.LASF16
+ 1159 0386 01       		.byte	0x1
+ 1160 0387 9D02     		.2byte	0x29d
+ 1161 0389 78000000 		.4byte	0x78
+ 1162 038d F7000000 		.4byte	.LLST29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 35
+
+
+ 1163 0391 00       		.byte	0x0
+ 1164 0392 05       		.uleb128 0x5
+ 1165 0393 01       		.byte	0x1
+ 1166 0394 35020000 		.4byte	.LASF37
+ 1167 0398 01       		.byte	0x1
+ 1168 0399 AB02     		.2byte	0x2ab
+ 1169 039b 01       		.byte	0x1
+ 1170 039c 30000000 		.4byte	0x30
+ 1171 03a0 00000000 		.4byte	.LFB16
+ 1172 03a4 08000000 		.4byte	.LFE16
+ 1173 03a8 01       		.byte	0x1
+ 1174 03a9 5D       		.byte	0x5d
+ 1175 03aa CB030000 		.4byte	0x3cb
+ 1176 03ae 09       		.uleb128 0x9
+ 1177 03af 0E000000 		.4byte	.LASF38
+ 1178 03b3 01       		.byte	0x1
+ 1179 03b4 AB02     		.2byte	0x2ab
+ 1180 03b6 CB030000 		.4byte	0x3cb
+ 1181 03ba 0A010000 		.4byte	.LLST31
+ 1182 03be 0A       		.uleb128 0xa
+ 1183 03bf 77010000 		.4byte	.LASF16
+ 1184 03c3 01       		.byte	0x1
+ 1185 03c4 AD02     		.2byte	0x2ad
+ 1186 03c6 30000000 		.4byte	0x30
+ 1187 03ca 00       		.byte	0x0
+ 1188 03cb 0B       		.uleb128 0xb
+ 1189 03cc 04       		.byte	0x4
+ 1190 03cd 30000000 		.4byte	0x30
+ 1191 03d1 05       		.uleb128 0x5
+ 1192 03d2 01       		.byte	0x1
+ 1193 03d3 57020000 		.4byte	.LASF39
+ 1194 03d7 01       		.byte	0x1
+ 1195 03d8 BB02     		.2byte	0x2bb
+ 1196 03da 01       		.byte	0x1
+ 1197 03db 54000000 		.4byte	0x54
+ 1198 03df 00000000 		.4byte	.LFB17
+ 1199 03e3 08000000 		.4byte	.LFE17
+ 1200 03e7 01       		.byte	0x1
+ 1201 03e8 5D       		.byte	0x5d
+ 1202 03e9 0A040000 		.4byte	0x40a
+ 1203 03ed 09       		.uleb128 0x9
+ 1204 03ee 0E000000 		.4byte	.LASF38
+ 1205 03f2 01       		.byte	0x1
+ 1206 03f3 BB02     		.2byte	0x2bb
+ 1207 03f5 0A040000 		.4byte	0x40a
+ 1208 03f9 1D010000 		.4byte	.LLST33
+ 1209 03fd 0A       		.uleb128 0xa
+ 1210 03fe 77010000 		.4byte	.LASF16
+ 1211 0402 01       		.byte	0x1
+ 1212 0403 BD02     		.2byte	0x2bd
+ 1213 0405 54000000 		.4byte	0x54
+ 1214 0409 00       		.byte	0x0
+ 1215 040a 0B       		.uleb128 0xb
+ 1216 040b 04       		.byte	0x4
+ 1217 040c 54000000 		.4byte	0x54
+ 1218 0410 05       		.uleb128 0x5
+ 1219 0411 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 36
+
+
+ 1220 0412 27000000 		.4byte	.LASF40
+ 1221 0416 01       		.byte	0x1
+ 1222 0417 CB02     		.2byte	0x2cb
+ 1223 0419 01       		.byte	0x1
+ 1224 041a 78000000 		.4byte	0x78
+ 1225 041e 00000000 		.4byte	.LFB18
+ 1226 0422 06000000 		.4byte	.LFE18
+ 1227 0426 01       		.byte	0x1
+ 1228 0427 5D       		.byte	0x5d
+ 1229 0428 4D040000 		.4byte	0x44d
+ 1230 042c 09       		.uleb128 0x9
+ 1231 042d 0E000000 		.4byte	.LASF38
+ 1232 0431 01       		.byte	0x1
+ 1233 0432 CB02     		.2byte	0x2cb
+ 1234 0434 4D040000 		.4byte	0x44d
+ 1235 0438 30010000 		.4byte	.LLST35
+ 1236 043c 06       		.uleb128 0x6
+ 1237 043d 77010000 		.4byte	.LASF16
+ 1238 0441 01       		.byte	0x1
+ 1239 0442 CD02     		.2byte	0x2cd
+ 1240 0444 78000000 		.4byte	0x78
+ 1241 0448 43010000 		.4byte	.LLST36
+ 1242 044c 00       		.byte	0x0
+ 1243 044d 0B       		.uleb128 0xb
+ 1244 044e 04       		.byte	0x4
+ 1245 044f 78000000 		.4byte	0x78
+ 1246 0453 05       		.uleb128 0x5
+ 1247 0454 01       		.byte	0x1
+ 1248 0455 3E020000 		.4byte	.LASF41
+ 1249 0459 01       		.byte	0x1
+ 1250 045a DC02     		.2byte	0x2dc
+ 1251 045c 01       		.byte	0x1
+ 1252 045d 78000000 		.4byte	0x78
+ 1253 0461 00000000 		.4byte	.LFB19
+ 1254 0465 06000000 		.4byte	.LFE19
+ 1255 0469 01       		.byte	0x1
+ 1256 046a 5D       		.byte	0x5d
+ 1257 046b 9E040000 		.4byte	0x49e
+ 1258 046f 09       		.uleb128 0x9
+ 1259 0470 21000000 		.4byte	.LASF23
+ 1260 0474 01       		.byte	0x1
+ 1261 0475 DC02     		.2byte	0x2dc
+ 1262 0477 30000000 		.4byte	0x30
+ 1263 047b 56010000 		.4byte	.LLST38
+ 1264 047f 08       		.uleb128 0x8
+ 1265 0480 0E000000 		.4byte	.LASF38
+ 1266 0484 01       		.byte	0x1
+ 1267 0485 DC02     		.2byte	0x2dc
+ 1268 0487 CB030000 		.4byte	0x3cb
+ 1269 048b 01       		.byte	0x1
+ 1270 048c 51       		.byte	0x51
+ 1271 048d 06       		.uleb128 0x6
+ 1272 048e 77010000 		.4byte	.LASF16
+ 1273 0492 01       		.byte	0x1
+ 1274 0493 DE02     		.2byte	0x2de
+ 1275 0495 78000000 		.4byte	0x78
+ 1276 0499 69010000 		.4byte	.LLST39
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 37
+
+
+ 1277 049d 00       		.byte	0x0
+ 1278 049e 05       		.uleb128 0x5
+ 1279 049f 01       		.byte	0x1
+ 1280 04a0 90010000 		.4byte	.LASF42
+ 1281 04a4 01       		.byte	0x1
+ 1282 04a5 ED02     		.2byte	0x2ed
+ 1283 04a7 01       		.byte	0x1
+ 1284 04a8 78000000 		.4byte	0x78
+ 1285 04ac 00000000 		.4byte	.LFB20
+ 1286 04b0 06000000 		.4byte	.LFE20
+ 1287 04b4 01       		.byte	0x1
+ 1288 04b5 5D       		.byte	0x5d
+ 1289 04b6 E9040000 		.4byte	0x4e9
+ 1290 04ba 09       		.uleb128 0x9
+ 1291 04bb 21000000 		.4byte	.LASF23
+ 1292 04bf 01       		.byte	0x1
+ 1293 04c0 ED02     		.2byte	0x2ed
+ 1294 04c2 54000000 		.4byte	0x54
+ 1295 04c6 7C010000 		.4byte	.LLST41
+ 1296 04ca 08       		.uleb128 0x8
+ 1297 04cb 0E000000 		.4byte	.LASF38
+ 1298 04cf 01       		.byte	0x1
+ 1299 04d0 ED02     		.2byte	0x2ed
+ 1300 04d2 0A040000 		.4byte	0x40a
+ 1301 04d6 01       		.byte	0x1
+ 1302 04d7 51       		.byte	0x51
+ 1303 04d8 06       		.uleb128 0x6
+ 1304 04d9 77010000 		.4byte	.LASF16
+ 1305 04dd 01       		.byte	0x1
+ 1306 04de EF02     		.2byte	0x2ef
+ 1307 04e0 78000000 		.4byte	0x78
+ 1308 04e4 8F010000 		.4byte	.LLST42
+ 1309 04e8 00       		.byte	0x0
+ 1310 04e9 0C       		.uleb128 0xc
+ 1311 04ea 01       		.byte	0x1
+ 1312 04eb 20020000 		.4byte	.LASF43
+ 1313 04ef 01       		.byte	0x1
+ 1314 04f0 FE02     		.2byte	0x2fe
+ 1315 04f2 01       		.byte	0x1
+ 1316 04f3 78000000 		.4byte	0x78
+ 1317 04f7 00000000 		.4byte	.LFB21
+ 1318 04fb 06000000 		.4byte	.LFE21
+ 1319 04ff 01       		.byte	0x1
+ 1320 0500 5D       		.byte	0x5d
+ 1321 0501 09       		.uleb128 0x9
+ 1322 0502 21000000 		.4byte	.LASF23
+ 1323 0506 01       		.byte	0x1
+ 1324 0507 FE02     		.2byte	0x2fe
+ 1325 0509 78000000 		.4byte	0x78
+ 1326 050d A2010000 		.4byte	.LLST44
+ 1327 0511 08       		.uleb128 0x8
+ 1328 0512 0E000000 		.4byte	.LASF38
+ 1329 0516 01       		.byte	0x1
+ 1330 0517 FE02     		.2byte	0x2fe
+ 1331 0519 4D040000 		.4byte	0x44d
+ 1332 051d 01       		.byte	0x1
+ 1333 051e 51       		.byte	0x51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 38
+
+
+ 1334 051f 06       		.uleb128 0x6
+ 1335 0520 77010000 		.4byte	.LASF16
+ 1336 0524 01       		.byte	0x1
+ 1337 0525 0003     		.2byte	0x300
+ 1338 0527 78000000 		.4byte	0x78
+ 1339 052b B5010000 		.4byte	.LLST45
+ 1340 052f 00       		.byte	0x0
+ 1341 0530 00       		.byte	0x0
+ 1342              		.section	.debug_abbrev
+ 1343 0000 01       		.uleb128 0x1
+ 1344 0001 11       		.uleb128 0x11
+ 1345 0002 01       		.byte	0x1
+ 1346 0003 25       		.uleb128 0x25
+ 1347 0004 0E       		.uleb128 0xe
+ 1348 0005 13       		.uleb128 0x13
+ 1349 0006 0B       		.uleb128 0xb
+ 1350 0007 03       		.uleb128 0x3
+ 1351 0008 0E       		.uleb128 0xe
+ 1352 0009 1B       		.uleb128 0x1b
+ 1353 000a 0E       		.uleb128 0xe
+ 1354 000b 11       		.uleb128 0x11
+ 1355 000c 01       		.uleb128 0x1
+ 1356 000d 52       		.uleb128 0x52
+ 1357 000e 01       		.uleb128 0x1
+ 1358 000f 55       		.uleb128 0x55
+ 1359 0010 06       		.uleb128 0x6
+ 1360 0011 10       		.uleb128 0x10
+ 1361 0012 06       		.uleb128 0x6
+ 1362 0013 00       		.byte	0x0
+ 1363 0014 00       		.byte	0x0
+ 1364 0015 02       		.uleb128 0x2
+ 1365 0016 24       		.uleb128 0x24
+ 1366 0017 00       		.byte	0x0
+ 1367 0018 0B       		.uleb128 0xb
+ 1368 0019 0B       		.uleb128 0xb
+ 1369 001a 3E       		.uleb128 0x3e
+ 1370 001b 0B       		.uleb128 0xb
+ 1371 001c 03       		.uleb128 0x3
+ 1372 001d 0E       		.uleb128 0xe
+ 1373 001e 00       		.byte	0x0
+ 1374 001f 00       		.byte	0x0
+ 1375 0020 03       		.uleb128 0x3
+ 1376 0021 16       		.uleb128 0x16
+ 1377 0022 00       		.byte	0x0
+ 1378 0023 03       		.uleb128 0x3
+ 1379 0024 0E       		.uleb128 0xe
+ 1380 0025 3A       		.uleb128 0x3a
+ 1381 0026 0B       		.uleb128 0xb
+ 1382 0027 3B       		.uleb128 0x3b
+ 1383 0028 0B       		.uleb128 0xb
+ 1384 0029 49       		.uleb128 0x49
+ 1385 002a 13       		.uleb128 0x13
+ 1386 002b 00       		.byte	0x0
+ 1387 002c 00       		.byte	0x0
+ 1388 002d 04       		.uleb128 0x4
+ 1389 002e 24       		.uleb128 0x24
+ 1390 002f 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 39
+
+
+ 1391 0030 0B       		.uleb128 0xb
+ 1392 0031 0B       		.uleb128 0xb
+ 1393 0032 3E       		.uleb128 0x3e
+ 1394 0033 0B       		.uleb128 0xb
+ 1395 0034 03       		.uleb128 0x3
+ 1396 0035 08       		.uleb128 0x8
+ 1397 0036 00       		.byte	0x0
+ 1398 0037 00       		.byte	0x0
+ 1399 0038 05       		.uleb128 0x5
+ 1400 0039 2E       		.uleb128 0x2e
+ 1401 003a 01       		.byte	0x1
+ 1402 003b 3F       		.uleb128 0x3f
+ 1403 003c 0C       		.uleb128 0xc
+ 1404 003d 03       		.uleb128 0x3
+ 1405 003e 0E       		.uleb128 0xe
+ 1406 003f 3A       		.uleb128 0x3a
+ 1407 0040 0B       		.uleb128 0xb
+ 1408 0041 3B       		.uleb128 0x3b
+ 1409 0042 05       		.uleb128 0x5
+ 1410 0043 27       		.uleb128 0x27
+ 1411 0044 0C       		.uleb128 0xc
+ 1412 0045 49       		.uleb128 0x49
+ 1413 0046 13       		.uleb128 0x13
+ 1414 0047 11       		.uleb128 0x11
+ 1415 0048 01       		.uleb128 0x1
+ 1416 0049 12       		.uleb128 0x12
+ 1417 004a 01       		.uleb128 0x1
+ 1418 004b 40       		.uleb128 0x40
+ 1419 004c 0A       		.uleb128 0xa
+ 1420 004d 01       		.uleb128 0x1
+ 1421 004e 13       		.uleb128 0x13
+ 1422 004f 00       		.byte	0x0
+ 1423 0050 00       		.byte	0x0
+ 1424 0051 06       		.uleb128 0x6
+ 1425 0052 34       		.uleb128 0x34
+ 1426 0053 00       		.byte	0x0
+ 1427 0054 03       		.uleb128 0x3
+ 1428 0055 0E       		.uleb128 0xe
+ 1429 0056 3A       		.uleb128 0x3a
+ 1430 0057 0B       		.uleb128 0xb
+ 1431 0058 3B       		.uleb128 0x3b
+ 1432 0059 05       		.uleb128 0x5
+ 1433 005a 49       		.uleb128 0x49
+ 1434 005b 13       		.uleb128 0x13
+ 1435 005c 02       		.uleb128 0x2
+ 1436 005d 06       		.uleb128 0x6
+ 1437 005e 00       		.byte	0x0
+ 1438 005f 00       		.byte	0x0
+ 1439 0060 07       		.uleb128 0x7
+ 1440 0061 2E       		.uleb128 0x2e
+ 1441 0062 01       		.byte	0x1
+ 1442 0063 3F       		.uleb128 0x3f
+ 1443 0064 0C       		.uleb128 0xc
+ 1444 0065 03       		.uleb128 0x3
+ 1445 0066 0E       		.uleb128 0xe
+ 1446 0067 3A       		.uleb128 0x3a
+ 1447 0068 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 40
+
+
+ 1448 0069 3B       		.uleb128 0x3b
+ 1449 006a 05       		.uleb128 0x5
+ 1450 006b 27       		.uleb128 0x27
+ 1451 006c 0C       		.uleb128 0xc
+ 1452 006d 11       		.uleb128 0x11
+ 1453 006e 01       		.uleb128 0x1
+ 1454 006f 12       		.uleb128 0x12
+ 1455 0070 01       		.uleb128 0x1
+ 1456 0071 40       		.uleb128 0x40
+ 1457 0072 0A       		.uleb128 0xa
+ 1458 0073 01       		.uleb128 0x1
+ 1459 0074 13       		.uleb128 0x13
+ 1460 0075 00       		.byte	0x0
+ 1461 0076 00       		.byte	0x0
+ 1462 0077 08       		.uleb128 0x8
+ 1463 0078 05       		.uleb128 0x5
+ 1464 0079 00       		.byte	0x0
+ 1465 007a 03       		.uleb128 0x3
+ 1466 007b 0E       		.uleb128 0xe
+ 1467 007c 3A       		.uleb128 0x3a
+ 1468 007d 0B       		.uleb128 0xb
+ 1469 007e 3B       		.uleb128 0x3b
+ 1470 007f 05       		.uleb128 0x5
+ 1471 0080 49       		.uleb128 0x49
+ 1472 0081 13       		.uleb128 0x13
+ 1473 0082 02       		.uleb128 0x2
+ 1474 0083 0A       		.uleb128 0xa
+ 1475 0084 00       		.byte	0x0
+ 1476 0085 00       		.byte	0x0
+ 1477 0086 09       		.uleb128 0x9
+ 1478 0087 05       		.uleb128 0x5
+ 1479 0088 00       		.byte	0x0
+ 1480 0089 03       		.uleb128 0x3
+ 1481 008a 0E       		.uleb128 0xe
+ 1482 008b 3A       		.uleb128 0x3a
+ 1483 008c 0B       		.uleb128 0xb
+ 1484 008d 3B       		.uleb128 0x3b
+ 1485 008e 05       		.uleb128 0x5
+ 1486 008f 49       		.uleb128 0x49
+ 1487 0090 13       		.uleb128 0x13
+ 1488 0091 02       		.uleb128 0x2
+ 1489 0092 06       		.uleb128 0x6
+ 1490 0093 00       		.byte	0x0
+ 1491 0094 00       		.byte	0x0
+ 1492 0095 0A       		.uleb128 0xa
+ 1493 0096 34       		.uleb128 0x34
+ 1494 0097 00       		.byte	0x0
+ 1495 0098 03       		.uleb128 0x3
+ 1496 0099 0E       		.uleb128 0xe
+ 1497 009a 3A       		.uleb128 0x3a
+ 1498 009b 0B       		.uleb128 0xb
+ 1499 009c 3B       		.uleb128 0x3b
+ 1500 009d 05       		.uleb128 0x5
+ 1501 009e 49       		.uleb128 0x49
+ 1502 009f 13       		.uleb128 0x13
+ 1503 00a0 00       		.byte	0x0
+ 1504 00a1 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 41
+
+
+ 1505 00a2 0B       		.uleb128 0xb
+ 1506 00a3 0F       		.uleb128 0xf
+ 1507 00a4 00       		.byte	0x0
+ 1508 00a5 0B       		.uleb128 0xb
+ 1509 00a6 0B       		.uleb128 0xb
+ 1510 00a7 49       		.uleb128 0x49
+ 1511 00a8 13       		.uleb128 0x13
+ 1512 00a9 00       		.byte	0x0
+ 1513 00aa 00       		.byte	0x0
+ 1514 00ab 0C       		.uleb128 0xc
+ 1515 00ac 2E       		.uleb128 0x2e
+ 1516 00ad 01       		.byte	0x1
+ 1517 00ae 3F       		.uleb128 0x3f
+ 1518 00af 0C       		.uleb128 0xc
+ 1519 00b0 03       		.uleb128 0x3
+ 1520 00b1 0E       		.uleb128 0xe
+ 1521 00b2 3A       		.uleb128 0x3a
+ 1522 00b3 0B       		.uleb128 0xb
+ 1523 00b4 3B       		.uleb128 0x3b
+ 1524 00b5 05       		.uleb128 0x5
+ 1525 00b6 27       		.uleb128 0x27
+ 1526 00b7 0C       		.uleb128 0xc
+ 1527 00b8 49       		.uleb128 0x49
+ 1528 00b9 13       		.uleb128 0x13
+ 1529 00ba 11       		.uleb128 0x11
+ 1530 00bb 01       		.uleb128 0x1
+ 1531 00bc 12       		.uleb128 0x12
+ 1532 00bd 01       		.uleb128 0x1
+ 1533 00be 40       		.uleb128 0x40
+ 1534 00bf 0A       		.uleb128 0xa
+ 1535 00c0 00       		.byte	0x0
+ 1536 00c1 00       		.byte	0x0
+ 1537 00c2 00       		.byte	0x0
+ 1538              		.section	.debug_pubnames,"",%progbits
+ 1539 0000 55010000 		.4byte	0x155
+ 1540 0004 0200     		.2byte	0x2
+ 1541 0006 00000000 		.4byte	.Ldebug_info0
+ 1542 000a 31050000 		.4byte	0x531
+ 1543 000e A6000000 		.4byte	0xa6
+ 1544 0012 5F5F6765 		.ascii	"__get_PSP\000"
+ 1544      745F5053 
+ 1544      5000
+ 1545 001c D3000000 		.4byte	0xd3
+ 1546 0020 5F5F7365 		.ascii	"__set_PSP\000"
+ 1546      745F5053 
+ 1546      5000
+ 1547 002a FA000000 		.4byte	0xfa
+ 1548 002e 5F5F6765 		.ascii	"__get_MSP\000"
+ 1548      745F4D53 
+ 1548      5000
+ 1549 0038 27010000 		.4byte	0x127
+ 1550 003c 5F5F7365 		.ascii	"__set_MSP\000"
+ 1550      745F4D53 
+ 1550      5000
+ 1551 0046 4E010000 		.4byte	0x14e
+ 1552 004a 5F5F6765 		.ascii	"__get_BASEPRI\000"
+ 1552      745F4241 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 42
+
+
+ 1552      53455052 
+ 1552      4900
+ 1553 0058 7B010000 		.4byte	0x17b
+ 1554 005c 5F5F7365 		.ascii	"__set_BASEPRI\000"
+ 1554      745F4241 
+ 1554      53455052 
+ 1554      4900
+ 1555 006a A2010000 		.4byte	0x1a2
+ 1556 006e 5F5F6765 		.ascii	"__get_PRIMASK\000"
+ 1556      745F5052 
+ 1556      494D4153 
+ 1556      4B00
+ 1557 007c CF010000 		.4byte	0x1cf
+ 1558 0080 5F5F7365 		.ascii	"__set_PRIMASK\000"
+ 1558      745F5052 
+ 1558      494D4153 
+ 1558      4B00
+ 1559 008e F6010000 		.4byte	0x1f6
+ 1560 0092 5F5F6765 		.ascii	"__get_FAULTMASK\000"
+ 1560      745F4641 
+ 1560      554C544D 
+ 1560      41534B00 
+ 1561 00a2 23020000 		.4byte	0x223
+ 1562 00a6 5F5F7365 		.ascii	"__set_FAULTMASK\000"
+ 1562      745F4641 
+ 1562      554C544D 
+ 1562      41534B00 
+ 1563 00b6 4A020000 		.4byte	0x24a
+ 1564 00ba 5F5F6765 		.ascii	"__get_CONTROL\000"
+ 1564      745F434F 
+ 1564      4E54524F 
+ 1564      4C00
+ 1565 00c8 77020000 		.4byte	0x277
+ 1566 00cc 5F5F7365 		.ascii	"__set_CONTROL\000"
+ 1566      745F434F 
+ 1566      4E54524F 
+ 1566      4C00
+ 1567 00da 9E020000 		.4byte	0x29e
+ 1568 00de 5F5F5245 		.ascii	"__REV\000"
+ 1568      5600
+ 1569 00e4 DB020000 		.4byte	0x2db
+ 1570 00e8 5F5F5245 		.ascii	"__REV16\000"
+ 1570      56313600 
+ 1571 00f0 18030000 		.4byte	0x318
+ 1572 00f4 5F5F5245 		.ascii	"__REVSH\000"
+ 1572      56534800 
+ 1573 00fc 55030000 		.4byte	0x355
+ 1574 0100 5F5F5242 		.ascii	"__RBIT\000"
+ 1574      495400
+ 1575 0107 92030000 		.4byte	0x392
+ 1576 010b 5F5F4C44 		.ascii	"__LDREXB\000"
+ 1576      52455842 
+ 1576      00
+ 1577 0114 D1030000 		.4byte	0x3d1
+ 1578 0118 5F5F4C44 		.ascii	"__LDREXH\000"
+ 1578      52455848 
+ 1578      00
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 43
+
+
+ 1579 0121 10040000 		.4byte	0x410
+ 1580 0125 5F5F4C44 		.ascii	"__LDREXW\000"
+ 1580      52455857 
+ 1580      00
+ 1581 012e 53040000 		.4byte	0x453
+ 1582 0132 5F5F5354 		.ascii	"__STREXB\000"
+ 1582      52455842 
+ 1582      00
+ 1583 013b 9E040000 		.4byte	0x49e
+ 1584 013f 5F5F5354 		.ascii	"__STREXH\000"
+ 1584      52455848 
+ 1584      00
+ 1585 0148 E9040000 		.4byte	0x4e9
+ 1586 014c 5F5F5354 		.ascii	"__STREXW\000"
+ 1586      52455857 
+ 1586      00
+ 1587 0155 00000000 		.4byte	0x0
+ 1588              		.section	.debug_aranges,"",%progbits
+ 1589 0000 C4000000 		.4byte	0xc4
+ 1590 0004 0200     		.2byte	0x2
+ 1591 0006 00000000 		.4byte	.Ldebug_info0
+ 1592 000a 04       		.byte	0x4
+ 1593 000b 00       		.byte	0x0
+ 1594 000c 0000     		.2byte	0x0
+ 1595 000e 0000     		.2byte	0x0
+ 1596 0010 00000000 		.4byte	.LFB0
+ 1597 0014 08000000 		.4byte	.LFE0-.LFB0
+ 1598 0018 00000000 		.4byte	.LFB1
+ 1599 001c 06000000 		.4byte	.LFE1-.LFB1
+ 1600 0020 00000000 		.4byte	.LFB2
+ 1601 0024 08000000 		.4byte	.LFE2-.LFB2
+ 1602 0028 00000000 		.4byte	.LFB3
+ 1603 002c 06000000 		.4byte	.LFE3-.LFB3
+ 1604 0030 00000000 		.4byte	.LFB4
+ 1605 0034 06000000 		.4byte	.LFE4-.LFB4
+ 1606 0038 00000000 		.4byte	.LFB5
+ 1607 003c 06000000 		.4byte	.LFE5-.LFB5
+ 1608 0040 00000000 		.4byte	.LFB6
+ 1609 0044 06000000 		.4byte	.LFE6-.LFB6
+ 1610 0048 00000000 		.4byte	.LFB7
+ 1611 004c 06000000 		.4byte	.LFE7-.LFB7
+ 1612 0050 00000000 		.4byte	.LFB8
+ 1613 0054 06000000 		.4byte	.LFE8-.LFB8
+ 1614 0058 00000000 		.4byte	.LFB9
+ 1615 005c 06000000 		.4byte	.LFE9-.LFB9
+ 1616 0060 00000000 		.4byte	.LFB10
+ 1617 0064 06000000 		.4byte	.LFE10-.LFB10
+ 1618 0068 00000000 		.4byte	.LFB11
+ 1619 006c 06000000 		.4byte	.LFE11-.LFB11
+ 1620 0070 00000000 		.4byte	.LFB12
+ 1621 0074 04000000 		.4byte	.LFE12-.LFB12
+ 1622 0078 00000000 		.4byte	.LFB13
+ 1623 007c 04000000 		.4byte	.LFE13-.LFB13
+ 1624 0080 00000000 		.4byte	.LFB14
+ 1625 0084 04000000 		.4byte	.LFE14-.LFB14
+ 1626 0088 00000000 		.4byte	.LFB15
+ 1627 008c 06000000 		.4byte	.LFE15-.LFB15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 44
+
+
+ 1628 0090 00000000 		.4byte	.LFB16
+ 1629 0094 08000000 		.4byte	.LFE16-.LFB16
+ 1630 0098 00000000 		.4byte	.LFB17
+ 1631 009c 08000000 		.4byte	.LFE17-.LFB17
+ 1632 00a0 00000000 		.4byte	.LFB18
+ 1633 00a4 06000000 		.4byte	.LFE18-.LFB18
+ 1634 00a8 00000000 		.4byte	.LFB19
+ 1635 00ac 06000000 		.4byte	.LFE19-.LFB19
+ 1636 00b0 00000000 		.4byte	.LFB20
+ 1637 00b4 06000000 		.4byte	.LFE20-.LFB20
+ 1638 00b8 00000000 		.4byte	.LFB21
+ 1639 00bc 06000000 		.4byte	.LFE21-.LFB21
+ 1640 00c0 00000000 		.4byte	0x0
+ 1641 00c4 00000000 		.4byte	0x0
+ 1642              		.section	.debug_ranges,"",%progbits
+ 1643              	.Ldebug_ranges0:
+ 1644 0000 00000000 		.4byte	.Ltext0
+ 1645 0004 00000000 		.4byte	.Letext0
+ 1646 0008 00000000 		.4byte	.LFB0
+ 1647 000c 08000000 		.4byte	.LFE0
+ 1648 0010 00000000 		.4byte	.LFB1
+ 1649 0014 06000000 		.4byte	.LFE1
+ 1650 0018 00000000 		.4byte	.LFB2
+ 1651 001c 08000000 		.4byte	.LFE2
+ 1652 0020 00000000 		.4byte	.LFB3
+ 1653 0024 06000000 		.4byte	.LFE3
+ 1654 0028 00000000 		.4byte	.LFB4
+ 1655 002c 06000000 		.4byte	.LFE4
+ 1656 0030 00000000 		.4byte	.LFB5
+ 1657 0034 06000000 		.4byte	.LFE5
+ 1658 0038 00000000 		.4byte	.LFB6
+ 1659 003c 06000000 		.4byte	.LFE6
+ 1660 0040 00000000 		.4byte	.LFB7
+ 1661 0044 06000000 		.4byte	.LFE7
+ 1662 0048 00000000 		.4byte	.LFB8
+ 1663 004c 06000000 		.4byte	.LFE8
+ 1664 0050 00000000 		.4byte	.LFB9
+ 1665 0054 06000000 		.4byte	.LFE9
+ 1666 0058 00000000 		.4byte	.LFB10
+ 1667 005c 06000000 		.4byte	.LFE10
+ 1668 0060 00000000 		.4byte	.LFB11
+ 1669 0064 06000000 		.4byte	.LFE11
+ 1670 0068 00000000 		.4byte	.LFB12
+ 1671 006c 04000000 		.4byte	.LFE12
+ 1672 0070 00000000 		.4byte	.LFB13
+ 1673 0074 04000000 		.4byte	.LFE13
+ 1674 0078 00000000 		.4byte	.LFB14
+ 1675 007c 04000000 		.4byte	.LFE14
+ 1676 0080 00000000 		.4byte	.LFB15
+ 1677 0084 06000000 		.4byte	.LFE15
+ 1678 0088 00000000 		.4byte	.LFB16
+ 1679 008c 08000000 		.4byte	.LFE16
+ 1680 0090 00000000 		.4byte	.LFB17
+ 1681 0094 08000000 		.4byte	.LFE17
+ 1682 0098 00000000 		.4byte	.LFB18
+ 1683 009c 06000000 		.4byte	.LFE18
+ 1684 00a0 00000000 		.4byte	.LFB19
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 45
+
+
+ 1685 00a4 06000000 		.4byte	.LFE19
+ 1686 00a8 00000000 		.4byte	.LFB20
+ 1687 00ac 06000000 		.4byte	.LFE20
+ 1688 00b0 00000000 		.4byte	.LFB21
+ 1689 00b4 06000000 		.4byte	.LFE21
+ 1690 00b8 00000000 		.4byte	0x0
+ 1691 00bc 00000000 		.4byte	0x0
+ 1692              		.section	.debug_str,"MS",%progbits,1
+ 1693              	.LASF11:
+ 1694 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1694      206C6F6E 
+ 1694      6720696E 
+ 1694      7400
+ 1695              	.LASF38:
+ 1696 000e 61646472 		.ascii	"addr\000"
+ 1696      00
+ 1697              	.LASF31:
+ 1698 0013 5F5F7365 		.ascii	"__set_CONTROL\000"
+ 1698      745F434F 
+ 1698      4E54524F 
+ 1698      4C00
+ 1699              	.LASF23:
+ 1700 0021 76616C75 		.ascii	"value\000"
+ 1700      6500
+ 1701              	.LASF40:
+ 1702 0027 5F5F4C44 		.ascii	"__LDREXW\000"
+ 1702      52455857 
+ 1702      00
+ 1703              	.LASF26:
+ 1704 0030 7072694D 		.ascii	"priMask\000"
+ 1704      61736B00 
+ 1705              	.LASF19:
+ 1706 0038 746F704F 		.ascii	"topOfProcStack\000"
+ 1706      6650726F 
+ 1706      63537461 
+ 1706      636B00
+ 1707              	.LASF29:
+ 1708 0047 6661756C 		.ascii	"faultMask\000"
+ 1708      744D6173 
+ 1708      6B00
+ 1709              	.LASF15:
+ 1710 0051 5F5F6765 		.ascii	"__get_MSP\000"
+ 1710      745F4D53 
+ 1710      5000
+ 1711              	.LASF18:
+ 1712 005b 5F5F7365 		.ascii	"__set_MSP\000"
+ 1712      745F4D53 
+ 1712      5000
+ 1713              	.LASF45:
+ 1714 0065 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\core_cm3.c\000"
+ 1714      6E657261 
+ 1714      7465645F 
+ 1714      536F7572 
+ 1714      63655C50 
+ 1715              	.LASF17:
+ 1716 0089 5F5F7365 		.ascii	"__set_PSP\000"
+ 1716      745F5053 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 46
+
+
+ 1716      5000
+ 1717              	.LASF34:
+ 1718 0093 5F5F5245 		.ascii	"__REV16\000"
+ 1718      56313600 
+ 1719              	.LASF1:
+ 1720 009b 756E7369 		.ascii	"unsigned char\000"
+ 1720      676E6564 
+ 1720      20636861 
+ 1720      7200
+ 1721              	.LASF24:
+ 1722 00a9 5F5F6765 		.ascii	"__get_PRIMASK\000"
+ 1722      745F5052 
+ 1722      494D4153 
+ 1722      4B00
+ 1723              	.LASF28:
+ 1724 00b7 5F5F7365 		.ascii	"__set_FAULTMASK\000"
+ 1724      745F4641 
+ 1724      554C544D 
+ 1724      41534B00 
+ 1725              	.LASF10:
+ 1726 00c7 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1726      20756E73 
+ 1726      69676E65 
+ 1726      6420696E 
+ 1726      7400
+ 1727              	.LASF6:
+ 1728 00d9 73686F72 		.ascii	"short unsigned int\000"
+ 1728      7420756E 
+ 1728      7369676E 
+ 1728      65642069 
+ 1728      6E7400
+ 1729              	.LASF32:
+ 1730 00ec 636F6E74 		.ascii	"control\000"
+ 1730      726F6C00 
+ 1731              	.LASF46:
+ 1732 00f4 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 1732      665C486F 
+ 1732      6D655C44 
+ 1732      65736B74 
+ 1732      6F705C4B 
+ 1733 0121 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
+ 1733      69745072 
+ 1733      6F675F42 
+ 1733      6F6F746C 
+ 1733      6F616465 
+ 1734              	.LASF22:
+ 1735 013d 5F5F7365 		.ascii	"__set_BASEPRI\000"
+ 1735      745F4241 
+ 1735      53455052 
+ 1735      4900
+ 1736              	.LASF13:
+ 1737 014b 756E7369 		.ascii	"unsigned int\000"
+ 1737      676E6564 
+ 1737      20696E74 
+ 1737      00
+ 1738              	.LASF12:
+ 1739 0158 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 47
+
+
+ 1739      206C6F6E 
+ 1739      6720756E 
+ 1739      7369676E 
+ 1739      65642069 
+ 1740              	.LASF2:
+ 1741 016f 75696E74 		.ascii	"uint8_t\000"
+ 1741      385F7400 
+ 1742              	.LASF16:
+ 1743 0177 72657375 		.ascii	"result\000"
+ 1743      6C7400
+ 1744              	.LASF14:
+ 1745 017e 5F5F6765 		.ascii	"__get_PSP\000"
+ 1745      745F5053 
+ 1745      5000
+ 1746              	.LASF3:
+ 1747 0188 696E7431 		.ascii	"int16_t\000"
+ 1747      365F7400 
+ 1748              	.LASF42:
+ 1749 0190 5F5F5354 		.ascii	"__STREXH\000"
+ 1749      52455848 
+ 1749      00
+ 1750              	.LASF7:
+ 1751 0199 696E7433 		.ascii	"int32_t\000"
+ 1751      325F7400 
+ 1752              	.LASF35:
+ 1753 01a1 5F5F5245 		.ascii	"__REVSH\000"
+ 1753      56534800 
+ 1754              	.LASF20:
+ 1755 01a9 746F704F 		.ascii	"topOfMainStack\000"
+ 1755      664D6169 
+ 1755      6E537461 
+ 1755      636B00
+ 1756              	.LASF44:
+ 1757 01b8 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1757      4320342E 
+ 1757      342E3100 
+ 1758              	.LASF25:
+ 1759 01c4 5F5F7365 		.ascii	"__set_PRIMASK\000"
+ 1759      745F5052 
+ 1759      494D4153 
+ 1759      4B00
+ 1760              	.LASF33:
+ 1761 01d2 5F5F5245 		.ascii	"__REV\000"
+ 1761      5600
+ 1762              	.LASF30:
+ 1763 01d8 5F5F6765 		.ascii	"__get_CONTROL\000"
+ 1763      745F434F 
+ 1763      4E54524F 
+ 1763      4C00
+ 1764              	.LASF36:
+ 1765 01e6 5F5F5242 		.ascii	"__RBIT\000"
+ 1765      495400
+ 1766              	.LASF21:
+ 1767 01ed 5F5F6765 		.ascii	"__get_BASEPRI\000"
+ 1767      745F4241 
+ 1767      53455052 
+ 1767      4900
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccjZigVL.s 			page 48
+
+
+ 1768              	.LASF4:
+ 1769 01fb 73686F72 		.ascii	"short int\000"
+ 1769      7420696E 
+ 1769      7400
+ 1770              	.LASF5:
+ 1771 0205 75696E74 		.ascii	"uint16_t\000"
+ 1771      31365F74 
+ 1771      00
+ 1772              	.LASF9:
+ 1773 020e 75696E74 		.ascii	"uint32_t\000"
+ 1773      33325F74 
+ 1773      00
+ 1774              	.LASF8:
+ 1775 0217 6C6F6E67 		.ascii	"long int\000"
+ 1775      20696E74 
+ 1775      00
+ 1776              	.LASF43:
+ 1777 0220 5F5F5354 		.ascii	"__STREXW\000"
+ 1777      52455857 
+ 1777      00
+ 1778              	.LASF0:
+ 1779 0229 7369676E 		.ascii	"signed char\000"
+ 1779      65642063 
+ 1779      68617200 
+ 1780              	.LASF37:
+ 1781 0235 5F5F4C44 		.ascii	"__LDREXB\000"
+ 1781      52455842 
+ 1781      00
+ 1782              	.LASF41:
+ 1783 023e 5F5F5354 		.ascii	"__STREXB\000"
+ 1783      52455842 
+ 1783      00
+ 1784              	.LASF27:
+ 1785 0247 5F5F6765 		.ascii	"__get_FAULTMASK\000"
+ 1785      745F4641 
+ 1785      554C544D 
+ 1785      41534B00 
+ 1786              	.LASF39:
+ 1787 0257 5F5F4C44 		.ascii	"__LDREXH\000"
+ 1787      52455848 
+ 1787      00
+ 1788              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

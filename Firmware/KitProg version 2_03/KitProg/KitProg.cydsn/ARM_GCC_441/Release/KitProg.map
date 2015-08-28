@@ -1,0 +1,2688 @@
+Archive member included because of file (symbol)
+
+.\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+                              .\ARM_GCC_441\Release\swd.o (CyEnterCriticalSection)
+.\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (CySoftwareReset)
+.\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                              .\ARM_GCC_441\Release\KitProg.a(CyLib.o) (CyPmFtwSetInterval)
+.\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Clock_I2C_Start)
+.\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+                              .\ARM_GCC_441\Release\main.o (Pin_StatusLED_Write)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                              .\ARM_GCC_441\Release\power.o (ADC_Voltage_Target_StartConvert)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                              .\ARM_GCC_441\Release\power.o (ADC_Voltage_Target_Wakeup)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (ADC_Voltage_Target_ISR1)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (ADC_Voltage_Target_theACLK_SetModeRegister)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (ADC_Voltage_Target_Ext_CP_Clk_SetModeRegister)
+.\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (ADC_Voltage_Target_AMux_Select)
+.\ARM_GCC_441\Release\KitProg.a(AMux.o)
+                              .\ARM_GCC_441\Release\power.o (AMux_Select)
+.\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Clock_UART_Start)
+.\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (I2CHW_Stop)
+.\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+                              .\ARM_GCC_441\Release\KitProg.a(I2CHW.o) (I2CHW_ISR)
+.\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                              .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o) (I2CHW_mstrStatus)
+.\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Pin_I2C_SCL_Write)
+.\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Pin_I2C_SDA_Write)
+.\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+                              .\ARM_GCC_441\Release\USBUART.o (Pin_UART_Tx_SetDriveMode)
+.\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                              .\ARM_GCC_441\Release\main.o (USBFS_Stop)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                              .\ARM_GCC_441\Release\USBUART.o (USBFS_IsLineChanged)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS.o) (USBFS_lastPacketSize)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS.o) (USBFS_EP_1_ISR)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS.o) (USBFS_hidProtocol)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                              .\ARM_GCC_441\Release\power.o (USBFS_Suspend)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o) (USBFS_ConfigReg)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o) (USBFS_HandleVendorRqst)
+.\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Bootloadable_Load)
+.\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                              .\ARM_GCC_441\Release\USBUART.o (UART_Bridge_rxBuffer)
+.\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+                              .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o) (UART_Bridge_RXISR)
+.\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Pin_SDAPullUp_Enable_Write)
+.\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+                              .\ARM_GCC_441\Release\USBFS_HID_interface.o (Pin_SCLPullUp_Enable_Write)
+.\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                              .\ARM_GCC_441\Release\main.o (isr_UsbSuspend_Stop)
+.\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                              .\ARM_GCC_441\Release\main.o (Timer_UsbSuspend_Stop)
+.\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                              .\ARM_GCC_441\Release\KitProg.a(AMux.o) (AMux_Set)
+.\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+                              .\ARM_GCC_441\Release\KitProg.a(cyPm.o) (CyFlash_SetWaitCycles)
+.\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+                              .\ARM_GCC_441\Release\KitProg.a(CyFlash.o) (CySpcLoadRow)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o) (USBFS_DispatchClassRqst)
+.\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o) (USBFS_DEVICE0_DESCR)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (__aeabi_f2d)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (__aeabi_dcmpgt)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubsf3.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (__aeabi_ui2f)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivsf3.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (__aeabi_fmul)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunssfsi.o)
+                              .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o) (__aeabi_f2uiz)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o) (memcpy)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                              .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o) (memset)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+                              .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o) (strlen)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+                              (__cs3_start_c)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+                              (__cs3_isr_nmi)
+c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                              c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o) (__libc_init_array)
+
+Allocating common symbols
+Common symbol       size              file
+
+I2CHW_mstrWrBufIndex
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_deviceAddress
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_ep0Mode       0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+pifBuf              0x40              .\ARM_GCC_441\Release\USBFS_commandinterface.o
+USBFS_interfaceSetting
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+I2CHW_mstrWrBufPtr  0x4               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_SCB
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+bInPacketIndex      0x1               .\ARM_GCC_441\Release\USBFS_HID_interface.o
+pendingOp           0x1               .\ARM_GCC_441\Release\USBFS_commandinterface.o
+bufInOffset         0x2               .\ARM_GCC_441\Release\swd.o
+USBFS_hidIdleRate   0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+USBFS_currentTD     0xc               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_device        0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_lineControlBitmap
+                    0x2               .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+bHostInterface      0x1               .\ARM_GCC_441\Release\USBFS_HID_interface.o
+bOutPacketIndex     0x1               .\ARM_GCC_441\Release\USBFS_HID_interface.o
+I2CHW_mstrWrBufSize
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_interfaceNumber
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+bufIn               0x180             .\ARM_GCC_441\Release\swd.o
+I2CHW_mstrControl   0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_ep0Toggle     0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+fTcBusy             0x1               .\ARM_GCC_441\Release\USBFS_commandinterface.o
+voltage             0x2               .\ARM_GCC_441\Release\USBFS_HID_interface.o
+bOutEndpointData    0x40              .\ARM_GCC_441\Release\USBFS_HID_interface.o
+USBFS_deviceStatus  0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_tBuffer       0x2               .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+I2CHW_mstrRdBufPtr  0x4               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+bufOutLen           0x2               .\ARM_GCC_441\Release\swd.o
+progMode            0x1               .\ARM_GCC_441\Release\USBFS_commandinterface.o
+USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_BUF
+                    0x41              .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+pifData             0x2               .\ARM_GCC_441\Release\USBFS_commandinterface.o
+USBFS_configurationChanged
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+gbAck               0x1               .\ARM_GCC_441\Release\swd.o
+USBFS_configuration
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_lineChanged   0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+gbHeader            0x1               .\ARM_GCC_441\Release\swd.o
+UART_Bridge_txBuffer
+                    0x80              .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+bufOutOffset        0x2               .\ARM_GCC_441\Release\swd.o
+USBFS_transferState
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_interfaceStatus
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_interfaceClass
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_EP            0x6c              .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF
+                    0x41              .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+I2CHW_state         0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+gbParity            0x1               .\ARM_GCC_441\Release\swd.o
+USBFS_interfaceSetting_last
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+USBFS_lineCoding    0x7               .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+bBulkInEndpointData
+                    0x201             .\ARM_GCC_441\Release\USBFS_HID_interface.o
+USBFS_cdc_data_out_ep
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+USBFS_hidIdleTimer  0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+CyResetStatus       0x1               .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+USBFS_lastPacketSize
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+I2CHW_mstrRdBufIndex
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_hidProtocol   0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+I2CHW_mstrRdBufSize
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+USBFS_cdc_data_in_ep
+                    0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+gbData              0x4               .\ARM_GCC_441\Release\swd.o
+i2cSpeed            0x1               .\ARM_GCC_441\Release\USBFS_HID_interface.o
+bInEndpointData     0x40              .\ARM_GCC_441\Release\USBFS_HID_interface.o
+dieTemperature      0x2               .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+UART_Bridge_rxBuffer
+                    0x80              .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+USBFS_fwSerialNumberStringDescriptor
+                    0x4               .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+USBFS_ep0Count      0x1               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+gbStatsReg          0x1               .\ARM_GCC_441\Release\swd.o
+bufOut              0x44              .\ARM_GCC_441\Release\swd.o
+USBFS_transferByteCount
+                    0x2               .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+I2CHW_mstrStatus    0x1               .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .data          0x00000000        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\main.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\main.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\swd.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\swd.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\commandprocessor.o
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\commandprocessor.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\version.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\power.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\USBUART.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\USBUART.o
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\USBUART.o
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\Cm3Start.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\Cm3Start.o
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\Cm3Start.o
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyPLL_OUT_SetPQ
+                0x00000000       0x34 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyPLL_OUT_SetSource
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyUsbClk_SetSource
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_Start1K
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_Stop1K
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_Enable33K
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_Disable33K
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_SetSource
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_SetPowerMode
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Stop
+                0x00000000       0x34 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_32KHZ_ReadStatus
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_EnableErrStatus
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_DisableErrStatus
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_ReadStatus
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_EnableFaultRecovery
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_DisableFaultRecovery
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_SetStartup
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_SetFbVoltage
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_SetWdVoltage
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyHalt   0x00000000        0x4 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x40 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyWdtStart
+                0x00000000       0x44 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyWdtClear
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdLvDigitDisable
+                0x00000000       0x28 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdLvAnalogDisable
+                0x00000000       0x28 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdHvAnalogDisable
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdStickyStatus
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x12 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyFlushCache
+                0x00000000       0x60 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdRealTimeStatus
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdHvAnalogEnable
+                0x00000000       0x44 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdLvAnalogEnable
+                0x00000000       0x6c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyVdLvDigitEnable
+                0x00000000       0x6c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_32KHZ_SetPowerMode
+                0x00000000       0x74 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyXTAL_32KHZ_Start
+                0x00000000       0x70 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmAltAct
+                0x00000000       0x64 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmOppsSet
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmCtwSetInterval
+                0x00000000       0x50 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmHibernate
+                0x00000000      0x24c .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_Stop
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_StopBlock
+                0x00000000       0x74 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_StandbyPower
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_GetDividerRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_SetModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_ClearModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_GetModeRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text.Clock_I2C_SetSourceRegister
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .text.Pin_StatusLED_SetDriveMode
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .text.Pin_StatusLED_Read
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .text.Pin_StatusLED_ReadDataReg
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetBufferGain
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetCoherency
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetGCOR
+                0x00000000       0x68 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_ReadGCOR
+                0x00000000       0x40 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetBufferChop
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_StopConvert
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_GetResult8
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_GetResult32
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetOffset
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SetGain
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_CountsTo_mVolts
+                0x00000000       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_CountsTo_Volts
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_CountsTo_uVolts
+                0x00000000       0x40 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_RoundValue
+                0x00000000       0x24 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_IRQ_Start
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text.ADC_Voltage_Target_SelectConfiguration
+                0x00000000       0xa4 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .text.ADC_Voltage_Target_ISR2
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .text.ADC_Voltage_Target_ISR3
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .text.ADC_Voltage_Target_ISR4
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_Start
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_Stop
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_StopBlock
+                0x00000000       0x68 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_StandbyPower
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_GetDividerRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_ClearModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_GetModeRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_GetSourceRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_SetSourceRegister
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_SetDividerRegister
+                0x00000000       0xdc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_SetPhaseRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text.ADC_Voltage_Target_theACLK_GetPhaseRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_Start
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_Stop
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_StopBlock
+                0x00000000       0x68 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_StandbyPower
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_GetDividerRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_ClearModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_GetModeRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_GetSourceRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_SetSourceRegister
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text.ADC_Voltage_Target_Ext_CP_Clk_SetDividerRegister
+                0x00000000       0xdc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .text.ADC_Voltage_Target_AMux_FastSelect
+                0x00000000       0x20 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .text.AMux_FastSelect
+                0x00000000       0x20 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_Stop
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_StopBlock
+                0x00000000       0x74 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_StandbyPower
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_GetDividerRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_SetModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_ClearModeRegister
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_GetModeRegister
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text.Clock_UART_SetSourceRegister
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text.I2CHW_MasterWriteBuf
+                0x00000000       0xc8 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text.I2CHW_MasterReadBuf
+                0x00000000       0xcc .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text.I2CHW_MasterStatus
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text.I2CHW_MasterGetReadBufSize
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text.I2CHW_MasterGetWriteBufSize
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .text.Pin_I2C_SCL_SetDriveMode
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .text.Pin_I2C_SCL_ReadDataReg
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .text.Pin_I2C_SDA_SetDriveMode
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .text.Pin_I2C_SDA_ReadDataReg
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .text.Pin_UART_Tx_Write
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .text.Pin_UART_Tx_Read
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .text.Pin_UART_Tx_ReadDataReg
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text.USBFS_GetInterfaceSetting
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text.USBFS_DisableOutEP
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text.USBFS_Force
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text.USBFS_SetPowerStatus
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text.USBFS_RWUEnabled
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_DataIsReady
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_CDCIsReady
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetCharFormat
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetParityType
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetDataBits
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetLineControl
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetChar
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetAll
+                0x00000000       0x24 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetData
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_GetCount
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_PutCRLF
+                0x00000000       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_PutChar
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_PutData
+                0x00000000       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text.USBFS_PutString
+                0x00000000       0x60 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .rodata        0x00000000        0x4 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .text.USBFS_UpdateHIDTimer
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .text.USBFS_GetProtocol
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .text.USBFS_SaveConfig
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .text.USBFS_SerialNumString
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .text.USBFS_GetDeviceTablePtr
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .text.USBFS_TerminateEP
+                0x00000000       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .text.Bootloadable_SetFlashByte
+                0x00000000       0x34 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_ReadControlRegister
+                0x00000000        0x4 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_WriteControlRegister
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetRxInterruptMode
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_ReadRxData
+                0x00000000       0x48 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_GetChar
+                0x00000000       0x60 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_GetByte
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetRxAddressMode
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetRxAddress1
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetRxAddress2
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetTxInterruptMode
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_WriteTxData
+                0x00000000       0x5c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_ReadTxStatus
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_PutString
+                0x00000000       0x24 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_PutCRLF
+                0x00000000       0x24 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_GetTxBufferSize
+                0x00000000       0x38 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SendBreak
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text.UART_Bridge_SetTxAddressMode
+                0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .text.Pin_SDAPullUp_Enable_SetDriveMode
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .text.Pin_SDAPullUp_Enable_Read
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .text.Pin_SDAPullUp_Enable_ReadDataReg
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .text.Pin_SCLPullUp_Enable_SetDriveMode
+                0x00000000       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .text.Pin_SCLPullUp_Enable_Read
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .text.Pin_SCLPullUp_Enable_ReadDataReg
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_GetVector
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_GetPriority
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_GetState
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_StartEx
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_SetPending
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text.isr_UsbSuspend_ClearPending
+                0x00000000       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_SoftwareCapture
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_ReadControlRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_WriteControlRegister
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_ReadPeriod
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_ReadCapture
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text.Timer_UsbSuspend_ReadCounter
+                0x00000000       0x14 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .text.SetAnalogRoutingPumps
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .bss           0x00000000        0x4 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyFlash_Stop
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyEEPROM_Start
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyEEPROM_Stop
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyEEPROM_ReadReserve
+                0x00000000       0x1c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyEEPROM_ReadRelease
+                0x00000000        0xc .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyFlash_Start
+                0x00000000       0x20 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyWriteRowFull
+                0x00000000       0x8c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyWriteRowConfig
+                0x00000000       0x48 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CyWriteRowData
+                0x00000000       0x58 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CySetFlashEEBuffer
+                0x00000000       0x2c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CySetTempInt
+                0x00000000       0x5c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text.CySetTemp
+                0x00000000       0x12 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ COMMON         0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .bss           0x00000000        0x2 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcLoadMultiByte
+                0x00000000       0x84 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcLoadRow
+                0x00000000       0x5c .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcWriteRow
+                0x00000000       0x54 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcEraseSector
+                0x00000000       0x44 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcGetTemp
+                0x00000000       0x38 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcUnlock
+                0x00000000       0x34 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcLock
+                0x00000000       0x48 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcStop
+                0x00000000       0x28 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcStart
+                0x00000000       0x28 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text.CySpcReadData
+                0x00000000       0x34 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .text          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+ .data          0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+ .text          0x00000000      0x370 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .text          0x00000000      0x110 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .text          0x00000000      0x21c c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .text          0x00000000      0x2a0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .text          0x00000000       0x40 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunssfsi.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunssfsi.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .text          0x00000000       0x60 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .text          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .text          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+ .data          0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00004d00         0x0000b2c0         xr
+ram              0x1fffe000         0x00002000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+START GROUP
+LOAD .\ARM_GCC_441\Release\main.o
+LOAD .\ARM_GCC_441\Release\swd.o
+LOAD .\ARM_GCC_441\Release\commandprocessor.o
+LOAD .\ARM_GCC_441\Release\USBFS_commandinterface.o
+LOAD .\ARM_GCC_441\Release\USBFS_HID_interface.o
+LOAD .\ARM_GCC_441\Release\version.o
+LOAD .\ARM_GCC_441\Release\power.o
+LOAD .\ARM_GCC_441\Release\USBUART.o
+LOAD .\ARM_GCC_441\Release\Cm3Start.o
+LOAD .\ARM_GCC_441\Release\KitProg.a
+LOAD C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_441\Release\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+START GROUP
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3unhosted.a
+LOAD c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a
+END GROUP
+                0x1fffe8f0                PROVIDE (__cs3_heap_start, _end)
+                0x00000001                PROVIDE (__cs3_region_num, ((__cs3_regions_end - __cs3_regions) / 0x14))
+                0x20002000                PROVIDE (__cs3_stack, 0x20002000)
+                0x20001000                PROVIDE (__cs3_heap_end, (__cs3_stack - 0x1000))
+
+.text           0x00004d00     0x5910
+ CREATE_OBJECT_SYMBOLS
+                0x00004d00                PROVIDE (__cs3_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00004d00       0x10 .\ARM_GCC_441\Release\Cm3Start.o
+                0x00004d00                RomVectors
+ *(.cs3.interrupt_vector)
+                0x00004d01                ASSERT ((. != __cs3_interrupt_vector), No interrupt vector)
+                0x000067e4                PROVIDE (__cs3_reset, Reset)
+ *(.cs3.reset)
+                0x00004d01                ASSERT ((. != __cs3_reset), No reset code)
+ *(.dma_init)
+                0x00004d01                ASSERT ((((0x4d00 + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
+ *(.text.cs3.init)
+ .text.cs3.init
+                0x00004d10       0x5c c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+                0x00004d10                __cs3_start_c
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x00004d6c       0x30 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .text.main     0x00004d9c       0xb8 .\ARM_GCC_441\Release\main.o
+                0x00004d9c                main
+ .text.SWDInit  0x00004e54       0x5c .\ARM_GCC_441\Release\swd.o
+                0x00004e54                SWDInit
+ .text.SWDHalt  0x00004eb0       0x30 .\ARM_GCC_441\Release\swd.o
+                0x00004eb0                SWDHalt
+ .text.SWDClockTrn
+                0x00004ee0       0x30 .\ARM_GCC_441\Release\swd.o
+                0x00004ee0                SWDClockTrn
+ .text.SWDGetAckSegment
+                0x00004f10       0x4c .\ARM_GCC_441\Release\swd.o
+                0x00004f10                SWDGetAckSegment
+ .text.SWDCountBits
+                0x00004f5c       0x58 .\ARM_GCC_441\Release\swd.o
+                0x00004f5c                SWDCountBits
+ .text.SWDPutByte
+                0x00004fb4       0x90 .\ARM_GCC_441\Release\swd.o
+                0x00004fb4                SWDPutByte
+ .text.SWDPutDataSegment
+                0x00005044       0x38 .\ARM_GCC_441\Release\swd.o
+                0x00005044                SWDPutDataSegment
+ .text.SWDPutHeaderSegment
+                0x0000507c      0x188 .\ARM_GCC_441\Release\swd.o
+                0x0000507c                SWDPutHeaderSegment
+ .text.SWDGetByte
+                0x00005204       0x94 .\ARM_GCC_441\Release\swd.o
+                0x00005204                SWDGetByte
+ .text.SWDGetDataSegment
+                0x00005298       0x38 .\ARM_GCC_441\Release\swd.o
+                0x00005298                SWDGetDataSegment
+ .text.SWDComputeDataParity
+                0x000052d0       0x32 .\ARM_GCC_441\Release\swd.o
+                0x000052d0                SWDComputeDataParity
+ .text.SWDLoadUsbIn
+                0x00005302       0x1c .\ARM_GCC_441\Release\swd.o
+                0x00005302                SWDLoadUsbIn
+ *fill*         0x0000531e        0x2 00
+ .text.SendSwdResult
+                0x00005320       0x88 .\ARM_GCC_441\Release\swd.o
+                0x00005320                SendSwdResult
+ .text.ReceiveSWDRequest
+                0x000053a8       0x40 .\ARM_GCC_441\Release\swd.o
+                0x000053a8                ReceiveSWDRequest
+ .text.SWDGetData
+                0x000053e8      0x118 .\ARM_GCC_441\Release\swd.o
+                0x000053e8                SWDGetData
+ .text.ReadSWD  0x00005500       0x44 .\ARM_GCC_441\Release\swd.o
+                0x00005500                ReadSWD
+ .text.SWDPutData
+                0x00005544      0x114 .\ARM_GCC_441\Release\swd.o
+                0x00005544                SWDPutData
+ .text.WriteSWD
+                0x00005658       0x3c .\ARM_GCC_441\Release\swd.o
+                0x00005658                WriteSWD
+ .text.ProcessSWDRequest
+                0x00005694       0xa8 .\ARM_GCC_441\Release\swd.o
+                0x00005694                ProcessSWDRequest
+ .text.HandleSWDRequest
+                0x0000573c       0x40 .\ARM_GCC_441\Release\swd.o
+                0x0000573c                HandleSWDRequest
+ .text.SWDResetBus
+                0x0000577c      0x410 .\ARM_GCC_441\Release\swd.o
+                0x0000577c                SWDResetBus
+ .text.SWDAcquirePSoC4
+                0x00005b8c      0x1b0 .\ARM_GCC_441\Release\swd.o
+                0x00005b8c                SWDAcquirePSoC4
+ .text.CmdSWDAcquire
+                0x00005d3c       0x30 .\ARM_GCC_441\Release\swd.o
+                0x00005d3c                CmdSWDAcquire
+ .text.CmdReset
+                0x00005d6c       0x38 .\ARM_GCC_441\Release\commandprocessor.o
+                0x00005d6c                CmdReset
+ .text.CmdStatus
+                0x00005da4       0x24 .\ARM_GCC_441\Release\commandprocessor.o
+                0x00005da4                CmdStatus
+ .text.SWDComm  0x00005dc8       0xa4 .\ARM_GCC_441\Release\commandprocessor.o
+                0x00005dc8                SWDComm
+ .text.ProgramInit
+                0x00005e6c       0x14 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+                0x00005e6c                ProgramInit
+ .text.VendorCmd
+                0x00005e80       0xa0 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+                0x00005e80                VendorCmd
+ .text.I2CPullUpDisable
+                0x00005f20       0x24 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00005f20                I2CPullUpDisable
+ .text.I2C_DSIBypassDisable
+                0x00005f44       0x10 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00005f44                I2C_DSIBypassDisable
+ .text.I2C_DSIBypassEnable
+                0x00005f54       0x10 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00005f54                I2C_DSIBypassEnable
+ .text.HostCommStop
+                0x00005f64       0x28 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00005f64                HostCommStop
+ .text.I2CRestart
+                0x00005f8c       0x7c .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .text.HostCommInit
+                0x00006008       0x1c .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00006008                HostCommInit
+ .text.I2CPullUpEnable
+                0x00006024       0x30 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00006024                I2CPullUpEnable
+ .text.SendToUSB
+                0x00006054       0x24 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00006054                SendToUSB
+ .text.HostComm
+                0x00006078      0x2d0 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x00006078                HostComm
+ .text.GetHWVersion
+                0x00006348      0x1f4 .\ARM_GCC_441\Release\version.o
+                0x00006348                GetHWVersion
+ .text.Convert_To_milliVolts
+                0x0000653c       0x1c .\ARM_GCC_441\Release\power.o
+                0x0000653c                Convert_To_milliVolts
+ .text.ResumeFromSleep
+                0x00006558       0x38 .\ARM_GCC_441\Release\power.o
+                0x00006558                ResumeFromSleep
+ .text.VoltageMonitorStop
+                0x00006590        0x4 .\ARM_GCC_441\Release\power.o
+                0x00006590                VoltageMonitorStop
+ .text.SendPSoCToSleep
+                0x00006594       0x30 .\ARM_GCC_441\Release\power.o
+                0x00006594                SendPSoCToSleep
+ .text.HandleUSBSuspend
+                0x000065c4       0x2c .\ARM_GCC_441\Release\power.o
+                0x000065c4                HandleUSBSuspend
+ .text.GetVoltage
+                0x000065f0       0x22 .\ARM_GCC_441\Release\power.o
+                0x000065f0                GetVoltage
+ *fill*         0x00006612        0x2 00
+ .text.GetRange
+                0x00006614       0x34 .\ARM_GCC_441\Release\power.o
+                0x00006614                GetRange
+ .text.VoltageMonitorInit
+                0x00006648       0x12 .\ARM_GCC_441\Release\power.o
+                0x00006648                VoltageMonitorInit
+ .text.USBUARTStart
+                0x0000665a       0x10 .\ARM_GCC_441\Release\USBUART.o
+                0x0000665a                USBUARTStart
+ .text.USBUARTInit
+                0x0000666a       0x10 .\ARM_GCC_441\Release\USBUART.o
+                0x0000666a                USBUARTInit
+ *fill*         0x0000667a        0x2 00
+ .text.UARTBridgeComm
+                0x0000667c      0x164 .\ARM_GCC_441\Release\USBUART.o
+                0x0000667c                UARTBridgeComm
+ .text.IntDefaultHandler
+                0x000067e0        0x2 .\ARM_GCC_441\Release\Cm3Start.o
+                0x000067e0                IntDefaultHandler
+ *fill*         0x000067e2        0x2 00
+ .text.Reset    0x000067e4        0xc .\ARM_GCC_441\Release\Cm3Start.o
+                0x000067e4                Reset
+ .text.initialize_psoc
+                0x000067f0       0x68 .\ARM_GCC_441\Release\Cm3Start.o
+                0x000067f0                initialize_psoc
+ .text          0x00006858       0x20 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+                0x00006858                CyDelayCycles
+                0x00006868                CyEnterCriticalSection
+                0x00006870                CyExitCriticalSection
+ .text.CyPLL_OUT_Stop
+                0x00006878       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006878                CyPLL_OUT_Stop
+ .text.CyIMO_Stop
+                0x00006888       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006888                CyIMO_Stop
+ .text.CyIMO_SetTrimValue
+                0x00006898       0xb0 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyIMO_SetSource
+                0x00006948       0x40 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006948                CyIMO_SetSource
+ .text.CyIMO_EnableDoubler
+                0x00006988       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006988                CyIMO_EnableDoubler
+ .text.CyIMO_DisableDoubler
+                0x00006998       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006998                CyIMO_DisableDoubler
+ .text.CyIMO_SetFreq
+                0x000069a8       0xcc .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x000069a8                CyIMO_SetFreq
+ .text.CyMasterClk_SetSource
+                0x00006a74       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006a74                CyMasterClk_SetSource
+ .text.CyMasterClk_SetDivider
+                0x00006a8c        0xc .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006a8c                CyMasterClk_SetDivider
+ .text.CyBusClk_Internal_SetDivider
+                0x00006a98       0x38 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .text.CyILO_Start100K
+                0x00006ad0       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006ad0                CyILO_Start100K
+ .text.CyILO_Stop100K
+                0x00006ae0       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006ae0                CyILO_Stop100K
+ .text.CyXTAL_Stop
+                0x00006af0       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006af0                CyXTAL_Stop
+ .text.CySoftwareReset
+                0x00006b00        0xc .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006b00                CySoftwareReset
+ .text.CyIntSetVector
+                0x00006b0c       0x18 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006b0c                CyIntSetVector
+ .text.CyIntSetPriority
+                0x00006b24       0x14 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006b24                CyIntSetPriority
+ .text.CyBusClk_SetDivider
+                0x00006b38       0x70 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006b38                CyBusClk_SetDivider
+ .text.CyDelayUs
+                0x00006ba8       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006ba8                CyDelayUs
+ .text.CyDelay  0x00006bb8       0x28 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006bb8                CyDelay
+ .text.CyXTAL_Start
+                0x00006be0       0x94 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006be0                CyXTAL_Start
+ .text.CyIMO_Start
+                0x00006c74       0x5c .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006c74                CyIMO_Start
+ .text.CyPLL_OUT_Start
+                0x00006cd0       0x70 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x00006cd0                CyPLL_OUT_Start
+ .text.CyPmHibSlpSaveSet
+                0x00006d40      0x1cc .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmHibSlpRestore
+                0x00006f0c       0xd4 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .text.CyPmFtwSetInterval
+                0x00006fe0       0x50 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                0x00006fe0                CyPmFtwSetInterval
+ .text.CyPmReadStatus
+                0x00007030       0x2c .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                0x00007030                CyPmReadStatus
+ .text.CyPmSleep
+                0x0000705c       0xe0 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                0x0000705c                CyPmSleep
+ .text.CyPmRestoreClocks
+                0x0000713c      0x210 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                0x0000713c                CyPmRestoreClocks
+ .text.CyPmSaveClocks
+                0x0000734c      0x1a8 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                0x0000734c                CyPmSaveClocks
+ .text.Clock_I2C_Start
+                0x000074f4       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+                0x000074f4                Clock_I2C_Start
+ .text.Clock_I2C_GetSourceRegister
+                0x00007510       0x10 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+                0x00007510                Clock_I2C_GetSourceRegister
+ .text.Clock_I2C_SetDividerRegister
+                0x00007520       0xdc .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+                0x00007520                Clock_I2C_SetDividerRegister
+ .text.Pin_StatusLED_Write
+                0x000075fc       0x1c .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+                0x000075fc                Pin_StatusLED_Write
+ .text.ADC_Voltage_Target_StartConvert
+                0x00007618       0x10 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007618                ADC_Voltage_Target_StartConvert
+ .text.ADC_Voltage_Target_IsEndConversion
+                0x00007628       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007628                ADC_Voltage_Target_IsEndConversion
+ .text.ADC_Voltage_Target_GetResult16
+                0x00007658        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007658                ADC_Voltage_Target_GetResult16
+ .text.ADC_Voltage_Target_GainCompensation
+                0x00007664       0xc8 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007664                ADC_Voltage_Target_GainCompensation
+ .text.ADC_Voltage_Target_SetDSMRef0Reg
+                0x0000772c       0x40 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x0000772c                ADC_Voltage_Target_SetDSMRef0Reg
+ .text.ADC_Voltage_Target_Stop
+                0x0000776c       0xc8 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x0000776c                ADC_Voltage_Target_Stop
+ .text.ADC_Voltage_Target_Enable
+                0x00007834       0xb4 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007834                ADC_Voltage_Target_Enable
+ .text.ADC_Voltage_Target_InitConfig
+                0x000078e8      0x150 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x000078e8                ADC_Voltage_Target_InitConfig
+ .text.ADC_Voltage_Target_Init
+                0x00007a38       0x28 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007a38                ADC_Voltage_Target_Init
+ .text.ADC_Voltage_Target_Start
+                0x00007a60       0x24 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x00007a60                ADC_Voltage_Target_Start
+ .text.ADC_Voltage_Target_SaveConfig
+                0x00007a84       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                0x00007a84                ADC_Voltage_Target_SaveConfig
+ .text.ADC_Voltage_Target_RestoreConfig
+                0x00007a98       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                0x00007a98                ADC_Voltage_Target_RestoreConfig
+ .text.ADC_Voltage_Target_Wakeup
+                0x00007aac       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                0x00007aac                ADC_Voltage_Target_Wakeup
+ .text.ADC_Voltage_Target_Sleep
+                0x00007adc       0x34 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                0x00007adc                ADC_Voltage_Target_Sleep
+ .text.ADC_Voltage_Target_ISR1
+                0x00007b10        0x2 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+                0x00007b10                ADC_Voltage_Target_ISR1
+ *fill*         0x00007b12        0x2 00
+ .text.ADC_Voltage_Target_theACLK_SetModeRegister
+                0x00007b14       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+                0x00007b14                ADC_Voltage_Target_theACLK_SetModeRegister
+ .text.ADC_Voltage_Target_Ext_CP_Clk_SetModeRegister
+                0x00007b28       0x14 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+                0x00007b28                ADC_Voltage_Target_Ext_CP_Clk_SetModeRegister
+ .text.ADC_Voltage_Target_AMux_Start
+                0x00007b3c       0x1c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+                0x00007b3c                ADC_Voltage_Target_AMux_Start
+ .text.ADC_Voltage_Target_AMux_Select
+                0x00007b58       0x18 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+                0x00007b58                ADC_Voltage_Target_AMux_Select
+ .text.AMux_Start
+                0x00007b70       0x1c .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+                0x00007b70                AMux_Start
+ .text.AMux_Select
+                0x00007b8c       0x18 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+                0x00007b8c                AMux_Select
+ .text.Clock_UART_Start
+                0x00007ba4       0x1c .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+                0x00007ba4                Clock_UART_Start
+ .text.Clock_UART_GetSourceRegister
+                0x00007bc0       0x10 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+                0x00007bc0                Clock_UART_GetSourceRegister
+ .text.Clock_UART_SetDividerRegister
+                0x00007bd0       0xdc .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+                0x00007bd0                Clock_UART_SetDividerRegister
+ .text.I2CHW_Enable
+                0x00007cac       0x10 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x00007cac                I2CHW_Enable
+ .text.I2CHW_Stop
+                0x00007cbc       0x40 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x00007cbc                I2CHW_Stop
+ .text.I2CHW_Init
+                0x00007cfc       0x70 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x00007cfc                I2CHW_Init
+ .text.I2CHW_Start
+                0x00007d6c       0x24 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x00007d6c                I2CHW_Start
+ .text.I2CHW_ISR
+                0x00007d90      0x24c .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+                0x00007d90                I2CHW_ISR
+ .text.I2CHW_MasterSendStart
+                0x00007fdc       0x78 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x00007fdc                I2CHW_MasterSendStart
+ .text.I2CHW_MasterSendRestart
+                0x00008054       0x6c .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x00008054                I2CHW_MasterSendRestart
+ .text.I2CHW_MasterSendStop
+                0x000080c0       0x44 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x000080c0                I2CHW_MasterSendStop
+ .text.I2CHW_MasterWriteByte
+                0x00008104       0x5c .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x00008104                I2CHW_MasterWriteByte
+ .text.I2CHW_MasterReadByte
+                0x00008160       0x70 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x00008160                I2CHW_MasterReadByte
+ .text.I2CHW_MasterClearStatus
+                0x000081d0       0x10 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x000081d0                I2CHW_MasterClearStatus
+ .text.I2CHW_MasterClearReadBuf
+                0x000081e0       0x1c .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x000081e0                I2CHW_MasterClearReadBuf
+ .text.I2CHW_MasterClearWriteBuf
+                0x000081fc       0x1c .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x000081fc                I2CHW_MasterClearWriteBuf
+ .text.I2CHW_Workaround
+                0x00008218        0x2 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x00008218                I2CHW_Workaround
+ *fill*         0x0000821a        0x2 00
+ .text.Pin_I2C_SCL_Write
+                0x0000821c       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+                0x0000821c                Pin_I2C_SCL_Write
+ .text.Pin_I2C_SCL_Read
+                0x00008234       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+                0x00008234                Pin_I2C_SCL_Read
+ .text.Pin_I2C_SDA_Write
+                0x00008244       0x1c .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+                0x00008244                Pin_I2C_SDA_Write
+ .text.Pin_I2C_SDA_Read
+                0x00008260       0x10 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+                0x00008260                Pin_I2C_SDA_Read
+ .text.Pin_UART_Tx_SetDriveMode
+                0x00008270       0x18 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+                0x00008270                Pin_UART_Tx_SetDriveMode
+ .text.USBFS_ReInitComponent
+                0x00008288       0x5c .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x00008288                USBFS_ReInitComponent
+ .text.USBFS_Stop
+                0x000082e4       0x94 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000082e4                USBFS_Stop
+ .text.USBFS_CheckActivity
+                0x00008378       0x14 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x00008378                USBFS_CheckActivity
+ .text.USBFS_GetConfiguration
+                0x0000838c        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x0000838c                USBFS_GetConfiguration
+ .text.USBFS_IsConfigurationChanged
+                0x00008398       0x14 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x00008398                USBFS_IsConfigurationChanged
+ .text.USBFS_GetEPState
+                0x000083ac       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000083ac                USBFS_GetEPState
+ .text.USBFS_GetEPCount
+                0x000083bc       0x2c .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000083bc                USBFS_GetEPCount
+ .text.USBFS_LoadInEP
+                0x000083e8       0x94 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000083e8                USBFS_LoadInEP
+ .text.USBFS_EnableOutEP
+                0x0000847c       0x28 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x0000847c                USBFS_EnableOutEP
+ .text.USBFS_ReadOutEP
+                0x000084a4       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000084a4                USBFS_ReadOutEP
+ .text.USBFS_GetEPAckState
+                0x000084ec       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000084ec                USBFS_GetEPAckState
+ .text.USBFS_VBusPresent
+                0x0000850c       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x0000850c                USBFS_VBusPresent
+ .text.USBFS_InitComponent
+                0x0000851c       0xb8 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x0000851c                USBFS_InitComponent
+ .text.USBFS_Init
+                0x000085d4      0x17c .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x000085d4                USBFS_Init
+ .text.USBFS_Start
+                0x00008750       0x24 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x00008750                USBFS_Start
+ .text.USBFS_IsLineChanged
+                0x00008774       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                0x00008774                USBFS_IsLineChanged
+ .text.USBFS_GetDTERate
+                0x00008794        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                0x00008794                USBFS_GetDTERate
+ .text.USBFS_CDC_Init
+                0x000087a0       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                0x000087a0                USBFS_CDC_Init
+ .text.USBFS_DispatchCDCClassRqst
+                0x000087b8       0x88 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                0x000087b8                USBFS_DispatchCDCClassRqst
+ .text.USBFS_LoadEP0
+                0x00008840       0xa0 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008840                USBFS_LoadEP0
+ .text.USBFS_InitZeroLengthControlTransfer
+                0x000088e0       0x34 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x000088e0                USBFS_InitZeroLengthControlTransfer
+ .text.USBFS_ControlReadDataStage
+                0x00008914        0x4 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008914                USBFS_ControlReadDataStage
+ .text.USBFS_ControlWriteDataStage
+                0x00008918       0x78 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008918                USBFS_ControlWriteDataStage
+ .text.USBFS_InitNoDataControlTransfer
+                0x00008990       0x2c .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008990                USBFS_InitNoDataControlTransfer
+ .text.USBFS_UpdateStatusBlock
+                0x000089bc       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x000089bc                USBFS_UpdateStatusBlock
+ .text.USBFS_NoDataControlStatusStage
+                0x000089dc       0x3c .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x000089dc                USBFS_NoDataControlStatusStage
+ .text.USBFS_ControlWriteStatusStage
+                0x00008a18       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008a18                USBFS_ControlWriteStatusStage
+ .text.USBFS_HandleIN
+                0x00008a38       0x24 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008a38                USBFS_HandleIN
+ .text.USBFS_ControlReadStatusStage
+                0x00008a5c       0x34 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008a5c                USBFS_ControlReadStatusStage
+ .text.USBFS_HandleOUT
+                0x00008a90       0x38 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008a90                USBFS_HandleOUT
+ .text.USBFS_InitializeStatusBlock
+                0x00008ac8       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008ac8                USBFS_InitializeStatusBlock
+ .text.USBFS_InitControlWrite
+                0x00008ae8       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008ae8                USBFS_InitControlWrite
+ .text.USBFS_InitControlRead
+                0x00008b30       0x4c .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008b30                USBFS_InitControlRead
+ .text.USBFS_HandleSetup
+                0x00008b7c       0x54 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008b7c                USBFS_HandleSetup
+ .text.USBFS_EP_0_ISR
+                0x00008bd0       0x98 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x00008bd0                USBFS_EP_0_ISR
+ .text.USBFS_EP_1_ISR
+                0x00008c68       0x38 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008c68                USBFS_EP_1_ISR
+ .text.USBFS_EP_2_ISR
+                0x00008ca0       0x38 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008ca0                USBFS_EP_2_ISR
+ .text.USBFS_EP_3_ISR
+                0x00008cd8       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008cd8                USBFS_EP_3_ISR
+ .text.USBFS_EP_4_ISR
+                0x00008d18       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008d18                USBFS_EP_4_ISR
+ .text.USBFS_EP_5_ISR
+                0x00008d58       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008d58                USBFS_EP_5_ISR
+ .text.USBFS_EP_6_ISR
+                0x00008d98       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008d98                USBFS_EP_6_ISR
+ .text.USBFS_EP_7_ISR
+                0x00008dd8       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008dd8                USBFS_EP_7_ISR
+ .text.USBFS_SOF_ISR
+                0x00008e18        0x2 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008e18                USBFS_SOF_ISR
+ *fill*         0x00008e1a        0x2 00
+ .text.USBFS_BUS_RESET_ISR
+                0x00008e1c       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                0x00008e1c                USBFS_BUS_RESET_ISR
+ .text.USBFS_FindReport
+                0x00008e2c       0x74 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                0x00008e2c                USBFS_FindReport
+ .text.USBFS_FindReportDescriptor
+                0x00008ea0       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                0x00008ea0                USBFS_FindReportDescriptor
+ .text.USBFS_FindHidClassDecriptor
+                0x00008ee8       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                0x00008ee8                USBFS_FindHidClassDecriptor
+ .text.USBFS_DispatchHIDClassRqst
+                0x00008f28      0x120 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                0x00008f28                USBFS_DispatchHIDClassRqst
+ .text.USBFS_DP_ISR
+                0x00009048        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                0x00009048                USBFS_DP_ISR
+ .text.USBFS_Suspend
+                0x00009054       0xd8 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                0x00009054                USBFS_Suspend
+ .text.USBFS_RestoreConfig
+                0x0000912c       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                0x0000912c                USBFS_RestoreConfig
+ .text.USBFS_Resume
+                0x0000913c       0xb8 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                0x0000913c                USBFS_Resume
+ .text.USBFS_ReadDieID
+                0x000091f4       0x4c .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x000091f4                USBFS_ReadDieID
+ .text.USBFS_ConfigReg
+                0x00009240       0xe0 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009240                USBFS_ConfigReg
+ .text.USBFS_GetConfigTablePtr
+                0x00009320       0x1c .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009320                USBFS_GetConfigTablePtr
+ .text.USBFS_ConfigAltChanged
+                0x0000933c      0x128 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x0000933c                USBFS_ConfigAltChanged
+ .text.USBFS_GetInterfaceClassTablePtr
+                0x00009464       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009464                USBFS_GetInterfaceClassTablePtr
+ .text.USBFS_Config
+                0x00009484      0x1dc .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009484                USBFS_Config
+ .text.USBFS_ValidateAlternateSetting
+                0x00009660       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009660                USBFS_ValidateAlternateSetting
+ .text.USBFS_ClearEndpointHalt
+                0x000096a8       0x78 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x000096a8                USBFS_ClearEndpointHalt
+ .text.USBFS_SetEndpointHalt
+                0x00009720       0x58 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009720                USBFS_SetEndpointHalt
+ .text.USBFS_HandleStandardRqst
+                0x00009778      0x29c .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x00009778                USBFS_HandleStandardRqst
+ .text.USBFS_HandleVendorRqst
+                0x00009a14       0x24 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+                0x00009a14                USBFS_HandleVendorRqst
+ .text.Bootloadable_Load
+                0x00009a38       0x14 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+                0x00009a38                Bootloadable_Load
+ .text.UART_Bridge_EnableRxInt
+                0x00009a4c        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009a4c                UART_Bridge_EnableRxInt
+ .text.UART_Bridge_DisableRxInt
+                0x00009a58        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009a58                UART_Bridge_DisableRxInt
+ .text.UART_Bridge_ReadRxStatus
+                0x00009a64       0x20 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009a64                UART_Bridge_ReadRxStatus
+ .text.UART_Bridge_GetRxBufferSize
+                0x00009a84       0x3c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009a84                UART_Bridge_GetRxBufferSize
+ .text.UART_Bridge_EnableTxInt
+                0x00009ac0        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009ac0                UART_Bridge_EnableTxInt
+ .text.UART_Bridge_DisableTxInt
+                0x00009acc        0xc .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009acc                UART_Bridge_DisableTxInt
+ .text.UART_Bridge_PutChar
+                0x00009ad8       0x5c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009ad8                UART_Bridge_PutChar
+ .text.UART_Bridge_PutArray
+                0x00009b34       0x24 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009b34                UART_Bridge_PutArray
+ .text.UART_Bridge_ClearTxBuffer
+                0x00009b58       0x38 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009b58                UART_Bridge_ClearTxBuffer
+ .text.UART_Bridge_ClearRxBuffer
+                0x00009b90       0x3c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009b90                UART_Bridge_ClearRxBuffer
+ .text.UART_Bridge_Stop
+                0x00009bcc       0x44 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009bcc                UART_Bridge_Stop
+ .text.UART_Bridge_Enable
+                0x00009c10       0x48 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009c10                UART_Bridge_Enable
+ .text.UART_Bridge_Init
+                0x00009c58       0x58 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009c58                UART_Bridge_Init
+ .text.UART_Bridge_Start
+                0x00009cb0       0x1c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x00009cb0                UART_Bridge_Start
+ .text.UART_Bridge_RXISR
+                0x00009ccc       0x6c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+                0x00009ccc                UART_Bridge_RXISR
+ .text.UART_Bridge_TXISR
+                0x00009d38       0x4c .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+                0x00009d38                UART_Bridge_TXISR
+ .text.Pin_SDAPullUp_Enable_Write
+                0x00009d84       0x1c .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+                0x00009d84                Pin_SDAPullUp_Enable_Write
+ .text.Pin_SCLPullUp_Enable_Write
+                0x00009da0       0x1c .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+                0x00009da0                Pin_SCLPullUp_Enable_Write
+ .text.isr_UsbSuspend_SetVector
+                0x00009dbc       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009dbc                isr_UsbSuspend_SetVector
+ .text.isr_UsbSuspend_SetPriority
+                0x00009dcc       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009dcc                isr_UsbSuspend_SetPriority
+ .text.isr_UsbSuspend_Enable
+                0x00009ddc       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009ddc                isr_UsbSuspend_Enable
+ .text.isr_UsbSuspend_Disable
+                0x00009dec       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009dec                isr_UsbSuspend_Disable
+ .text.isr_UsbSuspend_Stop
+                0x00009dfc       0x14 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009dfc                isr_UsbSuspend_Stop
+ .text.isr_UsbSuspend_Start
+                0x00009e10       0x20 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009e10                isr_UsbSuspend_Start
+ .text.isr_UsbSuspend_Interrupt
+                0x00009e30       0x10 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                0x00009e30                isr_UsbSuspend_Interrupt
+ .text.Timer_UsbSuspend_Enable
+                0x00009e40       0x28 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009e40                Timer_UsbSuspend_Enable
+ .text.Timer_UsbSuspend_Stop
+                0x00009e68       0x28 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009e68                Timer_UsbSuspend_Stop
+ .text.Timer_UsbSuspend_SetInterruptMode
+                0x00009e90        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009e90                Timer_UsbSuspend_SetInterruptMode
+ .text.Timer_UsbSuspend_ReadStatusRegister
+                0x00009e9c        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009e9c                Timer_UsbSuspend_ReadStatusRegister
+ .text.Timer_UsbSuspend_WritePeriod
+                0x00009ea8        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009ea8                Timer_UsbSuspend_WritePeriod
+ .text.Timer_UsbSuspend_WriteCounter
+                0x00009eb4        0xc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009eb4                Timer_UsbSuspend_WriteCounter
+ .text.Timer_UsbSuspend_Init
+                0x00009ec0       0x5c .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009ec0                Timer_UsbSuspend_Init
+ .text.Timer_UsbSuspend_Start
+                0x00009f1c       0x1c .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x00009f1c                Timer_UsbSuspend_Start
+ .text.AMux_Set
+                0x00009f38       0x38 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x00009f38                AMux_Set
+ .text.AMux_Unset
+                0x00009f70       0x38 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x00009f70                AMux_Unset
+ .text.ADC_Voltage_Target_AMux_Set
+                0x00009fa8       0x20 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x00009fa8                ADC_Voltage_Target_AMux_Set
+ .text.ADC_Voltage_Target_AMux_Unset
+                0x00009fc8       0x20 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x00009fc8                ADC_Voltage_Target_AMux_Unset
+ .text.CYCONFIGCPYCODE
+                0x00009fe8        0x4 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .text.cyfitter_cfg
+                0x00009fec      0x298 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x00009fec                cyfitter_cfg
+ .text.CyFlash_SetWaitCycles
+                0x0000a284       0x4c .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+                0x0000a284                CyFlash_SetWaitCycles
+ .text.USBFS_DispatchClassRqst
+                0x0000a2d0       0x58 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+                0x0000a2d0                USBFS_DispatchClassRqst
+ .text          0x0000a328      0x190 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x0000a328                memcpy
+ .text          0x0000a4b8       0xd4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x0000a4b8                memset
+ .text          0x0000a58c       0x30 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+                0x0000a58c                __cs3_premain
+ .text          0x0000a5bc        0x2 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+                0x0000a5bc                __cs3_isr_external_24
+                0x0000a5bc                __cs3_isr_external_9
+                0x0000a5bc                __cs3_isr_external_14
+                0x0000a5bc                __cs3_isr_reserved_9
+                0x0000a5bc                __cs3_isr_external_4
+                0x0000a5bc                __cs3_isr_external_21
+                0x0000a5bc                __cs3_isr_external_0
+                0x0000a5bc                __cs3_isr_external_27
+                0x0000a5bc                __cs3_isr_external_11
+                0x0000a5bc                __cs3_isr_usage_fault
+                0x0000a5bc                __cs3_isr_svcall
+                0x0000a5bc                __cs3_isr_external_3
+                0x0000a5bc                __cs3_isr_mpu_fault
+                0x0000a5bc                __cs3_isr_external_16
+                0x0000a5bc                __cs3_isr_pendsv
+                0x0000a5bc                __cs3_isr_external_31
+                0x0000a5bc                __cs3_isr_nmi
+                0x0000a5bc                __cs3_isr_external_5
+                0x0000a5bc                __cs3_isr_external_6
+                0x0000a5bc                __cs3_isr_external_12
+                0x0000a5bc                __cs3_isr_hard_fault
+                0x0000a5bc                __cs3_isr_bus_fault
+                0x0000a5bc                __cs3_isr_external_1
+                0x0000a5bc                __cs3_isr_external_13
+                0x0000a5bc                __cs3_isr_external_30
+                0x0000a5bc                __cs3_isr_external_23
+                0x0000a5bc                __cs3_isr_external_20
+                0x0000a5bc                __cs3_isr_debug
+                0x0000a5bc                __cs3_isr_reserved_13
+                0x0000a5bc                __cs3_isr_external_8
+                0x0000a5bc                __cs3_isr_external_26
+                0x0000a5bc                __cs3_isr_reserved_8
+                0x0000a5bc                __cs3_isr_reserved_7
+                0x0000a5bc                __cs3_isr_external_7
+                0x0000a5bc                __cs3_isr_external_28
+                0x0000a5bc                __cs3_isr_systick
+                0x0000a5bc                __cs3_isr_external_22
+                0x0000a5bc                __cs3_isr_external_10
+                0x0000a5bc                __cs3_isr_external_15
+                0x0000a5bc                __cs3_isr_interrupt
+                0x0000a5bc                __cs3_isr_external_18
+                0x0000a5bc                __cs3_isr_external_29
+                0x0000a5bc                __cs3_isr_external_25
+                0x0000a5bc                __cs3_isr_reserved_10
+                0x0000a5bc                __cs3_isr_external_2
+                0x0000a5bc                __cs3_isr_external_17
+                0x0000a5bc                __cs3_isr_external_19
+ *fill*         0x0000a5be        0x2 00
+ .text          0x0000a5c0       0x50 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x0000a5c0                __libc_init_array
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x0000a610        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+                0x0000a610                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000a610                __exidx_end = .
+
+.rodata         0x0000a610      0xcf8
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000a610       0x10 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .rodata        0x0000a620       0x10 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .rodata        0x0000a630      0xa50 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                0x0000a630                AMux__addrTable
+                0x0000a640                AMux__maskTable
+                0x0000a644                ADC_Voltage_Target_AMux__addrTable
+                0x0000a64c                ADC_Voltage_Target_AMux__maskTable
+ .rodata        0x0000b080      0x24c .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+                0x0000b080                USBFS_DEVICE0_DESCR
+                0x0000b094                USBFS_DEVICE0_CONFIGURATION0_DESCR
+                0x0000b118                USBFS_STRING_DESCRIPTORS
+                0x0000b1c4                USBFS_SN_STRING_DESCRIPTOR
+                0x0000b1c8                USBFS_HIDREPORT_DESCRIPTOR1
+                0x0000b1f8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_TABLE
+                0x0000b204                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_TABLE
+                0x0000b210                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_TABLE
+                0x0000b238                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_TABLE
+                0x0000b240                USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x0000b278                USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x0000b27c                USBFS_DEVICE0_CONFIGURATION0_TABLE
+                0x0000b2b4                USBFS_DEVICE0_TABLE
+                0x0000b2c4                USBFS_TABLE
+                0x0000b2cc                . = ALIGN (0x4)
+ *(.init)
+ .init          0x0000b2cc        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x0000b2cc                _init
+ .init          0x0000b2d0        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x0000b2d8                . = ALIGN (0x4)
+                0x0000b2d8                __preinit_array_start = .
+ *(.preinit_array)
+                0x0000b2d8                __preinit_array_end = .
+                0x0000b2d8                . = ALIGN (0x4)
+                0x0000b2d8                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x0000b2d8        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .init_array    0x0000b2dc        0x4 .\ARM_GCC_441\Release\Cm3Start.o
+                0x0000b2e0                __init_array_end = .
+                0x0000b2e0                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x0000b2e0        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x0000b2e0                _fini
+ .fini          0x0000b2e4        0x8 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x0000b2ec                . = ALIGN (0x4)
+                0x0000b2ec                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x0000b2ec        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x0000b2f0                __fini_array_end = .
+                0x0000b2f0                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x0000b2f0                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x0000b2f0                . = ALIGN (0x4)
+                0x0000b2f0                __cs3_regions = .
+                0x0000b2f0        0x4 LONG 0x0
+                0x0000b2f4        0x4 LONG 0xb308 __cs3_region_init_ram
+                0x0000b2f8        0x4 LONG 0x1fffe108 __cs3_region_start_data
+                0x0000b2fc        0x4 LONG 0x68 __cs3_region_init_size_ram
+                0x0000b300        0x4 LONG 0x780 __cs3_region_zero_size_ram
+                0x0000b304                __cs3_regions_end = .
+                0x0000b308                . = ALIGN (0x8)
+ *fill*         0x0000b304        0x4 00
+                0x0000b308                _etext = .
+
+.ramvectors     0x1fffe000      0x100
+                0x1fffe000                __cs3_region_start_ram = .
+ *(.cs3.region-head.ram)
+                0x1fffe001                ASSERT ((. == __cs3_region_start_ram), .cs3.region-head.ram not permitted)
+ *(.ramvectors)
+ .ramvectors    0x1fffe000      0x100 .\ARM_GCC_441\Release\Cm3Start.o
+                0x1fffe000                CyRamVectors
+
+.noinit         0x1fffe100        0x4
+ *(.noinit)
+ .noinit        0x1fffe100        0x4 .\ARM_GCC_441\Release\Cm3Start.o
+
+.data           0x1fffe108       0x68 load address 0x0000b308
+                0x1fffe108                __cs3_region_start_data = .
+ *(.jcr)
+ .jcr           0x1fffe108        0x0 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x1fffe108        0x4 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x1fffe10c        0x1 .\ARM_GCC_441\Release\commandprocessor.o
+                0x1fffe10c                SWDFlag
+ *fill*         0x1fffe10d        0x3 00
+ .data          0x1fffe110       0x14 .\ARM_GCC_441\Release\version.o
+                0x1fffe110                version
+ .data          0x1fffe124        0x1 .\ARM_GCC_441\Release\power.o
+                0x1fffe124                range
+ *fill*         0x1fffe125        0x3 00
+ .data          0x1fffe128       0x10 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x1fffe128                cydelay_freq_hz
+                0x1fffe12c                cydelay_freq_mhz
+                0x1fffe130                cydelay_freq_khz
+                0x1fffe134                cydelay_32k_ms
+ .data          0x1fffe138        0x8 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x1fffe138                ADC_Voltage_Target_CountsPerVolt
+                0x1fffe13c                ADC_Voltage_Target_Config
+ .data          0x1fffe140        0x4 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .data          0x1fffe144        0x1 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+                0x1fffe144                ADC_Voltage_Target_AMux_lastChannel
+ .data          0x1fffe145        0x1 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+                0x1fffe145                AMux_lastChannel
+ *fill*         0x1fffe146        0x2 00
+ .data          0x1fffe148       0x24 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x1fffe148                USBFS_idSerialNumberStringDescriptor
+                0x1fffe170                . = ALIGN (0x8)
+ *fill*         0x1fffe16c        0x4 00
+ *(.ram)
+                0x1fffe170                _edata = .
+
+.bss            0x1fffe170      0x780 load address 0x0000b370
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x1fffe170        0x1 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .bss           0x1fffe171        0x1 .\ARM_GCC_441\Release\main.o
+                0x1fffe171                bUSBResetDetected
+ .bss           0x1fffe172        0x4 .\ARM_GCC_441\Release\swd.o
+                0x1fffe172                ack0
+                0x1fffe173                ack1
+                0x1fffe174                ack2
+                0x1fffe175                fIsShortPkt
+ .bss           0x1fffe176        0x1 .\ARM_GCC_441\Release\version.o
+                0x1fffe176                kitProgHWVersion
+ *fill*         0x1fffe177        0x1 00
+ .bss           0x1fffe178        0x4 .\ARM_GCC_441\Release\power.o
+                0x1fffe178                checkActivityFlag
+                0x1fffe17a                result
+ .bss           0x1fffe17c       0x44 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .bss           0x1fffe1c0        0xc .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                0x1fffe1c0                ADC_Voltage_Target_convDone
+                0x1fffe1c1                ADC_Voltage_Target_stopConversion
+                0x1fffe1c4                ADC_Voltage_Target_Offset
+                0x1fffe1c8                ADC_Voltage_Target_initVar
+                0x1fffe1c9                ADC_Voltage_Target_started
+ .bss           0x1fffe1cc        0x1 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x1fffe1cc                I2CHW_initVar
+ .bss           0x1fffe1cd        0x1 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                0x1fffe1cd                USBFS_initVar
+ *fill*         0x1fffe1ce        0x2 00
+ .bss           0x1fffe1d0        0x4 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .bss           0x1fffe1d4        0x1 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x1fffe1d4                USBFS_snStringConfirm
+ .bss           0x1fffe1d5        0x8 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x1fffe1d5                UART_Bridge_rxBufferRead
+                0x1fffe1d6                UART_Bridge_rxBufferWrite
+                0x1fffe1d7                UART_Bridge_rxBufferLoopDetect
+                0x1fffe1d8                UART_Bridge_rxBufferOverflow
+                0x1fffe1d9                UART_Bridge_initVar
+                0x1fffe1da                UART_Bridge_txBufferRead
+                0x1fffe1db                UART_Bridge_txBufferWrite
+ .bss           0x1fffe1dd        0x1 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                0x1fffe1dd                Timer_UsbSuspend_initVar
+ *(COMMON)
+ *fill*         0x1fffe1de        0x2 00
+ COMMON         0x1fffe1e0      0x1d8 .\ARM_GCC_441\Release\swd.o
+                0x1fffe1e0                bufInOffset
+                0x1fffe1e4                bufIn
+                0x1fffe364                bufOutLen
+                0x1fffe366                gbAck
+                0x1fffe367                gbHeader
+                0x1fffe368                bufOutOffset
+                0x1fffe36a                gbParity
+                0x1fffe36c                gbData
+                0x1fffe370                gbStatsReg
+                0x1fffe374                bufOut
+ COMMON         0x1fffe3b8       0x46 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+                0x1fffe3b8                pifBuf
+                0x1fffe3f8                pendingOp
+                0x1fffe3f9                fTcBusy
+                0x1fffe3fa                progMode
+                0x1fffe3fc                pifData
+ *fill*         0x1fffe3fe        0x2 00
+ COMMON         0x1fffe400      0x28c .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                0x1fffe400                bInPacketIndex
+                0x1fffe401                bHostInterface
+                0x1fffe402                bOutPacketIndex
+                0x1fffe404                voltage
+                0x1fffe408                bOutEndpointData
+                0x1fffe448                bBulkInEndpointData
+                0x1fffe649                i2cSpeed
+                0x1fffe64c                bInEndpointData
+ COMMON         0x1fffe68c        0x1 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                0x1fffe68c                CyResetStatus
+ COMMON         0x1fffe68d        0x1 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                0x1fffe68d                I2CHW_state
+ *fill*         0x1fffe68e        0x2 00
+ COMMON         0x1fffe690       0x13 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                0x1fffe690                I2CHW_mstrWrBufIndex
+                0x1fffe694                I2CHW_mstrWrBufPtr
+                0x1fffe698                I2CHW_mstrWrBufSize
+                0x1fffe699                I2CHW_mstrControl
+                0x1fffe69c                I2CHW_mstrRdBufPtr
+                0x1fffe6a0                I2CHW_mstrRdBufIndex
+                0x1fffe6a1                I2CHW_mstrRdBufSize
+                0x1fffe6a2                I2CHW_mstrStatus
+ *fill*         0x1fffe6a3        0x1 00
+ COMMON         0x1fffe6a4        0xd .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                0x1fffe6a4                USBFS_lineControlBitmap
+                0x1fffe6a6                USBFS_lineChanged
+                0x1fffe6a8                USBFS_lineCoding
+                0x1fffe6af                USBFS_cdc_data_out_ep
+                0x1fffe6b0                USBFS_cdc_data_in_ep
+ *fill*         0x1fffe6b1        0x3 00
+ COMMON         0x1fffe6b4       0x98 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                0x1fffe6b4                USBFS_deviceAddress
+                0x1fffe6b5                USBFS_ep0Mode
+                0x1fffe6b8                USBFS_interfaceSetting
+                0x1fffe6bc                USBFS_currentTD
+                0x1fffe6c8                USBFS_device
+                0x1fffe6c9                USBFS_interfaceNumber
+                0x1fffe6ca                USBFS_ep0Toggle
+                0x1fffe6cb                USBFS_deviceStatus
+                0x1fffe6cc                USBFS_configurationChanged
+                0x1fffe6cd                USBFS_configuration
+                0x1fffe6ce                USBFS_transferState
+                0x1fffe6d0                USBFS_interfaceStatus
+                0x1fffe6d4                USBFS_interfaceClass
+                0x1fffe6d8                USBFS_EP
+                0x1fffe744                USBFS_interfaceSetting_last
+                0x1fffe748                USBFS_lastPacketSize
+                0x1fffe749                USBFS_ep0Count
+                0x1fffe74a                USBFS_transferByteCount
+ COMMON         0x1fffe74c        0xc .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                0x1fffe74c                USBFS_hidIdleRate
+                0x1fffe750                USBFS_hidIdleTimer
+                0x1fffe754                USBFS_hidProtocol
+ COMMON         0x1fffe758        0x8 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                0x1fffe758                USBFS_tBuffer
+                0x1fffe75c                USBFS_fwSerialNumberStringDescriptor
+ COMMON         0x1fffe760      0x100 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                0x1fffe760                UART_Bridge_txBuffer
+                0x1fffe7e0                UART_Bridge_rxBuffer
+ COMMON         0x1fffe860       0x90 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+                0x1fffe860                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_RPT_SCB
+                0x1fffe864                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_IN_BUF
+                0x1fffe8a8                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_BUF
+                0x1fffe8ec                USBFS_DEVICE0_CONFIGURATION0_INTERFACE0_ALTERNATE0_HID_OUT_RPT_SCB
+                0x1fffe8f0                . = ALIGN (0x8)
+ *(.ram.b)
+                0x1fffe8f0                _end = .
+                0x1fffe8f0                __end = .
+                0x20000000                __cs3_region_end_ram = (__cs3_region_start_ram + 0x2000)
+                0x00002000                __cs3_region_size_ram = 0x2000
+                0x0000b308                __cs3_region_init_ram = LOADADDR (.data)
+                0x00000068                __cs3_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000780                __cs3_region_zero_size_ram = (_end - _edata)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000      0x7e5
+ .comment       0x00000000       0x2b .\ARM_GCC_441\Release\main.o
+ .comment       0x0000002b       0x2b .\ARM_GCC_441\Release\swd.o
+ .comment       0x00000056       0x2b .\ARM_GCC_441\Release\commandprocessor.o
+ .comment       0x00000081       0x2b .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .comment       0x000000ac       0x2b .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .comment       0x000000d7       0x2b .\ARM_GCC_441\Release\version.o
+ .comment       0x00000102       0x2b .\ARM_GCC_441\Release\power.o
+ .comment       0x0000012d       0x2b .\ARM_GCC_441\Release\USBUART.o
+ .comment       0x00000158       0x2b .\ARM_GCC_441\Release\Cm3Start.o
+ .comment       0x00000183       0x2b .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .comment       0x000001ae       0x2b .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .comment       0x000001d9       0x2b .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .comment       0x00000204       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .comment       0x0000022f       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .comment       0x0000025a       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .comment       0x00000285       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .comment       0x000002b0       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .comment       0x000002db       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .comment       0x00000306       0x2b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .comment       0x00000331       0x2b .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .comment       0x0000035c       0x2b .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .comment       0x00000387       0x2b .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .comment       0x000003b2       0x2b .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .comment       0x000003dd       0x2b .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .comment       0x00000408       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .comment       0x00000433       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .comment       0x0000045e       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .comment       0x00000489       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .comment       0x000004b4       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .comment       0x000004df       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .comment       0x0000050a       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .comment       0x00000535       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .comment       0x00000560       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .comment       0x0000058b       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .comment       0x000005b6       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .comment       0x000005e1       0x2b .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .comment       0x0000060c       0x2b .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .comment       0x00000637       0x2b .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .comment       0x00000662       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .comment       0x0000068d       0x2b .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .comment       0x000006b8       0x2b .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .comment       0x000006e3       0x2b .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .comment       0x0000070e       0x2b .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .comment       0x00000739       0x2b .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .comment       0x00000764       0x2b .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .comment       0x0000078f       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .comment       0x000007ba       0x2b .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+
+.debug_aranges  0x00000000     0x1218
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 .\ARM_GCC_441\Release\main.o
+ .debug_aranges
+                0x00000020       0xd0 .\ARM_GCC_441\Release\swd.o
+ .debug_aranges
+                0x000000f0       0x30 .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_aranges
+                0x00000120       0x28 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_aranges
+                0x00000148       0x60 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_aranges
+                0x000001a8       0x20 .\ARM_GCC_441\Release\version.o
+ .debug_aranges
+                0x000001c8       0x58 .\ARM_GCC_441\Release\power.o
+ .debug_aranges
+                0x00000220       0x30 .\ARM_GCC_441\Release\USBUART.o
+ .debug_aranges
+                0x00000250       0x30 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_aranges
+                0x00000280       0x20 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x000002a0      0x210 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_aranges
+                0x000004b0       0x70 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_aranges
+                0x00000520       0x70 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_aranges
+                0x00000590       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_aranges
+                0x000005c8       0xe8 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_aranges
+                0x000006b0       0x38 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_aranges
+                0x000006e8       0x38 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_aranges
+                0x00000720       0x80 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_aranges
+                0x000007a0       0x70 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_aranges
+                0x00000810       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_aranges
+                0x00000840       0x30 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_aranges
+                0x00000870       0x70 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_aranges
+                0x000008e0       0x38 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_aranges
+                0x00000918       0x20 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_aranges
+                0x00000938       0x88 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_aranges
+                0x000009c0       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_aranges
+                0x000009f8       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_aranges
+                0x00000a30       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_aranges
+                0x00000a68       0xb8 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_aranges
+                0x00000b20       0xa8 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_aranges
+                0x00000bc8       0x98 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_aranges
+                0x00000c60       0x60 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_aranges
+                0x00000cc0       0x48 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_aranges
+                0x00000d08       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_aranges
+                0x00000d48       0x80 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_aranges
+                0x00000dc8       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_aranges
+                0x00000de8       0x28 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_aranges
+                0x00000e10      0x110 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_aranges
+                0x00000f20       0x28 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_aranges
+                0x00000f48       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_aranges
+                0x00000f80       0x38 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_aranges
+                0x00000fb8       0x80 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_aranges
+                0x00001038       0x88 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_aranges
+                0x000010c0       0x50 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_aranges
+                0x00001110       0x80 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_aranges
+                0x00001190       0x68 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_aranges
+                0x000011f8       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+
+.debug_pubnames
+                0x00000000     0x3af4
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x31 .\ARM_GCC_441\Release\main.o
+ .debug_pubnames
+                0x00000031      0x259 .\ARM_GCC_441\Release\swd.o
+ .debug_pubnames
+                0x0000028a       0x45 .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_pubnames
+                0x000002cf       0x6e .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_pubnames
+                0x0000033d      0x13d .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_pubnames
+                0x0000047a       0x44 .\ARM_GCC_441\Release\version.o
+ .debug_pubnames
+                0x000004be       0xde .\ARM_GCC_441\Release\power.o
+ .debug_pubnames
+                0x0000059c       0x46 .\ARM_GCC_441\Release\USBUART.o
+ .debug_pubnames
+                0x000005e2       0x66 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_pubnames
+                0x00000648      0x57a .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_pubnames
+                0x00000bc2       0xbb .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_pubnames
+                0x00000c7d      0x14a .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_pubnames
+                0x00000dc7       0x7e .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_pubnames
+                0x00000e45      0x47e .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_pubnames
+                0x000012c3       0x94 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_pubnames
+                0x00001357       0x82 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_pubnames
+                0x000013d9      0x265 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_pubnames
+                0x0000163e      0x226 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_pubnames
+                0x00001864       0xa6 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_pubnames
+                0x0000190a       0x5a .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_pubnames
+                0x00001964      0x155 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_pubnames
+                0x00001ab9       0x73 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_pubnames
+                0x00001b2c       0x20 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_pubnames
+                0x00001b4c      0x242 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_pubnames
+                0x00001d8e       0x76 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_pubnames
+                0x00001e04       0x76 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_pubnames
+                0x00001e7a       0x76 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_pubnames
+                0x00001ef0      0x1e0 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_pubnames
+                0x000020d0      0x207 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_pubnames
+                0x000022d7      0x37c .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_pubnames
+                0x00002653       0xc1 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_pubnames
+                0x00002714       0xf7 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_pubnames
+                0x0000280b       0x73 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_pubnames
+                0x0000287e      0x1e6 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_pubnames
+                0x00002a64       0x2d .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_pubnames
+                0x00002a91       0x46 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_pubnames
+                0x00002ad7      0x486 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_pubnames
+                0x00002f5d       0x3e .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_pubnames
+                0x00002f9b       0x9a .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_pubnames
+                0x00003035       0x9a .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_pubnames
+                0x000030cf      0x182 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_pubnames
+                0x00003251      0x205 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_pubnames
+                0x00003456      0x111 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_pubnames
+                0x00003567      0x119 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_pubnames
+                0x00003680       0xd0 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_pubnames
+                0x00003750       0x2e .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .debug_pubnames
+                0x0000377e      0x376 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+
+.debug_info     0x00000000     0x8e65
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0xd1 .\ARM_GCC_441\Release\main.o
+ .debug_info    0x000000d1      0x7d3 .\ARM_GCC_441\Release\swd.o
+ .debug_info    0x000008a4      0x18d .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_info    0x00000a31      0x20a .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_info    0x00000c3b      0x382 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_info    0x00000fbd      0x1e4 .\ARM_GCC_441\Release\version.o
+ .debug_info    0x000011a1      0x1fe .\ARM_GCC_441\Release\power.o
+ .debug_info    0x0000139f      0x29e .\ARM_GCC_441\Release\USBUART.o
+ .debug_info    0x0000163d      0x167 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_info    0x000017a4       0x8f .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .debug_info    0x00001833      0xc1b .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_info    0x0000244e      0x5da .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_info    0x00002a28      0x276 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_info    0x00002c9e      0x117 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_info    0x00002db5      0x6f6 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_info    0x000034ab      0x128 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_info    0x000035d3       0xd4 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_info    0x000036a7      0x2b9 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_info    0x00003960      0x274 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_info    0x00003bd4      0x119 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_info    0x00003ced      0x119 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_info    0x00003e06      0x276 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_info    0x0000407c      0x11c .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_info    0x00004198      0x13c .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_info    0x000042d4      0x412 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_info    0x000046e6      0x117 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_info    0x000047fd      0x117 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_info    0x00004914      0x115 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_info    0x00004a29      0x619 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_info    0x00005042      0x5b1 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_info    0x000055f3      0x532 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_info    0x00005b25      0x214 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_info    0x00005d39      0x379 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_info    0x000060b2      0x184 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_info    0x00006236      0x825 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_info    0x00006a5b       0xcf .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_info    0x00006b2a      0x14a .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_info    0x00006c74      0x692 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_info    0x00007306      0x167 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_info    0x0000746d      0x117 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_info    0x00007584      0x117 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_info    0x0000769b      0x243 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_info    0x000078de      0x234 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_info    0x00007b12      0x64a .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_info    0x0000815c      0x3a1 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_info    0x000084fd      0x392 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_info    0x0000888f      0x199 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .debug_info    0x00008a28      0x43d .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+
+.debug_abbrev   0x00000000     0x336e
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x7e .\ARM_GCC_441\Release\main.o
+ .debug_abbrev  0x0000007e      0x1ad .\ARM_GCC_441\Release\swd.o
+ .debug_abbrev  0x0000022b       0xc7 .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_abbrev  0x000002f2       0xfd .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_abbrev  0x000003ef      0x1bf .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_abbrev  0x000005ae      0x121 .\ARM_GCC_441\Release\version.o
+ .debug_abbrev  0x000006cf      0x118 .\ARM_GCC_441\Release\power.o
+ .debug_abbrev  0x000007e7       0xfe .\ARM_GCC_441\Release\USBUART.o
+ .debug_abbrev  0x000008e5       0xd7 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_abbrev  0x000009bc       0x14 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x000009d0      0x22b .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_abbrev  0x00000bfb      0x1ab .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_abbrev  0x00000da6      0x17a .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_abbrev  0x00000f20       0x83 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_abbrev  0x00000fa3      0x175 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_abbrev  0x00001118       0x99 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_abbrev  0x000011b1       0x4a .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_abbrev  0x000011fb      0x17c .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_abbrev  0x00001377      0x17a .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_abbrev  0x000014f1       0x7d .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_abbrev  0x0000156e       0x7d .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_abbrev  0x000015eb      0x17a .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_abbrev  0x00001765       0xa8 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_abbrev  0x0000180d       0x89 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_abbrev  0x00001896      0x161 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_abbrev  0x000019f7       0x83 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_abbrev  0x00001a7a       0x83 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_abbrev  0x00001afd       0x92 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_abbrev  0x00001b8f      0x1d9 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_abbrev  0x00001d68      0x1d4 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_abbrev  0x00001f3c      0x173 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_abbrev  0x000020af       0xb0 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_abbrev  0x0000215f      0x16b .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_abbrev  0x000022ca       0xc4 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_abbrev  0x0000238e      0x242 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_abbrev  0x000025d0       0x80 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_abbrev  0x00002650       0xc5 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_abbrev  0x00002715      0x1aa .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_abbrev  0x000028bf       0xb4 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_abbrev  0x00002973       0x83 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_abbrev  0x000029f6       0x83 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_abbrev  0x00002a79      0x152 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_abbrev  0x00002bcb       0xdc .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_abbrev  0x00002ca7      0x247 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_abbrev  0x00002eee      0x180 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_abbrev  0x0000306e      0x16e .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_abbrev  0x000031dc       0xc2 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .debug_abbrev  0x0000329e       0xd0 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+
+.debug_line     0x00000000     0x46c1
+ *(.debug_line)
+ .debug_line    0x00000000       0x94 .\ARM_GCC_441\Release\main.o
+ .debug_line    0x00000094      0x3c5 .\ARM_GCC_441\Release\swd.o
+ .debug_line    0x00000459       0xee .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_line    0x00000547       0xbb .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_line    0x00000602      0x213 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_line    0x00000815       0xcc .\ARM_GCC_441\Release\version.o
+ .debug_line    0x000008e1      0x125 .\ARM_GCC_441\Release\power.o
+ .debug_line    0x00000a06       0xcd .\ARM_GCC_441\Release\USBUART.o
+ .debug_line    0x00000ad3       0xbb .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_line    0x00000b8e       0x67 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .debug_line    0x00000bf5      0x63d .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_line    0x00001232      0x32f .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_line    0x00001561      0x188 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_line    0x000016e9       0xb9 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_line    0x000017a2      0x350 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_line    0x00001af2       0xe1 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_line    0x00001bd3       0x9d .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_line    0x00001c70      0x1be .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_line    0x00001e2e      0x1a5 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_line    0x00001fd3       0xb8 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_line    0x0000208b       0xa5 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_line    0x00002130      0x189 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_line    0x000022b9       0xd7 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_line    0x00002390       0xd7 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_line    0x00002467      0x1f3 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_line    0x0000265a       0xb7 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_line    0x00002711       0xb7 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_line    0x000027c8       0xb5 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_line    0x0000287d      0x2c3 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_line    0x00002b40      0x20f .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_line    0x00002d4f      0x219 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_line    0x00002f68      0x153 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_line    0x000030bb      0x157 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_line    0x00003212      0x13b .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_line    0x0000334d      0x311 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_line    0x0000365e       0xaa .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_line    0x00003708       0x9e .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_line    0x000037a6      0x34b .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_line    0x00003af1       0xc4 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_line    0x00003bb5       0xc0 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_line    0x00003c75       0xc0 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_line    0x00003d35      0x17f .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_line    0x00003eb4      0x18c .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_line    0x00004040      0x210 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_line    0x00004250      0x1b9 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_line    0x00004409      0x17b .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_line    0x00004584       0x9d .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .debug_line    0x00004621       0xa0 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+
+.debug_frame    0x00000000     0x2908
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x2c .\ARM_GCC_441\Release\main.o
+ .debug_frame   0x0000002c      0x2dc .\ARM_GCC_441\Release\swd.o
+ .debug_frame   0x00000308       0x64 .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_frame   0x0000036c       0x40 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_frame   0x000003ac       0xfc .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_frame   0x000004a8       0x3c .\ARM_GCC_441\Release\version.o
+ .debug_frame   0x000004e4       0xd8 .\ARM_GCC_441\Release\power.o
+ .debug_frame   0x000005bc       0x68 .\ARM_GCC_441\Release\USBUART.o
+ .debug_frame   0x00000624       0x4c .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_frame   0x00000670      0x4ec .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_frame   0x00000b5c      0x168 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_frame   0x00000cc4       0xe0 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_frame   0x00000da4       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_frame   0x00000df4      0x270 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_frame   0x00001064       0x68 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_frame   0x000010cc       0x50 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_frame   0x0000111c      0x100 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_frame   0x0000121c       0xe0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_frame   0x000012fc       0x64 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_frame   0x00001360       0x64 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_frame   0x000013c4       0xe0 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_frame   0x000014a4       0x6c .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_frame   0x00001510       0x30 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_frame   0x00001540      0x114 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_frame   0x00001654       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_frame   0x000016a4       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_frame   0x000016f4       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_frame   0x00001744      0x1a8 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_frame   0x000018ec      0x188 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_frame   0x00001a74      0x170 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_frame   0x00001be4       0xa0 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_frame   0x00001c84       0xa0 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_frame   0x00001d24       0x88 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_frame   0x00001dac      0x158 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_frame   0x00001f04       0x2c .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_frame   0x00001f30       0x3c .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_frame   0x00001f6c      0x2c0 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_frame   0x0000222c       0x30 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_frame   0x0000225c       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_frame   0x000022ac       0x50 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_frame   0x000022fc      0x104 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_frame   0x00002400      0x108 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_frame   0x00002508       0x90 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_frame   0x00002598      0x154 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_frame   0x000026ec      0x114 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_frame   0x00002800       0x20 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .debug_frame   0x00002820       0x34 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00002854       0x28 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x0000287c       0x20 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .debug_frame   0x0000289c       0x40 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+ .debug_frame   0x000028dc       0x2c c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+
+.debug_str      0x00000000     0x44b8
+ *(.debug_str)
+ .debug_str     0x00000000       0xda .\ARM_GCC_441\Release\main.o
+                                0x113 (size before relaxing)
+ .debug_str     0x000000da      0x26d .\ARM_GCC_441\Release\swd.o
+                                0x379 (size before relaxing)
+ .debug_str     0x00000347       0x57 .\ARM_GCC_441\Release\commandprocessor.o
+                                0x182 (size before relaxing)
+ .debug_str     0x0000039e       0xb3 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+                                0x1e2 (size before relaxing)
+ .debug_str     0x00000451      0x1ac .\ARM_GCC_441\Release\USBFS_HID_interface.o
+                                0x2ba (size before relaxing)
+ .debug_str     0x000005fd       0x87 .\ARM_GCC_441\Release\version.o
+                                0x199 (size before relaxing)
+ .debug_str     0x00000684       0xdf .\ARM_GCC_441\Release\power.o
+                                0x1f3 (size before relaxing)
+ .debug_str     0x00000763      0x129 .\ARM_GCC_441\Release\USBUART.o
+                                0x23c (size before relaxing)
+ .debug_str     0x0000088c       0x8e .\ARM_GCC_441\Release\Cm3Start.o
+                                0x181 (size before relaxing)
+ .debug_str     0x0000091a      0x637 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+                                0x76e (size before relaxing)
+ .debug_str     0x00000f51      0x382 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+                                0x493 (size before relaxing)
+ .debug_str     0x000012d3      0x184 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+                                0x277 (size before relaxing)
+ .debug_str     0x00001457       0x96 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+                                0x181 (size before relaxing)
+ .debug_str     0x000014ed      0x53b .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+                                0x67e (size before relaxing)
+ .debug_str     0x00001a28      0x110 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+                                0x1f6 (size before relaxing)
+ .debug_str     0x00001b38       0x92 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+                                0x172 (size before relaxing)
+ .debug_str     0x00001bca      0x266 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+                                0x3a0 (size before relaxing)
+ .debug_str     0x00001e30      0x221 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+                                0x363 (size before relaxing)
+ .debug_str     0x00002051       0xc4 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+                                0x1aa (size before relaxing)
+ .debug_str     0x00002115       0x20 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+                                0x14b (size before relaxing)
+ .debug_str     0x00002135      0x13d .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+                                0x283 (size before relaxing)
+ .debug_str     0x00002272       0x6a .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+                                0x161 (size before relaxing)
+ .debug_str     0x000022dc       0xd1 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+                                0x1c3 (size before relaxing)
+ .debug_str     0x000023ad      0x19f .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+                                0x338 (size before relaxing)
+ .debug_str     0x0000254c       0x7b .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+                                0x177 (size before relaxing)
+ .debug_str     0x000025c7       0x7b .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+                                0x177 (size before relaxing)
+ .debug_str     0x00002642       0x7b .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+                                0x177 (size before relaxing)
+ .debug_str     0x000026bd      0x28c .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+                                0x441 (size before relaxing)
+ .debug_str     0x00002949      0x256 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+                                0x462 (size before relaxing)
+ .debug_str     0x00002b9f      0x257 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+                                0x519 (size before relaxing)
+ .debug_str     0x00002df6       0xb2 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+                                0x232 (size before relaxing)
+ .debug_str     0x00002ea8      0x114 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+                                0x2e4 (size before relaxing)
+ .debug_str     0x00002fbc       0xa6 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+                                0x1cf (size before relaxing)
+ .debug_str     0x00003062      0x2a8 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+                                0x5da (size before relaxing)
+ .debug_str     0x0000330a       0x3c .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+                                0x13e (size before relaxing)
+ .debug_str     0x00003346       0x84 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+                                0x180 (size before relaxing)
+ .debug_str     0x000033ca      0x446 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+                                0x5c4 (size before relaxing)
+ .debug_str     0x00003810       0x6a .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+                                0x21c (size before relaxing)
+ .debug_str     0x0000387a       0xa8 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+                                0x1a4 (size before relaxing)
+ .debug_str     0x00003922       0xa8 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+                                0x1a4 (size before relaxing)
+ .debug_str     0x000039ca      0x166 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+                                0x298 (size before relaxing)
+ .debug_str     0x00003b30      0x205 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+                                0x301 (size before relaxing)
+ .debug_str     0x00003d35      0x228 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+                                0x3a7 (size before relaxing)
+ .debug_str     0x00003f5d      0x131 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+                                0x267 (size before relaxing)
+ .debug_str     0x0000408e       0xfe .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+                                0x21e (size before relaxing)
+ .debug_str     0x0000418c       0x3d .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+                                0x1df (size before relaxing)
+ .debug_str     0x000041c9      0x2ef .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+                                0x52f (size before relaxing)
+
+.debug_loc      0x00000000     0x3ff8
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1f .\ARM_GCC_441\Release\main.o
+ .debug_loc     0x0000001f      0x82c .\ARM_GCC_441\Release\swd.o
+ .debug_loc     0x0000084b       0x5d .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_loc     0x000008a8       0x1f .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_loc     0x000008c7      0x255 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_loc     0x00000b1c       0x67 .\ARM_GCC_441\Release\version.o
+ .debug_loc     0x00000b83       0xf3 .\ARM_GCC_441\Release\power.o
+ .debug_loc     0x00000c76      0x137 .\ARM_GCC_441\Release\USBUART.o
+ .debug_loc     0x00000dad       0x32 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_loc     0x00000ddf      0x6fa .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_loc     0x000014d9      0x21b .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_loc     0x000016f4      0x126 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_loc     0x0000181a       0x26 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_loc     0x00001840      0x529 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_loc     0x00001d69       0x3e .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_loc     0x00001da7      0x126 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_loc     0x00001ecd      0x113 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_loc     0x00001fe0       0x99 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_loc     0x00002079       0x99 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_loc     0x00002112      0x126 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_loc     0x00002238       0x3e .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_loc     0x00002276       0x3d .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_loc     0x000022b3      0x326 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_loc     0x000025d9       0x26 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_loc     0x000025ff       0x26 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_loc     0x00002625       0x13 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_loc     0x00002638      0x2d2 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_loc     0x0000290a      0x210 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_loc     0x00002b1a      0x1a4 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_loc     0x00002cbe      0x1e7 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_loc     0x00002ea5       0x3e .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_loc     0x00002ee3      0x320 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_loc     0x00003203       0x1f .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_loc     0x00003222       0x65 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_loc     0x00003287      0x406 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_loc     0x0000368d       0x1e .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_loc     0x000036ab       0x26 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_loc     0x000036d1       0x26 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_loc     0x000036f7       0x8e .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_loc     0x00003785       0x3e .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_loc     0x000037c3      0x1c3 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_loc     0x00003986      0x316 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_loc     0x00003c9c      0x33e .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_loc     0x00003fda       0x1e .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000     0x11a8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x18 .\ARM_GCC_441\Release\main.o
+ .debug_ranges  0x00000018       0xc8 .\ARM_GCC_441\Release\swd.o
+ .debug_ranges  0x000000e0       0x28 .\ARM_GCC_441\Release\commandprocessor.o
+ .debug_ranges  0x00000108       0x20 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .debug_ranges  0x00000128       0x58 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .debug_ranges  0x00000180       0x48 .\ARM_GCC_441\Release\version.o
+ .debug_ranges  0x000001c8       0x50 .\ARM_GCC_441\Release\power.o
+ .debug_ranges  0x00000218       0x28 .\ARM_GCC_441\Release\USBUART.o
+ .debug_ranges  0x00000240       0x28 .\ARM_GCC_441\Release\Cm3Start.o
+ .debug_ranges  0x00000268      0x208 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .debug_ranges  0x00000470       0x80 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .debug_ranges  0x000004f0       0x80 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .debug_ranges  0x00000570       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .debug_ranges  0x000005a0       0xe0 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .debug_ranges  0x00000680       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .debug_ranges  0x000006b0       0x30 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .debug_ranges  0x000006e0       0x90 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .debug_ranges  0x00000770       0x80 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .debug_ranges  0x000007f0       0x28 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .debug_ranges  0x00000818       0x28 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .debug_ranges  0x00000840       0x80 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .debug_ranges  0x000008c0       0x30 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .debug_ranges  0x000008f0       0x18 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .debug_ranges  0x00000908       0x80 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .debug_ranges  0x00000988       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .debug_ranges  0x000009b8       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .debug_ranges  0x000009e8       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .debug_ranges  0x00000a18       0xb0 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .debug_ranges  0x00000ac8       0xa0 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .debug_ranges  0x00000b68       0x90 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .debug_ranges  0x00000bf8       0x58 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .debug_ranges  0x00000c50       0x40 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .debug_ranges  0x00000c90       0x38 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .debug_ranges  0x00000cc8       0x78 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .debug_ranges  0x00000d40       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .debug_ranges  0x00000d58       0x20 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .debug_ranges  0x00000d78      0x108 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .debug_ranges  0x00000e80       0x20 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .debug_ranges  0x00000ea0       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .debug_ranges  0x00000ed0       0x30 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .debug_ranges  0x00000f00       0x78 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .debug_ranges  0x00000f78       0x80 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .debug_ranges  0x00000ff8       0xc0 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .debug_ranges  0x000010b8       0x78 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .debug_ranges  0x00001130       0x60 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .debug_ranges  0x00001190       0x18 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 .\ARM_GCC_441\Release\main.o
+ .ARM.attributes
+                0x00000073       0x31 .\ARM_GCC_441\Release\swd.o
+ .ARM.attributes
+                0x000000a4       0x31 .\ARM_GCC_441\Release\commandprocessor.o
+ .ARM.attributes
+                0x000000d5       0x31 .\ARM_GCC_441\Release\USBFS_commandinterface.o
+ .ARM.attributes
+                0x00000106       0x31 .\ARM_GCC_441\Release\USBFS_HID_interface.o
+ .ARM.attributes
+                0x00000137       0x31 .\ARM_GCC_441\Release\version.o
+ .ARM.attributes
+                0x00000168       0x31 .\ARM_GCC_441\Release\power.o
+ .ARM.attributes
+                0x00000199       0x31 .\ARM_GCC_441\Release\USBUART.o
+ .ARM.attributes
+                0x000001ca       0x31 .\ARM_GCC_441\Release\Cm3Start.o
+ .ARM.attributes
+                0x000001fb       0x21 .\ARM_GCC_441\Release\KitProg.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x0000021c       0x31 .\ARM_GCC_441\Release\KitProg.a(CyLib.o)
+ .ARM.attributes
+                0x0000024d       0x31 .\ARM_GCC_441\Release\KitProg.a(cyPm.o)
+ .ARM.attributes
+                0x0000027e       0x31 .\ARM_GCC_441\Release\KitProg.a(Clock_I2C.o)
+ .ARM.attributes
+                0x000002af       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_StatusLED.o)
+ .ARM.attributes
+                0x000002e0       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target.o)
+ .ARM.attributes
+                0x00000311       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_PM.o)
+ .ARM.attributes
+                0x00000342       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_INT.o)
+ .ARM.attributes
+                0x00000373       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_theACLK.o)
+ .ARM.attributes
+                0x000003a4       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_Ext_CP_Clk.o)
+ .ARM.attributes
+                0x000003d5       0x31 .\ARM_GCC_441\Release\KitProg.a(ADC_Voltage_Target_AMux.o)
+ .ARM.attributes
+                0x00000406       0x31 .\ARM_GCC_441\Release\KitProg.a(AMux.o)
+ .ARM.attributes
+                0x00000437       0x31 .\ARM_GCC_441\Release\KitProg.a(Clock_UART.o)
+ .ARM.attributes
+                0x00000468       0x31 .\ARM_GCC_441\Release\KitProg.a(I2CHW.o)
+ .ARM.attributes
+                0x00000499       0x31 .\ARM_GCC_441\Release\KitProg.a(I2CHW_INT.o)
+ .ARM.attributes
+                0x000004ca       0x31 .\ARM_GCC_441\Release\KitProg.a(I2CHW_MASTER.o)
+ .ARM.attributes
+                0x000004fb       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SCL.o)
+ .ARM.attributes
+                0x0000052c       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_I2C_SDA.o)
+ .ARM.attributes
+                0x0000055d       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_UART_Tx.o)
+ .ARM.attributes
+                0x0000058e       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS.o)
+ .ARM.attributes
+                0x000005bf       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_cdc.o)
+ .ARM.attributes
+                0x000005f0       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_drv.o)
+ .ARM.attributes
+                0x00000621       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_episr.o)
+ .ARM.attributes
+                0x00000652       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_hid.o)
+ .ARM.attributes
+                0x00000683       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_pm.o)
+ .ARM.attributes
+                0x000006b4       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_std.o)
+ .ARM.attributes
+                0x000006e5       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_vnd.o)
+ .ARM.attributes
+                0x00000716       0x31 .\ARM_GCC_441\Release\KitProg.a(Bootloadable.o)
+ .ARM.attributes
+                0x00000747       0x31 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge.o)
+ .ARM.attributes
+                0x00000778       0x31 .\ARM_GCC_441\Release\KitProg.a(UART_Bridge_INT.o)
+ .ARM.attributes
+                0x000007a9       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_SDAPullUp_Enable.o)
+ .ARM.attributes
+                0x000007da       0x31 .\ARM_GCC_441\Release\KitProg.a(Pin_SCLPullUp_Enable.o)
+ .ARM.attributes
+                0x0000080b       0x31 .\ARM_GCC_441\Release\KitProg.a(isr_UsbSuspend.o)
+ .ARM.attributes
+                0x0000083c       0x31 .\ARM_GCC_441\Release\KitProg.a(Timer_UsbSuspend.o)
+ .ARM.attributes
+                0x0000086d       0x31 .\ARM_GCC_441\Release\KitProg.a(cyfitter_cfg.o)
+ .ARM.attributes
+                0x0000089e       0x31 .\ARM_GCC_441\Release\KitProg.a(CyFlash.o)
+ .ARM.attributes
+                0x000008cf       0x31 .\ARM_GCC_441\Release\KitProg.a(CySpc.o)
+ .ARM.attributes
+                0x00000900       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_cls.o)
+ .ARM.attributes
+                0x00000931       0x31 .\ARM_GCC_441\Release\KitProg.a(USBFS_descr.o)
+ .ARM.attributes
+                0x00000962       0x1b c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000097d       0x1b c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000998       0x1b c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000009b3       0x1b c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000009ce       0x1b c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x000009e9       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000a12       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000a3b       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000a64       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .ARM.attributes
+                0x00000a8d       0x19 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .ARM.attributes
+                0x00000aa6       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3.a(start_c.o)
+ .ARM.attributes
+                0x00000acf       0x19 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libcs3micro.a(micro_isr_interrupt.o)
+ .ARM.attributes
+                0x00000ae8       0x29 c:/program files/cypress/psoc creator/2.2/psoc creator/import/gnu_cs/arm/4.4.1/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(.\ARM_GCC_441\Release\KitProg.elf elf32-littlearm)

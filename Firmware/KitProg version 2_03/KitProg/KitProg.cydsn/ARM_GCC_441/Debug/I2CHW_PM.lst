@@ -1,0 +1,1174 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"I2CHW_PM.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 CA000000 		.text
+  20      02006C00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	I2CHW_backup
+  24              		.bss
+  25              		.align	2
+  26              		.type	I2CHW_backup, %object
+  27              		.size	I2CHW_backup, 2
+  28              	I2CHW_backup:
+  29 0000 0000     		.space	2
+  30 0002 0000     		.section	.text.I2CHW_SaveConfig,"ax",%progbits
+  31              		.align	2
+  32              		.global	I2CHW_SaveConfig
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	I2CHW_SaveConfig, %function
+  36              	I2CHW_SaveConfig:
+  37              	.LFB0:
+  38              		.file 1 ".\\Generated_Source\\PSoC5\\I2CHW_PM.c"
+   1:.\Generated_Source\PSoC5/I2CHW_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/I2CHW_PM.c **** * File Name: I2CHW_PM.c
+   3:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Version 3.30
+   4:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+   5:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  This file provides Low power mode APIs for I2C component.
+   7:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+   8:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Note:
+   9:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+  10:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  11:.\Generated_Source\PSoC5/I2CHW_PM.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/I2CHW_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/I2CHW_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/I2CHW_PM.c **** * the software package with which this file was provided.
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 2
+
+
+  16:.\Generated_Source\PSoC5/I2CHW_PM.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  18:.\Generated_Source\PSoC5/I2CHW_PM.c **** #include "I2CHW_PVT.h"
+  19:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  20:.\Generated_Source\PSoC5/I2CHW_PM.c **** I2CHW_BACKUP_STRUCT I2CHW_backup =
+  21:.\Generated_Source\PSoC5/I2CHW_PM.c **** {
+  22:.\Generated_Source\PSoC5/I2CHW_PM.c ****     I2CHW_DISABLE, /* enableState */
+  23:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  24:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_FF_IMPLEMENTED)
+  25:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_DEFAULT_XCFG,  /* xcfg */
+  26:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_DEFAULT_CFG,   /* cfg  */
+  27:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  28:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_MODE_SLAVE_ENABLED)
+  29:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_DEFAULT_ADDR, /* addr */
+  30:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+  31:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  32:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(CY_PSOC5A)
+  33:.\Generated_Source\PSoC5/I2CHW_PM.c ****             LO8(I2CHW_DEFAULT_DIVIDE_FACTOR),  /* div */
+  34:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #else
+  35:.\Generated_Source\PSoC5/I2CHW_PM.c ****             LO8(I2CHW_DEFAULT_DIVIDE_FACTOR), /* div1 */
+  36:.\Generated_Source\PSoC5/I2CHW_PM.c ****             HI8(I2CHW_DEFAULT_DIVIDE_FACTOR), /* div2 */
+  37:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (CY_PSOC5A) */
+  38:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  39:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #else  /* (I2CHW_UDB_IMPLEMENTED) */
+  40:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_DEFAULT_CFG,    /* control */
+  41:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  42:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(CY_UDB_V0)
+  43:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_INT_ENABLE_MASK, /* aux_ctl */
+  44:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  45:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_MODE_SLAVE_ENABLED)
+  46:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_DEFAULT_ADDR, /* addr_d0 */
+  47:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+  48:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (CY_UDB_V0) */
+  49:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_FF_IMPLEMENTED) */
+  50:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  51:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_TIMEOUT_ENABLED)
+  52:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_DEFAULT_TMOUT_PERIOD,
+  53:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_DEFAULT_TMOUT_INTR_MASK,
+  54:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  55:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_TIMEOUT_PRESCALER_ENABLED && CY_UDB_V0)
+  56:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_DEFAULT_TMOUT_PRESCALER_PRD,
+  57:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_TIMEOUT_PRESCALER_ENABLED) */
+  58:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  59:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_TIMEOUT_ENABLED) */
+  60:.\Generated_Source\PSoC5/I2CHW_PM.c **** };
+  61:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  62:.\Generated_Source\PSoC5/I2CHW_PM.c **** #if((I2CHW_FF_IMPLEMENTED) && (I2CHW_WAKEUP_ENABLED))
+  63:.\Generated_Source\PSoC5/I2CHW_PM.c ****     volatile uint8 I2CHW_wakeupSource;
+  64:.\Generated_Source\PSoC5/I2CHW_PM.c **** #endif /* ((I2CHW_FF_IMPLEMENTED) && (I2CHW_WAKEUP_ENABLED)) */
+  65:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  66:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+  67:.\Generated_Source\PSoC5/I2CHW_PM.c **** /*******************************************************************************
+  68:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Function Name: I2CHW_SaveConfig
+  69:.\Generated_Source\PSoC5/I2CHW_PM.c **** ********************************************************************************
+  70:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  71:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Summary:
+  72:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match enabled: disables I2C Master(if was enabled before go
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 3
+
+
+  73:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  to sleep), enables I2C backup regulator. Waits while on-going transaction be
+  74:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  will completed and I2C will be ready go to sleep. All incoming transaction
+  75:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  will be NACKed till power down will be asserted. The address match event
+  76:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  wakes up the chip.
+  77:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match disabled: saves I2C configuration and non-retention
+  78:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  register values.
+  79:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  80:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Parameters:
+  81:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+  82:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  83:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Return:
+  84:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+  85:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  86:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Global Variables:
+  87:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  I2CHW_backup - used to save component configuration and
+  88:.\Generated_Source\PSoC5/I2CHW_PM.c **** *       none-retention registers before enter sleep mode.
+  89:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  90:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Reentrant:
+  91:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  No
+  92:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+  93:.\Generated_Source\PSoC5/I2CHW_PM.c **** *******************************************************************************/
+  94:.\Generated_Source\PSoC5/I2CHW_PM.c **** void I2CHW_SaveConfig(void) 
+  95:.\Generated_Source\PSoC5/I2CHW_PM.c **** {
+  39              		.loc 1 95 0
+  40              		.cfi_startproc
+  41              		@ args = 0, pretend = 0, frame = 0
+  42              		@ frame_needed = 1, uses_anonymous_args = 0
+  43              		@ link register save eliminated.
+  44 0000 80B4     		push	{r7}
+  45              	.LCFI0:
+  46              		.cfi_def_cfa_offset 4
+  47 0002 00AF     		add	r7, sp, #0
+  48              		.cfi_offset 7, -4
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_register 7
+  96:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_FF_IMPLEMENTED)
+  97:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_WAKEUP_ENABLED)
+  98:.\Generated_Source\PSoC5/I2CHW_PM.c ****             uint8 enableInterrupts;
+  99:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_WAKEUP_ENABLED) */
+ 100:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 101:.\Generated_Source\PSoC5/I2CHW_PM.c ****         /* Store regiters in either Sleep mode */
+ 102:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_backup.cfg  = I2CHW_CFG_REG;
+ 103:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_backup.xcfg = I2CHW_XCFG_REG;
+ 104:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 105:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_MODE_SLAVE_ENABLED)
+ 106:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_backup.addr = I2CHW_ADDR_REG;
+ 107:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+ 108:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 109:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(CY_PSOC5A)
+ 110:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_backup.clkDiv   = I2CHW_CLKDIV_REG;
+ 111:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #else
+ 112:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_backup.clkDiv1  = I2CHW_CLKDIV1_REG;
+ 113:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_backup.clkDiv2  = I2CHW_CLKDIV2_REG;
+ 114:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (CY_PSOC5A) */
+ 115:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 116:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_WAKEUP_ENABLED)
+ 117:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Need to disable Master */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 4
+
+
+ 118:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_CFG_REG &= ((uint8) ~I2CHW_ENABLE_MASTER);
+ 119:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 120:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Enable the I2C regulator backup */
+ 121:.\Generated_Source\PSoC5/I2CHW_PM.c ****             enableInterrupts = CyEnterCriticalSection();
+ 122:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_PWRSYS_CR1_REG |= I2CHW_PWRSYS_CR1_I2C_REG_BACKUP;
+ 123:.\Generated_Source\PSoC5/I2CHW_PM.c ****             CyExitCriticalSection(enableInterrupts);
+ 124:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 125:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* 1) Set force NACK to ignore I2C transactions
+ 126:.\Generated_Source\PSoC5/I2CHW_PM.c ****                2) Wait while I2C will be ready go to Sleep
+ 127:.\Generated_Source\PSoC5/I2CHW_PM.c ****                3) These bits are cleared on wake up */
+ 128:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_XCFG_REG |= I2CHW_XCFG_FORCE_NACK;
+ 129:.\Generated_Source\PSoC5/I2CHW_PM.c ****             while(0u == (I2CHW_XCFG_REG & I2CHW_XCFG_RDY_TO_SLEEP))
+ 130:.\Generated_Source\PSoC5/I2CHW_PM.c ****             {
+ 131:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 ; /* Wait when block is ready to Sleep */
+ 132:.\Generated_Source\PSoC5/I2CHW_PM.c ****             }
+ 133:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 134:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Setup wakeup interrupt */
+ 135:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_DisableInt();
+ 136:.\Generated_Source\PSoC5/I2CHW_PM.c ****             (void) CyIntSetVector(I2CHW_ISR_NUMBER, &I2CHW_WAKEUP_ISR);
+ 137:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_wakeupSource = 0u;
+ 138:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_EnableInt();
+ 139:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 140:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_WAKEUP_ENABLED) */
+ 141:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 142:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #else
+ 143:.\Generated_Source\PSoC5/I2CHW_PM.c ****         /* Store only address match bit */
+ 144:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_backup.control = (I2CHW_CFG_REG & I2CHW_CTRL_ANY_ADDRESS_MASK);
+  51              		.loc 1 144 0
+  52 0004 46F27043 		movw	r3, #:lower16:1073767536
+  53 0008 C4F20003 		movt	r3, #:upper16:1073767536
+  54 000c 1B78     		ldrb	r3, [r3, #0]
+  55 000e DBB2     		uxtb	r3, r3
+  56 0010 1A46     		mov	r2, r3
+  57 0012 02F00802 		and	r2, r2, #8
+  58 0016 40F20003 		movw	r3, #:lower16:I2CHW_backup
+  59 001a C0F20003 		movt	r3, #:upper16:I2CHW_backup
+  60 001e 5A70     		strb	r2, [r3, #1]
+ 145:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 146:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(CY_UDB_V0)
+ 147:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Store interrupt mask bits */
+ 148:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_backup.intMask = I2CHW_INT_MASK_REG;
+ 149:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 150:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_MODE & I2CHW_MODE_SLAVE)
+ 151:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_backup.addr = I2CHW_ADDR_REG;
+ 152:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_MODE & I2CHW_MODE_SLAVE) */
+ 153:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 154:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (CY_UDB_V0) */
+ 155:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 156:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_FF_IMPLEMENTED) */
+ 157:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 158:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_TIMEOUT_ENABLED)
+ 159:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_TimeoutSaveConfig();   /* Save Timeout config */
+ 160:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ 161:.\Generated_Source\PSoC5/I2CHW_PM.c **** }
+  61              		.loc 1 161 0
+  62 0020 BD46     		mov	sp, r7
+  63 0022 80BC     		pop	{r7}
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 5
+
+
+  64 0024 7047     		bx	lr
+  65              		.cfi_endproc
+  66              	.LFE0:
+  67              		.size	I2CHW_SaveConfig, .-I2CHW_SaveConfig
+  68 0026 00BF     		.section	.text.I2CHW_Sleep,"ax",%progbits
+  69              		.align	2
+  70              		.global	I2CHW_Sleep
+  71              		.thumb
+  72              		.thumb_func
+  73              		.type	I2CHW_Sleep, %function
+  74              	I2CHW_Sleep:
+  75              	.LFB1:
+ 162:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 163:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 164:.\Generated_Source\PSoC5/I2CHW_PM.c **** /*******************************************************************************
+ 165:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Function Name: I2CHW_Sleep
+ 166:.\Generated_Source\PSoC5/I2CHW_PM.c **** ********************************************************************************
+ 167:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 168:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Summary:
+ 169:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match enabled: All incoming transaction will be NACKed till
+ 170:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  power down will be asserted. The address match event wakes up the chip.
+ 171:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match disabled: Disables active mode power template bits or
+ 172:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  clock gating as appropriate. Saves I2C configuration and non-retention
+ 173:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  register values.
+ 174:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Disables I2C interrupt.
+ 175:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 176:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Parameters:
+ 177:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 178:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 179:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Return:
+ 180:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 181:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 182:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Reentrant:
+ 183:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  No
+ 184:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 185:.\Generated_Source\PSoC5/I2CHW_PM.c **** *******************************************************************************/
+ 186:.\Generated_Source\PSoC5/I2CHW_PM.c **** void I2CHW_Sleep(void) 
+ 187:.\Generated_Source\PSoC5/I2CHW_PM.c **** {
+  76              		.loc 1 187 0
+  77              		.cfi_startproc
+  78              		@ args = 0, pretend = 0, frame = 0
+  79              		@ frame_needed = 1, uses_anonymous_args = 0
+  80 0000 80B5     		push	{r7, lr}
+  81              	.LCFI2:
+  82              		.cfi_def_cfa_offset 8
+  83 0002 00AF     		add	r7, sp, #0
+  84              		.cfi_offset 14, -4
+  85              		.cfi_offset 7, -8
+  86              	.LCFI3:
+  87              		.cfi_def_cfa_register 7
+ 188:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_WAKEUP_ENABLED)
+ 189:.\Generated_Source\PSoC5/I2CHW_PM.c ****         /* The I2C block should be always enabled if used as wakeup source */
+ 190:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_backup.enableState = I2CHW_DISABLE;
+ 191:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 192:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_TIMEOUT_ENABLED)
+ 193:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_TimeoutStop();
+ 194:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 6
+
+
+ 195:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 196:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #else
+ 197:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 198:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_backup.enableState = ((uint8) I2CHW_IS_ENABLED);
+  88              		.loc 1 198 0
+  89 0004 46F27043 		movw	r3, #:lower16:1073767536
+  90 0008 C4F20003 		movt	r3, #:upper16:1073767536
+  91 000c 1B78     		ldrb	r3, [r3, #0]
+  92 000e DBB2     		uxtb	r3, r3
+  93 0010 03F00203 		and	r3, r3, #2
+  94 0014 002B     		cmp	r3, #0
+  95 0016 0CBF     		ite	eq
+  96 0018 0022     		moveq	r2, #0
+  97 001a 0122     		movne	r2, #1
+  98 001c 40F20003 		movw	r3, #:lower16:I2CHW_backup
+  99 0020 C0F20003 		movt	r3, #:upper16:I2CHW_backup
+ 100 0024 1A70     		strb	r2, [r3, #0]
+ 199:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 200:.\Generated_Source\PSoC5/I2CHW_PM.c ****         if(I2CHW_IS_ENABLED)
+ 101              		.loc 1 200 0
+ 102 0026 46F27043 		movw	r3, #:lower16:1073767536
+ 103 002a C4F20003 		movt	r3, #:upper16:1073767536
+ 104 002e 1B78     		ldrb	r3, [r3, #0]
+ 105 0030 DBB2     		uxtb	r3, r3
+ 106 0032 03F00203 		and	r3, r3, #2
+ 107 0036 002B     		cmp	r3, #0
+ 108 0038 01D0     		beq	.L4
+ 201:.\Generated_Source\PSoC5/I2CHW_PM.c ****         {
+ 202:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_Stop();
+ 109              		.loc 1 202 0
+ 110 003a FFF7FEFF 		bl	I2CHW_Stop
+ 111              	.L4:
+ 203:.\Generated_Source\PSoC5/I2CHW_PM.c ****         }
+ 204:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_WAKEUP_ENABLED) */
+ 205:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 206:.\Generated_Source\PSoC5/I2CHW_PM.c ****     I2CHW_SaveConfig();
+ 112              		.loc 1 206 0
+ 113 003e FFF7FEFF 		bl	I2CHW_SaveConfig
+ 207:.\Generated_Source\PSoC5/I2CHW_PM.c **** }
+ 114              		.loc 1 207 0
+ 115 0042 80BD     		pop	{r7, pc}
+ 116              		.cfi_endproc
+ 117              	.LFE1:
+ 118              		.size	I2CHW_Sleep, .-I2CHW_Sleep
+ 119              		.section	.text.I2CHW_RestoreConfig,"ax",%progbits
+ 120              		.align	2
+ 121              		.global	I2CHW_RestoreConfig
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.type	I2CHW_RestoreConfig, %function
+ 125              	I2CHW_RestoreConfig:
+ 126              	.LFB2:
+ 208:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 209:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 210:.\Generated_Source\PSoC5/I2CHW_PM.c **** /*******************************************************************************
+ 211:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Function Name: I2CHW_RestoreConfig
+ 212:.\Generated_Source\PSoC5/I2CHW_PM.c **** ********************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 7
+
+
+ 213:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 214:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Summary:
+ 215:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match enabled: enables I2C Master (if was enabled before go
+ 216:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  to sleep), disables I2C backup regulator.
+ 217:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match disabled: Restores I2C configuration and
+ 218:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  non-retention register values.
+ 219:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 220:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Parameters:
+ 221:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 222:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 223:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Return:
+ 224:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 225:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 226:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Global Variables:
+ 227:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  I2CHW_backup - used to save component configuration and
+ 228:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  none-retention registers before exit sleep mode.
+ 229:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 230:.\Generated_Source\PSoC5/I2CHW_PM.c **** *******************************************************************************/
+ 231:.\Generated_Source\PSoC5/I2CHW_PM.c **** void I2CHW_RestoreConfig(void) 
+ 232:.\Generated_Source\PSoC5/I2CHW_PM.c **** {
+ 127              		.loc 1 232 0
+ 128              		.cfi_startproc
+ 129              		@ args = 0, pretend = 0, frame = 0
+ 130              		@ frame_needed = 1, uses_anonymous_args = 0
+ 131              		@ link register save eliminated.
+ 132 0000 80B4     		push	{r7}
+ 133              	.LCFI4:
+ 134              		.cfi_def_cfa_offset 4
+ 135 0002 00AF     		add	r7, sp, #0
+ 136              		.cfi_offset 7, -4
+ 137              	.LCFI5:
+ 138              		.cfi_def_cfa_register 7
+ 233:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_FF_IMPLEMENTED)
+ 234:.\Generated_Source\PSoC5/I2CHW_PM.c ****         uint8 enableInterrupts;
+ 235:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 236:.\Generated_Source\PSoC5/I2CHW_PM.c ****         if(I2CHW_CHECK_PWRSYS_I2C_BACKUP)    /* Enabled if was in Sleep */
+ 237:.\Generated_Source\PSoC5/I2CHW_PM.c ****         {
+ 238:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Disable back-up regulator */
+ 239:.\Generated_Source\PSoC5/I2CHW_PM.c ****             enableInterrupts = CyEnterCriticalSection();
+ 240:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_PWRSYS_CR1_REG &= ((uint8) ~I2CHW_PWRSYS_CR1_I2C_REG_BACKUP);
+ 241:.\Generated_Source\PSoC5/I2CHW_PM.c ****             CyExitCriticalSection(enableInterrupts);
+ 242:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 243:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Re-enable Master */
+ 244:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_CFG_REG = I2CHW_backup.cfg;
+ 245:.\Generated_Source\PSoC5/I2CHW_PM.c ****         }
+ 246:.\Generated_Source\PSoC5/I2CHW_PM.c ****         else /* The I2C_REG_BACKUP was cleaned by PM API: it means Hibernate or wake-up not set */
+ 247:.\Generated_Source\PSoC5/I2CHW_PM.c ****         {
+ 248:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_WAKEUP_ENABLED)
+ 249:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 /* Disable power to I2C block before register restore */
+ 250:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 enableInterrupts = CyEnterCriticalSection();
+ 251:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_ACT_PWRMGR_REG  &= ((uint8) ~I2CHW_ACT_PWR_EN);
+ 252:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_STBY_PWRMGR_REG &= ((uint8) ~I2CHW_STBY_PWR_EN);
+ 253:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 CyExitCriticalSection(enableInterrupts);
+ 254:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 255:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 /* Enable component after restore complete */
+ 256:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_backup.enableState = I2CHW_ENABLE;
+ 257:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_WAKEUP_ENABLED) */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 8
+
+
+ 258:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 259:.\Generated_Source\PSoC5/I2CHW_PM.c ****             /* Restore component registers: Hibernate disable power */
+ 260:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_XCFG_REG = I2CHW_backup.xcfg;
+ 261:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_CFG_REG  = I2CHW_backup.cfg;
+ 262:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 263:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_MODE_SLAVE_ENABLED)
+ 264:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_ADDR_REG = I2CHW_backup.addr;
+ 265:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+ 266:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 267:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(CY_PSOC5A)
+ 268:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_CLKDIV_REG  = I2CHW_backup.clkDiv;
+ 269:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #else
+ 270:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_CLKDIV1_REG = I2CHW_backup.clkDiv1;
+ 271:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_CLKDIV2_REG = I2CHW_backup.clkDiv2;
+ 272:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (CY_PSOC5A) */
+ 273:.\Generated_Source\PSoC5/I2CHW_PM.c ****         }
+ 274:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 275:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_WAKEUP_ENABLED)
+ 276:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_DisableInt();
+ 277:.\Generated_Source\PSoC5/I2CHW_PM.c ****             (void) CyIntSetVector(I2CHW_ISR_NUMBER, &I2CHW_ISR);
+ 278:.\Generated_Source\PSoC5/I2CHW_PM.c ****             if(0u != I2CHW_wakeupSource)
+ 279:.\Generated_Source\PSoC5/I2CHW_PM.c ****             {
+ 280:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_SetPendingInt();   /* Generate interrupt to process incomming transcation */
+ 281:.\Generated_Source\PSoC5/I2CHW_PM.c ****             }
+ 282:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_EnableInt();
+ 283:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_WAKEUP_ENABLED) */
+ 284:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 285:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #else
+ 286:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 287:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(CY_UDB_V0)
+ 288:.\Generated_Source\PSoC5/I2CHW_PM.c ****             uint8 enableInterrupts;
+ 289:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 290:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_INT_MASK_REG |= I2CHW_backup.intMask;
+ 291:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 292:.\Generated_Source\PSoC5/I2CHW_PM.c ****             enableInterrupts = CyEnterCriticalSection();
+ 293:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_INT_ENABLE_REG |= I2CHW_INT_ENABLE_MASK;
+ 294:.\Generated_Source\PSoC5/I2CHW_PM.c ****             CyExitCriticalSection(enableInterrupts);
+ 295:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 296:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_MODE_MASTER_ENABLED)
+ 297:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 /* Restore Master Clock generator */
+ 298:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_MCLK_PRD_REG = I2CHW_DEFAULT_MCLK_PRD;
+ 299:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_MCLK_CMP_REG = I2CHW_DEFAULT_MCLK_CMP;
+ 300:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_MODE_MASTER_ENABLED) */
+ 301:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 302:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #if(I2CHW_MODE_SLAVE_ENABLED)
+ 303:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_ADDR_REG = I2CHW_backup.addr;
+ 304:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 305:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 /* Restore slave bit counter period */
+ 306:.\Generated_Source\PSoC5/I2CHW_PM.c ****                 I2CHW_PERIOD_REG = I2CHW_DEFAULT_PERIOD;
+ 307:.\Generated_Source\PSoC5/I2CHW_PM.c ****             #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+ 308:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 309:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (CY_UDB_V0) */
+ 310:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 311:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_CFG_REG = I2CHW_backup.control;
+ 139              		.loc 1 311 0
+ 140 0004 46F27043 		movw	r3, #:lower16:1073767536
+ 141 0008 C4F20003 		movt	r3, #:upper16:1073767536
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 9
+
+
+ 142 000c 40F20002 		movw	r2, #:lower16:I2CHW_backup
+ 143 0010 C0F20002 		movt	r2, #:upper16:I2CHW_backup
+ 144 0014 5278     		ldrb	r2, [r2, #1]	@ zero_extendqisi2
+ 145 0016 1A70     		strb	r2, [r3, #0]
+ 312:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 313:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_FF_IMPLEMENTED) */
+ 314:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 315:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #if(I2CHW_TIMEOUT_ENABLED)
+ 316:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_TimeoutRestoreConfig();
+ 317:.\Generated_Source\PSoC5/I2CHW_PM.c ****     #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ 318:.\Generated_Source\PSoC5/I2CHW_PM.c **** }
+ 146              		.loc 1 318 0
+ 147 0018 BD46     		mov	sp, r7
+ 148 001a 80BC     		pop	{r7}
+ 149 001c 7047     		bx	lr
+ 150              		.cfi_endproc
+ 151              	.LFE2:
+ 152              		.size	I2CHW_RestoreConfig, .-I2CHW_RestoreConfig
+ 153 001e 00BF     		.section	.text.I2CHW_Wakeup,"ax",%progbits
+ 154              		.align	2
+ 155              		.global	I2CHW_Wakeup
+ 156              		.thumb
+ 157              		.thumb_func
+ 158              		.type	I2CHW_Wakeup, %function
+ 159              	I2CHW_Wakeup:
+ 160              	.LFB3:
+ 319:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 320:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 321:.\Generated_Source\PSoC5/I2CHW_PM.c **** /*******************************************************************************
+ 322:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Function Name: I2CHW_Wakeup
+ 323:.\Generated_Source\PSoC5/I2CHW_PM.c **** ********************************************************************************
+ 324:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 325:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Summary:
+ 326:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match enabled: enables I2C Master (if was enabled before go
+ 327:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  to sleep) and disables I2C backup regulator.
+ 328:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  Wakeup on address match disabled: Restores I2C configuration and
+ 329:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  non-retention register values. Restores Active mode power template bits or
+ 330:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  clock gating as appropriate.
+ 331:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  The I2C interrupt remains disabled after function call.
+ 332:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 333:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Parameters:
+ 334:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 335:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 336:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Return:
+ 337:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  None
+ 338:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 339:.\Generated_Source\PSoC5/I2CHW_PM.c **** * Reentrant:
+ 340:.\Generated_Source\PSoC5/I2CHW_PM.c **** *  No
+ 341:.\Generated_Source\PSoC5/I2CHW_PM.c **** *
+ 342:.\Generated_Source\PSoC5/I2CHW_PM.c **** *******************************************************************************/
+ 343:.\Generated_Source\PSoC5/I2CHW_PM.c **** void I2CHW_Wakeup(void) 
+ 344:.\Generated_Source\PSoC5/I2CHW_PM.c **** {
+ 161              		.loc 1 344 0
+ 162              		.cfi_startproc
+ 163              		@ args = 0, pretend = 0, frame = 0
+ 164              		@ frame_needed = 1, uses_anonymous_args = 0
+ 165 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 10
+
+
+ 166              	.LCFI6:
+ 167              		.cfi_def_cfa_offset 8
+ 168 0002 00AF     		add	r7, sp, #0
+ 169              		.cfi_offset 14, -4
+ 170              		.cfi_offset 7, -8
+ 171              	.LCFI7:
+ 172              		.cfi_def_cfa_register 7
+ 345:.\Generated_Source\PSoC5/I2CHW_PM.c ****     I2CHW_RestoreConfig();   /* Restore I2C register settings */
+ 173              		.loc 1 345 0
+ 174 0004 FFF7FEFF 		bl	I2CHW_RestoreConfig
+ 346:.\Generated_Source\PSoC5/I2CHW_PM.c **** 
+ 347:.\Generated_Source\PSoC5/I2CHW_PM.c ****     /* Restore component enable state */
+ 348:.\Generated_Source\PSoC5/I2CHW_PM.c ****     if(0u != I2CHW_backup.enableState)
+ 175              		.loc 1 348 0
+ 176 0008 40F20003 		movw	r3, #:lower16:I2CHW_backup
+ 177 000c C0F20003 		movt	r3, #:upper16:I2CHW_backup
+ 178 0010 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 179 0012 002B     		cmp	r3, #0
+ 180 0014 08D0     		beq	.L10
+ 349:.\Generated_Source\PSoC5/I2CHW_PM.c ****     {
+ 350:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_Enable();
+ 181              		.loc 1 350 0
+ 182 0016 FFF7FEFF 		bl	I2CHW_Enable
+ 351:.\Generated_Source\PSoC5/I2CHW_PM.c ****         I2CHW_EnableInt();
+ 183              		.loc 1 351 0
+ 184 001a 4EF20013 		movw	r3, #:lower16:-536813312
+ 185 001e CEF20003 		movt	r3, #:upper16:-536813312
+ 186 0022 4FF00102 		mov	r2, #1
+ 187 0026 1A60     		str	r2, [r3, #0]
+ 188              	.L10:
+ 352:.\Generated_Source\PSoC5/I2CHW_PM.c ****     }
+ 353:.\Generated_Source\PSoC5/I2CHW_PM.c ****     else
+ 354:.\Generated_Source\PSoC5/I2CHW_PM.c ****     {
+ 355:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #if(I2CHW_TIMEOUT_ENABLED)
+ 356:.\Generated_Source\PSoC5/I2CHW_PM.c ****             I2CHW_TimeoutEnable();
+ 357:.\Generated_Source\PSoC5/I2CHW_PM.c ****         #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ 358:.\Generated_Source\PSoC5/I2CHW_PM.c ****     }
+ 359:.\Generated_Source\PSoC5/I2CHW_PM.c **** }
+ 189              		.loc 1 359 0
+ 190 0028 80BD     		pop	{r7, pc}
+ 191              		.cfi_endproc
+ 192              	.LFE3:
+ 193              		.size	I2CHW_Wakeup, .-I2CHW_Wakeup
+ 194 002a 00BF     		.text
+ 195              	.Letext0:
+ 196              		.section	.debug_loc,"",%progbits
+ 197              	.Ldebug_loc0:
+ 198              	.LLST0:
+ 199 0000 00000000 		.4byte	.LFB0
+ 200 0004 02000000 		.4byte	.LCFI0
+ 201 0008 0100     		.2byte	0x1
+ 202 000a 5D       		.byte	0x5d
+ 203 000b 02000000 		.4byte	.LCFI0
+ 204 000f 04000000 		.4byte	.LCFI1
+ 205 0013 0200     		.2byte	0x2
+ 206 0015 7D       		.byte	0x7d
+ 207 0016 04       		.sleb128 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 11
+
+
+ 208 0017 04000000 		.4byte	.LCFI1
+ 209 001b 26000000 		.4byte	.LFE0
+ 210 001f 0200     		.2byte	0x2
+ 211 0021 77       		.byte	0x77
+ 212 0022 04       		.sleb128 4
+ 213 0023 00000000 		.4byte	0x0
+ 214 0027 00000000 		.4byte	0x0
+ 215              	.LLST1:
+ 216 002b 00000000 		.4byte	.LFB1
+ 217 002f 02000000 		.4byte	.LCFI2
+ 218 0033 0100     		.2byte	0x1
+ 219 0035 5D       		.byte	0x5d
+ 220 0036 02000000 		.4byte	.LCFI2
+ 221 003a 04000000 		.4byte	.LCFI3
+ 222 003e 0200     		.2byte	0x2
+ 223 0040 7D       		.byte	0x7d
+ 224 0041 08       		.sleb128 8
+ 225 0042 04000000 		.4byte	.LCFI3
+ 226 0046 44000000 		.4byte	.LFE1
+ 227 004a 0200     		.2byte	0x2
+ 228 004c 77       		.byte	0x77
+ 229 004d 08       		.sleb128 8
+ 230 004e 00000000 		.4byte	0x0
+ 231 0052 00000000 		.4byte	0x0
+ 232              	.LLST2:
+ 233 0056 00000000 		.4byte	.LFB2
+ 234 005a 02000000 		.4byte	.LCFI4
+ 235 005e 0100     		.2byte	0x1
+ 236 0060 5D       		.byte	0x5d
+ 237 0061 02000000 		.4byte	.LCFI4
+ 238 0065 04000000 		.4byte	.LCFI5
+ 239 0069 0200     		.2byte	0x2
+ 240 006b 7D       		.byte	0x7d
+ 241 006c 04       		.sleb128 4
+ 242 006d 04000000 		.4byte	.LCFI5
+ 243 0071 1E000000 		.4byte	.LFE2
+ 244 0075 0200     		.2byte	0x2
+ 245 0077 77       		.byte	0x77
+ 246 0078 04       		.sleb128 4
+ 247 0079 00000000 		.4byte	0x0
+ 248 007d 00000000 		.4byte	0x0
+ 249              	.LLST3:
+ 250 0081 00000000 		.4byte	.LFB3
+ 251 0085 02000000 		.4byte	.LCFI6
+ 252 0089 0100     		.2byte	0x1
+ 253 008b 5D       		.byte	0x5d
+ 254 008c 02000000 		.4byte	.LCFI6
+ 255 0090 04000000 		.4byte	.LCFI7
+ 256 0094 0200     		.2byte	0x2
+ 257 0096 7D       		.byte	0x7d
+ 258 0097 08       		.sleb128 8
+ 259 0098 04000000 		.4byte	.LCFI7
+ 260 009c 2A000000 		.4byte	.LFE3
+ 261 00a0 0200     		.2byte	0x2
+ 262 00a2 77       		.byte	0x77
+ 263 00a3 08       		.sleb128 8
+ 264 00a4 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 12
+
+
+ 265 00a8 00000000 		.4byte	0x0
+ 266              		.file 2 ".\\Generated_Source\\PSoC5\\/I2CHW.h"
+ 267              		.file 3 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 268              		.section	.debug_info
+ 269 0000 26010000 		.4byte	0x126
+ 270 0004 0200     		.2byte	0x2
+ 271 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 272 000a 04       		.byte	0x4
+ 273 000b 01       		.uleb128 0x1
+ 274 000c 2C010000 		.4byte	.LASF20
+ 275 0010 01       		.byte	0x1
+ 276 0011 F3000000 		.4byte	.LASF21
+ 277 0015 7D000000 		.4byte	.LASF22
+ 278 0019 00000000 		.4byte	0x0
+ 279 001d 00000000 		.4byte	0x0
+ 280 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 281 0025 00000000 		.4byte	.Ldebug_line0
+ 282 0029 02       		.uleb128 0x2
+ 283 002a 01       		.byte	0x1
+ 284 002b 06       		.byte	0x6
+ 285 002c 4B010000 		.4byte	.LASF0
+ 286 0030 02       		.uleb128 0x2
+ 287 0031 01       		.byte	0x1
+ 288 0032 08       		.byte	0x8
+ 289 0033 57010000 		.4byte	.LASF1
+ 290 0037 02       		.uleb128 0x2
+ 291 0038 02       		.byte	0x2
+ 292 0039 05       		.byte	0x5
+ 293 003a 6B010000 		.4byte	.LASF2
+ 294 003e 02       		.uleb128 0x2
+ 295 003f 02       		.byte	0x2
+ 296 0040 07       		.byte	0x7
+ 297 0041 38010000 		.4byte	.LASF3
+ 298 0045 02       		.uleb128 0x2
+ 299 0046 04       		.byte	0x4
+ 300 0047 05       		.byte	0x5
+ 301 0048 1C010000 		.4byte	.LASF4
+ 302 004c 02       		.uleb128 0x2
+ 303 004d 04       		.byte	0x4
+ 304 004e 07       		.byte	0x7
+ 305 004f 6B000000 		.4byte	.LASF5
+ 306 0053 02       		.uleb128 0x2
+ 307 0054 08       		.byte	0x8
+ 308 0055 05       		.byte	0x5
+ 309 0056 00000000 		.4byte	.LASF6
+ 310 005a 02       		.uleb128 0x2
+ 311 005b 08       		.byte	0x8
+ 312 005c 07       		.byte	0x7
+ 313 005d CF000000 		.4byte	.LASF7
+ 314 0061 03       		.uleb128 0x3
+ 315 0062 04       		.byte	0x4
+ 316 0063 05       		.byte	0x5
+ 317 0064 696E7400 		.ascii	"int\000"
+ 318 0068 02       		.uleb128 0x2
+ 319 0069 04       		.byte	0x4
+ 320 006a 07       		.byte	0x7
+ 321 006b 2B000000 		.4byte	.LASF8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 13
+
+
+ 322 006f 04       		.uleb128 0x4
+ 323 0070 65000000 		.4byte	.LASF14
+ 324 0074 03       		.byte	0x3
+ 325 0075 4C       		.byte	0x4c
+ 326 0076 30000000 		.4byte	0x30
+ 327 007a 02       		.uleb128 0x2
+ 328 007b 04       		.byte	0x4
+ 329 007c 04       		.byte	0x4
+ 330 007d 65010000 		.4byte	.LASF9
+ 331 0081 02       		.uleb128 0x2
+ 332 0082 08       		.byte	0x8
+ 333 0083 04       		.byte	0x4
+ 334 0084 25010000 		.4byte	.LASF10
+ 335 0088 02       		.uleb128 0x2
+ 336 0089 01       		.byte	0x1
+ 337 008a 08       		.byte	0x8
+ 338 008b 17010000 		.4byte	.LASF11
+ 339 008f 05       		.uleb128 0x5
+ 340 0090 04       		.byte	0x4
+ 341 0091 07       		.byte	0x7
+ 342 0092 06       		.uleb128 0x6
+ 343 0093 02       		.byte	0x2
+ 344 0094 02       		.byte	0x2
+ 345 0095 79       		.byte	0x79
+ 346 0096 B7000000 		.4byte	0xb7
+ 347 009a 07       		.uleb128 0x7
+ 348 009b 1F000000 		.4byte	.LASF12
+ 349 009f 02       		.byte	0x2
+ 350 00a0 7A       		.byte	0x7a
+ 351 00a1 6F000000 		.4byte	0x6f
+ 352 00a5 02       		.byte	0x2
+ 353 00a6 23       		.byte	0x23
+ 354 00a7 00       		.uleb128 0x0
+ 355 00a8 07       		.uleb128 0x7
+ 356 00a9 75010000 		.4byte	.LASF13
+ 357 00ad 02       		.byte	0x2
+ 358 00ae 8C       		.byte	0x8c
+ 359 00af 6F000000 		.4byte	0x6f
+ 360 00b3 02       		.byte	0x2
+ 361 00b4 23       		.byte	0x23
+ 362 00b5 01       		.uleb128 0x1
+ 363 00b6 00       		.byte	0x0
+ 364 00b7 04       		.uleb128 0x4
+ 365 00b8 BB000000 		.4byte	.LASF15
+ 366 00bc 02       		.byte	0x2
+ 367 00bd A2       		.byte	0xa2
+ 368 00be 92000000 		.4byte	0x92
+ 369 00c2 08       		.uleb128 0x8
+ 370 00c3 01       		.byte	0x1
+ 371 00c4 0E000000 		.4byte	.LASF16
+ 372 00c8 01       		.byte	0x1
+ 373 00c9 5E       		.byte	0x5e
+ 374 00ca 01       		.byte	0x1
+ 375 00cb 00000000 		.4byte	.LFB0
+ 376 00cf 26000000 		.4byte	.LFE0
+ 377 00d3 00000000 		.4byte	.LLST0
+ 378 00d7 08       		.uleb128 0x8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 14
+
+
+ 379 00d8 01       		.byte	0x1
+ 380 00d9 38000000 		.4byte	.LASF17
+ 381 00dd 01       		.byte	0x1
+ 382 00de BA       		.byte	0xba
+ 383 00df 01       		.byte	0x1
+ 384 00e0 00000000 		.4byte	.LFB1
+ 385 00e4 44000000 		.4byte	.LFE1
+ 386 00e8 2B000000 		.4byte	.LLST1
+ 387 00ec 08       		.uleb128 0x8
+ 388 00ed 01       		.byte	0x1
+ 389 00ee 51000000 		.4byte	.LASF18
+ 390 00f2 01       		.byte	0x1
+ 391 00f3 E7       		.byte	0xe7
+ 392 00f4 01       		.byte	0x1
+ 393 00f5 00000000 		.4byte	.LFB2
+ 394 00f9 1E000000 		.4byte	.LFE2
+ 395 00fd 56000000 		.4byte	.LLST2
+ 396 0101 09       		.uleb128 0x9
+ 397 0102 01       		.byte	0x1
+ 398 0103 E6000000 		.4byte	.LASF19
+ 399 0107 01       		.byte	0x1
+ 400 0108 5701     		.2byte	0x157
+ 401 010a 01       		.byte	0x1
+ 402 010b 00000000 		.4byte	.LFB3
+ 403 010f 2A000000 		.4byte	.LFE3
+ 404 0113 81000000 		.4byte	.LLST3
+ 405 0117 0A       		.uleb128 0xa
+ 406 0118 44000000 		.4byte	.LASF23
+ 407 011c 01       		.byte	0x1
+ 408 011d 14       		.byte	0x14
+ 409 011e B7000000 		.4byte	0xb7
+ 410 0122 01       		.byte	0x1
+ 411 0123 05       		.byte	0x5
+ 412 0124 03       		.byte	0x3
+ 413 0125 00000000 		.4byte	I2CHW_backup
+ 414 0129 00       		.byte	0x0
+ 415              		.section	.debug_abbrev
+ 416 0000 01       		.uleb128 0x1
+ 417 0001 11       		.uleb128 0x11
+ 418 0002 01       		.byte	0x1
+ 419 0003 25       		.uleb128 0x25
+ 420 0004 0E       		.uleb128 0xe
+ 421 0005 13       		.uleb128 0x13
+ 422 0006 0B       		.uleb128 0xb
+ 423 0007 03       		.uleb128 0x3
+ 424 0008 0E       		.uleb128 0xe
+ 425 0009 1B       		.uleb128 0x1b
+ 426 000a 0E       		.uleb128 0xe
+ 427 000b 11       		.uleb128 0x11
+ 428 000c 01       		.uleb128 0x1
+ 429 000d 52       		.uleb128 0x52
+ 430 000e 01       		.uleb128 0x1
+ 431 000f 55       		.uleb128 0x55
+ 432 0010 06       		.uleb128 0x6
+ 433 0011 10       		.uleb128 0x10
+ 434 0012 06       		.uleb128 0x6
+ 435 0013 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 15
+
+
+ 436 0014 00       		.byte	0x0
+ 437 0015 02       		.uleb128 0x2
+ 438 0016 24       		.uleb128 0x24
+ 439 0017 00       		.byte	0x0
+ 440 0018 0B       		.uleb128 0xb
+ 441 0019 0B       		.uleb128 0xb
+ 442 001a 3E       		.uleb128 0x3e
+ 443 001b 0B       		.uleb128 0xb
+ 444 001c 03       		.uleb128 0x3
+ 445 001d 0E       		.uleb128 0xe
+ 446 001e 00       		.byte	0x0
+ 447 001f 00       		.byte	0x0
+ 448 0020 03       		.uleb128 0x3
+ 449 0021 24       		.uleb128 0x24
+ 450 0022 00       		.byte	0x0
+ 451 0023 0B       		.uleb128 0xb
+ 452 0024 0B       		.uleb128 0xb
+ 453 0025 3E       		.uleb128 0x3e
+ 454 0026 0B       		.uleb128 0xb
+ 455 0027 03       		.uleb128 0x3
+ 456 0028 08       		.uleb128 0x8
+ 457 0029 00       		.byte	0x0
+ 458 002a 00       		.byte	0x0
+ 459 002b 04       		.uleb128 0x4
+ 460 002c 16       		.uleb128 0x16
+ 461 002d 00       		.byte	0x0
+ 462 002e 03       		.uleb128 0x3
+ 463 002f 0E       		.uleb128 0xe
+ 464 0030 3A       		.uleb128 0x3a
+ 465 0031 0B       		.uleb128 0xb
+ 466 0032 3B       		.uleb128 0x3b
+ 467 0033 0B       		.uleb128 0xb
+ 468 0034 49       		.uleb128 0x49
+ 469 0035 13       		.uleb128 0x13
+ 470 0036 00       		.byte	0x0
+ 471 0037 00       		.byte	0x0
+ 472 0038 05       		.uleb128 0x5
+ 473 0039 24       		.uleb128 0x24
+ 474 003a 00       		.byte	0x0
+ 475 003b 0B       		.uleb128 0xb
+ 476 003c 0B       		.uleb128 0xb
+ 477 003d 3E       		.uleb128 0x3e
+ 478 003e 0B       		.uleb128 0xb
+ 479 003f 00       		.byte	0x0
+ 480 0040 00       		.byte	0x0
+ 481 0041 06       		.uleb128 0x6
+ 482 0042 13       		.uleb128 0x13
+ 483 0043 01       		.byte	0x1
+ 484 0044 0B       		.uleb128 0xb
+ 485 0045 0B       		.uleb128 0xb
+ 486 0046 3A       		.uleb128 0x3a
+ 487 0047 0B       		.uleb128 0xb
+ 488 0048 3B       		.uleb128 0x3b
+ 489 0049 0B       		.uleb128 0xb
+ 490 004a 01       		.uleb128 0x1
+ 491 004b 13       		.uleb128 0x13
+ 492 004c 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 16
+
+
+ 493 004d 00       		.byte	0x0
+ 494 004e 07       		.uleb128 0x7
+ 495 004f 0D       		.uleb128 0xd
+ 496 0050 00       		.byte	0x0
+ 497 0051 03       		.uleb128 0x3
+ 498 0052 0E       		.uleb128 0xe
+ 499 0053 3A       		.uleb128 0x3a
+ 500 0054 0B       		.uleb128 0xb
+ 501 0055 3B       		.uleb128 0x3b
+ 502 0056 0B       		.uleb128 0xb
+ 503 0057 49       		.uleb128 0x49
+ 504 0058 13       		.uleb128 0x13
+ 505 0059 38       		.uleb128 0x38
+ 506 005a 0A       		.uleb128 0xa
+ 507 005b 00       		.byte	0x0
+ 508 005c 00       		.byte	0x0
+ 509 005d 08       		.uleb128 0x8
+ 510 005e 2E       		.uleb128 0x2e
+ 511 005f 00       		.byte	0x0
+ 512 0060 3F       		.uleb128 0x3f
+ 513 0061 0C       		.uleb128 0xc
+ 514 0062 03       		.uleb128 0x3
+ 515 0063 0E       		.uleb128 0xe
+ 516 0064 3A       		.uleb128 0x3a
+ 517 0065 0B       		.uleb128 0xb
+ 518 0066 3B       		.uleb128 0x3b
+ 519 0067 0B       		.uleb128 0xb
+ 520 0068 27       		.uleb128 0x27
+ 521 0069 0C       		.uleb128 0xc
+ 522 006a 11       		.uleb128 0x11
+ 523 006b 01       		.uleb128 0x1
+ 524 006c 12       		.uleb128 0x12
+ 525 006d 01       		.uleb128 0x1
+ 526 006e 40       		.uleb128 0x40
+ 527 006f 06       		.uleb128 0x6
+ 528 0070 00       		.byte	0x0
+ 529 0071 00       		.byte	0x0
+ 530 0072 09       		.uleb128 0x9
+ 531 0073 2E       		.uleb128 0x2e
+ 532 0074 00       		.byte	0x0
+ 533 0075 3F       		.uleb128 0x3f
+ 534 0076 0C       		.uleb128 0xc
+ 535 0077 03       		.uleb128 0x3
+ 536 0078 0E       		.uleb128 0xe
+ 537 0079 3A       		.uleb128 0x3a
+ 538 007a 0B       		.uleb128 0xb
+ 539 007b 3B       		.uleb128 0x3b
+ 540 007c 05       		.uleb128 0x5
+ 541 007d 27       		.uleb128 0x27
+ 542 007e 0C       		.uleb128 0xc
+ 543 007f 11       		.uleb128 0x11
+ 544 0080 01       		.uleb128 0x1
+ 545 0081 12       		.uleb128 0x12
+ 546 0082 01       		.uleb128 0x1
+ 547 0083 40       		.uleb128 0x40
+ 548 0084 06       		.uleb128 0x6
+ 549 0085 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 17
+
+
+ 550 0086 00       		.byte	0x0
+ 551 0087 0A       		.uleb128 0xa
+ 552 0088 34       		.uleb128 0x34
+ 553 0089 00       		.byte	0x0
+ 554 008a 03       		.uleb128 0x3
+ 555 008b 0E       		.uleb128 0xe
+ 556 008c 3A       		.uleb128 0x3a
+ 557 008d 0B       		.uleb128 0xb
+ 558 008e 3B       		.uleb128 0x3b
+ 559 008f 0B       		.uleb128 0xb
+ 560 0090 49       		.uleb128 0x49
+ 561 0091 13       		.uleb128 0x13
+ 562 0092 3F       		.uleb128 0x3f
+ 563 0093 0C       		.uleb128 0xc
+ 564 0094 02       		.uleb128 0x2
+ 565 0095 0A       		.uleb128 0xa
+ 566 0096 00       		.byte	0x0
+ 567 0097 00       		.byte	0x0
+ 568 0098 00       		.byte	0x0
+ 569              		.section	.debug_pubnames,"",%progbits
+ 570 0000 6D000000 		.4byte	0x6d
+ 571 0004 0200     		.2byte	0x2
+ 572 0006 00000000 		.4byte	.Ldebug_info0
+ 573 000a 2A010000 		.4byte	0x12a
+ 574 000e C2000000 		.4byte	0xc2
+ 575 0012 49324348 		.ascii	"I2CHW_SaveConfig\000"
+ 575      575F5361 
+ 575      7665436F 
+ 575      6E666967 
+ 575      00
+ 576 0023 D7000000 		.4byte	0xd7
+ 577 0027 49324348 		.ascii	"I2CHW_Sleep\000"
+ 577      575F536C 
+ 577      65657000 
+ 578 0033 EC000000 		.4byte	0xec
+ 579 0037 49324348 		.ascii	"I2CHW_RestoreConfig\000"
+ 579      575F5265 
+ 579      73746F72 
+ 579      65436F6E 
+ 579      66696700 
+ 580 004b 01010000 		.4byte	0x101
+ 581 004f 49324348 		.ascii	"I2CHW_Wakeup\000"
+ 581      575F5761 
+ 581      6B657570 
+ 581      00
+ 582 005c 17010000 		.4byte	0x117
+ 583 0060 49324348 		.ascii	"I2CHW_backup\000"
+ 583      575F6261 
+ 583      636B7570 
+ 583      00
+ 584 006d 00000000 		.4byte	0x0
+ 585              		.section	.debug_aranges,"",%progbits
+ 586 0000 34000000 		.4byte	0x34
+ 587 0004 0200     		.2byte	0x2
+ 588 0006 00000000 		.4byte	.Ldebug_info0
+ 589 000a 04       		.byte	0x4
+ 590 000b 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 18
+
+
+ 591 000c 0000     		.2byte	0x0
+ 592 000e 0000     		.2byte	0x0
+ 593 0010 00000000 		.4byte	.LFB0
+ 594 0014 26000000 		.4byte	.LFE0-.LFB0
+ 595 0018 00000000 		.4byte	.LFB1
+ 596 001c 44000000 		.4byte	.LFE1-.LFB1
+ 597 0020 00000000 		.4byte	.LFB2
+ 598 0024 1E000000 		.4byte	.LFE2-.LFB2
+ 599 0028 00000000 		.4byte	.LFB3
+ 600 002c 2A000000 		.4byte	.LFE3-.LFB3
+ 601 0030 00000000 		.4byte	0x0
+ 602 0034 00000000 		.4byte	0x0
+ 603              		.section	.debug_ranges,"",%progbits
+ 604              	.Ldebug_ranges0:
+ 605 0000 00000000 		.4byte	.Ltext0
+ 606 0004 00000000 		.4byte	.Letext0
+ 607 0008 00000000 		.4byte	.LFB0
+ 608 000c 26000000 		.4byte	.LFE0
+ 609 0010 00000000 		.4byte	.LFB1
+ 610 0014 44000000 		.4byte	.LFE1
+ 611 0018 00000000 		.4byte	.LFB2
+ 612 001c 1E000000 		.4byte	.LFE2
+ 613 0020 00000000 		.4byte	.LFB3
+ 614 0024 2A000000 		.4byte	.LFE3
+ 615 0028 00000000 		.4byte	0x0
+ 616 002c 00000000 		.4byte	0x0
+ 617              		.section	.debug_str,"MS",%progbits,1
+ 618              	.LASF6:
+ 619 0000 6C6F6E67 		.ascii	"long long int\000"
+ 619      206C6F6E 
+ 619      6720696E 
+ 619      7400
+ 620              	.LASF16:
+ 621 000e 49324348 		.ascii	"I2CHW_SaveConfig\000"
+ 621      575F5361 
+ 621      7665436F 
+ 621      6E666967 
+ 621      00
+ 622              	.LASF12:
+ 623 001f 656E6162 		.ascii	"enableState\000"
+ 623      6C655374 
+ 623      61746500 
+ 624              	.LASF8:
+ 625 002b 756E7369 		.ascii	"unsigned int\000"
+ 625      676E6564 
+ 625      20696E74 
+ 625      00
+ 626              	.LASF17:
+ 627 0038 49324348 		.ascii	"I2CHW_Sleep\000"
+ 627      575F536C 
+ 627      65657000 
+ 628              	.LASF23:
+ 629 0044 49324348 		.ascii	"I2CHW_backup\000"
+ 629      575F6261 
+ 629      636B7570 
+ 629      00
+ 630              	.LASF18:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 19
+
+
+ 631 0051 49324348 		.ascii	"I2CHW_RestoreConfig\000"
+ 631      575F5265 
+ 631      73746F72 
+ 631      65436F6E 
+ 631      66696700 
+ 632              	.LASF14:
+ 633 0065 75696E74 		.ascii	"uint8\000"
+ 633      3800
+ 634              	.LASF5:
+ 635 006b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 635      20756E73 
+ 635      69676E65 
+ 635      6420696E 
+ 635      7400
+ 636              	.LASF22:
+ 637 007d 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 637      665C486F 
+ 637      6D655C44 
+ 637      65736B74 
+ 637      6F705C4B 
+ 638 00aa 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 638      69745072 
+ 638      6F672E63 
+ 638      7964736E 
+ 638      00
+ 639              	.LASF15:
+ 640 00bb 49324348 		.ascii	"I2CHW_BACKUP_STRUCT\000"
+ 640      575F4241 
+ 640      434B5550 
+ 640      5F535452 
+ 640      55435400 
+ 641              	.LASF7:
+ 642 00cf 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 642      206C6F6E 
+ 642      6720756E 
+ 642      7369676E 
+ 642      65642069 
+ 643              	.LASF19:
+ 644 00e6 49324348 		.ascii	"I2CHW_Wakeup\000"
+ 644      575F5761 
+ 644      6B657570 
+ 644      00
+ 645              	.LASF21:
+ 646 00f3 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2CHW_PM.c\000"
+ 646      6E657261 
+ 646      7465645F 
+ 646      536F7572 
+ 646      63655C50 
+ 647              	.LASF11:
+ 648 0117 63686172 		.ascii	"char\000"
+ 648      00
+ 649              	.LASF4:
+ 650 011c 6C6F6E67 		.ascii	"long int\000"
+ 650      20696E74 
+ 650      00
+ 651              	.LASF10:
+ 652 0125 646F7562 		.ascii	"double\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciaPdwj.s 			page 20
+
+
+ 652      6C6500
+ 653              	.LASF20:
+ 654 012c 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 654      4320342E 
+ 654      342E3100 
+ 655              	.LASF3:
+ 656 0138 73686F72 		.ascii	"short unsigned int\000"
+ 656      7420756E 
+ 656      7369676E 
+ 656      65642069 
+ 656      6E7400
+ 657              	.LASF0:
+ 658 014b 7369676E 		.ascii	"signed char\000"
+ 658      65642063 
+ 658      68617200 
+ 659              	.LASF1:
+ 660 0157 756E7369 		.ascii	"unsigned char\000"
+ 660      676E6564 
+ 660      20636861 
+ 660      7200
+ 661              	.LASF9:
+ 662 0165 666C6F61 		.ascii	"float\000"
+ 662      7400
+ 663              	.LASF2:
+ 664 016b 73686F72 		.ascii	"short int\000"
+ 664      7420696E 
+ 664      7400
+ 665              	.LASF13:
+ 666 0175 636F6E74 		.ascii	"control\000"
+ 666      726F6C00 
+ 667              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

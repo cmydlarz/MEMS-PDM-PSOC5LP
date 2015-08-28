@@ -1,0 +1,753 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Pin_HWVersionA.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 B6000000 		.text
+  20      02006700 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.Pin_HWVersionA_Write,"ax",%progbits
+  24              		.align	1
+  25              		.global	Pin_HWVersionA_Write
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	Pin_HWVersionA_Write, %function
+  29              	Pin_HWVersionA_Write:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\Pin_HWVersionA.c"
+   1:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * File Name: Pin_HWVersionA.c  
+   3:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Version 1.90
+   4:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+   5:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Description:
+   6:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+   8:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Note:
+   9:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  10:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  17:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** #include "cytypes.h"
+  18:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** #include "Pin_HWVersionA.h"
+  19:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  20:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** #if !(CY_PSOC5A &&\
+  22:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 	 Pin_HWVersionA__PORT == 15 && ((Pin_HWVersionA__MASK & 0xC0) != 0))
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  24:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  25:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /*******************************************************************************
+  26:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Function Name: Pin_HWVersionA_Write
+  27:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** ********************************************************************************
+  28:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  29:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Summary:
+  30:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Assign a new value to the digital port's data output register.  
+  31:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  32:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Parameters:  
+  33:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  34:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  35:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Return: 
+  36:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  None
+  37:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  
+  38:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *******************************************************************************/
+  39:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** void Pin_HWVersionA_Write(uint8 value) 
+  40:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** {
+  32              		.loc 1 40 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37              	.LVL0:
+  41:.\Generated_Source\PSoC5/Pin_HWVersionA.c ****     uint8 staticBits = (Pin_HWVersionA_DR & (uint8)(~Pin_HWVersionA_MASK));
+  38              		.loc 1 41 0
+  39 0000 054B     		ldr	r3, .L3
+  42:.\Generated_Source\PSoC5/Pin_HWVersionA.c ****     Pin_HWVersionA_DR = staticBits | ((uint8)(value << Pin_HWVersionA_SHIFT) & Pin_HWVersionA_MASK)
+  40              		.loc 1 42 0
+  41 0002 0001     		lsls	r0, r0, #4
+  42              	.LVL1:
+  43              		.loc 1 41 0
+  44 0004 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  45              		.loc 1 42 0
+  46 0006 00F01000 		and	r0, r0, #16
+  47 000a 02F0EF02 		and	r2, r2, #239
+  48 000e 40EA0202 		orr	r2, r0, r2
+  49 0012 1A70     		strb	r2, [r3, #0]
+  43:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** }
+  50              		.loc 1 43 0
+  51 0014 7047     		bx	lr
+  52              	.L4:
+  53 0016 00BF     		.align	2
+  54              	.L3:
+  55 0018 00510040 		.word	1073762560
+  56              		.cfi_endproc
+  57              	.LFE0:
+  58              		.size	Pin_HWVersionA_Write, .-Pin_HWVersionA_Write
+  59              		.section	.text.Pin_HWVersionA_SetDriveMode,"ax",%progbits
+  60              		.align	1
+  61              		.global	Pin_HWVersionA_SetDriveMode
+  62              		.thumb
+  63              		.thumb_func
+  64              		.type	Pin_HWVersionA_SetDriveMode, %function
+  65              	Pin_HWVersionA_SetDriveMode:
+  66              	.LFB1:
+  44:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 3
+
+
+  45:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  46:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /*******************************************************************************
+  47:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Function Name: Pin_HWVersionA_SetDriveMode
+  48:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** ********************************************************************************
+  49:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  50:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Summary:
+  51:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Change the drive mode on the pins of the port.
+  52:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * 
+  53:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Parameters:  
+  54:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  mode:  Change the pins to this drive mode.
+  55:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  56:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Return: 
+  57:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  None
+  58:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  59:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *******************************************************************************/
+  60:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** void Pin_HWVersionA_SetDriveMode(uint8 mode) 
+  61:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** {
+  67              		.loc 1 61 0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  72              	.LVL2:
+  62:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 	CyPins_SetPinDriveMode(Pin_HWVersionA_0, mode);
+  73              		.loc 1 62 0
+  74 0000 044B     		ldr	r3, .L7
+  75 0002 00F00E00 		and	r0, r0, #14
+  76              	.LVL3:
+  77 0006 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  78 0008 02F0F102 		and	r2, r2, #241
+  79 000c 40EA0202 		orr	r2, r0, r2
+  80 0010 1A70     		strb	r2, [r3, #0]
+  63:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** }
+  81              		.loc 1 63 0
+  82 0012 7047     		bx	lr
+  83              	.L8:
+  84              		.align	2
+  85              	.L7:
+  86 0014 04500040 		.word	1073762308
+  87              		.cfi_endproc
+  88              	.LFE1:
+  89              		.size	Pin_HWVersionA_SetDriveMode, .-Pin_HWVersionA_SetDriveMode
+  90              		.section	.text.Pin_HWVersionA_Read,"ax",%progbits
+  91              		.align	1
+  92              		.global	Pin_HWVersionA_Read
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	Pin_HWVersionA_Read, %function
+  96              	Pin_HWVersionA_Read:
+  97              	.LFB2:
+  64:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  65:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  66:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Function Name: Pin_HWVersionA_Read
+  68:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  70:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Summary:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 4
+
+
+  71:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  72:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  form.
+  73:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  74:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Parameters:  
+  75:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  None
+  76:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  77:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Return: 
+  78:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Returns the current value of the Digital Port as a right justified number
+  79:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  
+  80:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Note:
+  81:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Macro Pin_HWVersionA_ReadPS calls this function. 
+  82:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  
+  83:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *******************************************************************************/
+  84:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** uint8 Pin_HWVersionA_Read(void) 
+  85:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** {
+  98              		.loc 1 85 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+  86:.\Generated_Source\PSoC5/Pin_HWVersionA.c ****     return (Pin_HWVersionA_PS & Pin_HWVersionA_MASK) >> Pin_HWVersionA_SHIFT;
+ 103              		.loc 1 86 0
+ 104 0000 024B     		ldr	r3, .L11
+ 105 0002 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+  87:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** }
+ 106              		.loc 1 87 0
+ 107 0004 C0F30010 		ubfx	r0, r0, #4, #1
+ 108 0008 7047     		bx	lr
+ 109              	.L12:
+ 110 000a 00BF     		.align	2
+ 111              	.L11:
+ 112 000c 01510040 		.word	1073762561
+ 113              		.cfi_endproc
+ 114              	.LFE2:
+ 115              		.size	Pin_HWVersionA_Read, .-Pin_HWVersionA_Read
+ 116              		.section	.text.Pin_HWVersionA_ReadDataReg,"ax",%progbits
+ 117              		.align	1
+ 118              		.global	Pin_HWVersionA_ReadDataReg
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.type	Pin_HWVersionA_ReadDataReg, %function
+ 122              	Pin_HWVersionA_ReadDataReg:
+ 123              	.LFB3:
+  88:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  89:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** 
+  90:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** /*******************************************************************************
+  91:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Function Name: Pin_HWVersionA_ReadDataReg
+  92:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** ********************************************************************************
+  93:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  94:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Summary:
+  95:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Read the current value assigned to a Digital Port's data output register
+  96:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+  97:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Parameters:  
+  98:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  None 
+  99:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *
+ 100:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** * Return: 
+ 101:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  Returns the current value assigned to the Digital Port's data output register
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 5
+
+
+ 102:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *  
+ 103:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** *******************************************************************************/
+ 104:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** uint8 Pin_HWVersionA_ReadDataReg(void) 
+ 105:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** {
+ 124              		.loc 1 105 0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 0
+ 127              		@ frame_needed = 0, uses_anonymous_args = 0
+ 128              		@ link register save eliminated.
+ 106:.\Generated_Source\PSoC5/Pin_HWVersionA.c ****     return (Pin_HWVersionA_DR & Pin_HWVersionA_MASK) >> Pin_HWVersionA_SHIFT;
+ 129              		.loc 1 106 0
+ 130 0000 024B     		ldr	r3, .L15
+ 131 0002 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+ 107:.\Generated_Source\PSoC5/Pin_HWVersionA.c **** }
+ 132              		.loc 1 107 0
+ 133 0004 C0F30010 		ubfx	r0, r0, #4, #1
+ 134 0008 7047     		bx	lr
+ 135              	.L16:
+ 136 000a 00BF     		.align	2
+ 137              	.L15:
+ 138 000c 00510040 		.word	1073762560
+ 139              		.cfi_endproc
+ 140              	.LFE3:
+ 141              		.size	Pin_HWVersionA_ReadDataReg, .-Pin_HWVersionA_ReadDataReg
+ 142              		.text
+ 143              	.Letext0:
+ 144              		.section	.debug_loc,"",%progbits
+ 145              	.Ldebug_loc0:
+ 146              	.LLST1:
+ 147 0000 00000000 		.4byte	.LVL0
+ 148 0004 04000000 		.4byte	.LVL1
+ 149 0008 0100     		.2byte	0x1
+ 150 000a 50       		.byte	0x50
+ 151 000b 00000000 		.4byte	0x0
+ 152 000f 00000000 		.4byte	0x0
+ 153              	.LLST3:
+ 154 0013 00000000 		.4byte	.LVL2
+ 155 0017 06000000 		.4byte	.LVL3
+ 156 001b 0100     		.2byte	0x1
+ 157 001d 50       		.byte	0x50
+ 158 001e 00000000 		.4byte	0x0
+ 159 0022 00000000 		.4byte	0x0
+ 160              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 161              		.section	.debug_info
+ 162 0000 13010000 		.4byte	0x113
+ 163 0004 0200     		.2byte	0x2
+ 164 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 165 000a 04       		.byte	0x4
+ 166 000b 01       		.uleb128 0x1
+ 167 000c 12010000 		.4byte	.LASF18
+ 168 0010 01       		.byte	0x1
+ 169 0011 0E000000 		.4byte	.LASF19
+ 170 0015 48010000 		.4byte	.LASF20
+ 171 0019 00000000 		.4byte	0x0
+ 172 001d 00000000 		.4byte	0x0
+ 173 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 174 0025 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 6
+
+
+ 175 0029 02       		.uleb128 0x2
+ 176 002a 01       		.byte	0x1
+ 177 002b 06       		.byte	0x6
+ 178 002c 3C010000 		.4byte	.LASF0
+ 179 0030 02       		.uleb128 0x2
+ 180 0031 01       		.byte	0x1
+ 181 0032 08       		.byte	0x8
+ 182 0033 6A000000 		.4byte	.LASF1
+ 183 0037 02       		.uleb128 0x2
+ 184 0038 02       		.byte	0x2
+ 185 0039 05       		.byte	0x5
+ 186 003a 23010000 		.4byte	.LASF2
+ 187 003e 02       		.uleb128 0x2
+ 188 003f 02       		.byte	0x2
+ 189 0040 07       		.byte	0x7
+ 190 0041 8A000000 		.4byte	.LASF3
+ 191 0045 02       		.uleb128 0x2
+ 192 0046 04       		.byte	0x4
+ 193 0047 05       		.byte	0x5
+ 194 0048 33010000 		.4byte	.LASF4
+ 195 004c 02       		.uleb128 0x2
+ 196 004d 04       		.byte	0x4
+ 197 004e 07       		.byte	0x7
+ 198 004f 78000000 		.4byte	.LASF5
+ 199 0053 02       		.uleb128 0x2
+ 200 0054 08       		.byte	0x8
+ 201 0055 05       		.byte	0x5
+ 202 0056 00000000 		.4byte	.LASF6
+ 203 005a 02       		.uleb128 0x2
+ 204 005b 08       		.byte	0x8
+ 205 005c 07       		.byte	0x7
+ 206 005d E2000000 		.4byte	.LASF7
+ 207 0061 03       		.uleb128 0x3
+ 208 0062 04       		.byte	0x4
+ 209 0063 05       		.byte	0x5
+ 210 0064 696E7400 		.ascii	"int\000"
+ 211 0068 02       		.uleb128 0x2
+ 212 0069 04       		.byte	0x4
+ 213 006a 07       		.byte	0x7
+ 214 006b D5000000 		.4byte	.LASF8
+ 215 006f 04       		.uleb128 0x4
+ 216 0070 2D010000 		.4byte	.LASF21
+ 217 0074 02       		.byte	0x2
+ 218 0075 4C       		.byte	0x4c
+ 219 0076 30000000 		.4byte	0x30
+ 220 007a 02       		.uleb128 0x2
+ 221 007b 04       		.byte	0x4
+ 222 007c 04       		.byte	0x4
+ 223 007d 64000000 		.4byte	.LASF9
+ 224 0081 02       		.uleb128 0x2
+ 225 0082 08       		.byte	0x8
+ 226 0083 04       		.byte	0x4
+ 227 0084 CE000000 		.4byte	.LASF10
+ 228 0088 02       		.uleb128 0x2
+ 229 0089 01       		.byte	0x1
+ 230 008a 08       		.byte	0x8
+ 231 008b 1E010000 		.4byte	.LASF11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 7
+
+
+ 232 008f 05       		.uleb128 0x5
+ 233 0090 01       		.byte	0x1
+ 234 0091 9D000000 		.4byte	.LASF12
+ 235 0095 01       		.byte	0x1
+ 236 0096 27       		.byte	0x27
+ 237 0097 01       		.byte	0x1
+ 238 0098 00000000 		.4byte	.LFB0
+ 239 009c 1C000000 		.4byte	.LFE0
+ 240 00a0 01       		.byte	0x1
+ 241 00a1 5D       		.byte	0x5d
+ 242 00a2 C1000000 		.4byte	0xc1
+ 243 00a6 06       		.uleb128 0x6
+ 244 00a7 38000000 		.4byte	.LASF14
+ 245 00ab 01       		.byte	0x1
+ 246 00ac 27       		.byte	0x27
+ 247 00ad 6F000000 		.4byte	0x6f
+ 248 00b1 00000000 		.4byte	.LLST1
+ 249 00b5 07       		.uleb128 0x7
+ 250 00b6 3E000000 		.4byte	.LASF22
+ 251 00ba 01       		.byte	0x1
+ 252 00bb 29       		.byte	0x29
+ 253 00bc 6F000000 		.4byte	0x6f
+ 254 00c0 00       		.byte	0x0
+ 255 00c1 05       		.uleb128 0x5
+ 256 00c2 01       		.byte	0x1
+ 257 00c3 B2000000 		.4byte	.LASF13
+ 258 00c7 01       		.byte	0x1
+ 259 00c8 3C       		.byte	0x3c
+ 260 00c9 01       		.byte	0x1
+ 261 00ca 00000000 		.4byte	.LFB1
+ 262 00ce 18000000 		.4byte	.LFE1
+ 263 00d2 01       		.byte	0x1
+ 264 00d3 5D       		.byte	0x5d
+ 265 00d4 E8000000 		.4byte	0xe8
+ 266 00d8 06       		.uleb128 0x6
+ 267 00d9 F9000000 		.4byte	.LASF15
+ 268 00dd 01       		.byte	0x1
+ 269 00de 3C       		.byte	0x3c
+ 270 00df 6F000000 		.4byte	0x6f
+ 271 00e3 13000000 		.4byte	.LLST3
+ 272 00e7 00       		.byte	0x0
+ 273 00e8 08       		.uleb128 0x8
+ 274 00e9 01       		.byte	0x1
+ 275 00ea FE000000 		.4byte	.LASF16
+ 276 00ee 01       		.byte	0x1
+ 277 00ef 54       		.byte	0x54
+ 278 00f0 01       		.byte	0x1
+ 279 00f1 6F000000 		.4byte	0x6f
+ 280 00f5 00000000 		.4byte	.LFB2
+ 281 00f9 10000000 		.4byte	.LFE2
+ 282 00fd 01       		.byte	0x1
+ 283 00fe 5D       		.byte	0x5d
+ 284 00ff 08       		.uleb128 0x8
+ 285 0100 01       		.byte	0x1
+ 286 0101 49000000 		.4byte	.LASF17
+ 287 0105 01       		.byte	0x1
+ 288 0106 68       		.byte	0x68
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 8
+
+
+ 289 0107 01       		.byte	0x1
+ 290 0108 6F000000 		.4byte	0x6f
+ 291 010c 00000000 		.4byte	.LFB3
+ 292 0110 10000000 		.4byte	.LFE3
+ 293 0114 01       		.byte	0x1
+ 294 0115 5D       		.byte	0x5d
+ 295 0116 00       		.byte	0x0
+ 296              		.section	.debug_abbrev
+ 297 0000 01       		.uleb128 0x1
+ 298 0001 11       		.uleb128 0x11
+ 299 0002 01       		.byte	0x1
+ 300 0003 25       		.uleb128 0x25
+ 301 0004 0E       		.uleb128 0xe
+ 302 0005 13       		.uleb128 0x13
+ 303 0006 0B       		.uleb128 0xb
+ 304 0007 03       		.uleb128 0x3
+ 305 0008 0E       		.uleb128 0xe
+ 306 0009 1B       		.uleb128 0x1b
+ 307 000a 0E       		.uleb128 0xe
+ 308 000b 11       		.uleb128 0x11
+ 309 000c 01       		.uleb128 0x1
+ 310 000d 52       		.uleb128 0x52
+ 311 000e 01       		.uleb128 0x1
+ 312 000f 55       		.uleb128 0x55
+ 313 0010 06       		.uleb128 0x6
+ 314 0011 10       		.uleb128 0x10
+ 315 0012 06       		.uleb128 0x6
+ 316 0013 00       		.byte	0x0
+ 317 0014 00       		.byte	0x0
+ 318 0015 02       		.uleb128 0x2
+ 319 0016 24       		.uleb128 0x24
+ 320 0017 00       		.byte	0x0
+ 321 0018 0B       		.uleb128 0xb
+ 322 0019 0B       		.uleb128 0xb
+ 323 001a 3E       		.uleb128 0x3e
+ 324 001b 0B       		.uleb128 0xb
+ 325 001c 03       		.uleb128 0x3
+ 326 001d 0E       		.uleb128 0xe
+ 327 001e 00       		.byte	0x0
+ 328 001f 00       		.byte	0x0
+ 329 0020 03       		.uleb128 0x3
+ 330 0021 24       		.uleb128 0x24
+ 331 0022 00       		.byte	0x0
+ 332 0023 0B       		.uleb128 0xb
+ 333 0024 0B       		.uleb128 0xb
+ 334 0025 3E       		.uleb128 0x3e
+ 335 0026 0B       		.uleb128 0xb
+ 336 0027 03       		.uleb128 0x3
+ 337 0028 08       		.uleb128 0x8
+ 338 0029 00       		.byte	0x0
+ 339 002a 00       		.byte	0x0
+ 340 002b 04       		.uleb128 0x4
+ 341 002c 16       		.uleb128 0x16
+ 342 002d 00       		.byte	0x0
+ 343 002e 03       		.uleb128 0x3
+ 344 002f 0E       		.uleb128 0xe
+ 345 0030 3A       		.uleb128 0x3a
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 9
+
+
+ 346 0031 0B       		.uleb128 0xb
+ 347 0032 3B       		.uleb128 0x3b
+ 348 0033 0B       		.uleb128 0xb
+ 349 0034 49       		.uleb128 0x49
+ 350 0035 13       		.uleb128 0x13
+ 351 0036 00       		.byte	0x0
+ 352 0037 00       		.byte	0x0
+ 353 0038 05       		.uleb128 0x5
+ 354 0039 2E       		.uleb128 0x2e
+ 355 003a 01       		.byte	0x1
+ 356 003b 3F       		.uleb128 0x3f
+ 357 003c 0C       		.uleb128 0xc
+ 358 003d 03       		.uleb128 0x3
+ 359 003e 0E       		.uleb128 0xe
+ 360 003f 3A       		.uleb128 0x3a
+ 361 0040 0B       		.uleb128 0xb
+ 362 0041 3B       		.uleb128 0x3b
+ 363 0042 0B       		.uleb128 0xb
+ 364 0043 27       		.uleb128 0x27
+ 365 0044 0C       		.uleb128 0xc
+ 366 0045 11       		.uleb128 0x11
+ 367 0046 01       		.uleb128 0x1
+ 368 0047 12       		.uleb128 0x12
+ 369 0048 01       		.uleb128 0x1
+ 370 0049 40       		.uleb128 0x40
+ 371 004a 0A       		.uleb128 0xa
+ 372 004b 01       		.uleb128 0x1
+ 373 004c 13       		.uleb128 0x13
+ 374 004d 00       		.byte	0x0
+ 375 004e 00       		.byte	0x0
+ 376 004f 06       		.uleb128 0x6
+ 377 0050 05       		.uleb128 0x5
+ 378 0051 00       		.byte	0x0
+ 379 0052 03       		.uleb128 0x3
+ 380 0053 0E       		.uleb128 0xe
+ 381 0054 3A       		.uleb128 0x3a
+ 382 0055 0B       		.uleb128 0xb
+ 383 0056 3B       		.uleb128 0x3b
+ 384 0057 0B       		.uleb128 0xb
+ 385 0058 49       		.uleb128 0x49
+ 386 0059 13       		.uleb128 0x13
+ 387 005a 02       		.uleb128 0x2
+ 388 005b 06       		.uleb128 0x6
+ 389 005c 00       		.byte	0x0
+ 390 005d 00       		.byte	0x0
+ 391 005e 07       		.uleb128 0x7
+ 392 005f 34       		.uleb128 0x34
+ 393 0060 00       		.byte	0x0
+ 394 0061 03       		.uleb128 0x3
+ 395 0062 0E       		.uleb128 0xe
+ 396 0063 3A       		.uleb128 0x3a
+ 397 0064 0B       		.uleb128 0xb
+ 398 0065 3B       		.uleb128 0x3b
+ 399 0066 0B       		.uleb128 0xb
+ 400 0067 49       		.uleb128 0x49
+ 401 0068 13       		.uleb128 0x13
+ 402 0069 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 10
+
+
+ 403 006a 00       		.byte	0x0
+ 404 006b 08       		.uleb128 0x8
+ 405 006c 2E       		.uleb128 0x2e
+ 406 006d 00       		.byte	0x0
+ 407 006e 3F       		.uleb128 0x3f
+ 408 006f 0C       		.uleb128 0xc
+ 409 0070 03       		.uleb128 0x3
+ 410 0071 0E       		.uleb128 0xe
+ 411 0072 3A       		.uleb128 0x3a
+ 412 0073 0B       		.uleb128 0xb
+ 413 0074 3B       		.uleb128 0x3b
+ 414 0075 0B       		.uleb128 0xb
+ 415 0076 27       		.uleb128 0x27
+ 416 0077 0C       		.uleb128 0xc
+ 417 0078 49       		.uleb128 0x49
+ 418 0079 13       		.uleb128 0x13
+ 419 007a 11       		.uleb128 0x11
+ 420 007b 01       		.uleb128 0x1
+ 421 007c 12       		.uleb128 0x12
+ 422 007d 01       		.uleb128 0x1
+ 423 007e 40       		.uleb128 0x40
+ 424 007f 0A       		.uleb128 0xa
+ 425 0080 00       		.byte	0x0
+ 426 0081 00       		.byte	0x0
+ 427 0082 00       		.byte	0x0
+ 428              		.section	.debug_pubnames,"",%progbits
+ 429 0000 7E000000 		.4byte	0x7e
+ 430 0004 0200     		.2byte	0x2
+ 431 0006 00000000 		.4byte	.Ldebug_info0
+ 432 000a 17010000 		.4byte	0x117
+ 433 000e 8F000000 		.4byte	0x8f
+ 434 0012 50696E5F 		.ascii	"Pin_HWVersionA_Write\000"
+ 434      48575665 
+ 434      7273696F 
+ 434      6E415F57 
+ 434      72697465 
+ 435 0027 C1000000 		.4byte	0xc1
+ 436 002b 50696E5F 		.ascii	"Pin_HWVersionA_SetDriveMode\000"
+ 436      48575665 
+ 436      7273696F 
+ 436      6E415F53 
+ 436      65744472 
+ 437 0047 E8000000 		.4byte	0xe8
+ 438 004b 50696E5F 		.ascii	"Pin_HWVersionA_Read\000"
+ 438      48575665 
+ 438      7273696F 
+ 438      6E415F52 
+ 438      65616400 
+ 439 005f FF000000 		.4byte	0xff
+ 440 0063 50696E5F 		.ascii	"Pin_HWVersionA_ReadDataReg\000"
+ 440      48575665 
+ 440      7273696F 
+ 440      6E415F52 
+ 440      65616444 
+ 441 007e 00000000 		.4byte	0x0
+ 442              		.section	.debug_aranges,"",%progbits
+ 443 0000 34000000 		.4byte	0x34
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 11
+
+
+ 444 0004 0200     		.2byte	0x2
+ 445 0006 00000000 		.4byte	.Ldebug_info0
+ 446 000a 04       		.byte	0x4
+ 447 000b 00       		.byte	0x0
+ 448 000c 0000     		.2byte	0x0
+ 449 000e 0000     		.2byte	0x0
+ 450 0010 00000000 		.4byte	.LFB0
+ 451 0014 1C000000 		.4byte	.LFE0-.LFB0
+ 452 0018 00000000 		.4byte	.LFB1
+ 453 001c 18000000 		.4byte	.LFE1-.LFB1
+ 454 0020 00000000 		.4byte	.LFB2
+ 455 0024 10000000 		.4byte	.LFE2-.LFB2
+ 456 0028 00000000 		.4byte	.LFB3
+ 457 002c 10000000 		.4byte	.LFE3-.LFB3
+ 458 0030 00000000 		.4byte	0x0
+ 459 0034 00000000 		.4byte	0x0
+ 460              		.section	.debug_ranges,"",%progbits
+ 461              	.Ldebug_ranges0:
+ 462 0000 00000000 		.4byte	.Ltext0
+ 463 0004 00000000 		.4byte	.Letext0
+ 464 0008 00000000 		.4byte	.LFB0
+ 465 000c 1C000000 		.4byte	.LFE0
+ 466 0010 00000000 		.4byte	.LFB1
+ 467 0014 18000000 		.4byte	.LFE1
+ 468 0018 00000000 		.4byte	.LFB2
+ 469 001c 10000000 		.4byte	.LFE2
+ 470 0020 00000000 		.4byte	.LFB3
+ 471 0024 10000000 		.4byte	.LFE3
+ 472 0028 00000000 		.4byte	0x0
+ 473 002c 00000000 		.4byte	0x0
+ 474              		.section	.debug_str,"MS",%progbits,1
+ 475              	.LASF6:
+ 476 0000 6C6F6E67 		.ascii	"long long int\000"
+ 476      206C6F6E 
+ 476      6720696E 
+ 476      7400
+ 477              	.LASF19:
+ 478 000e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Pin_HWVersionA.c\000"
+ 478      6E657261 
+ 478      7465645F 
+ 478      536F7572 
+ 478      63655C50 
+ 479              	.LASF14:
+ 480 0038 76616C75 		.ascii	"value\000"
+ 480      6500
+ 481              	.LASF22:
+ 482 003e 73746174 		.ascii	"staticBits\000"
+ 482      69634269 
+ 482      747300
+ 483              	.LASF17:
+ 484 0049 50696E5F 		.ascii	"Pin_HWVersionA_ReadDataReg\000"
+ 484      48575665 
+ 484      7273696F 
+ 484      6E415F52 
+ 484      65616444 
+ 485              	.LASF9:
+ 486 0064 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 12
+
+
+ 486      7400
+ 487              	.LASF1:
+ 488 006a 756E7369 		.ascii	"unsigned char\000"
+ 488      676E6564 
+ 488      20636861 
+ 488      7200
+ 489              	.LASF5:
+ 490 0078 6C6F6E67 		.ascii	"long unsigned int\000"
+ 490      20756E73 
+ 490      69676E65 
+ 490      6420696E 
+ 490      7400
+ 491              	.LASF3:
+ 492 008a 73686F72 		.ascii	"short unsigned int\000"
+ 492      7420756E 
+ 492      7369676E 
+ 492      65642069 
+ 492      6E7400
+ 493              	.LASF12:
+ 494 009d 50696E5F 		.ascii	"Pin_HWVersionA_Write\000"
+ 494      48575665 
+ 494      7273696F 
+ 494      6E415F57 
+ 494      72697465 
+ 495              	.LASF13:
+ 496 00b2 50696E5F 		.ascii	"Pin_HWVersionA_SetDriveMode\000"
+ 496      48575665 
+ 496      7273696F 
+ 496      6E415F53 
+ 496      65744472 
+ 497              	.LASF10:
+ 498 00ce 646F7562 		.ascii	"double\000"
+ 498      6C6500
+ 499              	.LASF8:
+ 500 00d5 756E7369 		.ascii	"unsigned int\000"
+ 500      676E6564 
+ 500      20696E74 
+ 500      00
+ 501              	.LASF7:
+ 502 00e2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 502      206C6F6E 
+ 502      6720756E 
+ 502      7369676E 
+ 502      65642069 
+ 503              	.LASF15:
+ 504 00f9 6D6F6465 		.ascii	"mode\000"
+ 504      00
+ 505              	.LASF16:
+ 506 00fe 50696E5F 		.ascii	"Pin_HWVersionA_Read\000"
+ 506      48575665 
+ 506      7273696F 
+ 506      6E415F52 
+ 506      65616400 
+ 507              	.LASF18:
+ 508 0112 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 508      4320342E 
+ 508      342E3100 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccSvA4qV.s 			page 13
+
+
+ 509              	.LASF11:
+ 510 011e 63686172 		.ascii	"char\000"
+ 510      00
+ 511              	.LASF2:
+ 512 0123 73686F72 		.ascii	"short int\000"
+ 512      7420696E 
+ 512      7400
+ 513              	.LASF21:
+ 514 012d 75696E74 		.ascii	"uint8\000"
+ 514      3800
+ 515              	.LASF4:
+ 516 0133 6C6F6E67 		.ascii	"long int\000"
+ 516      20696E74 
+ 516      00
+ 517              	.LASF0:
+ 518 013c 7369676E 		.ascii	"signed char\000"
+ 518      65642063 
+ 518      68617200 
+ 519              	.LASF20:
+ 520 0148 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 520      665C486F 
+ 520      6D655C44 
+ 520      65736B74 
+ 520      6F705C4B 
+ 521 0175 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 521      69745072 
+ 521      6F672E63 
+ 521      7964736E 
+ 521      00
+ 522              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

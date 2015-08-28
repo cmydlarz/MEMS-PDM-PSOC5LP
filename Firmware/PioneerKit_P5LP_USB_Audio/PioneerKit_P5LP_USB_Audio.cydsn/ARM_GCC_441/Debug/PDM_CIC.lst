@@ -1,0 +1,4146 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"PDM_CIC.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 F9020000 		.text
+  20      0200F100 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	PDM_CIC_initVar
+  24              		.bss
+  25              		.type	PDM_CIC_initVar, %object
+  26              		.size	PDM_CIC_initVar, 1
+  27              	PDM_CIC_initVar:
+  28 0000 00       		.space	1
+  29              		.data
+  30              		.align	2
+  31              		.type	PDM_CIC_backup, %object
+  32              		.size	PDM_CIC_backup, 2
+  33              	PDM_CIC_backup:
+  34 0000 00       		.byte	0
+  35 0001 1F       		.byte	31
+  36 0002 0000     		.section	.text.PDM_CIC_Start,"ax",%progbits
+  37              		.align	2
+  38              		.global	PDM_CIC_Start
+  39              		.thumb
+  40              		.thumb_func
+  41              		.type	PDM_CIC_Start, %function
+  42              	PDM_CIC_Start:
+  43              	.LFB0:
+  44              		.file 1 ".\\Generated_Source\\PSoC5\\PDM_CIC.c"
+   1:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/PDM_CIC.c **** * File Name: PDM_CIC.c
+   3:.\Generated_Source\PSoC5/PDM_CIC.c **** * Version 2.0
+   4:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+   5:.\Generated_Source\PSoC5/PDM_CIC.c **** * Description:
+   6:.\Generated_Source\PSoC5/PDM_CIC.c **** *  This file contains the function definitions associated with the PDM CIC
+   7:.\Generated_Source\PSoC5/PDM_CIC.c **** *  filter component
+   8:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+   9:.\Generated_Source\PSoC5/PDM_CIC.c **** * Note:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 2
+
+
+  10:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+  11:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************
+  12:.\Generated_Source\PSoC5/PDM_CIC.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/PDM_CIC.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/PDM_CIC.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/PDM_CIC.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  18:.\Generated_Source\PSoC5/PDM_CIC.c **** #include "PDM_CIC.h"
+  19:.\Generated_Source\PSoC5/PDM_CIC.c **** #include "cytypes.h"
+  20:.\Generated_Source\PSoC5/PDM_CIC.c **** #include "cyfitter.h"
+  21:.\Generated_Source\PSoC5/PDM_CIC.c **** #include "CyLib.h"
+  22:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  23:.\Generated_Source\PSoC5/PDM_CIC.c **** #include "PDM_CIC_Int_Ctrl_Reg.h"
+  24:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  25:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_COMB_CTRL_AVAIL)
+  26:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_Comb_Ctrl_Reg.h"
+  27:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  28:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  29:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_RIGHT_CHANNEL_ENABLED)
+  30:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_DMA_CombD0Update_R_dma.h"
+  31:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_DMA_IntOut_R_dma.h"
+  32:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  33:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  34:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_LEFT_CHANNEL_ENABLED)
+  35:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_DMA_CombD0Update_L_dma.h"
+  36:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_DMA_IntOut_L_dma.h"
+  37:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  38:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  39:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  40:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_INTERRUPT_ENABLED)
+  41:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#include "PDM_CIC_Status_Reg.h"
+  42:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  43:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  44:.\Generated_Source\PSoC5/PDM_CIC.c **** #if(PDM_CIC_LEFT_CHANNEL_ENABLED)
+  45:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Address of registers holding the Integrator output. Note that these registers
+  46:.\Generated_Source\PSoC5/PDM_CIC.c **** 	   hold 16-bit values */
+  47:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_INT_L_LO16_OUTPUT_REG_PTR  PDM_CIC_Integrator_genblk2_dp32_l_u0__16BIT_F0_REG
+  48:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_INT_L_HI16_OUTPUT_REG_PTR  PDM_CIC_Integrator_genblk2_dp32_l_u2__16BIT_F0_REG
+  49:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  50:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Address of registers holding the comb input for first stage. Note that these registers
+  51:.\Generated_Source\PSoC5/PDM_CIC.c **** 	   hold 16-bit values */
+  52:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_COMB_L_LO16_INPUT_REG_PTR  PDM_CIC_Comb_L_genblk2_dp32_u0__16BIT_A0_REG
+  53:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_COMB_L_HI16_INPUT_REG_PTR  PDM_CIC_Comb_L_genblk2_dp32_u2__16BIT_A0_REG
+  54:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  55:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  56:.\Generated_Source\PSoC5/PDM_CIC.c **** #if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+  57:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Address of registers holding the Integrator output. Note that these registers
+  58:.\Generated_Source\PSoC5/PDM_CIC.c **** 	   hold 16-bit values */
+  59:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_INT_R_LO16_OUTPUT_REG_PTR  PDM_CIC_Integrator_genblk3_dp32_r_u0__16BIT_F0_REG
+  60:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_INT_R_HI16_OUTPUT_REG_PTR  PDM_CIC_Integrator_genblk3_dp32_r_u2__16BIT_F0_REG
+  61:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  62:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Address of registers holding the comb input for first stage. Note that these registers
+  63:.\Generated_Source\PSoC5/PDM_CIC.c **** 	   hold 16-bit values */
+  64:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_COMB_R_LO16_INPUT_REG_PTR  PDM_CIC_Comb_R_genblk2_dp32_u0__16BIT_A0_REG
+  65:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#define PDM_CIC_COMB_R_HI16_INPUT_REG_PTR  PDM_CIC_Comb_R_genblk2_dp32_u2__16BIT_A0_REG
+  66:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 3
+
+
+  67:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  68:.\Generated_Source\PSoC5/PDM_CIC.c **** uint8 PDM_CIC_initVar = 0u;
+  69:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  70:.\Generated_Source\PSoC5/PDM_CIC.c **** static PDM_CIC_BACKUP_STRUCT  PDM_CIC_backup =
+  71:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+  72:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Component disabled by deafult */
+  73:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_DISABLED,
+  74:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  75:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Decimation counter period */
+  76:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_CNT7_PERIOD,
+  77:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  78:.\Generated_Source\PSoC5/PDM_CIC.c **** };
+  79:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  80:.\Generated_Source\PSoC5/PDM_CIC.c **** /***************************************
+  81:.\Generated_Source\PSoC5/PDM_CIC.c **** *        Function Prototypes
+  82:.\Generated_Source\PSoC5/PDM_CIC.c **** ***************************************/
+  83:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  84:.\Generated_Source\PSoC5/PDM_CIC.c **** static void PDM_CIC_Integrator_Init(void);
+  85:.\Generated_Source\PSoC5/PDM_CIC.c **** static void PDM_CIC_Comb_Init(void);
+  86:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  87:.\Generated_Source\PSoC5/PDM_CIC.c **** #if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+  88:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Init(void);
+  89:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Start(void);
+  90:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Stop(void);
+  91:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Init(void);
+  92:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Start(void);
+  93:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Stop(void);
+  94:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+  95:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+  96:.\Generated_Source\PSoC5/PDM_CIC.c **** #if(PDM_CIC_LEFT_CHANNEL_ENABLED)
+  97:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Init(void);
+  98:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Start(void);
+  99:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Stop(void);
+ 100:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Init(void);
+ 101:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Start(void);
+ 102:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Stop(void);
+ 103:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif
+ 104:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 105:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 106:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Start
+ 107:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 108:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 109:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 110:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Starts the PDM CIC Filter component
+ 111:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 112:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 113:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 114:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 115:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 116:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 117:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 118:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 119:.\Generated_Source\PSoC5/PDM_CIC.c **** *  PDM_CIC_initVar - is used to indicate initial configuration
+ 120:.\Generated_Source\PSoC5/PDM_CIC.c **** *  of this component.  The variable is initialized to zero and set to 1
+ 121:.\Generated_Source\PSoC5/PDM_CIC.c **** *  the first time PDM_CIC_Start() is called. This allows for component
+ 122:.\Generated_Source\PSoC5/PDM_CIC.c **** *  initialization without re-initialization in all subsequent calls
+ 123:.\Generated_Source\PSoC5/PDM_CIC.c **** *  to the PDM_CIC_Start() routine.
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 4
+
+
+ 124:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 125:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 126:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 127:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_Start(void)
+ 128:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+  45              		.loc 1 128 0
+  46              		.cfi_startproc
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 1, uses_anonymous_args = 0
+  49 0000 80B5     		push	{r7, lr}
+  50              	.LCFI0:
+  51              		.cfi_def_cfa_offset 8
+  52 0002 00AF     		add	r7, sp, #0
+  53              		.cfi_offset 14, -4
+  54              		.cfi_offset 7, -8
+  55              	.LCFI1:
+  56              		.cfi_def_cfa_register 7
+ 129:.\Generated_Source\PSoC5/PDM_CIC.c ****     if(0u == PDM_CIC_initVar)
+  57              		.loc 1 129 0
+  58 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_initVar
+  59 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_initVar
+  60 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  61 000e 002B     		cmp	r3, #0
+  62 0010 0ED1     		bne	.L2
+ 130:.\Generated_Source\PSoC5/PDM_CIC.c ****     {
+ 131:.\Generated_Source\PSoC5/PDM_CIC.c ****         /* Initialize DMA's only the first time */
+ 132:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 133:.\Generated_Source\PSoC5/PDM_CIC.c **** 		#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 134:.\Generated_Source\PSoC5/PDM_CIC.c **** 	        PDM_CIC_IntOutDma_R_Init();
+  63              		.loc 1 134 0
+  64 0012 FFF7FEFF 		bl	PDM_CIC_IntOutDma_R_Init
+ 135:.\Generated_Source\PSoC5/PDM_CIC.c **** 			PDM_CIC_CombD0UpdateDma_R_Init();	
+  65              		.loc 1 135 0
+  66 0016 FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_R_Init
+ 136:.\Generated_Source\PSoC5/PDM_CIC.c **** 		#endif
+ 137:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 138:.\Generated_Source\PSoC5/PDM_CIC.c **** 		#if(PDM_CIC_LEFT_CHANNEL_ENABLED)
+ 139:.\Generated_Source\PSoC5/PDM_CIC.c **** 	        PDM_CIC_IntOutDma_L_Init();
+  67              		.loc 1 139 0
+  68 001a FFF7FEFF 		bl	PDM_CIC_IntOutDma_L_Init
+ 140:.\Generated_Source\PSoC5/PDM_CIC.c **** 			PDM_CIC_CombD0UpdateDma_L_Init();
+  69              		.loc 1 140 0
+  70 001e FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_L_Init
+ 141:.\Generated_Source\PSoC5/PDM_CIC.c **** 		#endif		
+ 142:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 143:.\Generated_Source\PSoC5/PDM_CIC.c ****         /* Set init flag */
+ 144:.\Generated_Source\PSoC5/PDM_CIC.c ****         PDM_CIC_initVar = 1u;
+  71              		.loc 1 144 0
+  72 0022 40F20003 		movw	r3, #:lower16:PDM_CIC_initVar
+  73 0026 C0F20003 		movt	r3, #:upper16:PDM_CIC_initVar
+  74 002a 4FF00102 		mov	r2, #1
+  75 002e 1A70     		strb	r2, [r3, #0]
+  76              	.L2:
+ 145:.\Generated_Source\PSoC5/PDM_CIC.c ****     }
+ 146:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 147:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_Int_Ctrl_Reg_Control = PDM_CIC_Int_Ctrl_Reg_Control & (~PDM_CIC_INT_ENABLE_MASK);
+  77              		.loc 1 147 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 5
+
+
+  78 0030 46F27E43 		movw	r3, #:lower16:1073767550
+  79 0034 C4F20003 		movt	r3, #:upper16:1073767550
+  80 0038 46F27E42 		movw	r2, #:lower16:1073767550
+  81 003c C4F20002 		movt	r2, #:upper16:1073767550
+  82 0040 1278     		ldrb	r2, [r2, #0]
+  83 0042 D2B2     		uxtb	r2, r2
+  84 0044 02F0FE02 		and	r2, r2, #254
+  85 0048 1A70     		strb	r2, [r3, #0]
+ 148:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 149:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_COMB_CTRL_AVAIL)
+ 150:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_Comb_Ctrl_Reg_Control = PDM_CIC_Comb_Ctrl_Reg_Control & (~PDM_CIC_COMB_ENABLE_MASK);
+ 151:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_COMB_CTRL_AVAIL) */
+ 152:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 153:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Initialize the comb and integrator components */
+ 154:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_Comb_Init();
+  86              		.loc 1 154 0
+  87 004a FFF7FEFF 		bl	PDM_CIC_Comb_Init
+ 155:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_Integrator_Init();	
+  88              		.loc 1 155 0
+  89 004e FFF7FEFF 		bl	PDM_CIC_Integrator_Init
+ 156:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 157:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_LEFT_CHANNEL_ENABLED)
+ 158:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/*  Start the DMA channels */
+ 159:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_IntOutDma_L_Start();
+  90              		.loc 1 159 0
+  91 0052 FFF7FEFF 		bl	PDM_CIC_IntOutDma_L_Start
+ 160:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_CombD0UpdateDma_L_Start();
+  92              		.loc 1 160 0
+  93 0056 FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_L_Start
+ 161:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif
+ 162:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 163:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 164:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/*  Start the DMA channels */
+ 165:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_IntOutDma_R_Start();
+  94              		.loc 1 165 0
+  95 005a FFF7FEFF 		bl	PDM_CIC_IntOutDma_R_Start
+ 166:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_CombD0UpdateDma_R_Start();	
+  96              		.loc 1 166 0
+  97 005e FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_R_Start
+ 167:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif
+ 168:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 169:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Enable interrupt status generation if required */
+ 170:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if (PDM_CIC_INTERRUPT_ENABLED)
+ 171:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_ReadInterruptStatus(); /* Clear the status register before enabling interrupt */
+  98              		.loc 1 171 0
+  99 0062 FFF7FEFF 		bl	PDM_CIC_ReadInterruptStatus
+ 172:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_EnableInterruptGeneration();
+ 100              		.loc 1 172 0
+ 101 0066 FFF7FEFF 		bl	PDM_CIC_EnableInterruptGeneration
+ 173:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif
+ 174:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 175:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_COMB_CTRL_AVAIL)
+ 176:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_Comb_Ctrl_Reg_Control = PDM_CIC_Comb_Ctrl_Reg_Control | PDM_CIC_COMB_ENABLE_MASK;
+ 177:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_COMB_CTRL_AVAIL) */
+ 178:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 179:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_Int_Ctrl_Reg_Control = PDM_CIC_Int_Ctrl_Reg_Control | PDM_CIC_INT_ENABLE_MASK;
+ 102              		.loc 1 179 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 6
+
+
+ 103 006a 46F27E43 		movw	r3, #:lower16:1073767550
+ 104 006e C4F20003 		movt	r3, #:upper16:1073767550
+ 105 0072 46F27E42 		movw	r2, #:lower16:1073767550
+ 106 0076 C4F20002 		movt	r2, #:upper16:1073767550
+ 107 007a 1278     		ldrb	r2, [r2, #0]
+ 108 007c D2B2     		uxtb	r2, r2
+ 109 007e 42F00102 		orr	r2, r2, #1
+ 110 0082 D2B2     		uxtb	r2, r2
+ 111 0084 1A70     		strb	r2, [r3, #0]
+ 180:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 181:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 112              		.loc 1 181 0
+ 113 0086 80BD     		pop	{r7, pc}
+ 114              		.cfi_endproc
+ 115              	.LFE0:
+ 116              		.size	PDM_CIC_Start, .-PDM_CIC_Start
+ 117              		.section	.text.PDM_CIC_Stop,"ax",%progbits
+ 118              		.align	2
+ 119              		.global	PDM_CIC_Stop
+ 120              		.thumb
+ 121              		.thumb_func
+ 122              		.type	PDM_CIC_Stop, %function
+ 123              	PDM_CIC_Stop:
+ 124              	.LFB1:
+ 182:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 183:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 184:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Stop
+ 185:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 186:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 187:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 188:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Stops the PDM CIC Filter component
+ 189:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 190:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 191:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 192:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 193:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 194:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 195:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 196:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 197:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 198:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 199:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 200:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 201:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_Stop(void)
+ 202:.\Generated_Source\PSoC5/PDM_CIC.c **** {	
+ 125              		.loc 1 202 0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 1, uses_anonymous_args = 0
+ 129 0000 80B5     		push	{r7, lr}
+ 130              	.LCFI2:
+ 131              		.cfi_def_cfa_offset 8
+ 132 0002 00AF     		add	r7, sp, #0
+ 133              		.cfi_offset 14, -4
+ 134              		.cfi_offset 7, -8
+ 135              	.LCFI3:
+ 136              		.cfi_def_cfa_register 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 7
+
+
+ 203:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_LEFT_CHANNEL_ENABLED)
+ 204:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/*  Stop the DMA channels */
+ 205:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_IntOutDma_L_Stop();
+ 137              		.loc 1 205 0
+ 138 0004 FFF7FEFF 		bl	PDM_CIC_IntOutDma_L_Stop
+ 206:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_CombD0UpdateDma_L_Stop();
+ 139              		.loc 1 206 0
+ 140 0008 FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_L_Stop
+ 207:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif
+ 208:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 209:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 210:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/*  Stop the DMA channels */
+ 211:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_IntOutDma_R_Stop();
+ 141              		.loc 1 211 0
+ 142 000c FFF7FEFF 		bl	PDM_CIC_IntOutDma_R_Stop
+ 212:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_CombD0UpdateDma_R_Stop();	
+ 143              		.loc 1 212 0
+ 144 0010 FFF7FEFF 		bl	PDM_CIC_CombD0UpdateDma_R_Stop
+ 213:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif	
+ 214:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 215:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_COMB_CTRL_AVAIL)
+ 216:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_Comb_Ctrl_Reg_Control = PDM_CIC_Comb_Ctrl_Reg_Control & (~PDM_CIC_COMB_ENABLE_MASK);
+ 217:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_COMB_CTRL_AVAIL) */	
+ 218:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 219:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_Int_Ctrl_Reg_Control = PDM_CIC_Int_Ctrl_Reg_Control & (~PDM_CIC_INT_ENABLE_MASK);
+ 145              		.loc 1 219 0
+ 146 0014 46F27E43 		movw	r3, #:lower16:1073767550
+ 147 0018 C4F20003 		movt	r3, #:upper16:1073767550
+ 148 001c 46F27E42 		movw	r2, #:lower16:1073767550
+ 149 0020 C4F20002 		movt	r2, #:upper16:1073767550
+ 150 0024 1278     		ldrb	r2, [r2, #0]
+ 151 0026 D2B2     		uxtb	r2, r2
+ 152 0028 02F0FE02 		and	r2, r2, #254
+ 153 002c 1A70     		strb	r2, [r3, #0]
+ 220:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 221:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Disable interrupt status generation if required */
+ 222:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if (PDM_CIC_INTERRUPT_ENABLED)
+ 223:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_DisableInterruptGeneration();
+ 154              		.loc 1 223 0
+ 155 002e FFF7FEFF 		bl	PDM_CIC_DisableInterruptGeneration
+ 224:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_ReadInterruptStatus(); /* Clear the status register after disabling interrupt */
+ 156              		.loc 1 224 0
+ 157 0032 FFF7FEFF 		bl	PDM_CIC_ReadInterruptStatus
+ 225:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif
+ 226:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 158              		.loc 1 226 0
+ 159 0036 80BD     		pop	{r7, pc}
+ 160              		.cfi_endproc
+ 161              	.LFE1:
+ 162              		.size	PDM_CIC_Stop, .-PDM_CIC_Stop
+ 163              		.section	.text.PDM_CIC_SaveConfig,"ax",%progbits
+ 164              		.align	2
+ 165              		.global	PDM_CIC_SaveConfig
+ 166              		.thumb
+ 167              		.thumb_func
+ 168              		.type	PDM_CIC_SaveConfig, %function
+ 169              	PDM_CIC_SaveConfig:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 8
+
+
+ 170              	.LFB2:
+ 227:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 228:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 229:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_SaveConfig
+ 230:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 231:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 232:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 233:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Saves PDM CIC filter configuration.
+ 234:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 235:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 236:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 237:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 238:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 239:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 240:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 241:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 242:.\Generated_Source\PSoC5/PDM_CIC.c **** *  PDM_CIC_backup - modified when non-retention registers are saved.
+ 243:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 244:.\Generated_Source\PSoC5/PDM_CIC.c **** * Reentrant:
+ 245:.\Generated_Source\PSoC5/PDM_CIC.c **** *  No.
+ 246:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 247:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 248:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_SaveConfig(void)
+ 249:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 171              		.loc 1 249 0
+ 172              		.cfi_startproc
+ 173              		@ args = 0, pretend = 0, frame = 0
+ 174              		@ frame_needed = 1, uses_anonymous_args = 0
+ 175              		@ link register save eliminated.
+ 176 0000 80B4     		push	{r7}
+ 177              	.LCFI4:
+ 178              		.cfi_def_cfa_offset 4
+ 179 0002 00AF     		add	r7, sp, #0
+ 180              		.cfi_offset 7, -4
+ 181              	.LCFI5:
+ 182              		.cfi_def_cfa_register 7
+ 250:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_backup.Cnt7Period = PDM_CIC_CNT7_PERIOD_REG;
+ 183              		.loc 1 250 0
+ 184 0004 46F28753 		movw	r3, #:lower16:1073767815
+ 185 0008 C4F20003 		movt	r3, #:upper16:1073767815
+ 186 000c 1B78     		ldrb	r3, [r3, #0]
+ 187 000e DAB2     		uxtb	r2, r3
+ 188 0010 40F20003 		movw	r3, #:lower16:PDM_CIC_backup
+ 189 0014 C0F20003 		movt	r3, #:upper16:PDM_CIC_backup
+ 190 0018 5A70     		strb	r2, [r3, #1]
+ 251:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 191              		.loc 1 251 0
+ 192 001a BD46     		mov	sp, r7
+ 193 001c 80BC     		pop	{r7}
+ 194 001e 7047     		bx	lr
+ 195              		.cfi_endproc
+ 196              	.LFE2:
+ 197              		.size	PDM_CIC_SaveConfig, .-PDM_CIC_SaveConfig
+ 198              		.section	.text.PDM_CIC_RestoreConfig,"ax",%progbits
+ 199              		.align	2
+ 200              		.global	PDM_CIC_RestoreConfig
+ 201              		.thumb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 9
+
+
+ 202              		.thumb_func
+ 203              		.type	PDM_CIC_RestoreConfig, %function
+ 204              	PDM_CIC_RestoreConfig:
+ 205              	.LFB3:
+ 252:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 253:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 254:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_RestoreConfig
+ 255:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 256:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 257:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 258:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Restores PDM CIC filter configuration.
+ 259:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 260:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 261:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 262:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 263:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 264:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 265:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 266:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 267:.\Generated_Source\PSoC5/PDM_CIC.c **** *  PDM_CIC_backup - used when non-retention registers are restored.
+ 268:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 269:.\Generated_Source\PSoC5/PDM_CIC.c **** * Reentrant:
+ 270:.\Generated_Source\PSoC5/PDM_CIC.c **** *  No.
+ 271:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 272:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 273:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_RestoreConfig(void)
+ 274:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 206              		.loc 1 274 0
+ 207              		.cfi_startproc
+ 208              		@ args = 0, pretend = 0, frame = 0
+ 209              		@ frame_needed = 1, uses_anonymous_args = 0
+ 210              		@ link register save eliminated.
+ 211 0000 80B4     		push	{r7}
+ 212              	.LCFI6:
+ 213              		.cfi_def_cfa_offset 4
+ 214 0002 00AF     		add	r7, sp, #0
+ 215              		.cfi_offset 7, -4
+ 216              	.LCFI7:
+ 217              		.cfi_def_cfa_register 7
+ 275:.\Generated_Source\PSoC5/PDM_CIC.c **** 	PDM_CIC_CNT7_PERIOD_REG = PDM_CIC_backup.Cnt7Period;
+ 218              		.loc 1 275 0
+ 219 0004 46F28753 		movw	r3, #:lower16:1073767815
+ 220 0008 C4F20003 		movt	r3, #:upper16:1073767815
+ 221 000c 40F20002 		movw	r2, #:lower16:PDM_CIC_backup
+ 222 0010 C0F20002 		movt	r2, #:upper16:PDM_CIC_backup
+ 223 0014 5278     		ldrb	r2, [r2, #1]	@ zero_extendqisi2
+ 224 0016 1A70     		strb	r2, [r3, #0]
+ 276:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 225              		.loc 1 276 0
+ 226 0018 BD46     		mov	sp, r7
+ 227 001a 80BC     		pop	{r7}
+ 228 001c 7047     		bx	lr
+ 229              		.cfi_endproc
+ 230              	.LFE3:
+ 231              		.size	PDM_CIC_RestoreConfig, .-PDM_CIC_RestoreConfig
+ 232 001e 00BF     		.section	.text.PDM_CIC_Sleep,"ax",%progbits
+ 233              		.align	2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 10
+
+
+ 234              		.global	PDM_CIC_Sleep
+ 235              		.thumb
+ 236              		.thumb_func
+ 237              		.type	PDM_CIC_Sleep, %function
+ 238              	PDM_CIC_Sleep:
+ 239              	.LFB4:
+ 277:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 278:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 279:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Sleep
+ 280:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 281:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 282:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 283:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Prepares PDM CIC component to sleep.
+ 284:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 285:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 286:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 287:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 288:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 289:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 290:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 291:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 292:.\Generated_Source\PSoC5/PDM_CIC.c **** *  PDM_CIC_backup - modified when non-retention registers are saved.
+ 293:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 294:.\Generated_Source\PSoC5/PDM_CIC.c **** * Reentrant:
+ 295:.\Generated_Source\PSoC5/PDM_CIC.c **** *  No.
+ 296:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 297:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 298:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_Sleep(void)
+ 299:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 240              		.loc 1 299 0
+ 241              		.cfi_startproc
+ 242              		@ args = 0, pretend = 0, frame = 0
+ 243              		@ frame_needed = 1, uses_anonymous_args = 0
+ 244 0000 80B5     		push	{r7, lr}
+ 245              	.LCFI8:
+ 246              		.cfi_def_cfa_offset 8
+ 247 0002 00AF     		add	r7, sp, #0
+ 248              		.cfi_offset 14, -4
+ 249              		.cfi_offset 7, -8
+ 250              	.LCFI9:
+ 251              		.cfi_def_cfa_register 7
+ 300:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Get component state */
+ 301:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_backup.enableState = ((uint8) PDM_CIC_IS_ENABLE);
+ 252              		.loc 1 301 0
+ 253 0004 46F27E43 		movw	r3, #:lower16:1073767550
+ 254 0008 C4F20003 		movt	r3, #:upper16:1073767550
+ 255 000c 1B78     		ldrb	r3, [r3, #0]
+ 256 000e DBB2     		uxtb	r3, r3
+ 257 0010 1A46     		mov	r2, r3
+ 258 0012 02F00102 		and	r2, r2, #1
+ 259 0016 40F20003 		movw	r3, #:lower16:PDM_CIC_backup
+ 260 001a C0F20003 		movt	r3, #:upper16:PDM_CIC_backup
+ 261 001e 1A70     		strb	r2, [r3, #0]
+ 302:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 303:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Save registers configuration */
+ 304:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_SaveConfig();
+ 262              		.loc 1 304 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 11
+
+
+ 263 0020 FFF7FEFF 		bl	PDM_CIC_SaveConfig
+ 305:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 306:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Stop component */
+ 307:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_Stop();
+ 264              		.loc 1 307 0
+ 265 0024 FFF7FEFF 		bl	PDM_CIC_Stop
+ 308:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 266              		.loc 1 308 0
+ 267 0028 80BD     		pop	{r7, pc}
+ 268              		.cfi_endproc
+ 269              	.LFE4:
+ 270              		.size	PDM_CIC_Sleep, .-PDM_CIC_Sleep
+ 271 002a 00BF     		.section	.text.PDM_CIC_Wakeup,"ax",%progbits
+ 272              		.align	2
+ 273              		.global	PDM_CIC_Wakeup
+ 274              		.thumb
+ 275              		.thumb_func
+ 276              		.type	PDM_CIC_Wakeup, %function
+ 277              	PDM_CIC_Wakeup:
+ 278              	.LFB5:
+ 309:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 310:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 311:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Wakeup
+ 312:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 313:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 314:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 315:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Prepares PDM CIC component for wakeup.
+ 316:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 317:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 318:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 319:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 320:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 321:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 322:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 323:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 324:.\Generated_Source\PSoC5/PDM_CIC.c **** *  PDM_CIC_backup - used when non-retention registers are restored.
+ 325:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 326:.\Generated_Source\PSoC5/PDM_CIC.c **** * Reentrant:
+ 327:.\Generated_Source\PSoC5/PDM_CIC.c **** *  No.
+ 328:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 329:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 330:.\Generated_Source\PSoC5/PDM_CIC.c **** /* Restores the component after low power mode exit */
+ 331:.\Generated_Source\PSoC5/PDM_CIC.c **** void PDM_CIC_Wakeup(void)
+ 332:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 279              		.loc 1 332 0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 1, uses_anonymous_args = 0
+ 283 0000 80B5     		push	{r7, lr}
+ 284              	.LCFI10:
+ 285              		.cfi_def_cfa_offset 8
+ 286 0002 00AF     		add	r7, sp, #0
+ 287              		.cfi_offset 14, -4
+ 288              		.cfi_offset 7, -8
+ 289              	.LCFI11:
+ 290              		.cfi_def_cfa_register 7
+ 333:.\Generated_Source\PSoC5/PDM_CIC.c ****     /* Restore registers values */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 12
+
+
+ 334:.\Generated_Source\PSoC5/PDM_CIC.c ****     PDM_CIC_RestoreConfig();
+ 291              		.loc 1 334 0
+ 292 0004 FFF7FEFF 		bl	PDM_CIC_RestoreConfig
+ 335:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 336:.\Generated_Source\PSoC5/PDM_CIC.c ****     if(0u != PDM_CIC_backup.enableState)
+ 293              		.loc 1 336 0
+ 294 0008 40F20003 		movw	r3, #:lower16:PDM_CIC_backup
+ 295 000c C0F20003 		movt	r3, #:upper16:PDM_CIC_backup
+ 296 0010 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 297 0012 002B     		cmp	r3, #0
+ 298 0014 01D0     		beq	.L14
+ 337:.\Generated_Source\PSoC5/PDM_CIC.c ****     {
+ 338:.\Generated_Source\PSoC5/PDM_CIC.c ****     	/* Start component */
+ 339:.\Generated_Source\PSoC5/PDM_CIC.c ****     	PDM_CIC_Start();
+ 299              		.loc 1 339 0
+ 300 0016 FFF7FEFF 		bl	PDM_CIC_Start
+ 301              	.L14:
+ 340:.\Generated_Source\PSoC5/PDM_CIC.c ****     }
+ 341:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 302              		.loc 1 341 0
+ 303 001a 80BD     		pop	{r7, pc}
+ 304              		.cfi_endproc
+ 305              	.LFE5:
+ 306              		.size	PDM_CIC_Wakeup, .-PDM_CIC_Wakeup
+ 307              		.section	.text.PDM_CIC_ReadInterruptStatus,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	PDM_CIC_ReadInterruptStatus
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	PDM_CIC_ReadInterruptStatus, %function
+ 313              	PDM_CIC_ReadInterruptStatus:
+ 314              	.LFB6:
+ 342:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 343:.\Generated_Source\PSoC5/PDM_CIC.c **** /* Conditional compilation of Interrupt related API's */
+ 344:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_INTERRUPT_ENABLED)
+ 345:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 346:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 347:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_ReadInterruptStatus
+ 348:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 349:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 350:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 351:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Returns the current value of the PDM CIC status register
+ 352:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 353:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 354:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 355:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 356:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 357:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  uint8 - Status register value
+ 358:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 359:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 360:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 361:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 362:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 363:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 364:.\Generated_Source\PSoC5/PDM_CIC.c **** 	uint8 PDM_CIC_ReadInterruptStatus()
+ 365:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 315              		.loc 1 365 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 13
+
+
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 1, uses_anonymous_args = 0
+ 319 0000 80B5     		push	{r7, lr}
+ 320              	.LCFI12:
+ 321              		.cfi_def_cfa_offset 8
+ 322 0002 00AF     		add	r7, sp, #0
+ 323              		.cfi_offset 14, -4
+ 324              		.cfi_offset 7, -8
+ 325              	.LCFI13:
+ 326              		.cfi_def_cfa_register 7
+ 366:.\Generated_Source\PSoC5/PDM_CIC.c **** 		return(PDM_CIC_Status_Reg_Read());
+ 327              		.loc 1 366 0
+ 328 0004 FFF7FEFF 		bl	PDM_CIC_Status_Reg_Read
+ 329 0008 0346     		mov	r3, r0
+ 367:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 330              		.loc 1 367 0
+ 331 000a 1846     		mov	r0, r3
+ 332 000c 80BD     		pop	{r7, pc}
+ 333              		.cfi_endproc
+ 334              	.LFE6:
+ 335              		.size	PDM_CIC_ReadInterruptStatus, .-PDM_CIC_ReadInterruptStatus
+ 336 000e 00BF     		.section	.text.PDM_CIC_EnableInterruptGeneration,"ax",%progbits
+ 337              		.align	2
+ 338              		.global	PDM_CIC_EnableInterruptGeneration
+ 339              		.thumb
+ 340              		.thumb_func
+ 341              		.type	PDM_CIC_EnableInterruptGeneration, %function
+ 342              	PDM_CIC_EnableInterruptGeneration:
+ 343              	.LFB7:
+ 368:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 369:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 370:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_EnableInterruptGeneration
+ 371:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 372:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 373:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 374:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Enables interrupt signal generation by the status register
+ 375:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 376:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 377:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 378:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 379:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 380:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 381:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 382:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 383:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 384:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 385:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 386:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 387:.\Generated_Source\PSoC5/PDM_CIC.c **** 	void  PDM_CIC_EnableInterruptGeneration()
+ 388:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 344              		.loc 1 388 0
+ 345              		.cfi_startproc
+ 346              		@ args = 0, pretend = 0, frame = 0
+ 347              		@ frame_needed = 1, uses_anonymous_args = 0
+ 348 0000 80B5     		push	{r7, lr}
+ 349              	.LCFI14:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 14
+
+
+ 350              		.cfi_def_cfa_offset 8
+ 351 0002 00AF     		add	r7, sp, #0
+ 352              		.cfi_offset 14, -4
+ 353              		.cfi_offset 7, -8
+ 354              	.LCFI15:
+ 355              		.cfi_def_cfa_register 7
+ 389:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_Status_Reg_InterruptEnable();
+ 356              		.loc 1 389 0
+ 357 0004 FFF7FEFF 		bl	PDM_CIC_Status_Reg_InterruptEnable
+ 390:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 358              		.loc 1 390 0
+ 359 0008 80BD     		pop	{r7, pc}
+ 360              		.cfi_endproc
+ 361              	.LFE7:
+ 362              		.size	PDM_CIC_EnableInterruptGeneration, .-PDM_CIC_EnableInterruptGeneration
+ 363 000a 00BF     		.section	.text.PDM_CIC_DisableInterruptGeneration,"ax",%progbits
+ 364              		.align	2
+ 365              		.global	PDM_CIC_DisableInterruptGeneration
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	PDM_CIC_DisableInterruptGeneration, %function
+ 369              	PDM_CIC_DisableInterruptGeneration:
+ 370              	.LFB8:
+ 391:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 392:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 393:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_DisableInterruptGeneration
+ 394:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 395:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 396:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 397:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Disables interrupt signal generation by the status register
+ 398:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 399:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 400:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 401:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 402:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 403:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 404:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 405:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 406:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 407:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 408:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 409:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 410:.\Generated_Source\PSoC5/PDM_CIC.c **** 	void  PDM_CIC_DisableInterruptGeneration()
+ 411:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 371              		.loc 1 411 0
+ 372              		.cfi_startproc
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 1, uses_anonymous_args = 0
+ 375 0000 80B5     		push	{r7, lr}
+ 376              	.LCFI16:
+ 377              		.cfi_def_cfa_offset 8
+ 378 0002 00AF     		add	r7, sp, #0
+ 379              		.cfi_offset 14, -4
+ 380              		.cfi_offset 7, -8
+ 381              	.LCFI17:
+ 382              		.cfi_def_cfa_register 7
+ 412:.\Generated_Source\PSoC5/PDM_CIC.c **** 		PDM_CIC_Status_Reg_InterruptDisable();
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 15
+
+
+ 383              		.loc 1 412 0
+ 384 0004 FFF7FEFF 		bl	PDM_CIC_Status_Reg_InterruptDisable
+ 413:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 385              		.loc 1 413 0
+ 386 0008 80BD     		pop	{r7, pc}
+ 387              		.cfi_endproc
+ 388              	.LFE8:
+ 389              		.size	PDM_CIC_DisableInterruptGeneration, .-PDM_CIC_DisableInterruptGeneration
+ 390 000a 00BF     		.section	.text.PDM_CIC_Integrator_Init,"ax",%progbits
+ 391              		.align	2
+ 392              		.thumb
+ 393              		.thumb_func
+ 394              		.type	PDM_CIC_Integrator_Init, %function
+ 395              	PDM_CIC_Integrator_Init:
+ 396              	.LFB9:
+ 414:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 415:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif /* (PDM_CIC_INTERRUPT_ENABLED) */
+ 416:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 417:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 418:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Integrator_Init
+ 419:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 420:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 421:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 422:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Initializes the integrator
+ 423:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 424:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 425:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 426:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 427:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ 428:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 429:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 430:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 431:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 432:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 433:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 434:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 435:.\Generated_Source\PSoC5/PDM_CIC.c **** static void PDM_CIC_Integrator_Init(void)
+ 436:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 397              		.loc 1 436 0
+ 398              		.cfi_startproc
+ 399              		@ args = 0, pretend = 0, frame = 8
+ 400              		@ frame_needed = 1, uses_anonymous_args = 0
+ 401 0000 80B5     		push	{r7, lr}
+ 402              	.LCFI18:
+ 403              		.cfi_def_cfa_offset 8
+ 404 0002 82B0     		sub	sp, sp, #8
+ 405              	.LCFI19:
+ 406              		.cfi_def_cfa_offset 16
+ 407 0004 00AF     		add	r7, sp, #0
+ 408              		.cfi_offset 14, -4
+ 409              		.cfi_offset 7, -8
+ 410              	.LCFI20:
+ 411              		.cfi_def_cfa_register 7
+ 437:.\Generated_Source\PSoC5/PDM_CIC.c **** 	uint8 enableInterrupts;	
+ 438:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 439:.\Generated_Source\PSoC5/PDM_CIC.c **** 	enableInterrupts = CyEnterCriticalSection();
+ 412              		.loc 1 439 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 16
+
+
+ 413 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 414 000a 0346     		mov	r3, r0
+ 415 000c FB71     		strb	r3, [r7, #7]
+ 440:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 441:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_LEFT_CHANNEL_ENABLED)	
+ 442:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Reset the F0, F1 FIFO buffer pointers and status signals */
+ 443:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 416              		.loc 1 443 0
+ 417 000e 46F29243 		movw	r3, #:lower16:1073767570
+ 418 0012 C4F20003 		movt	r3, #:upper16:1073767570
+ 419 0016 46F29242 		movw	r2, #:lower16:1073767570
+ 420 001a C4F20002 		movt	r2, #:upper16:1073767570
+ 421 001e 1278     		ldrb	r2, [r2, #0]
+ 422 0020 D2B2     		uxtb	r2, r2
+ 423 0022 42F00302 		orr	r2, r2, #3
+ 424 0026 D2B2     		uxtb	r2, r2
+ 425 0028 1A70     		strb	r2, [r3, #0]
+ 444:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 426              		.loc 1 444 0
+ 427 002a 46F29343 		movw	r3, #:lower16:1073767571
+ 428 002e C4F20003 		movt	r3, #:upper16:1073767571
+ 429 0032 46F29342 		movw	r2, #:lower16:1073767571
+ 430 0036 C4F20002 		movt	r2, #:upper16:1073767571
+ 431 003a 1278     		ldrb	r2, [r2, #0]
+ 432 003c D2B2     		uxtb	r2, r2
+ 433 003e 42F00302 		orr	r2, r2, #3
+ 434 0042 D2B2     		uxtb	r2, r2
+ 435 0044 1A70     		strb	r2, [r3, #0]
+ 445:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 436              		.loc 1 445 0
+ 437 0046 46F29443 		movw	r3, #:lower16:1073767572
+ 438 004a C4F20003 		movt	r3, #:upper16:1073767572
+ 439 004e 46F29442 		movw	r2, #:lower16:1073767572
+ 440 0052 C4F20002 		movt	r2, #:upper16:1073767572
+ 441 0056 1278     		ldrb	r2, [r2, #0]
+ 442 0058 D2B2     		uxtb	r2, r2
+ 443 005a 42F00302 		orr	r2, r2, #3
+ 444 005e D2B2     		uxtb	r2, r2
+ 445 0060 1A70     		strb	r2, [r3, #0]
+ 446:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 446              		.loc 1 446 0
+ 447 0062 46F29543 		movw	r3, #:lower16:1073767573
+ 448 0066 C4F20003 		movt	r3, #:upper16:1073767573
+ 449 006a 46F29542 		movw	r2, #:lower16:1073767573
+ 450 006e C4F20002 		movt	r2, #:upper16:1073767573
+ 451 0072 1278     		ldrb	r2, [r2, #0]
+ 452 0074 D2B2     		uxtb	r2, r2
+ 453 0076 42F00302 		orr	r2, r2, #3
+ 454 007a D2B2     		uxtb	r2, r2
+ 455 007c 1A70     		strb	r2, [r3, #0]
+ 447:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 448:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 456              		.loc 1 448 0
+ 457 007e 46F29243 		movw	r3, #:lower16:1073767570
+ 458 0082 C4F20003 		movt	r3, #:upper16:1073767570
+ 459 0086 46F29242 		movw	r2, #:lower16:1073767570
+ 460 008a C4F20002 		movt	r2, #:upper16:1073767570
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 17
+
+
+ 461 008e 1278     		ldrb	r2, [r2, #0]
+ 462 0090 D2B2     		uxtb	r2, r2
+ 463 0092 02F0FC02 		and	r2, r2, #252
+ 464 0096 1A70     		strb	r2, [r3, #0]
+ 449:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 465              		.loc 1 449 0
+ 466 0098 46F29343 		movw	r3, #:lower16:1073767571
+ 467 009c C4F20003 		movt	r3, #:upper16:1073767571
+ 468 00a0 46F29342 		movw	r2, #:lower16:1073767571
+ 469 00a4 C4F20002 		movt	r2, #:upper16:1073767571
+ 470 00a8 1278     		ldrb	r2, [r2, #0]
+ 471 00aa D2B2     		uxtb	r2, r2
+ 472 00ac 02F0FC02 		and	r2, r2, #252
+ 473 00b0 1A70     		strb	r2, [r3, #0]
+ 450:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 474              		.loc 1 450 0
+ 475 00b2 46F29443 		movw	r3, #:lower16:1073767572
+ 476 00b6 C4F20003 		movt	r3, #:upper16:1073767572
+ 477 00ba 46F29442 		movw	r2, #:lower16:1073767572
+ 478 00be C4F20002 		movt	r2, #:upper16:1073767572
+ 479 00c2 1278     		ldrb	r2, [r2, #0]
+ 480 00c4 D2B2     		uxtb	r2, r2
+ 481 00c6 02F0FC02 		and	r2, r2, #252
+ 482 00ca 1A70     		strb	r2, [r3, #0]
+ 451:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk2_dp32_l_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 483              		.loc 1 451 0
+ 484 00cc 46F29543 		movw	r3, #:lower16:1073767573
+ 485 00d0 C4F20003 		movt	r3, #:upper16:1073767573
+ 486 00d4 46F29542 		movw	r2, #:lower16:1073767573
+ 487 00d8 C4F20002 		movt	r2, #:upper16:1073767573
+ 488 00dc 1278     		ldrb	r2, [r2, #0]
+ 489 00de D2B2     		uxtb	r2, r2
+ 490 00e0 02F0FC02 		and	r2, r2, #252
+ 491 00e4 1A70     		strb	r2, [r3, #0]
+ 452:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_LEFT_CHANNEL_ENABLED) */
+ 453:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 454:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 455:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Reset the F0, F1 FIFO buffer pointers and status signals */
+ 456:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 492              		.loc 1 456 0
+ 493 00e6 46F29853 		movw	r3, #:lower16:1073767832
+ 494 00ea C4F20003 		movt	r3, #:upper16:1073767832
+ 495 00ee 46F29852 		movw	r2, #:lower16:1073767832
+ 496 00f2 C4F20002 		movt	r2, #:upper16:1073767832
+ 497 00f6 1278     		ldrb	r2, [r2, #0]
+ 498 00f8 D2B2     		uxtb	r2, r2
+ 499 00fa 42F00302 		orr	r2, r2, #3
+ 500 00fe D2B2     		uxtb	r2, r2
+ 501 0100 1A70     		strb	r2, [r3, #0]
+ 457:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 502              		.loc 1 457 0
+ 503 0102 46F29953 		movw	r3, #:lower16:1073767833
+ 504 0106 C4F20003 		movt	r3, #:upper16:1073767833
+ 505 010a 46F29952 		movw	r2, #:lower16:1073767833
+ 506 010e C4F20002 		movt	r2, #:upper16:1073767833
+ 507 0112 1278     		ldrb	r2, [r2, #0]
+ 508 0114 D2B2     		uxtb	r2, r2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 18
+
+
+ 509 0116 42F00302 		orr	r2, r2, #3
+ 510 011a D2B2     		uxtb	r2, r2
+ 511 011c 1A70     		strb	r2, [r3, #0]
+ 458:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 512              		.loc 1 458 0
+ 513 011e 46F29A53 		movw	r3, #:lower16:1073767834
+ 514 0122 C4F20003 		movt	r3, #:upper16:1073767834
+ 515 0126 46F29A52 		movw	r2, #:lower16:1073767834
+ 516 012a C4F20002 		movt	r2, #:upper16:1073767834
+ 517 012e 1278     		ldrb	r2, [r2, #0]
+ 518 0130 D2B2     		uxtb	r2, r2
+ 519 0132 42F00302 		orr	r2, r2, #3
+ 520 0136 D2B2     		uxtb	r2, r2
+ 521 0138 1A70     		strb	r2, [r3, #0]
+ 459:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 522              		.loc 1 459 0
+ 523 013a 46F29B53 		movw	r3, #:lower16:1073767835
+ 524 013e C4F20003 		movt	r3, #:upper16:1073767835
+ 525 0142 46F29B52 		movw	r2, #:lower16:1073767835
+ 526 0146 C4F20002 		movt	r2, #:upper16:1073767835
+ 527 014a 1278     		ldrb	r2, [r2, #0]
+ 528 014c D2B2     		uxtb	r2, r2
+ 529 014e 42F00302 		orr	r2, r2, #3
+ 530 0152 D2B2     		uxtb	r2, r2
+ 531 0154 1A70     		strb	r2, [r3, #0]
+ 460:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 461:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 532              		.loc 1 461 0
+ 533 0156 46F29853 		movw	r3, #:lower16:1073767832
+ 534 015a C4F20003 		movt	r3, #:upper16:1073767832
+ 535 015e 46F29852 		movw	r2, #:lower16:1073767832
+ 536 0162 C4F20002 		movt	r2, #:upper16:1073767832
+ 537 0166 1278     		ldrb	r2, [r2, #0]
+ 538 0168 D2B2     		uxtb	r2, r2
+ 539 016a 02F0FC02 		and	r2, r2, #252
+ 540 016e 1A70     		strb	r2, [r3, #0]
+ 462:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 541              		.loc 1 462 0
+ 542 0170 46F29953 		movw	r3, #:lower16:1073767833
+ 543 0174 C4F20003 		movt	r3, #:upper16:1073767833
+ 544 0178 46F29952 		movw	r2, #:lower16:1073767833
+ 545 017c C4F20002 		movt	r2, #:upper16:1073767833
+ 546 0180 1278     		ldrb	r2, [r2, #0]
+ 547 0182 D2B2     		uxtb	r2, r2
+ 548 0184 02F0FC02 		and	r2, r2, #252
+ 549 0188 1A70     		strb	r2, [r3, #0]
+ 463:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ 550              		.loc 1 463 0
+ 551 018a 46F29A53 		movw	r3, #:lower16:1073767834
+ 552 018e C4F20003 		movt	r3, #:upper16:1073767834
+ 553 0192 46F29A52 		movw	r2, #:lower16:1073767834
+ 554 0196 C4F20002 		movt	r2, #:upper16:1073767834
+ 555 019a 1278     		ldrb	r2, [r2, #0]
+ 556 019c D2B2     		uxtb	r2, r2
+ 557 019e 02F0FC02 		and	r2, r2, #252
+ 558 01a2 1A70     		strb	r2, [r3, #0]
+ 464:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Integrator_genblk3_dp32_r_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 19
+
+
+ 559              		.loc 1 464 0
+ 560 01a4 46F29B53 		movw	r3, #:lower16:1073767835
+ 561 01a8 C4F20003 		movt	r3, #:upper16:1073767835
+ 562 01ac 46F29B52 		movw	r2, #:lower16:1073767835
+ 563 01b0 C4F20002 		movt	r2, #:upper16:1073767835
+ 564 01b4 1278     		ldrb	r2, [r2, #0]
+ 565 01b6 D2B2     		uxtb	r2, r2
+ 566 01b8 02F0FC02 		and	r2, r2, #252
+ 567 01bc 1A70     		strb	r2, [r3, #0]
+ 465:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_RIGHT_CHANNEL_ENABLED) */
+ 466:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 467:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/* Enable the decimator counter module */
+ 468:.\Generated_Source\PSoC5/PDM_CIC.c **** 	CY_SET_REG8(PDM_CIC_Integrator_Counter7__CONTROL_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Integrator_Count
+ 568              		.loc 1 468 0
+ 569 01be 46F29753 		movw	r3, #:lower16:1073767831
+ 570 01c2 C4F20003 		movt	r3, #:upper16:1073767831
+ 571 01c6 46F29752 		movw	r2, #:lower16:1073767831
+ 572 01ca C4F20002 		movt	r2, #:upper16:1073767831
+ 573 01ce 1278     		ldrb	r2, [r2, #0]
+ 574 01d0 D2B2     		uxtb	r2, r2
+ 575 01d2 42F02002 		orr	r2, r2, #32
+ 576 01d6 D2B2     		uxtb	r2, r2
+ 577 01d8 1A70     		strb	r2, [r3, #0]
+ 469:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 470:.\Generated_Source\PSoC5/PDM_CIC.c **** 	CyExitCriticalSection(enableInterrupts);	
+ 578              		.loc 1 470 0
+ 579 01da FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 580 01dc 1846     		mov	r0, r3
+ 581 01de FFF7FEFF 		bl	CyExitCriticalSection
+ 471:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 472:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 582              		.loc 1 472 0
+ 583 01e2 07F10807 		add	r7, r7, #8
+ 584 01e6 BD46     		mov	sp, r7
+ 585 01e8 80BD     		pop	{r7, pc}
+ 586              		.cfi_endproc
+ 587              	.LFE9:
+ 588              		.size	PDM_CIC_Integrator_Init, .-PDM_CIC_Integrator_Init
+ 589 01ea 00BF     		.section	.text.PDM_CIC_Comb_Init,"ax",%progbits
+ 590              		.align	2
+ 591              		.thumb
+ 592              		.thumb_func
+ 593              		.type	PDM_CIC_Comb_Init, %function
+ 594              	PDM_CIC_Comb_Init:
+ 595              	.LFB10:
+ 473:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 474:.\Generated_Source\PSoC5/PDM_CIC.c **** /*******************************************************************************
+ 475:.\Generated_Source\PSoC5/PDM_CIC.c **** * Function Name: PDM_CIC_Comb_Init
+ 476:.\Generated_Source\PSoC5/PDM_CIC.c **** ********************************************************************************
+ 477:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 478:.\Generated_Source\PSoC5/PDM_CIC.c **** * Summary:
+ 479:.\Generated_Source\PSoC5/PDM_CIC.c **** *  Initializes the comb
+ 480:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 481:.\Generated_Source\PSoC5/PDM_CIC.c **** * Parameters:
+ 482:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 483:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 484:.\Generated_Source\PSoC5/PDM_CIC.c **** * Return:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 20
+
+
+ 485:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 486:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 487:.\Generated_Source\PSoC5/PDM_CIC.c **** * Global Variables:
+ 488:.\Generated_Source\PSoC5/PDM_CIC.c **** *  None.
+ 489:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 490:.\Generated_Source\PSoC5/PDM_CIC.c **** *
+ 491:.\Generated_Source\PSoC5/PDM_CIC.c **** *******************************************************************************/
+ 492:.\Generated_Source\PSoC5/PDM_CIC.c **** static void PDM_CIC_Comb_Init(void)
+ 493:.\Generated_Source\PSoC5/PDM_CIC.c **** {
+ 596              		.loc 1 493 0
+ 597              		.cfi_startproc
+ 598              		@ args = 0, pretend = 0, frame = 8
+ 599              		@ frame_needed = 1, uses_anonymous_args = 0
+ 600 0000 80B5     		push	{r7, lr}
+ 601              	.LCFI21:
+ 602              		.cfi_def_cfa_offset 8
+ 603 0002 82B0     		sub	sp, sp, #8
+ 604              	.LCFI22:
+ 605              		.cfi_def_cfa_offset 16
+ 606 0004 00AF     		add	r7, sp, #0
+ 607              		.cfi_offset 14, -4
+ 608              		.cfi_offset 7, -8
+ 609              	.LCFI23:
+ 610              		.cfi_def_cfa_register 7
+ 494:.\Generated_Source\PSoC5/PDM_CIC.c **** 	uint8 enableInterrupts;	
+ 495:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 496:.\Generated_Source\PSoC5/PDM_CIC.c **** 	enableInterrupts = CyEnterCriticalSection();
+ 611              		.loc 1 496 0
+ 612 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 613 000a 0346     		mov	r3, r0
+ 614 000c FB71     		strb	r3, [r7, #7]
+ 497:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 498:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_LEFT_CHANNEL_ENABLED)	
+ 499:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Reset the F0, F1 FIFO buffer pointers and status signals */
+ 500:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 615              		.loc 1 500 0
+ 616 000e 46F29C43 		movw	r3, #:lower16:1073767580
+ 617 0012 C4F20003 		movt	r3, #:upper16:1073767580
+ 618 0016 46F29C42 		movw	r2, #:lower16:1073767580
+ 619 001a C4F20002 		movt	r2, #:upper16:1073767580
+ 620 001e 1278     		ldrb	r2, [r2, #0]
+ 621 0020 D2B2     		uxtb	r2, r2
+ 622 0022 42F00302 		orr	r2, r2, #3
+ 623 0026 D2B2     		uxtb	r2, r2
+ 624 0028 1A70     		strb	r2, [r3, #0]
+ 501:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 625              		.loc 1 501 0
+ 626 002a 46F29D43 		movw	r3, #:lower16:1073767581
+ 627 002e C4F20003 		movt	r3, #:upper16:1073767581
+ 628 0032 46F29D42 		movw	r2, #:lower16:1073767581
+ 629 0036 C4F20002 		movt	r2, #:upper16:1073767581
+ 630 003a 1278     		ldrb	r2, [r2, #0]
+ 631 003c D2B2     		uxtb	r2, r2
+ 632 003e 42F00302 		orr	r2, r2, #3
+ 633 0042 D2B2     		uxtb	r2, r2
+ 634 0044 1A70     		strb	r2, [r3, #0]
+ 502:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 21
+
+
+ 635              		.loc 1 502 0
+ 636 0046 46F29E43 		movw	r3, #:lower16:1073767582
+ 637 004a C4F20003 		movt	r3, #:upper16:1073767582
+ 638 004e 46F29E42 		movw	r2, #:lower16:1073767582
+ 639 0052 C4F20002 		movt	r2, #:upper16:1073767582
+ 640 0056 1278     		ldrb	r2, [r2, #0]
+ 641 0058 D2B2     		uxtb	r2, r2
+ 642 005a 42F00302 		orr	r2, r2, #3
+ 643 005e D2B2     		uxtb	r2, r2
+ 644 0060 1A70     		strb	r2, [r3, #0]
+ 503:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 645              		.loc 1 503 0
+ 646 0062 46F29F43 		movw	r3, #:lower16:1073767583
+ 647 0066 C4F20003 		movt	r3, #:upper16:1073767583
+ 648 006a 46F29F42 		movw	r2, #:lower16:1073767583
+ 649 006e C4F20002 		movt	r2, #:upper16:1073767583
+ 650 0072 1278     		ldrb	r2, [r2, #0]
+ 651 0074 D2B2     		uxtb	r2, r2
+ 652 0076 42F00302 		orr	r2, r2, #3
+ 653 007a D2B2     		uxtb	r2, r2
+ 654 007c 1A70     		strb	r2, [r3, #0]
+ 504:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 505:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 655              		.loc 1 505 0
+ 656 007e 46F29C43 		movw	r3, #:lower16:1073767580
+ 657 0082 C4F20003 		movt	r3, #:upper16:1073767580
+ 658 0086 46F29C42 		movw	r2, #:lower16:1073767580
+ 659 008a C4F20002 		movt	r2, #:upper16:1073767580
+ 660 008e 1278     		ldrb	r2, [r2, #0]
+ 661 0090 D2B2     		uxtb	r2, r2
+ 662 0092 02F0FC02 		and	r2, r2, #252
+ 663 0096 1A70     		strb	r2, [r3, #0]
+ 506:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 664              		.loc 1 506 0
+ 665 0098 46F29D43 		movw	r3, #:lower16:1073767581
+ 666 009c C4F20003 		movt	r3, #:upper16:1073767581
+ 667 00a0 46F29D42 		movw	r2, #:lower16:1073767581
+ 668 00a4 C4F20002 		movt	r2, #:upper16:1073767581
+ 669 00a8 1278     		ldrb	r2, [r2, #0]
+ 670 00aa D2B2     		uxtb	r2, r2
+ 671 00ac 02F0FC02 		and	r2, r2, #252
+ 672 00b0 1A70     		strb	r2, [r3, #0]
+ 507:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 673              		.loc 1 507 0
+ 674 00b2 46F29E43 		movw	r3, #:lower16:1073767582
+ 675 00b6 C4F20003 		movt	r3, #:upper16:1073767582
+ 676 00ba 46F29E42 		movw	r2, #:lower16:1073767582
+ 677 00be C4F20002 		movt	r2, #:upper16:1073767582
+ 678 00c2 1278     		ldrb	r2, [r2, #0]
+ 679 00c4 D2B2     		uxtb	r2, r2
+ 680 00c6 02F0FC02 		and	r2, r2, #252
+ 681 00ca 1A70     		strb	r2, [r3, #0]
+ 508:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_L_genblk2_dp
+ 682              		.loc 1 508 0
+ 683 00cc 46F29F43 		movw	r3, #:lower16:1073767583
+ 684 00d0 C4F20003 		movt	r3, #:upper16:1073767583
+ 685 00d4 46F29F42 		movw	r2, #:lower16:1073767583
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 22
+
+
+ 686 00d8 C4F20002 		movt	r2, #:upper16:1073767583
+ 687 00dc 1278     		ldrb	r2, [r2, #0]
+ 688 00de D2B2     		uxtb	r2, r2
+ 689 00e0 02F0FC02 		and	r2, r2, #252
+ 690 00e4 1A70     		strb	r2, [r3, #0]
+ 509:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_LEFT_CHANNEL_ENABLED) */
+ 510:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 511:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)	
+ 512:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Reset the F0, F1 FIFO buffer pointers and status signals */
+ 513:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 691              		.loc 1 513 0
+ 692 00e6 46F29843 		movw	r3, #:lower16:1073767576
+ 693 00ea C4F20003 		movt	r3, #:upper16:1073767576
+ 694 00ee 46F29842 		movw	r2, #:lower16:1073767576
+ 695 00f2 C4F20002 		movt	r2, #:upper16:1073767576
+ 696 00f6 1278     		ldrb	r2, [r2, #0]
+ 697 00f8 D2B2     		uxtb	r2, r2
+ 698 00fa 42F00302 		orr	r2, r2, #3
+ 699 00fe D2B2     		uxtb	r2, r2
+ 700 0100 1A70     		strb	r2, [r3, #0]
+ 514:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 701              		.loc 1 514 0
+ 702 0102 46F29943 		movw	r3, #:lower16:1073767577
+ 703 0106 C4F20003 		movt	r3, #:upper16:1073767577
+ 704 010a 46F29942 		movw	r2, #:lower16:1073767577
+ 705 010e C4F20002 		movt	r2, #:upper16:1073767577
+ 706 0112 1278     		ldrb	r2, [r2, #0]
+ 707 0114 D2B2     		uxtb	r2, r2
+ 708 0116 42F00302 		orr	r2, r2, #3
+ 709 011a D2B2     		uxtb	r2, r2
+ 710 011c 1A70     		strb	r2, [r3, #0]
+ 515:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 711              		.loc 1 515 0
+ 712 011e 46F29A43 		movw	r3, #:lower16:1073767578
+ 713 0122 C4F20003 		movt	r3, #:upper16:1073767578
+ 714 0126 46F29A42 		movw	r2, #:lower16:1073767578
+ 715 012a C4F20002 		movt	r2, #:upper16:1073767578
+ 716 012e 1278     		ldrb	r2, [r2, #0]
+ 717 0130 D2B2     		uxtb	r2, r2
+ 718 0132 42F00302 		orr	r2, r2, #3
+ 719 0136 D2B2     		uxtb	r2, r2
+ 720 0138 1A70     		strb	r2, [r3, #0]
+ 516:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 721              		.loc 1 516 0
+ 722 013a 46F29B43 		movw	r3, #:lower16:1073767579
+ 723 013e C4F20003 		movt	r3, #:upper16:1073767579
+ 724 0142 46F29B42 		movw	r2, #:lower16:1073767579
+ 725 0146 C4F20002 		movt	r2, #:upper16:1073767579
+ 726 014a 1278     		ldrb	r2, [r2, #0]
+ 727 014c D2B2     		uxtb	r2, r2
+ 728 014e 42F00302 		orr	r2, r2, #3
+ 729 0152 D2B2     		uxtb	r2, r2
+ 730 0154 1A70     		strb	r2, [r3, #0]
+ 517:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 518:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u0__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 731              		.loc 1 518 0
+ 732 0156 46F29843 		movw	r3, #:lower16:1073767576
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 23
+
+
+ 733 015a C4F20003 		movt	r3, #:upper16:1073767576
+ 734 015e 46F29842 		movw	r2, #:lower16:1073767576
+ 735 0162 C4F20002 		movt	r2, #:upper16:1073767576
+ 736 0166 1278     		ldrb	r2, [r2, #0]
+ 737 0168 D2B2     		uxtb	r2, r2
+ 738 016a 02F0FC02 		and	r2, r2, #252
+ 739 016e 1A70     		strb	r2, [r3, #0]
+ 519:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u1__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 740              		.loc 1 519 0
+ 741 0170 46F29943 		movw	r3, #:lower16:1073767577
+ 742 0174 C4F20003 		movt	r3, #:upper16:1073767577
+ 743 0178 46F29942 		movw	r2, #:lower16:1073767577
+ 744 017c C4F20002 		movt	r2, #:upper16:1073767577
+ 745 0180 1278     		ldrb	r2, [r2, #0]
+ 746 0182 D2B2     		uxtb	r2, r2
+ 747 0184 02F0FC02 		and	r2, r2, #252
+ 748 0188 1A70     		strb	r2, [r3, #0]
+ 520:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u2__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 749              		.loc 1 520 0
+ 750 018a 46F29A43 		movw	r3, #:lower16:1073767578
+ 751 018e C4F20003 		movt	r3, #:upper16:1073767578
+ 752 0192 46F29A42 		movw	r2, #:lower16:1073767578
+ 753 0196 C4F20002 		movt	r2, #:upper16:1073767578
+ 754 019a 1278     		ldrb	r2, [r2, #0]
+ 755 019c D2B2     		uxtb	r2, r2
+ 756 019e 02F0FC02 		and	r2, r2, #252
+ 757 01a2 1A70     		strb	r2, [r3, #0]
+ 521:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u3__DP_AUX_CTL_REG, CY_GET_REG8(PDM_CIC_Comb_R_genblk2_dp
+ 758              		.loc 1 521 0
+ 759 01a4 46F29B43 		movw	r3, #:lower16:1073767579
+ 760 01a8 C4F20003 		movt	r3, #:upper16:1073767579
+ 761 01ac 46F29B42 		movw	r2, #:lower16:1073767579
+ 762 01b0 C4F20002 		movt	r2, #:upper16:1073767579
+ 763 01b4 1278     		ldrb	r2, [r2, #0]
+ 764 01b6 D2B2     		uxtb	r2, r2
+ 765 01b8 02F0FC02 		and	r2, r2, #252
+ 766 01bc 1A70     		strb	r2, [r3, #0]
+ 522:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_RIGHT_CHANNEL_ENABLED) */
+ 523:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 524:.\Generated_Source\PSoC5/PDM_CIC.c **** 	CyExitCriticalSection(enableInterrupts);
+ 767              		.loc 1 524 0
+ 768 01be FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 769 01c0 1846     		mov	r0, r3
+ 770 01c2 FFF7FEFF 		bl	CyExitCriticalSection
+ 525:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 526:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_LEFT_CHANNEL_ENABLED)	
+ 527:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Write 0 to the 32-bit D0 register */
+ 528:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u0__D0_REG, 0x00);
+ 771              		.loc 1 528 0
+ 772 01c6 46F22C43 		movw	r3, #:lower16:1073767468
+ 773 01ca C4F20003 		movt	r3, #:upper16:1073767468
+ 774 01ce 4FF00002 		mov	r2, #0
+ 775 01d2 1A70     		strb	r2, [r3, #0]
+ 529:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u1__D0_REG, 0x00);
+ 776              		.loc 1 529 0
+ 777 01d4 46F22D43 		movw	r3, #:lower16:1073767469
+ 778 01d8 C4F20003 		movt	r3, #:upper16:1073767469
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 24
+
+
+ 779 01dc 4FF00002 		mov	r2, #0
+ 780 01e0 1A70     		strb	r2, [r3, #0]
+ 530:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u2__D0_REG, 0x00);
+ 781              		.loc 1 530 0
+ 782 01e2 46F22E43 		movw	r3, #:lower16:1073767470
+ 783 01e6 C4F20003 		movt	r3, #:upper16:1073767470
+ 784 01ea 4FF00002 		mov	r2, #0
+ 785 01ee 1A70     		strb	r2, [r3, #0]
+ 531:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_L_genblk2_dp32_u3__D0_REG, 0x00);	
+ 786              		.loc 1 531 0
+ 787 01f0 46F22F43 		movw	r3, #:lower16:1073767471
+ 788 01f4 C4F20003 		movt	r3, #:upper16:1073767471
+ 789 01f8 4FF00002 		mov	r2, #0
+ 790 01fc 1A70     		strb	r2, [r3, #0]
+ 532:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_LEFT_CHANNEL_ENABLED) */
+ 533:.\Generated_Source\PSoC5/PDM_CIC.c **** 	
+ 534:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#if(PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 535:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Write 0 to the 32-bit D0 register */
+ 536:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u0__D0_REG, 0x00);
+ 791              		.loc 1 536 0
+ 792 01fe 46F22843 		movw	r3, #:lower16:1073767464
+ 793 0202 C4F20003 		movt	r3, #:upper16:1073767464
+ 794 0206 4FF00002 		mov	r2, #0
+ 795 020a 1A70     		strb	r2, [r3, #0]
+ 537:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u1__D0_REG, 0x00);
+ 796              		.loc 1 537 0
+ 797 020c 46F22943 		movw	r3, #:lower16:1073767465
+ 798 0210 C4F20003 		movt	r3, #:upper16:1073767465
+ 799 0214 4FF00002 		mov	r2, #0
+ 800 0218 1A70     		strb	r2, [r3, #0]
+ 538:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u2__D0_REG, 0x00);
+ 801              		.loc 1 538 0
+ 802 021a 46F22A43 		movw	r3, #:lower16:1073767466
+ 803 021e C4F20003 		movt	r3, #:upper16:1073767466
+ 804 0222 4FF00002 		mov	r2, #0
+ 805 0226 1A70     		strb	r2, [r3, #0]
+ 539:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CY_SET_REG8(PDM_CIC_Comb_R_genblk2_dp32_u3__D0_REG, 0x00);	
+ 806              		.loc 1 539 0
+ 807 0228 46F22B43 		movw	r3, #:lower16:1073767467
+ 808 022c C4F20003 		movt	r3, #:upper16:1073767467
+ 809 0230 4FF00002 		mov	r2, #0
+ 810 0234 1A70     		strb	r2, [r3, #0]
+ 540:.\Generated_Source\PSoC5/PDM_CIC.c **** 	#endif /* (PDM_CIC_RIGHT_CHANNEL_ENABLED) */
+ 541:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 542:.\Generated_Source\PSoC5/PDM_CIC.c **** }
+ 811              		.loc 1 542 0
+ 812 0236 07F10807 		add	r7, r7, #8
+ 813 023a BD46     		mov	sp, r7
+ 814 023c 80BD     		pop	{r7, pc}
+ 815              		.cfi_endproc
+ 816              	.LFE10:
+ 817              		.size	PDM_CIC_Comb_Init, .-PDM_CIC_Comb_Init
+ 818 023e 00BF     		.section	.text.PDM_CIC_IntOutDma_R_Init,"ax",%progbits
+ 819              		.align	2
+ 820              		.thumb
+ 821              		.thumb_func
+ 822              		.type	PDM_CIC_IntOutDma_R_Init, %function
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 25
+
+
+ 823              	PDM_CIC_IntOutDma_R_Init:
+ 824              	.LFB11:
+ 543:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 544:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_RIGHT_CHANNEL_ENABLED)
+ 545:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 546:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 547:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_R_Init
+ 548:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 549:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 550:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 551:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Initializes the DMA channel associated with the right channel integrator output
+ 552:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 553:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 554:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 555:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 556:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 557:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 558:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 559:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 560:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 561:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 562:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 563:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 564:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Init(void)
+ 565:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 825              		.loc 1 565 0
+ 826              		.cfi_startproc
+ 827              		@ args = 0, pretend = 0, frame = 8
+ 828              		@ frame_needed = 1, uses_anonymous_args = 0
+ 829 0000 80B5     		push	{r7, lr}
+ 830              	.LCFI24:
+ 831              		.cfi_def_cfa_offset 8
+ 832 0002 82B0     		sub	sp, sp, #8
+ 833              	.LCFI25:
+ 834              		.cfi_def_cfa_offset 16
+ 835 0004 00AF     		add	r7, sp, #0
+ 836              		.cfi_offset 14, -4
+ 837              		.cfi_offset 7, -8
+ 838              	.LCFI26:
+ 839              		.cfi_def_cfa_register 7
+ 566:.\Generated_Source\PSoC5/PDM_CIC.c **** 		uint8 DMA_IntegratorOut_Channel, DMA_IntegratorOut_TD[2];
+ 567:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 568:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Transfer data in 2-byte bursts since UDB spoke is 2 bytes wide.
+ 569:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   requestPerBurst = 1.
+ 570:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   Peripheral (UDB) to Peripheral (UDB) transfer */
+ 571:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_Channel = PDM_CIC_DMA_IntOut_R_DmaInitialize(2, 1, HI16(CYDEV_PERIPH_BASE), HI1
+ 840              		.loc 1 571 0
+ 841 0006 4FF00200 		mov	r0, #2
+ 842 000a 4FF00101 		mov	r1, #1
+ 843 000e 4FF48042 		mov	r2, #16384
+ 844 0012 4FF48043 		mov	r3, #16384
+ 845 0016 FFF7FEFF 		bl	PDM_CIC_DMA_IntOut_R_DmaInitialize
+ 846 001a 0346     		mov	r3, r0
+ 847 001c FB71     		strb	r3, [r7, #7]
+ 572:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 573:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_TD[0] = CyDmaTdAllocate();
+ 848              		.loc 1 573 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 26
+
+
+ 849 001e FFF7FEFF 		bl	CyDmaTdAllocate
+ 850 0022 0346     		mov	r3, r0
+ 851 0024 3B71     		strb	r3, [r7, #4]
+ 574:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_TD[1] = CyDmaTdAllocate();
+ 852              		.loc 1 574 0
+ 853 0026 FFF7FEFF 		bl	CyDmaTdAllocate
+ 854 002a 0346     		mov	r3, r0
+ 855 002c 7B71     		strb	r3, [r7, #5]
+ 575:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 576:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Circular TD's. Each TD transfer 2 bytes. Auto execute second TD. */
+ 577:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_IntegratorOut_TD[0], 2, DMA_IntegratorOut_TD[1], TD_AUTO_EXEC_NEXT); 
+ 856              		.loc 1 577 0
+ 857 002e 3A79     		ldrb	r2, [r7, #4]	@ zero_extendqisi2
+ 858 0030 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 859 0032 1046     		mov	r0, r2
+ 860 0034 4FF00201 		mov	r1, #2
+ 861 0038 1A46     		mov	r2, r3
+ 862 003a 4FF02003 		mov	r3, #32
+ 863 003e FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 578:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_IntegratorOut_TD[1], 2, DMA_IntegratorOut_TD[0], PDM_CIC_DMA_IntOut_R
+ 864              		.loc 1 578 0
+ 865 0042 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 866 0044 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 867 0046 1046     		mov	r0, r2
+ 868 0048 4FF00201 		mov	r1, #2
+ 869 004c 1A46     		mov	r2, r3
+ 870 004e 4FF00403 		mov	r3, #4
+ 871 0052 FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 579:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 580:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Each TD transfers 16-bit FIFO value to 16-bit A0. Order TD's such that MSB datapath FIFO is re
+ 581:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_IntegratorOut_TD[0], (uint16)(PDM_CIC_INT_R_LO16_OUTPUT_REG_PTR), (uint16)(
+ 872              		.loc 1 581 0
+ 873 0056 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 874 0058 1846     		mov	r0, r3
+ 875 005a 46F69021 		movw	r1, #27280
+ 876 005e 46F61002 		movw	r2, #26640
+ 877 0062 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 582:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_IntegratorOut_TD[1], (uint16)(PDM_CIC_INT_R_HI16_OUTPUT_REG_PTR), (uint16)(
+ 878              		.loc 1 582 0
+ 879 0066 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 880 0068 1846     		mov	r0, r3
+ 881 006a 46F69421 		movw	r1, #27284
+ 882 006e 46F61402 		movw	r2, #26644
+ 883 0072 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 583:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 584:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Set the initial TD for the channel */
+ 585:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetInitialTd(DMA_IntegratorOut_Channel, DMA_IntegratorOut_TD[0]);
+ 884              		.loc 1 585 0
+ 885 0076 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 886 0078 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 887 007a 1046     		mov	r0, r2
+ 888 007c 1946     		mov	r1, r3
+ 889 007e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 586:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 890              		.loc 1 586 0
+ 891 0082 07F10807 		add	r7, r7, #8
+ 892 0086 BD46     		mov	sp, r7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 27
+
+
+ 893 0088 80BD     		pop	{r7, pc}
+ 894              		.cfi_endproc
+ 895              	.LFE11:
+ 896              		.size	PDM_CIC_IntOutDma_R_Init, .-PDM_CIC_IntOutDma_R_Init
+ 897 008a 00BF     		.section	.text.PDM_CIC_IntOutDma_R_Start,"ax",%progbits
+ 898              		.align	2
+ 899              		.thumb
+ 900              		.thumb_func
+ 901              		.type	PDM_CIC_IntOutDma_R_Start, %function
+ 902              	PDM_CIC_IntOutDma_R_Start:
+ 903              	.LFB12:
+ 587:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 588:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 589:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_R_Start
+ 590:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 591:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 592:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 593:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Starts the DMA channel associated with the right channel integrator output
+ 594:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 595:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 596:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 597:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 598:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 599:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 600:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 601:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 602:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 603:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 604:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 605:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 606:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Start(void)
+ 607:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 904              		.loc 1 607 0
+ 905              		.cfi_startproc
+ 906              		@ args = 0, pretend = 0, frame = 0
+ 907              		@ frame_needed = 1, uses_anonymous_args = 0
+ 908 0000 80B5     		push	{r7, lr}
+ 909              	.LCFI27:
+ 910              		.cfi_def_cfa_offset 8
+ 911 0002 00AF     		add	r7, sp, #0
+ 912              		.cfi_offset 14, -4
+ 913              		.cfi_offset 7, -8
+ 914              	.LCFI28:
+ 915              		.cfi_def_cfa_register 7
+ 608:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaClearPendingDrq(PDM_CIC_DMA_IntOut_R_DmaHandle);
+ 916              		.loc 1 608 0
+ 917 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 918 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 919 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 920 000e 1846     		mov	r0, r3
+ 921 0010 FFF7FEFF 		bl	CyDmaClearPendingDrq
+ 609:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 610:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChEnable(PDM_CIC_DMA_IntOut_R_DmaHandle, 1);
+ 922              		.loc 1 610 0
+ 923 0014 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 924 0018 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 925 001c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 28
+
+
+ 926 001e 1846     		mov	r0, r3
+ 927 0020 4FF00101 		mov	r1, #1
+ 928 0024 FFF7FEFF 		bl	CyDmaChEnable
+ 611:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 929              		.loc 1 611 0
+ 930 0028 80BD     		pop	{r7, pc}
+ 931              		.cfi_endproc
+ 932              	.LFE12:
+ 933              		.size	PDM_CIC_IntOutDma_R_Start, .-PDM_CIC_IntOutDma_R_Start
+ 934 002a 00BF     		.section	.text.PDM_CIC_IntOutDma_R_Stop,"ax",%progbits
+ 935              		.align	2
+ 936              		.thumb
+ 937              		.thumb_func
+ 938              		.type	PDM_CIC_IntOutDma_R_Stop, %function
+ 939              	PDM_CIC_IntOutDma_R_Stop:
+ 940              	.LFB13:
+ 612:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 613:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 614:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_R_Stop
+ 615:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 616:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 617:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 618:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Stops (and disables) the DMA channel associated with the right channel integrator output
+ 619:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 620:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 621:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 622:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 623:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 624:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 625:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 626:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 627:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 628:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 629:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 630:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 631:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_R_Stop(void)
+ 632:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 941              		.loc 1 632 0
+ 942              		.cfi_startproc
+ 943              		@ args = 0, pretend = 0, frame = 0
+ 944              		@ frame_needed = 1, uses_anonymous_args = 0
+ 945 0000 80B5     		push	{r7, lr}
+ 946              	.LCFI29:
+ 947              		.cfi_def_cfa_offset 8
+ 948 0002 00AF     		add	r7, sp, #0
+ 949              		.cfi_offset 14, -4
+ 950              		.cfi_offset 7, -8
+ 951              	.LCFI30:
+ 952              		.cfi_def_cfa_register 7
+ 633:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Terminate the TD chain which also disables the channel */
+ 634:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetRequest(PDM_CIC_DMA_IntOut_R_DmaHandle , CPU_TERM_CHAIN);
+ 953              		.loc 1 634 0
+ 954 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 955 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_R_DmaHandle
+ 956 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 957 000e 1846     		mov	r0, r3
+ 958 0010 4FF00401 		mov	r1, #4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 29
+
+
+ 959 0014 FFF7FEFF 		bl	CyDmaChSetRequest
+ 635:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 960              		.loc 1 635 0
+ 961 0018 80BD     		pop	{r7, pc}
+ 962              		.cfi_endproc
+ 963              	.LFE13:
+ 964              		.size	PDM_CIC_IntOutDma_R_Stop, .-PDM_CIC_IntOutDma_R_Stop
+ 965 001a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_R_Init,"ax",%progbits
+ 966              		.align	2
+ 967              		.thumb
+ 968              		.thumb_func
+ 969              		.type	PDM_CIC_CombD0UpdateDma_R_Init, %function
+ 970              	PDM_CIC_CombD0UpdateDma_R_Init:
+ 971              	.LFB14:
+ 636:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 637:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 638:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_R_Init
+ 639:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 640:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 641:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 642:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Initializes the DMA channel associated with the Comb D0 register update
+ 643:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  for right channel
+ 644:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 645:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 646:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 647:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 648:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 649:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 650:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 651:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 652:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 653:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 654:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 655:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 656:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Init(void)
+ 657:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 972              		.loc 1 657 0
+ 973              		.cfi_startproc
+ 974              		@ args = 0, pretend = 0, frame = 8
+ 975              		@ frame_needed = 1, uses_anonymous_args = 0
+ 976 0000 80B5     		push	{r7, lr}
+ 977              	.LCFI31:
+ 978              		.cfi_def_cfa_offset 8
+ 979 0002 82B0     		sub	sp, sp, #8
+ 980              	.LCFI32:
+ 981              		.cfi_def_cfa_offset 16
+ 982 0004 00AF     		add	r7, sp, #0
+ 983              		.cfi_offset 14, -4
+ 984              		.cfi_offset 7, -8
+ 985              	.LCFI33:
+ 986              		.cfi_def_cfa_register 7
+ 658:.\Generated_Source\PSoC5/PDM_CIC.c **** 		uint8 DMA_CombD0Update_Channel, DMA_CombD0Update_TD[2];
+ 659:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 660:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Transfer data in 2-byte bursts since UDB spoke is 2 bytes wide.
+ 661:.\Generated_Source\PSoC5/PDM_CIC.c **** 			requestPerBurst = 1.
+ 662:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   Peripheral (UDB) to Peripheral (UDB) transfer */
+ 663:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_Channel = PDM_CIC_DMA_CombD0Update_R_DmaInitialize(2, 1, HI16(CYDEV_PERIPH_BASE)
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 30
+
+
+ 987              		.loc 1 663 0
+ 988 0006 4FF00200 		mov	r0, #2
+ 989 000a 4FF00101 		mov	r1, #1
+ 990 000e 4FF48042 		mov	r2, #16384
+ 991 0012 4FF48043 		mov	r3, #16384
+ 992 0016 FFF7FEFF 		bl	PDM_CIC_DMA_CombD0Update_R_DmaInitialize
+ 993 001a 0346     		mov	r3, r0
+ 994 001c FB71     		strb	r3, [r7, #7]
+ 664:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_TD[0] = CyDmaTdAllocate();
+ 995              		.loc 1 664 0
+ 996 001e FFF7FEFF 		bl	CyDmaTdAllocate
+ 997 0022 0346     		mov	r3, r0
+ 998 0024 3B71     		strb	r3, [r7, #4]
+ 665:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_TD[1] = CyDmaTdAllocate();
+ 999              		.loc 1 665 0
+ 1000 0026 FFF7FEFF 		bl	CyDmaTdAllocate
+ 1001 002a 0346     		mov	r3, r0
+ 1002 002c 7B71     		strb	r3, [r7, #5]
+ 666:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 667:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Circular TD's. Each TD transfer 2 bytes. Auto execute second TD. */
+ 668:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_CombD0Update_TD[0], 2, DMA_CombD0Update_TD[1], TD_AUTO_EXEC_NEXT);
+ 1003              		.loc 1 668 0
+ 1004 002e 3A79     		ldrb	r2, [r7, #4]	@ zero_extendqisi2
+ 1005 0030 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1006 0032 1046     		mov	r0, r2
+ 1007 0034 4FF00201 		mov	r1, #2
+ 1008 0038 1A46     		mov	r2, r3
+ 1009 003a 4FF02003 		mov	r3, #32
+ 1010 003e FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 669:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_CombD0Update_TD[1], 2, DMA_CombD0Update_TD[0], PDM_CIC_DMA_CombD0Upda
+ 1011              		.loc 1 669 0
+ 1012 0042 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 1013 0044 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1014 0046 1046     		mov	r0, r2
+ 1015 0048 4FF00201 		mov	r1, #2
+ 1016 004c 1A46     		mov	r2, r3
+ 1017 004e 4FF00403 		mov	r3, #4
+ 1018 0052 FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 670:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 671:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Each TD transfers 16-bit A1 value to 16-bit D0. */
+ 672:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_CombD0Update_TD[0], (uint16)PDM_CIC_Comb_R_genblk2_dp32_u0__16BIT_A1_REG, (
+ 1019              		.loc 1 672 0
+ 1020 0056 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1021 0058 1846     		mov	r0, r3
+ 1022 005a 46F63001 		movw	r1, #26672
+ 1023 005e 46F65002 		movw	r2, #26704
+ 1024 0062 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 673:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_CombD0Update_TD[1], (uint16)PDM_CIC_Comb_R_genblk2_dp32_u2__16BIT_A1_REG, (
+ 1025              		.loc 1 673 0
+ 1026 0066 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1027 0068 1846     		mov	r0, r3
+ 1028 006a 46F63401 		movw	r1, #26676
+ 1029 006e 46F65402 		movw	r2, #26708
+ 1030 0072 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 674:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 675:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Set the initial TD for the channel */
+ 676:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetInitialTd(DMA_CombD0Update_Channel, DMA_CombD0Update_TD[0]);
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 31
+
+
+ 1031              		.loc 1 676 0
+ 1032 0076 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1033 0078 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 1034 007a 1046     		mov	r0, r2
+ 1035 007c 1946     		mov	r1, r3
+ 1036 007e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 677:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1037              		.loc 1 677 0
+ 1038 0082 07F10807 		add	r7, r7, #8
+ 1039 0086 BD46     		mov	sp, r7
+ 1040 0088 80BD     		pop	{r7, pc}
+ 1041              		.cfi_endproc
+ 1042              	.LFE14:
+ 1043              		.size	PDM_CIC_CombD0UpdateDma_R_Init, .-PDM_CIC_CombD0UpdateDma_R_Init
+ 1044 008a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_R_Start,"ax",%progbits
+ 1045              		.align	2
+ 1046              		.thumb
+ 1047              		.thumb_func
+ 1048              		.type	PDM_CIC_CombD0UpdateDma_R_Start, %function
+ 1049              	PDM_CIC_CombD0UpdateDma_R_Start:
+ 1050              	.LFB15:
+ 678:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 679:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 680:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_R_Start
+ 681:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 682:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 683:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 684:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Starts the DMA channel associated with the Comb D0 register update for right
+ 685:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  channel
+ 686:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 687:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 688:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 689:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 690:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 691:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 692:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 693:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 694:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 695:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 696:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 697:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 698:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Start(void)
+ 699:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1051              		.loc 1 699 0
+ 1052              		.cfi_startproc
+ 1053              		@ args = 0, pretend = 0, frame = 0
+ 1054              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1055 0000 80B5     		push	{r7, lr}
+ 1056              	.LCFI34:
+ 1057              		.cfi_def_cfa_offset 8
+ 1058 0002 00AF     		add	r7, sp, #0
+ 1059              		.cfi_offset 14, -4
+ 1060              		.cfi_offset 7, -8
+ 1061              	.LCFI35:
+ 1062              		.cfi_def_cfa_register 7
+ 700:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaClearPendingDrq(PDM_CIC_DMA_CombD0Update_R_DmaHandle);	
+ 1063              		.loc 1 700 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 32
+
+
+ 1064 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1065 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1066 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1067 000e 1846     		mov	r0, r3
+ 1068 0010 FFF7FEFF 		bl	CyDmaClearPendingDrq
+ 701:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChEnable(PDM_CIC_DMA_CombD0Update_R_DmaHandle, 1);
+ 1069              		.loc 1 701 0
+ 1070 0014 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1071 0018 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1072 001c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1073 001e 1846     		mov	r0, r3
+ 1074 0020 4FF00101 		mov	r1, #1
+ 1075 0024 FFF7FEFF 		bl	CyDmaChEnable
+ 702:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1076              		.loc 1 702 0
+ 1077 0028 80BD     		pop	{r7, pc}
+ 1078              		.cfi_endproc
+ 1079              	.LFE15:
+ 1080              		.size	PDM_CIC_CombD0UpdateDma_R_Start, .-PDM_CIC_CombD0UpdateDma_R_Start
+ 1081 002a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_R_Stop,"ax",%progbits
+ 1082              		.align	2
+ 1083              		.thumb
+ 1084              		.thumb_func
+ 1085              		.type	PDM_CIC_CombD0UpdateDma_R_Stop, %function
+ 1086              	PDM_CIC_CombD0UpdateDma_R_Stop:
+ 1087              	.LFB16:
+ 703:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 704:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 705:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_R_Stop
+ 706:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 707:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 708:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 709:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Stops (and disables) the DMA channel associated with the Comb D0 register update
+ 710:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  for the right channel
+ 711:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 712:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 713:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 714:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 715:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 716:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 717:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 718:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 719:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 720:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 721:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 722:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 723:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_R_Stop(void)
+ 724:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1088              		.loc 1 724 0
+ 1089              		.cfi_startproc
+ 1090              		@ args = 0, pretend = 0, frame = 0
+ 1091              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1092 0000 80B5     		push	{r7, lr}
+ 1093              	.LCFI36:
+ 1094              		.cfi_def_cfa_offset 8
+ 1095 0002 00AF     		add	r7, sp, #0
+ 1096              		.cfi_offset 14, -4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 33
+
+
+ 1097              		.cfi_offset 7, -8
+ 1098              	.LCFI37:
+ 1099              		.cfi_def_cfa_register 7
+ 725:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Terminate the TD chain which also disables the channel */
+ 726:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetRequest(PDM_CIC_DMA_CombD0Update_R_DmaHandle , CPU_TERM_CHAIN);
+ 1100              		.loc 1 726 0
+ 1101 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1102 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_R_DmaHandle
+ 1103 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1104 000e 1846     		mov	r0, r3
+ 1105 0010 4FF00401 		mov	r1, #4
+ 1106 0014 FFF7FEFF 		bl	CyDmaChSetRequest
+ 727:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1107              		.loc 1 727 0
+ 1108 0018 80BD     		pop	{r7, pc}
+ 1109              		.cfi_endproc
+ 1110              	.LFE16:
+ 1111              		.size	PDM_CIC_CombD0UpdateDma_R_Stop, .-PDM_CIC_CombD0UpdateDma_R_Stop
+ 1112 001a 00BF     		.section	.text.PDM_CIC_IntOutDma_L_Init,"ax",%progbits
+ 1113              		.align	2
+ 1114              		.thumb
+ 1115              		.thumb_func
+ 1116              		.type	PDM_CIC_IntOutDma_L_Init, %function
+ 1117              	PDM_CIC_IntOutDma_L_Init:
+ 1118              	.LFB17:
+ 728:.\Generated_Source\PSoC5/PDM_CIC.c **** #endif /* (PDM_CIC_RIGHT_CHANNEL_ENABLED) */
+ 729:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 730:.\Generated_Source\PSoC5/PDM_CIC.c **** #if (PDM_CIC_LEFT_CHANNEL_ENABLED)
+ 731:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 732:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_L_Init
+ 733:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 734:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 735:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 736:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Initializes the DMA channel associated with the left channel integrator output
+ 737:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 738:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 739:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 740:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 741:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 742:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 743:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 744:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 745:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 746:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 747:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 748:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 749:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Init(void)
+ 750:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 1119              		.loc 1 750 0
+ 1120              		.cfi_startproc
+ 1121              		@ args = 0, pretend = 0, frame = 8
+ 1122              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1123 0000 80B5     		push	{r7, lr}
+ 1124              	.LCFI38:
+ 1125              		.cfi_def_cfa_offset 8
+ 1126 0002 82B0     		sub	sp, sp, #8
+ 1127              	.LCFI39:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 34
+
+
+ 1128              		.cfi_def_cfa_offset 16
+ 1129 0004 00AF     		add	r7, sp, #0
+ 1130              		.cfi_offset 14, -4
+ 1131              		.cfi_offset 7, -8
+ 1132              	.LCFI40:
+ 1133              		.cfi_def_cfa_register 7
+ 751:.\Generated_Source\PSoC5/PDM_CIC.c **** 		uint8 DMA_IntegratorOut_Channel, DMA_IntegratorOut_TD[2];
+ 752:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 753:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Transfer data in 2-byte bursts since UDB spoke is 2 bytes wide.
+ 754:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   requestPerBurst = 1.
+ 755:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   Peripheral (UDB) to Peripheral (UDB) transfer */
+ 756:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_Channel = PDM_CIC_DMA_IntOut_L_DmaInitialize(2, 1, HI16(CYDEV_PERIPH_BASE), HI1
+ 1134              		.loc 1 756 0
+ 1135 0006 4FF00200 		mov	r0, #2
+ 1136 000a 4FF00101 		mov	r1, #1
+ 1137 000e 4FF48042 		mov	r2, #16384
+ 1138 0012 4FF48043 		mov	r3, #16384
+ 1139 0016 FFF7FEFF 		bl	PDM_CIC_DMA_IntOut_L_DmaInitialize
+ 1140 001a 0346     		mov	r3, r0
+ 1141 001c FB71     		strb	r3, [r7, #7]
+ 757:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 758:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_TD[0] = CyDmaTdAllocate();
+ 1142              		.loc 1 758 0
+ 1143 001e FFF7FEFF 		bl	CyDmaTdAllocate
+ 1144 0022 0346     		mov	r3, r0
+ 1145 0024 3B71     		strb	r3, [r7, #4]
+ 759:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_IntegratorOut_TD[1] = CyDmaTdAllocate();
+ 1146              		.loc 1 759 0
+ 1147 0026 FFF7FEFF 		bl	CyDmaTdAllocate
+ 1148 002a 0346     		mov	r3, r0
+ 1149 002c 7B71     		strb	r3, [r7, #5]
+ 760:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 761:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Circular TD's. Each TD transfer 2 bytes. Auto execute second TD. */
+ 762:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_IntegratorOut_TD[0], 2, DMA_IntegratorOut_TD[1], TD_AUTO_EXEC_NEXT); 
+ 1150              		.loc 1 762 0
+ 1151 002e 3A79     		ldrb	r2, [r7, #4]	@ zero_extendqisi2
+ 1152 0030 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1153 0032 1046     		mov	r0, r2
+ 1154 0034 4FF00201 		mov	r1, #2
+ 1155 0038 1A46     		mov	r2, r3
+ 1156 003a 4FF02003 		mov	r3, #32
+ 1157 003e FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 763:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_IntegratorOut_TD[1], 2, DMA_IntegratorOut_TD[0], PDM_CIC_DMA_IntOut_L
+ 1158              		.loc 1 763 0
+ 1159 0042 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 1160 0044 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1161 0046 1046     		mov	r0, r2
+ 1162 0048 4FF00201 		mov	r1, #2
+ 1163 004c 1A46     		mov	r2, r3
+ 1164 004e 4FF00403 		mov	r3, #4
+ 1165 0052 FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 764:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 765:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Each TD transfers 16-bit FIFO value to 16-bit A0. Order TD's such that MSB datapath FIFO is re
+ 766:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_IntegratorOut_TD[0], (uint16)(PDM_CIC_INT_L_LO16_OUTPUT_REG_PTR), (uint16)(
+ 1166              		.loc 1 766 0
+ 1167 0056 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1168 0058 1846     		mov	r0, r3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 35
+
+
+ 1169 005a 46F68401 		movw	r1, #26756
+ 1170 005e 46F61802 		movw	r2, #26648
+ 1171 0062 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 767:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_IntegratorOut_TD[1], (uint16)(PDM_CIC_INT_L_HI16_OUTPUT_REG_PTR), (uint16)(
+ 1172              		.loc 1 767 0
+ 1173 0066 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1174 0068 1846     		mov	r0, r3
+ 1175 006a 46F68801 		movw	r1, #26760
+ 1176 006e 46F61C02 		movw	r2, #26652
+ 1177 0072 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 768:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 769:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Set the initial TD for the channel */
+ 770:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetInitialTd(DMA_IntegratorOut_Channel, DMA_IntegratorOut_TD[0]);
+ 1178              		.loc 1 770 0
+ 1179 0076 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1180 0078 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 1181 007a 1046     		mov	r0, r2
+ 1182 007c 1946     		mov	r1, r3
+ 1183 007e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 771:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1184              		.loc 1 771 0
+ 1185 0082 07F10807 		add	r7, r7, #8
+ 1186 0086 BD46     		mov	sp, r7
+ 1187 0088 80BD     		pop	{r7, pc}
+ 1188              		.cfi_endproc
+ 1189              	.LFE17:
+ 1190              		.size	PDM_CIC_IntOutDma_L_Init, .-PDM_CIC_IntOutDma_L_Init
+ 1191 008a 00BF     		.section	.text.PDM_CIC_IntOutDma_L_Start,"ax",%progbits
+ 1192              		.align	2
+ 1193              		.thumb
+ 1194              		.thumb_func
+ 1195              		.type	PDM_CIC_IntOutDma_L_Start, %function
+ 1196              	PDM_CIC_IntOutDma_L_Start:
+ 1197              	.LFB18:
+ 772:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 773:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 774:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_L_Start
+ 775:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 776:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 777:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 778:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Starts the DMA channel associated with the left channel integrator output
+ 779:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 780:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 781:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 782:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 783:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 784:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 785:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 786:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 787:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 788:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 789:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 790:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 791:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Start(void)
+ 792:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1198              		.loc 1 792 0
+ 1199              		.cfi_startproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 36
+
+
+ 1200              		@ args = 0, pretend = 0, frame = 0
+ 1201              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1202 0000 80B5     		push	{r7, lr}
+ 1203              	.LCFI41:
+ 1204              		.cfi_def_cfa_offset 8
+ 1205 0002 00AF     		add	r7, sp, #0
+ 1206              		.cfi_offset 14, -4
+ 1207              		.cfi_offset 7, -8
+ 1208              	.LCFI42:
+ 1209              		.cfi_def_cfa_register 7
+ 793:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaClearPendingDrq(PDM_CIC_DMA_IntOut_L_DmaHandle);
+ 1210              		.loc 1 793 0
+ 1211 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1212 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1213 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1214 000e 1846     		mov	r0, r3
+ 1215 0010 FFF7FEFF 		bl	CyDmaClearPendingDrq
+ 794:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 795:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChEnable(PDM_CIC_DMA_IntOut_L_DmaHandle, 1);
+ 1216              		.loc 1 795 0
+ 1217 0014 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1218 0018 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1219 001c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1220 001e 1846     		mov	r0, r3
+ 1221 0020 4FF00101 		mov	r1, #1
+ 1222 0024 FFF7FEFF 		bl	CyDmaChEnable
+ 796:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1223              		.loc 1 796 0
+ 1224 0028 80BD     		pop	{r7, pc}
+ 1225              		.cfi_endproc
+ 1226              	.LFE18:
+ 1227              		.size	PDM_CIC_IntOutDma_L_Start, .-PDM_CIC_IntOutDma_L_Start
+ 1228 002a 00BF     		.section	.text.PDM_CIC_IntOutDma_L_Stop,"ax",%progbits
+ 1229              		.align	2
+ 1230              		.thumb
+ 1231              		.thumb_func
+ 1232              		.type	PDM_CIC_IntOutDma_L_Stop, %function
+ 1233              	PDM_CIC_IntOutDma_L_Stop:
+ 1234              	.LFB19:
+ 797:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 798:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 799:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_IntOutDma_L_Stop
+ 800:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 801:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 802:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 803:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Stops (and disables) the DMA channel associated with the left channel integrator output
+ 804:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 805:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 806:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 807:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 808:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 809:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 810:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 811:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 812:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 813:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 814:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 37
+
+
+ 815:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 816:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_IntOutDma_L_Stop(void)
+ 817:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1235              		.loc 1 817 0
+ 1236              		.cfi_startproc
+ 1237              		@ args = 0, pretend = 0, frame = 0
+ 1238              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1239 0000 80B5     		push	{r7, lr}
+ 1240              	.LCFI43:
+ 1241              		.cfi_def_cfa_offset 8
+ 1242 0002 00AF     		add	r7, sp, #0
+ 1243              		.cfi_offset 14, -4
+ 1244              		.cfi_offset 7, -8
+ 1245              	.LCFI44:
+ 1246              		.cfi_def_cfa_register 7
+ 818:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Terminate the TD chain which also disables the channel */
+ 819:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetRequest(PDM_CIC_DMA_IntOut_L_DmaHandle , CPU_TERM_CHAIN);
+ 1247              		.loc 1 819 0
+ 1248 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1249 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_IntOut_L_DmaHandle
+ 1250 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1251 000e 1846     		mov	r0, r3
+ 1252 0010 4FF00401 		mov	r1, #4
+ 1253 0014 FFF7FEFF 		bl	CyDmaChSetRequest
+ 820:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1254              		.loc 1 820 0
+ 1255 0018 80BD     		pop	{r7, pc}
+ 1256              		.cfi_endproc
+ 1257              	.LFE19:
+ 1258              		.size	PDM_CIC_IntOutDma_L_Stop, .-PDM_CIC_IntOutDma_L_Stop
+ 1259 001a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_L_Init,"ax",%progbits
+ 1260              		.align	2
+ 1261              		.thumb
+ 1262              		.thumb_func
+ 1263              		.type	PDM_CIC_CombD0UpdateDma_L_Init, %function
+ 1264              	PDM_CIC_CombD0UpdateDma_L_Init:
+ 1265              	.LFB20:
+ 821:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 822:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 823:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_L_Init
+ 824:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 825:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 826:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 827:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Initializes the DMA channel associated with the Comb D0 register update
+ 828:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  for left channel
+ 829:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 830:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 831:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 832:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 833:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 834:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 835:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 836:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 837:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 838:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 839:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 840:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 38
+
+
+ 841:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Init(void)
+ 842:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{
+ 1266              		.loc 1 842 0
+ 1267              		.cfi_startproc
+ 1268              		@ args = 0, pretend = 0, frame = 8
+ 1269              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1270 0000 80B5     		push	{r7, lr}
+ 1271              	.LCFI45:
+ 1272              		.cfi_def_cfa_offset 8
+ 1273 0002 82B0     		sub	sp, sp, #8
+ 1274              	.LCFI46:
+ 1275              		.cfi_def_cfa_offset 16
+ 1276 0004 00AF     		add	r7, sp, #0
+ 1277              		.cfi_offset 14, -4
+ 1278              		.cfi_offset 7, -8
+ 1279              	.LCFI47:
+ 1280              		.cfi_def_cfa_register 7
+ 843:.\Generated_Source\PSoC5/PDM_CIC.c **** 		uint8 DMA_CombD0Update_Channel, DMA_CombD0Update_TD[2];
+ 844:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 845:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Transfer data in 2-byte bursts since UDB spoke is 2 bytes wide.
+ 846:.\Generated_Source\PSoC5/PDM_CIC.c **** 			requestPerBurst = 1.
+ 847:.\Generated_Source\PSoC5/PDM_CIC.c **** 		   Peripheral (UDB) to Peripheral (UDB) transfer */
+ 848:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_Channel = PDM_CIC_DMA_CombD0Update_L_DmaInitialize(2, 1, HI16(CYDEV_PERIPH_BASE)
+ 1281              		.loc 1 848 0
+ 1282 0006 4FF00200 		mov	r0, #2
+ 1283 000a 4FF00101 		mov	r1, #1
+ 1284 000e 4FF48042 		mov	r2, #16384
+ 1285 0012 4FF48043 		mov	r3, #16384
+ 1286 0016 FFF7FEFF 		bl	PDM_CIC_DMA_CombD0Update_L_DmaInitialize
+ 1287 001a 0346     		mov	r3, r0
+ 1288 001c FB71     		strb	r3, [r7, #7]
+ 849:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_TD[0] = CyDmaTdAllocate();
+ 1289              		.loc 1 849 0
+ 1290 001e FFF7FEFF 		bl	CyDmaTdAllocate
+ 1291 0022 0346     		mov	r3, r0
+ 1292 0024 3B71     		strb	r3, [r7, #4]
+ 850:.\Generated_Source\PSoC5/PDM_CIC.c **** 		DMA_CombD0Update_TD[1] = CyDmaTdAllocate();
+ 1293              		.loc 1 850 0
+ 1294 0026 FFF7FEFF 		bl	CyDmaTdAllocate
+ 1295 002a 0346     		mov	r3, r0
+ 1296 002c 7B71     		strb	r3, [r7, #5]
+ 851:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 852:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Circular TD's. Each TD transfer 2 bytes. Auto execute second TD. */
+ 853:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_CombD0Update_TD[0], 2, DMA_CombD0Update_TD[1], TD_AUTO_EXEC_NEXT);
+ 1297              		.loc 1 853 0
+ 1298 002e 3A79     		ldrb	r2, [r7, #4]	@ zero_extendqisi2
+ 1299 0030 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1300 0032 1046     		mov	r0, r2
+ 1301 0034 4FF00201 		mov	r1, #2
+ 1302 0038 1A46     		mov	r2, r3
+ 1303 003a 4FF02003 		mov	r3, #32
+ 1304 003e FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 854:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetConfiguration(DMA_CombD0Update_TD[1], 2, DMA_CombD0Update_TD[0], PDM_CIC_DMA_CombD0Upda
+ 1305              		.loc 1 854 0
+ 1306 0042 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 1307 0044 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1308 0046 1046     		mov	r0, r2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 39
+
+
+ 1309 0048 4FF00201 		mov	r1, #2
+ 1310 004c 1A46     		mov	r2, r3
+ 1311 004e 4FF00403 		mov	r3, #4
+ 1312 0052 FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 855:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 856:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Each TD transfers 16-bit A1 value to 16-bit D0. */
+ 857:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_CombD0Update_TD[0], (uint16)PDM_CIC_Comb_L_genblk2_dp32_u0__16BIT_A1_REG, (
+ 1313              		.loc 1 857 0
+ 1314 0056 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1315 0058 1846     		mov	r0, r3
+ 1316 005a 46F63801 		movw	r1, #26680
+ 1317 005e 46F65802 		movw	r2, #26712
+ 1318 0062 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 858:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaTdSetAddress(DMA_CombD0Update_TD[1], (uint16)PDM_CIC_Comb_L_genblk2_dp32_u2__16BIT_A1_REG, (
+ 1319              		.loc 1 858 0
+ 1320 0066 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 1321 0068 1846     		mov	r0, r3
+ 1322 006a 46F63C01 		movw	r1, #26684
+ 1323 006e 46F65C02 		movw	r2, #26716
+ 1324 0072 FFF7FEFF 		bl	CyDmaTdSetAddress
+ 859:.\Generated_Source\PSoC5/PDM_CIC.c **** 		
+ 860:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Set the initial TD for the channel */
+ 861:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetInitialTd(DMA_CombD0Update_Channel, DMA_CombD0Update_TD[0]);
+ 1325              		.loc 1 861 0
+ 1326 0076 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 1327 0078 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 1328 007a 1046     		mov	r0, r2
+ 1329 007c 1946     		mov	r1, r3
+ 1330 007e FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 862:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1331              		.loc 1 862 0
+ 1332 0082 07F10807 		add	r7, r7, #8
+ 1333 0086 BD46     		mov	sp, r7
+ 1334 0088 80BD     		pop	{r7, pc}
+ 1335              		.cfi_endproc
+ 1336              	.LFE20:
+ 1337              		.size	PDM_CIC_CombD0UpdateDma_L_Init, .-PDM_CIC_CombD0UpdateDma_L_Init
+ 1338 008a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_L_Start,"ax",%progbits
+ 1339              		.align	2
+ 1340              		.thumb
+ 1341              		.thumb_func
+ 1342              		.type	PDM_CIC_CombD0UpdateDma_L_Start, %function
+ 1343              	PDM_CIC_CombD0UpdateDma_L_Start:
+ 1344              	.LFB21:
+ 863:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 864:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 865:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_L_Start
+ 866:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 867:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 868:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 869:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Starts the DMA channel associated with the Comb D0 register update for left
+ 870:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  channel
+ 871:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 872:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 873:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 874:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 875:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 40
+
+
+ 876:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 877:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 878:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 879:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 880:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 881:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 882:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 883:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Start(void)
+ 884:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1345              		.loc 1 884 0
+ 1346              		.cfi_startproc
+ 1347              		@ args = 0, pretend = 0, frame = 0
+ 1348              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1349 0000 80B5     		push	{r7, lr}
+ 1350              	.LCFI48:
+ 1351              		.cfi_def_cfa_offset 8
+ 1352 0002 00AF     		add	r7, sp, #0
+ 1353              		.cfi_offset 14, -4
+ 1354              		.cfi_offset 7, -8
+ 1355              	.LCFI49:
+ 1356              		.cfi_def_cfa_register 7
+ 885:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaClearPendingDrq(PDM_CIC_DMA_CombD0Update_L_DmaHandle);	
+ 1357              		.loc 1 885 0
+ 1358 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1359 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1360 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1361 000e 1846     		mov	r0, r3
+ 1362 0010 FFF7FEFF 		bl	CyDmaClearPendingDrq
+ 886:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChEnable(PDM_CIC_DMA_CombD0Update_L_DmaHandle, 1);
+ 1363              		.loc 1 886 0
+ 1364 0014 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1365 0018 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1366 001c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1367 001e 1846     		mov	r0, r3
+ 1368 0020 4FF00101 		mov	r1, #1
+ 1369 0024 FFF7FEFF 		bl	CyDmaChEnable
+ 887:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1370              		.loc 1 887 0
+ 1371 0028 80BD     		pop	{r7, pc}
+ 1372              		.cfi_endproc
+ 1373              	.LFE21:
+ 1374              		.size	PDM_CIC_CombD0UpdateDma_L_Start, .-PDM_CIC_CombD0UpdateDma_L_Start
+ 1375 002a 00BF     		.section	.text.PDM_CIC_CombD0UpdateDma_L_Stop,"ax",%progbits
+ 1376              		.align	2
+ 1377              		.thumb
+ 1378              		.thumb_func
+ 1379              		.type	PDM_CIC_CombD0UpdateDma_L_Stop, %function
+ 1380              	PDM_CIC_CombD0UpdateDma_L_Stop:
+ 1381              	.LFB22:
+ 888:.\Generated_Source\PSoC5/PDM_CIC.c **** 
+ 889:.\Generated_Source\PSoC5/PDM_CIC.c **** 	/*******************************************************************************
+ 890:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Function Name: PDM_CIC_CombD0UpdateDma_L_Stop
+ 891:.\Generated_Source\PSoC5/PDM_CIC.c **** 	********************************************************************************
+ 892:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 893:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Summary:
+ 894:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  Stops (and disables) the DMA channel associated with the Comb D0 register update
+ 895:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  for the left channel
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 41
+
+
+ 896:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 897:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Parameters:
+ 898:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 899:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 900:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Return:
+ 901:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 902:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 903:.\Generated_Source\PSoC5/PDM_CIC.c **** 	* Global Variables:
+ 904:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*  None.
+ 905:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 906:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*
+ 907:.\Generated_Source\PSoC5/PDM_CIC.c **** 	*******************************************************************************/
+ 908:.\Generated_Source\PSoC5/PDM_CIC.c **** 	static void PDM_CIC_CombD0UpdateDma_L_Stop(void)
+ 909:.\Generated_Source\PSoC5/PDM_CIC.c **** 	{	
+ 1382              		.loc 1 909 0
+ 1383              		.cfi_startproc
+ 1384              		@ args = 0, pretend = 0, frame = 0
+ 1385              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1386 0000 80B5     		push	{r7, lr}
+ 1387              	.LCFI50:
+ 1388              		.cfi_def_cfa_offset 8
+ 1389 0002 00AF     		add	r7, sp, #0
+ 1390              		.cfi_offset 14, -4
+ 1391              		.cfi_offset 7, -8
+ 1392              	.LCFI51:
+ 1393              		.cfi_def_cfa_register 7
+ 910:.\Generated_Source\PSoC5/PDM_CIC.c **** 		/* Terminate the TD chain which also disables the channel */
+ 911:.\Generated_Source\PSoC5/PDM_CIC.c **** 		CyDmaChSetRequest(PDM_CIC_DMA_CombD0Update_L_DmaHandle , CPU_TERM_CHAIN);
+ 1394              		.loc 1 911 0
+ 1395 0004 40F20003 		movw	r3, #:lower16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1396 0008 C0F20003 		movt	r3, #:upper16:PDM_CIC_DMA_CombD0Update_L_DmaHandle
+ 1397 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 1398 000e 1846     		mov	r0, r3
+ 1399 0010 4FF00401 		mov	r1, #4
+ 1400 0014 FFF7FEFF 		bl	CyDmaChSetRequest
+ 912:.\Generated_Source\PSoC5/PDM_CIC.c **** 	}
+ 1401              		.loc 1 912 0
+ 1402 0018 80BD     		pop	{r7, pc}
+ 1403              		.cfi_endproc
+ 1404              	.LFE22:
+ 1405              		.size	PDM_CIC_CombD0UpdateDma_L_Stop, .-PDM_CIC_CombD0UpdateDma_L_Stop
+ 1406 001a 00BF     		.text
+ 1407              	.Letext0:
+ 1408              		.section	.debug_loc,"",%progbits
+ 1409              	.Ldebug_loc0:
+ 1410              	.LLST0:
+ 1411 0000 00000000 		.4byte	.LFB0
+ 1412 0004 02000000 		.4byte	.LCFI0
+ 1413 0008 0100     		.2byte	0x1
+ 1414 000a 5D       		.byte	0x5d
+ 1415 000b 02000000 		.4byte	.LCFI0
+ 1416 000f 04000000 		.4byte	.LCFI1
+ 1417 0013 0200     		.2byte	0x2
+ 1418 0015 7D       		.byte	0x7d
+ 1419 0016 08       		.sleb128 8
+ 1420 0017 04000000 		.4byte	.LCFI1
+ 1421 001b 88000000 		.4byte	.LFE0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 42
+
+
+ 1422 001f 0200     		.2byte	0x2
+ 1423 0021 77       		.byte	0x77
+ 1424 0022 08       		.sleb128 8
+ 1425 0023 00000000 		.4byte	0x0
+ 1426 0027 00000000 		.4byte	0x0
+ 1427              	.LLST1:
+ 1428 002b 00000000 		.4byte	.LFB1
+ 1429 002f 02000000 		.4byte	.LCFI2
+ 1430 0033 0100     		.2byte	0x1
+ 1431 0035 5D       		.byte	0x5d
+ 1432 0036 02000000 		.4byte	.LCFI2
+ 1433 003a 04000000 		.4byte	.LCFI3
+ 1434 003e 0200     		.2byte	0x2
+ 1435 0040 7D       		.byte	0x7d
+ 1436 0041 08       		.sleb128 8
+ 1437 0042 04000000 		.4byte	.LCFI3
+ 1438 0046 38000000 		.4byte	.LFE1
+ 1439 004a 0200     		.2byte	0x2
+ 1440 004c 77       		.byte	0x77
+ 1441 004d 08       		.sleb128 8
+ 1442 004e 00000000 		.4byte	0x0
+ 1443 0052 00000000 		.4byte	0x0
+ 1444              	.LLST2:
+ 1445 0056 00000000 		.4byte	.LFB2
+ 1446 005a 02000000 		.4byte	.LCFI4
+ 1447 005e 0100     		.2byte	0x1
+ 1448 0060 5D       		.byte	0x5d
+ 1449 0061 02000000 		.4byte	.LCFI4
+ 1450 0065 04000000 		.4byte	.LCFI5
+ 1451 0069 0200     		.2byte	0x2
+ 1452 006b 7D       		.byte	0x7d
+ 1453 006c 04       		.sleb128 4
+ 1454 006d 04000000 		.4byte	.LCFI5
+ 1455 0071 20000000 		.4byte	.LFE2
+ 1456 0075 0200     		.2byte	0x2
+ 1457 0077 77       		.byte	0x77
+ 1458 0078 04       		.sleb128 4
+ 1459 0079 00000000 		.4byte	0x0
+ 1460 007d 00000000 		.4byte	0x0
+ 1461              	.LLST3:
+ 1462 0081 00000000 		.4byte	.LFB3
+ 1463 0085 02000000 		.4byte	.LCFI6
+ 1464 0089 0100     		.2byte	0x1
+ 1465 008b 5D       		.byte	0x5d
+ 1466 008c 02000000 		.4byte	.LCFI6
+ 1467 0090 04000000 		.4byte	.LCFI7
+ 1468 0094 0200     		.2byte	0x2
+ 1469 0096 7D       		.byte	0x7d
+ 1470 0097 04       		.sleb128 4
+ 1471 0098 04000000 		.4byte	.LCFI7
+ 1472 009c 1E000000 		.4byte	.LFE3
+ 1473 00a0 0200     		.2byte	0x2
+ 1474 00a2 77       		.byte	0x77
+ 1475 00a3 04       		.sleb128 4
+ 1476 00a4 00000000 		.4byte	0x0
+ 1477 00a8 00000000 		.4byte	0x0
+ 1478              	.LLST4:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 43
+
+
+ 1479 00ac 00000000 		.4byte	.LFB4
+ 1480 00b0 02000000 		.4byte	.LCFI8
+ 1481 00b4 0100     		.2byte	0x1
+ 1482 00b6 5D       		.byte	0x5d
+ 1483 00b7 02000000 		.4byte	.LCFI8
+ 1484 00bb 04000000 		.4byte	.LCFI9
+ 1485 00bf 0200     		.2byte	0x2
+ 1486 00c1 7D       		.byte	0x7d
+ 1487 00c2 08       		.sleb128 8
+ 1488 00c3 04000000 		.4byte	.LCFI9
+ 1489 00c7 2A000000 		.4byte	.LFE4
+ 1490 00cb 0200     		.2byte	0x2
+ 1491 00cd 77       		.byte	0x77
+ 1492 00ce 08       		.sleb128 8
+ 1493 00cf 00000000 		.4byte	0x0
+ 1494 00d3 00000000 		.4byte	0x0
+ 1495              	.LLST5:
+ 1496 00d7 00000000 		.4byte	.LFB5
+ 1497 00db 02000000 		.4byte	.LCFI10
+ 1498 00df 0100     		.2byte	0x1
+ 1499 00e1 5D       		.byte	0x5d
+ 1500 00e2 02000000 		.4byte	.LCFI10
+ 1501 00e6 04000000 		.4byte	.LCFI11
+ 1502 00ea 0200     		.2byte	0x2
+ 1503 00ec 7D       		.byte	0x7d
+ 1504 00ed 08       		.sleb128 8
+ 1505 00ee 04000000 		.4byte	.LCFI11
+ 1506 00f2 1C000000 		.4byte	.LFE5
+ 1507 00f6 0200     		.2byte	0x2
+ 1508 00f8 77       		.byte	0x77
+ 1509 00f9 08       		.sleb128 8
+ 1510 00fa 00000000 		.4byte	0x0
+ 1511 00fe 00000000 		.4byte	0x0
+ 1512              	.LLST6:
+ 1513 0102 00000000 		.4byte	.LFB6
+ 1514 0106 02000000 		.4byte	.LCFI12
+ 1515 010a 0100     		.2byte	0x1
+ 1516 010c 5D       		.byte	0x5d
+ 1517 010d 02000000 		.4byte	.LCFI12
+ 1518 0111 04000000 		.4byte	.LCFI13
+ 1519 0115 0200     		.2byte	0x2
+ 1520 0117 7D       		.byte	0x7d
+ 1521 0118 08       		.sleb128 8
+ 1522 0119 04000000 		.4byte	.LCFI13
+ 1523 011d 0E000000 		.4byte	.LFE6
+ 1524 0121 0200     		.2byte	0x2
+ 1525 0123 77       		.byte	0x77
+ 1526 0124 08       		.sleb128 8
+ 1527 0125 00000000 		.4byte	0x0
+ 1528 0129 00000000 		.4byte	0x0
+ 1529              	.LLST7:
+ 1530 012d 00000000 		.4byte	.LFB7
+ 1531 0131 02000000 		.4byte	.LCFI14
+ 1532 0135 0100     		.2byte	0x1
+ 1533 0137 5D       		.byte	0x5d
+ 1534 0138 02000000 		.4byte	.LCFI14
+ 1535 013c 04000000 		.4byte	.LCFI15
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 44
+
+
+ 1536 0140 0200     		.2byte	0x2
+ 1537 0142 7D       		.byte	0x7d
+ 1538 0143 08       		.sleb128 8
+ 1539 0144 04000000 		.4byte	.LCFI15
+ 1540 0148 0A000000 		.4byte	.LFE7
+ 1541 014c 0200     		.2byte	0x2
+ 1542 014e 77       		.byte	0x77
+ 1543 014f 08       		.sleb128 8
+ 1544 0150 00000000 		.4byte	0x0
+ 1545 0154 00000000 		.4byte	0x0
+ 1546              	.LLST8:
+ 1547 0158 00000000 		.4byte	.LFB8
+ 1548 015c 02000000 		.4byte	.LCFI16
+ 1549 0160 0100     		.2byte	0x1
+ 1550 0162 5D       		.byte	0x5d
+ 1551 0163 02000000 		.4byte	.LCFI16
+ 1552 0167 04000000 		.4byte	.LCFI17
+ 1553 016b 0200     		.2byte	0x2
+ 1554 016d 7D       		.byte	0x7d
+ 1555 016e 08       		.sleb128 8
+ 1556 016f 04000000 		.4byte	.LCFI17
+ 1557 0173 0A000000 		.4byte	.LFE8
+ 1558 0177 0200     		.2byte	0x2
+ 1559 0179 77       		.byte	0x77
+ 1560 017a 08       		.sleb128 8
+ 1561 017b 00000000 		.4byte	0x0
+ 1562 017f 00000000 		.4byte	0x0
+ 1563              	.LLST9:
+ 1564 0183 00000000 		.4byte	.LFB9
+ 1565 0187 02000000 		.4byte	.LCFI18
+ 1566 018b 0100     		.2byte	0x1
+ 1567 018d 5D       		.byte	0x5d
+ 1568 018e 02000000 		.4byte	.LCFI18
+ 1569 0192 04000000 		.4byte	.LCFI19
+ 1570 0196 0200     		.2byte	0x2
+ 1571 0198 7D       		.byte	0x7d
+ 1572 0199 08       		.sleb128 8
+ 1573 019a 04000000 		.4byte	.LCFI19
+ 1574 019e 06000000 		.4byte	.LCFI20
+ 1575 01a2 0200     		.2byte	0x2
+ 1576 01a4 7D       		.byte	0x7d
+ 1577 01a5 10       		.sleb128 16
+ 1578 01a6 06000000 		.4byte	.LCFI20
+ 1579 01aa EA010000 		.4byte	.LFE9
+ 1580 01ae 0200     		.2byte	0x2
+ 1581 01b0 77       		.byte	0x77
+ 1582 01b1 10       		.sleb128 16
+ 1583 01b2 00000000 		.4byte	0x0
+ 1584 01b6 00000000 		.4byte	0x0
+ 1585              	.LLST10:
+ 1586 01ba 00000000 		.4byte	.LFB10
+ 1587 01be 02000000 		.4byte	.LCFI21
+ 1588 01c2 0100     		.2byte	0x1
+ 1589 01c4 5D       		.byte	0x5d
+ 1590 01c5 02000000 		.4byte	.LCFI21
+ 1591 01c9 04000000 		.4byte	.LCFI22
+ 1592 01cd 0200     		.2byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 45
+
+
+ 1593 01cf 7D       		.byte	0x7d
+ 1594 01d0 08       		.sleb128 8
+ 1595 01d1 04000000 		.4byte	.LCFI22
+ 1596 01d5 06000000 		.4byte	.LCFI23
+ 1597 01d9 0200     		.2byte	0x2
+ 1598 01db 7D       		.byte	0x7d
+ 1599 01dc 10       		.sleb128 16
+ 1600 01dd 06000000 		.4byte	.LCFI23
+ 1601 01e1 3E020000 		.4byte	.LFE10
+ 1602 01e5 0200     		.2byte	0x2
+ 1603 01e7 77       		.byte	0x77
+ 1604 01e8 10       		.sleb128 16
+ 1605 01e9 00000000 		.4byte	0x0
+ 1606 01ed 00000000 		.4byte	0x0
+ 1607              	.LLST11:
+ 1608 01f1 00000000 		.4byte	.LFB11
+ 1609 01f5 02000000 		.4byte	.LCFI24
+ 1610 01f9 0100     		.2byte	0x1
+ 1611 01fb 5D       		.byte	0x5d
+ 1612 01fc 02000000 		.4byte	.LCFI24
+ 1613 0200 04000000 		.4byte	.LCFI25
+ 1614 0204 0200     		.2byte	0x2
+ 1615 0206 7D       		.byte	0x7d
+ 1616 0207 08       		.sleb128 8
+ 1617 0208 04000000 		.4byte	.LCFI25
+ 1618 020c 06000000 		.4byte	.LCFI26
+ 1619 0210 0200     		.2byte	0x2
+ 1620 0212 7D       		.byte	0x7d
+ 1621 0213 10       		.sleb128 16
+ 1622 0214 06000000 		.4byte	.LCFI26
+ 1623 0218 8A000000 		.4byte	.LFE11
+ 1624 021c 0200     		.2byte	0x2
+ 1625 021e 77       		.byte	0x77
+ 1626 021f 10       		.sleb128 16
+ 1627 0220 00000000 		.4byte	0x0
+ 1628 0224 00000000 		.4byte	0x0
+ 1629              	.LLST12:
+ 1630 0228 00000000 		.4byte	.LFB12
+ 1631 022c 02000000 		.4byte	.LCFI27
+ 1632 0230 0100     		.2byte	0x1
+ 1633 0232 5D       		.byte	0x5d
+ 1634 0233 02000000 		.4byte	.LCFI27
+ 1635 0237 04000000 		.4byte	.LCFI28
+ 1636 023b 0200     		.2byte	0x2
+ 1637 023d 7D       		.byte	0x7d
+ 1638 023e 08       		.sleb128 8
+ 1639 023f 04000000 		.4byte	.LCFI28
+ 1640 0243 2A000000 		.4byte	.LFE12
+ 1641 0247 0200     		.2byte	0x2
+ 1642 0249 77       		.byte	0x77
+ 1643 024a 08       		.sleb128 8
+ 1644 024b 00000000 		.4byte	0x0
+ 1645 024f 00000000 		.4byte	0x0
+ 1646              	.LLST13:
+ 1647 0253 00000000 		.4byte	.LFB13
+ 1648 0257 02000000 		.4byte	.LCFI29
+ 1649 025b 0100     		.2byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 46
+
+
+ 1650 025d 5D       		.byte	0x5d
+ 1651 025e 02000000 		.4byte	.LCFI29
+ 1652 0262 04000000 		.4byte	.LCFI30
+ 1653 0266 0200     		.2byte	0x2
+ 1654 0268 7D       		.byte	0x7d
+ 1655 0269 08       		.sleb128 8
+ 1656 026a 04000000 		.4byte	.LCFI30
+ 1657 026e 1A000000 		.4byte	.LFE13
+ 1658 0272 0200     		.2byte	0x2
+ 1659 0274 77       		.byte	0x77
+ 1660 0275 08       		.sleb128 8
+ 1661 0276 00000000 		.4byte	0x0
+ 1662 027a 00000000 		.4byte	0x0
+ 1663              	.LLST14:
+ 1664 027e 00000000 		.4byte	.LFB14
+ 1665 0282 02000000 		.4byte	.LCFI31
+ 1666 0286 0100     		.2byte	0x1
+ 1667 0288 5D       		.byte	0x5d
+ 1668 0289 02000000 		.4byte	.LCFI31
+ 1669 028d 04000000 		.4byte	.LCFI32
+ 1670 0291 0200     		.2byte	0x2
+ 1671 0293 7D       		.byte	0x7d
+ 1672 0294 08       		.sleb128 8
+ 1673 0295 04000000 		.4byte	.LCFI32
+ 1674 0299 06000000 		.4byte	.LCFI33
+ 1675 029d 0200     		.2byte	0x2
+ 1676 029f 7D       		.byte	0x7d
+ 1677 02a0 10       		.sleb128 16
+ 1678 02a1 06000000 		.4byte	.LCFI33
+ 1679 02a5 8A000000 		.4byte	.LFE14
+ 1680 02a9 0200     		.2byte	0x2
+ 1681 02ab 77       		.byte	0x77
+ 1682 02ac 10       		.sleb128 16
+ 1683 02ad 00000000 		.4byte	0x0
+ 1684 02b1 00000000 		.4byte	0x0
+ 1685              	.LLST15:
+ 1686 02b5 00000000 		.4byte	.LFB15
+ 1687 02b9 02000000 		.4byte	.LCFI34
+ 1688 02bd 0100     		.2byte	0x1
+ 1689 02bf 5D       		.byte	0x5d
+ 1690 02c0 02000000 		.4byte	.LCFI34
+ 1691 02c4 04000000 		.4byte	.LCFI35
+ 1692 02c8 0200     		.2byte	0x2
+ 1693 02ca 7D       		.byte	0x7d
+ 1694 02cb 08       		.sleb128 8
+ 1695 02cc 04000000 		.4byte	.LCFI35
+ 1696 02d0 2A000000 		.4byte	.LFE15
+ 1697 02d4 0200     		.2byte	0x2
+ 1698 02d6 77       		.byte	0x77
+ 1699 02d7 08       		.sleb128 8
+ 1700 02d8 00000000 		.4byte	0x0
+ 1701 02dc 00000000 		.4byte	0x0
+ 1702              	.LLST16:
+ 1703 02e0 00000000 		.4byte	.LFB16
+ 1704 02e4 02000000 		.4byte	.LCFI36
+ 1705 02e8 0100     		.2byte	0x1
+ 1706 02ea 5D       		.byte	0x5d
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 47
+
+
+ 1707 02eb 02000000 		.4byte	.LCFI36
+ 1708 02ef 04000000 		.4byte	.LCFI37
+ 1709 02f3 0200     		.2byte	0x2
+ 1710 02f5 7D       		.byte	0x7d
+ 1711 02f6 08       		.sleb128 8
+ 1712 02f7 04000000 		.4byte	.LCFI37
+ 1713 02fb 1A000000 		.4byte	.LFE16
+ 1714 02ff 0200     		.2byte	0x2
+ 1715 0301 77       		.byte	0x77
+ 1716 0302 08       		.sleb128 8
+ 1717 0303 00000000 		.4byte	0x0
+ 1718 0307 00000000 		.4byte	0x0
+ 1719              	.LLST17:
+ 1720 030b 00000000 		.4byte	.LFB17
+ 1721 030f 02000000 		.4byte	.LCFI38
+ 1722 0313 0100     		.2byte	0x1
+ 1723 0315 5D       		.byte	0x5d
+ 1724 0316 02000000 		.4byte	.LCFI38
+ 1725 031a 04000000 		.4byte	.LCFI39
+ 1726 031e 0200     		.2byte	0x2
+ 1727 0320 7D       		.byte	0x7d
+ 1728 0321 08       		.sleb128 8
+ 1729 0322 04000000 		.4byte	.LCFI39
+ 1730 0326 06000000 		.4byte	.LCFI40
+ 1731 032a 0200     		.2byte	0x2
+ 1732 032c 7D       		.byte	0x7d
+ 1733 032d 10       		.sleb128 16
+ 1734 032e 06000000 		.4byte	.LCFI40
+ 1735 0332 8A000000 		.4byte	.LFE17
+ 1736 0336 0200     		.2byte	0x2
+ 1737 0338 77       		.byte	0x77
+ 1738 0339 10       		.sleb128 16
+ 1739 033a 00000000 		.4byte	0x0
+ 1740 033e 00000000 		.4byte	0x0
+ 1741              	.LLST18:
+ 1742 0342 00000000 		.4byte	.LFB18
+ 1743 0346 02000000 		.4byte	.LCFI41
+ 1744 034a 0100     		.2byte	0x1
+ 1745 034c 5D       		.byte	0x5d
+ 1746 034d 02000000 		.4byte	.LCFI41
+ 1747 0351 04000000 		.4byte	.LCFI42
+ 1748 0355 0200     		.2byte	0x2
+ 1749 0357 7D       		.byte	0x7d
+ 1750 0358 08       		.sleb128 8
+ 1751 0359 04000000 		.4byte	.LCFI42
+ 1752 035d 2A000000 		.4byte	.LFE18
+ 1753 0361 0200     		.2byte	0x2
+ 1754 0363 77       		.byte	0x77
+ 1755 0364 08       		.sleb128 8
+ 1756 0365 00000000 		.4byte	0x0
+ 1757 0369 00000000 		.4byte	0x0
+ 1758              	.LLST19:
+ 1759 036d 00000000 		.4byte	.LFB19
+ 1760 0371 02000000 		.4byte	.LCFI43
+ 1761 0375 0100     		.2byte	0x1
+ 1762 0377 5D       		.byte	0x5d
+ 1763 0378 02000000 		.4byte	.LCFI43
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 48
+
+
+ 1764 037c 04000000 		.4byte	.LCFI44
+ 1765 0380 0200     		.2byte	0x2
+ 1766 0382 7D       		.byte	0x7d
+ 1767 0383 08       		.sleb128 8
+ 1768 0384 04000000 		.4byte	.LCFI44
+ 1769 0388 1A000000 		.4byte	.LFE19
+ 1770 038c 0200     		.2byte	0x2
+ 1771 038e 77       		.byte	0x77
+ 1772 038f 08       		.sleb128 8
+ 1773 0390 00000000 		.4byte	0x0
+ 1774 0394 00000000 		.4byte	0x0
+ 1775              	.LLST20:
+ 1776 0398 00000000 		.4byte	.LFB20
+ 1777 039c 02000000 		.4byte	.LCFI45
+ 1778 03a0 0100     		.2byte	0x1
+ 1779 03a2 5D       		.byte	0x5d
+ 1780 03a3 02000000 		.4byte	.LCFI45
+ 1781 03a7 04000000 		.4byte	.LCFI46
+ 1782 03ab 0200     		.2byte	0x2
+ 1783 03ad 7D       		.byte	0x7d
+ 1784 03ae 08       		.sleb128 8
+ 1785 03af 04000000 		.4byte	.LCFI46
+ 1786 03b3 06000000 		.4byte	.LCFI47
+ 1787 03b7 0200     		.2byte	0x2
+ 1788 03b9 7D       		.byte	0x7d
+ 1789 03ba 10       		.sleb128 16
+ 1790 03bb 06000000 		.4byte	.LCFI47
+ 1791 03bf 8A000000 		.4byte	.LFE20
+ 1792 03c3 0200     		.2byte	0x2
+ 1793 03c5 77       		.byte	0x77
+ 1794 03c6 10       		.sleb128 16
+ 1795 03c7 00000000 		.4byte	0x0
+ 1796 03cb 00000000 		.4byte	0x0
+ 1797              	.LLST21:
+ 1798 03cf 00000000 		.4byte	.LFB21
+ 1799 03d3 02000000 		.4byte	.LCFI48
+ 1800 03d7 0100     		.2byte	0x1
+ 1801 03d9 5D       		.byte	0x5d
+ 1802 03da 02000000 		.4byte	.LCFI48
+ 1803 03de 04000000 		.4byte	.LCFI49
+ 1804 03e2 0200     		.2byte	0x2
+ 1805 03e4 7D       		.byte	0x7d
+ 1806 03e5 08       		.sleb128 8
+ 1807 03e6 04000000 		.4byte	.LCFI49
+ 1808 03ea 2A000000 		.4byte	.LFE21
+ 1809 03ee 0200     		.2byte	0x2
+ 1810 03f0 77       		.byte	0x77
+ 1811 03f1 08       		.sleb128 8
+ 1812 03f2 00000000 		.4byte	0x0
+ 1813 03f6 00000000 		.4byte	0x0
+ 1814              	.LLST22:
+ 1815 03fa 00000000 		.4byte	.LFB22
+ 1816 03fe 02000000 		.4byte	.LCFI50
+ 1817 0402 0100     		.2byte	0x1
+ 1818 0404 5D       		.byte	0x5d
+ 1819 0405 02000000 		.4byte	.LCFI50
+ 1820 0409 04000000 		.4byte	.LCFI51
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 49
+
+
+ 1821 040d 0200     		.2byte	0x2
+ 1822 040f 7D       		.byte	0x7d
+ 1823 0410 08       		.sleb128 8
+ 1824 0411 04000000 		.4byte	.LCFI51
+ 1825 0415 1A000000 		.4byte	.LFE22
+ 1826 0419 0200     		.2byte	0x2
+ 1827 041b 77       		.byte	0x77
+ 1828 041c 08       		.sleb128 8
+ 1829 041d 00000000 		.4byte	0x0
+ 1830 0421 00000000 		.4byte	0x0
+ 1831              		.file 2 ".\\Generated_Source\\PSoC5\\/PDM_CIC.h"
+ 1832              		.file 3 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 1833              		.file 4 ".\\Generated_Source\\PSoC5\\/PDM_CIC_DMA_CombD0Update_R_dma.h"
+ 1834              		.file 5 ".\\Generated_Source\\PSoC5\\/PDM_CIC_DMA_IntOut_R_dma.h"
+ 1835              		.file 6 ".\\Generated_Source\\PSoC5\\/PDM_CIC_DMA_CombD0Update_L_dma.h"
+ 1836              		.file 7 ".\\Generated_Source\\PSoC5\\/PDM_CIC_DMA_IntOut_L_dma.h"
+ 1837              		.section	.debug_info
+ 1838 0000 C7030000 		.4byte	0x3c7
+ 1839 0004 0200     		.2byte	0x2
+ 1840 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1841 000a 04       		.byte	0x4
+ 1842 000b 01       		.uleb128 0x1
+ 1843 000c 19030000 		.4byte	.LASF49
+ 1844 0010 01       		.byte	0x1
+ 1845 0011 D3000000 		.4byte	.LASF50
+ 1846 0015 12010000 		.4byte	.LASF51
+ 1847 0019 00000000 		.4byte	0x0
+ 1848 001d 00000000 		.4byte	0x0
+ 1849 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 1850 0025 00000000 		.4byte	.Ldebug_line0
+ 1851 0029 02       		.uleb128 0x2
+ 1852 002a 01       		.byte	0x1
+ 1853 002b 06       		.byte	0x6
+ 1854 002c 17040000 		.4byte	.LASF0
+ 1855 0030 02       		.uleb128 0x2
+ 1856 0031 01       		.byte	0x1
+ 1857 0032 08       		.byte	0x8
+ 1858 0033 04010000 		.4byte	.LASF1
+ 1859 0037 02       		.uleb128 0x2
+ 1860 0038 02       		.byte	0x2
+ 1861 0039 05       		.byte	0x5
+ 1862 003a 80030000 		.4byte	.LASF2
+ 1863 003e 02       		.uleb128 0x2
+ 1864 003f 02       		.byte	0x2
+ 1865 0040 07       		.byte	0x7
+ 1866 0041 55000000 		.4byte	.LASF3
+ 1867 0045 02       		.uleb128 0x2
+ 1868 0046 04       		.byte	0x4
+ 1869 0047 05       		.byte	0x5
+ 1870 0048 EE030000 		.4byte	.LASF4
+ 1871 004c 02       		.uleb128 0x2
+ 1872 004d 04       		.byte	0x4
+ 1873 004e 07       		.byte	0x7
+ 1874 004f 72010000 		.4byte	.LASF5
+ 1875 0053 02       		.uleb128 0x2
+ 1876 0054 08       		.byte	0x8
+ 1877 0055 05       		.byte	0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 50
+
+
+ 1878 0056 00000000 		.4byte	.LASF6
+ 1879 005a 02       		.uleb128 0x2
+ 1880 005b 08       		.byte	0x8
+ 1881 005c 07       		.byte	0x7
+ 1882 005d 95020000 		.4byte	.LASF7
+ 1883 0061 03       		.uleb128 0x3
+ 1884 0062 04       		.byte	0x4
+ 1885 0063 05       		.byte	0x5
+ 1886 0064 696E7400 		.ascii	"int\000"
+ 1887 0068 02       		.uleb128 0x2
+ 1888 0069 04       		.byte	0x4
+ 1889 006a 07       		.byte	0x7
+ 1890 006b 88020000 		.4byte	.LASF8
+ 1891 006f 04       		.uleb128 0x4
+ 1892 0070 A9010000 		.4byte	.LASF14
+ 1893 0074 03       		.byte	0x3
+ 1894 0075 4C       		.byte	0x4c
+ 1895 0076 30000000 		.4byte	0x30
+ 1896 007a 02       		.uleb128 0x2
+ 1897 007b 04       		.byte	0x4
+ 1898 007c 04       		.byte	0x4
+ 1899 007d CD000000 		.4byte	.LASF9
+ 1900 0081 02       		.uleb128 0x2
+ 1901 0082 08       		.byte	0x8
+ 1902 0083 04       		.byte	0x4
+ 1903 0084 F4010000 		.4byte	.LASF10
+ 1904 0088 02       		.uleb128 0x2
+ 1905 0089 01       		.byte	0x1
+ 1906 008a 08       		.byte	0x8
+ 1907 008b 48030000 		.4byte	.LASF11
+ 1908 008f 05       		.uleb128 0x5
+ 1909 0090 02       		.byte	0x2
+ 1910 0091 02       		.byte	0x2
+ 1911 0092 3D       		.byte	0x3d
+ 1912 0093 B4000000 		.4byte	0xb4
+ 1913 0097 06       		.uleb128 0x6
+ 1914 0098 F7030000 		.4byte	.LASF12
+ 1915 009c 02       		.byte	0x2
+ 1916 009d 3E       		.byte	0x3e
+ 1917 009e 6F000000 		.4byte	0x6f
+ 1918 00a2 02       		.byte	0x2
+ 1919 00a3 23       		.byte	0x23
+ 1920 00a4 00       		.uleb128 0x0
+ 1921 00a5 06       		.uleb128 0x6
+ 1922 00a6 AC020000 		.4byte	.LASF13
+ 1923 00aa 02       		.byte	0x2
+ 1924 00ab 3F       		.byte	0x3f
+ 1925 00ac 6F000000 		.4byte	0x6f
+ 1926 00b0 02       		.byte	0x2
+ 1927 00b1 23       		.byte	0x23
+ 1928 00b2 01       		.uleb128 0x1
+ 1929 00b3 00       		.byte	0x0
+ 1930 00b4 04       		.uleb128 0x4
+ 1931 00b5 8A030000 		.4byte	.LASF15
+ 1932 00b9 02       		.byte	0x2
+ 1933 00ba 40       		.byte	0x40
+ 1934 00bb 8F000000 		.4byte	0x8f
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 51
+
+
+ 1935 00bf 07       		.uleb128 0x7
+ 1936 00c0 04       		.byte	0x4
+ 1937 00c1 07       		.byte	0x7
+ 1938 00c2 08       		.uleb128 0x8
+ 1939 00c3 01       		.byte	0x1
+ 1940 00c4 D3020000 		.4byte	.LASF16
+ 1941 00c8 01       		.byte	0x1
+ 1942 00c9 7F       		.byte	0x7f
+ 1943 00ca 01       		.byte	0x1
+ 1944 00cb 00000000 		.4byte	.LFB0
+ 1945 00cf 88000000 		.4byte	.LFE0
+ 1946 00d3 00000000 		.4byte	.LLST0
+ 1947 00d7 08       		.uleb128 0x8
+ 1948 00d8 01       		.byte	0x1
+ 1949 00d9 A7000000 		.4byte	.LASF17
+ 1950 00dd 01       		.byte	0x1
+ 1951 00de C9       		.byte	0xc9
+ 1952 00df 01       		.byte	0x1
+ 1953 00e0 00000000 		.4byte	.LFB1
+ 1954 00e4 38000000 		.4byte	.LFE1
+ 1955 00e8 2B000000 		.4byte	.LLST1
+ 1956 00ec 08       		.uleb128 0x8
+ 1957 00ed 01       		.byte	0x1
+ 1958 00ee 3A020000 		.4byte	.LASF18
+ 1959 00f2 01       		.byte	0x1
+ 1960 00f3 F8       		.byte	0xf8
+ 1961 00f4 01       		.byte	0x1
+ 1962 00f5 00000000 		.4byte	.LFB2
+ 1963 00f9 20000000 		.4byte	.LFE2
+ 1964 00fd 56000000 		.4byte	.LLST2
+ 1965 0101 09       		.uleb128 0x9
+ 1966 0102 01       		.byte	0x1
+ 1967 0103 6A040000 		.4byte	.LASF19
+ 1968 0107 01       		.byte	0x1
+ 1969 0108 1101     		.2byte	0x111
+ 1970 010a 01       		.byte	0x1
+ 1971 010b 00000000 		.4byte	.LFB3
+ 1972 010f 1E000000 		.4byte	.LFE3
+ 1973 0113 81000000 		.4byte	.LLST3
+ 1974 0117 09       		.uleb128 0x9
+ 1975 0118 01       		.byte	0x1
+ 1976 0119 F6000000 		.4byte	.LASF20
+ 1977 011d 01       		.byte	0x1
+ 1978 011e 2A01     		.2byte	0x12a
+ 1979 0120 01       		.byte	0x1
+ 1980 0121 00000000 		.4byte	.LFB4
+ 1981 0125 2A000000 		.4byte	.LFE4
+ 1982 0129 AC000000 		.4byte	.LLST4
+ 1983 012d 09       		.uleb128 0x9
+ 1984 012e 01       		.byte	0x1
+ 1985 012f 5B040000 		.4byte	.LASF21
+ 1986 0133 01       		.byte	0x1
+ 1987 0134 4B01     		.2byte	0x14b
+ 1988 0136 01       		.byte	0x1
+ 1989 0137 00000000 		.4byte	.LFB5
+ 1990 013b 1C000000 		.4byte	.LFE5
+ 1991 013f D7000000 		.4byte	.LLST5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 52
+
+
+ 1992 0143 0A       		.uleb128 0xa
+ 1993 0144 01       		.byte	0x1
+ 1994 0145 B7020000 		.4byte	.LASF52
+ 1995 0149 01       		.byte	0x1
+ 1996 014a 6C01     		.2byte	0x16c
+ 1997 014c 01       		.byte	0x1
+ 1998 014d 6F000000 		.4byte	0x6f
+ 1999 0151 00000000 		.4byte	.LFB6
+ 2000 0155 0E000000 		.4byte	.LFE6
+ 2001 0159 02010000 		.4byte	.LLST6
+ 2002 015d 09       		.uleb128 0x9
+ 2003 015e 01       		.byte	0x1
+ 2004 015f 4D020000 		.4byte	.LASF22
+ 2005 0163 01       		.byte	0x1
+ 2006 0164 8301     		.2byte	0x183
+ 2007 0166 01       		.byte	0x1
+ 2008 0167 00000000 		.4byte	.LFB7
+ 2009 016b 0A000000 		.4byte	.LFE7
+ 2010 016f 2D010000 		.4byte	.LLST7
+ 2011 0173 09       		.uleb128 0x9
+ 2012 0174 01       		.byte	0x1
+ 2013 0175 25030000 		.4byte	.LASF23
+ 2014 0179 01       		.byte	0x1
+ 2015 017a 9A01     		.2byte	0x19a
+ 2016 017c 01       		.byte	0x1
+ 2017 017d 00000000 		.4byte	.LFB8
+ 2018 0181 0A000000 		.4byte	.LFE8
+ 2019 0185 58010000 		.4byte	.LLST8
+ 2020 0189 0B       		.uleb128 0xb
+ 2021 018a 23040000 		.4byte	.LASF24
+ 2022 018e 01       		.byte	0x1
+ 2023 018f B301     		.2byte	0x1b3
+ 2024 0191 01       		.byte	0x1
+ 2025 0192 00000000 		.4byte	.LFB9
+ 2026 0196 EA010000 		.4byte	.LFE9
+ 2027 019a 83010000 		.4byte	.LLST9
+ 2028 019e B2010000 		.4byte	0x1b2
+ 2029 01a2 0C       		.uleb128 0xc
+ 2030 01a3 E3010000 		.4byte	.LASF26
+ 2031 01a7 01       		.byte	0x1
+ 2032 01a8 B501     		.2byte	0x1b5
+ 2033 01aa 6F000000 		.4byte	0x6f
+ 2034 01ae 02       		.byte	0x2
+ 2035 01af 91       		.byte	0x91
+ 2036 01b0 77       		.sleb128 -9
+ 2037 01b1 00       		.byte	0x0
+ 2038 01b2 0B       		.uleb128 0xb
+ 2039 01b3 80040000 		.4byte	.LASF25
+ 2040 01b7 01       		.byte	0x1
+ 2041 01b8 EC01     		.2byte	0x1ec
+ 2042 01ba 01       		.byte	0x1
+ 2043 01bb 00000000 		.4byte	.LFB10
+ 2044 01bf 3E020000 		.4byte	.LFE10
+ 2045 01c3 BA010000 		.4byte	.LLST10
+ 2046 01c7 DB010000 		.4byte	0x1db
+ 2047 01cb 0C       		.uleb128 0xc
+ 2048 01cc E3010000 		.4byte	.LASF26
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 53
+
+
+ 2049 01d0 01       		.byte	0x1
+ 2050 01d1 EE01     		.2byte	0x1ee
+ 2051 01d3 6F000000 		.4byte	0x6f
+ 2052 01d7 02       		.byte	0x2
+ 2053 01d8 91       		.byte	0x91
+ 2054 01d9 77       		.sleb128 -9
+ 2055 01da 00       		.byte	0x0
+ 2056 01db 0B       		.uleb128 0xb
+ 2057 01dc E1020000 		.4byte	.LASF27
+ 2058 01e0 01       		.byte	0x1
+ 2059 01e1 3402     		.2byte	0x234
+ 2060 01e3 01       		.byte	0x1
+ 2061 01e4 00000000 		.4byte	.LFB11
+ 2062 01e8 8A000000 		.4byte	.LFE11
+ 2063 01ec F1010000 		.4byte	.LLST11
+ 2064 01f0 13020000 		.4byte	0x213
+ 2065 01f4 0C       		.uleb128 0xc
+ 2066 01f5 4D030000 		.4byte	.LASF28
+ 2067 01f9 01       		.byte	0x1
+ 2068 01fa 3602     		.2byte	0x236
+ 2069 01fc 6F000000 		.4byte	0x6f
+ 2070 0200 02       		.byte	0x2
+ 2071 0201 91       		.byte	0x91
+ 2072 0202 77       		.sleb128 -9
+ 2073 0203 0C       		.uleb128 0xc
+ 2074 0204 AF010000 		.4byte	.LASF29
+ 2075 0208 01       		.byte	0x1
+ 2076 0209 3602     		.2byte	0x236
+ 2077 020b 13020000 		.4byte	0x213
+ 2078 020f 02       		.byte	0x2
+ 2079 0210 91       		.byte	0x91
+ 2080 0211 74       		.sleb128 -12
+ 2081 0212 00       		.byte	0x0
+ 2082 0213 0D       		.uleb128 0xd
+ 2083 0214 6F000000 		.4byte	0x6f
+ 2084 0218 23020000 		.4byte	0x223
+ 2085 021c 0E       		.uleb128 0xe
+ 2086 021d BF000000 		.4byte	0xbf
+ 2087 0221 01       		.byte	0x1
+ 2088 0222 00       		.byte	0x0
+ 2089 0223 0F       		.uleb128 0xf
+ 2090 0224 68000000 		.4byte	.LASF30
+ 2091 0228 01       		.byte	0x1
+ 2092 0229 5E02     		.2byte	0x25e
+ 2093 022b 01       		.byte	0x1
+ 2094 022c 00000000 		.4byte	.LFB12
+ 2095 0230 2A000000 		.4byte	.LFE12
+ 2096 0234 28020000 		.4byte	.LLST12
+ 2097 0238 0F       		.uleb128 0xf
+ 2098 0239 2D000000 		.4byte	.LASF31
+ 2099 023d 01       		.byte	0x1
+ 2100 023e 7702     		.2byte	0x277
+ 2101 0240 01       		.byte	0x1
+ 2102 0241 00000000 		.4byte	.LFB13
+ 2103 0245 1A000000 		.4byte	.LFE13
+ 2104 0249 53020000 		.4byte	.LLST13
+ 2105 024d 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 54
+
+
+ 2106 024e C4010000 		.4byte	.LASF32
+ 2107 0252 01       		.byte	0x1
+ 2108 0253 9002     		.2byte	0x290
+ 2109 0255 01       		.byte	0x1
+ 2110 0256 00000000 		.4byte	.LFB14
+ 2111 025a 8A000000 		.4byte	.LFE14
+ 2112 025e 7E020000 		.4byte	.LLST14
+ 2113 0262 85020000 		.4byte	0x285
+ 2114 0266 0C       		.uleb128 0xc
+ 2115 0267 67030000 		.4byte	.LASF33
+ 2116 026b 01       		.byte	0x1
+ 2117 026c 9202     		.2byte	0x292
+ 2118 026e 6F000000 		.4byte	0x6f
+ 2119 0272 02       		.byte	0x2
+ 2120 0273 91       		.byte	0x91
+ 2121 0274 77       		.sleb128 -9
+ 2122 0275 0C       		.uleb128 0xc
+ 2123 0276 03040000 		.4byte	.LASF34
+ 2124 027a 01       		.byte	0x1
+ 2125 027b 9202     		.2byte	0x292
+ 2126 027d 13020000 		.4byte	0x213
+ 2127 0281 02       		.byte	0x2
+ 2128 0282 91       		.byte	0x91
+ 2129 0283 74       		.sleb128 -12
+ 2130 0284 00       		.byte	0x0
+ 2131 0285 0F       		.uleb128 0xf
+ 2132 0286 FB010000 		.4byte	.LASF35
+ 2133 028a 01       		.byte	0x1
+ 2134 028b BA02     		.2byte	0x2ba
+ 2135 028d 01       		.byte	0x1
+ 2136 028e 00000000 		.4byte	.LFB15
+ 2137 0292 2A000000 		.4byte	.LFE15
+ 2138 0296 B5020000 		.4byte	.LLST15
+ 2139 029a 0F       		.uleb128 0xf
+ 2140 029b 0E000000 		.4byte	.LASF36
+ 2141 029f 01       		.byte	0x1
+ 2142 02a0 D302     		.2byte	0x2d3
+ 2143 02a2 01       		.byte	0x1
+ 2144 02a3 00000000 		.4byte	.LFB16
+ 2145 02a7 1A000000 		.4byte	.LFE16
+ 2146 02ab E0020000 		.4byte	.LLST16
+ 2147 02af 0B       		.uleb128 0xb
+ 2148 02b0 B4000000 		.4byte	.LASF37
+ 2149 02b4 01       		.byte	0x1
+ 2150 02b5 ED02     		.2byte	0x2ed
+ 2151 02b7 01       		.byte	0x1
+ 2152 02b8 00000000 		.4byte	.LFB17
+ 2153 02bc 8A000000 		.4byte	.LFE17
+ 2154 02c0 0B030000 		.4byte	.LLST17
+ 2155 02c4 E7020000 		.4byte	0x2e7
+ 2156 02c8 0C       		.uleb128 0xc
+ 2157 02c9 4D030000 		.4byte	.LASF28
+ 2158 02cd 01       		.byte	0x1
+ 2159 02ce EF02     		.2byte	0x2ef
+ 2160 02d0 6F000000 		.4byte	0x6f
+ 2161 02d4 02       		.byte	0x2
+ 2162 02d5 91       		.byte	0x91
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 55
+
+
+ 2163 02d6 77       		.sleb128 -9
+ 2164 02d7 0C       		.uleb128 0xc
+ 2165 02d8 AF010000 		.4byte	.LASF29
+ 2166 02dc 01       		.byte	0x1
+ 2167 02dd EF02     		.2byte	0x2ef
+ 2168 02df 13020000 		.4byte	0x213
+ 2169 02e3 02       		.byte	0x2
+ 2170 02e4 91       		.byte	0x91
+ 2171 02e5 74       		.sleb128 -12
+ 2172 02e6 00       		.byte	0x0
+ 2173 02e7 0F       		.uleb128 0xf
+ 2174 02e8 92040000 		.4byte	.LASF38
+ 2175 02ec 01       		.byte	0x1
+ 2176 02ed 1703     		.2byte	0x317
+ 2177 02ef 01       		.byte	0x1
+ 2178 02f0 00000000 		.4byte	.LFB18
+ 2179 02f4 2A000000 		.4byte	.LFE18
+ 2180 02f8 42030000 		.4byte	.LLST18
+ 2181 02fc 0F       		.uleb128 0xf
+ 2182 02fd 6F020000 		.4byte	.LASF39
+ 2183 0301 01       		.byte	0x1
+ 2184 0302 3003     		.2byte	0x330
+ 2185 0304 01       		.byte	0x1
+ 2186 0305 00000000 		.4byte	.LFB19
+ 2187 0309 1A000000 		.4byte	.LFE19
+ 2188 030d 6D030000 		.4byte	.LLST19
+ 2189 0311 0B       		.uleb128 0xb
+ 2190 0312 1B020000 		.4byte	.LASF40
+ 2191 0316 01       		.byte	0x1
+ 2192 0317 4903     		.2byte	0x349
+ 2193 0319 01       		.byte	0x1
+ 2194 031a 00000000 		.4byte	.LFB20
+ 2195 031e 8A000000 		.4byte	.LFE20
+ 2196 0322 98030000 		.4byte	.LLST20
+ 2197 0326 49030000 		.4byte	0x349
+ 2198 032a 0C       		.uleb128 0xc
+ 2199 032b 67030000 		.4byte	.LASF33
+ 2200 032f 01       		.byte	0x1
+ 2201 0330 4B03     		.2byte	0x34b
+ 2202 0332 6F000000 		.4byte	0x6f
+ 2203 0336 02       		.byte	0x2
+ 2204 0337 91       		.byte	0x91
+ 2205 0338 77       		.sleb128 -9
+ 2206 0339 0C       		.uleb128 0xc
+ 2207 033a 03040000 		.4byte	.LASF34
+ 2208 033e 01       		.byte	0x1
+ 2209 033f 4B03     		.2byte	0x34b
+ 2210 0341 13020000 		.4byte	0x213
+ 2211 0345 02       		.byte	0x2
+ 2212 0346 91       		.byte	0x91
+ 2213 0347 74       		.sleb128 -12
+ 2214 0348 00       		.byte	0x0
+ 2215 0349 0F       		.uleb128 0xf
+ 2216 034a 3B040000 		.4byte	.LASF41
+ 2217 034e 01       		.byte	0x1
+ 2218 034f 7303     		.2byte	0x373
+ 2219 0351 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 56
+
+
+ 2220 0352 00000000 		.4byte	.LFB21
+ 2221 0356 2A000000 		.4byte	.LFE21
+ 2222 035a CF030000 		.4byte	.LLST21
+ 2223 035e 0F       		.uleb128 0xf
+ 2224 035f CF030000 		.4byte	.LASF42
+ 2225 0363 01       		.byte	0x1
+ 2226 0364 8C03     		.2byte	0x38c
+ 2227 0366 01       		.byte	0x1
+ 2228 0367 00000000 		.4byte	.LFB22
+ 2229 036b 1A000000 		.4byte	.LFE22
+ 2230 036f FA030000 		.4byte	.LLST22
+ 2231 0373 10       		.uleb128 0x10
+ 2232 0374 46000000 		.4byte	.LASF43
+ 2233 0378 01       		.byte	0x1
+ 2234 0379 46       		.byte	0x46
+ 2235 037a B4000000 		.4byte	0xb4
+ 2236 037e 05       		.byte	0x5
+ 2237 037f 03       		.byte	0x3
+ 2238 0380 00000000 		.4byte	PDM_CIC_backup
+ 2239 0384 11       		.uleb128 0x11
+ 2240 0385 84010000 		.4byte	.LASF44
+ 2241 0389 04       		.byte	0x4
+ 2242 038a 1B       		.byte	0x1b
+ 2243 038b 6F000000 		.4byte	0x6f
+ 2244 038f 01       		.byte	0x1
+ 2245 0390 01       		.byte	0x1
+ 2246 0391 11       		.uleb128 0x11
+ 2247 0392 B0030000 		.4byte	.LASF45
+ 2248 0396 05       		.byte	0x5
+ 2249 0397 1B       		.byte	0x1b
+ 2250 0398 6F000000 		.4byte	0x6f
+ 2251 039c 01       		.byte	0x1
+ 2252 039d 01       		.byte	0x1
+ 2253 039e 11       		.uleb128 0x11
+ 2254 039f 82000000 		.4byte	.LASF46
+ 2255 03a3 06       		.byte	0x6
+ 2256 03a4 1B       		.byte	0x1b
+ 2257 03a5 6F000000 		.4byte	0x6f
+ 2258 03a9 01       		.byte	0x1
+ 2259 03aa 01       		.byte	0x1
+ 2260 03ab 11       		.uleb128 0x11
+ 2261 03ac FA020000 		.4byte	.LASF47
+ 2262 03b0 07       		.byte	0x7
+ 2263 03b1 1B       		.byte	0x1b
+ 2264 03b2 6F000000 		.4byte	0x6f
+ 2265 03b6 01       		.byte	0x1
+ 2266 03b7 01       		.byte	0x1
+ 2267 03b8 12       		.uleb128 0x12
+ 2268 03b9 A0030000 		.4byte	.LASF48
+ 2269 03bd 01       		.byte	0x1
+ 2270 03be 44       		.byte	0x44
+ 2271 03bf 6F000000 		.4byte	0x6f
+ 2272 03c3 01       		.byte	0x1
+ 2273 03c4 05       		.byte	0x5
+ 2274 03c5 03       		.byte	0x3
+ 2275 03c6 00000000 		.4byte	PDM_CIC_initVar
+ 2276 03ca 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 57
+
+
+ 2277              		.section	.debug_abbrev
+ 2278 0000 01       		.uleb128 0x1
+ 2279 0001 11       		.uleb128 0x11
+ 2280 0002 01       		.byte	0x1
+ 2281 0003 25       		.uleb128 0x25
+ 2282 0004 0E       		.uleb128 0xe
+ 2283 0005 13       		.uleb128 0x13
+ 2284 0006 0B       		.uleb128 0xb
+ 2285 0007 03       		.uleb128 0x3
+ 2286 0008 0E       		.uleb128 0xe
+ 2287 0009 1B       		.uleb128 0x1b
+ 2288 000a 0E       		.uleb128 0xe
+ 2289 000b 11       		.uleb128 0x11
+ 2290 000c 01       		.uleb128 0x1
+ 2291 000d 52       		.uleb128 0x52
+ 2292 000e 01       		.uleb128 0x1
+ 2293 000f 55       		.uleb128 0x55
+ 2294 0010 06       		.uleb128 0x6
+ 2295 0011 10       		.uleb128 0x10
+ 2296 0012 06       		.uleb128 0x6
+ 2297 0013 00       		.byte	0x0
+ 2298 0014 00       		.byte	0x0
+ 2299 0015 02       		.uleb128 0x2
+ 2300 0016 24       		.uleb128 0x24
+ 2301 0017 00       		.byte	0x0
+ 2302 0018 0B       		.uleb128 0xb
+ 2303 0019 0B       		.uleb128 0xb
+ 2304 001a 3E       		.uleb128 0x3e
+ 2305 001b 0B       		.uleb128 0xb
+ 2306 001c 03       		.uleb128 0x3
+ 2307 001d 0E       		.uleb128 0xe
+ 2308 001e 00       		.byte	0x0
+ 2309 001f 00       		.byte	0x0
+ 2310 0020 03       		.uleb128 0x3
+ 2311 0021 24       		.uleb128 0x24
+ 2312 0022 00       		.byte	0x0
+ 2313 0023 0B       		.uleb128 0xb
+ 2314 0024 0B       		.uleb128 0xb
+ 2315 0025 3E       		.uleb128 0x3e
+ 2316 0026 0B       		.uleb128 0xb
+ 2317 0027 03       		.uleb128 0x3
+ 2318 0028 08       		.uleb128 0x8
+ 2319 0029 00       		.byte	0x0
+ 2320 002a 00       		.byte	0x0
+ 2321 002b 04       		.uleb128 0x4
+ 2322 002c 16       		.uleb128 0x16
+ 2323 002d 00       		.byte	0x0
+ 2324 002e 03       		.uleb128 0x3
+ 2325 002f 0E       		.uleb128 0xe
+ 2326 0030 3A       		.uleb128 0x3a
+ 2327 0031 0B       		.uleb128 0xb
+ 2328 0032 3B       		.uleb128 0x3b
+ 2329 0033 0B       		.uleb128 0xb
+ 2330 0034 49       		.uleb128 0x49
+ 2331 0035 13       		.uleb128 0x13
+ 2332 0036 00       		.byte	0x0
+ 2333 0037 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 58
+
+
+ 2334 0038 05       		.uleb128 0x5
+ 2335 0039 13       		.uleb128 0x13
+ 2336 003a 01       		.byte	0x1
+ 2337 003b 0B       		.uleb128 0xb
+ 2338 003c 0B       		.uleb128 0xb
+ 2339 003d 3A       		.uleb128 0x3a
+ 2340 003e 0B       		.uleb128 0xb
+ 2341 003f 3B       		.uleb128 0x3b
+ 2342 0040 0B       		.uleb128 0xb
+ 2343 0041 01       		.uleb128 0x1
+ 2344 0042 13       		.uleb128 0x13
+ 2345 0043 00       		.byte	0x0
+ 2346 0044 00       		.byte	0x0
+ 2347 0045 06       		.uleb128 0x6
+ 2348 0046 0D       		.uleb128 0xd
+ 2349 0047 00       		.byte	0x0
+ 2350 0048 03       		.uleb128 0x3
+ 2351 0049 0E       		.uleb128 0xe
+ 2352 004a 3A       		.uleb128 0x3a
+ 2353 004b 0B       		.uleb128 0xb
+ 2354 004c 3B       		.uleb128 0x3b
+ 2355 004d 0B       		.uleb128 0xb
+ 2356 004e 49       		.uleb128 0x49
+ 2357 004f 13       		.uleb128 0x13
+ 2358 0050 38       		.uleb128 0x38
+ 2359 0051 0A       		.uleb128 0xa
+ 2360 0052 00       		.byte	0x0
+ 2361 0053 00       		.byte	0x0
+ 2362 0054 07       		.uleb128 0x7
+ 2363 0055 24       		.uleb128 0x24
+ 2364 0056 00       		.byte	0x0
+ 2365 0057 0B       		.uleb128 0xb
+ 2366 0058 0B       		.uleb128 0xb
+ 2367 0059 3E       		.uleb128 0x3e
+ 2368 005a 0B       		.uleb128 0xb
+ 2369 005b 00       		.byte	0x0
+ 2370 005c 00       		.byte	0x0
+ 2371 005d 08       		.uleb128 0x8
+ 2372 005e 2E       		.uleb128 0x2e
+ 2373 005f 00       		.byte	0x0
+ 2374 0060 3F       		.uleb128 0x3f
+ 2375 0061 0C       		.uleb128 0xc
+ 2376 0062 03       		.uleb128 0x3
+ 2377 0063 0E       		.uleb128 0xe
+ 2378 0064 3A       		.uleb128 0x3a
+ 2379 0065 0B       		.uleb128 0xb
+ 2380 0066 3B       		.uleb128 0x3b
+ 2381 0067 0B       		.uleb128 0xb
+ 2382 0068 27       		.uleb128 0x27
+ 2383 0069 0C       		.uleb128 0xc
+ 2384 006a 11       		.uleb128 0x11
+ 2385 006b 01       		.uleb128 0x1
+ 2386 006c 12       		.uleb128 0x12
+ 2387 006d 01       		.uleb128 0x1
+ 2388 006e 40       		.uleb128 0x40
+ 2389 006f 06       		.uleb128 0x6
+ 2390 0070 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 59
+
+
+ 2391 0071 00       		.byte	0x0
+ 2392 0072 09       		.uleb128 0x9
+ 2393 0073 2E       		.uleb128 0x2e
+ 2394 0074 00       		.byte	0x0
+ 2395 0075 3F       		.uleb128 0x3f
+ 2396 0076 0C       		.uleb128 0xc
+ 2397 0077 03       		.uleb128 0x3
+ 2398 0078 0E       		.uleb128 0xe
+ 2399 0079 3A       		.uleb128 0x3a
+ 2400 007a 0B       		.uleb128 0xb
+ 2401 007b 3B       		.uleb128 0x3b
+ 2402 007c 05       		.uleb128 0x5
+ 2403 007d 27       		.uleb128 0x27
+ 2404 007e 0C       		.uleb128 0xc
+ 2405 007f 11       		.uleb128 0x11
+ 2406 0080 01       		.uleb128 0x1
+ 2407 0081 12       		.uleb128 0x12
+ 2408 0082 01       		.uleb128 0x1
+ 2409 0083 40       		.uleb128 0x40
+ 2410 0084 06       		.uleb128 0x6
+ 2411 0085 00       		.byte	0x0
+ 2412 0086 00       		.byte	0x0
+ 2413 0087 0A       		.uleb128 0xa
+ 2414 0088 2E       		.uleb128 0x2e
+ 2415 0089 00       		.byte	0x0
+ 2416 008a 3F       		.uleb128 0x3f
+ 2417 008b 0C       		.uleb128 0xc
+ 2418 008c 03       		.uleb128 0x3
+ 2419 008d 0E       		.uleb128 0xe
+ 2420 008e 3A       		.uleb128 0x3a
+ 2421 008f 0B       		.uleb128 0xb
+ 2422 0090 3B       		.uleb128 0x3b
+ 2423 0091 05       		.uleb128 0x5
+ 2424 0092 27       		.uleb128 0x27
+ 2425 0093 0C       		.uleb128 0xc
+ 2426 0094 49       		.uleb128 0x49
+ 2427 0095 13       		.uleb128 0x13
+ 2428 0096 11       		.uleb128 0x11
+ 2429 0097 01       		.uleb128 0x1
+ 2430 0098 12       		.uleb128 0x12
+ 2431 0099 01       		.uleb128 0x1
+ 2432 009a 40       		.uleb128 0x40
+ 2433 009b 06       		.uleb128 0x6
+ 2434 009c 00       		.byte	0x0
+ 2435 009d 00       		.byte	0x0
+ 2436 009e 0B       		.uleb128 0xb
+ 2437 009f 2E       		.uleb128 0x2e
+ 2438 00a0 01       		.byte	0x1
+ 2439 00a1 03       		.uleb128 0x3
+ 2440 00a2 0E       		.uleb128 0xe
+ 2441 00a3 3A       		.uleb128 0x3a
+ 2442 00a4 0B       		.uleb128 0xb
+ 2443 00a5 3B       		.uleb128 0x3b
+ 2444 00a6 05       		.uleb128 0x5
+ 2445 00a7 27       		.uleb128 0x27
+ 2446 00a8 0C       		.uleb128 0xc
+ 2447 00a9 11       		.uleb128 0x11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 60
+
+
+ 2448 00aa 01       		.uleb128 0x1
+ 2449 00ab 12       		.uleb128 0x12
+ 2450 00ac 01       		.uleb128 0x1
+ 2451 00ad 40       		.uleb128 0x40
+ 2452 00ae 06       		.uleb128 0x6
+ 2453 00af 01       		.uleb128 0x1
+ 2454 00b0 13       		.uleb128 0x13
+ 2455 00b1 00       		.byte	0x0
+ 2456 00b2 00       		.byte	0x0
+ 2457 00b3 0C       		.uleb128 0xc
+ 2458 00b4 34       		.uleb128 0x34
+ 2459 00b5 00       		.byte	0x0
+ 2460 00b6 03       		.uleb128 0x3
+ 2461 00b7 0E       		.uleb128 0xe
+ 2462 00b8 3A       		.uleb128 0x3a
+ 2463 00b9 0B       		.uleb128 0xb
+ 2464 00ba 3B       		.uleb128 0x3b
+ 2465 00bb 05       		.uleb128 0x5
+ 2466 00bc 49       		.uleb128 0x49
+ 2467 00bd 13       		.uleb128 0x13
+ 2468 00be 02       		.uleb128 0x2
+ 2469 00bf 0A       		.uleb128 0xa
+ 2470 00c0 00       		.byte	0x0
+ 2471 00c1 00       		.byte	0x0
+ 2472 00c2 0D       		.uleb128 0xd
+ 2473 00c3 01       		.uleb128 0x1
+ 2474 00c4 01       		.byte	0x1
+ 2475 00c5 49       		.uleb128 0x49
+ 2476 00c6 13       		.uleb128 0x13
+ 2477 00c7 01       		.uleb128 0x1
+ 2478 00c8 13       		.uleb128 0x13
+ 2479 00c9 00       		.byte	0x0
+ 2480 00ca 00       		.byte	0x0
+ 2481 00cb 0E       		.uleb128 0xe
+ 2482 00cc 21       		.uleb128 0x21
+ 2483 00cd 00       		.byte	0x0
+ 2484 00ce 49       		.uleb128 0x49
+ 2485 00cf 13       		.uleb128 0x13
+ 2486 00d0 2F       		.uleb128 0x2f
+ 2487 00d1 0B       		.uleb128 0xb
+ 2488 00d2 00       		.byte	0x0
+ 2489 00d3 00       		.byte	0x0
+ 2490 00d4 0F       		.uleb128 0xf
+ 2491 00d5 2E       		.uleb128 0x2e
+ 2492 00d6 00       		.byte	0x0
+ 2493 00d7 03       		.uleb128 0x3
+ 2494 00d8 0E       		.uleb128 0xe
+ 2495 00d9 3A       		.uleb128 0x3a
+ 2496 00da 0B       		.uleb128 0xb
+ 2497 00db 3B       		.uleb128 0x3b
+ 2498 00dc 05       		.uleb128 0x5
+ 2499 00dd 27       		.uleb128 0x27
+ 2500 00de 0C       		.uleb128 0xc
+ 2501 00df 11       		.uleb128 0x11
+ 2502 00e0 01       		.uleb128 0x1
+ 2503 00e1 12       		.uleb128 0x12
+ 2504 00e2 01       		.uleb128 0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 61
+
+
+ 2505 00e3 40       		.uleb128 0x40
+ 2506 00e4 06       		.uleb128 0x6
+ 2507 00e5 00       		.byte	0x0
+ 2508 00e6 00       		.byte	0x0
+ 2509 00e7 10       		.uleb128 0x10
+ 2510 00e8 34       		.uleb128 0x34
+ 2511 00e9 00       		.byte	0x0
+ 2512 00ea 03       		.uleb128 0x3
+ 2513 00eb 0E       		.uleb128 0xe
+ 2514 00ec 3A       		.uleb128 0x3a
+ 2515 00ed 0B       		.uleb128 0xb
+ 2516 00ee 3B       		.uleb128 0x3b
+ 2517 00ef 0B       		.uleb128 0xb
+ 2518 00f0 49       		.uleb128 0x49
+ 2519 00f1 13       		.uleb128 0x13
+ 2520 00f2 02       		.uleb128 0x2
+ 2521 00f3 0A       		.uleb128 0xa
+ 2522 00f4 00       		.byte	0x0
+ 2523 00f5 00       		.byte	0x0
+ 2524 00f6 11       		.uleb128 0x11
+ 2525 00f7 34       		.uleb128 0x34
+ 2526 00f8 00       		.byte	0x0
+ 2527 00f9 03       		.uleb128 0x3
+ 2528 00fa 0E       		.uleb128 0xe
+ 2529 00fb 3A       		.uleb128 0x3a
+ 2530 00fc 0B       		.uleb128 0xb
+ 2531 00fd 3B       		.uleb128 0x3b
+ 2532 00fe 0B       		.uleb128 0xb
+ 2533 00ff 49       		.uleb128 0x49
+ 2534 0100 13       		.uleb128 0x13
+ 2535 0101 3F       		.uleb128 0x3f
+ 2536 0102 0C       		.uleb128 0xc
+ 2537 0103 3C       		.uleb128 0x3c
+ 2538 0104 0C       		.uleb128 0xc
+ 2539 0105 00       		.byte	0x0
+ 2540 0106 00       		.byte	0x0
+ 2541 0107 12       		.uleb128 0x12
+ 2542 0108 34       		.uleb128 0x34
+ 2543 0109 00       		.byte	0x0
+ 2544 010a 03       		.uleb128 0x3
+ 2545 010b 0E       		.uleb128 0xe
+ 2546 010c 3A       		.uleb128 0x3a
+ 2547 010d 0B       		.uleb128 0xb
+ 2548 010e 3B       		.uleb128 0x3b
+ 2549 010f 0B       		.uleb128 0xb
+ 2550 0110 49       		.uleb128 0x49
+ 2551 0111 13       		.uleb128 0x13
+ 2552 0112 3F       		.uleb128 0x3f
+ 2553 0113 0C       		.uleb128 0xc
+ 2554 0114 02       		.uleb128 0x2
+ 2555 0115 0A       		.uleb128 0xa
+ 2556 0116 00       		.byte	0x0
+ 2557 0117 00       		.byte	0x0
+ 2558 0118 00       		.byte	0x0
+ 2559              		.section	.debug_pubnames,"",%progbits
+ 2560 0000 08010000 		.4byte	0x108
+ 2561 0004 0200     		.2byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 62
+
+
+ 2562 0006 00000000 		.4byte	.Ldebug_info0
+ 2563 000a CB030000 		.4byte	0x3cb
+ 2564 000e C2000000 		.4byte	0xc2
+ 2565 0012 50444D5F 		.ascii	"PDM_CIC_Start\000"
+ 2565      4349435F 
+ 2565      53746172 
+ 2565      7400
+ 2566 0020 D7000000 		.4byte	0xd7
+ 2567 0024 50444D5F 		.ascii	"PDM_CIC_Stop\000"
+ 2567      4349435F 
+ 2567      53746F70 
+ 2567      00
+ 2568 0031 EC000000 		.4byte	0xec
+ 2569 0035 50444D5F 		.ascii	"PDM_CIC_SaveConfig\000"
+ 2569      4349435F 
+ 2569      53617665 
+ 2569      436F6E66 
+ 2569      696700
+ 2570 0048 01010000 		.4byte	0x101
+ 2571 004c 50444D5F 		.ascii	"PDM_CIC_RestoreConfig\000"
+ 2571      4349435F 
+ 2571      52657374 
+ 2571      6F726543 
+ 2571      6F6E6669 
+ 2572 0062 17010000 		.4byte	0x117
+ 2573 0066 50444D5F 		.ascii	"PDM_CIC_Sleep\000"
+ 2573      4349435F 
+ 2573      536C6565 
+ 2573      7000
+ 2574 0074 2D010000 		.4byte	0x12d
+ 2575 0078 50444D5F 		.ascii	"PDM_CIC_Wakeup\000"
+ 2575      4349435F 
+ 2575      57616B65 
+ 2575      757000
+ 2576 0087 43010000 		.4byte	0x143
+ 2577 008b 50444D5F 		.ascii	"PDM_CIC_ReadInterruptStatus\000"
+ 2577      4349435F 
+ 2577      52656164 
+ 2577      496E7465 
+ 2577      72727570 
+ 2578 00a7 5D010000 		.4byte	0x15d
+ 2579 00ab 50444D5F 		.ascii	"PDM_CIC_EnableInterruptGeneration\000"
+ 2579      4349435F 
+ 2579      456E6162 
+ 2579      6C65496E 
+ 2579      74657272 
+ 2580 00cd 73010000 		.4byte	0x173
+ 2581 00d1 50444D5F 		.ascii	"PDM_CIC_DisableInterruptGeneration\000"
+ 2581      4349435F 
+ 2581      44697361 
+ 2581      626C6549 
+ 2581      6E746572 
+ 2582 00f4 B8030000 		.4byte	0x3b8
+ 2583 00f8 50444D5F 		.ascii	"PDM_CIC_initVar\000"
+ 2583      4349435F 
+ 2583      696E6974 
+ 2583      56617200 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 63
+
+
+ 2584 0108 00000000 		.4byte	0x0
+ 2585              		.section	.debug_aranges,"",%progbits
+ 2586 0000 CC000000 		.4byte	0xcc
+ 2587 0004 0200     		.2byte	0x2
+ 2588 0006 00000000 		.4byte	.Ldebug_info0
+ 2589 000a 04       		.byte	0x4
+ 2590 000b 00       		.byte	0x0
+ 2591 000c 0000     		.2byte	0x0
+ 2592 000e 0000     		.2byte	0x0
+ 2593 0010 00000000 		.4byte	.LFB0
+ 2594 0014 88000000 		.4byte	.LFE0-.LFB0
+ 2595 0018 00000000 		.4byte	.LFB1
+ 2596 001c 38000000 		.4byte	.LFE1-.LFB1
+ 2597 0020 00000000 		.4byte	.LFB2
+ 2598 0024 20000000 		.4byte	.LFE2-.LFB2
+ 2599 0028 00000000 		.4byte	.LFB3
+ 2600 002c 1E000000 		.4byte	.LFE3-.LFB3
+ 2601 0030 00000000 		.4byte	.LFB4
+ 2602 0034 2A000000 		.4byte	.LFE4-.LFB4
+ 2603 0038 00000000 		.4byte	.LFB5
+ 2604 003c 1C000000 		.4byte	.LFE5-.LFB5
+ 2605 0040 00000000 		.4byte	.LFB6
+ 2606 0044 0E000000 		.4byte	.LFE6-.LFB6
+ 2607 0048 00000000 		.4byte	.LFB7
+ 2608 004c 0A000000 		.4byte	.LFE7-.LFB7
+ 2609 0050 00000000 		.4byte	.LFB8
+ 2610 0054 0A000000 		.4byte	.LFE8-.LFB8
+ 2611 0058 00000000 		.4byte	.LFB9
+ 2612 005c EA010000 		.4byte	.LFE9-.LFB9
+ 2613 0060 00000000 		.4byte	.LFB10
+ 2614 0064 3E020000 		.4byte	.LFE10-.LFB10
+ 2615 0068 00000000 		.4byte	.LFB11
+ 2616 006c 8A000000 		.4byte	.LFE11-.LFB11
+ 2617 0070 00000000 		.4byte	.LFB12
+ 2618 0074 2A000000 		.4byte	.LFE12-.LFB12
+ 2619 0078 00000000 		.4byte	.LFB13
+ 2620 007c 1A000000 		.4byte	.LFE13-.LFB13
+ 2621 0080 00000000 		.4byte	.LFB14
+ 2622 0084 8A000000 		.4byte	.LFE14-.LFB14
+ 2623 0088 00000000 		.4byte	.LFB15
+ 2624 008c 2A000000 		.4byte	.LFE15-.LFB15
+ 2625 0090 00000000 		.4byte	.LFB16
+ 2626 0094 1A000000 		.4byte	.LFE16-.LFB16
+ 2627 0098 00000000 		.4byte	.LFB17
+ 2628 009c 8A000000 		.4byte	.LFE17-.LFB17
+ 2629 00a0 00000000 		.4byte	.LFB18
+ 2630 00a4 2A000000 		.4byte	.LFE18-.LFB18
+ 2631 00a8 00000000 		.4byte	.LFB19
+ 2632 00ac 1A000000 		.4byte	.LFE19-.LFB19
+ 2633 00b0 00000000 		.4byte	.LFB20
+ 2634 00b4 8A000000 		.4byte	.LFE20-.LFB20
+ 2635 00b8 00000000 		.4byte	.LFB21
+ 2636 00bc 2A000000 		.4byte	.LFE21-.LFB21
+ 2637 00c0 00000000 		.4byte	.LFB22
+ 2638 00c4 1A000000 		.4byte	.LFE22-.LFB22
+ 2639 00c8 00000000 		.4byte	0x0
+ 2640 00cc 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 64
+
+
+ 2641              		.section	.debug_ranges,"",%progbits
+ 2642              	.Ldebug_ranges0:
+ 2643 0000 00000000 		.4byte	.Ltext0
+ 2644 0004 00000000 		.4byte	.Letext0
+ 2645 0008 00000000 		.4byte	.LFB0
+ 2646 000c 88000000 		.4byte	.LFE0
+ 2647 0010 00000000 		.4byte	.LFB1
+ 2648 0014 38000000 		.4byte	.LFE1
+ 2649 0018 00000000 		.4byte	.LFB2
+ 2650 001c 20000000 		.4byte	.LFE2
+ 2651 0020 00000000 		.4byte	.LFB3
+ 2652 0024 1E000000 		.4byte	.LFE3
+ 2653 0028 00000000 		.4byte	.LFB4
+ 2654 002c 2A000000 		.4byte	.LFE4
+ 2655 0030 00000000 		.4byte	.LFB5
+ 2656 0034 1C000000 		.4byte	.LFE5
+ 2657 0038 00000000 		.4byte	.LFB6
+ 2658 003c 0E000000 		.4byte	.LFE6
+ 2659 0040 00000000 		.4byte	.LFB7
+ 2660 0044 0A000000 		.4byte	.LFE7
+ 2661 0048 00000000 		.4byte	.LFB8
+ 2662 004c 0A000000 		.4byte	.LFE8
+ 2663 0050 00000000 		.4byte	.LFB9
+ 2664 0054 EA010000 		.4byte	.LFE9
+ 2665 0058 00000000 		.4byte	.LFB10
+ 2666 005c 3E020000 		.4byte	.LFE10
+ 2667 0060 00000000 		.4byte	.LFB11
+ 2668 0064 8A000000 		.4byte	.LFE11
+ 2669 0068 00000000 		.4byte	.LFB12
+ 2670 006c 2A000000 		.4byte	.LFE12
+ 2671 0070 00000000 		.4byte	.LFB13
+ 2672 0074 1A000000 		.4byte	.LFE13
+ 2673 0078 00000000 		.4byte	.LFB14
+ 2674 007c 8A000000 		.4byte	.LFE14
+ 2675 0080 00000000 		.4byte	.LFB15
+ 2676 0084 2A000000 		.4byte	.LFE15
+ 2677 0088 00000000 		.4byte	.LFB16
+ 2678 008c 1A000000 		.4byte	.LFE16
+ 2679 0090 00000000 		.4byte	.LFB17
+ 2680 0094 8A000000 		.4byte	.LFE17
+ 2681 0098 00000000 		.4byte	.LFB18
+ 2682 009c 2A000000 		.4byte	.LFE18
+ 2683 00a0 00000000 		.4byte	.LFB19
+ 2684 00a4 1A000000 		.4byte	.LFE19
+ 2685 00a8 00000000 		.4byte	.LFB20
+ 2686 00ac 8A000000 		.4byte	.LFE20
+ 2687 00b0 00000000 		.4byte	.LFB21
+ 2688 00b4 2A000000 		.4byte	.LFE21
+ 2689 00b8 00000000 		.4byte	.LFB22
+ 2690 00bc 1A000000 		.4byte	.LFE22
+ 2691 00c0 00000000 		.4byte	0x0
+ 2692 00c4 00000000 		.4byte	0x0
+ 2693              		.section	.debug_str,"MS",%progbits,1
+ 2694              	.LASF6:
+ 2695 0000 6C6F6E67 		.ascii	"long long int\000"
+ 2695      206C6F6E 
+ 2695      6720696E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 65
+
+
+ 2695      7400
+ 2696              	.LASF36:
+ 2697 000e 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_R_Stop\000"
+ 2697      4349435F 
+ 2697      436F6D62 
+ 2697      44305570 
+ 2697      64617465 
+ 2698              	.LASF31:
+ 2699 002d 50444D5F 		.ascii	"PDM_CIC_IntOutDma_R_Stop\000"
+ 2699      4349435F 
+ 2699      496E744F 
+ 2699      7574446D 
+ 2699      615F525F 
+ 2700              	.LASF43:
+ 2701 0046 50444D5F 		.ascii	"PDM_CIC_backup\000"
+ 2701      4349435F 
+ 2701      6261636B 
+ 2701      757000
+ 2702              	.LASF3:
+ 2703 0055 73686F72 		.ascii	"short unsigned int\000"
+ 2703      7420756E 
+ 2703      7369676E 
+ 2703      65642069 
+ 2703      6E7400
+ 2704              	.LASF30:
+ 2705 0068 50444D5F 		.ascii	"PDM_CIC_IntOutDma_R_Start\000"
+ 2705      4349435F 
+ 2705      496E744F 
+ 2705      7574446D 
+ 2705      615F525F 
+ 2706              	.LASF46:
+ 2707 0082 50444D5F 		.ascii	"PDM_CIC_DMA_CombD0Update_L_DmaHandle\000"
+ 2707      4349435F 
+ 2707      444D415F 
+ 2707      436F6D62 
+ 2707      44305570 
+ 2708              	.LASF17:
+ 2709 00a7 50444D5F 		.ascii	"PDM_CIC_Stop\000"
+ 2709      4349435F 
+ 2709      53746F70 
+ 2709      00
+ 2710              	.LASF37:
+ 2711 00b4 50444D5F 		.ascii	"PDM_CIC_IntOutDma_L_Init\000"
+ 2711      4349435F 
+ 2711      496E744F 
+ 2711      7574446D 
+ 2711      615F4C5F 
+ 2712              	.LASF9:
+ 2713 00cd 666C6F61 		.ascii	"float\000"
+ 2713      7400
+ 2714              	.LASF50:
+ 2715 00d3 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\PDM_CIC.c\000"
+ 2715      6E657261 
+ 2715      7465645F 
+ 2715      536F7572 
+ 2715      63655C50 
+ 2716              	.LASF20:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 66
+
+
+ 2717 00f6 50444D5F 		.ascii	"PDM_CIC_Sleep\000"
+ 2717      4349435F 
+ 2717      536C6565 
+ 2717      7000
+ 2718              	.LASF1:
+ 2719 0104 756E7369 		.ascii	"unsigned char\000"
+ 2719      676E6564 
+ 2719      20636861 
+ 2719      7200
+ 2720              	.LASF51:
+ 2721 0112 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
+ 2721      665C486F 
+ 2721      6D655C44 
+ 2721      65736B74 
+ 2721      6F705C55 
+ 2722 013e 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
+ 2722      5F50354C 
+ 2722      505F5553 
+ 2722      425F4175 
+ 2722      64696F5C 
+ 2723 0170 6E00     		.ascii	"n\000"
+ 2724              	.LASF5:
+ 2725 0172 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2725      20756E73 
+ 2725      69676E65 
+ 2725      6420696E 
+ 2725      7400
+ 2726              	.LASF44:
+ 2727 0184 50444D5F 		.ascii	"PDM_CIC_DMA_CombD0Update_R_DmaHandle\000"
+ 2727      4349435F 
+ 2727      444D415F 
+ 2727      436F6D62 
+ 2727      44305570 
+ 2728              	.LASF14:
+ 2729 01a9 75696E74 		.ascii	"uint8\000"
+ 2729      3800
+ 2730              	.LASF29:
+ 2731 01af 444D415F 		.ascii	"DMA_IntegratorOut_TD\000"
+ 2731      496E7465 
+ 2731      67726174 
+ 2731      6F724F75 
+ 2731      745F5444 
+ 2732              	.LASF32:
+ 2733 01c4 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_R_Init\000"
+ 2733      4349435F 
+ 2733      436F6D62 
+ 2733      44305570 
+ 2733      64617465 
+ 2734              	.LASF26:
+ 2735 01e3 656E6162 		.ascii	"enableInterrupts\000"
+ 2735      6C65496E 
+ 2735      74657272 
+ 2735      75707473 
+ 2735      00
+ 2736              	.LASF10:
+ 2737 01f4 646F7562 		.ascii	"double\000"
+ 2737      6C6500
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 67
+
+
+ 2738              	.LASF35:
+ 2739 01fb 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_R_Start\000"
+ 2739      4349435F 
+ 2739      436F6D62 
+ 2739      44305570 
+ 2739      64617465 
+ 2740              	.LASF40:
+ 2741 021b 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_L_Init\000"
+ 2741      4349435F 
+ 2741      436F6D62 
+ 2741      44305570 
+ 2741      64617465 
+ 2742              	.LASF18:
+ 2743 023a 50444D5F 		.ascii	"PDM_CIC_SaveConfig\000"
+ 2743      4349435F 
+ 2743      53617665 
+ 2743      436F6E66 
+ 2743      696700
+ 2744              	.LASF22:
+ 2745 024d 50444D5F 		.ascii	"PDM_CIC_EnableInterruptGeneration\000"
+ 2745      4349435F 
+ 2745      456E6162 
+ 2745      6C65496E 
+ 2745      74657272 
+ 2746              	.LASF39:
+ 2747 026f 50444D5F 		.ascii	"PDM_CIC_IntOutDma_L_Stop\000"
+ 2747      4349435F 
+ 2747      496E744F 
+ 2747      7574446D 
+ 2747      615F4C5F 
+ 2748              	.LASF8:
+ 2749 0288 756E7369 		.ascii	"unsigned int\000"
+ 2749      676E6564 
+ 2749      20696E74 
+ 2749      00
+ 2750              	.LASF7:
+ 2751 0295 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2751      206C6F6E 
+ 2751      6720756E 
+ 2751      7369676E 
+ 2751      65642069 
+ 2752              	.LASF13:
+ 2753 02ac 436E7437 		.ascii	"Cnt7Period\000"
+ 2753      50657269 
+ 2753      6F6400
+ 2754              	.LASF52:
+ 2755 02b7 50444D5F 		.ascii	"PDM_CIC_ReadInterruptStatus\000"
+ 2755      4349435F 
+ 2755      52656164 
+ 2755      496E7465 
+ 2755      72727570 
+ 2756              	.LASF16:
+ 2757 02d3 50444D5F 		.ascii	"PDM_CIC_Start\000"
+ 2757      4349435F 
+ 2757      53746172 
+ 2757      7400
+ 2758              	.LASF27:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 68
+
+
+ 2759 02e1 50444D5F 		.ascii	"PDM_CIC_IntOutDma_R_Init\000"
+ 2759      4349435F 
+ 2759      496E744F 
+ 2759      7574446D 
+ 2759      615F525F 
+ 2760              	.LASF47:
+ 2761 02fa 50444D5F 		.ascii	"PDM_CIC_DMA_IntOut_L_DmaHandle\000"
+ 2761      4349435F 
+ 2761      444D415F 
+ 2761      496E744F 
+ 2761      75745F4C 
+ 2762              	.LASF49:
+ 2763 0319 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 2763      4320342E 
+ 2763      342E3100 
+ 2764              	.LASF23:
+ 2765 0325 50444D5F 		.ascii	"PDM_CIC_DisableInterruptGeneration\000"
+ 2765      4349435F 
+ 2765      44697361 
+ 2765      626C6549 
+ 2765      6E746572 
+ 2766              	.LASF11:
+ 2767 0348 63686172 		.ascii	"char\000"
+ 2767      00
+ 2768              	.LASF28:
+ 2769 034d 444D415F 		.ascii	"DMA_IntegratorOut_Channel\000"
+ 2769      496E7465 
+ 2769      67726174 
+ 2769      6F724F75 
+ 2769      745F4368 
+ 2770              	.LASF33:
+ 2771 0367 444D415F 		.ascii	"DMA_CombD0Update_Channel\000"
+ 2771      436F6D62 
+ 2771      44305570 
+ 2771      64617465 
+ 2771      5F436861 
+ 2772              	.LASF2:
+ 2773 0380 73686F72 		.ascii	"short int\000"
+ 2773      7420696E 
+ 2773      7400
+ 2774              	.LASF15:
+ 2775 038a 50444D5F 		.ascii	"PDM_CIC_BACKUP_STRUCT\000"
+ 2775      4349435F 
+ 2775      4241434B 
+ 2775      55505F53 
+ 2775      54525543 
+ 2776              	.LASF48:
+ 2777 03a0 50444D5F 		.ascii	"PDM_CIC_initVar\000"
+ 2777      4349435F 
+ 2777      696E6974 
+ 2777      56617200 
+ 2778              	.LASF45:
+ 2779 03b0 50444D5F 		.ascii	"PDM_CIC_DMA_IntOut_R_DmaHandle\000"
+ 2779      4349435F 
+ 2779      444D415F 
+ 2779      496E744F 
+ 2779      75745F52 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 69
+
+
+ 2780              	.LASF42:
+ 2781 03cf 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_L_Stop\000"
+ 2781      4349435F 
+ 2781      436F6D62 
+ 2781      44305570 
+ 2781      64617465 
+ 2782              	.LASF4:
+ 2783 03ee 6C6F6E67 		.ascii	"long int\000"
+ 2783      20696E74 
+ 2783      00
+ 2784              	.LASF12:
+ 2785 03f7 656E6162 		.ascii	"enableState\000"
+ 2785      6C655374 
+ 2785      61746500 
+ 2786              	.LASF34:
+ 2787 0403 444D415F 		.ascii	"DMA_CombD0Update_TD\000"
+ 2787      436F6D62 
+ 2787      44305570 
+ 2787      64617465 
+ 2787      5F544400 
+ 2788              	.LASF0:
+ 2789 0417 7369676E 		.ascii	"signed char\000"
+ 2789      65642063 
+ 2789      68617200 
+ 2790              	.LASF24:
+ 2791 0423 50444D5F 		.ascii	"PDM_CIC_Integrator_Init\000"
+ 2791      4349435F 
+ 2791      496E7465 
+ 2791      67726174 
+ 2791      6F725F49 
+ 2792              	.LASF41:
+ 2793 043b 50444D5F 		.ascii	"PDM_CIC_CombD0UpdateDma_L_Start\000"
+ 2793      4349435F 
+ 2793      436F6D62 
+ 2793      44305570 
+ 2793      64617465 
+ 2794              	.LASF21:
+ 2795 045b 50444D5F 		.ascii	"PDM_CIC_Wakeup\000"
+ 2795      4349435F 
+ 2795      57616B65 
+ 2795      757000
+ 2796              	.LASF19:
+ 2797 046a 50444D5F 		.ascii	"PDM_CIC_RestoreConfig\000"
+ 2797      4349435F 
+ 2797      52657374 
+ 2797      6F726543 
+ 2797      6F6E6669 
+ 2798              	.LASF25:
+ 2799 0480 50444D5F 		.ascii	"PDM_CIC_Comb_Init\000"
+ 2799      4349435F 
+ 2799      436F6D62 
+ 2799      5F496E69 
+ 2799      7400
+ 2800              	.LASF38:
+ 2801 0492 50444D5F 		.ascii	"PDM_CIC_IntOutDma_L_Start\000"
+ 2801      4349435F 
+ 2801      496E744F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccvcEeBl.s 			page 70
+
+
+ 2801      7574446D 
+ 2801      615F4C5F 
+ 2802              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

@@ -1,0 +1,549 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"main.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 69000000 		.text
+  20      02004600 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.main,"ax",%progbits
+  24              		.align	2
+  25              		.global	main
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	main, %function
+  29              	main:
+  30              	.LFB29:
+  31              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version 1.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description: This file contains the entry point for the application and 
+   7:.\main.c      **** *              handles the USB audio configuration, audio event handling and 
+   8:.\main.c      **** *              communication with USB hosts (Mac/Win PC/BeagleBoneBlack/RaspberryPi
+   9:.\main.c      **** *              /Android etc).
+  10:.\main.c      **** *
+  11:.\main.c      **** ********************************************************************************
+  12:.\main.c      **** * Copyright (2008-2013), Cypress Semiconductor Corporation.
+  13:.\main.c      **** ********************************************************************************
+  14:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  15:.\main.c      **** * protected by and subject to worldwide patent protection (United States and
+  16:.\main.c      **** * foreign), United States copyright laws and international treaty provisions.
+  17:.\main.c      **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  18:.\main.c      **** * license to copy, use, modify, create derivative works of, and compile the
+  19:.\main.c      **** * Cypress Source Code and derivative works for the sole purpose of creating
+  20:.\main.c      **** * custom software in support of licensee product to be used only in conjunction
+  21:.\main.c      **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  22:.\main.c      **** * Any reproduction, modification, translation, compilation, or representation of
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 2
+
+
+  23:.\main.c      **** * this software except as specified above is prohibited without the express
+  24:.\main.c      **** * written permission of Cypress.
+  25:.\main.c      **** *
+  26:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  27:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  28:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  29:.\main.c      **** * Cypress reserves the right to make changes without further notice to the
+  30:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out
+  31:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress
+  32:.\main.c      **** * does not authorize its products for use as critical components in life-support
+  33:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in
+  34:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  35:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of
+  36:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  37:.\main.c      **** * limited by and subject to the applicable Cypress software license agreement.
+  38:.\main.c      **** *******************************************************************************/
+  39:.\main.c      **** #include <Application.h>
+  40:.\main.c      **** #include <AudioControl.h>
+  41:.\main.c      **** #include <Configuration.h>
+  42:.\main.c      **** #include <USBInterface.h>
+  43:.\main.c      **** 
+  44:.\main.c      **** /*******************************************************************************
+  45:.\main.c      **** * Function Name: main
+  46:.\main.c      **** ********************************************************************************
+  47:.\main.c      **** * Summary:
+  48:.\main.c      **** *        Main routine does following tasks.
+  49:.\main.c      **** *        - Initializes all the components for digital audio 
+  50:.\main.c      **** *        - Initializes all the components for user interface and other system functions
+  51:.\main.c      **** *        - Handles hot plug of USB host - Mac/PC/(any USB Host)
+  52:.\main.c      **** *		 - Handles USB host disconnection events
+  53:.\main.c      **** *        - Handles dynamic sample rate change, audio stream start/stop events
+  54:.\main.c      **** *        
+  55:.\main.c      **** * Parameters:
+  56:.\main.c      **** *  void
+  57:.\main.c      **** *
+  58:.\main.c      **** * Return:
+  59:.\main.c      **** *  void
+  60:.\main.c      **** *
+  61:.\main.c      **** *******************************************************************************/
+  62:.\main.c      **** void main(void)
+  63:.\main.c      **** {
+  32              		.loc 1 63 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39 0002 00AF     		add	r7, sp, #0
+  40              		.cfi_offset 14, -4
+  41              		.cfi_offset 7, -8
+  42              	.LCFI1:
+  43              		.cfi_def_cfa_register 7
+  64:.\main.c      **** 	/* Setup the Audio pipe from USB to I2S. After the call to this API, the system clock architecture
+  65:.\main.c      ****       * from start up mode to idle mode. System clocks such as PLL are shutdown. Any of the applica
+  66:.\main.c      **** 	  * layer components which are using PLL as the source of clock would seize to function after this
+  67:.\main.c      ****       * The clocks are shutdown to minimize idle mode current consumption. The clocks are turned ba
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 3
+
+
+  68:.\main.c      **** 	  *	Audio Input or Output stream becomes active. Details of all the system clocks in idle mode
+  69:.\main.c      ****       * are shown in "Idle Mode Clock Info" page of the TopDesign. */
+  70:.\main.c      ****     ConfigureAudioPath();
+  44              		.loc 1 70 0
+  45 0004 FFF7FEFF 		bl	ConfigureAudioPath
+  71:.\main.c      ****     
+  72:.\main.c      ****     /* Initialize the components other than audio components such as system timer and watchdog. 
+  73:.\main.c      **** 	 * Also configure the clock sources of all these components such that these components work in bot
+  74:.\main.c      **** 	 * Details of all the system clocks in idle mode are shown in "Idle Mode Clock Info" page of the T
+  75:.\main.c      ****     ConfigureApplication();
+  46              		.loc 1 75 0
+  47 0008 FFF7FEFF 		bl	ConfigureApplication
+  48              	.L3:
+  76:.\main.c      ****   
+  77:.\main.c      **** 	/* USER_CODE: Placeholder for users to add any other application specific initialization code.
+  78:.\main.c      ****      * CAUTION: System will be in Idle mode at this point, which means some of the clocks are not a
+  79:.\main.c      **** 	 * Details of all the system clocks in idle mode are shown in "Idle Mode Clock Info" page of the T
+  80:.\main.c      **** 
+  81:.\main.c      **** 	while(FOREVER)
+  82:.\main.c      ****     {
+  83:.\main.c      ****         
+  84:.\main.c      ****         /* Check for USB enumeration with USB host */
+  85:.\main.c      ****         if(IsUSBConfigured() != FALSE)
+  49              		.loc 1 85 0
+  50 000c FFF7FEFF 		bl	USBFS_GetConfiguration
+  51 0010 0346     		mov	r3, r0
+  52 0012 002B     		cmp	r3, #0
+  53 0014 05D0     		beq	.L2
+  86:.\main.c      ****         {
+  87:.\main.c      ****             /* Accessory initialization routine after USB enumeration completion 
+  88:.\main.c      **** 			 * Also loads the EP's when audio playback/recording starts */
+  89:.\main.c      **** 			ServiceUSB();  
+  54              		.loc 1 89 0
+  55 0016 FFF7FEFF 		bl	ServiceUSB
+  90:.\main.c      ****             
+  91:.\main.c      ****             /* Enter low power mode if Audio stream is inactive. In low power mode all the audio co
+  92:.\main.c      ****              * (e.g., I2S) and some of the system clocks such as PLL are shutdown. 
+  93:.\main.c      **** 			 * Details of all the system clocks in idle mode are shown in "Idle Mode Clock Info" page of the
+  94:.\main.c      **** 			 * Details of all the system clocks in active mode are shown in "Active Mode Clock 44.1/48 kHz" 
+  95:.\main.c      **** 			HandleDigitalAudioLowPowerMode(); 
+  56              		.loc 1 95 0
+  57 001a FFF7FEFF 		bl	HandleDigitalAudioLowPowerMode
+  96:.\main.c      ****             
+  97:.\main.c      ****             /* USB audio sampling frequency change handler.
+  98:.\main.c      **** 			 * Checks whether host has changed audio sampling rate.
+  99:.\main.c      **** 			 * Configures AudioClkGen to generate a clock synchonized to new audio sampling rate. 
+ 100:.\main.c      **** 			 * Note: Change the I2C address of codec in Codec.h file, according to Codec used in your design
+ 101:.\main.c      ****              * Currently, codec I2C address is set to Cirrus codec (CS42L51) address. */
+ 102:.\main.c      ****             HandleSamplingFrequencyChangeRequest(); 
+  58              		.loc 1 102 0
+  59 001e FFF7FEFF 		bl	HandleSamplingFrequencyChangeRequest
+  60              	.L2:
+ 103:.\main.c      ****         }
+ 104:.\main.c      ****         
+ 105:.\main.c      ****         HandleApplicationInterface();  /* Handles all the audio playback/record related application
+  61              		.loc 1 105 0
+  62 0022 FFF7FEFF 		bl	HandleApplicationInterface
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 4
+
+
+ 106:.\main.c      **** 			
+ 107:.\main.c      **** 		HandleUSBHostInterface();     /* Check for PC/Mac USB Audio device connection */
+  63              		.loc 1 107 0
+  64 0026 FFF7FEFF 		bl	HandleUSBHostInterface
+ 108:.\main.c      **** 		                
+ 109:.\main.c      ****         HandleApplicationTimerTick();      /* Handle all the timeout events */
+  65              		.loc 1 109 0
+  66 002a FFF7FEFF 		bl	HandleApplicationTimerTick
+ 110:.\main.c      ****         
+ 111:.\main.c      ****         #ifdef ENABLE_WATCHDOG
+ 112:.\main.c      ****         CyWdtClear();                      /* Service watchdog timer */
+  67              		.loc 1 112 0
+  68 002e FFF7FEFF 		bl	CyWdtClear
+ 113:.\main.c      ****         #endif
+ 114:.\main.c      ****                 
+ 115:.\main.c      ****         #ifndef ENABLE_DIGITAL_AUDIO_OUT_ONLY
+ 116:.\main.c      ****         HandleAudioInBuffer();             /* Clear audio IN buffer when IN stream is stopped */
+  69              		.loc 1 116 0
+  70 0032 FFF7FEFF 		bl	HandleAudioInBuffer
+ 117:.\main.c      ****         #endif
+ 118:.\main.c      ****     }
+  71              		.loc 1 118 0
+  72 0036 E9E7     		b	.L3
+  73              		.cfi_endproc
+  74              	.LFE29:
+  75              		.size	main, .-main
+  76              		.text
+  77              	.Letext0:
+  78              		.section	.debug_loc,"",%progbits
+  79              	.Ldebug_loc0:
+  80              	.LLST0:
+  81 0000 00000000 		.4byte	.LFB29
+  82 0004 02000000 		.4byte	.LCFI0
+  83 0008 0100     		.2byte	0x1
+  84 000a 5D       		.byte	0x5d
+  85 000b 02000000 		.4byte	.LCFI0
+  86 000f 04000000 		.4byte	.LCFI1
+  87 0013 0200     		.2byte	0x2
+  88 0015 7D       		.byte	0x7d
+  89 0016 08       		.sleb128 8
+  90 0017 04000000 		.4byte	.LCFI1
+  91 001b 38000000 		.4byte	.LFE29
+  92 001f 0200     		.2byte	0x2
+  93 0021 77       		.byte	0x77
+  94 0022 08       		.sleb128 8
+  95 0023 00000000 		.4byte	0x0
+  96 0027 00000000 		.4byte	0x0
+  97              		.file 2 "./Generated_Source/PSoC5/core_cm3.h"
+  98              		.section	.debug_info
+  99 0000 AC000000 		.4byte	0xac
+ 100 0004 0200     		.2byte	0x2
+ 101 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 102 000a 04       		.byte	0x4
+ 103 000b 01       		.uleb128 0x1
+ 104 000c 5C000000 		.4byte	.LASF12
+ 105 0010 01       		.byte	0x1
+ 106 0011 84000000 		.4byte	.LASF13
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 5
+
+
+ 107 0015 94000000 		.4byte	.LASF14
+ 108 0019 00000000 		.4byte	0x0
+ 109 001d 00000000 		.4byte	0x0
+ 110 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 111 0025 00000000 		.4byte	.Ldebug_line0
+ 112 0029 02       		.uleb128 0x2
+ 113 002a 01       		.byte	0x1
+ 114 002b 06       		.byte	0x6
+ 115 002c 01010000 		.4byte	.LASF0
+ 116 0030 02       		.uleb128 0x2
+ 117 0031 01       		.byte	0x1
+ 118 0032 08       		.byte	0x8
+ 119 0033 68000000 		.4byte	.LASF1
+ 120 0037 02       		.uleb128 0x2
+ 121 0038 02       		.byte	0x2
+ 122 0039 05       		.byte	0x5
+ 123 003a 13010000 		.4byte	.LASF2
+ 124 003e 02       		.uleb128 0x2
+ 125 003f 02       		.byte	0x2
+ 126 0040 07       		.byte	0x7
+ 127 0041 0E000000 		.4byte	.LASF3
+ 128 0045 02       		.uleb128 0x2
+ 129 0046 04       		.byte	0x4
+ 130 0047 05       		.byte	0x5
+ 131 0048 7B000000 		.4byte	.LASF4
+ 132 004c 02       		.uleb128 0x2
+ 133 004d 04       		.byte	0x4
+ 134 004e 07       		.byte	0x7
+ 135 004f 33000000 		.4byte	.LASF5
+ 136 0053 02       		.uleb128 0x2
+ 137 0054 08       		.byte	0x8
+ 138 0055 05       		.byte	0x5
+ 139 0056 00000000 		.4byte	.LASF6
+ 140 005a 02       		.uleb128 0x2
+ 141 005b 08       		.byte	0x8
+ 142 005c 07       		.byte	0x7
+ 143 005d 45000000 		.4byte	.LASF7
+ 144 0061 03       		.uleb128 0x3
+ 145 0062 04       		.byte	0x4
+ 146 0063 05       		.byte	0x5
+ 147 0064 696E7400 		.ascii	"int\000"
+ 148 0068 02       		.uleb128 0x2
+ 149 0069 04       		.byte	0x4
+ 150 006a 07       		.byte	0x7
+ 151 006b 21000000 		.4byte	.LASF8
+ 152 006f 02       		.uleb128 0x2
+ 153 0070 04       		.byte	0x4
+ 154 0071 04       		.byte	0x4
+ 155 0072 0D010000 		.4byte	.LASF9
+ 156 0076 02       		.uleb128 0x2
+ 157 0077 08       		.byte	0x8
+ 158 0078 04       		.byte	0x4
+ 159 0079 8D000000 		.4byte	.LASF10
+ 160 007d 02       		.uleb128 0x2
+ 161 007e 01       		.byte	0x1
+ 162 007f 08       		.byte	0x8
+ 163 0080 76000000 		.4byte	.LASF11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 6
+
+
+ 164 0084 04       		.uleb128 0x4
+ 165 0085 04       		.byte	0x4
+ 166 0086 07       		.byte	0x7
+ 167 0087 05       		.uleb128 0x5
+ 168 0088 01       		.byte	0x1
+ 169 0089 2E000000 		.4byte	.LASF15
+ 170 008d 01       		.byte	0x1
+ 171 008e 3E       		.byte	0x3e
+ 172 008f 01       		.byte	0x1
+ 173 0090 00000000 		.4byte	.LFB29
+ 174 0094 38000000 		.4byte	.LFE29
+ 175 0098 00000000 		.4byte	.LLST0
+ 176 009c 06       		.uleb128 0x6
+ 177 009d F4000000 		.4byte	.LASF16
+ 178 00a1 02       		.byte	0x2
+ 179 00a2 CE06     		.2byte	0x6ce
+ 180 00a4 AA000000 		.4byte	0xaa
+ 181 00a8 01       		.byte	0x1
+ 182 00a9 01       		.byte	0x1
+ 183 00aa 07       		.uleb128 0x7
+ 184 00ab 61000000 		.4byte	0x61
+ 185 00af 00       		.byte	0x0
+ 186              		.section	.debug_abbrev
+ 187 0000 01       		.uleb128 0x1
+ 188 0001 11       		.uleb128 0x11
+ 189 0002 01       		.byte	0x1
+ 190 0003 25       		.uleb128 0x25
+ 191 0004 0E       		.uleb128 0xe
+ 192 0005 13       		.uleb128 0x13
+ 193 0006 0B       		.uleb128 0xb
+ 194 0007 03       		.uleb128 0x3
+ 195 0008 0E       		.uleb128 0xe
+ 196 0009 1B       		.uleb128 0x1b
+ 197 000a 0E       		.uleb128 0xe
+ 198 000b 11       		.uleb128 0x11
+ 199 000c 01       		.uleb128 0x1
+ 200 000d 52       		.uleb128 0x52
+ 201 000e 01       		.uleb128 0x1
+ 202 000f 55       		.uleb128 0x55
+ 203 0010 06       		.uleb128 0x6
+ 204 0011 10       		.uleb128 0x10
+ 205 0012 06       		.uleb128 0x6
+ 206 0013 00       		.byte	0x0
+ 207 0014 00       		.byte	0x0
+ 208 0015 02       		.uleb128 0x2
+ 209 0016 24       		.uleb128 0x24
+ 210 0017 00       		.byte	0x0
+ 211 0018 0B       		.uleb128 0xb
+ 212 0019 0B       		.uleb128 0xb
+ 213 001a 3E       		.uleb128 0x3e
+ 214 001b 0B       		.uleb128 0xb
+ 215 001c 03       		.uleb128 0x3
+ 216 001d 0E       		.uleb128 0xe
+ 217 001e 00       		.byte	0x0
+ 218 001f 00       		.byte	0x0
+ 219 0020 03       		.uleb128 0x3
+ 220 0021 24       		.uleb128 0x24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 7
+
+
+ 221 0022 00       		.byte	0x0
+ 222 0023 0B       		.uleb128 0xb
+ 223 0024 0B       		.uleb128 0xb
+ 224 0025 3E       		.uleb128 0x3e
+ 225 0026 0B       		.uleb128 0xb
+ 226 0027 03       		.uleb128 0x3
+ 227 0028 08       		.uleb128 0x8
+ 228 0029 00       		.byte	0x0
+ 229 002a 00       		.byte	0x0
+ 230 002b 04       		.uleb128 0x4
+ 231 002c 24       		.uleb128 0x24
+ 232 002d 00       		.byte	0x0
+ 233 002e 0B       		.uleb128 0xb
+ 234 002f 0B       		.uleb128 0xb
+ 235 0030 3E       		.uleb128 0x3e
+ 236 0031 0B       		.uleb128 0xb
+ 237 0032 00       		.byte	0x0
+ 238 0033 00       		.byte	0x0
+ 239 0034 05       		.uleb128 0x5
+ 240 0035 2E       		.uleb128 0x2e
+ 241 0036 00       		.byte	0x0
+ 242 0037 3F       		.uleb128 0x3f
+ 243 0038 0C       		.uleb128 0xc
+ 244 0039 03       		.uleb128 0x3
+ 245 003a 0E       		.uleb128 0xe
+ 246 003b 3A       		.uleb128 0x3a
+ 247 003c 0B       		.uleb128 0xb
+ 248 003d 3B       		.uleb128 0x3b
+ 249 003e 0B       		.uleb128 0xb
+ 250 003f 27       		.uleb128 0x27
+ 251 0040 0C       		.uleb128 0xc
+ 252 0041 11       		.uleb128 0x11
+ 253 0042 01       		.uleb128 0x1
+ 254 0043 12       		.uleb128 0x12
+ 255 0044 01       		.uleb128 0x1
+ 256 0045 40       		.uleb128 0x40
+ 257 0046 06       		.uleb128 0x6
+ 258 0047 00       		.byte	0x0
+ 259 0048 00       		.byte	0x0
+ 260 0049 06       		.uleb128 0x6
+ 261 004a 34       		.uleb128 0x34
+ 262 004b 00       		.byte	0x0
+ 263 004c 03       		.uleb128 0x3
+ 264 004d 0E       		.uleb128 0xe
+ 265 004e 3A       		.uleb128 0x3a
+ 266 004f 0B       		.uleb128 0xb
+ 267 0050 3B       		.uleb128 0x3b
+ 268 0051 05       		.uleb128 0x5
+ 269 0052 49       		.uleb128 0x49
+ 270 0053 13       		.uleb128 0x13
+ 271 0054 3F       		.uleb128 0x3f
+ 272 0055 0C       		.uleb128 0xc
+ 273 0056 3C       		.uleb128 0x3c
+ 274 0057 0C       		.uleb128 0xc
+ 275 0058 00       		.byte	0x0
+ 276 0059 00       		.byte	0x0
+ 277 005a 07       		.uleb128 0x7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 8
+
+
+ 278 005b 35       		.uleb128 0x35
+ 279 005c 00       		.byte	0x0
+ 280 005d 49       		.uleb128 0x49
+ 281 005e 13       		.uleb128 0x13
+ 282 005f 00       		.byte	0x0
+ 283 0060 00       		.byte	0x0
+ 284 0061 00       		.byte	0x0
+ 285              		.section	.debug_pubnames,"",%progbits
+ 286 0000 17000000 		.4byte	0x17
+ 287 0004 0200     		.2byte	0x2
+ 288 0006 00000000 		.4byte	.Ldebug_info0
+ 289 000a B0000000 		.4byte	0xb0
+ 290 000e 87000000 		.4byte	0x87
+ 291 0012 6D61696E 		.ascii	"main\000"
+ 291      00
+ 292 0017 00000000 		.4byte	0x0
+ 293              		.section	.debug_aranges,"",%progbits
+ 294 0000 1C000000 		.4byte	0x1c
+ 295 0004 0200     		.2byte	0x2
+ 296 0006 00000000 		.4byte	.Ldebug_info0
+ 297 000a 04       		.byte	0x4
+ 298 000b 00       		.byte	0x0
+ 299 000c 0000     		.2byte	0x0
+ 300 000e 0000     		.2byte	0x0
+ 301 0010 00000000 		.4byte	.LFB29
+ 302 0014 38000000 		.4byte	.LFE29-.LFB29
+ 303 0018 00000000 		.4byte	0x0
+ 304 001c 00000000 		.4byte	0x0
+ 305              		.section	.debug_ranges,"",%progbits
+ 306              	.Ldebug_ranges0:
+ 307 0000 00000000 		.4byte	.Ltext0
+ 308 0004 00000000 		.4byte	.Letext0
+ 309 0008 00000000 		.4byte	.LFB29
+ 310 000c 38000000 		.4byte	.LFE29
+ 311 0010 00000000 		.4byte	0x0
+ 312 0014 00000000 		.4byte	0x0
+ 313              		.section	.debug_str,"MS",%progbits,1
+ 314              	.LASF6:
+ 315 0000 6C6F6E67 		.ascii	"long long int\000"
+ 315      206C6F6E 
+ 315      6720696E 
+ 315      7400
+ 316              	.LASF3:
+ 317 000e 73686F72 		.ascii	"short unsigned int\000"
+ 317      7420756E 
+ 317      7369676E 
+ 317      65642069 
+ 317      6E7400
+ 318              	.LASF8:
+ 319 0021 756E7369 		.ascii	"unsigned int\000"
+ 319      676E6564 
+ 319      20696E74 
+ 319      00
+ 320              	.LASF15:
+ 321 002e 6D61696E 		.ascii	"main\000"
+ 321      00
+ 322              	.LASF5:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 9
+
+
+ 323 0033 6C6F6E67 		.ascii	"long unsigned int\000"
+ 323      20756E73 
+ 323      69676E65 
+ 323      6420696E 
+ 323      7400
+ 324              	.LASF7:
+ 325 0045 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 325      206C6F6E 
+ 325      6720756E 
+ 325      7369676E 
+ 325      65642069 
+ 326              	.LASF12:
+ 327 005c 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 327      4320342E 
+ 327      342E3100 
+ 328              	.LASF1:
+ 329 0068 756E7369 		.ascii	"unsigned char\000"
+ 329      676E6564 
+ 329      20636861 
+ 329      7200
+ 330              	.LASF11:
+ 331 0076 63686172 		.ascii	"char\000"
+ 331      00
+ 332              	.LASF4:
+ 333 007b 6C6F6E67 		.ascii	"long int\000"
+ 333      20696E74 
+ 333      00
+ 334              	.LASF13:
+ 335 0084 2E5C6D61 		.ascii	".\\main.c\000"
+ 335      696E2E63 
+ 335      00
+ 336              	.LASF10:
+ 337 008d 646F7562 		.ascii	"double\000"
+ 337      6C6500
+ 338              	.LASF14:
+ 339 0094 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\USB-audio\\Firmware\\Pionee"
+ 339      665C486F 
+ 339      6D655C44 
+ 339      65736B74 
+ 339      6F705C55 
+ 340 00c0 724B6974 		.ascii	"rKit_P5LP_USB_Audio\\PioneerKit_P5LP_USB_Audio.cyds"
+ 340      5F50354C 
+ 340      505F5553 
+ 340      425F4175 
+ 340      64696F5C 
+ 341 00f2 6E00     		.ascii	"n\000"
+ 342              	.LASF16:
+ 343 00f4 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 343      52784275 
+ 343      66666572 
+ 343      00
+ 344              	.LASF0:
+ 345 0101 7369676E 		.ascii	"signed char\000"
+ 345      65642063 
+ 345      68617200 
+ 346              	.LASF9:
+ 347 010d 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccXvs4QG.s 			page 10
+
+
+ 347      7400
+ 348              	.LASF2:
+ 349 0113 73686F72 		.ascii	"short int\000"
+ 349      7420696E 
+ 349      7400
+ 350              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

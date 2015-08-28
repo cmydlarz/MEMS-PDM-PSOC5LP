@@ -1,0 +1,758 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Pin_VTarget.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 B1000000 		.text
+  20      02006400 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.Pin_VTarget_Write,"ax",%progbits
+  24              		.align	1
+  25              		.global	Pin_VTarget_Write
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	Pin_VTarget_Write, %function
+  29              	Pin_VTarget_Write:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\Pin_VTarget.c"
+   1:.\Generated_Source\PSoC5/Pin_VTarget.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Pin_VTarget.c **** * File Name: Pin_VTarget.c  
+   3:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Version 1.90
+   4:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+   5:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Description:
+   6:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+   8:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Note:
+   9:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  10:.\Generated_Source\PSoC5/Pin_VTarget.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC5/Pin_VTarget.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC5/Pin_VTarget.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC5/Pin_VTarget.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC5/Pin_VTarget.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  17:.\Generated_Source\PSoC5/Pin_VTarget.c **** #include "cytypes.h"
+  18:.\Generated_Source\PSoC5/Pin_VTarget.c **** #include "Pin_VTarget.h"
+  19:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  20:.\Generated_Source\PSoC5/Pin_VTarget.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
+  21:.\Generated_Source\PSoC5/Pin_VTarget.c **** #if !(CY_PSOC5A &&\
+  22:.\Generated_Source\PSoC5/Pin_VTarget.c **** 	 Pin_VTarget__PORT == 15 && ((Pin_VTarget__MASK & 0xC0) != 0))
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  24:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  25:.\Generated_Source\PSoC5/Pin_VTarget.c **** /*******************************************************************************
+  26:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Function Name: Pin_VTarget_Write
+  27:.\Generated_Source\PSoC5/Pin_VTarget.c **** ********************************************************************************
+  28:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  29:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Summary:
+  30:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Assign a new value to the digital port's data output register.  
+  31:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  32:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Parameters:  
+  33:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  34:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  35:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Return: 
+  36:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  None
+  37:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  
+  38:.\Generated_Source\PSoC5/Pin_VTarget.c **** *******************************************************************************/
+  39:.\Generated_Source\PSoC5/Pin_VTarget.c **** void Pin_VTarget_Write(uint8 value) 
+  40:.\Generated_Source\PSoC5/Pin_VTarget.c **** {
+  32              		.loc 1 40 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37              	.LVL0:
+  41:.\Generated_Source\PSoC5/Pin_VTarget.c ****     uint8 staticBits = (Pin_VTarget_DR & (uint8)(~Pin_VTarget_MASK));
+  38              		.loc 1 41 0
+  39 0000 044B     		ldr	r3, .L3
+  40 0002 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  42:.\Generated_Source\PSoC5/Pin_VTarget.c ****     Pin_VTarget_DR = staticBits | ((uint8)(value << Pin_VTarget_SHIFT) & Pin_VTarget_MASK);
+  41              		.loc 1 42 0
+  42 0004 02F07F02 		and	r2, r2, #127
+  43 0008 42EAC012 		orr	r2, r2, r0, lsl #7
+  44 000c D2B2     		uxtb	r2, r2
+  45 000e 1A70     		strb	r2, [r3, #0]
+  43:.\Generated_Source\PSoC5/Pin_VTarget.c **** }
+  46              		.loc 1 43 0
+  47 0010 7047     		bx	lr
+  48              	.L4:
+  49 0012 00BF     		.align	2
+  50              	.L3:
+  51 0014 10510040 		.word	1073762576
+  52              		.cfi_endproc
+  53              	.LFE0:
+  54              		.size	Pin_VTarget_Write, .-Pin_VTarget_Write
+  55              		.section	.text.Pin_VTarget_SetDriveMode,"ax",%progbits
+  56              		.align	1
+  57              		.global	Pin_VTarget_SetDriveMode
+  58              		.thumb
+  59              		.thumb_func
+  60              		.type	Pin_VTarget_SetDriveMode, %function
+  61              	Pin_VTarget_SetDriveMode:
+  62              	.LFB1:
+  44:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  45:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  46:.\Generated_Source\PSoC5/Pin_VTarget.c **** /*******************************************************************************
+  47:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Function Name: Pin_VTarget_SetDriveMode
+  48:.\Generated_Source\PSoC5/Pin_VTarget.c **** ********************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 3
+
+
+  49:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  50:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Summary:
+  51:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Change the drive mode on the pins of the port.
+  52:.\Generated_Source\PSoC5/Pin_VTarget.c **** * 
+  53:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Parameters:  
+  54:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  mode:  Change the pins to this drive mode.
+  55:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  56:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Return: 
+  57:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  None
+  58:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  59:.\Generated_Source\PSoC5/Pin_VTarget.c **** *******************************************************************************/
+  60:.\Generated_Source\PSoC5/Pin_VTarget.c **** void Pin_VTarget_SetDriveMode(uint8 mode) 
+  61:.\Generated_Source\PSoC5/Pin_VTarget.c **** {
+  63              		.loc 1 61 0
+  64              		.cfi_startproc
+  65              		@ args = 0, pretend = 0, frame = 0
+  66              		@ frame_needed = 0, uses_anonymous_args = 0
+  67              		@ link register save eliminated.
+  68              	.LVL1:
+  62:.\Generated_Source\PSoC5/Pin_VTarget.c **** 	CyPins_SetPinDriveMode(Pin_VTarget_0, mode);
+  69              		.loc 1 62 0
+  70 0000 044B     		ldr	r3, .L7
+  71 0002 00F00E00 		and	r0, r0, #14
+  72              	.LVL2:
+  73 0006 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  74 0008 02F0F102 		and	r2, r2, #241
+  75 000c 40EA0202 		orr	r2, r0, r2
+  76 0010 1A70     		strb	r2, [r3, #0]
+  63:.\Generated_Source\PSoC5/Pin_VTarget.c **** }
+  77              		.loc 1 63 0
+  78 0012 7047     		bx	lr
+  79              	.L8:
+  80              		.align	2
+  81              	.L7:
+  82 0014 0F500040 		.word	1073762319
+  83              		.cfi_endproc
+  84              	.LFE1:
+  85              		.size	Pin_VTarget_SetDriveMode, .-Pin_VTarget_SetDriveMode
+  86              		.section	.text.Pin_VTarget_Read,"ax",%progbits
+  87              		.align	1
+  88              		.global	Pin_VTarget_Read
+  89              		.thumb
+  90              		.thumb_func
+  91              		.type	Pin_VTarget_Read, %function
+  92              	Pin_VTarget_Read:
+  93              	.LFB2:
+  64:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  65:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  66:.\Generated_Source\PSoC5/Pin_VTarget.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Function Name: Pin_VTarget_Read
+  68:.\Generated_Source\PSoC5/Pin_VTarget.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  70:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Summary:
+  71:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  72:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  form.
+  73:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  74:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Parameters:  
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 4
+
+
+  75:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  None
+  76:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  77:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Return: 
+  78:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Returns the current value of the Digital Port as a right justified number
+  79:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  
+  80:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Note:
+  81:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Macro Pin_VTarget_ReadPS calls this function. 
+  82:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  
+  83:.\Generated_Source\PSoC5/Pin_VTarget.c **** *******************************************************************************/
+  84:.\Generated_Source\PSoC5/Pin_VTarget.c **** uint8 Pin_VTarget_Read(void) 
+  85:.\Generated_Source\PSoC5/Pin_VTarget.c **** {
+  94              		.loc 1 85 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98              		@ link register save eliminated.
+  86:.\Generated_Source\PSoC5/Pin_VTarget.c ****     return (Pin_VTarget_PS & Pin_VTarget_MASK) >> Pin_VTarget_SHIFT;
+  99              		.loc 1 86 0
+ 100 0000 014B     		ldr	r3, .L11
+ 101 0002 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+  87:.\Generated_Source\PSoC5/Pin_VTarget.c **** }
+ 102              		.loc 1 87 0
+ 103 0004 C009     		lsrs	r0, r0, #7
+ 104 0006 7047     		bx	lr
+ 105              	.L12:
+ 106              		.align	2
+ 107              	.L11:
+ 108 0008 11510040 		.word	1073762577
+ 109              		.cfi_endproc
+ 110              	.LFE2:
+ 111              		.size	Pin_VTarget_Read, .-Pin_VTarget_Read
+ 112              		.section	.text.Pin_VTarget_ReadDataReg,"ax",%progbits
+ 113              		.align	1
+ 114              		.global	Pin_VTarget_ReadDataReg
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.type	Pin_VTarget_ReadDataReg, %function
+ 118              	Pin_VTarget_ReadDataReg:
+ 119              	.LFB3:
+  88:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  89:.\Generated_Source\PSoC5/Pin_VTarget.c **** 
+  90:.\Generated_Source\PSoC5/Pin_VTarget.c **** /*******************************************************************************
+  91:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Function Name: Pin_VTarget_ReadDataReg
+  92:.\Generated_Source\PSoC5/Pin_VTarget.c **** ********************************************************************************
+  93:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  94:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Summary:
+  95:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Read the current value assigned to a Digital Port's data output register
+  96:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+  97:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Parameters:  
+  98:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  None 
+  99:.\Generated_Source\PSoC5/Pin_VTarget.c **** *
+ 100:.\Generated_Source\PSoC5/Pin_VTarget.c **** * Return: 
+ 101:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 102:.\Generated_Source\PSoC5/Pin_VTarget.c **** *  
+ 103:.\Generated_Source\PSoC5/Pin_VTarget.c **** *******************************************************************************/
+ 104:.\Generated_Source\PSoC5/Pin_VTarget.c **** uint8 Pin_VTarget_ReadDataReg(void) 
+ 105:.\Generated_Source\PSoC5/Pin_VTarget.c **** {
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 5
+
+
+ 120              		.loc 1 105 0
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 106:.\Generated_Source\PSoC5/Pin_VTarget.c ****     return (Pin_VTarget_DR & Pin_VTarget_MASK) >> Pin_VTarget_SHIFT;
+ 125              		.loc 1 106 0
+ 126 0000 014B     		ldr	r3, .L15
+ 127 0002 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+ 107:.\Generated_Source\PSoC5/Pin_VTarget.c **** }
+ 128              		.loc 1 107 0
+ 129 0004 C009     		lsrs	r0, r0, #7
+ 130 0006 7047     		bx	lr
+ 131              	.L16:
+ 132              		.align	2
+ 133              	.L15:
+ 134 0008 10510040 		.word	1073762576
+ 135              		.cfi_endproc
+ 136              	.LFE3:
+ 137              		.size	Pin_VTarget_ReadDataReg, .-Pin_VTarget_ReadDataReg
+ 138              		.text
+ 139              	.Letext0:
+ 140              		.section	.debug_loc,"",%progbits
+ 141              	.Ldebug_loc0:
+ 142              	.LLST2:
+ 143 0000 00000000 		.4byte	.LVL1
+ 144 0004 06000000 		.4byte	.LVL2
+ 145 0008 0100     		.2byte	0x1
+ 146 000a 50       		.byte	0x50
+ 147 000b 00000000 		.4byte	0x0
+ 148 000f 00000000 		.4byte	0x0
+ 149              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 150              		.section	.debug_info
+ 151 0000 11010000 		.4byte	0x111
+ 152 0004 0200     		.2byte	0x2
+ 153 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 154 000a 04       		.byte	0x4
+ 155 000b 01       		.uleb128 0x1
+ 156 000c D9000000 		.4byte	.LASF18
+ 157 0010 01       		.byte	0x1
+ 158 0011 6F000000 		.4byte	.LASF19
+ 159 0015 21010000 		.4byte	.LASF20
+ 160 0019 00000000 		.4byte	0x0
+ 161 001d 00000000 		.4byte	0x0
+ 162 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 163 0025 00000000 		.4byte	.Ldebug_line0
+ 164 0029 02       		.uleb128 0x2
+ 165 002a 01       		.byte	0x1
+ 166 002b 06       		.byte	0x6
+ 167 002c 15010000 		.4byte	.LASF0
+ 168 0030 02       		.uleb128 0x2
+ 169 0031 01       		.byte	0x1
+ 170 0032 08       		.byte	0x8
+ 171 0033 4F000000 		.4byte	.LASF1
+ 172 0037 02       		.uleb128 0x2
+ 173 0038 02       		.byte	0x2
+ 174 0039 05       		.byte	0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 6
+
+
+ 175 003a EA000000 		.4byte	.LASF2
+ 176 003e 02       		.uleb128 0x2
+ 177 003f 02       		.byte	0x2
+ 178 0040 07       		.byte	0x7
+ 179 0041 96000000 		.4byte	.LASF3
+ 180 0045 02       		.uleb128 0x2
+ 181 0046 04       		.byte	0x4
+ 182 0047 05       		.byte	0x5
+ 183 0048 0C010000 		.4byte	.LASF4
+ 184 004c 02       		.uleb128 0x2
+ 185 004d 04       		.byte	0x4
+ 186 004e 07       		.byte	0x7
+ 187 004f 5D000000 		.4byte	.LASF5
+ 188 0053 02       		.uleb128 0x2
+ 189 0054 08       		.byte	0x8
+ 190 0055 05       		.byte	0x5
+ 191 0056 00000000 		.4byte	.LASF6
+ 192 005a 02       		.uleb128 0x2
+ 193 005b 08       		.byte	0x8
+ 194 005c 07       		.byte	0x7
+ 195 005d BD000000 		.4byte	.LASF7
+ 196 0061 03       		.uleb128 0x3
+ 197 0062 04       		.byte	0x4
+ 198 0063 05       		.byte	0x5
+ 199 0064 696E7400 		.ascii	"int\000"
+ 200 0068 02       		.uleb128 0x2
+ 201 0069 04       		.byte	0x4
+ 202 006a 07       		.byte	0x7
+ 203 006b B0000000 		.4byte	.LASF8
+ 204 006f 04       		.uleb128 0x4
+ 205 0070 F4000000 		.4byte	.LASF21
+ 206 0074 02       		.byte	0x2
+ 207 0075 4C       		.byte	0x4c
+ 208 0076 30000000 		.4byte	0x30
+ 209 007a 02       		.uleb128 0x2
+ 210 007b 04       		.byte	0x4
+ 211 007c 04       		.byte	0x4
+ 212 007d 49000000 		.4byte	.LASF9
+ 213 0081 02       		.uleb128 0x2
+ 214 0082 08       		.byte	0x8
+ 215 0083 04       		.byte	0x4
+ 216 0084 A9000000 		.4byte	.LASF10
+ 217 0088 02       		.uleb128 0x2
+ 218 0089 01       		.byte	0x1
+ 219 008a 08       		.byte	0x8
+ 220 008b E5000000 		.4byte	.LASF11
+ 221 008f 05       		.uleb128 0x5
+ 222 0090 01       		.byte	0x1
+ 223 0091 FA000000 		.4byte	.LASF12
+ 224 0095 01       		.byte	0x1
+ 225 0096 27       		.byte	0x27
+ 226 0097 01       		.byte	0x1
+ 227 0098 00000000 		.4byte	.LFB0
+ 228 009c 18000000 		.4byte	.LFE0
+ 229 00a0 01       		.byte	0x1
+ 230 00a1 5D       		.byte	0x5d
+ 231 00a2 BF000000 		.4byte	0xbf
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 7
+
+
+ 232 00a6 06       		.uleb128 0x6
+ 233 00a7 27000000 		.4byte	.LASF14
+ 234 00ab 01       		.byte	0x1
+ 235 00ac 27       		.byte	0x27
+ 236 00ad 6F000000 		.4byte	0x6f
+ 237 00b1 01       		.byte	0x1
+ 238 00b2 50       		.byte	0x50
+ 239 00b3 07       		.uleb128 0x7
+ 240 00b4 2D000000 		.4byte	.LASF22
+ 241 00b8 01       		.byte	0x1
+ 242 00b9 29       		.byte	0x29
+ 243 00ba 6F000000 		.4byte	0x6f
+ 244 00be 00       		.byte	0x0
+ 245 00bf 05       		.uleb128 0x5
+ 246 00c0 01       		.byte	0x1
+ 247 00c1 0E000000 		.4byte	.LASF13
+ 248 00c5 01       		.byte	0x1
+ 249 00c6 3C       		.byte	0x3c
+ 250 00c7 01       		.byte	0x1
+ 251 00c8 00000000 		.4byte	.LFB1
+ 252 00cc 18000000 		.4byte	.LFE1
+ 253 00d0 01       		.byte	0x1
+ 254 00d1 5D       		.byte	0x5d
+ 255 00d2 E6000000 		.4byte	0xe6
+ 256 00d6 08       		.uleb128 0x8
+ 257 00d7 D4000000 		.4byte	.LASF15
+ 258 00db 01       		.byte	0x1
+ 259 00dc 3C       		.byte	0x3c
+ 260 00dd 6F000000 		.4byte	0x6f
+ 261 00e1 00000000 		.4byte	.LLST2
+ 262 00e5 00       		.byte	0x0
+ 263 00e6 09       		.uleb128 0x9
+ 264 00e7 01       		.byte	0x1
+ 265 00e8 38000000 		.4byte	.LASF16
+ 266 00ec 01       		.byte	0x1
+ 267 00ed 54       		.byte	0x54
+ 268 00ee 01       		.byte	0x1
+ 269 00ef 6F000000 		.4byte	0x6f
+ 270 00f3 00000000 		.4byte	.LFB2
+ 271 00f7 0C000000 		.4byte	.LFE2
+ 272 00fb 01       		.byte	0x1
+ 273 00fc 5D       		.byte	0x5d
+ 274 00fd 09       		.uleb128 0x9
+ 275 00fe 01       		.byte	0x1
+ 276 00ff 5F010000 		.4byte	.LASF17
+ 277 0103 01       		.byte	0x1
+ 278 0104 68       		.byte	0x68
+ 279 0105 01       		.byte	0x1
+ 280 0106 6F000000 		.4byte	0x6f
+ 281 010a 00000000 		.4byte	.LFB3
+ 282 010e 0C000000 		.4byte	.LFE3
+ 283 0112 01       		.byte	0x1
+ 284 0113 5D       		.byte	0x5d
+ 285 0114 00       		.byte	0x0
+ 286              		.section	.debug_abbrev
+ 287 0000 01       		.uleb128 0x1
+ 288 0001 11       		.uleb128 0x11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 8
+
+
+ 289 0002 01       		.byte	0x1
+ 290 0003 25       		.uleb128 0x25
+ 291 0004 0E       		.uleb128 0xe
+ 292 0005 13       		.uleb128 0x13
+ 293 0006 0B       		.uleb128 0xb
+ 294 0007 03       		.uleb128 0x3
+ 295 0008 0E       		.uleb128 0xe
+ 296 0009 1B       		.uleb128 0x1b
+ 297 000a 0E       		.uleb128 0xe
+ 298 000b 11       		.uleb128 0x11
+ 299 000c 01       		.uleb128 0x1
+ 300 000d 52       		.uleb128 0x52
+ 301 000e 01       		.uleb128 0x1
+ 302 000f 55       		.uleb128 0x55
+ 303 0010 06       		.uleb128 0x6
+ 304 0011 10       		.uleb128 0x10
+ 305 0012 06       		.uleb128 0x6
+ 306 0013 00       		.byte	0x0
+ 307 0014 00       		.byte	0x0
+ 308 0015 02       		.uleb128 0x2
+ 309 0016 24       		.uleb128 0x24
+ 310 0017 00       		.byte	0x0
+ 311 0018 0B       		.uleb128 0xb
+ 312 0019 0B       		.uleb128 0xb
+ 313 001a 3E       		.uleb128 0x3e
+ 314 001b 0B       		.uleb128 0xb
+ 315 001c 03       		.uleb128 0x3
+ 316 001d 0E       		.uleb128 0xe
+ 317 001e 00       		.byte	0x0
+ 318 001f 00       		.byte	0x0
+ 319 0020 03       		.uleb128 0x3
+ 320 0021 24       		.uleb128 0x24
+ 321 0022 00       		.byte	0x0
+ 322 0023 0B       		.uleb128 0xb
+ 323 0024 0B       		.uleb128 0xb
+ 324 0025 3E       		.uleb128 0x3e
+ 325 0026 0B       		.uleb128 0xb
+ 326 0027 03       		.uleb128 0x3
+ 327 0028 08       		.uleb128 0x8
+ 328 0029 00       		.byte	0x0
+ 329 002a 00       		.byte	0x0
+ 330 002b 04       		.uleb128 0x4
+ 331 002c 16       		.uleb128 0x16
+ 332 002d 00       		.byte	0x0
+ 333 002e 03       		.uleb128 0x3
+ 334 002f 0E       		.uleb128 0xe
+ 335 0030 3A       		.uleb128 0x3a
+ 336 0031 0B       		.uleb128 0xb
+ 337 0032 3B       		.uleb128 0x3b
+ 338 0033 0B       		.uleb128 0xb
+ 339 0034 49       		.uleb128 0x49
+ 340 0035 13       		.uleb128 0x13
+ 341 0036 00       		.byte	0x0
+ 342 0037 00       		.byte	0x0
+ 343 0038 05       		.uleb128 0x5
+ 344 0039 2E       		.uleb128 0x2e
+ 345 003a 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 9
+
+
+ 346 003b 3F       		.uleb128 0x3f
+ 347 003c 0C       		.uleb128 0xc
+ 348 003d 03       		.uleb128 0x3
+ 349 003e 0E       		.uleb128 0xe
+ 350 003f 3A       		.uleb128 0x3a
+ 351 0040 0B       		.uleb128 0xb
+ 352 0041 3B       		.uleb128 0x3b
+ 353 0042 0B       		.uleb128 0xb
+ 354 0043 27       		.uleb128 0x27
+ 355 0044 0C       		.uleb128 0xc
+ 356 0045 11       		.uleb128 0x11
+ 357 0046 01       		.uleb128 0x1
+ 358 0047 12       		.uleb128 0x12
+ 359 0048 01       		.uleb128 0x1
+ 360 0049 40       		.uleb128 0x40
+ 361 004a 0A       		.uleb128 0xa
+ 362 004b 01       		.uleb128 0x1
+ 363 004c 13       		.uleb128 0x13
+ 364 004d 00       		.byte	0x0
+ 365 004e 00       		.byte	0x0
+ 366 004f 06       		.uleb128 0x6
+ 367 0050 05       		.uleb128 0x5
+ 368 0051 00       		.byte	0x0
+ 369 0052 03       		.uleb128 0x3
+ 370 0053 0E       		.uleb128 0xe
+ 371 0054 3A       		.uleb128 0x3a
+ 372 0055 0B       		.uleb128 0xb
+ 373 0056 3B       		.uleb128 0x3b
+ 374 0057 0B       		.uleb128 0xb
+ 375 0058 49       		.uleb128 0x49
+ 376 0059 13       		.uleb128 0x13
+ 377 005a 02       		.uleb128 0x2
+ 378 005b 0A       		.uleb128 0xa
+ 379 005c 00       		.byte	0x0
+ 380 005d 00       		.byte	0x0
+ 381 005e 07       		.uleb128 0x7
+ 382 005f 34       		.uleb128 0x34
+ 383 0060 00       		.byte	0x0
+ 384 0061 03       		.uleb128 0x3
+ 385 0062 0E       		.uleb128 0xe
+ 386 0063 3A       		.uleb128 0x3a
+ 387 0064 0B       		.uleb128 0xb
+ 388 0065 3B       		.uleb128 0x3b
+ 389 0066 0B       		.uleb128 0xb
+ 390 0067 49       		.uleb128 0x49
+ 391 0068 13       		.uleb128 0x13
+ 392 0069 00       		.byte	0x0
+ 393 006a 00       		.byte	0x0
+ 394 006b 08       		.uleb128 0x8
+ 395 006c 05       		.uleb128 0x5
+ 396 006d 00       		.byte	0x0
+ 397 006e 03       		.uleb128 0x3
+ 398 006f 0E       		.uleb128 0xe
+ 399 0070 3A       		.uleb128 0x3a
+ 400 0071 0B       		.uleb128 0xb
+ 401 0072 3B       		.uleb128 0x3b
+ 402 0073 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 10
+
+
+ 403 0074 49       		.uleb128 0x49
+ 404 0075 13       		.uleb128 0x13
+ 405 0076 02       		.uleb128 0x2
+ 406 0077 06       		.uleb128 0x6
+ 407 0078 00       		.byte	0x0
+ 408 0079 00       		.byte	0x0
+ 409 007a 09       		.uleb128 0x9
+ 410 007b 2E       		.uleb128 0x2e
+ 411 007c 00       		.byte	0x0
+ 412 007d 3F       		.uleb128 0x3f
+ 413 007e 0C       		.uleb128 0xc
+ 414 007f 03       		.uleb128 0x3
+ 415 0080 0E       		.uleb128 0xe
+ 416 0081 3A       		.uleb128 0x3a
+ 417 0082 0B       		.uleb128 0xb
+ 418 0083 3B       		.uleb128 0x3b
+ 419 0084 0B       		.uleb128 0xb
+ 420 0085 27       		.uleb128 0x27
+ 421 0086 0C       		.uleb128 0xc
+ 422 0087 49       		.uleb128 0x49
+ 423 0088 13       		.uleb128 0x13
+ 424 0089 11       		.uleb128 0x11
+ 425 008a 01       		.uleb128 0x1
+ 426 008b 12       		.uleb128 0x12
+ 427 008c 01       		.uleb128 0x1
+ 428 008d 40       		.uleb128 0x40
+ 429 008e 0A       		.uleb128 0xa
+ 430 008f 00       		.byte	0x0
+ 431 0090 00       		.byte	0x0
+ 432 0091 00       		.byte	0x0
+ 433              		.section	.debug_pubnames,"",%progbits
+ 434 0000 72000000 		.4byte	0x72
+ 435 0004 0200     		.2byte	0x2
+ 436 0006 00000000 		.4byte	.Ldebug_info0
+ 437 000a 15010000 		.4byte	0x115
+ 438 000e 8F000000 		.4byte	0x8f
+ 439 0012 50696E5F 		.ascii	"Pin_VTarget_Write\000"
+ 439      56546172 
+ 439      6765745F 
+ 439      57726974 
+ 439      6500
+ 440 0024 BF000000 		.4byte	0xbf
+ 441 0028 50696E5F 		.ascii	"Pin_VTarget_SetDriveMode\000"
+ 441      56546172 
+ 441      6765745F 
+ 441      53657444 
+ 441      72697665 
+ 442 0041 E6000000 		.4byte	0xe6
+ 443 0045 50696E5F 		.ascii	"Pin_VTarget_Read\000"
+ 443      56546172 
+ 443      6765745F 
+ 443      52656164 
+ 443      00
+ 444 0056 FD000000 		.4byte	0xfd
+ 445 005a 50696E5F 		.ascii	"Pin_VTarget_ReadDataReg\000"
+ 445      56546172 
+ 445      6765745F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 11
+
+
+ 445      52656164 
+ 445      44617461 
+ 446 0072 00000000 		.4byte	0x0
+ 447              		.section	.debug_aranges,"",%progbits
+ 448 0000 34000000 		.4byte	0x34
+ 449 0004 0200     		.2byte	0x2
+ 450 0006 00000000 		.4byte	.Ldebug_info0
+ 451 000a 04       		.byte	0x4
+ 452 000b 00       		.byte	0x0
+ 453 000c 0000     		.2byte	0x0
+ 454 000e 0000     		.2byte	0x0
+ 455 0010 00000000 		.4byte	.LFB0
+ 456 0014 18000000 		.4byte	.LFE0-.LFB0
+ 457 0018 00000000 		.4byte	.LFB1
+ 458 001c 18000000 		.4byte	.LFE1-.LFB1
+ 459 0020 00000000 		.4byte	.LFB2
+ 460 0024 0C000000 		.4byte	.LFE2-.LFB2
+ 461 0028 00000000 		.4byte	.LFB3
+ 462 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 463 0030 00000000 		.4byte	0x0
+ 464 0034 00000000 		.4byte	0x0
+ 465              		.section	.debug_ranges,"",%progbits
+ 466              	.Ldebug_ranges0:
+ 467 0000 00000000 		.4byte	.Ltext0
+ 468 0004 00000000 		.4byte	.Letext0
+ 469 0008 00000000 		.4byte	.LFB0
+ 470 000c 18000000 		.4byte	.LFE0
+ 471 0010 00000000 		.4byte	.LFB1
+ 472 0014 18000000 		.4byte	.LFE1
+ 473 0018 00000000 		.4byte	.LFB2
+ 474 001c 0C000000 		.4byte	.LFE2
+ 475 0020 00000000 		.4byte	.LFB3
+ 476 0024 0C000000 		.4byte	.LFE3
+ 477 0028 00000000 		.4byte	0x0
+ 478 002c 00000000 		.4byte	0x0
+ 479              		.section	.debug_str,"MS",%progbits,1
+ 480              	.LASF6:
+ 481 0000 6C6F6E67 		.ascii	"long long int\000"
+ 481      206C6F6E 
+ 481      6720696E 
+ 481      7400
+ 482              	.LASF13:
+ 483 000e 50696E5F 		.ascii	"Pin_VTarget_SetDriveMode\000"
+ 483      56546172 
+ 483      6765745F 
+ 483      53657444 
+ 483      72697665 
+ 484              	.LASF14:
+ 485 0027 76616C75 		.ascii	"value\000"
+ 485      6500
+ 486              	.LASF22:
+ 487 002d 73746174 		.ascii	"staticBits\000"
+ 487      69634269 
+ 487      747300
+ 488              	.LASF16:
+ 489 0038 50696E5F 		.ascii	"Pin_VTarget_Read\000"
+ 489      56546172 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 12
+
+
+ 489      6765745F 
+ 489      52656164 
+ 489      00
+ 490              	.LASF9:
+ 491 0049 666C6F61 		.ascii	"float\000"
+ 491      7400
+ 492              	.LASF1:
+ 493 004f 756E7369 		.ascii	"unsigned char\000"
+ 493      676E6564 
+ 493      20636861 
+ 493      7200
+ 494              	.LASF5:
+ 495 005d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 495      20756E73 
+ 495      69676E65 
+ 495      6420696E 
+ 495      7400
+ 496              	.LASF19:
+ 497 006f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Pin_VTarget.c\000"
+ 497      6E657261 
+ 497      7465645F 
+ 497      536F7572 
+ 497      63655C50 
+ 498              	.LASF3:
+ 499 0096 73686F72 		.ascii	"short unsigned int\000"
+ 499      7420756E 
+ 499      7369676E 
+ 499      65642069 
+ 499      6E7400
+ 500              	.LASF10:
+ 501 00a9 646F7562 		.ascii	"double\000"
+ 501      6C6500
+ 502              	.LASF8:
+ 503 00b0 756E7369 		.ascii	"unsigned int\000"
+ 503      676E6564 
+ 503      20696E74 
+ 503      00
+ 504              	.LASF7:
+ 505 00bd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 505      206C6F6E 
+ 505      6720756E 
+ 505      7369676E 
+ 505      65642069 
+ 506              	.LASF15:
+ 507 00d4 6D6F6465 		.ascii	"mode\000"
+ 507      00
+ 508              	.LASF18:
+ 509 00d9 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 509      4320342E 
+ 509      342E3100 
+ 510              	.LASF11:
+ 511 00e5 63686172 		.ascii	"char\000"
+ 511      00
+ 512              	.LASF2:
+ 513 00ea 73686F72 		.ascii	"short int\000"
+ 513      7420696E 
+ 513      7400
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccT8V56M.s 			page 13
+
+
+ 514              	.LASF21:
+ 515 00f4 75696E74 		.ascii	"uint8\000"
+ 515      3800
+ 516              	.LASF12:
+ 517 00fa 50696E5F 		.ascii	"Pin_VTarget_Write\000"
+ 517      56546172 
+ 517      6765745F 
+ 517      57726974 
+ 517      6500
+ 518              	.LASF4:
+ 519 010c 6C6F6E67 		.ascii	"long int\000"
+ 519      20696E74 
+ 519      00
+ 520              	.LASF0:
+ 521 0115 7369676E 		.ascii	"signed char\000"
+ 521      65642063 
+ 521      68617200 
+ 522              	.LASF20:
+ 523 0121 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 523      665C486F 
+ 523      6D655C44 
+ 523      65736B74 
+ 523      6F705C4B 
+ 524 014e 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 524      69745072 
+ 524      6F672E63 
+ 524      7964736E 
+ 524      00
+ 525              	.LASF17:
+ 526 015f 50696E5F 		.ascii	"Pin_VTarget_ReadDataReg\000"
+ 526      56546172 
+ 526      6765745F 
+ 526      52656164 
+ 526      44617461 
+ 527              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

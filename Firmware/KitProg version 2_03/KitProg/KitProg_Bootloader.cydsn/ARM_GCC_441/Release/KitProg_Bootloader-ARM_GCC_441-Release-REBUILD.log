@@ -1,0 +1,62 @@
+--------------- Rebuild Started: 08/26/2015 19:38:11 Project: KitProg_Bootloader, Configuration: ARM GCC 4.4.1 Release ---------------
+cydsfit.exe "-.appdatapath" "C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj" "-d" "CY8C5666LTI-LP005" "-s" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+Elaborating Design...
+ADD: pft.M0055: warning: Flash Security Warning:  One or more rows of flash have been configured to be read protected; however, debugging has been enabled in the System DWR Editor. This means that the read protected flash rows can still be read via SWD or JTAG. To protect these rows of flash, disable debugging in the System DWR Editor.
+ * \\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cydwr (Enable Device Protection)
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\main.lst -Os -ffunction-sections -c .\main.c -o .\ARM_GCC_441\Release\main.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\Cm3Start.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\Cm3Start.c -o .\ARM_GCC_441\Release\Cm3Start.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\core_cm3.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\core_cm3.c -o .\ARM_GCC_441\Release\core_cm3.o
+arm-none-eabi-as.exe -I. -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -g -alh=.\ARM_GCC_441\Release/CyBootAsmGnu.lst -o .\ARM_GCC_441\Release\CyBootAsmGnu.o .\Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\CyDmac.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\CyDmac.c -o .\ARM_GCC_441\Release\CyDmac.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\CyFlash.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\CyFlash.c -o .\ARM_GCC_441\Release\CyFlash.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\CyLib.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\CyLib.c -o .\ARM_GCC_441\Release\CyLib.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\cyPm.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\cyPm.c -o .\ARM_GCC_441\Release\cyPm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\CySpc.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\CySpc.c -o .\ARM_GCC_441\Release\CySpc.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\cyutils.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\cyutils.c -o .\ARM_GCC_441\Release\cyutils.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\Pin_Status_LED.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\Pin_Status_LED.c -o .\ARM_GCC_441\Release\Pin_Status_LED.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\Pin_PSoC4A_XRES.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\Pin_PSoC4A_XRES.c -o .\ARM_GCC_441\Release\Pin_PSoC4A_XRES.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\Clock_LED_1.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\Clock_LED_1.c -o .\ARM_GCC_441\Release\Clock_LED_1.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\Bootloader.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\Bootloader.c -o .\ARM_GCC_441\Release\Bootloader.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS.c -o .\ARM_GCC_441\Release\USBFS.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_audio.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_audio.c -o .\ARM_GCC_441\Release\USBFS_audio.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_boot.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_boot.c -o .\ARM_GCC_441\Release\USBFS_boot.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_cdc.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_cdc.c -o .\ARM_GCC_441\Release\USBFS_cdc.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_cls.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_cls.c -o .\ARM_GCC_441\Release\USBFS_cls.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_descr.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_descr.c -o .\ARM_GCC_441\Release\USBFS_descr.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_drv.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_drv.c -o .\ARM_GCC_441\Release\USBFS_drv.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_episr.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_episr.c -o .\ARM_GCC_441\Release\USBFS_episr.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_hid.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_hid.c -o .\ARM_GCC_441\Release\USBFS_hid.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_pm.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_pm.c -o .\ARM_GCC_441\Release\USBFS_pm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_std.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_std.c -o .\ARM_GCC_441\Release\USBFS_std.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_vnd.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_vnd.c -o .\ARM_GCC_441\Release\USBFS_vnd.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_midi.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_midi.c -o .\ARM_GCC_441\Release\USBFS_midi.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\PWM.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\PWM.c -o .\ARM_GCC_441\Release\PWM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\PWM_PM.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\PWM_PM.c -o .\ARM_GCC_441\Release\PWM_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_Dm.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_Dm.c -o .\ARM_GCC_441\Release\USBFS_Dm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\USBFS_Dp.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_Dp.c -o .\ARM_GCC_441\Release\USBFS_Dp.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D NDEBUG -Wa,-alh=.\ARM_GCC_441\Release\cyfitter_cfg.lst -Os -ffunction-sections -c .\Generated_Source\PSoC5\cyfitter_cfg.c -o .\ARM_GCC_441\Release\cyfitter_cfg.o
+arm-none-eabi-ar.exe -rs .\ARM_GCC_441\Release\KitProg_Bootloader.a .\ARM_GCC_441\Release\core_cm3.o .\ARM_GCC_441\Release\CyBootAsmGnu.o .\ARM_GCC_441\Release\CyDmac.o .\ARM_GCC_441\Release\CyFlash.o .\ARM_GCC_441\Release\CyLib.o .\ARM_GCC_441\Release\cyPm.o .\ARM_GCC_441\Release\CySpc.o .\ARM_GCC_441\Release\cyutils.o .\ARM_GCC_441\Release\Pin_Status_LED.o .\ARM_GCC_441\Release\Pin_PSoC4A_XRES.o .\ARM_GCC_441\Release\Clock_LED_1.o .\ARM_GCC_441\Release\Bootloader.o .\ARM_GCC_441\Release\USBFS.o .\ARM_GCC_441\Release\USBFS_audio.o .\ARM_GCC_441\Release\USBFS_boot.o .\ARM_GCC_441\Release\USBFS_cdc.o .\ARM_GCC_441\Release\USBFS_cls.o .\ARM_GCC_441\Release\USBFS_descr.o .\ARM_GCC_441\Release\USBFS_drv.o .\ARM_GCC_441\Release\USBFS_episr.o .\ARM_GCC_441\Release\USBFS_hid.o .\ARM_GCC_441\Release\USBFS_pm.o .\ARM_GCC_441\Release\USBFS_std.o .\ARM_GCC_441\Release\USBFS_vnd.o .\ARM_GCC_441\Release\USBFS_midi.o .\ARM_GCC_441\Release\PWM.o .\ARM_GCC_441\Release\PWM_PM.o .\ARM_GCC_441\Release\USBFS_Dm.o .\ARM_GCC_441\Release\USBFS_Dp.o .\ARM_GCC_441\Release\cyfitter_cfg.o
+arm-none-eabi-ar.exe: creating .\ARM_GCC_441\Release\KitProg_Bootloader.a
+arm-none-eabi-gcc.exe -mthumb -march=armv7-m -mfix-cortex-m3-ldrd -T .\Generated_Source\PSoC5\cm3gcc.ld -g -Wl,-Map,.\ARM_GCC_441\Release\KitProg_Bootloader.map -Wl,--gc-sections -Wl,--start-group -o .\ARM_GCC_441\Release\KitProg_Bootloader.elf .\ARM_GCC_441\Release\main.o .\ARM_GCC_441\Release\Cm3Start.o .\ARM_GCC_441\Release\KitProg_Bootloader.a "C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_441\Release\CyComponentLibrary.a" -Wl,--end-group
+arm-none-eabi-objcopy.exe -O ihex .\ARM_GCC_441\Release\KitProg_Bootloader.elf .\ARM_GCC_441\Release\KitProg_Bootloader.ihx
+cysymboladdressfinder.exe -f .\ARM_GCC_441\Release\KitProg_Bootloader.elf -s Bootloader_Checksum -p .\ARM_GCC_441\Release\cksmaddress.txt -l 0
+cysymboladdressfinder.exe -f .\ARM_GCC_441\Release\KitProg_Bootloader.elf -s Bootloader_SizeBytes -p .\ARM_GCC_441\Release\sizeaddress.txt -l 0
+cyhextool -o .\ARM_GCC_441\Release\KitProg_Bootloader.hex -f .\ARM_GCC_441\Release\KitProg_Bootloader.ihx -prot .\Generated_Source\PSoC5\protect.hex -id 2E105069 -a EEPROM=90200000:800,PROGRAM=00000000:10000,CONFIG=80000000:2000,PROTECT=90400000:40 -meta 0001 -cunv 00004007 -wonv BC90ACAF -ecc OFF -blver 0200010001 -blcks .\ARM_GCC_441\Release\cksmaddress.txt -blsize .\ARM_GCC_441\Release\sizeaddress.txt -flsLine 256 -endian l
+Flash used: 9760 of 65536 bytes (14.9 %).
+SRAM used: 956 of 16384 bytes (5.8 %).
+--------------- Rebuild Succeeded: 08/26/2015 19:40:06 ---------------

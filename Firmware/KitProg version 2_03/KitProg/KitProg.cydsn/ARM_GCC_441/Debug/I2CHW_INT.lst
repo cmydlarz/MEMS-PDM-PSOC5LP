@@ -1,0 +1,1745 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"I2CHW_INT.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 1E010000 		.text
+  20      02007100 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.I2CHW_ISR,"ax",%progbits
+  24              		.align	2
+  25              		.global	I2CHW_ISR
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	I2CHW_ISR, %function
+  29              	I2CHW_ISR:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\I2CHW_INT.c"
+   1:.\Generated_Source\PSoC5/I2CHW_INT.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/I2CHW_INT.c **** * File Name: I2CHW_INT.c
+   3:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Version 3.30
+   4:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+   5:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Description:
+   6:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  This file provides the source code of Interrupt Service Routine (ISR)
+   7:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  for I2C component.
+   8:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+   9:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  Note:
+  10:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  11:.\Generated_Source\PSoC5/I2CHW_INT.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC5/I2CHW_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:.\Generated_Source\PSoC5/I2CHW_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:.\Generated_Source\PSoC5/I2CHW_INT.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC5/I2CHW_INT.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  18:.\Generated_Source\PSoC5/I2CHW_INT.c **** #include "I2CHW_PVT.h"
+  19:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  20:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  21:.\Generated_Source\PSoC5/I2CHW_INT.c **** /*******************************************************************************
+  22:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  Place your includes, defines and code here
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/I2CHW_INT.c **** ********************************************************************************/
+  24:.\Generated_Source\PSoC5/I2CHW_INT.c **** /* `#START I2CHW_ISR_intc` */
+  25:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  26:.\Generated_Source\PSoC5/I2CHW_INT.c **** /* `#END` */
+  27:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  28:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  29:.\Generated_Source\PSoC5/I2CHW_INT.c **** /*******************************************************************************
+  30:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Function Name: I2CHW_ISR
+  31:.\Generated_Source\PSoC5/I2CHW_INT.c **** ********************************************************************************
+  32:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  33:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Summary:
+  34:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  Handler for I2C interrupt. The Slave and Master operations are handled here.
+  35:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  36:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Parameters:
+  37:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  void
+  38:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  39:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Return:
+  40:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  void
+  41:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  42:.\Generated_Source\PSoC5/I2CHW_INT.c **** * Reentrant:
+  43:.\Generated_Source\PSoC5/I2CHW_INT.c **** *  No
+  44:.\Generated_Source\PSoC5/I2CHW_INT.c **** *
+  45:.\Generated_Source\PSoC5/I2CHW_INT.c **** *******************************************************************************/
+  46:.\Generated_Source\PSoC5/I2CHW_INT.c **** CY_ISR(I2CHW_ISR)
+  47:.\Generated_Source\PSoC5/I2CHW_INT.c **** {
+  32              		.loc 1 47 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39 0002 82B0     		sub	sp, sp, #8
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_offset 14, -4
+  44              		.cfi_offset 7, -8
+  45              	.LCFI2:
+  46              		.cfi_def_cfa_register 7
+  48:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #if(I2CHW_MODE_SLAVE_ENABLED)
+  49:.\Generated_Source\PSoC5/I2CHW_INT.c ****        uint8  tmp8;
+  50:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #endif  /* (I2CHW_MODE_SLAVE_ENABLED) */
+  51:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  52:.\Generated_Source\PSoC5/I2CHW_INT.c ****     uint8  tmpCsr;
+  53:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  54:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #if(I2CHW_TIMEOUT_FF_ENABLED)
+  55:.\Generated_Source\PSoC5/I2CHW_INT.c ****         if(0u != I2CHW_TimeoutGetStatus())
+  56:.\Generated_Source\PSoC5/I2CHW_INT.c ****         {
+  57:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_TimeoutReset();
+  58:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_state = I2CHW_SM_EXIT_IDLE;
+  59:.\Generated_Source\PSoC5/I2CHW_INT.c ****             /* I2CHW_CSR_REG should be cleared after reset */
+  60:.\Generated_Source\PSoC5/I2CHW_INT.c ****         }
+  61:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #endif /* (I2CHW_TIMEOUT_FF_ENABLED) */
+  62:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  63:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  64:.\Generated_Source\PSoC5/I2CHW_INT.c ****     tmpCsr = I2CHW_CSR_REG;      /* Make copy as interrupts clear */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 3
+
+
+  47              		.loc 1 64 0
+  48 0006 46F26843 		movw	r3, #:lower16:1073767528
+  49 000a C4F20003 		movt	r3, #:upper16:1073767528
+  50 000e 1B78     		ldrb	r3, [r3, #0]
+  51 0010 FB71     		strb	r3, [r7, #7]
+  65:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  66:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #if(I2CHW_MODE_MULTI_MASTER_SLAVE_ENABLED)
+  67:.\Generated_Source\PSoC5/I2CHW_INT.c ****         if(I2CHW_CHECK_START_GEN(I2CHW_MCSR_REG))
+  68:.\Generated_Source\PSoC5/I2CHW_INT.c ****         {
+  69:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_CLEAR_START_GEN;
+  70:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  71:.\Generated_Source\PSoC5/I2CHW_INT.c ****             /* Set READ complete, but was aborted */
+  72:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_mstrStatus |= (I2CHW_MSTAT_ERR_XFER |
+  73:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                             I2CHW_GET_MSTAT_CMPLT);
+  74:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  75:.\Generated_Source\PSoC5/I2CHW_INT.c ****             /* The slave was addressed */
+  76:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_state = I2CHW_SM_SLAVE;
+  77:.\Generated_Source\PSoC5/I2CHW_INT.c ****         }
+  78:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #endif /* (I2CHW_MODE_MULTI_MASTER_SLAVE_ENABLED) */
+  79:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  80:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  81:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #if(I2CHW_MODE_MULTI_MASTER_ENABLED)
+  82:.\Generated_Source\PSoC5/I2CHW_INT.c ****         if(I2CHW_CHECK_LOST_ARB(tmpCsr))
+  83:.\Generated_Source\PSoC5/I2CHW_INT.c ****         {
+  84:.\Generated_Source\PSoC5/I2CHW_INT.c ****             /* Set errors */
+  85:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_mstrStatus |= (I2CHW_MSTAT_ERR_XFER     |
+  86:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                             I2CHW_MSTAT_ERR_ARB_LOST |
+  87:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                             I2CHW_GET_MSTAT_CMPLT);
+  88:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  89:.\Generated_Source\PSoC5/I2CHW_INT.c ****             I2CHW_DISABLE_INT_ON_STOP; /* Interrupt on Stop is enabled by write */
+  90:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+  91:.\Generated_Source\PSoC5/I2CHW_INT.c ****             #if(I2CHW_MODE_MULTI_MASTER_SLAVE_ENABLED)
+  92:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 if(I2CHW_CHECK_ADDRESS_STS(tmpCsr))
+  93:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+  94:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* The slave was addressed */
+  95:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_state = I2CHW_SM_SLAVE;
+  96:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+  97:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 else
+  98:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+  99:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_BUS_RELEASE;
+ 100:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 101:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_state = I2CHW_SM_EXIT_IDLE;
+ 102:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 103:.\Generated_Source\PSoC5/I2CHW_INT.c ****             #else
+ 104:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 I2CHW_BUS_RELEASE;
+ 105:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 106:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 I2CHW_state = I2CHW_SM_EXIT_IDLE;
+ 107:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 108:.\Generated_Source\PSoC5/I2CHW_INT.c ****             #endif /* (I2CHW_MODE_MULTI_MASTER_SLAVE_ENABLED) */
+ 109:.\Generated_Source\PSoC5/I2CHW_INT.c ****         }
+ 110:.\Generated_Source\PSoC5/I2CHW_INT.c ****     #endif /* (I2CHW_MODE_MULTI_MASTER_ENABLED) */
+ 111:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 112:.\Generated_Source\PSoC5/I2CHW_INT.c ****     /* Check for Master operation mode */
+ 113:.\Generated_Source\PSoC5/I2CHW_INT.c ****     if(I2CHW_CHECK_SM_MASTER)
+  52              		.loc 1 113 0
+  53 0012 40F20003 		movw	r3, #:lower16:I2CHW_state
+  54 0016 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 4
+
+
+  55 001a 1B78     		ldrb	r3, [r3, #0]
+  56 001c DBB2     		uxtb	r3, r3
+  57 001e 03F04003 		and	r3, r3, #64
+  58 0022 002B     		cmp	r3, #0
+  59 0024 00F0CF82 		beq	.L2
+ 114:.\Generated_Source\PSoC5/I2CHW_INT.c ****     {
+ 115:.\Generated_Source\PSoC5/I2CHW_INT.c ****         #if(I2CHW_MODE_MASTER_ENABLED)
+ 116:.\Generated_Source\PSoC5/I2CHW_INT.c ****             if(I2CHW_CHECK_BYTE_COMPLETE(tmpCsr))
+  60              		.loc 1 116 0
+  61 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  62 002a 03F00103 		and	r3, r3, #1
+  63 002e DBB2     		uxtb	r3, r3
+  64 0030 002B     		cmp	r3, #0
+  65 0032 00F09182 		beq	.L3
+ 117:.\Generated_Source\PSoC5/I2CHW_INT.c ****             {
+ 118:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 switch (I2CHW_state)
+  66              		.loc 1 118 0
+  67 0036 40F20003 		movw	r3, #:lower16:I2CHW_state
+  68 003a C0F20003 		movt	r3, #:upper16:I2CHW_state
+  69 003e 1B78     		ldrb	r3, [r3, #0]
+  70 0040 DBB2     		uxtb	r3, r3
+  71 0042 A3F14503 		sub	r3, r3, #69
+  72 0046 052B     		cmp	r3, #5
+  73 0048 00F28282 		bhi	.L4
+  74 004c 01A2     		adr	r2, .L8
+  75 004e 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+  76 0052 00BF     		.align	2
+  77              	.L8:
+  78 0054 6D000000 		.word	.L5+1
+  79 0058 85020000 		.word	.L6+1
+  80 005c 51050000 		.word	.L4+1
+  81 0060 51050000 		.word	.L4+1
+  82 0064 6D000000 		.word	.L5+1
+  83 0068 4D040000 		.word	.L7+1
+  84              	.L5:
+ 119:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 120:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 case I2CHW_SM_MSTR_WR_ADDR:  /* After address is sent, WRITE data */
+ 121:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 case I2CHW_SM_MSTR_RD_ADDR:  /* After address is sent, READ  data */
+ 122:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 123:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     tmpCsr &= ((uint8) ~I2CHW_CSR_STOP_STATUS); /* Clear STOP bit history on addres
+  85              		.loc 1 123 0
+  86 006c FB79     		ldrb	r3, [r7, #7]
+  87 006e 23F02003 		bic	r3, r3, #32
+  88 0072 FB71     		strb	r3, [r7, #7]
+ 124:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     
+ 125:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     if(I2CHW_CHECK_ADDR_ACK(tmpCsr))
+  89              		.loc 1 125 0
+  90 0074 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  91 0076 03F00A03 		and	r3, r3, #10
+  92 007a 082B     		cmp	r3, #8
+  93 007c 40F09380 		bne	.L9
+ 126:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 127:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Setup for transmit or receive of data */
+ 128:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(I2CHW_state == I2CHW_SM_MSTR_WR_ADDR)   /* TRANSMIT data */
+  94              		.loc 1 128 0
+  95 0080 40F20003 		movw	r3, #:lower16:I2CHW_state
+  96 0084 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 5
+
+
+  97 0088 1B78     		ldrb	r3, [r3, #0]
+  98 008a DBB2     		uxtb	r3, r3
+  99 008c 452B     		cmp	r3, #69
+ 100 008e 74D1     		bne	.L10
+ 129:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 130:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Check if at least one byte to transfer */
+ 131:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             if(I2CHW_mstrWrBufSize > 0u)
+ 101              		.loc 1 131 0
+ 102 0090 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufSize
+ 103 0094 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufSize
+ 104 0098 1B78     		ldrb	r3, [r3, #0]
+ 105 009a DBB2     		uxtb	r3, r3
+ 106 009c 002B     		cmp	r3, #0
+ 107 009e 28D0     		beq	.L11
+ 132:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 133:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* Load the 1st data byte */
+ 134:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_DATA_REG = I2CHW_mstrWrBufPtr[0u];
+ 108              		.loc 1 134 0
+ 109 00a0 46F20653 		movw	r3, #:lower16:1073767686
+ 110 00a4 C4F20003 		movt	r3, #:upper16:1073767686
+ 111 00a8 40F20002 		movw	r2, #:lower16:I2CHW_mstrWrBufPtr
+ 112 00ac C0F20002 		movt	r2, #:upper16:I2CHW_mstrWrBufPtr
+ 113 00b0 1268     		ldr	r2, [r2, #0]
+ 114 00b2 1278     		ldrb	r2, [r2, #0]
+ 115 00b4 D2B2     		uxtb	r2, r2
+ 116 00b6 1A70     		strb	r2, [r3, #0]
+ 135:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_TRANSMIT_DATA;
+ 117              		.loc 1 135 0
+ 118 00b8 46F27043 		movw	r3, #:lower16:1073767536
+ 119 00bc C4F20003 		movt	r3, #:upper16:1073767536
+ 120 00c0 4FF00602 		mov	r2, #6
+ 121 00c4 1A70     		strb	r2, [r3, #0]
+ 122 00c6 46F25653 		movw	r3, #:lower16:1073767766
+ 123 00ca C4F20003 		movt	r3, #:upper16:1073767766
+ 124 00ce 4FF00002 		mov	r2, #0
+ 125 00d2 1A70     		strb	r2, [r3, #0]
+ 136:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_mstrWrBufIndex = 1u;   /* Set index to 2nd element */
+ 126              		.loc 1 136 0
+ 127 00d4 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufIndex
+ 128 00d8 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufIndex
+ 129 00dc 4FF00102 		mov	r2, #1
+ 130 00e0 1A70     		strb	r2, [r3, #0]
+ 137:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 138:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* Set transmit state until done */
+ 139:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_state = I2CHW_SM_MSTR_WR_DATA;
+ 131              		.loc 1 139 0
+ 132 00e2 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 133 00e6 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 134 00ea 4FF04602 		mov	r2, #70
+ 135 00ee 1A70     		strb	r2, [r3, #0]
+ 140:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 141:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* End of buffer: complete writing */
+ 142:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             else if(I2CHW_CHECK_NO_STOP(I2CHW_mstrControl))
+ 143:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 144:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 #if(CY_PSOC5A)
+ 145:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     /* Do not handles 0 bytes transfer - HALT is NOT allowed */
+ 146:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_ENABLE_INT_ON_STOP;
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 6
+
+
+ 147:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_GENERATE_STOP;
+ 148:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 
+ 149:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 #else
+ 150:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     /* Set WRITE complete and Master HALTED */
+ 151:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_mstrStatus |= (I2CHW_MSTAT_XFER_HALT |
+ 152:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                                     I2CHW_MSTAT_WR_CMPLT);
+ 153:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 154:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_state = I2CHW_SM_MSTR_HALT; /* Expect RESTART */
+ 155:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_DisableInt();
+ 156:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 
+ 157:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 #endif /* (CY_PSOC5A) */
+ 158:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 159:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             else
+ 160:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 161:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_ENABLE_INT_ON_STOP; /* Enable interrupt on STOP, to catch it 
+ 162:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_GENERATE_STOP;
+ 163:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 164:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 165:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else  /* Master Receive data */
+ 166:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 167:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_READY_TO_READ; /* Release bus to read data */
+ 168:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 169:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_state  = I2CHW_SM_MSTR_RD_DATA;
+ 170:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 171:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 172:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* Address is NACKed */
+ 173:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else if(I2CHW_CHECK_ADDR_NAK(tmpCsr))
+ 174:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 175:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Set Address NAK error */
+ 176:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_mstrStatus |= (I2CHW_MSTAT_ERR_XFER |
+ 177:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_ERR_ADDR_NAK);
+ 178:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         
+ 179:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(I2CHW_CHECK_NO_STOP(I2CHW_mstrControl))
+ 180:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 181:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_mstrStatus |= (I2CHW_MSTAT_XFER_HALT | 
+ 182:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                             I2CHW_GET_MSTAT_CMPLT);
+ 183:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 184:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_state = I2CHW_SM_MSTR_HALT; /* Expect RESTART */
+ 185:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DisableInt();
+ 186:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 187:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else  /* Do normal Stop */
+ 188:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 189:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_ENABLE_INT_ON_STOP; /* Enable interrupt on STOP, to catch it */
+ 190:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_GENERATE_STOP;
+ 191:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 192:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 193:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else
+ 194:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 195:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Address phase is not set for some reason: error */
+ 196:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         #if(I2CHW_TIMEOUT_ENABLED)
+ 197:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Exit from interrupt to take a chance for timeout timer handle this c
+ 198:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DisableInt();
+ 199:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_ClearPendingInt();
+ 200:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         #else
+ 201:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Block execution flow: unexpected condition */
+ 202:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             CYASSERT(0u != 0u);
+ 203:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 7
+
+
+ 204:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 205:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     break;
+ 136              		.loc 1 205 0
+ 137 00f0 32E2     		b	.L3
+ 138              	.L11:
+ 139              		.loc 1 142 0
+ 140 00f2 40F20003 		movw	r3, #:lower16:I2CHW_mstrControl
+ 141 00f6 C0F20003 		movt	r3, #:upper16:I2CHW_mstrControl
+ 142 00fa 1B78     		ldrb	r3, [r3, #0]
+ 143 00fc DBB2     		uxtb	r3, r3
+ 144 00fe 03F00203 		and	r3, r3, #2
+ 145 0102 002B     		cmp	r3, #0
+ 146 0104 1CD0     		beq	.L13
+ 147              		.loc 1 151 0
+ 148 0106 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 149 010a C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 150 010e 1B78     		ldrb	r3, [r3, #0]
+ 151 0110 DBB2     		uxtb	r3, r3
+ 152 0112 43F00A03 		orr	r3, r3, #10
+ 153 0116 DAB2     		uxtb	r2, r3
+ 154 0118 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 155 011c C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 156 0120 1A70     		strb	r2, [r3, #0]
+ 157              		.loc 1 154 0
+ 158 0122 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 159 0126 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 160 012a 4FF06002 		mov	r2, #96
+ 161 012e 1A70     		strb	r2, [r3, #0]
+ 162              		.loc 1 155 0
+ 163 0130 4EF28013 		movw	r3, #:lower16:-536813184
+ 164 0134 CEF20003 		movt	r3, #:upper16:-536813184
+ 165 0138 4FF00102 		mov	r2, #1
+ 166 013c 1A60     		str	r2, [r3, #0]
+ 167              		.loc 1 205 0
+ 168 013e 0BE2     		b	.L3
+ 169              	.L13:
+ 170              		.loc 1 161 0
+ 171 0140 46F28843 		movw	r3, #:lower16:1073767560
+ 172 0144 C4F20003 		movt	r3, #:upper16:1073767560
+ 173 0148 46F28842 		movw	r2, #:lower16:1073767560
+ 174 014c C4F20002 		movt	r2, #:upper16:1073767560
+ 175 0150 1278     		ldrb	r2, [r2, #0]
+ 176 0152 D2B2     		uxtb	r2, r2
+ 177 0154 42F02002 		orr	r2, r2, #32
+ 178 0158 D2B2     		uxtb	r2, r2
+ 179 015a 1A70     		strb	r2, [r3, #0]
+ 180              		.loc 1 162 0
+ 181 015c 46F27043 		movw	r3, #:lower16:1073767536
+ 182 0160 C4F20003 		movt	r3, #:upper16:1073767536
+ 183 0164 4FF05202 		mov	r2, #82
+ 184 0168 1A70     		strb	r2, [r3, #0]
+ 185 016a 46F25653 		movw	r3, #:lower16:1073767766
+ 186 016e C4F20003 		movt	r3, #:upper16:1073767766
+ 187 0172 4FF00002 		mov	r2, #0
+ 188 0176 1A70     		strb	r2, [r3, #0]
+ 189              		.loc 1 205 0
+ 190 0178 EEE1     		b	.L3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 8
+
+
+ 191              	.L10:
+ 192              		.loc 1 167 0
+ 193 017a 46F27043 		movw	r3, #:lower16:1073767536
+ 194 017e C4F20003 		movt	r3, #:upper16:1073767536
+ 195 0182 4FF00202 		mov	r2, #2
+ 196 0186 1A70     		strb	r2, [r3, #0]
+ 197 0188 46F25653 		movw	r3, #:lower16:1073767766
+ 198 018c C4F20003 		movt	r3, #:upper16:1073767766
+ 199 0190 4FF00002 		mov	r2, #0
+ 200 0194 1A70     		strb	r2, [r3, #0]
+ 201              		.loc 1 169 0
+ 202 0196 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 203 019a C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 204 019e 4FF04A02 		mov	r2, #74
+ 205 01a2 1A70     		strb	r2, [r3, #0]
+ 206              		.loc 1 205 0
+ 207 01a4 D8E1     		b	.L3
+ 208              	.L9:
+ 209              		.loc 1 173 0
+ 210 01a6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 211 01a8 03F00A03 		and	r3, r3, #10
+ 212 01ac 0A2B     		cmp	r3, #10
+ 213 01ae 64D1     		bne	.L16
+ 214              		.loc 1 176 0
+ 215 01b0 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 216 01b4 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 217 01b8 1B78     		ldrb	r3, [r3, #0]
+ 218 01ba DBB2     		uxtb	r3, r3
+ 219 01bc 6FEA0303 		mvn	r3, r3
+ 220 01c0 03F05F03 		and	r3, r3, #95
+ 221 01c4 6FEA0303 		mvn	r3, r3
+ 222 01c8 DAB2     		uxtb	r2, r3
+ 223 01ca 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 224 01ce C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 225 01d2 1A70     		strb	r2, [r3, #0]
+ 226              		.loc 1 179 0
+ 227 01d4 40F20003 		movw	r3, #:lower16:I2CHW_mstrControl
+ 228 01d8 C0F20003 		movt	r3, #:upper16:I2CHW_mstrControl
+ 229 01dc 1B78     		ldrb	r3, [r3, #0]
+ 230 01de DBB2     		uxtb	r3, r3
+ 231 01e0 03F00203 		and	r3, r3, #2
+ 232 01e4 002B     		cmp	r3, #0
+ 233 01e6 2BD0     		beq	.L17
+ 234              		.loc 1 182 0
+ 235 01e8 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 236 01ec C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 237 01f0 1B78     		ldrb	r3, [r3, #0]
+ 238 01f2 DBB2     		uxtb	r3, r3
+ 239 01f4 03F00803 		and	r3, r3, #8
+ 240              		.loc 1 181 0
+ 241 01f8 002B     		cmp	r3, #0
+ 242 01fa 02D0     		beq	.L18
+ 243 01fc 4FF00902 		mov	r2, #9
+ 244 0200 01E0     		b	.L19
+ 245              	.L18:
+ 246 0202 4FF00A02 		mov	r2, #10
+ 247              	.L19:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 9
+
+
+ 248 0206 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 249 020a C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 250 020e 1B78     		ldrb	r3, [r3, #0]
+ 251 0210 DBB2     		uxtb	r3, r3
+ 252 0212 42EA0303 		orr	r3, r2, r3
+ 253 0216 DAB2     		uxtb	r2, r3
+ 254 0218 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 255 021c C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 256 0220 1A70     		strb	r2, [r3, #0]
+ 257              		.loc 1 184 0
+ 258 0222 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 259 0226 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 260 022a 4FF06002 		mov	r2, #96
+ 261 022e 1A70     		strb	r2, [r3, #0]
+ 262              		.loc 1 185 0
+ 263 0230 4EF28013 		movw	r3, #:lower16:-536813184
+ 264 0234 CEF20003 		movt	r3, #:upper16:-536813184
+ 265 0238 4FF00102 		mov	r2, #1
+ 266 023c 1A60     		str	r2, [r3, #0]
+ 267              		.loc 1 205 0
+ 268 023e 8BE1     		b	.L3
+ 269              	.L17:
+ 270              		.loc 1 189 0
+ 271 0240 46F28843 		movw	r3, #:lower16:1073767560
+ 272 0244 C4F20003 		movt	r3, #:upper16:1073767560
+ 273 0248 46F28842 		movw	r2, #:lower16:1073767560
+ 274 024c C4F20002 		movt	r2, #:upper16:1073767560
+ 275 0250 1278     		ldrb	r2, [r2, #0]
+ 276 0252 D2B2     		uxtb	r2, r2
+ 277 0254 42F02002 		orr	r2, r2, #32
+ 278 0258 D2B2     		uxtb	r2, r2
+ 279 025a 1A70     		strb	r2, [r3, #0]
+ 280              		.loc 1 190 0
+ 281 025c 46F27043 		movw	r3, #:lower16:1073767536
+ 282 0260 C4F20003 		movt	r3, #:upper16:1073767536
+ 283 0264 4FF05202 		mov	r2, #82
+ 284 0268 1A70     		strb	r2, [r3, #0]
+ 285 026a 46F25653 		movw	r3, #:lower16:1073767766
+ 286 026e C4F20003 		movt	r3, #:upper16:1073767766
+ 287 0272 4FF00002 		mov	r2, #0
+ 288 0276 1A70     		strb	r2, [r3, #0]
+ 289              		.loc 1 205 0
+ 290 0278 6EE1     		b	.L3
+ 291              	.L16:
+ 292              		.loc 1 202 0
+ 293 027a 4FF00000 		mov	r0, #0
+ 294 027e FFF7FEFF 		bl	CyHalt
+ 295              		.loc 1 205 0
+ 296 0282 69E1     		b	.L3
+ 297              	.L6:
+ 206:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 207:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 case I2CHW_SM_MSTR_WR_DATA:
+ 208:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 209:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     if(I2CHW_CHECK_DATA_ACK(tmpCsr))
+ 298              		.loc 1 209 0
+ 299 0284 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 300 0286 03F00203 		and	r3, r3, #2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 10
+
+
+ 301 028a 002B     		cmp	r3, #0
+ 302 028c 40F08480 		bne	.L21
+ 210:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 211:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Check if end of buffer */
+ 212:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(I2CHW_mstrWrBufIndex  < I2CHW_mstrWrBufSize)
+ 303              		.loc 1 212 0
+ 304 0290 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufIndex
+ 305 0294 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufIndex
+ 306 0298 1B78     		ldrb	r3, [r3, #0]
+ 307 029a DAB2     		uxtb	r2, r3
+ 308 029c 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufSize
+ 309 02a0 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufSize
+ 310 02a4 1B78     		ldrb	r3, [r3, #0]
+ 311 02a6 DBB2     		uxtb	r3, r3
+ 312 02a8 9A42     		cmp	r2, r3
+ 313 02aa 2FD2     		bcs	.L22
+ 213:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 214:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DATA_REG =
+ 314              		.loc 1 214 0
+ 315 02ac 46F20653 		movw	r3, #:lower16:1073767686
+ 316 02b0 C4F20003 		movt	r3, #:upper16:1073767686
+ 215:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                      I2CHW_mstrWrBufPtr[I2CHW_mstrWrBufIndex];
+ 317              		.loc 1 215 0
+ 318 02b4 40F20002 		movw	r2, #:lower16:I2CHW_mstrWrBufPtr
+ 319 02b8 C0F20002 		movt	r2, #:upper16:I2CHW_mstrWrBufPtr
+ 320 02bc 1168     		ldr	r1, [r2, #0]
+ 321 02be 40F20002 		movw	r2, #:lower16:I2CHW_mstrWrBufIndex
+ 322 02c2 C0F20002 		movt	r2, #:upper16:I2CHW_mstrWrBufIndex
+ 323 02c6 1278     		ldrb	r2, [r2, #0]
+ 324 02c8 D2B2     		uxtb	r2, r2
+ 325 02ca 0A44     		add	r2, r1, r2
+ 326 02cc 1278     		ldrb	r2, [r2, #0]
+ 327 02ce D2B2     		uxtb	r2, r2
+ 328              		.loc 1 214 0
+ 329 02d0 1A70     		strb	r2, [r3, #0]
+ 216:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_TRANSMIT_DATA;
+ 330              		.loc 1 216 0
+ 331 02d2 46F27043 		movw	r3, #:lower16:1073767536
+ 332 02d6 C4F20003 		movt	r3, #:upper16:1073767536
+ 333 02da 4FF00602 		mov	r2, #6
+ 334 02de 1A70     		strb	r2, [r3, #0]
+ 335 02e0 46F25653 		movw	r3, #:lower16:1073767766
+ 336 02e4 C4F20003 		movt	r3, #:upper16:1073767766
+ 337 02e8 4FF00002 		mov	r2, #0
+ 338 02ec 1A70     		strb	r2, [r3, #0]
+ 217:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_mstrWrBufIndex++;
+ 339              		.loc 1 217 0
+ 340 02ee 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufIndex
+ 341 02f2 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufIndex
+ 342 02f6 1B78     		ldrb	r3, [r3, #0]
+ 343 02f8 DBB2     		uxtb	r3, r3
+ 344 02fa 03F10103 		add	r3, r3, #1
+ 345 02fe DAB2     		uxtb	r2, r3
+ 346 0300 40F20003 		movw	r3, #:lower16:I2CHW_mstrWrBufIndex
+ 347 0304 C0F20003 		movt	r3, #:upper16:I2CHW_mstrWrBufIndex
+ 348 0308 1A70     		strb	r2, [r3, #0]
+ 218:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 11
+
+
+ 219:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* End of buffer: complete writing */
+ 220:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else if(I2CHW_CHECK_NO_STOP(I2CHW_mstrControl))
+ 221:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 222:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Set WRITE complete and Master HALTED */
+ 223:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_mstrStatus |= (I2CHW_MSTAT_XFER_HALT |
+ 224:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                             I2CHW_MSTAT_WR_CMPLT);
+ 225:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 226:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_state = I2CHW_SM_MSTR_HALT;    /* Expect RESTART */
+ 227:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DisableInt();
+ 228:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 229:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else  /* Do normal STOP */
+ 230:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 231:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_Workaround();          /* Workaround: empty function */
+ 232:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_ENABLE_INT_ON_STOP;    /* Enable interrupt on STOP, to catch it *
+ 233:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_GENERATE_STOP;
+ 234:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 235:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 236:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* Last byte NAKed: end writing */
+ 237:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else if(I2CHW_CHECK_NO_STOP(I2CHW_mstrControl))
+ 238:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 239:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Set WRITE complete, SHORT transfer and Master HALTED */
+ 240:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_mstrStatus |= (I2CHW_MSTAT_ERR_XFER       |
+ 241:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_ERR_SHORT_XFER |
+ 242:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_XFER_HALT      |
+ 243:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_WR_CMPLT);
+ 244:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 245:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_state = I2CHW_SM_MSTR_HALT;    /* Expect RESTART */
+ 246:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_DisableInt();
+ 247:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 248:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else  /* Do normal STOP */
+ 249:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 250:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ENABLE_INT_ON_STOP;    /* Enable interrupt on STOP, to catch it */
+ 251:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_GENERATE_STOP;
+ 252:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 253:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Set SHORT and ERR transfer */
+ 254:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_mstrStatus |= (I2CHW_MSTAT_ERR_SHORT_XFER |
+ 255:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_ERR_XFER);
+ 256:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 257:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     
+ 258:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     break;
+ 349              		.loc 1 258 0
+ 350 030a 25E1     		b	.L3
+ 351              	.L22:
+ 352              		.loc 1 220 0
+ 353 030c 40F20003 		movw	r3, #:lower16:I2CHW_mstrControl
+ 354 0310 C0F20003 		movt	r3, #:upper16:I2CHW_mstrControl
+ 355 0314 1B78     		ldrb	r3, [r3, #0]
+ 356 0316 DBB2     		uxtb	r3, r3
+ 357 0318 03F00203 		and	r3, r3, #2
+ 358 031c 002B     		cmp	r3, #0
+ 359 031e 1CD0     		beq	.L24
+ 360              		.loc 1 223 0
+ 361 0320 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 362 0324 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 363 0328 1B78     		ldrb	r3, [r3, #0]
+ 364 032a DBB2     		uxtb	r3, r3
+ 365 032c 43F00A03 		orr	r3, r3, #10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 12
+
+
+ 366 0330 DAB2     		uxtb	r2, r3
+ 367 0332 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 368 0336 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 369 033a 1A70     		strb	r2, [r3, #0]
+ 370              		.loc 1 226 0
+ 371 033c 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 372 0340 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 373 0344 4FF06002 		mov	r2, #96
+ 374 0348 1A70     		strb	r2, [r3, #0]
+ 375              		.loc 1 227 0
+ 376 034a 4EF28013 		movw	r3, #:lower16:-536813184
+ 377 034e CEF20003 		movt	r3, #:upper16:-536813184
+ 378 0352 4FF00102 		mov	r2, #1
+ 379 0356 1A60     		str	r2, [r3, #0]
+ 380              		.loc 1 258 0
+ 381 0358 FEE0     		b	.L3
+ 382              	.L24:
+ 383              		.loc 1 231 0
+ 384 035a FFF7FEFF 		bl	I2CHW_Workaround
+ 385              		.loc 1 232 0
+ 386 035e 46F28843 		movw	r3, #:lower16:1073767560
+ 387 0362 C4F20003 		movt	r3, #:upper16:1073767560
+ 388 0366 46F28842 		movw	r2, #:lower16:1073767560
+ 389 036a C4F20002 		movt	r2, #:upper16:1073767560
+ 390 036e 1278     		ldrb	r2, [r2, #0]
+ 391 0370 D2B2     		uxtb	r2, r2
+ 392 0372 42F02002 		orr	r2, r2, #32
+ 393 0376 D2B2     		uxtb	r2, r2
+ 394 0378 1A70     		strb	r2, [r3, #0]
+ 395              		.loc 1 233 0
+ 396 037a 46F27043 		movw	r3, #:lower16:1073767536
+ 397 037e C4F20003 		movt	r3, #:upper16:1073767536
+ 398 0382 4FF05202 		mov	r2, #82
+ 399 0386 1A70     		strb	r2, [r3, #0]
+ 400 0388 46F25653 		movw	r3, #:lower16:1073767766
+ 401 038c C4F20003 		movt	r3, #:upper16:1073767766
+ 402 0390 4FF00002 		mov	r2, #0
+ 403 0394 1A70     		strb	r2, [r3, #0]
+ 404              		.loc 1 258 0
+ 405 0396 DFE0     		b	.L3
+ 406              	.L21:
+ 407              		.loc 1 237 0
+ 408 0398 40F20003 		movw	r3, #:lower16:I2CHW_mstrControl
+ 409 039c C0F20003 		movt	r3, #:upper16:I2CHW_mstrControl
+ 410 03a0 1B78     		ldrb	r3, [r3, #0]
+ 411 03a2 DBB2     		uxtb	r3, r3
+ 412 03a4 03F00203 		and	r3, r3, #2
+ 413 03a8 002B     		cmp	r3, #0
+ 414 03aa 20D0     		beq	.L26
+ 415              		.loc 1 240 0
+ 416 03ac 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 417 03b0 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 418 03b4 1B78     		ldrb	r3, [r3, #0]
+ 419 03b6 DBB2     		uxtb	r3, r3
+ 420 03b8 6FEA0303 		mvn	r3, r3
+ 421 03bc 03F06503 		and	r3, r3, #101
+ 422 03c0 6FEA0303 		mvn	r3, r3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 13
+
+
+ 423 03c4 DAB2     		uxtb	r2, r3
+ 424 03c6 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 425 03ca C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 426 03ce 1A70     		strb	r2, [r3, #0]
+ 427              		.loc 1 245 0
+ 428 03d0 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 429 03d4 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 430 03d8 4FF06002 		mov	r2, #96
+ 431 03dc 1A70     		strb	r2, [r3, #0]
+ 432              		.loc 1 246 0
+ 433 03de 4EF28013 		movw	r3, #:lower16:-536813184
+ 434 03e2 CEF20003 		movt	r3, #:upper16:-536813184
+ 435 03e6 4FF00102 		mov	r2, #1
+ 436 03ea 1A60     		str	r2, [r3, #0]
+ 437              		.loc 1 258 0
+ 438 03ec B4E0     		b	.L3
+ 439              	.L26:
+ 440              		.loc 1 250 0
+ 441 03ee 46F28843 		movw	r3, #:lower16:1073767560
+ 442 03f2 C4F20003 		movt	r3, #:upper16:1073767560
+ 443 03f6 46F28842 		movw	r2, #:lower16:1073767560
+ 444 03fa C4F20002 		movt	r2, #:upper16:1073767560
+ 445 03fe 1278     		ldrb	r2, [r2, #0]
+ 446 0400 D2B2     		uxtb	r2, r2
+ 447 0402 42F02002 		orr	r2, r2, #32
+ 448 0406 D2B2     		uxtb	r2, r2
+ 449 0408 1A70     		strb	r2, [r3, #0]
+ 450              		.loc 1 251 0
+ 451 040a 46F27043 		movw	r3, #:lower16:1073767536
+ 452 040e C4F20003 		movt	r3, #:upper16:1073767536
+ 453 0412 4FF05202 		mov	r2, #82
+ 454 0416 1A70     		strb	r2, [r3, #0]
+ 455 0418 46F25653 		movw	r3, #:lower16:1073767766
+ 456 041c C4F20003 		movt	r3, #:upper16:1073767766
+ 457 0420 4FF00002 		mov	r2, #0
+ 458 0424 1A70     		strb	r2, [r3, #0]
+ 459              		.loc 1 254 0
+ 460 0426 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 461 042a C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 462 042e 1B78     		ldrb	r3, [r3, #0]
+ 463 0430 DBB2     		uxtb	r3, r3
+ 464 0432 6FEA0303 		mvn	r3, r3
+ 465 0436 03F06F03 		and	r3, r3, #111
+ 466 043a 6FEA0303 		mvn	r3, r3
+ 467 043e DAB2     		uxtb	r2, r3
+ 468 0440 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 469 0444 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 470 0448 1A70     		strb	r2, [r3, #0]
+ 471              		.loc 1 258 0
+ 472 044a 85E0     		b	.L3
+ 473              	.L7:
+ 259:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 260:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 case I2CHW_SM_MSTR_RD_DATA:
+ 261:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 262:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_mstrRdBufPtr[I2CHW_mstrRdBufIndex] = I2CHW_DATA_REG;
+ 474              		.loc 1 262 0
+ 475 044c 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufPtr
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 14
+
+
+ 476 0450 C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufPtr
+ 477 0454 1A68     		ldr	r2, [r3, #0]
+ 478 0456 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufIndex
+ 479 045a C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufIndex
+ 480 045e 1B78     		ldrb	r3, [r3, #0]
+ 481 0460 DBB2     		uxtb	r3, r3
+ 482 0462 1A44     		add	r2, r2, r3
+ 483 0464 46F20653 		movw	r3, #:lower16:1073767686
+ 484 0468 C4F20003 		movt	r3, #:upper16:1073767686
+ 485 046c 1B78     		ldrb	r3, [r3, #0]
+ 486 046e DBB2     		uxtb	r3, r3
+ 487 0470 1370     		strb	r3, [r2, #0]
+ 263:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_mstrRdBufIndex++;
+ 488              		.loc 1 263 0
+ 489 0472 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufIndex
+ 490 0476 C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufIndex
+ 491 047a 1B78     		ldrb	r3, [r3, #0]
+ 492 047c DBB2     		uxtb	r3, r3
+ 493 047e 03F10103 		add	r3, r3, #1
+ 494 0482 DAB2     		uxtb	r2, r3
+ 495 0484 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufIndex
+ 496 0488 C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufIndex
+ 497 048c 1A70     		strb	r2, [r3, #0]
+ 264:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 265:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* Check if end of buffer */
+ 266:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     if(I2CHW_mstrRdBufIndex < I2CHW_mstrRdBufSize)
+ 498              		.loc 1 266 0
+ 499 048e 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufIndex
+ 500 0492 C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufIndex
+ 501 0496 1B78     		ldrb	r3, [r3, #0]
+ 502 0498 DAB2     		uxtb	r2, r3
+ 503 049a 40F20003 		movw	r3, #:lower16:I2CHW_mstrRdBufSize
+ 504 049e C0F20003 		movt	r3, #:upper16:I2CHW_mstrRdBufSize
+ 505 04a2 1B78     		ldrb	r3, [r3, #0]
+ 506 04a4 DBB2     		uxtb	r3, r3
+ 507 04a6 9A42     		cmp	r2, r3
+ 508 04a8 0ED2     		bcs	.L27
+ 267:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 268:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ACK_AND_RECEIVE;       /* ACK and receive byte */
+ 509              		.loc 1 268 0
+ 510 04aa 46F27043 		movw	r3, #:lower16:1073767536
+ 511 04ae C4F20003 		movt	r3, #:upper16:1073767536
+ 512 04b2 4FF00202 		mov	r2, #2
+ 513 04b6 1A70     		strb	r2, [r3, #0]
+ 514 04b8 46F25653 		movw	r3, #:lower16:1073767766
+ 515 04bc C4F20003 		movt	r3, #:upper16:1073767766
+ 516 04c0 4FF00002 		mov	r2, #0
+ 517 04c4 1A70     		strb	r2, [r3, #0]
+ 269:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 270:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* End of buffer: complete reading */
+ 271:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else if(I2CHW_CHECK_NO_STOP(I2CHW_mstrControl))
+ 272:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {                        
+ 273:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Set READ complete and Master HALTED */
+ 274:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_mstrStatus |= (I2CHW_MSTAT_XFER_HALT |
+ 275:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                         I2CHW_MSTAT_RD_CMPLT);
+ 276:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         
+ 277:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_state = I2CHW_SM_MSTR_HALT;    /* Expect RESTART */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 15
+
+
+ 278:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_DisableInt();
+ 279:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 280:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else
+ 281:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 282:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ENABLE_INT_ON_STOP;
+ 283:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_NAK_AND_RECEIVE;       /* NACK and TRY to generate STOP */
+ 284:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 285:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     break;
+ 518              		.loc 1 285 0
+ 519 04c6 47E0     		b	.L3
+ 520              	.L27:
+ 521              		.loc 1 271 0
+ 522 04c8 40F20003 		movw	r3, #:lower16:I2CHW_mstrControl
+ 523 04cc C0F20003 		movt	r3, #:upper16:I2CHW_mstrControl
+ 524 04d0 1B78     		ldrb	r3, [r3, #0]
+ 525 04d2 DBB2     		uxtb	r3, r3
+ 526 04d4 03F00203 		and	r3, r3, #2
+ 527 04d8 002B     		cmp	r3, #0
+ 528 04da 1CD0     		beq	.L29
+ 529              		.loc 1 274 0
+ 530 04dc 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 531 04e0 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 532 04e4 1B78     		ldrb	r3, [r3, #0]
+ 533 04e6 DBB2     		uxtb	r3, r3
+ 534 04e8 43F00903 		orr	r3, r3, #9
+ 535 04ec DAB2     		uxtb	r2, r3
+ 536 04ee 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 537 04f2 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 538 04f6 1A70     		strb	r2, [r3, #0]
+ 539              		.loc 1 277 0
+ 540 04f8 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 541 04fc C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 542 0500 4FF06002 		mov	r2, #96
+ 543 0504 1A70     		strb	r2, [r3, #0]
+ 544              		.loc 1 278 0
+ 545 0506 4EF28013 		movw	r3, #:lower16:-536813184
+ 546 050a CEF20003 		movt	r3, #:upper16:-536813184
+ 547 050e 4FF00102 		mov	r2, #1
+ 548 0512 1A60     		str	r2, [r3, #0]
+ 549              		.loc 1 285 0
+ 550 0514 20E0     		b	.L3
+ 551              	.L29:
+ 552              		.loc 1 282 0
+ 553 0516 46F28843 		movw	r3, #:lower16:1073767560
+ 554 051a C4F20003 		movt	r3, #:upper16:1073767560
+ 555 051e 46F28842 		movw	r2, #:lower16:1073767560
+ 556 0522 C4F20002 		movt	r2, #:upper16:1073767560
+ 557 0526 1278     		ldrb	r2, [r2, #0]
+ 558 0528 D2B2     		uxtb	r2, r2
+ 559 052a 42F02002 		orr	r2, r2, #32
+ 560 052e D2B2     		uxtb	r2, r2
+ 561 0530 1A70     		strb	r2, [r3, #0]
+ 562              		.loc 1 283 0
+ 563 0532 46F27043 		movw	r3, #:lower16:1073767536
+ 564 0536 C4F20003 		movt	r3, #:upper16:1073767536
+ 565 053a 4FF01202 		mov	r2, #18
+ 566 053e 1A70     		strb	r2, [r3, #0]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 16
+
+
+ 567 0540 46F25653 		movw	r3, #:lower16:1073767766
+ 568 0544 C4F20003 		movt	r3, #:upper16:1073767766
+ 569 0548 4FF00002 		mov	r2, #0
+ 570 054c 1A70     		strb	r2, [r3, #0]
+ 571              		.loc 1 285 0
+ 572 054e 03E0     		b	.L3
+ 573              	.L4:
+ 286:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 287:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 default: /* This is an invalid state and should not occur */
+ 288:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 289:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #if(I2CHW_TIMEOUT_ENABLED)
+ 290:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Exit from interrupt to take a chance for timeout timer handle this case 
+ 291:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_DisableInt();
+ 292:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ClearPendingInt();
+ 293:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #else
+ 294:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Block execution flow: unexpected condition */
+ 295:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         CYASSERT(0u != 0u);
+ 574              		.loc 1 295 0
+ 575 0550 4FF00000 		mov	r0, #0
+ 576 0554 FFF7FEFF 		bl	CyHalt
+ 577              	.L3:
+ 296:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ 297:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 298:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     break;
+ 299:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 300:.\Generated_Source\PSoC5/I2CHW_INT.c ****             }
+ 301:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 302:.\Generated_Source\PSoC5/I2CHW_INT.c ****             /* Catches the Stop: end of transaction */
+ 303:.\Generated_Source\PSoC5/I2CHW_INT.c ****             if(I2CHW_CHECK_STOP_STS(tmpCsr))
+ 578              		.loc 1 303 0
+ 579 0558 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 580 055a 03F02003 		and	r3, r3, #32
+ 581 055e 002B     		cmp	r3, #0
+ 582 0560 43D0     		beq	.L36
+ 304:.\Generated_Source\PSoC5/I2CHW_INT.c ****             {
+ 305:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 I2CHW_mstrStatus |= I2CHW_GET_MSTAT_CMPLT;
+ 583              		.loc 1 305 0
+ 584 0562 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 585 0566 C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 586 056a 1B78     		ldrb	r3, [r3, #0]
+ 587 056c DBB2     		uxtb	r3, r3
+ 588 056e 03F00803 		and	r3, r3, #8
+ 589 0572 002B     		cmp	r3, #0
+ 590 0574 02D0     		beq	.L31
+ 591 0576 4FF00102 		mov	r2, #1
+ 592 057a 01E0     		b	.L32
+ 593              	.L31:
+ 594 057c 4FF00202 		mov	r2, #2
+ 595              	.L32:
+ 596 0580 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 597 0584 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ 598 0588 1B78     		ldrb	r3, [r3, #0]
+ 599 058a DBB2     		uxtb	r3, r3
+ 600 058c 42EA0303 		orr	r3, r2, r3
+ 601 0590 DAB2     		uxtb	r2, r3
+ 602 0592 40F20003 		movw	r3, #:lower16:I2CHW_mstrStatus
+ 603 0596 C0F20003 		movt	r3, #:upper16:I2CHW_mstrStatus
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 17
+
+
+ 604 059a 1A70     		strb	r2, [r3, #0]
+ 306:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 307:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 I2CHW_DISABLE_INT_ON_STOP;
+ 605              		.loc 1 307 0
+ 606 059c 46F28843 		movw	r3, #:lower16:1073767560
+ 607 05a0 C4F20003 		movt	r3, #:upper16:1073767560
+ 608 05a4 46F28842 		movw	r2, #:lower16:1073767560
+ 609 05a8 C4F20002 		movt	r2, #:upper16:1073767560
+ 610 05ac 1278     		ldrb	r2, [r2, #0]
+ 611 05ae D2B2     		uxtb	r2, r2
+ 612 05b0 02F0DF02 		and	r2, r2, #223
+ 613 05b4 1A70     		strb	r2, [r3, #0]
+ 308:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 I2CHW_state = I2CHW_SM_IDLE;
+ 614              		.loc 1 308 0
+ 615 05b6 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 616 05ba C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 617 05be 4FF01002 		mov	r2, #16
+ 618 05c2 1A70     		strb	r2, [r3, #0]
+ 619 05c4 12E0     		b	.L35
+ 620              	.L2:
+ 309:.\Generated_Source\PSoC5/I2CHW_INT.c ****             }
+ 310:.\Generated_Source\PSoC5/I2CHW_INT.c ****         #endif /* (I2CHW_MODE_MASTER_ENABLED) */
+ 311:.\Generated_Source\PSoC5/I2CHW_INT.c ****     }
+ 312:.\Generated_Source\PSoC5/I2CHW_INT.c ****     else if(I2CHW_CHECK_SM_SLAVE)
+ 621              		.loc 1 312 0
+ 622 05c6 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 623 05ca C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 624 05ce 1B78     		ldrb	r3, [r3, #0]
+ 625 05d0 DBB2     		uxtb	r3, r3
+ 626 05d2 03F01003 		and	r3, r3, #16
+ 627 05d6 002B     		cmp	r3, #0
+ 628 05d8 08D1     		bne	.L35
+ 629              	.L34:
+ 313:.\Generated_Source\PSoC5/I2CHW_INT.c ****     {
+ 314:.\Generated_Source\PSoC5/I2CHW_INT.c ****         #if(I2CHW_MODE_SLAVE_ENABLED)
+ 315:.\Generated_Source\PSoC5/I2CHW_INT.c ****             
+ 316:.\Generated_Source\PSoC5/I2CHW_INT.c ****             if((I2CHW_CHECK_STOP_STS(tmpCsr)) || /* Stop || Restart */
+ 317:.\Generated_Source\PSoC5/I2CHW_INT.c ****                (I2CHW_CHECK_BYTE_COMPLETE(tmpCsr) && I2CHW_CHECK_ADDRESS_STS(tmpCsr)))
+ 318:.\Generated_Source\PSoC5/I2CHW_INT.c ****             {
+ 319:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* Catch end of master write transcation: use interrupt on Stop */
+ 320:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* The STOP bit history on address phase does not have correct state */
+ 321:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 if(I2CHW_SM_SL_WR_DATA == I2CHW_state)
+ 322:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 323:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_DISABLE_INT_ON_STOP;
+ 324:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 325:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_slStatus &= ((uint8) ~I2CHW_SSTAT_WR_BUSY);
+ 326:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_slStatus |= ((uint8)  I2CHW_SSTAT_WR_CMPLT);
+ 327:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 328:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     I2CHW_state = I2CHW_SM_IDLE;
+ 329:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 330:.\Generated_Source\PSoC5/I2CHW_INT.c ****             }
+ 331:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 332:.\Generated_Source\PSoC5/I2CHW_INT.c ****             if(I2CHW_CHECK_BYTE_COMPLETE(tmpCsr))
+ 333:.\Generated_Source\PSoC5/I2CHW_INT.c ****             {
+ 334:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* The address only issued after Start or ReStart: so check address
+ 335:.\Generated_Source\PSoC5/I2CHW_INT.c ****                    to catch this events:
+ 336:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     FF : sets Addr phase with byte_complete interrupt trigger.
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 18
+
+
+ 337:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     UDB: sets Addr phase immediately after Start or ReStart. */
+ 338:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 if(I2CHW_CHECK_ADDRESS_STS(tmpCsr))
+ 339:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 340:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     /* Check for software address detection */
+ 341:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #if(I2CHW_SW_ADRR_DECODE)
+ 342:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         tmp8 = I2CHW_GET_SLAVE_ADDR(I2CHW_DATA_REG);
+ 343:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 344:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(tmp8 == I2CHW_slAddress)   /* Check for address match */
+ 345:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 346:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             if(0u != (I2CHW_DATA_REG & I2CHW_READ_FLAG))
+ 347:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 348:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* Place code to prepare read buffer here                  */
+ 349:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* `#START I2CHW_SW_PREPARE_READ_BUF_interrupt` */
+ 350:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 351:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* `#END` */
+ 352:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 353:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* Prepare next opeation to read, get data and place in data regist
+ 354:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 if(I2CHW_slRdBufIndex < I2CHW_slRdBufSize)
+ 355:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 {
+ 356:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     /* Load first data byte from array */
+ 357:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_DATA_REG = I2CHW_slRdBufPtr[I2CHW_slRdBufIndex];
+ 358:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_ACK_AND_TRANSMIT;
+ 359:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_slRdBufIndex++;
+ 360:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 361:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_slStatus |= I2CHW_SSTAT_RD_BUSY;
+ 362:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 }
+ 363:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 else    /* Overflow: provide 0xFF on the bus */
+ 364:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 {
+ 365:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_DATA_REG = I2CHW_OVERFLOW_RETURN;
+ 366:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_ACK_AND_TRANSMIT;
+ 367:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 368:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                     I2CHW_slStatus  |= (I2CHW_SSTAT_RD_BUSY |
+ 369:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                                    I2CHW_SSTAT_RD_ERR_OVFL);
+ 370:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 }
+ 371:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 372:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_state = I2CHW_SM_SL_RD_DATA;
+ 373:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 374:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             else  /* Write transaction: receive 1st byte */
+ 375:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 376:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_ACK_AND_RECEIVE;
+ 377:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_state = I2CHW_SM_SL_WR_DATA;
+ 378:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 379:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_slStatus |= I2CHW_SSTAT_WR_BUSY;
+ 380:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_ENABLE_INT_ON_STOP;
+ 381:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 382:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }    
+ 383:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else
+ 384:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 385:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /*     Place code to compare for additional address here    */
+ 386:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#START I2CHW_SW_ADDR_COMPARE_interruptStart` */
+ 387:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 388:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#END` */
+ 389:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             
+ 390:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_NAK_AND_RECEIVE;   /* NACK address */
+ 391:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 392:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Place code to end of condition for NACK generation here */
+ 393:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#START I2CHW_SW_ADDR_COMPARE_interruptEnd`  */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 19
+
+
+ 394:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 395:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#END` */
+ 396:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 397:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         
+ 398:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #else /* (I2CHW_HW_ADRR_DECODE) */
+ 399:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         
+ 400:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(0u != (I2CHW_DATA_REG & I2CHW_READ_FLAG))
+ 401:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 402:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Place code to prepare read buffer here                  */
+ 403:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#START I2CHW_HW_PREPARE_READ_BUF_interrupt` */
+ 404:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 405:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* `#END` */
+ 406:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 407:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             /* Prepare next opeation to read, get data and place in data register *
+ 408:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             if(I2CHW_slRdBufIndex < I2CHW_slRdBufSize)
+ 409:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 410:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 /* Load first data byte from array */
+ 411:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_DATA_REG = I2CHW_slRdBufPtr[I2CHW_slRdBufIndex];
+ 412:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_ACK_AND_TRANSMIT;
+ 413:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_slRdBufIndex++;
+ 414:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 415:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_slStatus |= I2CHW_SSTAT_RD_BUSY;
+ 416:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 417:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             else    /* Overflow: provide 0xFF on the bus */
+ 418:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             {
+ 419:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_DATA_REG = I2CHW_OVERFLOW_RETURN;
+ 420:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_ACK_AND_TRANSMIT;
+ 421:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 422:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                 I2CHW_slStatus  |= (I2CHW_SSTAT_RD_BUSY |
+ 423:.\Generated_Source\PSoC5/I2CHW_INT.c ****                                                                I2CHW_SSTAT_RD_ERR_OVFL);
+ 424:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             }
+ 425:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 426:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_state = I2CHW_SM_SL_RD_DATA;
+ 427:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 428:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else  /* Write transaction: receive 1st byte */
+ 429:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 430:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_ACK_AND_RECEIVE;
+ 431:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_state = I2CHW_SM_SL_WR_DATA;
+ 432:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 433:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_slStatus |= I2CHW_SSTAT_WR_BUSY;
+ 434:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_ENABLE_INT_ON_STOP;
+ 435:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 436:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         
+ 437:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #endif /* (I2CHW_SW_ADRR_DECODE) */
+ 438:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 439:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* Data states */
+ 440:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* Data master writes into slave */
+ 441:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 else if(I2CHW_state == I2CHW_SM_SL_WR_DATA)
+ 442:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 443:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     if(I2CHW_slWrBufIndex < I2CHW_slWrBufSize)
+ 444:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 445:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         tmp8 = I2CHW_DATA_REG;
+ 446:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ACK_AND_RECEIVE;
+ 447:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_slWrBufPtr[I2CHW_slWrBufIndex] = tmp8;
+ 448:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_slWrBufIndex++;
+ 449:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 450:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else  /* of array: complete write, send NACK */
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 20
+
+
+ 451:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 452:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_NAK_AND_RECEIVE;
+ 453:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 454:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_slStatus |= I2CHW_SSTAT_WR_ERR_OVFL;
+ 455:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 456:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 457:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 /* Data master reads from slave */
+ 458:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 else if(I2CHW_state == I2CHW_SM_SL_RD_DATA)
+ 459:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 460:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     if(I2CHW_CHECK_DATA_ACK(tmpCsr))
+ 461:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 462:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         if(I2CHW_slRdBufIndex < I2CHW_slRdBufSize)
+ 463:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 464:.\Generated_Source\PSoC5/I2CHW_INT.c ****                              /* Get data from array */
+ 465:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DATA_REG = I2CHW_slRdBufPtr[I2CHW_slRdBufIndex];
+ 466:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_TRANSMIT_DATA;
+ 467:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_slRdBufIndex++;
+ 468:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 469:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         else   /* Overflow: provide 0xFF on the bus */
+ 470:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         {
+ 471:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_DATA_REG = I2CHW_OVERFLOW_RETURN;
+ 472:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_TRANSMIT_DATA;
+ 473:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 474:.\Generated_Source\PSoC5/I2CHW_INT.c ****                             I2CHW_slStatus |= I2CHW_SSTAT_RD_ERR_OVFL;
+ 475:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         }
+ 476:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 477:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     else  /* Last byte was NACKed: read complete */
+ 478:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     {
+ 479:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Only NACK appears on the bus */
+ 480:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_DATA_REG = I2CHW_OVERFLOW_RETURN;
+ 481:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_NAK_AND_TRANSMIT;
+ 482:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 483:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_slStatus &= ((uint8) ~I2CHW_SSTAT_RD_BUSY);
+ 484:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_slStatus |= ((uint8)  I2CHW_SSTAT_RD_CMPLT);
+ 485:.\Generated_Source\PSoC5/I2CHW_INT.c **** 
+ 486:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_state = I2CHW_SM_IDLE;
+ 487:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     }
+ 488:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 489:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 else
+ 490:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 {
+ 491:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #if(I2CHW_TIMEOUT_ENABLED)
+ 492:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Exit from interrupt to take a chance for timeout timer handle this case 
+ 493:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_DisableInt();
+ 494:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         I2CHW_ClearPendingInt();
+ 495:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #else
+ 496:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         /* Block execution flow: unexpected condition */
+ 497:.\Generated_Source\PSoC5/I2CHW_INT.c ****                         CYASSERT(0u != 0u);
+ 498:.\Generated_Source\PSoC5/I2CHW_INT.c ****                     #endif /* (I2CHW_TIMEOUT_ENABLED) */
+ 499:.\Generated_Source\PSoC5/I2CHW_INT.c ****                 }
+ 500:.\Generated_Source\PSoC5/I2CHW_INT.c ****             }
+ 501:.\Generated_Source\PSoC5/I2CHW_INT.c ****         #endif /* (I2CHW_MODE_SLAVE_ENABLED) */
+ 502:.\Generated_Source\PSoC5/I2CHW_INT.c ****     }
+ 503:.\Generated_Source\PSoC5/I2CHW_INT.c ****     else
+ 504:.\Generated_Source\PSoC5/I2CHW_INT.c ****     {
+ 505:.\Generated_Source\PSoC5/I2CHW_INT.c ****         /* The FSM skips master and slave processing: return to IDLE */
+ 506:.\Generated_Source\PSoC5/I2CHW_INT.c ****         I2CHW_state = I2CHW_SM_IDLE;
+ 630              		.loc 1 506 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 21
+
+
+ 631 05da 40F20003 		movw	r3, #:lower16:I2CHW_state
+ 632 05de C0F20003 		movt	r3, #:upper16:I2CHW_state
+ 633 05e2 4FF01002 		mov	r2, #16
+ 634 05e6 1A70     		strb	r2, [r3, #0]
+ 635 05e8 00E0     		b	.L35
+ 636              	.L36:
+ 637              		.loc 1 308 0
+ 638 05ea 00BF     		nop
+ 639              	.L35:
+ 507:.\Generated_Source\PSoC5/I2CHW_INT.c ****     }
+ 508:.\Generated_Source\PSoC5/I2CHW_INT.c **** }
+ 640              		.loc 1 508 0
+ 641 05ec 07F10807 		add	r7, r7, #8
+ 642 05f0 BD46     		mov	sp, r7
+ 643 05f2 80BD     		pop	{r7, pc}
+ 644              		.cfi_endproc
+ 645              	.LFE0:
+ 646              		.size	I2CHW_ISR, .-I2CHW_ISR
+ 647              		.text
+ 648              	.Letext0:
+ 649              		.section	.debug_loc,"",%progbits
+ 650              	.Ldebug_loc0:
+ 651              	.LLST0:
+ 652 0000 00000000 		.4byte	.LFB0
+ 653 0004 02000000 		.4byte	.LCFI0
+ 654 0008 0100     		.2byte	0x1
+ 655 000a 5D       		.byte	0x5d
+ 656 000b 02000000 		.4byte	.LCFI0
+ 657 000f 04000000 		.4byte	.LCFI1
+ 658 0013 0200     		.2byte	0x2
+ 659 0015 7D       		.byte	0x7d
+ 660 0016 08       		.sleb128 8
+ 661 0017 04000000 		.4byte	.LCFI1
+ 662 001b 06000000 		.4byte	.LCFI2
+ 663 001f 0200     		.2byte	0x2
+ 664 0021 7D       		.byte	0x7d
+ 665 0022 10       		.sleb128 16
+ 666 0023 06000000 		.4byte	.LCFI2
+ 667 0027 F4050000 		.4byte	.LFE0
+ 668 002b 0200     		.2byte	0x2
+ 669 002d 77       		.byte	0x77
+ 670 002e 10       		.sleb128 16
+ 671 002f 00000000 		.4byte	0x0
+ 672 0033 00000000 		.4byte	0x0
+ 673              		.file 2 ".\\Generated_Source\\PSoC5\\/I2CHW_PVT.h"
+ 674              		.file 3 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 675              		.section	.debug_info
+ 676 0000 37010000 		.4byte	0x137
+ 677 0004 0200     		.2byte	0x2
+ 678 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 679 000a 04       		.byte	0x4
+ 680 000b 01       		.uleb128 0x1
+ 681 000c 43010000 		.4byte	.LASF21
+ 682 0010 01       		.byte	0x1
+ 683 0011 C8000000 		.4byte	.LASF22
+ 684 0015 76000000 		.4byte	.LASF23
+ 685 0019 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 22
+
+
+ 686 001d 00000000 		.4byte	0x0
+ 687 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 688 0025 00000000 		.4byte	.Ldebug_line0
+ 689 0029 02       		.uleb128 0x2
+ 690 002a 01       		.byte	0x1
+ 691 002b 06       		.byte	0x6
+ 692 002c 62010000 		.4byte	.LASF0
+ 693 0030 02       		.uleb128 0x2
+ 694 0031 01       		.byte	0x1
+ 695 0032 08       		.byte	0x8
+ 696 0033 04010000 		.4byte	.LASF1
+ 697 0037 02       		.uleb128 0x2
+ 698 0038 02       		.byte	0x2
+ 699 0039 05       		.byte	0x5
+ 700 003a 89010000 		.4byte	.LASF2
+ 701 003e 02       		.uleb128 0x2
+ 702 003f 02       		.byte	0x2
+ 703 0040 07       		.byte	0x7
+ 704 0041 0E000000 		.4byte	.LASF3
+ 705 0045 02       		.uleb128 0x2
+ 706 0046 04       		.byte	0x4
+ 707 0047 05       		.byte	0x5
+ 708 0048 3A010000 		.4byte	.LASF4
+ 709 004c 02       		.uleb128 0x2
+ 710 004d 04       		.byte	0x4
+ 711 004e 07       		.byte	0x7
+ 712 004f 64000000 		.4byte	.LASF5
+ 713 0053 02       		.uleb128 0x2
+ 714 0054 08       		.byte	0x8
+ 715 0055 05       		.byte	0x5
+ 716 0056 00000000 		.4byte	.LASF6
+ 717 005a 02       		.uleb128 0x2
+ 718 005b 08       		.byte	0x8
+ 719 005c 07       		.byte	0x7
+ 720 005d ED000000 		.4byte	.LASF7
+ 721 0061 03       		.uleb128 0x3
+ 722 0062 04       		.byte	0x4
+ 723 0063 05       		.byte	0x5
+ 724 0064 696E7400 		.ascii	"int\000"
+ 725 0068 02       		.uleb128 0x2
+ 726 0069 04       		.byte	0x4
+ 727 006a 07       		.byte	0x7
+ 728 006b 21000000 		.4byte	.LASF8
+ 729 006f 04       		.uleb128 0x4
+ 730 0070 5E000000 		.4byte	.LASF24
+ 731 0074 03       		.byte	0x3
+ 732 0075 4C       		.byte	0x4c
+ 733 0076 30000000 		.4byte	0x30
+ 734 007a 02       		.uleb128 0x2
+ 735 007b 04       		.byte	0x4
+ 736 007c 04       		.byte	0x4
+ 737 007d 83010000 		.4byte	.LASF9
+ 738 0081 02       		.uleb128 0x2
+ 739 0082 08       		.byte	0x8
+ 740 0083 04       		.byte	0x4
+ 741 0084 33010000 		.4byte	.LASF10
+ 742 0088 02       		.uleb128 0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 23
+
+
+ 743 0089 01       		.byte	0x1
+ 744 008a 08       		.byte	0x8
+ 745 008b 1C010000 		.4byte	.LASF11
+ 746 008f 05       		.uleb128 0x5
+ 747 0090 6F000000 		.4byte	0x6f
+ 748 0094 06       		.uleb128 0x6
+ 749 0095 04       		.byte	0x4
+ 750 0096 07       		.byte	0x7
+ 751 0097 07       		.uleb128 0x7
+ 752 0098 01       		.byte	0x1
+ 753 0099 12010000 		.4byte	.LASF25
+ 754 009d 01       		.byte	0x1
+ 755 009e 2E       		.byte	0x2e
+ 756 009f 01       		.byte	0x1
+ 757 00a0 00000000 		.4byte	.LFB0
+ 758 00a4 F4050000 		.4byte	.LFE0
+ 759 00a8 00000000 		.4byte	.LLST0
+ 760 00ac BF000000 		.4byte	0xbf
+ 761 00b0 08       		.uleb128 0x8
+ 762 00b1 BC010000 		.4byte	.LASF26
+ 763 00b5 01       		.byte	0x1
+ 764 00b6 34       		.byte	0x34
+ 765 00b7 6F000000 		.4byte	0x6f
+ 766 00bb 02       		.byte	0x2
+ 767 00bc 91       		.byte	0x91
+ 768 00bd 77       		.sleb128 -9
+ 769 00be 00       		.byte	0x0
+ 770 00bf 09       		.uleb128 0x9
+ 771 00c0 3F000000 		.4byte	.LASF12
+ 772 00c4 02       		.byte	0x2
+ 773 00c5 23       		.byte	0x23
+ 774 00c6 8F000000 		.4byte	0x8f
+ 775 00ca 01       		.byte	0x1
+ 776 00cb 01       		.byte	0x1
+ 777 00cc 09       		.uleb128 0x9
+ 778 00cd 2E000000 		.4byte	.LASF13
+ 779 00d1 02       		.byte	0x2
+ 780 00d2 27       		.byte	0x27
+ 781 00d3 8F000000 		.4byte	0x8f
+ 782 00d7 01       		.byte	0x1
+ 783 00d8 01       		.byte	0x1
+ 784 00d9 09       		.uleb128 0x9
+ 785 00da 21010000 		.4byte	.LASF14
+ 786 00de 02       		.byte	0x2
+ 787 00df 28       		.byte	0x28
+ 788 00e0 8F000000 		.4byte	0x8f
+ 789 00e4 01       		.byte	0x1
+ 790 00e5 01       		.byte	0x1
+ 791 00e6 09       		.uleb128 0x9
+ 792 00e7 4B000000 		.4byte	.LASF15
+ 793 00eb 02       		.byte	0x2
+ 794 00ec 2B       		.byte	0x2b
+ 795 00ed F3000000 		.4byte	0xf3
+ 796 00f1 01       		.byte	0x1
+ 797 00f2 01       		.byte	0x1
+ 798 00f3 0A       		.uleb128 0xa
+ 799 00f4 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 24
+
+
+ 800 00f5 8F000000 		.4byte	0x8f
+ 801 00f9 09       		.uleb128 0x9
+ 802 00fa 93010000 		.4byte	.LASF16
+ 803 00fe 02       		.byte	0x2
+ 804 00ff 2C       		.byte	0x2c
+ 805 0100 8F000000 		.4byte	0x8f
+ 806 0104 01       		.byte	0x1
+ 807 0105 01       		.byte	0x1
+ 808 0106 09       		.uleb128 0x9
+ 809 0107 A7010000 		.4byte	.LASF17
+ 810 010b 02       		.byte	0x2
+ 811 010c 2D       		.byte	0x2d
+ 812 010d 8F000000 		.4byte	0x8f
+ 813 0111 01       		.byte	0x1
+ 814 0112 01       		.byte	0x1
+ 815 0113 09       		.uleb128 0x9
+ 816 0114 4F010000 		.4byte	.LASF18
+ 817 0118 02       		.byte	0x2
+ 818 0119 30       		.byte	0x30
+ 819 011a F3000000 		.4byte	0xf3
+ 820 011e 01       		.byte	0x1
+ 821 011f 01       		.byte	0x1
+ 822 0120 09       		.uleb128 0x9
+ 823 0121 B4000000 		.4byte	.LASF19
+ 824 0125 02       		.byte	0x2
+ 825 0126 31       		.byte	0x31
+ 826 0127 8F000000 		.4byte	0x8f
+ 827 012b 01       		.byte	0x1
+ 828 012c 01       		.byte	0x1
+ 829 012d 09       		.uleb128 0x9
+ 830 012e 6E010000 		.4byte	.LASF20
+ 831 0132 02       		.byte	0x2
+ 832 0133 32       		.byte	0x32
+ 833 0134 8F000000 		.4byte	0x8f
+ 834 0138 01       		.byte	0x1
+ 835 0139 01       		.byte	0x1
+ 836 013a 00       		.byte	0x0
+ 837              		.section	.debug_abbrev
+ 838 0000 01       		.uleb128 0x1
+ 839 0001 11       		.uleb128 0x11
+ 840 0002 01       		.byte	0x1
+ 841 0003 25       		.uleb128 0x25
+ 842 0004 0E       		.uleb128 0xe
+ 843 0005 13       		.uleb128 0x13
+ 844 0006 0B       		.uleb128 0xb
+ 845 0007 03       		.uleb128 0x3
+ 846 0008 0E       		.uleb128 0xe
+ 847 0009 1B       		.uleb128 0x1b
+ 848 000a 0E       		.uleb128 0xe
+ 849 000b 11       		.uleb128 0x11
+ 850 000c 01       		.uleb128 0x1
+ 851 000d 52       		.uleb128 0x52
+ 852 000e 01       		.uleb128 0x1
+ 853 000f 55       		.uleb128 0x55
+ 854 0010 06       		.uleb128 0x6
+ 855 0011 10       		.uleb128 0x10
+ 856 0012 06       		.uleb128 0x6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 25
+
+
+ 857 0013 00       		.byte	0x0
+ 858 0014 00       		.byte	0x0
+ 859 0015 02       		.uleb128 0x2
+ 860 0016 24       		.uleb128 0x24
+ 861 0017 00       		.byte	0x0
+ 862 0018 0B       		.uleb128 0xb
+ 863 0019 0B       		.uleb128 0xb
+ 864 001a 3E       		.uleb128 0x3e
+ 865 001b 0B       		.uleb128 0xb
+ 866 001c 03       		.uleb128 0x3
+ 867 001d 0E       		.uleb128 0xe
+ 868 001e 00       		.byte	0x0
+ 869 001f 00       		.byte	0x0
+ 870 0020 03       		.uleb128 0x3
+ 871 0021 24       		.uleb128 0x24
+ 872 0022 00       		.byte	0x0
+ 873 0023 0B       		.uleb128 0xb
+ 874 0024 0B       		.uleb128 0xb
+ 875 0025 3E       		.uleb128 0x3e
+ 876 0026 0B       		.uleb128 0xb
+ 877 0027 03       		.uleb128 0x3
+ 878 0028 08       		.uleb128 0x8
+ 879 0029 00       		.byte	0x0
+ 880 002a 00       		.byte	0x0
+ 881 002b 04       		.uleb128 0x4
+ 882 002c 16       		.uleb128 0x16
+ 883 002d 00       		.byte	0x0
+ 884 002e 03       		.uleb128 0x3
+ 885 002f 0E       		.uleb128 0xe
+ 886 0030 3A       		.uleb128 0x3a
+ 887 0031 0B       		.uleb128 0xb
+ 888 0032 3B       		.uleb128 0x3b
+ 889 0033 0B       		.uleb128 0xb
+ 890 0034 49       		.uleb128 0x49
+ 891 0035 13       		.uleb128 0x13
+ 892 0036 00       		.byte	0x0
+ 893 0037 00       		.byte	0x0
+ 894 0038 05       		.uleb128 0x5
+ 895 0039 35       		.uleb128 0x35
+ 896 003a 00       		.byte	0x0
+ 897 003b 49       		.uleb128 0x49
+ 898 003c 13       		.uleb128 0x13
+ 899 003d 00       		.byte	0x0
+ 900 003e 00       		.byte	0x0
+ 901 003f 06       		.uleb128 0x6
+ 902 0040 24       		.uleb128 0x24
+ 903 0041 00       		.byte	0x0
+ 904 0042 0B       		.uleb128 0xb
+ 905 0043 0B       		.uleb128 0xb
+ 906 0044 3E       		.uleb128 0x3e
+ 907 0045 0B       		.uleb128 0xb
+ 908 0046 00       		.byte	0x0
+ 909 0047 00       		.byte	0x0
+ 910 0048 07       		.uleb128 0x7
+ 911 0049 2E       		.uleb128 0x2e
+ 912 004a 01       		.byte	0x1
+ 913 004b 3F       		.uleb128 0x3f
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 26
+
+
+ 914 004c 0C       		.uleb128 0xc
+ 915 004d 03       		.uleb128 0x3
+ 916 004e 0E       		.uleb128 0xe
+ 917 004f 3A       		.uleb128 0x3a
+ 918 0050 0B       		.uleb128 0xb
+ 919 0051 3B       		.uleb128 0x3b
+ 920 0052 0B       		.uleb128 0xb
+ 921 0053 27       		.uleb128 0x27
+ 922 0054 0C       		.uleb128 0xc
+ 923 0055 11       		.uleb128 0x11
+ 924 0056 01       		.uleb128 0x1
+ 925 0057 12       		.uleb128 0x12
+ 926 0058 01       		.uleb128 0x1
+ 927 0059 40       		.uleb128 0x40
+ 928 005a 06       		.uleb128 0x6
+ 929 005b 01       		.uleb128 0x1
+ 930 005c 13       		.uleb128 0x13
+ 931 005d 00       		.byte	0x0
+ 932 005e 00       		.byte	0x0
+ 933 005f 08       		.uleb128 0x8
+ 934 0060 34       		.uleb128 0x34
+ 935 0061 00       		.byte	0x0
+ 936 0062 03       		.uleb128 0x3
+ 937 0063 0E       		.uleb128 0xe
+ 938 0064 3A       		.uleb128 0x3a
+ 939 0065 0B       		.uleb128 0xb
+ 940 0066 3B       		.uleb128 0x3b
+ 941 0067 0B       		.uleb128 0xb
+ 942 0068 49       		.uleb128 0x49
+ 943 0069 13       		.uleb128 0x13
+ 944 006a 02       		.uleb128 0x2
+ 945 006b 0A       		.uleb128 0xa
+ 946 006c 00       		.byte	0x0
+ 947 006d 00       		.byte	0x0
+ 948 006e 09       		.uleb128 0x9
+ 949 006f 34       		.uleb128 0x34
+ 950 0070 00       		.byte	0x0
+ 951 0071 03       		.uleb128 0x3
+ 952 0072 0E       		.uleb128 0xe
+ 953 0073 3A       		.uleb128 0x3a
+ 954 0074 0B       		.uleb128 0xb
+ 955 0075 3B       		.uleb128 0x3b
+ 956 0076 0B       		.uleb128 0xb
+ 957 0077 49       		.uleb128 0x49
+ 958 0078 13       		.uleb128 0x13
+ 959 0079 3F       		.uleb128 0x3f
+ 960 007a 0C       		.uleb128 0xc
+ 961 007b 3C       		.uleb128 0x3c
+ 962 007c 0C       		.uleb128 0xc
+ 963 007d 00       		.byte	0x0
+ 964 007e 00       		.byte	0x0
+ 965 007f 0A       		.uleb128 0xa
+ 966 0080 0F       		.uleb128 0xf
+ 967 0081 00       		.byte	0x0
+ 968 0082 0B       		.uleb128 0xb
+ 969 0083 0B       		.uleb128 0xb
+ 970 0084 49       		.uleb128 0x49
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 27
+
+
+ 971 0085 13       		.uleb128 0x13
+ 972 0086 00       		.byte	0x0
+ 973 0087 00       		.byte	0x0
+ 974 0088 00       		.byte	0x0
+ 975              		.section	.debug_pubnames,"",%progbits
+ 976 0000 1C000000 		.4byte	0x1c
+ 977 0004 0200     		.2byte	0x2
+ 978 0006 00000000 		.4byte	.Ldebug_info0
+ 979 000a 3B010000 		.4byte	0x13b
+ 980 000e 97000000 		.4byte	0x97
+ 981 0012 49324348 		.ascii	"I2CHW_ISR\000"
+ 981      575F4953 
+ 981      5200
+ 982 001c 00000000 		.4byte	0x0
+ 983              		.section	.debug_aranges,"",%progbits
+ 984 0000 1C000000 		.4byte	0x1c
+ 985 0004 0200     		.2byte	0x2
+ 986 0006 00000000 		.4byte	.Ldebug_info0
+ 987 000a 04       		.byte	0x4
+ 988 000b 00       		.byte	0x0
+ 989 000c 0000     		.2byte	0x0
+ 990 000e 0000     		.2byte	0x0
+ 991 0010 00000000 		.4byte	.LFB0
+ 992 0014 F4050000 		.4byte	.LFE0-.LFB0
+ 993 0018 00000000 		.4byte	0x0
+ 994 001c 00000000 		.4byte	0x0
+ 995              		.section	.debug_ranges,"",%progbits
+ 996              	.Ldebug_ranges0:
+ 997 0000 00000000 		.4byte	.Ltext0
+ 998 0004 00000000 		.4byte	.Letext0
+ 999 0008 00000000 		.4byte	.LFB0
+ 1000 000c F4050000 		.4byte	.LFE0
+ 1001 0010 00000000 		.4byte	0x0
+ 1002 0014 00000000 		.4byte	0x0
+ 1003              		.section	.debug_str,"MS",%progbits,1
+ 1004              	.LASF6:
+ 1005 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1005      206C6F6E 
+ 1005      6720696E 
+ 1005      7400
+ 1006              	.LASF3:
+ 1007 000e 73686F72 		.ascii	"short unsigned int\000"
+ 1007      7420756E 
+ 1007      7369676E 
+ 1007      65642069 
+ 1007      6E7400
+ 1008              	.LASF8:
+ 1009 0021 756E7369 		.ascii	"unsigned int\000"
+ 1009      676E6564 
+ 1009      20696E74 
+ 1009      00
+ 1010              	.LASF13:
+ 1011 002e 49324348 		.ascii	"I2CHW_mstrStatus\000"
+ 1011      575F6D73 
+ 1011      74725374 
+ 1011      61747573 
+ 1011      00
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 28
+
+
+ 1012              	.LASF12:
+ 1013 003f 49324348 		.ascii	"I2CHW_state\000"
+ 1013      575F7374 
+ 1013      61746500 
+ 1014              	.LASF15:
+ 1015 004b 49324348 		.ascii	"I2CHW_mstrRdBufPtr\000"
+ 1015      575F6D73 
+ 1015      74725264 
+ 1015      42756650 
+ 1015      747200
+ 1016              	.LASF24:
+ 1017 005e 75696E74 		.ascii	"uint8\000"
+ 1017      3800
+ 1018              	.LASF5:
+ 1019 0064 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1019      20756E73 
+ 1019      69676E65 
+ 1019      6420696E 
+ 1019      7400
+ 1020              	.LASF23:
+ 1021 0076 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 1021      665C486F 
+ 1021      6D655C44 
+ 1021      65736B74 
+ 1021      6F705C4B 
+ 1022 00a3 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 1022      69745072 
+ 1022      6F672E63 
+ 1022      7964736E 
+ 1022      00
+ 1023              	.LASF19:
+ 1024 00b4 49324348 		.ascii	"I2CHW_mstrWrBufSize\000"
+ 1024      575F6D73 
+ 1024      74725772 
+ 1024      42756653 
+ 1024      697A6500 
+ 1025              	.LASF22:
+ 1026 00c8 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\I2CHW_INT.c\000"
+ 1026      6E657261 
+ 1026      7465645F 
+ 1026      536F7572 
+ 1026      63655C50 
+ 1027              	.LASF7:
+ 1028 00ed 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1028      206C6F6E 
+ 1028      6720756E 
+ 1028      7369676E 
+ 1028      65642069 
+ 1029              	.LASF1:
+ 1030 0104 756E7369 		.ascii	"unsigned char\000"
+ 1030      676E6564 
+ 1030      20636861 
+ 1030      7200
+ 1031              	.LASF25:
+ 1032 0112 49324348 		.ascii	"I2CHW_ISR\000"
+ 1032      575F4953 
+ 1032      5200
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 29
+
+
+ 1033              	.LASF11:
+ 1034 011c 63686172 		.ascii	"char\000"
+ 1034      00
+ 1035              	.LASF14:
+ 1036 0121 49324348 		.ascii	"I2CHW_mstrControl\000"
+ 1036      575F6D73 
+ 1036      7472436F 
+ 1036      6E74726F 
+ 1036      6C00
+ 1037              	.LASF10:
+ 1038 0133 646F7562 		.ascii	"double\000"
+ 1038      6C6500
+ 1039              	.LASF4:
+ 1040 013a 6C6F6E67 		.ascii	"long int\000"
+ 1040      20696E74 
+ 1040      00
+ 1041              	.LASF21:
+ 1042 0143 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1042      4320342E 
+ 1042      342E3100 
+ 1043              	.LASF18:
+ 1044 014f 49324348 		.ascii	"I2CHW_mstrWrBufPtr\000"
+ 1044      575F6D73 
+ 1044      74725772 
+ 1044      42756650 
+ 1044      747200
+ 1045              	.LASF0:
+ 1046 0162 7369676E 		.ascii	"signed char\000"
+ 1046      65642063 
+ 1046      68617200 
+ 1047              	.LASF20:
+ 1048 016e 49324348 		.ascii	"I2CHW_mstrWrBufIndex\000"
+ 1048      575F6D73 
+ 1048      74725772 
+ 1048      42756649 
+ 1048      6E646578 
+ 1049              	.LASF9:
+ 1050 0183 666C6F61 		.ascii	"float\000"
+ 1050      7400
+ 1051              	.LASF2:
+ 1052 0189 73686F72 		.ascii	"short int\000"
+ 1052      7420696E 
+ 1052      7400
+ 1053              	.LASF16:
+ 1054 0193 49324348 		.ascii	"I2CHW_mstrRdBufSize\000"
+ 1054      575F6D73 
+ 1054      74725264 
+ 1054      42756653 
+ 1054      697A6500 
+ 1055              	.LASF17:
+ 1056 01a7 49324348 		.ascii	"I2CHW_mstrRdBufIndex\000"
+ 1056      575F6D73 
+ 1056      74725264 
+ 1056      42756649 
+ 1056      6E646578 
+ 1057              	.LASF26:
+ 1058 01bc 746D7043 		.ascii	"tmpCsr\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc9vD0Xj.s 			page 30
+
+
+ 1058      737200
+ 1059              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

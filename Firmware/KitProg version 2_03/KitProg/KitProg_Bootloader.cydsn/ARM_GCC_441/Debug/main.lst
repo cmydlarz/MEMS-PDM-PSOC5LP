@@ -1,0 +1,936 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"main.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 98000000 		.text
+  20      02005300 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.main,"ax",%progbits
+  24              		.align	2
+  25              		.global	main
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	main, %function
+  29              	main:
+  30              	.LFB29:
+  31              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*****************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** * Version 2.02
+   4:.\main.c      **** *
+   5:.\main.c      **** * Description:
+   6:.\main.c      **** *  This file provides the source code to handle bootloader for PSoC 5LP.
+   7:.\main.c      **** *
+   8:.\main.c      **** * Owner:
+   9:.\main.c      **** *	Anu MD, Applications Engineer Senior (anmd@cypress.com)
+  10:.\main.c      **** *
+  11:.\main.c      **** * Related Document:
+  12:.\main.c      **** * 	001-85925 - CY8CKIT-042 PSoC 4 Pioneer Kit IROS
+  13:.\main.c      **** *
+  14:.\main.c      **** * Hardware Dependency:
+  15:.\main.c      **** * 	CY8CKIT-042 (KitProg) 
+  16:.\main.c      **** *
+  17:.\main.c      **** * Code Tested With:
+  18:.\main.c      **** * 	Creator 2.2
+  19:.\main.c      **** *	GCC1 4.4.1
+  20:.\main.c      **** *	CY8CKIT-042 Rev 1
+  21:.\main.c      **** *
+  22:.\main.c      **** ******************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 2
+
+
+  23:.\main.c      **** * Copyright (2013), Cypress Semiconductor Corporation.
+  24:.\main.c      **** ******************************************************************************
+  25:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  26:.\main.c      **** * protected by and subject to worldwide patent protection (United States and
+  27:.\main.c      **** * foreign), United States copyright laws and international treaty provisions.
+  28:.\main.c      **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  29:.\main.c      **** * license to copy, use, modify, create derivative works of, and compile the
+  30:.\main.c      **** * Cypress Source Code and derivative works for the sole purpose of creating
+  31:.\main.c      **** * custom software in support of licensee product to be used only in conjunction
+  32:.\main.c      **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  33:.\main.c      **** * Any reproduction, modification, translation, compilation, or representation of
+  34:.\main.c      **** * this software except as specified above is prohibited without the express
+  35:.\main.c      **** * written permission of Cypress.
+  36:.\main.c      **** *
+  37:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  38:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  39:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  40:.\main.c      **** * Cypress reserves the right to make changes without further notice to the
+  41:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out
+  42:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress
+  43:.\main.c      **** * does not authorize its products for use as critical components in life-support
+  44:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in
+  45:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  46:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of
+  47:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  48:.\main.c      **** * limited by and subject to the applicable Cypress software license agreement.
+  49:.\main.c      **** *****************************************************************************/
+  50:.\main.c      **** #include <device.h>
+  51:.\main.c      **** #include "Bootloader.h"
+  52:.\main.c      **** 
+  53:.\main.c      **** /* Defines for Bootloader checksum validation */
+  54:.\main.c      **** #define Bootloader_BL_LAST_ROW            (*Bootloader_MD_PTR_LAST_BLDR_ROW    )
+  55:.\main.c      **** #define Bootloader_FLASH_NUMBER_SECTORS   (CY_FLASH_NUMBER_ARRAYS)
+  56:.\main.c      **** #define Bootloader_CHECKSUM_START         0    /* The bootloader always starts at 0 in flash */
+  57:.\main.c      **** #define Bootloader_FROW_SIZE          ((CYDEV_FLS_ROW_SIZE) + (CYDEV_ECC_ROW_SIZE))
+  58:.\main.c      **** 
+  59:.\main.c      **** /* Function Delaration */
+  60:.\main.c      **** void ValidateBootloader(void);
+  61:.\main.c      **** uint8   Bootloader_Calc8BitFlashSum(uint32 start, uint32 size) CYSMALL ;
+  62:.\main.c      **** 
+  63:.\main.c      **** void main()
+  64:.\main.c      **** {
+  32              		.loc 1 64 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39 0002 82B0     		sub	sp, sp, #8
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_offset 14, -4
+  44              		.cfi_offset 7, -8
+  45              	.LCFI2:
+  46              		.cfi_def_cfa_register 7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 3
+
+
+  65:.\main.c      **** 	uint16 counter = 0;
+  47              		.loc 1 65 0
+  48 0006 4FF00003 		mov	r3, #0
+  49 000a FB80     		strh	r3, [r7, #6]	@ movhi
+  66:.\main.c      **** 
+  67:.\main.c      **** 	/* Check the validity of bootloader by verifying the Bootloader checksum */
+  68:.\main.c      **** 	ValidateBootloader();
+  50              		.loc 1 68 0
+  51 000c FFF7FEFF 		bl	ValidateBootloader
+  69:.\main.c      **** 	
+  70:.\main.c      **** 	/* Initialize PWM component for LED status control*/
+  71:.\main.c      ****     PWM_Init();
+  52              		.loc 1 71 0
+  53 0010 FFF7FEFF 		bl	PWM_Init
+  72:.\main.c      **** 
+  73:.\main.c      **** 	/* If the there is a valid application, check if PSoC 4 reset switch is pressed for more than 100m
+  74:.\main.c      **** 	 * If yes, blink the LED slowly(ON Time = 1.5s, OFF Time = 1.5s) to indicate that the device is in
+  75:.\main.c      **** 	if(Bootloader_ValidateApplication() == CYRET_SUCCESS)
+  54              		.loc 1 75 0
+  55 0014 FFF7FEFF 		bl	Bootloader_ValidateApplication
+  56 0018 0346     		mov	r3, r0
+  57 001a 002B     		cmp	r3, #0
+  58 001c 2DD1     		bne	.L2
+  76:.\main.c      **** 	{
+  77:.\main.c      **** 		/* If PSoC 4A XRES pin is pulled low during reset */
+  78:.\main.c      **** 		if(Pin_PSoC4A_XRES_Read() == 0)
+  59              		.loc 1 78 0
+  60 001e FFF7FEFF 		bl	Pin_PSoC4A_XRES_Read
+  61 0022 0346     		mov	r3, r0
+  62 0024 002B     		cmp	r3, #0
+  63 0026 31D1     		bne	.L11
+  79:.\main.c      **** 		{
+  80:.\main.c      **** 			for(counter = 0; counter <= 100; counter++)
+  64              		.loc 1 80 0
+  65 0028 4FF00003 		mov	r3, #0
+  66 002c FB80     		strh	r3, [r7, #6]	@ movhi
+  67 002e 0CE0     		b	.L4
+  68              	.L7:
+  81:.\main.c      **** 			{
+  82:.\main.c      **** 				CyDelay(1);
+  69              		.loc 1 82 0
+  70 0030 4FF00100 		mov	r0, #1
+  71 0034 FFF7FEFF 		bl	CyDelay
+  83:.\main.c      **** 				
+  84:.\main.c      **** 				/* If the swicth is released before specified time, do not enter bootloader */
+  85:.\main.c      **** 				if(Pin_PSoC4A_XRES_Read() != 0)
+  72              		.loc 1 85 0
+  73 0038 FFF7FEFF 		bl	Pin_PSoC4A_XRES_Read
+  74 003c 0346     		mov	r3, r0
+  75 003e 002B     		cmp	r3, #0
+  76 0040 07D1     		bne	.L12
+  77              	.L5:
+  78              		.loc 1 80 0
+  79 0042 FB88     		ldrh	r3, [r7, #6]	@ movhi
+  80 0044 03F10103 		add	r3, r3, #1
+  81 0048 FB80     		strh	r3, [r7, #6]	@ movhi
+  82              	.L4:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 4
+
+
+  83 004a FB88     		ldrh	r3, [r7, #6]
+  84 004c 642B     		cmp	r3, #100
+  85 004e EFD9     		bls	.L7
+  86 0050 00E0     		b	.L6
+  87              	.L12:
+  86:.\main.c      **** 					break;
+  88              		.loc 1 86 0
+  89 0052 00BF     		nop
+  90              	.L6:
+  87:.\main.c      **** 			}
+  88:.\main.c      **** 						 
+  89:.\main.c      **** 			/* If the reset switch was pressed for more than 100 millisecond counter value will be 100 
+  90:.\main.c      **** 			 * If so, set the flash run type as bootloader to wait for a bootload operation */
+  91:.\main.c      **** 			if(counter >= 100)
+  91              		.loc 1 91 0
+  92 0054 FB88     		ldrh	r3, [r7, #6]
+  93 0056 632B     		cmp	r3, #99
+  94 0058 1AD9     		bls	.L13
+  92:.\main.c      **** 			{
+  93:.\main.c      **** 				/* Set the reset SR0 switch to indicate the */
+  94:.\main.c      **** 				Bootloader_SET_RUN_TYPE (Bootloader_START_BTLDR);
+  95              		.loc 1 94 0
+  96 005a 44F2FA63 		movw	r3, #:lower16:1073759994
+  97 005e C4F20003 		movt	r3, #:upper16:1073759994
+  98 0062 4FF04002 		mov	r2, #64
+  99 0066 1A70     		strb	r2, [r3, #0]
+  95:.\main.c      **** 				
+  96:.\main.c      **** 				/*Indicate that you have entered the bootloader mode.*/
+  97:.\main.c      **** 				PWM_WritePeriod(30000);
+ 100              		.loc 1 97 0
+ 101 0068 47F23050 		movw	r0, #30000
+ 102 006c FFF7FEFF 		bl	PWM_WritePeriod
+  98:.\main.c      **** 				PWM_WriteCompare(15000);
+ 103              		.loc 1 98 0
+ 104 0070 43F69820 		movw	r0, #15000
+ 105 0074 FFF7FEFF 		bl	PWM_WriteCompare
+ 106 0078 0BE0     		b	.L8
+ 107              	.L2:
+  99:.\main.c      **** 			}
+ 100:.\main.c      **** 		}
+ 101:.\main.c      **** 	}
+ 102:.\main.c      **** 	else
+ 103:.\main.c      **** 	{
+ 104:.\main.c      **** 		/* If the application is not valid 
+ 105:.\main.c      **** 		 * Blink the LED very fast (ON Time = 0.25s, OFF Time = 0.25s)*/
+ 106:.\main.c      **** 		PWM_WritePeriod(5000);
+ 108              		.loc 1 106 0
+ 109 007a 41F28830 		movw	r0, #5000
+ 110 007e FFF7FEFF 		bl	PWM_WritePeriod
+ 107:.\main.c      **** 		PWM_WriteCompare(2500);
+ 111              		.loc 1 107 0
+ 112 0082 40F6C410 		movw	r0, #2500
+ 113 0086 FFF7FEFF 		bl	PWM_WriteCompare
+ 114 008a 02E0     		b	.L8
+ 115              	.L11:
+ 116              		.loc 1 98 0
+ 117 008c 00BF     		nop
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 5
+
+
+ 118 008e 00E0     		b	.L8
+ 119              	.L13:
+ 120 0090 00BF     		nop
+ 121              	.L8:
+ 108:.\main.c      **** 	}
+ 109:.\main.c      **** 	/* Enable the PWM */
+ 110:.\main.c      **** 	PWM_Enable();
+ 122              		.loc 1 110 0
+ 123 0092 FFF7FEFF 		bl	PWM_Enable
+ 111:.\main.c      **** 
+ 112:.\main.c      **** 	/* Start Bootloader */
+ 113:.\main.c      **** 	Bootloader_Start();
+ 124              		.loc 1 113 0
+ 125 0096 FFF7FEFF 		bl	Bootloader_Start
+ 126              	.L9:
+ 114:.\main.c      ****     for(;;)
+ 115:.\main.c      ****     {
+ 116:.\main.c      ****         
+ 117:.\main.c      ****     }
+ 127              		.loc 1 117 0
+ 128 009a FEE7     		b	.L9
+ 129              		.cfi_endproc
+ 130              	.LFE29:
+ 131              		.size	main, .-main
+ 132              		.section	.text.ValidateBootloader,"ax",%progbits
+ 133              		.align	2
+ 134              		.global	ValidateBootloader
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.type	ValidateBootloader, %function
+ 138              	ValidateBootloader:
+ 139              	.LFB30:
+ 118:.\main.c      **** }
+ 119:.\main.c      **** 
+ 120:.\main.c      **** /*******************************************************************************
+ 121:.\main.c      **** * Function Name: ValidateBootloader
+ 122:.\main.c      **** ********************************************************************************
+ 123:.\main.c      **** *
+ 124:.\main.c      **** * Summary:
+ 125:.\main.c      **** *  Function to validate the bootloader bye verifying the bootloader checksum. 
+ 126:.\main.c      **** *  The CPU execution is halted if Bootloader is not valid.
+ 127:.\main.c      **** *
+ 128:.\main.c      **** * Parameters:
+ 129:.\main.c      **** *  None
+ 130:.\main.c      **** *
+ 131:.\main.c      **** * Return:
+ 132:.\main.c      **** *  None
+ 133:.\main.c      **** *
+ 134:.\main.c      **** *******************************************************************************/
+ 135:.\main.c      **** void ValidateBootloader(void)
+ 136:.\main.c      **** {
+ 140              		.loc 1 136 0
+ 141              		.cfi_startproc
+ 142              		@ args = 0, pretend = 0, frame = 8
+ 143              		@ frame_needed = 1, uses_anonymous_args = 0
+ 144 0000 80B5     		push	{r7, lr}
+ 145              	.LCFI3:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 6
+
+
+ 146              		.cfi_def_cfa_offset 8
+ 147 0002 82B0     		sub	sp, sp, #8
+ 148              	.LCFI4:
+ 149              		.cfi_def_cfa_offset 16
+ 150 0004 00AF     		add	r7, sp, #0
+ 151              		.cfi_offset 14, -4
+ 152              		.cfi_offset 7, -8
+ 153              	.LCFI5:
+ 154              		.cfi_def_cfa_register 7
+ 137:.\main.c      ****     extern uint8  *Bootloader_ChecksumAccess;
+ 138:.\main.c      **** 	extern uint32 *Bootloader_SizeBytesAccess;
+ 139:.\main.c      **** 	uint8 CYDATA calcedChecksum;
+ 140:.\main.c      **** 	calcedChecksum = Bootloader_Calc8BitFlashSum(Bootloader_CHECKSUM_START,
+ 155              		.loc 1 140 0
+ 156 0006 40F20003 		movw	r3, #:lower16:Bootloader_SizeBytesAccess
+ 157 000a C0F20003 		movt	r3, #:upper16:Bootloader_SizeBytesAccess
+ 158 000e 1B68     		ldr	r3, [r3, #0]
+ 141:.\main.c      ****                 	*Bootloader_SizeBytesAccess - Bootloader_CHECKSUM_START);
+ 159              		.loc 1 141 0
+ 160 0010 1B68     		ldr	r3, [r3, #0]
+ 161              		.loc 1 140 0
+ 162 0012 4FF00000 		mov	r0, #0
+ 163 0016 1946     		mov	r1, r3
+ 164 0018 FFF7FEFF 		bl	Bootloader_Calc8BitFlashSum
+ 165 001c 0346     		mov	r3, r0
+ 166 001e FB71     		strb	r3, [r7, #7]
+ 142:.\main.c      **** 
+ 143:.\main.c      **** 	/* we actually included the checksum, so remove it */
+ 144:.\main.c      **** 	calcedChecksum -= *Bootloader_ChecksumAccess;
+ 167              		.loc 1 144 0
+ 168 0020 40F20003 		movw	r3, #:lower16:Bootloader_ChecksumAccess
+ 169 0024 C0F20003 		movt	r3, #:upper16:Bootloader_ChecksumAccess
+ 170 0028 1B68     		ldr	r3, [r3, #0]
+ 171 002a 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 172 002c FA79     		ldrb	r2, [r7, #7]
+ 173 002e C3EB0203 		rsb	r3, r3, r2
+ 174 0032 FB71     		strb	r3, [r7, #7]
+ 145:.\main.c      **** 	calcedChecksum = 1 + ~calcedChecksum;
+ 175              		.loc 1 145 0
+ 176 0034 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 177 0036 C3F10003 		rsb	r3, r3, #0
+ 178 003a DBB2     		uxtb	r3, r3
+ 179 003c FB71     		strb	r3, [r7, #7]
+ 146:.\main.c      **** 
+ 147:.\main.c      **** 	/* Halt device if bootloader application is invalid */
+ 148:.\main.c      **** 	if((calcedChecksum != *Bootloader_ChecksumAccess))
+ 180              		.loc 1 148 0
+ 181 003e 40F20003 		movw	r3, #:lower16:Bootloader_ChecksumAccess
+ 182 0042 C0F20003 		movt	r3, #:upper16:Bootloader_ChecksumAccess
+ 183 0046 1B68     		ldr	r3, [r3, #0]
+ 184 0048 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 185 004a FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 186 004c 9A42     		cmp	r2, r3
+ 187 004e 03D0     		beq	.L16
+ 149:.\main.c      **** 	{
+ 150:.\main.c      **** 	    CyHalt(0x00u);
+ 188              		.loc 1 150 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 7
+
+
+ 189 0050 4FF00000 		mov	r0, #0
+ 190 0054 FFF7FEFF 		bl	CyHalt
+ 191              	.L16:
+ 151:.\main.c      **** 	}
+ 152:.\main.c      **** }
+ 192              		.loc 1 152 0
+ 193 0058 07F10807 		add	r7, r7, #8
+ 194 005c BD46     		mov	sp, r7
+ 195 005e 80BD     		pop	{r7, pc}
+ 196              		.cfi_endproc
+ 197              	.LFE30:
+ 198              		.size	ValidateBootloader, .-ValidateBootloader
+ 199              		.text
+ 200              	.Letext0:
+ 201              		.section	.debug_loc,"",%progbits
+ 202              	.Ldebug_loc0:
+ 203              	.LLST0:
+ 204 0000 00000000 		.4byte	.LFB29
+ 205 0004 02000000 		.4byte	.LCFI0
+ 206 0008 0100     		.2byte	0x1
+ 207 000a 5D       		.byte	0x5d
+ 208 000b 02000000 		.4byte	.LCFI0
+ 209 000f 04000000 		.4byte	.LCFI1
+ 210 0013 0200     		.2byte	0x2
+ 211 0015 7D       		.byte	0x7d
+ 212 0016 08       		.sleb128 8
+ 213 0017 04000000 		.4byte	.LCFI1
+ 214 001b 06000000 		.4byte	.LCFI2
+ 215 001f 0200     		.2byte	0x2
+ 216 0021 7D       		.byte	0x7d
+ 217 0022 10       		.sleb128 16
+ 218 0023 06000000 		.4byte	.LCFI2
+ 219 0027 9C000000 		.4byte	.LFE29
+ 220 002b 0200     		.2byte	0x2
+ 221 002d 77       		.byte	0x77
+ 222 002e 10       		.sleb128 16
+ 223 002f 00000000 		.4byte	0x0
+ 224 0033 00000000 		.4byte	0x0
+ 225              	.LLST1:
+ 226 0037 00000000 		.4byte	.LFB30
+ 227 003b 02000000 		.4byte	.LCFI3
+ 228 003f 0100     		.2byte	0x1
+ 229 0041 5D       		.byte	0x5d
+ 230 0042 02000000 		.4byte	.LCFI3
+ 231 0046 04000000 		.4byte	.LCFI4
+ 232 004a 0200     		.2byte	0x2
+ 233 004c 7D       		.byte	0x7d
+ 234 004d 08       		.sleb128 8
+ 235 004e 04000000 		.4byte	.LCFI4
+ 236 0052 06000000 		.4byte	.LCFI5
+ 237 0056 0200     		.2byte	0x2
+ 238 0058 7D       		.byte	0x7d
+ 239 0059 10       		.sleb128 16
+ 240 005a 06000000 		.4byte	.LCFI5
+ 241 005e 60000000 		.4byte	.LFE30
+ 242 0062 0200     		.2byte	0x2
+ 243 0064 77       		.byte	0x77
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 8
+
+
+ 244 0065 10       		.sleb128 16
+ 245 0066 00000000 		.4byte	0x0
+ 246 006a 00000000 		.4byte	0x0
+ 247              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
+ 248              		.file 3 "./Generated_Source/PSoC5/core_cm3.h"
+ 249              		.section	.debug_info
+ 250 0000 2D010000 		.4byte	0x12d
+ 251 0004 0200     		.2byte	0x2
+ 252 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 253 000a 04       		.byte	0x4
+ 254 000b 01       		.uleb128 0x1
+ 255 000c C1000000 		.4byte	.LASF20
+ 256 0010 01       		.byte	0x1
+ 257 0011 04010000 		.4byte	.LASF21
+ 258 0015 31000000 		.4byte	.LASF22
+ 259 0019 00000000 		.4byte	0x0
+ 260 001d 00000000 		.4byte	0x0
+ 261 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 262 0025 00000000 		.4byte	.Ldebug_line0
+ 263 0029 02       		.uleb128 0x2
+ 264 002a 01       		.byte	0x1
+ 265 002b 06       		.byte	0x6
+ 266 002c 43010000 		.4byte	.LASF0
+ 267 0030 02       		.uleb128 0x2
+ 268 0031 01       		.byte	0x1
+ 269 0032 08       		.byte	0x8
+ 270 0033 CD000000 		.4byte	.LASF1
+ 271 0037 02       		.uleb128 0x2
+ 272 0038 02       		.byte	0x2
+ 273 0039 05       		.byte	0x5
+ 274 003a 55010000 		.4byte	.LASF2
+ 275 003e 02       		.uleb128 0x2
+ 276 003f 02       		.byte	0x2
+ 277 0040 07       		.byte	0x7
+ 278 0041 AE000000 		.4byte	.LASF3
+ 279 0045 02       		.uleb128 0x2
+ 280 0046 04       		.byte	0x4
+ 281 0047 05       		.byte	0x5
+ 282 0048 FB000000 		.4byte	.LASF4
+ 283 004c 02       		.uleb128 0x2
+ 284 004d 04       		.byte	0x4
+ 285 004e 07       		.byte	0x7
+ 286 004f 85000000 		.4byte	.LASF5
+ 287 0053 02       		.uleb128 0x2
+ 288 0054 08       		.byte	0x8
+ 289 0055 05       		.byte	0x5
+ 290 0056 00000000 		.4byte	.LASF6
+ 291 005a 02       		.uleb128 0x2
+ 292 005b 08       		.byte	0x8
+ 293 005c 07       		.byte	0x7
+ 294 005d 97000000 		.4byte	.LASF7
+ 295 0061 03       		.uleb128 0x3
+ 296 0062 04       		.byte	0x4
+ 297 0063 05       		.byte	0x5
+ 298 0064 696E7400 		.ascii	"int\000"
+ 299 0068 02       		.uleb128 0x2
+ 300 0069 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 9
+
+
+ 301 006a 07       		.byte	0x7
+ 302 006b 24000000 		.4byte	.LASF8
+ 303 006f 04       		.uleb128 0x4
+ 304 0070 7F000000 		.4byte	.LASF9
+ 305 0074 02       		.byte	0x2
+ 306 0075 4C       		.byte	0x4c
+ 307 0076 30000000 		.4byte	0x30
+ 308 007a 04       		.uleb128 0x4
+ 309 007b 5F010000 		.4byte	.LASF10
+ 310 007f 02       		.byte	0x2
+ 311 0080 4D       		.byte	0x4d
+ 312 0081 3E000000 		.4byte	0x3e
+ 313 0085 04       		.uleb128 0x4
+ 314 0086 0E000000 		.4byte	.LASF11
+ 315 008a 02       		.byte	0x2
+ 316 008b 4E       		.byte	0x4e
+ 317 008c 4C000000 		.4byte	0x4c
+ 318 0090 02       		.uleb128 0x2
+ 319 0091 04       		.byte	0x4
+ 320 0092 04       		.byte	0x4
+ 321 0093 4F010000 		.4byte	.LASF12
+ 322 0097 02       		.uleb128 0x2
+ 323 0098 08       		.byte	0x8
+ 324 0099 04       		.byte	0x4
+ 325 009a 0D010000 		.4byte	.LASF13
+ 326 009e 02       		.uleb128 0x2
+ 327 009f 01       		.byte	0x1
+ 328 00a0 08       		.byte	0x8
+ 329 00a1 DB000000 		.4byte	.LASF14
+ 330 00a5 05       		.uleb128 0x5
+ 331 00a6 04       		.byte	0x4
+ 332 00a7 07       		.byte	0x7
+ 333 00a8 06       		.uleb128 0x6
+ 334 00a9 01       		.byte	0x1
+ 335 00aa 7A000000 		.4byte	.LASF23
+ 336 00ae 01       		.byte	0x1
+ 337 00af 3F       		.byte	0x3f
+ 338 00b0 00000000 		.4byte	.LFB29
+ 339 00b4 9C000000 		.4byte	.LFE29
+ 340 00b8 00000000 		.4byte	.LLST0
+ 341 00bc CF000000 		.4byte	0xcf
+ 342 00c0 07       		.uleb128 0x7
+ 343 00c1 2E010000 		.4byte	.LASF15
+ 344 00c5 01       		.byte	0x1
+ 345 00c6 41       		.byte	0x41
+ 346 00c7 7A000000 		.4byte	0x7a
+ 347 00cb 02       		.byte	0x2
+ 348 00cc 91       		.byte	0x91
+ 349 00cd 76       		.sleb128 -10
+ 350 00ce 00       		.byte	0x0
+ 351 00cf 08       		.uleb128 0x8
+ 352 00d0 01       		.byte	0x1
+ 353 00d1 66010000 		.4byte	.LASF24
+ 354 00d5 01       		.byte	0x1
+ 355 00d6 87       		.byte	0x87
+ 356 00d7 01       		.byte	0x1
+ 357 00d8 00000000 		.4byte	.LFB30
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 10
+
+
+ 358 00dc 60000000 		.4byte	.LFE30
+ 359 00e0 37000000 		.4byte	.LLST1
+ 360 00e4 F7000000 		.4byte	0xf7
+ 361 00e8 07       		.uleb128 0x7
+ 362 00e9 15000000 		.4byte	.LASF16
+ 363 00ed 01       		.byte	0x1
+ 364 00ee 8B       		.byte	0x8b
+ 365 00ef 6F000000 		.4byte	0x6f
+ 366 00f3 02       		.byte	0x2
+ 367 00f4 91       		.byte	0x91
+ 368 00f5 77       		.sleb128 -9
+ 369 00f6 00       		.byte	0x0
+ 370 00f7 09       		.uleb128 0x9
+ 371 00f8 36010000 		.4byte	.LASF17
+ 372 00fc 03       		.byte	0x3
+ 373 00fd CE06     		.2byte	0x6ce
+ 374 00ff 05010000 		.4byte	0x105
+ 375 0103 01       		.byte	0x1
+ 376 0104 01       		.byte	0x1
+ 377 0105 0A       		.uleb128 0xa
+ 378 0106 61000000 		.4byte	0x61
+ 379 010a 0B       		.uleb128 0xb
+ 380 010b 14010000 		.4byte	.LASF18
+ 381 010f 01       		.byte	0x1
+ 382 0110 89       		.byte	0x89
+ 383 0111 17010000 		.4byte	0x117
+ 384 0115 01       		.byte	0x1
+ 385 0116 01       		.byte	0x1
+ 386 0117 0C       		.uleb128 0xc
+ 387 0118 04       		.byte	0x4
+ 388 0119 6F000000 		.4byte	0x6f
+ 389 011d 0B       		.uleb128 0xb
+ 390 011e E0000000 		.4byte	.LASF19
+ 391 0122 01       		.byte	0x1
+ 392 0123 8A       		.byte	0x8a
+ 393 0124 2A010000 		.4byte	0x12a
+ 394 0128 01       		.byte	0x1
+ 395 0129 01       		.byte	0x1
+ 396 012a 0C       		.uleb128 0xc
+ 397 012b 04       		.byte	0x4
+ 398 012c 85000000 		.4byte	0x85
+ 399 0130 00       		.byte	0x0
+ 400              		.section	.debug_abbrev
+ 401 0000 01       		.uleb128 0x1
+ 402 0001 11       		.uleb128 0x11
+ 403 0002 01       		.byte	0x1
+ 404 0003 25       		.uleb128 0x25
+ 405 0004 0E       		.uleb128 0xe
+ 406 0005 13       		.uleb128 0x13
+ 407 0006 0B       		.uleb128 0xb
+ 408 0007 03       		.uleb128 0x3
+ 409 0008 0E       		.uleb128 0xe
+ 410 0009 1B       		.uleb128 0x1b
+ 411 000a 0E       		.uleb128 0xe
+ 412 000b 11       		.uleb128 0x11
+ 413 000c 01       		.uleb128 0x1
+ 414 000d 52       		.uleb128 0x52
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 11
+
+
+ 415 000e 01       		.uleb128 0x1
+ 416 000f 55       		.uleb128 0x55
+ 417 0010 06       		.uleb128 0x6
+ 418 0011 10       		.uleb128 0x10
+ 419 0012 06       		.uleb128 0x6
+ 420 0013 00       		.byte	0x0
+ 421 0014 00       		.byte	0x0
+ 422 0015 02       		.uleb128 0x2
+ 423 0016 24       		.uleb128 0x24
+ 424 0017 00       		.byte	0x0
+ 425 0018 0B       		.uleb128 0xb
+ 426 0019 0B       		.uleb128 0xb
+ 427 001a 3E       		.uleb128 0x3e
+ 428 001b 0B       		.uleb128 0xb
+ 429 001c 03       		.uleb128 0x3
+ 430 001d 0E       		.uleb128 0xe
+ 431 001e 00       		.byte	0x0
+ 432 001f 00       		.byte	0x0
+ 433 0020 03       		.uleb128 0x3
+ 434 0021 24       		.uleb128 0x24
+ 435 0022 00       		.byte	0x0
+ 436 0023 0B       		.uleb128 0xb
+ 437 0024 0B       		.uleb128 0xb
+ 438 0025 3E       		.uleb128 0x3e
+ 439 0026 0B       		.uleb128 0xb
+ 440 0027 03       		.uleb128 0x3
+ 441 0028 08       		.uleb128 0x8
+ 442 0029 00       		.byte	0x0
+ 443 002a 00       		.byte	0x0
+ 444 002b 04       		.uleb128 0x4
+ 445 002c 16       		.uleb128 0x16
+ 446 002d 00       		.byte	0x0
+ 447 002e 03       		.uleb128 0x3
+ 448 002f 0E       		.uleb128 0xe
+ 449 0030 3A       		.uleb128 0x3a
+ 450 0031 0B       		.uleb128 0xb
+ 451 0032 3B       		.uleb128 0x3b
+ 452 0033 0B       		.uleb128 0xb
+ 453 0034 49       		.uleb128 0x49
+ 454 0035 13       		.uleb128 0x13
+ 455 0036 00       		.byte	0x0
+ 456 0037 00       		.byte	0x0
+ 457 0038 05       		.uleb128 0x5
+ 458 0039 24       		.uleb128 0x24
+ 459 003a 00       		.byte	0x0
+ 460 003b 0B       		.uleb128 0xb
+ 461 003c 0B       		.uleb128 0xb
+ 462 003d 3E       		.uleb128 0x3e
+ 463 003e 0B       		.uleb128 0xb
+ 464 003f 00       		.byte	0x0
+ 465 0040 00       		.byte	0x0
+ 466 0041 06       		.uleb128 0x6
+ 467 0042 2E       		.uleb128 0x2e
+ 468 0043 01       		.byte	0x1
+ 469 0044 3F       		.uleb128 0x3f
+ 470 0045 0C       		.uleb128 0xc
+ 471 0046 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 12
+
+
+ 472 0047 0E       		.uleb128 0xe
+ 473 0048 3A       		.uleb128 0x3a
+ 474 0049 0B       		.uleb128 0xb
+ 475 004a 3B       		.uleb128 0x3b
+ 476 004b 0B       		.uleb128 0xb
+ 477 004c 11       		.uleb128 0x11
+ 478 004d 01       		.uleb128 0x1
+ 479 004e 12       		.uleb128 0x12
+ 480 004f 01       		.uleb128 0x1
+ 481 0050 40       		.uleb128 0x40
+ 482 0051 06       		.uleb128 0x6
+ 483 0052 01       		.uleb128 0x1
+ 484 0053 13       		.uleb128 0x13
+ 485 0054 00       		.byte	0x0
+ 486 0055 00       		.byte	0x0
+ 487 0056 07       		.uleb128 0x7
+ 488 0057 34       		.uleb128 0x34
+ 489 0058 00       		.byte	0x0
+ 490 0059 03       		.uleb128 0x3
+ 491 005a 0E       		.uleb128 0xe
+ 492 005b 3A       		.uleb128 0x3a
+ 493 005c 0B       		.uleb128 0xb
+ 494 005d 3B       		.uleb128 0x3b
+ 495 005e 0B       		.uleb128 0xb
+ 496 005f 49       		.uleb128 0x49
+ 497 0060 13       		.uleb128 0x13
+ 498 0061 02       		.uleb128 0x2
+ 499 0062 0A       		.uleb128 0xa
+ 500 0063 00       		.byte	0x0
+ 501 0064 00       		.byte	0x0
+ 502 0065 08       		.uleb128 0x8
+ 503 0066 2E       		.uleb128 0x2e
+ 504 0067 01       		.byte	0x1
+ 505 0068 3F       		.uleb128 0x3f
+ 506 0069 0C       		.uleb128 0xc
+ 507 006a 03       		.uleb128 0x3
+ 508 006b 0E       		.uleb128 0xe
+ 509 006c 3A       		.uleb128 0x3a
+ 510 006d 0B       		.uleb128 0xb
+ 511 006e 3B       		.uleb128 0x3b
+ 512 006f 0B       		.uleb128 0xb
+ 513 0070 27       		.uleb128 0x27
+ 514 0071 0C       		.uleb128 0xc
+ 515 0072 11       		.uleb128 0x11
+ 516 0073 01       		.uleb128 0x1
+ 517 0074 12       		.uleb128 0x12
+ 518 0075 01       		.uleb128 0x1
+ 519 0076 40       		.uleb128 0x40
+ 520 0077 06       		.uleb128 0x6
+ 521 0078 01       		.uleb128 0x1
+ 522 0079 13       		.uleb128 0x13
+ 523 007a 00       		.byte	0x0
+ 524 007b 00       		.byte	0x0
+ 525 007c 09       		.uleb128 0x9
+ 526 007d 34       		.uleb128 0x34
+ 527 007e 00       		.byte	0x0
+ 528 007f 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 13
+
+
+ 529 0080 0E       		.uleb128 0xe
+ 530 0081 3A       		.uleb128 0x3a
+ 531 0082 0B       		.uleb128 0xb
+ 532 0083 3B       		.uleb128 0x3b
+ 533 0084 05       		.uleb128 0x5
+ 534 0085 49       		.uleb128 0x49
+ 535 0086 13       		.uleb128 0x13
+ 536 0087 3F       		.uleb128 0x3f
+ 537 0088 0C       		.uleb128 0xc
+ 538 0089 3C       		.uleb128 0x3c
+ 539 008a 0C       		.uleb128 0xc
+ 540 008b 00       		.byte	0x0
+ 541 008c 00       		.byte	0x0
+ 542 008d 0A       		.uleb128 0xa
+ 543 008e 35       		.uleb128 0x35
+ 544 008f 00       		.byte	0x0
+ 545 0090 49       		.uleb128 0x49
+ 546 0091 13       		.uleb128 0x13
+ 547 0092 00       		.byte	0x0
+ 548 0093 00       		.byte	0x0
+ 549 0094 0B       		.uleb128 0xb
+ 550 0095 34       		.uleb128 0x34
+ 551 0096 00       		.byte	0x0
+ 552 0097 03       		.uleb128 0x3
+ 553 0098 0E       		.uleb128 0xe
+ 554 0099 3A       		.uleb128 0x3a
+ 555 009a 0B       		.uleb128 0xb
+ 556 009b 3B       		.uleb128 0x3b
+ 557 009c 0B       		.uleb128 0xb
+ 558 009d 49       		.uleb128 0x49
+ 559 009e 13       		.uleb128 0x13
+ 560 009f 3F       		.uleb128 0x3f
+ 561 00a0 0C       		.uleb128 0xc
+ 562 00a1 3C       		.uleb128 0x3c
+ 563 00a2 0C       		.uleb128 0xc
+ 564 00a3 00       		.byte	0x0
+ 565 00a4 00       		.byte	0x0
+ 566 00a5 0C       		.uleb128 0xc
+ 567 00a6 0F       		.uleb128 0xf
+ 568 00a7 00       		.byte	0x0
+ 569 00a8 0B       		.uleb128 0xb
+ 570 00a9 0B       		.uleb128 0xb
+ 571 00aa 49       		.uleb128 0x49
+ 572 00ab 13       		.uleb128 0x13
+ 573 00ac 00       		.byte	0x0
+ 574 00ad 00       		.byte	0x0
+ 575 00ae 00       		.byte	0x0
+ 576              		.section	.debug_pubnames,"",%progbits
+ 577 0000 2E000000 		.4byte	0x2e
+ 578 0004 0200     		.2byte	0x2
+ 579 0006 00000000 		.4byte	.Ldebug_info0
+ 580 000a 31010000 		.4byte	0x131
+ 581 000e A8000000 		.4byte	0xa8
+ 582 0012 6D61696E 		.ascii	"main\000"
+ 582      00
+ 583 0017 CF000000 		.4byte	0xcf
+ 584 001b 56616C69 		.ascii	"ValidateBootloader\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 14
+
+
+ 584      64617465 
+ 584      426F6F74 
+ 584      6C6F6164 
+ 584      657200
+ 585 002e 00000000 		.4byte	0x0
+ 586              		.section	.debug_aranges,"",%progbits
+ 587 0000 24000000 		.4byte	0x24
+ 588 0004 0200     		.2byte	0x2
+ 589 0006 00000000 		.4byte	.Ldebug_info0
+ 590 000a 04       		.byte	0x4
+ 591 000b 00       		.byte	0x0
+ 592 000c 0000     		.2byte	0x0
+ 593 000e 0000     		.2byte	0x0
+ 594 0010 00000000 		.4byte	.LFB29
+ 595 0014 9C000000 		.4byte	.LFE29-.LFB29
+ 596 0018 00000000 		.4byte	.LFB30
+ 597 001c 60000000 		.4byte	.LFE30-.LFB30
+ 598 0020 00000000 		.4byte	0x0
+ 599 0024 00000000 		.4byte	0x0
+ 600              		.section	.debug_ranges,"",%progbits
+ 601              	.Ldebug_ranges0:
+ 602 0000 00000000 		.4byte	.Ltext0
+ 603 0004 00000000 		.4byte	.Letext0
+ 604 0008 00000000 		.4byte	.LFB29
+ 605 000c 9C000000 		.4byte	.LFE29
+ 606 0010 00000000 		.4byte	.LFB30
+ 607 0014 60000000 		.4byte	.LFE30
+ 608 0018 00000000 		.4byte	0x0
+ 609 001c 00000000 		.4byte	0x0
+ 610              		.section	.debug_str,"MS",%progbits,1
+ 611              	.LASF6:
+ 612 0000 6C6F6E67 		.ascii	"long long int\000"
+ 612      206C6F6E 
+ 612      6720696E 
+ 612      7400
+ 613              	.LASF11:
+ 614 000e 75696E74 		.ascii	"uint32\000"
+ 614      333200
+ 615              	.LASF16:
+ 616 0015 63616C63 		.ascii	"calcedChecksum\000"
+ 616      65644368 
+ 616      65636B73 
+ 616      756D00
+ 617              	.LASF8:
+ 618 0024 756E7369 		.ascii	"unsigned int\000"
+ 618      676E6564 
+ 618      20696E74 
+ 618      00
+ 619              	.LASF22:
+ 620 0031 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 620      665C486F 
+ 620      6D655C44 
+ 620      65736B74 
+ 620      6F705C4B 
+ 621 005e 6F675C4B 		.ascii	"og\\KitProg_Bootloader.cydsn\000"
+ 621      69745072 
+ 621      6F675F42 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 15
+
+
+ 621      6F6F746C 
+ 621      6F616465 
+ 622              	.LASF23:
+ 623 007a 6D61696E 		.ascii	"main\000"
+ 623      00
+ 624              	.LASF9:
+ 625 007f 75696E74 		.ascii	"uint8\000"
+ 625      3800
+ 626              	.LASF5:
+ 627 0085 6C6F6E67 		.ascii	"long unsigned int\000"
+ 627      20756E73 
+ 627      69676E65 
+ 627      6420696E 
+ 627      7400
+ 628              	.LASF7:
+ 629 0097 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 629      206C6F6E 
+ 629      6720756E 
+ 629      7369676E 
+ 629      65642069 
+ 630              	.LASF3:
+ 631 00ae 73686F72 		.ascii	"short unsigned int\000"
+ 631      7420756E 
+ 631      7369676E 
+ 631      65642069 
+ 631      6E7400
+ 632              	.LASF20:
+ 633 00c1 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 633      4320342E 
+ 633      342E3100 
+ 634              	.LASF1:
+ 635 00cd 756E7369 		.ascii	"unsigned char\000"
+ 635      676E6564 
+ 635      20636861 
+ 635      7200
+ 636              	.LASF14:
+ 637 00db 63686172 		.ascii	"char\000"
+ 637      00
+ 638              	.LASF19:
+ 639 00e0 426F6F74 		.ascii	"Bootloader_SizeBytesAccess\000"
+ 639      6C6F6164 
+ 639      65725F53 
+ 639      697A6542 
+ 639      79746573 
+ 640              	.LASF4:
+ 641 00fb 6C6F6E67 		.ascii	"long int\000"
+ 641      20696E74 
+ 641      00
+ 642              	.LASF21:
+ 643 0104 2E5C6D61 		.ascii	".\\main.c\000"
+ 643      696E2E63 
+ 643      00
+ 644              	.LASF13:
+ 645 010d 646F7562 		.ascii	"double\000"
+ 645      6C6500
+ 646              	.LASF18:
+ 647 0114 426F6F74 		.ascii	"Bootloader_ChecksumAccess\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgwjgVL.s 			page 16
+
+
+ 647      6C6F6164 
+ 647      65725F43 
+ 647      6865636B 
+ 647      73756D41 
+ 648              	.LASF15:
+ 649 012e 636F756E 		.ascii	"counter\000"
+ 649      74657200 
+ 650              	.LASF17:
+ 651 0136 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 651      52784275 
+ 651      66666572 
+ 651      00
+ 652              	.LASF0:
+ 653 0143 7369676E 		.ascii	"signed char\000"
+ 653      65642063 
+ 653      68617200 
+ 654              	.LASF12:
+ 655 014f 666C6F61 		.ascii	"float\000"
+ 655      7400
+ 656              	.LASF2:
+ 657 0155 73686F72 		.ascii	"short int\000"
+ 657      7420696E 
+ 657      7400
+ 658              	.LASF10:
+ 659 015f 75696E74 		.ascii	"uint16\000"
+ 659      313600
+ 660              	.LASF24:
+ 661 0166 56616C69 		.ascii	"ValidateBootloader\000"
+ 661      64617465 
+ 661      426F6F74 
+ 661      6C6F6164 
+ 661      657200
+ 662              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

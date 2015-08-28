@@ -1,0 +1,740 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"main.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 90000000 		.text
+  20      02005300 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.main,"ax",%progbits
+  24              		.align	1
+  25              		.global	main
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	main, %function
+  29              	main:
+  30              	.LFB29:
+  31              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*****************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version 2.03
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  This file provides the source code to handle the programmer and bridge
+   8:.\main.c      **** *  for PSoC 5LP.
+   9:.\main.c      **** *
+  10:.\main.c      **** * Owner:
+  11:.\main.c      **** *	Ranjith M, Applications Engineer (rnjt@cypress.com)
+  12:.\main.c      **** *
+  13:.\main.c      **** * Related Document:
+  14:.\main.c      **** * 	001-85925 - CY8CKIT-042 PSoC 4 Pioneer Kit IROS
+  15:.\main.c      **** *
+  16:.\main.c      **** * Hardware Dependency:
+  17:.\main.c      **** * 	CY8CKIT-042 (KitProg) 
+  18:.\main.c      **** *
+  19:.\main.c      **** * Code Tested With:
+  20:.\main.c      **** * 	Creator 2.2
+  21:.\main.c      **** *	GCC1 4.4.1
+  22:.\main.c      **** *	CY8CKIT-042 Rev 1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 2
+
+
+  23:.\main.c      **** *
+  24:.\main.c      **** ******************************************************************************
+  25:.\main.c      **** * Copyright (2013), Cypress Semiconductor Corporation.
+  26:.\main.c      **** ******************************************************************************
+  27:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  28:.\main.c      **** * protected by and subject to worldwide patent protection (United States and
+  29:.\main.c      **** * foreign), United States copyright laws and international treaty provisions.
+  30:.\main.c      **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  31:.\main.c      **** * license to copy, use, modify, create derivative works of, and compile the
+  32:.\main.c      **** * Cypress Source Code and derivative works for the sole purpose of creating
+  33:.\main.c      **** * custom software in support of licensee product to be used only in conjunction
+  34:.\main.c      **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  35:.\main.c      **** * Any reproduction, modification, translation, compilation, or representation of
+  36:.\main.c      **** * this software except as specified above is prohibited without the express
+  37:.\main.c      **** * written permission of Cypress.
+  38:.\main.c      **** *
+  39:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  40:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  41:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  42:.\main.c      **** * Cypress reserves the right to make changes without further notice to the
+  43:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out
+  44:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress
+  45:.\main.c      **** * does not authorize its products for use as critical components in life-support
+  46:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in
+  47:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  48:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of
+  49:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  50:.\main.c      **** * limited by and subject to the applicable Cypress software license agreement.
+  51:.\main.c      **** *****************************************************************************/
+  52:.\main.c      **** #include "kitprog.h"
+  53:.\main.c      **** 
+  54:.\main.c      **** volatile uint8 bUSBResetDetected = FALSE;
+  55:.\main.c      **** 
+  56:.\main.c      **** void main()
+  57:.\main.c      **** {
+  32              		.loc 1 57 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36 0000 10B5     		push	{r4, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  58:.\main.c      **** 	/* Enable global Interrupts */
+  59:.\main.c      ****     CyGlobalIntEnable;   
+  39              		.loc 1 59 0
+  40              	@ 59 ".\main.c" 1
+  41 0002 62B6     		CPSIE   i
+  42              	@ 0 "" 2
+  60:.\main.c      **** 	
+  61:.\main.c      **** 	/* Retrieves the Hardware version. Defined in version.c. */
+  62:.\main.c      **** 	GetHWVersion();
+  43              		.loc 1 62 0
+  44              		.thumb
+  45              		.cfi_offset 14, -4
+  46              		.cfi_offset 4, -8
+  47 0004 FFF7FEFF 		bl	GetHWVersion
+  63:.\main.c      **** 	
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 3
+
+
+  64:.\main.c      **** 	/* Initializes the variables for the programming operation. */
+  65:.\main.c      ****     ProgramInit();
+  48              		.loc 1 65 0
+  49 0008 FFF7FEFF 		bl	ProgramInit
+  66:.\main.c      **** 	
+  67:.\main.c      **** 	/* Initializes the variables for the Bridge operation. */
+  68:.\main.c      **** 	HostCommInit();
+  50              		.loc 1 68 0
+  51 000c FFF7FEFF 		bl	HostCommInit
+  69:.\main.c      **** 	
+  70:.\main.c      **** 	/* Initializes SWD interface */
+  71:.\main.c      ****     SWDInit();
+  52              		.loc 1 71 0
+  53 0010 FFF7FEFF 		bl	SWDInit
+  72:.\main.c      **** 
+  73:.\main.c      **** 	/* Intialize the ADC for voltage monitoring. */
+  74:.\main.c      **** 	VoltageMonitorInit();
+  54              		.loc 1 74 0
+  55 0014 FFF7FEFF 		bl	VoltageMonitorInit
+  75:.\main.c      **** 	
+  76:.\main.c      **** 	/* Initializes USB-UART interface */
+  77:.\main.c      ****     USBUARTInit();
+  56              		.loc 1 77 0
+  57 0018 FFF7FEFF 		bl	USBUARTInit
+  78:.\main.c      **** 	
+  79:.\main.c      **** 	/* flag to determine if the USB is reset */
+  80:.\main.c      **** 	bUSBResetDetected = FALSE;
+  58              		.loc 1 80 0
+  59 001c 254B     		ldr	r3, .L15
+  60 001e 0022     		movs	r2, #0
+  61 0020 1A70     		strb	r2, [r3, #0]
+  62              	.L13:
+  81:.\main.c      **** 
+  82:.\main.c      **** 	while(1)
+  83:.\main.c      ****     {
+  84:.\main.c      ****         /* Turn off Green LED. LED is switched on after successful enumeration
+  85:.\main.c      **** 		 * The LED has inverse logic. Writing 1 to the pin turns off the LED. */
+  86:.\main.c      **** 		Pin_StatusLED_Write(1);		
+  63              		.loc 1 86 0
+  64 0022 0120     		movs	r0, #1
+  65 0024 FFF7FEFF 		bl	Pin_StatusLED_Write
+  66              	.L2:
+  87:.\main.c      ****         
+  88:.\main.c      **** 		while(!USBFS_VBusPresent())
+  67              		.loc 1 88 0
+  68 0028 FFF7FEFF 		bl	USBFS_VBusPresent
+  69 002c 0028     		cmp	r0, #0
+  70 002e FBD0     		beq	.L2
+  89:.\main.c      **** 		{
+  90:.\main.c      **** 			/* Wait till powered via USB */
+  91:.\main.c      **** 		}
+  92:.\main.c      **** 		
+  93:.\main.c      **** 		/* If the USB is not reset. */
+  94:.\main.c      ****         if(bUSBResetDetected == FALSE)
+  71              		.loc 1 94 0
+  72 0030 204B     		ldr	r3, .L15
+  73 0032 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 4
+
+
+  74 0034 1846     		mov	r0, r3
+  75 0036 4BB9     		cbnz	r3, .L3
+  95:.\main.c      ****         {
+  96:.\main.c      ****            /* Start USB operation at VDDD specified in the DWR */
+  97:.\main.c      **** 			USBFS_Start(0, USBFS_DWR_VDDD_OPERATION);
+  76              		.loc 1 97 0
+  77 0038 0221     		movs	r1, #2
+  78 003a FFF7FEFF 		bl	USBFS_Start
+  98:.\main.c      **** 			
+  99:.\main.c      **** 			/* Initializes the timer for handling the USBFS Suspend Activity */
+ 100:.\main.c      **** 			Timer_UsbSuspend_Start();
+  79              		.loc 1 100 0
+  80 003e FFF7FEFF 		bl	Timer_UsbSuspend_Start
+ 101:.\main.c      **** 		
+ 102:.\main.c      **** 			isr_UsbSuspend_Start();
+  81              		.loc 1 102 0
+  82 0042 FFF7FEFF 		bl	isr_UsbSuspend_Start
+  83 0046 01E0     		b	.L3
+  84              	.L4:
+ 103:.\main.c      **** 		}
+ 104:.\main.c      **** 		
+ 105:.\main.c      **** 		while(!USBFS_GetConfiguration())
+ 106:.\main.c      **** 		{
+ 107:.\main.c      **** 			/* Handles USB Suspend event */
+ 108:.\main.c      **** 			HandleUSBSuspend();	
+  85              		.loc 1 108 0
+  86 0048 FFF7FEFF 		bl	HandleUSBSuspend
+  87              	.L3:
+  88              		.loc 1 105 0
+  89 004c FFF7FEFF 		bl	USBFS_GetConfiguration
+  90 0050 0028     		cmp	r0, #0
+  91 0052 F9D0     		beq	.L4
+ 109:.\main.c      **** 			
+ 110:.\main.c      **** 			/* Wait for Device to enumerate */	
+ 111:.\main.c      **** 		}
+ 112:.\main.c      **** 		
+ 113:.\main.c      **** 		/* Indicate successful enumeration. */
+ 114:.\main.c      ****         Pin_StatusLED_Write(0);
+  92              		.loc 1 114 0
+  93 0054 0020     		movs	r0, #0
+  94 0056 FFF7FEFF 		bl	Pin_StatusLED_Write
+ 115:.\main.c      **** 		
+ 116:.\main.c      **** 		/* Enable USB out end points */
+ 117:.\main.c      **** 		USBFS_EnableOutEP(SWD_OUT_EP);
+  95              		.loc 1 117 0
+  96 005a 0220     		movs	r0, #2
+  97 005c FFF7FEFF 		bl	USBFS_EnableOutEP
+ 118:.\main.c      **** 		USBFS_EnableOutEP(HOST_OUT_EP);
+  98              		.loc 1 118 0
+  99 0060 0420     		movs	r0, #4
+ 100 0062 FFF7FEFF 		bl	USBFS_EnableOutEP
+ 119:.\main.c      **** 
+ 120:.\main.c      **** 		/* Start the USBUART Interface */
+ 121:.\main.c      **** 		USBUARTStart();
+ 101              		.loc 1 121 0
+ 102 0066 FFF7FEFF 		bl	USBUARTStart
+ 122:.\main.c      **** 		
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 5
+
+
+ 123:.\main.c      **** 		/* 'bbUSBResetDetected' flag is set to false to indicate that the USB is 
+ 124:.\main.c      **** 		 * connected and configured. This flag will be set inside USBFS_episr.c if 
+ 125:.\main.c      **** 		 * the USB Bus Reset is detected */
+ 126:.\main.c      **** 		bUSBResetDetected = FALSE;	
+ 103              		.loc 1 126 0
+ 104 006a 124B     		ldr	r3, .L15
+ 105 006c 0022     		movs	r2, #0
+ 106 006e 1A70     		strb	r2, [r3, #0]
+ 127:.\main.c      **** 		
+ 128:.\main.c      **** 		/* Loop is executed as long as USB is not reset or the Vbus is not removed */
+ 129:.\main.c      **** 		while(USBFS_VBusPresent() && bUSBResetDetected == FALSE)
+ 107              		.loc 1 129 0
+ 108 0070 0CE0     		b	.L12
+ 109              	.L7:
+ 130:.\main.c      ****         {	
+ 131:.\main.c      **** 			/* Handles the communication between PSoC Programmer GUI and the PSoC 5LP
+ 132:.\main.c      **** 			 * via USB HID interface. Also handles the USB-I2C bridge functionality. */
+ 133:.\main.c      ****             HostComm();
+ 110              		.loc 1 133 0
+ 111 0072 FFF7FEFF 		bl	HostComm
+ 134:.\main.c      **** 			
+ 135:.\main.c      **** 			/* Decides the commands-to-be-sent-to-the-SWD lines/configuration based on
+ 136:.\main.c      **** 			 * variables set by VendorCmd(). Defined in commandProcessor.c */
+ 137:.\main.c      **** 			SWDComm(); 
+ 112              		.loc 1 137 0
+ 113 0076 FFF7FEFF 		bl	SWDComm
+ 138:.\main.c      **** 
+ 139:.\main.c      **** 			/* Handles USB-UART Bridge interface */
+ 140:.\main.c      **** 			UARTBridgeComm();
+ 114              		.loc 1 140 0
+ 115 007a FFF7FEFF 		bl	UARTBridgeComm
+ 141:.\main.c      **** 			
+ 142:.\main.c      **** 			/* Handles the USB Suspend Event */
+ 143:.\main.c      **** 			HandleUSBSuspend();		
+ 116              		.loc 1 143 0
+ 117 007e FFF7FEFF 		bl	HandleUSBSuspend
+ 144:.\main.c      **** 			
+ 145:.\main.c      **** 			if(USBFS_IsConfigurationChanged())
+ 118              		.loc 1 145 0
+ 119 0082 FFF7FEFF 		bl	USBFS_IsConfigurationChanged
+ 120 0086 08B1     		cbz	r0, .L12
+ 146:.\main.c      **** 			{
+ 147:.\main.c      **** 				bUSBResetDetected = TRUE;
+ 121              		.loc 1 147 0
+ 122 0088 0123     		movs	r3, #1
+ 123 008a 2370     		strb	r3, [r4, #0]
+ 124              	.L12:
+ 125              		.loc 1 129 0
+ 126 008c FFF7FEFF 		bl	USBFS_VBusPresent
+ 127 0090 18B1     		cbz	r0, .L6
+ 128 0092 084C     		ldr	r4, .L15
+ 129 0094 2378     		ldrb	r3, [r4, #0]	@ zero_extendqisi2
+ 130 0096 002B     		cmp	r3, #0
+ 131 0098 EBD0     		beq	.L7
+ 132              	.L6:
+ 148:.\main.c      **** 			}
+ 149:.\main.c      ****         }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 6
+
+
+ 150:.\main.c      **** 		
+ 151:.\main.c      **** 		SWDHalt();
+ 133              		.loc 1 151 0
+ 134 009a FFF7FEFF 		bl	SWDHalt
+ 152:.\main.c      **** 		
+ 153:.\main.c      **** 		if(bUSBResetDetected == FALSE)
+ 135              		.loc 1 153 0
+ 136 009e 054B     		ldr	r3, .L15
+ 137 00a0 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 138 00a2 002B     		cmp	r3, #0
+ 139 00a4 BDD1     		bne	.L13
+ 154:.\main.c      ****         {
+ 155:.\main.c      ****             /* If the Vbus is removed, stop the component and try to re-enumerate. 
+ 156:.\main.c      **** 			* Set to true inside USBFS_episr.c [CY_ISR(USBFS_BUS_RESET_ISR)] */
+ 157:.\main.c      **** 			USBFS_Stop();
+ 140              		.loc 1 157 0
+ 141 00a6 FFF7FEFF 		bl	USBFS_Stop
+ 158:.\main.c      **** 			
+ 159:.\main.c      **** 			/* Disables the timer for handling the USBFS Suspend Activity */
+ 160:.\main.c      **** 			Timer_UsbSuspend_Stop();
+ 142              		.loc 1 160 0
+ 143 00aa FFF7FEFF 		bl	Timer_UsbSuspend_Stop
+ 161:.\main.c      **** 		
+ 162:.\main.c      **** 			isr_UsbSuspend_Stop();
+ 144              		.loc 1 162 0
+ 145 00ae FFF7FEFF 		bl	isr_UsbSuspend_Stop
+ 146 00b2 B6E7     		b	.L13
+ 147              	.L16:
+ 148              		.align	2
+ 149              	.L15:
+ 150 00b4 00000000 		.word	.LANCHOR0
+ 151              		.cfi_endproc
+ 152              	.LFE29:
+ 153              		.size	main, .-main
+ 154              		.global	bUSBResetDetected
+ 155              		.bss
+ 156              		.set	.LANCHOR0,. + 0
+ 157              		.type	bUSBResetDetected, %object
+ 158              		.size	bUSBResetDetected, 1
+ 159              	bUSBResetDetected:
+ 160 0000 00       		.space	1
+ 161              		.text
+ 162              	.Letext0:
+ 163              		.section	.debug_loc,"",%progbits
+ 164              	.Ldebug_loc0:
+ 165              	.LLST0:
+ 166 0000 00000000 		.4byte	.LFB29
+ 167 0004 02000000 		.4byte	.LCFI0
+ 168 0008 0100     		.2byte	0x1
+ 169 000a 5D       		.byte	0x5d
+ 170 000b 02000000 		.4byte	.LCFI0
+ 171 000f B8000000 		.4byte	.LFE29
+ 172 0013 0200     		.2byte	0x2
+ 173 0015 7D       		.byte	0x7d
+ 174 0016 08       		.sleb128 8
+ 175 0017 00000000 		.4byte	0x0
+ 176 001b 00000000 		.4byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 7
+
+
+ 177              		.file 2 "./Generated_Source/PSoC5/core_cm3.h"
+ 178              		.file 3 "./Generated_Source/PSoC5/cytypes.h"
+ 179              		.section	.debug_info
+ 180 0000 CD000000 		.4byte	0xcd
+ 181 0004 0200     		.2byte	0x2
+ 182 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 183 000a 04       		.byte	0x4
+ 184 000b 01       		.uleb128 0x1
+ 185 000c 62000000 		.4byte	.LASF14
+ 186 0010 01       		.byte	0x1
+ 187 0011 C8000000 		.4byte	.LASF15
+ 188 0015 81000000 		.4byte	.LASF16
+ 189 0019 00000000 		.4byte	0x0
+ 190 001d 00000000 		.4byte	0x0
+ 191 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 192 0025 00000000 		.4byte	.Ldebug_line0
+ 193 0029 02       		.uleb128 0x2
+ 194 002a 01       		.byte	0x1
+ 195 002b 06       		.byte	0x6
+ 196 002c E5000000 		.4byte	.LASF0
+ 197 0030 02       		.uleb128 0x2
+ 198 0031 01       		.byte	0x1
+ 199 0032 08       		.byte	0x8
+ 200 0033 6E000000 		.4byte	.LASF1
+ 201 0037 02       		.uleb128 0x2
+ 202 0038 02       		.byte	0x2
+ 203 0039 05       		.byte	0x5
+ 204 003a 09010000 		.4byte	.LASF2
+ 205 003e 02       		.uleb128 0x2
+ 206 003f 02       		.byte	0x2
+ 207 0040 07       		.byte	0x7
+ 208 0041 0E000000 		.4byte	.LASF3
+ 209 0045 02       		.uleb128 0x2
+ 210 0046 04       		.byte	0x4
+ 211 0047 05       		.byte	0x5
+ 212 0048 BF000000 		.4byte	.LASF4
+ 213 004c 02       		.uleb128 0x2
+ 214 004d 04       		.byte	0x4
+ 215 004e 07       		.byte	0x7
+ 216 004f 39000000 		.4byte	.LASF5
+ 217 0053 02       		.uleb128 0x2
+ 218 0054 08       		.byte	0x8
+ 219 0055 05       		.byte	0x5
+ 220 0056 00000000 		.4byte	.LASF6
+ 221 005a 02       		.uleb128 0x2
+ 222 005b 08       		.byte	0x8
+ 223 005c 07       		.byte	0x7
+ 224 005d 4B000000 		.4byte	.LASF7
+ 225 0061 03       		.uleb128 0x3
+ 226 0062 04       		.byte	0x4
+ 227 0063 05       		.byte	0x5
+ 228 0064 696E7400 		.ascii	"int\000"
+ 229 0068 02       		.uleb128 0x2
+ 230 0069 04       		.byte	0x4
+ 231 006a 07       		.byte	0x7
+ 232 006b 21000000 		.4byte	.LASF8
+ 233 006f 04       		.uleb128 0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 8
+
+
+ 234 0070 33000000 		.4byte	.LASF17
+ 235 0074 03       		.byte	0x3
+ 236 0075 4C       		.byte	0x4c
+ 237 0076 30000000 		.4byte	0x30
+ 238 007a 02       		.uleb128 0x2
+ 239 007b 04       		.byte	0x4
+ 240 007c 04       		.byte	0x4
+ 241 007d 03010000 		.4byte	.LASF9
+ 242 0081 02       		.uleb128 0x2
+ 243 0082 08       		.byte	0x8
+ 244 0083 04       		.byte	0x4
+ 245 0084 D1000000 		.4byte	.LASF10
+ 246 0088 02       		.uleb128 0x2
+ 247 0089 01       		.byte	0x1
+ 248 008a 08       		.byte	0x8
+ 249 008b 7C000000 		.4byte	.LASF11
+ 250 008f 05       		.uleb128 0x5
+ 251 0090 6F000000 		.4byte	0x6f
+ 252 0094 06       		.uleb128 0x6
+ 253 0095 04       		.byte	0x4
+ 254 0096 07       		.byte	0x7
+ 255 0097 07       		.uleb128 0x7
+ 256 0098 01       		.byte	0x1
+ 257 0099 2E000000 		.4byte	.LASF18
+ 258 009d 01       		.byte	0x1
+ 259 009e 38       		.byte	0x38
+ 260 009f 00000000 		.4byte	.LFB29
+ 261 00a3 B8000000 		.4byte	.LFE29
+ 262 00a7 00000000 		.4byte	.LLST0
+ 263 00ab 08       		.uleb128 0x8
+ 264 00ac D8000000 		.4byte	.LASF12
+ 265 00b0 02       		.byte	0x2
+ 266 00b1 CE06     		.2byte	0x6ce
+ 267 00b3 B9000000 		.4byte	0xb9
+ 268 00b7 01       		.byte	0x1
+ 269 00b8 01       		.byte	0x1
+ 270 00b9 05       		.uleb128 0x5
+ 271 00ba 61000000 		.4byte	0x61
+ 272 00be 09       		.uleb128 0x9
+ 273 00bf F1000000 		.4byte	.LASF13
+ 274 00c3 01       		.byte	0x1
+ 275 00c4 36       		.byte	0x36
+ 276 00c5 8F000000 		.4byte	0x8f
+ 277 00c9 01       		.byte	0x1
+ 278 00ca 05       		.byte	0x5
+ 279 00cb 03       		.byte	0x3
+ 280 00cc 00000000 		.4byte	bUSBResetDetected
+ 281 00d0 00       		.byte	0x0
+ 282              		.section	.debug_abbrev
+ 283 0000 01       		.uleb128 0x1
+ 284 0001 11       		.uleb128 0x11
+ 285 0002 01       		.byte	0x1
+ 286 0003 25       		.uleb128 0x25
+ 287 0004 0E       		.uleb128 0xe
+ 288 0005 13       		.uleb128 0x13
+ 289 0006 0B       		.uleb128 0xb
+ 290 0007 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 9
+
+
+ 291 0008 0E       		.uleb128 0xe
+ 292 0009 1B       		.uleb128 0x1b
+ 293 000a 0E       		.uleb128 0xe
+ 294 000b 11       		.uleb128 0x11
+ 295 000c 01       		.uleb128 0x1
+ 296 000d 52       		.uleb128 0x52
+ 297 000e 01       		.uleb128 0x1
+ 298 000f 55       		.uleb128 0x55
+ 299 0010 06       		.uleb128 0x6
+ 300 0011 10       		.uleb128 0x10
+ 301 0012 06       		.uleb128 0x6
+ 302 0013 00       		.byte	0x0
+ 303 0014 00       		.byte	0x0
+ 304 0015 02       		.uleb128 0x2
+ 305 0016 24       		.uleb128 0x24
+ 306 0017 00       		.byte	0x0
+ 307 0018 0B       		.uleb128 0xb
+ 308 0019 0B       		.uleb128 0xb
+ 309 001a 3E       		.uleb128 0x3e
+ 310 001b 0B       		.uleb128 0xb
+ 311 001c 03       		.uleb128 0x3
+ 312 001d 0E       		.uleb128 0xe
+ 313 001e 00       		.byte	0x0
+ 314 001f 00       		.byte	0x0
+ 315 0020 03       		.uleb128 0x3
+ 316 0021 24       		.uleb128 0x24
+ 317 0022 00       		.byte	0x0
+ 318 0023 0B       		.uleb128 0xb
+ 319 0024 0B       		.uleb128 0xb
+ 320 0025 3E       		.uleb128 0x3e
+ 321 0026 0B       		.uleb128 0xb
+ 322 0027 03       		.uleb128 0x3
+ 323 0028 08       		.uleb128 0x8
+ 324 0029 00       		.byte	0x0
+ 325 002a 00       		.byte	0x0
+ 326 002b 04       		.uleb128 0x4
+ 327 002c 16       		.uleb128 0x16
+ 328 002d 00       		.byte	0x0
+ 329 002e 03       		.uleb128 0x3
+ 330 002f 0E       		.uleb128 0xe
+ 331 0030 3A       		.uleb128 0x3a
+ 332 0031 0B       		.uleb128 0xb
+ 333 0032 3B       		.uleb128 0x3b
+ 334 0033 0B       		.uleb128 0xb
+ 335 0034 49       		.uleb128 0x49
+ 336 0035 13       		.uleb128 0x13
+ 337 0036 00       		.byte	0x0
+ 338 0037 00       		.byte	0x0
+ 339 0038 05       		.uleb128 0x5
+ 340 0039 35       		.uleb128 0x35
+ 341 003a 00       		.byte	0x0
+ 342 003b 49       		.uleb128 0x49
+ 343 003c 13       		.uleb128 0x13
+ 344 003d 00       		.byte	0x0
+ 345 003e 00       		.byte	0x0
+ 346 003f 06       		.uleb128 0x6
+ 347 0040 24       		.uleb128 0x24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 10
+
+
+ 348 0041 00       		.byte	0x0
+ 349 0042 0B       		.uleb128 0xb
+ 350 0043 0B       		.uleb128 0xb
+ 351 0044 3E       		.uleb128 0x3e
+ 352 0045 0B       		.uleb128 0xb
+ 353 0046 00       		.byte	0x0
+ 354 0047 00       		.byte	0x0
+ 355 0048 07       		.uleb128 0x7
+ 356 0049 2E       		.uleb128 0x2e
+ 357 004a 00       		.byte	0x0
+ 358 004b 3F       		.uleb128 0x3f
+ 359 004c 0C       		.uleb128 0xc
+ 360 004d 03       		.uleb128 0x3
+ 361 004e 0E       		.uleb128 0xe
+ 362 004f 3A       		.uleb128 0x3a
+ 363 0050 0B       		.uleb128 0xb
+ 364 0051 3B       		.uleb128 0x3b
+ 365 0052 0B       		.uleb128 0xb
+ 366 0053 11       		.uleb128 0x11
+ 367 0054 01       		.uleb128 0x1
+ 368 0055 12       		.uleb128 0x12
+ 369 0056 01       		.uleb128 0x1
+ 370 0057 40       		.uleb128 0x40
+ 371 0058 06       		.uleb128 0x6
+ 372 0059 00       		.byte	0x0
+ 373 005a 00       		.byte	0x0
+ 374 005b 08       		.uleb128 0x8
+ 375 005c 34       		.uleb128 0x34
+ 376 005d 00       		.byte	0x0
+ 377 005e 03       		.uleb128 0x3
+ 378 005f 0E       		.uleb128 0xe
+ 379 0060 3A       		.uleb128 0x3a
+ 380 0061 0B       		.uleb128 0xb
+ 381 0062 3B       		.uleb128 0x3b
+ 382 0063 05       		.uleb128 0x5
+ 383 0064 49       		.uleb128 0x49
+ 384 0065 13       		.uleb128 0x13
+ 385 0066 3F       		.uleb128 0x3f
+ 386 0067 0C       		.uleb128 0xc
+ 387 0068 3C       		.uleb128 0x3c
+ 388 0069 0C       		.uleb128 0xc
+ 389 006a 00       		.byte	0x0
+ 390 006b 00       		.byte	0x0
+ 391 006c 09       		.uleb128 0x9
+ 392 006d 34       		.uleb128 0x34
+ 393 006e 00       		.byte	0x0
+ 394 006f 03       		.uleb128 0x3
+ 395 0070 0E       		.uleb128 0xe
+ 396 0071 3A       		.uleb128 0x3a
+ 397 0072 0B       		.uleb128 0xb
+ 398 0073 3B       		.uleb128 0x3b
+ 399 0074 0B       		.uleb128 0xb
+ 400 0075 49       		.uleb128 0x49
+ 401 0076 13       		.uleb128 0x13
+ 402 0077 3F       		.uleb128 0x3f
+ 403 0078 0C       		.uleb128 0xc
+ 404 0079 02       		.uleb128 0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 11
+
+
+ 405 007a 0A       		.uleb128 0xa
+ 406 007b 00       		.byte	0x0
+ 407 007c 00       		.byte	0x0
+ 408 007d 00       		.byte	0x0
+ 409              		.section	.debug_pubnames,"",%progbits
+ 410 0000 2D000000 		.4byte	0x2d
+ 411 0004 0200     		.2byte	0x2
+ 412 0006 00000000 		.4byte	.Ldebug_info0
+ 413 000a D1000000 		.4byte	0xd1
+ 414 000e 97000000 		.4byte	0x97
+ 415 0012 6D61696E 		.ascii	"main\000"
+ 415      00
+ 416 0017 BE000000 		.4byte	0xbe
+ 417 001b 62555342 		.ascii	"bUSBResetDetected\000"
+ 417      52657365 
+ 417      74446574 
+ 417      65637465 
+ 417      6400
+ 418 002d 00000000 		.4byte	0x0
+ 419              		.section	.debug_aranges,"",%progbits
+ 420 0000 1C000000 		.4byte	0x1c
+ 421 0004 0200     		.2byte	0x2
+ 422 0006 00000000 		.4byte	.Ldebug_info0
+ 423 000a 04       		.byte	0x4
+ 424 000b 00       		.byte	0x0
+ 425 000c 0000     		.2byte	0x0
+ 426 000e 0000     		.2byte	0x0
+ 427 0010 00000000 		.4byte	.LFB29
+ 428 0014 B8000000 		.4byte	.LFE29-.LFB29
+ 429 0018 00000000 		.4byte	0x0
+ 430 001c 00000000 		.4byte	0x0
+ 431              		.section	.debug_ranges,"",%progbits
+ 432              	.Ldebug_ranges0:
+ 433 0000 00000000 		.4byte	.Ltext0
+ 434 0004 00000000 		.4byte	.Letext0
+ 435 0008 00000000 		.4byte	.LFB29
+ 436 000c B8000000 		.4byte	.LFE29
+ 437 0010 00000000 		.4byte	0x0
+ 438 0014 00000000 		.4byte	0x0
+ 439              		.section	.debug_str,"MS",%progbits,1
+ 440              	.LASF6:
+ 441 0000 6C6F6E67 		.ascii	"long long int\000"
+ 441      206C6F6E 
+ 441      6720696E 
+ 441      7400
+ 442              	.LASF3:
+ 443 000e 73686F72 		.ascii	"short unsigned int\000"
+ 443      7420756E 
+ 443      7369676E 
+ 443      65642069 
+ 443      6E7400
+ 444              	.LASF8:
+ 445 0021 756E7369 		.ascii	"unsigned int\000"
+ 445      676E6564 
+ 445      20696E74 
+ 445      00
+ 446              	.LASF18:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 12
+
+
+ 447 002e 6D61696E 		.ascii	"main\000"
+ 447      00
+ 448              	.LASF17:
+ 449 0033 75696E74 		.ascii	"uint8\000"
+ 449      3800
+ 450              	.LASF5:
+ 451 0039 6C6F6E67 		.ascii	"long unsigned int\000"
+ 451      20756E73 
+ 451      69676E65 
+ 451      6420696E 
+ 451      7400
+ 452              	.LASF7:
+ 453 004b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 453      206C6F6E 
+ 453      6720756E 
+ 453      7369676E 
+ 453      65642069 
+ 454              	.LASF14:
+ 455 0062 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 455      4320342E 
+ 455      342E3100 
+ 456              	.LASF1:
+ 457 006e 756E7369 		.ascii	"unsigned char\000"
+ 457      676E6564 
+ 457      20636861 
+ 457      7200
+ 458              	.LASF11:
+ 459 007c 63686172 		.ascii	"char\000"
+ 459      00
+ 460              	.LASF16:
+ 461 0081 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 461      665C486F 
+ 461      6D655C44 
+ 461      65736B74 
+ 461      6F705C4B 
+ 462 00ae 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 462      69745072 
+ 462      6F672E63 
+ 462      7964736E 
+ 462      00
+ 463              	.LASF4:
+ 464 00bf 6C6F6E67 		.ascii	"long int\000"
+ 464      20696E74 
+ 464      00
+ 465              	.LASF15:
+ 466 00c8 2E5C6D61 		.ascii	".\\main.c\000"
+ 466      696E2E63 
+ 466      00
+ 467              	.LASF10:
+ 468 00d1 646F7562 		.ascii	"double\000"
+ 468      6C6500
+ 469              	.LASF12:
+ 470 00d8 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 470      52784275 
+ 470      66666572 
+ 470      00
+ 471              	.LASF0:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccZMpaI6.s 			page 13
+
+
+ 472 00e5 7369676E 		.ascii	"signed char\000"
+ 472      65642063 
+ 472      68617200 
+ 473              	.LASF13:
+ 474 00f1 62555342 		.ascii	"bUSBResetDetected\000"
+ 474      52657365 
+ 474      74446574 
+ 474      65637465 
+ 474      6400
+ 475              	.LASF9:
+ 476 0103 666C6F61 		.ascii	"float\000"
+ 476      7400
+ 477              	.LASF2:
+ 478 0109 73686F72 		.ascii	"short int\000"
+ 478      7420696E 
+ 478      7400
+ 479              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

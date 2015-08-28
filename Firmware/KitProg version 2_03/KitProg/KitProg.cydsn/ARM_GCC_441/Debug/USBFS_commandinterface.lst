@@ -1,0 +1,1236 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"USBFS_commandinterface.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 AE000000 		.text
+  20      02007000 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.comm	pendingOp,1,1
+  24              		.comm	fTcBusy,1,1
+  25              		.comm	pifData,2,4
+  26              		.comm	pifBuf,64,4
+  27              		.comm	progMode,1,1
+  28              		.section	.text.ProgramInit,"ax",%progbits
+  29              		.align	2
+  30              		.global	ProgramInit
+  31              		.thumb
+  32              		.thumb_func
+  33              		.type	ProgramInit, %function
+  34              	ProgramInit:
+  35              	.LFB29:
+  36              		.file 1 ".\\USBFS_commandinterface.c"
+   1:.\USBFS_commandinterface.c **** /*****************************************************************************
+   2:.\USBFS_commandinterface.c **** * File Name: USBFS_commandInterface.c
+   3:.\USBFS_commandinterface.c **** *
+   4:.\USBFS_commandinterface.c **** * Version 2.03
+   5:.\USBFS_commandinterface.c **** *
+   6:.\USBFS_commandinterface.c **** * Description: Handles the USB control endpoint comands.
+   7:.\USBFS_commandinterface.c **** *
+   8:.\USBFS_commandinterface.c **** * Owner:
+   9:.\USBFS_commandinterface.c **** *	Ranjith M, Applications Engineer (rnjt@cypress.com)
+  10:.\USBFS_commandinterface.c **** *
+  11:.\USBFS_commandinterface.c **** * Related Document:
+  12:.\USBFS_commandinterface.c **** * 	001-85925 - CY8CKIT-042 PSoC 4 Pioneer Kit IROS
+  13:.\USBFS_commandinterface.c **** *	RNJT#18
+  14:.\USBFS_commandinterface.c **** *
+  15:.\USBFS_commandinterface.c **** * Hardware Dependency:
+  16:.\USBFS_commandinterface.c **** * 	CY8CKIT-042 (KitProg) 
+  17:.\USBFS_commandinterface.c **** *
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 2
+
+
+  18:.\USBFS_commandinterface.c **** * Code Tested With:
+  19:.\USBFS_commandinterface.c **** * 	Creator 2.2
+  20:.\USBFS_commandinterface.c **** *	GCC1 4.4.1
+  21:.\USBFS_commandinterface.c **** *	CY8CKIT-042 Rev 1
+  22:.\USBFS_commandinterface.c **** *
+  23:.\USBFS_commandinterface.c **** ******************************************************************************
+  24:.\USBFS_commandinterface.c **** * Copyright (2013), Cypress Semiconductor Corporation.
+  25:.\USBFS_commandinterface.c **** ******************************************************************************
+  26:.\USBFS_commandinterface.c **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  27:.\USBFS_commandinterface.c **** * protected by and subject to worldwide patent protection (United States and
+  28:.\USBFS_commandinterface.c **** * foreign), United States copyright laws and international treaty provisions.
+  29:.\USBFS_commandinterface.c **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  30:.\USBFS_commandinterface.c **** * license to copy, use, modify, create derivative works of, and compile the
+  31:.\USBFS_commandinterface.c **** * Cypress Source Code and derivative works for the sole purpose of creating
+  32:.\USBFS_commandinterface.c **** * custom software in support of licensee product to be used only in conjunction
+  33:.\USBFS_commandinterface.c **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  34:.\USBFS_commandinterface.c **** * Any reproduction, modification, translation, compilation, or representation of
+  35:.\USBFS_commandinterface.c **** * this software except as specified above is prohibited without the express
+  36:.\USBFS_commandinterface.c **** * written permission of Cypress.
+  37:.\USBFS_commandinterface.c **** *
+  38:.\USBFS_commandinterface.c **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  39:.\USBFS_commandinterface.c **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  40:.\USBFS_commandinterface.c **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  41:.\USBFS_commandinterface.c **** * Cypress reserves the right to make changes without further notice to the
+  42:.\USBFS_commandinterface.c **** * materials described herein. Cypress does not assume any liability arising out
+  43:.\USBFS_commandinterface.c **** * of the application or use of any product or circuit described herein. Cypress
+  44:.\USBFS_commandinterface.c **** * does not authorize its products for use as critical components in life-support
+  45:.\USBFS_commandinterface.c **** * systems where a malfunction or failure may reasonably be expected to result in
+  46:.\USBFS_commandinterface.c **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  47:.\USBFS_commandinterface.c **** * support systems application implies that the manufacturer assumes all risk of
+  48:.\USBFS_commandinterface.c **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  49:.\USBFS_commandinterface.c **** * limited by and subject to the applicable Cypress software license agreement.
+  50:.\USBFS_commandinterface.c **** *****************************************************************************/
+  51:.\USBFS_commandinterface.c **** /* This module contains code that attempts to combine the functionality of the 2 
+  52:.\USBFS_commandinterface.c **** * chip solution employed in the PSoC MiniProgrammer.  That device uses a 66113 
+  53:.\USBFS_commandinterface.c **** * for the USB interface and a 27543 to program the target device.  Communication
+  54:.\USBFS_commandinterface.c **** * between the 66113 and 27543 is generally via a parallel bus although there is 
+  55:.\USBFS_commandinterface.c **** * also an ISSP connection so that the 27543 can be field reprogrammed via the 
+  56:.\USBFS_commandinterface.c **** * 66113.  Note that the 66113 is an OTP part.
+  57:.\USBFS_commandinterface.c **** *
+  58:.\USBFS_commandinterface.c **** * Communication between the PSoC Programmer GUI and the 66113 is mainly via 
+  59:.\USBFS_commandinterface.c **** * "no data" control transfers.  So, an example control transfer's data may 
+  60:.\USBFS_commandinterface.c **** * look like the following (in hex) C0 02 07 01 00 01 00 01	
+  61:.\USBFS_commandinterface.c **** * the C0 is the "Device to Host Vendor Request", 02 is bRequest - in our case, 
+  62:.\USBFS_commandinterface.c **** * a write.  the 07 01 will show up on the CATC as a Big Endian wValue - we only
+  63:.\USBFS_commandinterface.c **** * care about the raw bytes.  So, the 07 is the command and the 01 is the mode.
+  64:.\USBFS_commandinterface.c **** * The 66113 code takes care of commands 1 thru 6 internally. Command 7 is passed
+  65:.\USBFS_commandinterface.c **** * on to the 27543 via the parallel interface.  Since we are emulating the 27543, 
+  66:.\USBFS_commandinterface.c **** * we will need to add code to handle command #7 here.
+  67:.\USBFS_commandinterface.c **** *****************************************************************************/
+  68:.\USBFS_commandinterface.c **** 
+  69:.\USBFS_commandinterface.c **** #include "kitprog.h"
+  70:.\USBFS_commandinterface.c **** 
+  71:.\USBFS_commandinterface.c **** /*****************************************************************************
+  72:.\USBFS_commandinterface.c **** * Local Function Prototypes
+  73:.\USBFS_commandinterface.c **** *****************************************************************************/
+  74:.\USBFS_commandinterface.c **** void ProgramInit(void);
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 3
+
+
+  75:.\USBFS_commandinterface.c **** void VendorCmd(void);
+  76:.\USBFS_commandinterface.c **** /*****************************************************************************
+  77:.\USBFS_commandinterface.c **** * Local Global Variable Declarations
+  78:.\USBFS_commandinterface.c **** ******************************************************************************/
+  79:.\USBFS_commandinterface.c **** uint8 pendingOp;
+  80:.\USBFS_commandinterface.c **** uint8 fTcBusy;
+  81:.\USBFS_commandinterface.c **** uint8 pifData[2];
+  82:.\USBFS_commandinterface.c **** uint8 pifBuf[64];
+  83:.\USBFS_commandinterface.c **** uint8 progMode;
+  84:.\USBFS_commandinterface.c **** /*******************************************************************************/
+  85:.\USBFS_commandinterface.c **** extern volatile T_USBFS_TD USBFS_currentTD;
+  86:.\USBFS_commandinterface.c **** /*******************************************************************************
+  87:.\USBFS_commandinterface.c **** * Function Name: ProgramInit()
+  88:.\USBFS_commandinterface.c **** ********************************************************************************
+  89:.\USBFS_commandinterface.c **** * Summary: Initializes the variables for the programming operation.
+  90:.\USBFS_commandinterface.c **** *   
+  91:.\USBFS_commandinterface.c **** *
+  92:.\USBFS_commandinterface.c **** * Parameters:
+  93:.\USBFS_commandinterface.c **** *  void
+  94:.\USBFS_commandinterface.c **** *
+  95:.\USBFS_commandinterface.c **** * Return:
+  96:.\USBFS_commandinterface.c **** *  void
+  97:.\USBFS_commandinterface.c **** *
+  98:.\USBFS_commandinterface.c **** * Global Variables:
+  99:.\USBFS_commandinterface.c **** * pendingOp	: Clears the flag which indicattes any pending programming operation
+ 100:.\USBFS_commandinterface.c **** *
+ 101:.\USBFS_commandinterface.c **** * fTcBust	: Clears the busy flag which indicates the PC that the PSoC 5LP is 
+ 102:.\USBFS_commandinterface.c **** * currently busy in a programming operation
+ 103:.\USBFS_commandinterface.c **** *
+ 104:.\USBFS_commandinterface.c **** *******************************************************************************/
+ 105:.\USBFS_commandinterface.c **** void ProgramInit(void)
+ 106:.\USBFS_commandinterface.c **** {
+  37              		.loc 1 106 0
+  38              		.cfi_startproc
+  39              		@ args = 0, pretend = 0, frame = 0
+  40              		@ frame_needed = 1, uses_anonymous_args = 0
+  41              		@ link register save eliminated.
+  42 0000 80B4     		push	{r7}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 4
+  45 0002 00AF     		add	r7, sp, #0
+  46              		.cfi_offset 7, -4
+  47              	.LCFI1:
+  48              		.cfi_def_cfa_register 7
+ 107:.\USBFS_commandinterface.c ****     pendingOp = CLEAR_OP;
+  49              		.loc 1 107 0
+  50 0004 40F20003 		movw	r3, #:lower16:pendingOp
+  51 0008 C0F20003 		movt	r3, #:upper16:pendingOp
+  52 000c 4FF00002 		mov	r2, #0
+  53 0010 1A70     		strb	r2, [r3, #0]
+ 108:.\USBFS_commandinterface.c ****     fTcBusy = CLEAR_BUSY;
+  54              		.loc 1 108 0
+  55 0012 40F20003 		movw	r3, #:lower16:fTcBusy
+  56 0016 C0F20003 		movt	r3, #:upper16:fTcBusy
+  57 001a 4FF00002 		mov	r2, #0
+  58 001e 1A70     		strb	r2, [r3, #0]
+ 109:.\USBFS_commandinterface.c **** }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 4
+
+
+  59              		.loc 1 109 0
+  60 0020 BD46     		mov	sp, r7
+  61 0022 80BC     		pop	{r7}
+  62 0024 7047     		bx	lr
+  63              		.cfi_endproc
+  64              	.LFE29:
+  65              		.size	ProgramInit, .-ProgramInit
+  66 0026 00BF     		.section	.text.VendorCmd,"ax",%progbits
+  67              		.align	2
+  68              		.global	VendorCmd
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	VendorCmd, %function
+  72              	VendorCmd:
+  73              	.LFB30:
+ 110:.\USBFS_commandinterface.c **** /*******************************************************************************
+ 111:.\USBFS_commandinterface.c **** * Function Name: VendorCmd()
+ 112:.\USBFS_commandinterface.c **** ********************************************************************************
+ 113:.\USBFS_commandinterface.c **** * Summary:
+ 114:.\USBFS_commandinterface.c **** * Entry point from the USBFS user module. Called inside the function 
+ 115:.\USBFS_commandinterface.c **** * USBFS_HandleVendorRqst() defined inside USBFS_vnd.c
+ 116:.\USBFS_commandinterface.c **** *
+ 117:.\USBFS_commandinterface.c **** * Parameters:
+ 118:.\USBFS_commandinterface.c **** *  void
+ 119:.\USBFS_commandinterface.c **** *
+ 120:.\USBFS_commandinterface.c **** * Return:
+ 121:.\USBFS_commandinterface.c **** *  void
+ 122:.\USBFS_commandinterface.c **** *
+ 123:.\USBFS_commandinterface.c **** * Global Variables: 
+ 124:.\USBFS_commandinterface.c **** * pifBuf	: Bufer to send data to through the USB control endpoint
+ 125:.\USBFS_commandinterface.c **** * pifData	: Buffer to store commands received through the USB control endpoint
+ 126:.\USBFS_commandinterface.c **** * progMode	: Next programming operation to be performed
+ 127:.\USBFS_commandinterface.c **** * 
+ 128:.\USBFS_commandinterface.c **** ******************************************************************************/
+ 129:.\USBFS_commandinterface.c **** void VendorCmd(void)
+ 130:.\USBFS_commandinterface.c **** {
+  74              		.loc 1 130 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 8
+  77              		@ frame_needed = 1, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79 0000 80B4     		push	{r7}
+  80              	.LCFI2:
+  81              		.cfi_def_cfa_offset 4
+  82 0002 83B0     		sub	sp, sp, #12
+  83              	.LCFI3:
+  84              		.cfi_def_cfa_offset 16
+  85 0004 00AF     		add	r7, sp, #0
+  86              		.cfi_offset 7, -4
+  87              	.LCFI4:
+  88              		.cfi_def_cfa_register 7
+ 131:.\USBFS_commandinterface.c **** 	/* Varaible to store ACK to be send to the USB packet */
+ 132:.\USBFS_commandinterface.c ****     uint8 progRes;
+ 133:.\USBFS_commandinterface.c **** 	/* Varaible to store the data which indicates whether the received command is a programming comman
+ 134:.\USBFS_commandinterface.c **** 	uint8 progCmd;
+ 135:.\USBFS_commandinterface.c **** 	progRes = USB_OK_ACK;
+  89              		.loc 1 135 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 5
+
+
+  90 0006 4FF00103 		mov	r3, #1
+  91 000a BB71     		strb	r3, [r7, #6]
+ 136:.\USBFS_commandinterface.c ****     
+ 137:.\USBFS_commandinterface.c **** 	/* If executing a previous instruction, initiate a zero length USB transfer */
+ 138:.\USBFS_commandinterface.c **** 	if(fTcBusy == SET_BUSY)
+  92              		.loc 1 138 0
+  93 000c 40F20003 		movw	r3, #:lower16:fTcBusy
+  94 0010 C0F20003 		movt	r3, #:upper16:fTcBusy
+  95 0014 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  96 0016 012B     		cmp	r3, #1
+  97 0018 07D1     		bne	.L4
+ 139:.\USBFS_commandinterface.c **** 	{
+ 140:.\USBFS_commandinterface.c **** 		USBFS_currentTD.count = 0;
+  98              		.loc 1 140 0
+  99 001a 40F20003 		movw	r3, #:lower16:USBFS_currentTD
+ 100 001e C0F20003 		movt	r3, #:upper16:USBFS_currentTD
+ 101 0022 4FF00002 		mov	r2, #0
+ 102 0026 1A80     		strh	r2, [r3, #0]	@ movhi
+ 103 0028 79E0     		b	.L7
+ 104              	.L4:
+ 141:.\USBFS_commandinterface.c **** 	} 
+ 142:.\USBFS_commandinterface.c ****     else 
+ 143:.\USBFS_commandinterface.c ****     {
+ 144:.\USBFS_commandinterface.c **** 		/* Extract the count of bytes received. */
+ 145:.\USBFS_commandinterface.c **** 		USBFS_currentTD.count = ((uint16)CY_GET_REG8(USBFS_EP0_DR6_PTR)) + 
+ 105              		.loc 1 145 0
+ 106 002a 46F20603 		movw	r3, #:lower16:1073766406
+ 107 002e C4F20003 		movt	r3, #:upper16:1073766406
+ 108 0032 1B78     		ldrb	r3, [r3, #0]
+ 109 0034 DBB2     		uxtb	r3, r3
+ 110 0036 1A46     		mov	r2, r3
+ 146:.\USBFS_commandinterface.c ****                                   ((uint16)CY_GET_REG8(USBFS_EP0_DR7_PTR)<<8);
+ 111              		.loc 1 146 0
+ 112 0038 46F20703 		movw	r3, #:lower16:1073766407
+ 113 003c C4F20003 		movt	r3, #:upper16:1073766407
+ 114 0040 1B78     		ldrb	r3, [r3, #0]
+ 115 0042 DBB2     		uxtb	r3, r3
+ 116              		.loc 1 145 0
+ 117 0044 4FEA0323 		lsl	r3, r3, #8
+ 118 0048 9BB2     		uxth	r3, r3
+ 119 004a 1344     		add	r3, r2, r3
+ 120 004c 9AB2     		uxth	r2, r3
+ 121 004e 40F20003 		movw	r3, #:lower16:USBFS_currentTD
+ 122 0052 C0F20003 		movt	r3, #:upper16:USBFS_currentTD
+ 123 0056 1A80     		strh	r2, [r3, #0]	@ movhi
+ 147:.\USBFS_commandinterface.c **** 
+ 148:.\USBFS_commandinterface.c **** 		/* If a read operation, set the data pointer to the databuffer address. */
+ 149:.\USBFS_commandinterface.c ****         if(CY_GET_REG8(USBFS_EP0_DR1_PTR) == READ_CMD)
+ 124              		.loc 1 149 0
+ 125 0058 46F20103 		movw	r3, #:lower16:1073766401
+ 126 005c C4F20003 		movt	r3, #:upper16:1073766401
+ 127 0060 1B78     		ldrb	r3, [r3, #0]
+ 128 0062 DBB2     		uxtb	r3, r3
+ 129 0064 012B     		cmp	r3, #1
+ 130 0066 09D1     		bne	.L6
+ 150:.\USBFS_commandinterface.c ****         {
+ 151:.\USBFS_commandinterface.c ****             USBFS_currentTD.pData = &pifBuf[0];
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 6
+
+
+ 131              		.loc 1 151 0
+ 132 0068 40F20002 		movw	r2, #:lower16:pifBuf
+ 133 006c C0F20002 		movt	r2, #:upper16:pifBuf
+ 134 0070 40F20003 		movw	r3, #:lower16:USBFS_currentTD
+ 135 0074 C0F20003 		movt	r3, #:upper16:USBFS_currentTD
+ 136 0078 5A60     		str	r2, [r3, #4]
+ 137 007a 50E0     		b	.L7
+ 138              	.L6:
+ 152:.\USBFS_commandinterface.c ****         } 
+ 153:.\USBFS_commandinterface.c **** 		/* If a write operation, extract the commands from the USB control endpoint registers */
+ 154:.\USBFS_commandinterface.c ****         else if(CY_GET_REG8(USBFS_EP0_DR1_PTR) == WRITE_CMD)
+ 139              		.loc 1 154 0
+ 140 007c 46F20103 		movw	r3, #:lower16:1073766401
+ 141 0080 C4F20003 		movt	r3, #:upper16:1073766401
+ 142 0084 1B78     		ldrb	r3, [r3, #0]
+ 143 0086 DBB2     		uxtb	r3, r3
+ 144 0088 022B     		cmp	r3, #2
+ 145 008a 48D1     		bne	.L7
+ 155:.\USBFS_commandinterface.c ****         {
+ 156:.\USBFS_commandinterface.c ****             /* Acknowledge the command */
+ 157:.\USBFS_commandinterface.c **** 			USBFS_currentTD.pData = &progRes;
+ 146              		.loc 1 157 0
+ 147 008c 07F10602 		add	r2, r7, #6
+ 148 0090 40F20003 		movw	r3, #:lower16:USBFS_currentTD
+ 149 0094 C0F20003 		movt	r3, #:upper16:USBFS_currentTD
+ 150 0098 5A60     		str	r2, [r3, #4]
+ 158:.\USBFS_commandinterface.c **** 			
+ 159:.\USBFS_commandinterface.c **** 			/* progCmd checks if the command is a programing command. */
+ 160:.\USBFS_commandinterface.c ****             progCmd  = CY_GET_REG8(USBFS_EP0_DR2_PTR);
+ 151              		.loc 1 160 0
+ 152 009a 46F20203 		movw	r3, #:lower16:1073766402
+ 153 009e C4F20003 		movt	r3, #:upper16:1073766402
+ 154 00a2 1B78     		ldrb	r3, [r3, #0]
+ 155 00a4 FB71     		strb	r3, [r7, #7]
+ 161:.\USBFS_commandinterface.c **** 			
+ 162:.\USBFS_commandinterface.c **** 			/* progMode stores the programming operation type */
+ 163:.\USBFS_commandinterface.c ****             progMode = CY_GET_REG8(USBFS_EP0_DR3_PTR);
+ 156              		.loc 1 163 0
+ 157 00a6 46F20303 		movw	r3, #:lower16:1073766403
+ 158 00aa C4F20003 		movt	r3, #:upper16:1073766403
+ 159 00ae 1B78     		ldrb	r3, [r3, #0]
+ 160 00b0 DAB2     		uxtb	r2, r3
+ 161 00b2 40F20003 		movw	r3, #:lower16:progMode
+ 162 00b6 C0F20003 		movt	r3, #:upper16:progMode
+ 163 00ba 1A70     		strb	r2, [r3, #0]
+ 164:.\USBFS_commandinterface.c **** 			
+ 165:.\USBFS_commandinterface.c **** 			/* Array pifData stores the values such as the aquire mode (Reset/Powercycle), device to be acqu
+ 166:.\USBFS_commandinterface.c **** 			* number of retries before declaring the programming operation to have failed, and the protocol 
+ 167:.\USBFS_commandinterface.c **** 			* depend on the current value of the variable progMode */
+ 168:.\USBFS_commandinterface.c ****             pifData[0] = CY_GET_REG8(USBFS_EP0_DR4_PTR);
+ 164              		.loc 1 168 0
+ 165 00bc 46F20403 		movw	r3, #:lower16:1073766404
+ 166 00c0 C4F20003 		movt	r3, #:upper16:1073766404
+ 167 00c4 1B78     		ldrb	r3, [r3, #0]
+ 168 00c6 DAB2     		uxtb	r2, r3
+ 169 00c8 40F20003 		movw	r3, #:lower16:pifData
+ 170 00cc C0F20003 		movt	r3, #:upper16:pifData
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 7
+
+
+ 171 00d0 1A70     		strb	r2, [r3, #0]
+ 169:.\USBFS_commandinterface.c ****             pifData[1]  = CY_GET_REG8(USBFS_EP0_DR5_PTR);
+ 172              		.loc 1 169 0
+ 173 00d2 46F20503 		movw	r3, #:lower16:1073766405
+ 174 00d6 C4F20003 		movt	r3, #:upper16:1073766405
+ 175 00da 1B78     		ldrb	r3, [r3, #0]
+ 176 00dc DAB2     		uxtb	r2, r3
+ 177 00de 40F20003 		movw	r3, #:lower16:pifData
+ 178 00e2 C0F20003 		movt	r3, #:upper16:pifData
+ 179 00e6 5A70     		strb	r2, [r3, #1]
+ 170:.\USBFS_commandinterface.c ****             
+ 171:.\USBFS_commandinterface.c **** 			/* If the command is a programming command */
+ 172:.\USBFS_commandinterface.c ****             if(progCmd == PROGRAM_CMD)
+ 180              		.loc 1 172 0
+ 181 00e8 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 182 00ea 072B     		cmp	r3, #7
+ 183 00ec 17D1     		bne	.L7
+ 173:.\USBFS_commandinterface.c ****             {	
+ 174:.\USBFS_commandinterface.c ****                 if(progMode != CMD_BUFFER)
+ 184              		.loc 1 174 0
+ 185 00ee 40F20003 		movw	r3, #:lower16:progMode
+ 186 00f2 C0F20003 		movt	r3, #:upper16:progMode
+ 187 00f6 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 188 00f8 002B     		cmp	r3, #0
+ 189 00fa 10D0     		beq	.L7
+ 175:.\USBFS_commandinterface.c ****                 {
+ 176:.\USBFS_commandinterface.c ****                     /* Pass the command to pending operation */
+ 177:.\USBFS_commandinterface.c **** 					pendingOp = progMode;
+ 190              		.loc 1 177 0
+ 191 00fc 40F20003 		movw	r3, #:lower16:progMode
+ 192 0100 C0F20003 		movt	r3, #:upper16:progMode
+ 193 0104 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 194 0106 40F20003 		movw	r3, #:lower16:pendingOp
+ 195 010a C0F20003 		movt	r3, #:upper16:pendingOp
+ 196 010e 1A70     		strb	r2, [r3, #0]
+ 178:.\USBFS_commandinterface.c **** 					
+ 179:.\USBFS_commandinterface.c ****                     /* Set the busy flag */
+ 180:.\USBFS_commandinterface.c ****                     fTcBusy = SET_BUSY;				
+ 197              		.loc 1 180 0
+ 198 0110 40F20003 		movw	r3, #:lower16:fTcBusy
+ 199 0114 C0F20003 		movt	r3, #:upper16:fTcBusy
+ 200 0118 4FF00102 		mov	r2, #1
+ 201 011c 1A70     		strb	r2, [r3, #0]
+ 202              	.L7:
+ 181:.\USBFS_commandinterface.c ****                 }
+ 182:.\USBFS_commandinterface.c ****             }
+ 183:.\USBFS_commandinterface.c ****         } 
+ 184:.\USBFS_commandinterface.c ****         else 
+ 185:.\USBFS_commandinterface.c ****         {
+ 186:.\USBFS_commandinterface.c **** 			/* do nothing */
+ 187:.\USBFS_commandinterface.c ****         }
+ 188:.\USBFS_commandinterface.c **** 	
+ 189:.\USBFS_commandinterface.c ****     }
+ 190:.\USBFS_commandinterface.c **** 	return;
+ 191:.\USBFS_commandinterface.c **** }
+ 203              		.loc 1 191 0
+ 204 011e 07F10C07 		add	r7, r7, #12
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 8
+
+
+ 205 0122 BD46     		mov	sp, r7
+ 206 0124 80BC     		pop	{r7}
+ 207 0126 7047     		bx	lr
+ 208              		.cfi_endproc
+ 209              	.LFE30:
+ 210              		.size	VendorCmd, .-VendorCmd
+ 211              		.text
+ 212              	.Letext0:
+ 213              		.section	.debug_loc,"",%progbits
+ 214              	.Ldebug_loc0:
+ 215              	.LLST0:
+ 216 0000 00000000 		.4byte	.LFB29
+ 217 0004 02000000 		.4byte	.LCFI0
+ 218 0008 0100     		.2byte	0x1
+ 219 000a 5D       		.byte	0x5d
+ 220 000b 02000000 		.4byte	.LCFI0
+ 221 000f 04000000 		.4byte	.LCFI1
+ 222 0013 0200     		.2byte	0x2
+ 223 0015 7D       		.byte	0x7d
+ 224 0016 04       		.sleb128 4
+ 225 0017 04000000 		.4byte	.LCFI1
+ 226 001b 26000000 		.4byte	.LFE29
+ 227 001f 0200     		.2byte	0x2
+ 228 0021 77       		.byte	0x77
+ 229 0022 04       		.sleb128 4
+ 230 0023 00000000 		.4byte	0x0
+ 231 0027 00000000 		.4byte	0x0
+ 232              	.LLST1:
+ 233 002b 00000000 		.4byte	.LFB30
+ 234 002f 02000000 		.4byte	.LCFI2
+ 235 0033 0100     		.2byte	0x1
+ 236 0035 5D       		.byte	0x5d
+ 237 0036 02000000 		.4byte	.LCFI2
+ 238 003a 04000000 		.4byte	.LCFI3
+ 239 003e 0200     		.2byte	0x2
+ 240 0040 7D       		.byte	0x7d
+ 241 0041 04       		.sleb128 4
+ 242 0042 04000000 		.4byte	.LCFI3
+ 243 0046 06000000 		.4byte	.LCFI4
+ 244 004a 0200     		.2byte	0x2
+ 245 004c 7D       		.byte	0x7d
+ 246 004d 10       		.sleb128 16
+ 247 004e 06000000 		.4byte	.LCFI4
+ 248 0052 28010000 		.4byte	.LFE30
+ 249 0056 0200     		.2byte	0x2
+ 250 0058 77       		.byte	0x77
+ 251 0059 10       		.sleb128 16
+ 252 005a 00000000 		.4byte	0x0
+ 253 005e 00000000 		.4byte	0x0
+ 254              		.file 2 "./Generated_Source/PSoC5/cytypes.h"
+ 255              		.file 3 "./Generated_Source/PSoC5/USBFS.h"
+ 256              		.file 4 "./Generated_Source/PSoC5/core_cm3.h"
+ 257              		.section	.debug_info
+ 258 0000 0B020000 		.4byte	0x20b
+ 259 0004 0200     		.2byte	0x2
+ 260 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 261 000a 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 9
+
+
+ 262 000b 01       		.uleb128 0x1
+ 263 000c 54010000 		.4byte	.LASF32
+ 264 0010 01       		.byte	0x1
+ 265 0011 EB000000 		.4byte	.LASF33
+ 266 0015 94010000 		.4byte	.LASF34
+ 267 0019 00000000 		.4byte	0x0
+ 268 001d 00000000 		.4byte	0x0
+ 269 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 270 0025 00000000 		.4byte	.Ldebug_line0
+ 271 0029 02       		.uleb128 0x2
+ 272 002a 01       		.byte	0x1
+ 273 002b 06       		.byte	0x6
+ 274 002c 88010000 		.4byte	.LASF0
+ 275 0030 02       		.uleb128 0x2
+ 276 0031 01       		.byte	0x1
+ 277 0032 08       		.byte	0x8
+ 278 0033 C3000000 		.4byte	.LASF1
+ 279 0037 02       		.uleb128 0x2
+ 280 0038 02       		.byte	0x2
+ 281 0039 05       		.byte	0x5
+ 282 003a 6F010000 		.4byte	.LASF2
+ 283 003e 02       		.uleb128 0x2
+ 284 003f 02       		.byte	0x2
+ 285 0040 07       		.byte	0x7
+ 286 0041 A3000000 		.4byte	.LASF3
+ 287 0045 02       		.uleb128 0x2
+ 288 0046 04       		.byte	0x4
+ 289 0047 05       		.byte	0x5
+ 290 0048 7F010000 		.4byte	.LASF4
+ 291 004c 02       		.uleb128 0x2
+ 292 004d 04       		.byte	0x4
+ 293 004e 07       		.byte	0x7
+ 294 004f 91000000 		.4byte	.LASF5
+ 295 0053 02       		.uleb128 0x2
+ 296 0054 08       		.byte	0x8
+ 297 0055 05       		.byte	0x5
+ 298 0056 00000000 		.4byte	.LASF6
+ 299 005a 02       		.uleb128 0x2
+ 300 005b 08       		.byte	0x8
+ 301 005c 07       		.byte	0x7
+ 302 005d 2D010000 		.4byte	.LASF7
+ 303 0061 03       		.uleb128 0x3
+ 304 0062 04       		.byte	0x4
+ 305 0063 05       		.byte	0x5
+ 306 0064 696E7400 		.ascii	"int\000"
+ 307 0068 02       		.uleb128 0x2
+ 308 0069 04       		.byte	0x4
+ 309 006a 07       		.byte	0x7
+ 310 006b 18010000 		.4byte	.LASF8
+ 311 006f 04       		.uleb128 0x4
+ 312 0070 79010000 		.4byte	.LASF9
+ 313 0074 02       		.byte	0x2
+ 314 0075 4C       		.byte	0x4c
+ 315 0076 30000000 		.4byte	0x30
+ 316 007a 04       		.uleb128 0x4
+ 317 007b E4000000 		.4byte	.LASF10
+ 318 007f 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 10
+
+
+ 319 0080 4D       		.byte	0x4d
+ 320 0081 3E000000 		.4byte	0x3e
+ 321 0085 02       		.uleb128 0x2
+ 322 0086 04       		.byte	0x4
+ 323 0087 04       		.byte	0x4
+ 324 0088 52000000 		.4byte	.LASF11
+ 325 008c 02       		.uleb128 0x2
+ 326 008d 08       		.byte	0x8
+ 327 008e 04       		.byte	0x4
+ 328 008f D1000000 		.4byte	.LASF12
+ 329 0093 02       		.uleb128 0x2
+ 330 0094 01       		.byte	0x1
+ 331 0095 08       		.byte	0x8
+ 332 0096 60010000 		.4byte	.LASF13
+ 333 009a 05       		.uleb128 0x5
+ 334 009b 6F000000 		.4byte	0x6f
+ 335 009f 06       		.uleb128 0x6
+ 336 00a0 04       		.byte	0x4
+ 337 00a1 07       		.byte	0x7
+ 338 00a2 07       		.uleb128 0x7
+ 339 00a3 60000000 		.4byte	.LASF17
+ 340 00a7 04       		.byte	0x4
+ 341 00a8 03       		.byte	0x3
+ 342 00a9 92       		.byte	0x92
+ 343 00aa CB000000 		.4byte	0xcb
+ 344 00ae 08       		.uleb128 0x8
+ 345 00af 33000000 		.4byte	.LASF14
+ 346 00b3 03       		.byte	0x3
+ 347 00b4 93       		.byte	0x93
+ 348 00b5 6F000000 		.4byte	0x6f
+ 349 00b9 02       		.byte	0x2
+ 350 00ba 23       		.byte	0x23
+ 351 00bb 00       		.uleb128 0x0
+ 352 00bc 08       		.uleb128 0x8
+ 353 00bd DB010000 		.4byte	.LASF15
+ 354 00c1 03       		.byte	0x3
+ 355 00c2 94       		.byte	0x94
+ 356 00c3 7A000000 		.4byte	0x7a
+ 357 00c7 02       		.byte	0x2
+ 358 00c8 23       		.byte	0x23
+ 359 00c9 02       		.uleb128 0x2
+ 360 00ca 00       		.byte	0x0
+ 361 00cb 04       		.uleb128 0x4
+ 362 00cc 77000000 		.4byte	.LASF16
+ 363 00d0 03       		.byte	0x3
+ 364 00d1 95       		.byte	0x95
+ 365 00d2 A2000000 		.4byte	0xa2
+ 366 00d6 07       		.uleb128 0x7
+ 367 00d7 06010000 		.4byte	.LASF18
+ 368 00db 0C       		.byte	0xc
+ 369 00dc 03       		.byte	0x3
+ 370 00dd 98       		.byte	0x98
+ 371 00de 0D010000 		.4byte	0x10d
+ 372 00e2 08       		.uleb128 0x8
+ 373 00e3 2D000000 		.4byte	.LASF19
+ 374 00e7 03       		.byte	0x3
+ 375 00e8 99       		.byte	0x99
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 11
+
+
+ 376 00e9 7A000000 		.4byte	0x7a
+ 377 00ed 02       		.byte	0x2
+ 378 00ee 23       		.byte	0x23
+ 379 00ef 00       		.uleb128 0x0
+ 380 00f0 08       		.uleb128 0x8
+ 381 00f1 41000000 		.4byte	.LASF20
+ 382 00f5 03       		.byte	0x3
+ 383 00f6 9A       		.byte	0x9a
+ 384 00f7 0D010000 		.4byte	0x10d
+ 385 00fb 02       		.byte	0x2
+ 386 00fc 23       		.byte	0x23
+ 387 00fd 04       		.uleb128 0x4
+ 388 00fe 08       		.uleb128 0x8
+ 389 00ff 0E000000 		.4byte	.LASF21
+ 390 0103 03       		.byte	0x3
+ 391 0104 9B       		.byte	0x9b
+ 392 0105 13010000 		.4byte	0x113
+ 393 0109 02       		.byte	0x2
+ 394 010a 23       		.byte	0x23
+ 395 010b 08       		.uleb128 0x8
+ 396 010c 00       		.byte	0x0
+ 397 010d 09       		.uleb128 0x9
+ 398 010e 04       		.byte	0x4
+ 399 010f 9A000000 		.4byte	0x9a
+ 400 0113 09       		.uleb128 0x9
+ 401 0114 04       		.byte	0x4
+ 402 0115 CB000000 		.4byte	0xcb
+ 403 0119 04       		.uleb128 0x4
+ 404 011a 47000000 		.4byte	.LASF22
+ 405 011e 03       		.byte	0x3
+ 406 011f 9C       		.byte	0x9c
+ 407 0120 D6000000 		.4byte	0xd6
+ 408 0124 0A       		.uleb128 0xa
+ 409 0125 01       		.byte	0x1
+ 410 0126 D8000000 		.4byte	.LASF35
+ 411 012a 01       		.byte	0x1
+ 412 012b 69       		.byte	0x69
+ 413 012c 01       		.byte	0x1
+ 414 012d 00000000 		.4byte	.LFB29
+ 415 0131 26000000 		.4byte	.LFE29
+ 416 0135 00000000 		.4byte	.LLST0
+ 417 0139 0B       		.uleb128 0xb
+ 418 013a 01       		.byte	0x1
+ 419 013b 23000000 		.4byte	.LASF36
+ 420 013f 01       		.byte	0x1
+ 421 0140 81       		.byte	0x81
+ 422 0141 01       		.byte	0x1
+ 423 0142 00000000 		.4byte	.LFB30
+ 424 0146 28010000 		.4byte	.LFE30
+ 425 014a 2B000000 		.4byte	.LLST1
+ 426 014e 6F010000 		.4byte	0x16f
+ 427 0152 0C       		.uleb128 0xc
+ 428 0153 25010000 		.4byte	.LASF23
+ 429 0157 01       		.byte	0x1
+ 430 0158 84       		.byte	0x84
+ 431 0159 6F000000 		.4byte	0x6f
+ 432 015d 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 12
+
+
+ 433 015e 91       		.byte	0x91
+ 434 015f 76       		.sleb128 -10
+ 435 0160 0C       		.uleb128 0xc
+ 436 0161 10010000 		.4byte	.LASF24
+ 437 0165 01       		.byte	0x1
+ 438 0166 86       		.byte	0x86
+ 439 0167 6F000000 		.4byte	0x6f
+ 440 016b 02       		.byte	0x2
+ 441 016c 91       		.byte	0x91
+ 442 016d 77       		.sleb128 -9
+ 443 016e 00       		.byte	0x0
+ 444 016f 0D       		.uleb128 0xd
+ 445 0170 B6000000 		.4byte	.LASF25
+ 446 0174 04       		.byte	0x4
+ 447 0175 CE06     		.2byte	0x6ce
+ 448 0177 7D010000 		.4byte	0x17d
+ 449 017b 01       		.byte	0x1
+ 450 017c 01       		.byte	0x1
+ 451 017d 05       		.uleb128 0x5
+ 452 017e 61000000 		.4byte	0x61
+ 453 0182 0E       		.uleb128 0xe
+ 454 0183 65010000 		.4byte	.LASF26
+ 455 0187 01       		.byte	0x1
+ 456 0188 4F       		.byte	0x4f
+ 457 0189 6F000000 		.4byte	0x6f
+ 458 018d 01       		.byte	0x1
+ 459 018e 05       		.byte	0x5
+ 460 018f 03       		.byte	0x3
+ 461 0190 00000000 		.4byte	pendingOp
+ 462 0194 0E       		.uleb128 0xe
+ 463 0195 1B000000 		.4byte	.LASF27
+ 464 0199 01       		.byte	0x1
+ 465 019a 50       		.byte	0x50
+ 466 019b 6F000000 		.4byte	0x6f
+ 467 019f 01       		.byte	0x1
+ 468 01a0 05       		.byte	0x5
+ 469 01a1 03       		.byte	0x3
+ 470 01a2 00000000 		.4byte	fTcBusy
+ 471 01a6 0F       		.uleb128 0xf
+ 472 01a7 6F000000 		.4byte	0x6f
+ 473 01ab B6010000 		.4byte	0x1b6
+ 474 01af 10       		.uleb128 0x10
+ 475 01b0 9F000000 		.4byte	0x9f
+ 476 01b4 01       		.byte	0x1
+ 477 01b5 00       		.byte	0x0
+ 478 01b6 0E       		.uleb128 0xe
+ 479 01b7 58000000 		.4byte	.LASF28
+ 480 01bb 01       		.byte	0x1
+ 481 01bc 51       		.byte	0x51
+ 482 01bd A6010000 		.4byte	0x1a6
+ 483 01c1 01       		.byte	0x1
+ 484 01c2 05       		.byte	0x5
+ 485 01c3 03       		.byte	0x3
+ 486 01c4 00000000 		.4byte	pifData
+ 487 01c8 0F       		.uleb128 0xf
+ 488 01c9 6F000000 		.4byte	0x6f
+ 489 01cd D8010000 		.4byte	0x1d8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 13
+
+
+ 490 01d1 10       		.uleb128 0x10
+ 491 01d2 9F000000 		.4byte	0x9f
+ 492 01d6 3F       		.byte	0x3f
+ 493 01d7 00       		.byte	0x0
+ 494 01d8 0E       		.uleb128 0xe
+ 495 01d9 3A000000 		.4byte	.LASF29
+ 496 01dd 01       		.byte	0x1
+ 497 01de 52       		.byte	0x52
+ 498 01df C8010000 		.4byte	0x1c8
+ 499 01e3 01       		.byte	0x1
+ 500 01e4 05       		.byte	0x5
+ 501 01e5 03       		.byte	0x3
+ 502 01e6 00000000 		.4byte	pifBuf
+ 503 01ea 0E       		.uleb128 0xe
+ 504 01eb D2010000 		.4byte	.LASF30
+ 505 01ef 01       		.byte	0x1
+ 506 01f0 53       		.byte	0x53
+ 507 01f1 6F000000 		.4byte	0x6f
+ 508 01f5 01       		.byte	0x1
+ 509 01f6 05       		.byte	0x5
+ 510 01f7 03       		.byte	0x3
+ 511 01f8 00000000 		.4byte	progMode
+ 512 01fc 11       		.uleb128 0x11
+ 513 01fd 44010000 		.4byte	.LASF31
+ 514 0201 01       		.byte	0x1
+ 515 0202 55       		.byte	0x55
+ 516 0203 09020000 		.4byte	0x209
+ 517 0207 01       		.byte	0x1
+ 518 0208 01       		.byte	0x1
+ 519 0209 05       		.uleb128 0x5
+ 520 020a 19010000 		.4byte	0x119
+ 521 020e 00       		.byte	0x0
+ 522              		.section	.debug_abbrev
+ 523 0000 01       		.uleb128 0x1
+ 524 0001 11       		.uleb128 0x11
+ 525 0002 01       		.byte	0x1
+ 526 0003 25       		.uleb128 0x25
+ 527 0004 0E       		.uleb128 0xe
+ 528 0005 13       		.uleb128 0x13
+ 529 0006 0B       		.uleb128 0xb
+ 530 0007 03       		.uleb128 0x3
+ 531 0008 0E       		.uleb128 0xe
+ 532 0009 1B       		.uleb128 0x1b
+ 533 000a 0E       		.uleb128 0xe
+ 534 000b 11       		.uleb128 0x11
+ 535 000c 01       		.uleb128 0x1
+ 536 000d 52       		.uleb128 0x52
+ 537 000e 01       		.uleb128 0x1
+ 538 000f 55       		.uleb128 0x55
+ 539 0010 06       		.uleb128 0x6
+ 540 0011 10       		.uleb128 0x10
+ 541 0012 06       		.uleb128 0x6
+ 542 0013 00       		.byte	0x0
+ 543 0014 00       		.byte	0x0
+ 544 0015 02       		.uleb128 0x2
+ 545 0016 24       		.uleb128 0x24
+ 546 0017 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 14
+
+
+ 547 0018 0B       		.uleb128 0xb
+ 548 0019 0B       		.uleb128 0xb
+ 549 001a 3E       		.uleb128 0x3e
+ 550 001b 0B       		.uleb128 0xb
+ 551 001c 03       		.uleb128 0x3
+ 552 001d 0E       		.uleb128 0xe
+ 553 001e 00       		.byte	0x0
+ 554 001f 00       		.byte	0x0
+ 555 0020 03       		.uleb128 0x3
+ 556 0021 24       		.uleb128 0x24
+ 557 0022 00       		.byte	0x0
+ 558 0023 0B       		.uleb128 0xb
+ 559 0024 0B       		.uleb128 0xb
+ 560 0025 3E       		.uleb128 0x3e
+ 561 0026 0B       		.uleb128 0xb
+ 562 0027 03       		.uleb128 0x3
+ 563 0028 08       		.uleb128 0x8
+ 564 0029 00       		.byte	0x0
+ 565 002a 00       		.byte	0x0
+ 566 002b 04       		.uleb128 0x4
+ 567 002c 16       		.uleb128 0x16
+ 568 002d 00       		.byte	0x0
+ 569 002e 03       		.uleb128 0x3
+ 570 002f 0E       		.uleb128 0xe
+ 571 0030 3A       		.uleb128 0x3a
+ 572 0031 0B       		.uleb128 0xb
+ 573 0032 3B       		.uleb128 0x3b
+ 574 0033 0B       		.uleb128 0xb
+ 575 0034 49       		.uleb128 0x49
+ 576 0035 13       		.uleb128 0x13
+ 577 0036 00       		.byte	0x0
+ 578 0037 00       		.byte	0x0
+ 579 0038 05       		.uleb128 0x5
+ 580 0039 35       		.uleb128 0x35
+ 581 003a 00       		.byte	0x0
+ 582 003b 49       		.uleb128 0x49
+ 583 003c 13       		.uleb128 0x13
+ 584 003d 00       		.byte	0x0
+ 585 003e 00       		.byte	0x0
+ 586 003f 06       		.uleb128 0x6
+ 587 0040 24       		.uleb128 0x24
+ 588 0041 00       		.byte	0x0
+ 589 0042 0B       		.uleb128 0xb
+ 590 0043 0B       		.uleb128 0xb
+ 591 0044 3E       		.uleb128 0x3e
+ 592 0045 0B       		.uleb128 0xb
+ 593 0046 00       		.byte	0x0
+ 594 0047 00       		.byte	0x0
+ 595 0048 07       		.uleb128 0x7
+ 596 0049 13       		.uleb128 0x13
+ 597 004a 01       		.byte	0x1
+ 598 004b 03       		.uleb128 0x3
+ 599 004c 0E       		.uleb128 0xe
+ 600 004d 0B       		.uleb128 0xb
+ 601 004e 0B       		.uleb128 0xb
+ 602 004f 3A       		.uleb128 0x3a
+ 603 0050 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 15
+
+
+ 604 0051 3B       		.uleb128 0x3b
+ 605 0052 0B       		.uleb128 0xb
+ 606 0053 01       		.uleb128 0x1
+ 607 0054 13       		.uleb128 0x13
+ 608 0055 00       		.byte	0x0
+ 609 0056 00       		.byte	0x0
+ 610 0057 08       		.uleb128 0x8
+ 611 0058 0D       		.uleb128 0xd
+ 612 0059 00       		.byte	0x0
+ 613 005a 03       		.uleb128 0x3
+ 614 005b 0E       		.uleb128 0xe
+ 615 005c 3A       		.uleb128 0x3a
+ 616 005d 0B       		.uleb128 0xb
+ 617 005e 3B       		.uleb128 0x3b
+ 618 005f 0B       		.uleb128 0xb
+ 619 0060 49       		.uleb128 0x49
+ 620 0061 13       		.uleb128 0x13
+ 621 0062 38       		.uleb128 0x38
+ 622 0063 0A       		.uleb128 0xa
+ 623 0064 00       		.byte	0x0
+ 624 0065 00       		.byte	0x0
+ 625 0066 09       		.uleb128 0x9
+ 626 0067 0F       		.uleb128 0xf
+ 627 0068 00       		.byte	0x0
+ 628 0069 0B       		.uleb128 0xb
+ 629 006a 0B       		.uleb128 0xb
+ 630 006b 49       		.uleb128 0x49
+ 631 006c 13       		.uleb128 0x13
+ 632 006d 00       		.byte	0x0
+ 633 006e 00       		.byte	0x0
+ 634 006f 0A       		.uleb128 0xa
+ 635 0070 2E       		.uleb128 0x2e
+ 636 0071 00       		.byte	0x0
+ 637 0072 3F       		.uleb128 0x3f
+ 638 0073 0C       		.uleb128 0xc
+ 639 0074 03       		.uleb128 0x3
+ 640 0075 0E       		.uleb128 0xe
+ 641 0076 3A       		.uleb128 0x3a
+ 642 0077 0B       		.uleb128 0xb
+ 643 0078 3B       		.uleb128 0x3b
+ 644 0079 0B       		.uleb128 0xb
+ 645 007a 27       		.uleb128 0x27
+ 646 007b 0C       		.uleb128 0xc
+ 647 007c 11       		.uleb128 0x11
+ 648 007d 01       		.uleb128 0x1
+ 649 007e 12       		.uleb128 0x12
+ 650 007f 01       		.uleb128 0x1
+ 651 0080 40       		.uleb128 0x40
+ 652 0081 06       		.uleb128 0x6
+ 653 0082 00       		.byte	0x0
+ 654 0083 00       		.byte	0x0
+ 655 0084 0B       		.uleb128 0xb
+ 656 0085 2E       		.uleb128 0x2e
+ 657 0086 01       		.byte	0x1
+ 658 0087 3F       		.uleb128 0x3f
+ 659 0088 0C       		.uleb128 0xc
+ 660 0089 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 16
+
+
+ 661 008a 0E       		.uleb128 0xe
+ 662 008b 3A       		.uleb128 0x3a
+ 663 008c 0B       		.uleb128 0xb
+ 664 008d 3B       		.uleb128 0x3b
+ 665 008e 0B       		.uleb128 0xb
+ 666 008f 27       		.uleb128 0x27
+ 667 0090 0C       		.uleb128 0xc
+ 668 0091 11       		.uleb128 0x11
+ 669 0092 01       		.uleb128 0x1
+ 670 0093 12       		.uleb128 0x12
+ 671 0094 01       		.uleb128 0x1
+ 672 0095 40       		.uleb128 0x40
+ 673 0096 06       		.uleb128 0x6
+ 674 0097 01       		.uleb128 0x1
+ 675 0098 13       		.uleb128 0x13
+ 676 0099 00       		.byte	0x0
+ 677 009a 00       		.byte	0x0
+ 678 009b 0C       		.uleb128 0xc
+ 679 009c 34       		.uleb128 0x34
+ 680 009d 00       		.byte	0x0
+ 681 009e 03       		.uleb128 0x3
+ 682 009f 0E       		.uleb128 0xe
+ 683 00a0 3A       		.uleb128 0x3a
+ 684 00a1 0B       		.uleb128 0xb
+ 685 00a2 3B       		.uleb128 0x3b
+ 686 00a3 0B       		.uleb128 0xb
+ 687 00a4 49       		.uleb128 0x49
+ 688 00a5 13       		.uleb128 0x13
+ 689 00a6 02       		.uleb128 0x2
+ 690 00a7 0A       		.uleb128 0xa
+ 691 00a8 00       		.byte	0x0
+ 692 00a9 00       		.byte	0x0
+ 693 00aa 0D       		.uleb128 0xd
+ 694 00ab 34       		.uleb128 0x34
+ 695 00ac 00       		.byte	0x0
+ 696 00ad 03       		.uleb128 0x3
+ 697 00ae 0E       		.uleb128 0xe
+ 698 00af 3A       		.uleb128 0x3a
+ 699 00b0 0B       		.uleb128 0xb
+ 700 00b1 3B       		.uleb128 0x3b
+ 701 00b2 05       		.uleb128 0x5
+ 702 00b3 49       		.uleb128 0x49
+ 703 00b4 13       		.uleb128 0x13
+ 704 00b5 3F       		.uleb128 0x3f
+ 705 00b6 0C       		.uleb128 0xc
+ 706 00b7 3C       		.uleb128 0x3c
+ 707 00b8 0C       		.uleb128 0xc
+ 708 00b9 00       		.byte	0x0
+ 709 00ba 00       		.byte	0x0
+ 710 00bb 0E       		.uleb128 0xe
+ 711 00bc 34       		.uleb128 0x34
+ 712 00bd 00       		.byte	0x0
+ 713 00be 03       		.uleb128 0x3
+ 714 00bf 0E       		.uleb128 0xe
+ 715 00c0 3A       		.uleb128 0x3a
+ 716 00c1 0B       		.uleb128 0xb
+ 717 00c2 3B       		.uleb128 0x3b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 17
+
+
+ 718 00c3 0B       		.uleb128 0xb
+ 719 00c4 49       		.uleb128 0x49
+ 720 00c5 13       		.uleb128 0x13
+ 721 00c6 3F       		.uleb128 0x3f
+ 722 00c7 0C       		.uleb128 0xc
+ 723 00c8 02       		.uleb128 0x2
+ 724 00c9 0A       		.uleb128 0xa
+ 725 00ca 00       		.byte	0x0
+ 726 00cb 00       		.byte	0x0
+ 727 00cc 0F       		.uleb128 0xf
+ 728 00cd 01       		.uleb128 0x1
+ 729 00ce 01       		.byte	0x1
+ 730 00cf 49       		.uleb128 0x49
+ 731 00d0 13       		.uleb128 0x13
+ 732 00d1 01       		.uleb128 0x1
+ 733 00d2 13       		.uleb128 0x13
+ 734 00d3 00       		.byte	0x0
+ 735 00d4 00       		.byte	0x0
+ 736 00d5 10       		.uleb128 0x10
+ 737 00d6 21       		.uleb128 0x21
+ 738 00d7 00       		.byte	0x0
+ 739 00d8 49       		.uleb128 0x49
+ 740 00d9 13       		.uleb128 0x13
+ 741 00da 2F       		.uleb128 0x2f
+ 742 00db 0B       		.uleb128 0xb
+ 743 00dc 00       		.byte	0x0
+ 744 00dd 00       		.byte	0x0
+ 745 00de 11       		.uleb128 0x11
+ 746 00df 34       		.uleb128 0x34
+ 747 00e0 00       		.byte	0x0
+ 748 00e1 03       		.uleb128 0x3
+ 749 00e2 0E       		.uleb128 0xe
+ 750 00e3 3A       		.uleb128 0x3a
+ 751 00e4 0B       		.uleb128 0xb
+ 752 00e5 3B       		.uleb128 0x3b
+ 753 00e6 0B       		.uleb128 0xb
+ 754 00e7 49       		.uleb128 0x49
+ 755 00e8 13       		.uleb128 0x13
+ 756 00e9 3F       		.uleb128 0x3f
+ 757 00ea 0C       		.uleb128 0xc
+ 758 00eb 3C       		.uleb128 0x3c
+ 759 00ec 0C       		.uleb128 0xc
+ 760 00ed 00       		.byte	0x0
+ 761 00ee 00       		.byte	0x0
+ 762 00ef 00       		.byte	0x0
+ 763              		.section	.debug_pubnames,"",%progbits
+ 764 0000 6A000000 		.4byte	0x6a
+ 765 0004 0200     		.2byte	0x2
+ 766 0006 00000000 		.4byte	.Ldebug_info0
+ 767 000a 0F020000 		.4byte	0x20f
+ 768 000e 24010000 		.4byte	0x124
+ 769 0012 50726F67 		.ascii	"ProgramInit\000"
+ 769      72616D49 
+ 769      6E697400 
+ 770 001e 39010000 		.4byte	0x139
+ 771 0022 56656E64 		.ascii	"VendorCmd\000"
+ 771      6F72436D 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 18
+
+
+ 771      6400
+ 772 002c 82010000 		.4byte	0x182
+ 773 0030 70656E64 		.ascii	"pendingOp\000"
+ 773      696E674F 
+ 773      7000
+ 774 003a 94010000 		.4byte	0x194
+ 775 003e 66546342 		.ascii	"fTcBusy\000"
+ 775      75737900 
+ 776 0046 B6010000 		.4byte	0x1b6
+ 777 004a 70696644 		.ascii	"pifData\000"
+ 777      61746100 
+ 778 0052 D8010000 		.4byte	0x1d8
+ 779 0056 70696642 		.ascii	"pifBuf\000"
+ 779      756600
+ 780 005d EA010000 		.4byte	0x1ea
+ 781 0061 70726F67 		.ascii	"progMode\000"
+ 781      4D6F6465 
+ 781      00
+ 782 006a 00000000 		.4byte	0x0
+ 783              		.section	.debug_aranges,"",%progbits
+ 784 0000 24000000 		.4byte	0x24
+ 785 0004 0200     		.2byte	0x2
+ 786 0006 00000000 		.4byte	.Ldebug_info0
+ 787 000a 04       		.byte	0x4
+ 788 000b 00       		.byte	0x0
+ 789 000c 0000     		.2byte	0x0
+ 790 000e 0000     		.2byte	0x0
+ 791 0010 00000000 		.4byte	.LFB29
+ 792 0014 26000000 		.4byte	.LFE29-.LFB29
+ 793 0018 00000000 		.4byte	.LFB30
+ 794 001c 28010000 		.4byte	.LFE30-.LFB30
+ 795 0020 00000000 		.4byte	0x0
+ 796 0024 00000000 		.4byte	0x0
+ 797              		.section	.debug_ranges,"",%progbits
+ 798              	.Ldebug_ranges0:
+ 799 0000 00000000 		.4byte	.Ltext0
+ 800 0004 00000000 		.4byte	.Letext0
+ 801 0008 00000000 		.4byte	.LFB29
+ 802 000c 26000000 		.4byte	.LFE29
+ 803 0010 00000000 		.4byte	.LFB30
+ 804 0014 28010000 		.4byte	.LFE30
+ 805 0018 00000000 		.4byte	0x0
+ 806 001c 00000000 		.4byte	0x0
+ 807              		.section	.debug_str,"MS",%progbits,1
+ 808              	.LASF6:
+ 809 0000 6C6F6E67 		.ascii	"long long int\000"
+ 809      206C6F6E 
+ 809      6720696E 
+ 809      7400
+ 810              	.LASF21:
+ 811 000e 70537461 		.ascii	"pStatusBlock\000"
+ 811      74757342 
+ 811      6C6F636B 
+ 811      00
+ 812              	.LASF27:
+ 813 001b 66546342 		.ascii	"fTcBusy\000"
+ 813      75737900 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 19
+
+
+ 814              	.LASF36:
+ 815 0023 56656E64 		.ascii	"VendorCmd\000"
+ 815      6F72436D 
+ 815      6400
+ 816              	.LASF19:
+ 817 002d 636F756E 		.ascii	"count\000"
+ 817      7400
+ 818              	.LASF14:
+ 819 0033 73746174 		.ascii	"status\000"
+ 819      757300
+ 820              	.LASF29:
+ 821 003a 70696642 		.ascii	"pifBuf\000"
+ 821      756600
+ 822              	.LASF20:
+ 823 0041 70446174 		.ascii	"pData\000"
+ 823      6100
+ 824              	.LASF22:
+ 825 0047 545F5553 		.ascii	"T_USBFS_TD\000"
+ 825      4246535F 
+ 825      544400
+ 826              	.LASF11:
+ 827 0052 666C6F61 		.ascii	"float\000"
+ 827      7400
+ 828              	.LASF28:
+ 829 0058 70696644 		.ascii	"pifData\000"
+ 829      61746100 
+ 830              	.LASF17:
+ 831 0060 5F555342 		.ascii	"_USBFS_XferStatusBlock\000"
+ 831      46535F58 
+ 831      66657253 
+ 831      74617475 
+ 831      73426C6F 
+ 832              	.LASF16:
+ 833 0077 545F5553 		.ascii	"T_USBFS_XFER_STATUS_BLOCK\000"
+ 833      4246535F 
+ 833      58464552 
+ 833      5F535441 
+ 833      5455535F 
+ 834              	.LASF5:
+ 835 0091 6C6F6E67 		.ascii	"long unsigned int\000"
+ 835      20756E73 
+ 835      69676E65 
+ 835      6420696E 
+ 835      7400
+ 836              	.LASF3:
+ 837 00a3 73686F72 		.ascii	"short unsigned int\000"
+ 837      7420756E 
+ 837      7369676E 
+ 837      65642069 
+ 837      6E7400
+ 838              	.LASF25:
+ 839 00b6 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 839      52784275 
+ 839      66666572 
+ 839      00
+ 840              	.LASF1:
+ 841 00c3 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 20
+
+
+ 841      676E6564 
+ 841      20636861 
+ 841      7200
+ 842              	.LASF12:
+ 843 00d1 646F7562 		.ascii	"double\000"
+ 843      6C6500
+ 844              	.LASF35:
+ 845 00d8 50726F67 		.ascii	"ProgramInit\000"
+ 845      72616D49 
+ 845      6E697400 
+ 846              	.LASF10:
+ 847 00e4 75696E74 		.ascii	"uint16\000"
+ 847      313600
+ 848              	.LASF33:
+ 849 00eb 2E5C5553 		.ascii	".\\USBFS_commandinterface.c\000"
+ 849      4246535F 
+ 849      636F6D6D 
+ 849      616E6469 
+ 849      6E746572 
+ 850              	.LASF18:
+ 851 0106 5F555342 		.ascii	"_USBFS_Td\000"
+ 851      46535F54 
+ 851      6400
+ 852              	.LASF24:
+ 853 0110 70726F67 		.ascii	"progCmd\000"
+ 853      436D6400 
+ 854              	.LASF8:
+ 855 0118 756E7369 		.ascii	"unsigned int\000"
+ 855      676E6564 
+ 855      20696E74 
+ 855      00
+ 856              	.LASF23:
+ 857 0125 70726F67 		.ascii	"progRes\000"
+ 857      52657300 
+ 858              	.LASF7:
+ 859 012d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 859      206C6F6E 
+ 859      6720756E 
+ 859      7369676E 
+ 859      65642069 
+ 860              	.LASF31:
+ 861 0144 55534246 		.ascii	"USBFS_currentTD\000"
+ 861      535F6375 
+ 861      7272656E 
+ 861      74544400 
+ 862              	.LASF32:
+ 863 0154 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 863      4320342E 
+ 863      342E3100 
+ 864              	.LASF13:
+ 865 0160 63686172 		.ascii	"char\000"
+ 865      00
+ 866              	.LASF26:
+ 867 0165 70656E64 		.ascii	"pendingOp\000"
+ 867      696E674F 
+ 867      7000
+ 868              	.LASF2:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccBYLkd3.s 			page 21
+
+
+ 869 016f 73686F72 		.ascii	"short int\000"
+ 869      7420696E 
+ 869      7400
+ 870              	.LASF9:
+ 871 0179 75696E74 		.ascii	"uint8\000"
+ 871      3800
+ 872              	.LASF4:
+ 873 017f 6C6F6E67 		.ascii	"long int\000"
+ 873      20696E74 
+ 873      00
+ 874              	.LASF0:
+ 875 0188 7369676E 		.ascii	"signed char\000"
+ 875      65642063 
+ 875      68617200 
+ 876              	.LASF34:
+ 877 0194 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 877      665C486F 
+ 877      6D655C44 
+ 877      65736B74 
+ 877      6F705C4B 
+ 878 01c1 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 878      69745072 
+ 878      6F672E63 
+ 878      7964736E 
+ 878      00
+ 879              	.LASF30:
+ 880 01d2 70726F67 		.ascii	"progMode\000"
+ 880      4D6F6465 
+ 880      00
+ 881              	.LASF15:
+ 882 01db 6C656E67 		.ascii	"length\000"
+ 882      746800
+ 883              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

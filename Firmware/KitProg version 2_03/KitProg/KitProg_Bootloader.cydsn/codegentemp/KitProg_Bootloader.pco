@@ -1,0 +1,33 @@
+# KitProg_Bootloader
+# 2015-08-26 23:38:24Z
+
+dont_use_location 0 0
+dont_use_location 1 0
+dont_use_location 2 0
+dont_use_location 3 0
+dont_use_location sarcell -1 -1 1
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "Net_134" 2 1 0 1
+set_io "Pin_PSoC4A_XRES(0)" iocell 2 4
+set_io "Pin_Status_LED(0)" iocell 3 1
+set_location "\PWM:PWMUDB:final_kill_reg\" 3 1 0 1
+set_location "\PWM:PWMUDB:prevCompare1\" 2 1 0 2
+set_location "\PWM:PWMUDB:runmode_enable\" 2 1 1 2
+set_location "\PWM:PWMUDB:sCTRLReg:SyncCtl:ctrlreg\" 2 1 6
+set_location "\PWM:PWMUDB:sP16:pwmdp:u0\" 3 1 2
+set_location "\PWM:PWMUDB:sP16:pwmdp:u1\" 2 1 2
+set_location "\PWM:PWMUDB:sSTSReg:rstSts:stsreg\" 2 1 4
+set_location "\PWM:PWMUDB:status_0\" 2 1 0 3
+set_location "\PWM:PWMUDB:status_5\" 3 1 0 0
+set_io "\USBFS:Dm(0)\" iocell 15 7
+set_io "\USBFS:Dp(0)\" iocell 15 6
+set_location "\USBFS:Dp\" logicalport -1 -1 15
+set_location "\USBFS:USB\" usbcell -1 -1 0
+set_location "\USBFS:arb_int\" interrupt -1 -1 22
+set_location "\USBFS:bus_reset\" interrupt -1 -1 23
+set_location "\USBFS:dp_int\" interrupt -1 -1 12
+set_location "\USBFS:ep_0\" interrupt -1 -1 24
+set_location "\USBFS:ep_1\" interrupt -1 -1 0
+set_location "\USBFS:ep_2\" interrupt -1 -1 1
+set_location "\USBFS:ord_int\" interrupt -1 -1 25
+set_location "\USBFS:sof_int\" interrupt -1 -1 21

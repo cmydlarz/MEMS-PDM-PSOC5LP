@@ -1,0 +1,104 @@
+--------------- Rebuild Started: 08/26/2015 18:49:46 Project: KitProg_Bootloader, Configuration: ARM GCC 4.4.1 Debug ---------------
+Deleting file ".\ARM_GCC_441\Debug\main.o"
+Deleting file ".\ARM_GCC_441\Debug\Cm3Start.o"
+Deleting file ".\ARM_GCC_441\Debug\core_cm3.o"
+Deleting file ".\ARM_GCC_441\Debug\CyBootAsmGnu.o"
+Deleting file ".\ARM_GCC_441\Debug\CyDmac.o"
+Deleting file ".\ARM_GCC_441\Debug\CyFlash.o"
+Deleting file ".\ARM_GCC_441\Debug\CyLib.o"
+Deleting file ".\ARM_GCC_441\Debug\cyPm.o"
+Deleting file ".\ARM_GCC_441\Debug\CySpc.o"
+Deleting file ".\ARM_GCC_441\Debug\cyutils.o"
+Deleting file ".\ARM_GCC_441\Debug\Pin_Status_LED.o"
+Deleting file ".\ARM_GCC_441\Debug\Pin_PSoC4A_XRES.o"
+Deleting file ".\ARM_GCC_441\Debug\Clock_LED_1.o"
+Deleting file ".\ARM_GCC_441\Debug\Bootloader.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_audio.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_boot.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_cdc.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_cls.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_descr.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_drv.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_episr.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_hid.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_pm.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_std.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_vnd.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_midi.o"
+Deleting file ".\ARM_GCC_441\Debug\PWM.o"
+Deleting file ".\ARM_GCC_441\Debug\PWM_PM.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_Dm.o"
+Deleting file ".\ARM_GCC_441\Debug\USBFS_Dp.o"
+Deleting file ".\ARM_GCC_441\Debug\cyfitter_cfg.o"
+Deleting file ".\ARM_GCC_441\Debug\KitProg_Bootloader.hex"
+Deleting file ".\ARM_GCC_441\Debug\KitProg_Bootloader.elf"
+Deleting file ".\ARM_GCC_441\Debug\KitProg_Bootloader.map"
+Deleting file ".\KitProg_Bootloader.cycdx"
+Deleting file ".\KitProg_Bootloader.svd"
+Deleting file ".\KitProg_Bootloader.rpt"
+Deleting file ".\KitProg_Bootloader_timing.html"
+Deleting file ".\ARM_GCC_441\Debug\.deps\C_FILE.P"
+Deleting file ".\ARM_GCC_441\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\ARM_GCC_441\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe "-.appdatapath" "C:\Documents and Settings\Administrator\Local Settings\Application Data\Cypress Semiconductor\PSoC Creator\2.2" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cyprj" "-d" "CY8C5666LTI-LP005" "-s" "\\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\Generated_Source\PSoC5" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+Elaborating Design...
+ADD: pft.M0055: warning: Flash Security Warning:  One or more rows of flash have been configured to be read protected; however, debugging has been enabled in the System DWR Editor. This means that the read protected flash rows can still be read via SWD or JTAG. To protect these rows of flash, disable debugging in the System DWR Editor.
+ * \\psf\Home\Desktop\KitProg version 2_03\KitProg\KitProg_Bootloader.cydsn\KitProg_Bootloader.cydwr (Enable Device Protection)
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Bitstream Generation ...
+Static timing analysis ...
+API Generation ...
+Dependency Generation ...
+Clean Temporary Files ...
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\main.lst -ffunction-sections -c .\main.c -o .\ARM_GCC_441\Debug\main.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\Cm3Start.lst -ffunction-sections -c .\Generated_Source\PSoC5\Cm3Start.c -o .\ARM_GCC_441\Debug\Cm3Start.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\core_cm3.lst -ffunction-sections -c .\Generated_Source\PSoC5\core_cm3.c -o .\ARM_GCC_441\Debug\core_cm3.o
+arm-none-eabi-as.exe -I. -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -g -alh=.\ARM_GCC_441\Debug/CyBootAsmGnu.lst -o .\ARM_GCC_441\Debug\CyBootAsmGnu.o .\Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\CyDmac.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyDmac.c -o .\ARM_GCC_441\Debug\CyDmac.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\CyFlash.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyFlash.c -o .\ARM_GCC_441\Debug\CyFlash.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\CyLib.lst -ffunction-sections -c .\Generated_Source\PSoC5\CyLib.c -o .\ARM_GCC_441\Debug\CyLib.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\cyPm.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyPm.c -o .\ARM_GCC_441\Debug\cyPm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\CySpc.lst -ffunction-sections -c .\Generated_Source\PSoC5\CySpc.c -o .\ARM_GCC_441\Debug\CySpc.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\cyutils.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyutils.c -o .\ARM_GCC_441\Debug\cyutils.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\Pin_Status_LED.lst -ffunction-sections -c .\Generated_Source\PSoC5\Pin_Status_LED.c -o .\ARM_GCC_441\Debug\Pin_Status_LED.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\Pin_PSoC4A_XRES.lst -ffunction-sections -c .\Generated_Source\PSoC5\Pin_PSoC4A_XRES.c -o .\ARM_GCC_441\Debug\Pin_PSoC4A_XRES.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\Clock_LED_1.lst -ffunction-sections -c .\Generated_Source\PSoC5\Clock_LED_1.c -o .\ARM_GCC_441\Debug\Clock_LED_1.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\Bootloader.lst -ffunction-sections -c .\Generated_Source\PSoC5\Bootloader.c -o .\ARM_GCC_441\Debug\Bootloader.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS.c -o .\ARM_GCC_441\Debug\USBFS.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_audio.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_audio.c -o .\ARM_GCC_441\Debug\USBFS_audio.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_boot.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_boot.c -o .\ARM_GCC_441\Debug\USBFS_boot.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_cdc.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_cdc.c -o .\ARM_GCC_441\Debug\USBFS_cdc.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_cls.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_cls.c -o .\ARM_GCC_441\Debug\USBFS_cls.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_descr.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_descr.c -o .\ARM_GCC_441\Debug\USBFS_descr.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_drv.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_drv.c -o .\ARM_GCC_441\Debug\USBFS_drv.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_episr.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_episr.c -o .\ARM_GCC_441\Debug\USBFS_episr.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_hid.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_hid.c -o .\ARM_GCC_441\Debug\USBFS_hid.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_pm.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_pm.c -o .\ARM_GCC_441\Debug\USBFS_pm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_std.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_std.c -o .\ARM_GCC_441\Debug\USBFS_std.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_vnd.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_vnd.c -o .\ARM_GCC_441\Debug\USBFS_vnd.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_midi.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_midi.c -o .\ARM_GCC_441\Debug\USBFS_midi.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\PWM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PWM.c -o .\ARM_GCC_441\Debug\PWM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\PWM_PM.lst -ffunction-sections -c .\Generated_Source\PSoC5\PWM_PM.c -o .\ARM_GCC_441\Debug\PWM_PM.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_Dm.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_Dm.c -o .\ARM_GCC_441\Debug\USBFS_Dm.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\USBFS_Dp.lst -ffunction-sections -c .\Generated_Source\PSoC5\USBFS_Dp.c -o .\ARM_GCC_441\Debug\USBFS_Dp.o
+arm-none-eabi-gcc.exe -I. -Wno-main -I./Generated_Source/PSoC5 -mcpu=cortex-m3 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\ARM_GCC_441\Debug\cyfitter_cfg.lst -ffunction-sections -c .\Generated_Source\PSoC5\cyfitter_cfg.c -o .\ARM_GCC_441\Debug\cyfitter_cfg.o
+arm-none-eabi-ar.exe -rs .\ARM_GCC_441\Debug\KitProg_Bootloader.a .\ARM_GCC_441\Debug\core_cm3.o .\ARM_GCC_441\Debug\CyBootAsmGnu.o .\ARM_GCC_441\Debug\CyDmac.o .\ARM_GCC_441\Debug\CyFlash.o .\ARM_GCC_441\Debug\CyLib.o .\ARM_GCC_441\Debug\cyPm.o .\ARM_GCC_441\Debug\CySpc.o .\ARM_GCC_441\Debug\cyutils.o .\ARM_GCC_441\Debug\Pin_Status_LED.o .\ARM_GCC_441\Debug\Pin_PSoC4A_XRES.o .\ARM_GCC_441\Debug\Clock_LED_1.o .\ARM_GCC_441\Debug\Bootloader.o .\ARM_GCC_441\Debug\USBFS.o .\ARM_GCC_441\Debug\USBFS_audio.o .\ARM_GCC_441\Debug\USBFS_boot.o .\ARM_GCC_441\Debug\USBFS_cdc.o .\ARM_GCC_441\Debug\USBFS_cls.o .\ARM_GCC_441\Debug\USBFS_descr.o .\ARM_GCC_441\Debug\USBFS_drv.o .\ARM_GCC_441\Debug\USBFS_episr.o .\ARM_GCC_441\Debug\USBFS_hid.o .\ARM_GCC_441\Debug\USBFS_pm.o .\ARM_GCC_441\Debug\USBFS_std.o .\ARM_GCC_441\Debug\USBFS_vnd.o .\ARM_GCC_441\Debug\USBFS_midi.o .\ARM_GCC_441\Debug\PWM.o .\ARM_GCC_441\Debug\PWM_PM.o .\ARM_GCC_441\Debug\USBFS_Dm.o .\ARM_GCC_441\Debug\USBFS_Dp.o .\ARM_GCC_441\Debug\cyfitter_cfg.o
+arm-none-eabi-ar.exe: creating .\ARM_GCC_441\Debug\KitProg_Bootloader.a
+arm-none-eabi-gcc.exe -mthumb -march=armv7-m -mfix-cortex-m3-ldrd -T .\Generated_Source\PSoC5\cm3gcc.ld -g -Wl,-Map,.\ARM_GCC_441\Debug\KitProg_Bootloader.map -Wl,--gc-sections -Wl,--start-group -o .\ARM_GCC_441\Debug\KitProg_Bootloader.elf .\ARM_GCC_441\Debug\main.o .\ARM_GCC_441\Debug\Cm3Start.o .\ARM_GCC_441\Debug\KitProg_Bootloader.a "C:\Program Files\Cypress\PSoC Creator\2.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_441\Debug\CyComponentLibrary.a" -Wl,--end-group
+arm-none-eabi-objcopy.exe -O ihex .\ARM_GCC_441\Debug\KitProg_Bootloader.elf .\ARM_GCC_441\Debug\KitProg_Bootloader.ihx
+cysymboladdressfinder.exe -f .\ARM_GCC_441\Debug\KitProg_Bootloader.elf -s Bootloader_Checksum -p .\ARM_GCC_441\Debug\cksmaddress.txt -l 0
+cysymboladdressfinder.exe -f .\ARM_GCC_441\Debug\KitProg_Bootloader.elf -s Bootloader_SizeBytes -p .\ARM_GCC_441\Debug\sizeaddress.txt -l 0
+cyhextool -o .\ARM_GCC_441\Debug\KitProg_Bootloader.hex -f .\ARM_GCC_441\Debug\KitProg_Bootloader.ihx -prot .\Generated_Source\PSoC5\protect.hex -id 2E105069 -a EEPROM=90200000:800,PROGRAM=00000000:10000,CONFIG=80000000:2000,PROTECT=90400000:40 -meta 0001 -cunv 00004007 -wonv BC90ACAF -ecc OFF -blver 0200010001 -blcks .\ARM_GCC_441\Debug\cksmaddress.txt -blsize .\ARM_GCC_441\Debug\sizeaddress.txt -flsLine 256 -endian l
+Flash used: 19664 of 65536 bytes (30.0 %).
+SRAM used: 956 of 16384 bytes (5.8 %).
+--------------- Rebuild Succeeded: 08/26/2015 18:51:42 ---------------

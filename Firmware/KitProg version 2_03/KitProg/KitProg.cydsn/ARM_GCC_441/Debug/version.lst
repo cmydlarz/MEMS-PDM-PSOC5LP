@@ -1,0 +1,1567 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"version.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 BA000000 		.text
+  20      02005600 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	kitProgHWVersion
+  24              		.bss
+  25              		.type	kitProgHWVersion, %object
+  26              		.size	kitProgHWVersion, 1
+  27              	kitProgHWVersion:
+  28 0000 00       		.space	1
+  29              		.global	version
+  30              		.data
+  31              		.align	2
+  32              		.type	version, %object
+  33              		.size	version, 18
+  34              	version:
+  35 0000 43797072 		.ascii	"Cypress-TTBridge"
+  35      6573732D 
+  35      54544272 
+  35      69646765 
+  36 0010 02       		.byte	2
+  37 0011 03       		.byte	3
+  38 0012 0000     		.section	.text.CheckHWVerPerPin,"ax",%progbits
+  39              		.align	2
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	CheckHWVerPerPin, %function
+  43              	CheckHWVerPerPin:
+  44              	.LFB29:
+  45              		.file 1 ".\\version.c"
+   1:.\version.c   **** /*****************************************************************************
+   2:.\version.c   **** * File Name: version.c
+   3:.\version.c   **** * Version 2.03
+   4:.\version.c   **** *
+   5:.\version.c   **** * Description:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 2
+
+
+   6:.\version.c   **** *  This file provides the source code to handle version information.
+   7:.\version.c   **** *
+   8:.\version.c   **** * Owner:
+   9:.\version.c   **** *	Ranjith M, Applications Engineer (rnjt@cypress.com)
+  10:.\version.c   **** *
+  11:.\version.c   **** * Related Document:
+  12:.\version.c   **** * 	001-85925 - CY8CKIT-042 PSoC 4 Pioneer Kit IROS
+  13:.\version.c   **** *
+  14:.\version.c   **** * Hardware Dependency:
+  15:.\version.c   **** * 	CY8CKIT-042 (KitProg) 
+  16:.\version.c   **** *
+  17:.\version.c   **** * Code Tested With:
+  18:.\version.c   **** * 	Creator 2.2
+  19:.\version.c   **** *	GCC1 4.4.1
+  20:.\version.c   **** *	CY8CKIT-042 Rev 1
+  21:.\version.c   **** *
+  22:.\version.c   **** ******************************************************************************
+  23:.\version.c   **** * Copyright (2013), Cypress Semiconductor Corporation.
+  24:.\version.c   **** ******************************************************************************
+  25:.\version.c   **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  26:.\version.c   **** * protected by and subject to worldwide patent protection (United States and
+  27:.\version.c   **** * foreign), United States copyright laws and international treaty provisions.
+  28:.\version.c   **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  29:.\version.c   **** * license to copy, use, modify, create derivative works of, and compile the
+  30:.\version.c   **** * Cypress Source Code and derivative works for the sole purpose of creating
+  31:.\version.c   **** * custom software in support of licensee product to be used only in conjunction
+  32:.\version.c   **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  33:.\version.c   **** * Any reproduction, modification, translation, compilation, or representation of
+  34:.\version.c   **** * this software except as specified above is prohibited without the express
+  35:.\version.c   **** * written permission of Cypress.
+  36:.\version.c   **** *
+  37:.\version.c   **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  38:.\version.c   **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  39:.\version.c   **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  40:.\version.c   **** * Cypress reserves the right to make changes without further notice to the
+  41:.\version.c   **** * materials described herein. Cypress does not assume any liability arising out
+  42:.\version.c   **** * of the application or use of any product or circuit described herein. Cypress
+  43:.\version.c   **** * does not authorize its products for use as critical components in life-support
+  44:.\version.c   **** * systems where a malfunction or failure may reasonably be expected to result in
+  45:.\version.c   **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  46:.\version.c   **** * support systems application implies that the manufacturer assumes all risk of
+  47:.\version.c   **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  48:.\version.c   **** * limited by and subject to the applicable Cypress software license agreement.
+  49:.\version.c   **** *****************************************************************************/
+  50:.\version.c   **** 
+  51:.\version.c   **** #include "kitprog.h"
+  52:.\version.c   **** 
+  53:.\version.c   **** /*****************************************************************************
+  54:.\version.c   **** * Local Function Prototypes
+  55:.\version.c   **** *****************************************************************************/
+  56:.\version.c   **** static uint8 CheckHWVerPerPin(uint8 bValuePullup, uint8 bValuePullDwn);
+  57:.\version.c   **** 
+  58:.\version.c   **** /*****************************************************************************
+  59:.\version.c   **** * Global Variable Declarations
+  60:.\version.c   **** *****************************************************************************/
+  61:.\version.c   **** uint8 kitProgHWVersion = 0;
+  62:.\version.c   **** /*****************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 3
+
+
+  63:.\version.c   **** * Local Global Variable Declarations
+  64:.\version.c   **** *****************************************************************************/
+  65:.\version.c   **** 
+  66:.\version.c   **** volatile struct{
+  67:.\version.c   ****     uint8 signature[16]; 
+  68:.\version.c   ****     uint8 verMajor;
+  69:.\version.c   ****     uint8 verMinor;
+  70:.\version.c   **** }version = 
+  71:.\version.c   **** {
+  72:.\version.c   **** 	/* Signature retained due to compatibility requirements with the programmer. */
+  73:.\version.c   ****     "Cypress-TTBridge", 
+  74:.\version.c   ****     VER_MAJOR, 
+  75:.\version.c   ****     VER_MINOR,
+  76:.\version.c   **** };
+  77:.\version.c   **** 
+  78:.\version.c   **** 
+  79:.\version.c   **** /*******************************************************************************
+  80:.\version.c   **** * The Hardware verison pins are either connected to the ground or left floating.
+  81:.\version.c   **** * There are 6 hardware revision pins, P2[6:1]. A floating pin is equivalent to a 0
+  82:.\version.c   **** * and a grounded pin equivalent to 1 in version calculcation. So, if all pins 
+  83:.\version.c   **** * are floating, hardware revision is 000000b (=0x00). The number of versions can
+  84:.\version.c   **** * thus go upto 111111b (=0x3F).
+  85:.\version.c   **** * ------------------------------------------------------------------------------
+  86:.\version.c   **** 
+  87:.\version.c   **** ********************************************************************************/
+  88:.\version.c   **** 
+  89:.\version.c   **** /*******************************************************************************
+  90:.\version.c   **** * Function Name: CheckHWVerPerPin()
+  91:.\version.c   **** ********************************************************************************
+  92:.\version.c   **** * Summary:
+  93:.\version.c   **** * Checks whether the pins are floating or grounded.
+  94:.\version.c   **** *
+  95:.\version.c   **** * Parameters:
+  96:.\version.c   **** *  void
+  97:.\version.c   **** *
+  98:.\version.c   **** * Return:
+  99:.\version.c   **** *  void
+ 100:.\version.c   **** *
+ 101:.\version.c   **** *******************************************************************************/
+ 102:.\version.c   **** uint8 CheckHWVerPerPin(uint8 bValuePullup, uint8 bValuePullDwn)
+ 103:.\version.c   **** {
+  46              		.loc 1 103 0
+  47              		.cfi_startproc
+  48              		@ args = 0, pretend = 0, frame = 16
+  49              		@ frame_needed = 1, uses_anonymous_args = 0
+  50              		@ link register save eliminated.
+  51 0000 80B4     		push	{r7}
+  52              	.LCFI0:
+  53              		.cfi_def_cfa_offset 4
+  54 0002 85B0     		sub	sp, sp, #20
+  55              	.LCFI1:
+  56              		.cfi_def_cfa_offset 24
+  57 0004 00AF     		add	r7, sp, #0
+  58              		.cfi_offset 7, -4
+  59              	.LCFI2:
+  60              		.cfi_def_cfa_register 7
+  61 0006 0246     		mov	r2, r0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 4
+
+
+  62 0008 0B46     		mov	r3, r1
+  63 000a FA71     		strb	r2, [r7, #7]
+  64 000c BB71     		strb	r3, [r7, #6]
+ 104:.\version.c   ****     uint8 bHwVer = NOT_CONNECTED;
+  65              		.loc 1 104 0
+  66 000e 4FF00103 		mov	r3, #1
+  67 0012 FB73     		strb	r3, [r7, #15]
+ 105:.\version.c   ****     
+ 106:.\version.c   ****     if(bValuePullup != 0 && bValuePullDwn == 0)
+  68              		.loc 1 106 0
+  69 0014 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  70 0016 002B     		cmp	r3, #0
+  71 0018 06D0     		beq	.L2
+  72 001a BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+  73 001c 002B     		cmp	r3, #0
+  74 001e 03D1     		bne	.L2
+ 107:.\version.c   ****     {
+ 108:.\version.c   ****         /* Follows pull up/down, so it is floating */
+ 109:.\version.c   ****         bHwVer = NOT_CONNECTED;
+  75              		.loc 1 109 0
+  76 0020 4FF00103 		mov	r3, #1
+  77 0024 FB73     		strb	r3, [r7, #15]
+  78              		.loc 1 106 0
+  79 0026 08E0     		b	.L3
+  80              	.L2:
+ 110:.\version.c   ****     }
+ 111:.\version.c   ****     else if(bValuePullup == 0 && bValuePullDwn == 0) 
+  81              		.loc 1 111 0
+  82 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  83 002a 002B     		cmp	r3, #0
+  84 002c 05D1     		bne	.L3
+  85 002e BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+  86 0030 002B     		cmp	r3, #0
+  87 0032 02D1     		bne	.L3
+ 112:.\version.c   ****     {
+ 113:.\version.c   ****         /* Always LOW, so it is GND */
+ 114:.\version.c   ****         bHwVer = GROUND;
+  88              		.loc 1 114 0
+  89 0034 4FF00203 		mov	r3, #2
+  90 0038 FB73     		strb	r3, [r7, #15]
+  91              	.L3:
+ 115:.\version.c   ****     }
+ 116:.\version.c   ****     else
+ 117:.\version.c   ****     {
+ 118:.\version.c   ****         /* Shall not be here because these lines are never pulled up in the hardware */
+ 119:.\version.c   ****     }
+ 120:.\version.c   ****     
+ 121:.\version.c   ****     return bHwVer;
+  92              		.loc 1 121 0
+  93 003a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 122:.\version.c   **** }
+  94              		.loc 1 122 0
+  95 003c 1846     		mov	r0, r3
+  96 003e 07F11407 		add	r7, r7, #20
+  97 0042 BD46     		mov	sp, r7
+  98 0044 80BC     		pop	{r7}
+  99 0046 7047     		bx	lr
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 5
+
+
+ 100              		.cfi_endproc
+ 101              	.LFE29:
+ 102              		.size	CheckHWVerPerPin, .-CheckHWVerPerPin
+ 103              		.section	.text.GetHWVersion,"ax",%progbits
+ 104              		.align	2
+ 105              		.global	GetHWVersion
+ 106              		.thumb
+ 107              		.thumb_func
+ 108              		.type	GetHWVersion, %function
+ 109              	GetHWVersion:
+ 110              	.LFB30:
+ 123:.\version.c   **** 
+ 124:.\version.c   **** /*******************************************************************************
+ 125:.\version.c   **** * Function Name: GetHWVersion()
+ 126:.\version.c   **** ********************************************************************************
+ 127:.\version.c   **** * Summary:
+ 128:.\version.c   **** * Calculates the hardware version of the KitProg board.
+ 129:.\version.c   **** *
+ 130:.\version.c   **** * Parameters:
+ 131:.\version.c   **** *  void
+ 132:.\version.c   **** *
+ 133:.\version.c   **** * Return:
+ 134:.\version.c   **** *  void
+ 135:.\version.c   **** *
+ 136:.\version.c   **** *******************************************************************************/
+ 137:.\version.c   **** void GetHWVersion(void)
+ 138:.\version.c   **** {
+ 111              		.loc 1 138 0
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 40
+ 114              		@ frame_needed = 1, uses_anonymous_args = 0
+ 115 0000 80B5     		push	{r7, lr}
+ 116              	.LCFI3:
+ 117              		.cfi_def_cfa_offset 8
+ 118 0002 8AB0     		sub	sp, sp, #40
+ 119              	.LCFI4:
+ 120              		.cfi_def_cfa_offset 48
+ 121 0004 00AF     		add	r7, sp, #0
+ 122              		.cfi_offset 14, -4
+ 123              		.cfi_offset 7, -8
+ 124              	.LCFI5:
+ 125              		.cfi_def_cfa_register 7
+ 139:.\version.c   ****     uint8 bValuePullUp[6];
+ 140:.\version.c   ****     uint8 bValuePullDwn[6];
+ 141:.\version.c   **** 	uint8 sigCheck[16];
+ 142:.\version.c   **** 	uint8 verCheck;
+ 143:.\version.c   **** 	uint8 index = 0;
+ 126              		.loc 1 143 0
+ 127 0006 4FF00003 		mov	r3, #0
+ 128 000a 87F82630 		strb	r3, [r7, #38]
+ 144:.\version.c   **** 	uint8 ver = 0;
+ 129              		.loc 1 144 0
+ 130 000e 4FF00003 		mov	r3, #0
+ 131 0012 87F82730 		strb	r3, [r7, #39]
+ 145:.\version.c   ****     
+ 146:.\version.c   **** 	/* To avoid the signature value being optimized out by the compiler. */
+ 147:.\version.c   **** 	sigCheck[0] = version.signature[0];
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 6
+
+
+ 132              		.loc 1 147 0
+ 133 0016 40F20003 		movw	r3, #:lower16:version
+ 134 001a C0F20003 		movt	r3, #:upper16:version
+ 135 001e 1B78     		ldrb	r3, [r3, #0]
+ 136 0020 DBB2     		uxtb	r3, r3
+ 137 0022 3B71     		strb	r3, [r7, #4]
+ 148:.\version.c   **** 	verCheck = version.verMajor + version.verMinor;
+ 138              		.loc 1 148 0
+ 139 0024 40F20003 		movw	r3, #:lower16:version
+ 140 0028 C0F20003 		movt	r3, #:upper16:version
+ 141 002c 1B7C     		ldrb	r3, [r3, #16]
+ 142 002e DAB2     		uxtb	r2, r3
+ 143 0030 40F20003 		movw	r3, #:lower16:version
+ 144 0034 C0F20003 		movt	r3, #:upper16:version
+ 145 0038 5B7C     		ldrb	r3, [r3, #17]
+ 146 003a DBB2     		uxtb	r3, r3
+ 147 003c 1344     		add	r3, r2, r3
+ 148 003e 87F82530 		strb	r3, [r7, #37]
+ 149:.\version.c   **** 
+ 150:.\version.c   **** 	
+ 151:.\version.c   ****     /* Drive pins resistive pull up and down */
+ 152:.\version.c   ****     CyPins_SetPinDriveMode(Pin_HWVersionA_0, Pin_HWVersionA_DM_RES_UPDWN);
+ 149              		.loc 1 152 0
+ 150 0042 45F20403 		movw	r3, #:lower16:1073762308
+ 151 0046 C4F20003 		movt	r3, #:upper16:1073762308
+ 152 004a 45F20402 		movw	r2, #:lower16:1073762308
+ 153 004e C4F20002 		movt	r2, #:upper16:1073762308
+ 154 0052 1278     		ldrb	r2, [r2, #0]
+ 155 0054 D2B2     		uxtb	r2, r2
+ 156 0056 42F00E02 		orr	r2, r2, #14
+ 157 005a D2B2     		uxtb	r2, r2
+ 158 005c D2B2     		uxtb	r2, r2
+ 159 005e 1A70     		strb	r2, [r3, #0]
+ 153:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionB_0, Pin_HWVersionB_DM_RES_UPDWN);
+ 160              		.loc 1 153 0
+ 161 0060 45F20503 		movw	r3, #:lower16:1073762309
+ 162 0064 C4F20003 		movt	r3, #:upper16:1073762309
+ 163 0068 45F20502 		movw	r2, #:lower16:1073762309
+ 164 006c C4F20002 		movt	r2, #:upper16:1073762309
+ 165 0070 1278     		ldrb	r2, [r2, #0]
+ 166 0072 D2B2     		uxtb	r2, r2
+ 167 0074 42F00E02 		orr	r2, r2, #14
+ 168 0078 D2B2     		uxtb	r2, r2
+ 169 007a D2B2     		uxtb	r2, r2
+ 170 007c 1A70     		strb	r2, [r3, #0]
+ 154:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionC_0, Pin_HWVersionC_DM_RES_UPDWN);
+ 171              		.loc 1 154 0
+ 172 007e 45F20603 		movw	r3, #:lower16:1073762310
+ 173 0082 C4F20003 		movt	r3, #:upper16:1073762310
+ 174 0086 45F20602 		movw	r2, #:lower16:1073762310
+ 175 008a C4F20002 		movt	r2, #:upper16:1073762310
+ 176 008e 1278     		ldrb	r2, [r2, #0]
+ 177 0090 D2B2     		uxtb	r2, r2
+ 178 0092 42F00E02 		orr	r2, r2, #14
+ 179 0096 D2B2     		uxtb	r2, r2
+ 180 0098 D2B2     		uxtb	r2, r2
+ 181 009a 1A70     		strb	r2, [r3, #0]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 7
+
+
+ 155:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionD_0, Pin_HWVersionD_DM_RES_UPDWN);
+ 182              		.loc 1 155 0
+ 183 009c 45F20703 		movw	r3, #:lower16:1073762311
+ 184 00a0 C4F20003 		movt	r3, #:upper16:1073762311
+ 185 00a4 45F20702 		movw	r2, #:lower16:1073762311
+ 186 00a8 C4F20002 		movt	r2, #:upper16:1073762311
+ 187 00ac 1278     		ldrb	r2, [r2, #0]
+ 188 00ae D2B2     		uxtb	r2, r2
+ 189 00b0 42F00E02 		orr	r2, r2, #14
+ 190 00b4 D2B2     		uxtb	r2, r2
+ 191 00b6 D2B2     		uxtb	r2, r2
+ 192 00b8 1A70     		strb	r2, [r3, #0]
+ 156:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionE_0, Pin_HWVersionE_DM_RES_UPDWN);
+ 193              		.loc 1 156 0
+ 194 00ba 45F21A03 		movw	r3, #:lower16:1073762330
+ 195 00be C4F20003 		movt	r3, #:upper16:1073762330
+ 196 00c2 45F21A02 		movw	r2, #:lower16:1073762330
+ 197 00c6 C4F20002 		movt	r2, #:upper16:1073762330
+ 198 00ca 1278     		ldrb	r2, [r2, #0]
+ 199 00cc D2B2     		uxtb	r2, r2
+ 200 00ce 42F00E02 		orr	r2, r2, #14
+ 201 00d2 D2B2     		uxtb	r2, r2
+ 202 00d4 D2B2     		uxtb	r2, r2
+ 203 00d6 1A70     		strb	r2, [r3, #0]
+ 157:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionF_0, Pin_HWVersionF_DM_RES_UPDWN);
+ 204              		.loc 1 157 0
+ 205 00d8 45F21B03 		movw	r3, #:lower16:1073762331
+ 206 00dc C4F20003 		movt	r3, #:upper16:1073762331
+ 207 00e0 45F21B02 		movw	r2, #:lower16:1073762331
+ 208 00e4 C4F20002 		movt	r2, #:upper16:1073762331
+ 209 00e8 1278     		ldrb	r2, [r2, #0]
+ 210 00ea D2B2     		uxtb	r2, r2
+ 211 00ec 42F00E02 		orr	r2, r2, #14
+ 212 00f0 D2B2     		uxtb	r2, r2
+ 213 00f2 D2B2     		uxtb	r2, r2
+ 214 00f4 1A70     		strb	r2, [r3, #0]
+ 158:.\version.c   **** 
+ 159:.\version.c   **** 	/* Set and Clear the pin to check whether the pins are floating or grounded. */
+ 160:.\version.c   **** 	/* Set the pins */
+ 161:.\version.c   ****     CyPins_SetPin(Pin_HWVersionA_0);
+ 215              		.loc 1 161 0
+ 216 00f6 45F20403 		movw	r3, #:lower16:1073762308
+ 217 00fa C4F20003 		movt	r3, #:upper16:1073762308
+ 218 00fe 45F20402 		movw	r2, #:lower16:1073762308
+ 219 0102 C4F20002 		movt	r2, #:upper16:1073762308
+ 220 0106 1278     		ldrb	r2, [r2, #0]
+ 221 0108 D2B2     		uxtb	r2, r2
+ 222 010a 42F00102 		orr	r2, r2, #1
+ 223 010e D2B2     		uxtb	r2, r2
+ 224 0110 1A70     		strb	r2, [r3, #0]
+ 162:.\version.c   **** 	CyPins_SetPin(Pin_HWVersionB_0);
+ 225              		.loc 1 162 0
+ 226 0112 45F20503 		movw	r3, #:lower16:1073762309
+ 227 0116 C4F20003 		movt	r3, #:upper16:1073762309
+ 228 011a 45F20502 		movw	r2, #:lower16:1073762309
+ 229 011e C4F20002 		movt	r2, #:upper16:1073762309
+ 230 0122 1278     		ldrb	r2, [r2, #0]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 8
+
+
+ 231 0124 D2B2     		uxtb	r2, r2
+ 232 0126 42F00102 		orr	r2, r2, #1
+ 233 012a D2B2     		uxtb	r2, r2
+ 234 012c 1A70     		strb	r2, [r3, #0]
+ 163:.\version.c   **** 	CyPins_SetPin(Pin_HWVersionC_0);
+ 235              		.loc 1 163 0
+ 236 012e 45F20603 		movw	r3, #:lower16:1073762310
+ 237 0132 C4F20003 		movt	r3, #:upper16:1073762310
+ 238 0136 45F20602 		movw	r2, #:lower16:1073762310
+ 239 013a C4F20002 		movt	r2, #:upper16:1073762310
+ 240 013e 1278     		ldrb	r2, [r2, #0]
+ 241 0140 D2B2     		uxtb	r2, r2
+ 242 0142 42F00102 		orr	r2, r2, #1
+ 243 0146 D2B2     		uxtb	r2, r2
+ 244 0148 1A70     		strb	r2, [r3, #0]
+ 164:.\version.c   **** 	CyPins_SetPin(Pin_HWVersionD_0);
+ 245              		.loc 1 164 0
+ 246 014a 45F20703 		movw	r3, #:lower16:1073762311
+ 247 014e C4F20003 		movt	r3, #:upper16:1073762311
+ 248 0152 45F20702 		movw	r2, #:lower16:1073762311
+ 249 0156 C4F20002 		movt	r2, #:upper16:1073762311
+ 250 015a 1278     		ldrb	r2, [r2, #0]
+ 251 015c D2B2     		uxtb	r2, r2
+ 252 015e 42F00102 		orr	r2, r2, #1
+ 253 0162 D2B2     		uxtb	r2, r2
+ 254 0164 1A70     		strb	r2, [r3, #0]
+ 165:.\version.c   **** 	CyPins_SetPin(Pin_HWVersionE_0);
+ 255              		.loc 1 165 0
+ 256 0166 45F21A03 		movw	r3, #:lower16:1073762330
+ 257 016a C4F20003 		movt	r3, #:upper16:1073762330
+ 258 016e 45F21A02 		movw	r2, #:lower16:1073762330
+ 259 0172 C4F20002 		movt	r2, #:upper16:1073762330
+ 260 0176 1278     		ldrb	r2, [r2, #0]
+ 261 0178 D2B2     		uxtb	r2, r2
+ 262 017a 42F00102 		orr	r2, r2, #1
+ 263 017e D2B2     		uxtb	r2, r2
+ 264 0180 1A70     		strb	r2, [r3, #0]
+ 166:.\version.c   **** 	CyPins_SetPin(Pin_HWVersionF_0);
+ 265              		.loc 1 166 0
+ 266 0182 45F21B03 		movw	r3, #:lower16:1073762331
+ 267 0186 C4F20003 		movt	r3, #:upper16:1073762331
+ 268 018a 45F21B02 		movw	r2, #:lower16:1073762331
+ 269 018e C4F20002 		movt	r2, #:upper16:1073762331
+ 270 0192 1278     		ldrb	r2, [r2, #0]
+ 271 0194 D2B2     		uxtb	r2, r2
+ 272 0196 42F00102 		orr	r2, r2, #1
+ 273 019a D2B2     		uxtb	r2, r2
+ 274 019c 1A70     		strb	r2, [r3, #0]
+ 167:.\version.c   **** 	
+ 168:.\version.c   ****     CyDelay(10);
+ 275              		.loc 1 168 0
+ 276 019e 4FF00A00 		mov	r0, #10
+ 277 01a2 FFF7FEFF 		bl	CyDelay
+ 169:.\version.c   **** 	/* Read back the pins */
+ 170:.\version.c   **** 	bValuePullUp[0] = CyPins_ReadPin(Pin_HWVersionA_0);
+ 278              		.loc 1 170 0
+ 279 01a6 45F20403 		movw	r3, #:lower16:1073762308
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 9
+
+
+ 280 01aa C4F20003 		movt	r3, #:upper16:1073762308
+ 281 01ae 1B78     		ldrb	r3, [r3, #0]
+ 282 01b0 DBB2     		uxtb	r3, r3
+ 283 01b2 03F01003 		and	r3, r3, #16
+ 284 01b6 3B77     		strb	r3, [r7, #28]
+ 171:.\version.c   **** 	bValuePullUp[1] = CyPins_ReadPin(Pin_HWVersionB_0);
+ 285              		.loc 1 171 0
+ 286 01b8 45F20503 		movw	r3, #:lower16:1073762309
+ 287 01bc C4F20003 		movt	r3, #:upper16:1073762309
+ 288 01c0 1B78     		ldrb	r3, [r3, #0]
+ 289 01c2 DBB2     		uxtb	r3, r3
+ 290 01c4 03F01003 		and	r3, r3, #16
+ 291 01c8 7B77     		strb	r3, [r7, #29]
+ 172:.\version.c   **** 	bValuePullUp[2] = CyPins_ReadPin(Pin_HWVersionC_0);
+ 292              		.loc 1 172 0
+ 293 01ca 45F20603 		movw	r3, #:lower16:1073762310
+ 294 01ce C4F20003 		movt	r3, #:upper16:1073762310
+ 295 01d2 1B78     		ldrb	r3, [r3, #0]
+ 296 01d4 DBB2     		uxtb	r3, r3
+ 297 01d6 03F01003 		and	r3, r3, #16
+ 298 01da BB77     		strb	r3, [r7, #30]
+ 173:.\version.c   **** 	bValuePullUp[3] = CyPins_ReadPin(Pin_HWVersionD_0);
+ 299              		.loc 1 173 0
+ 300 01dc 45F20703 		movw	r3, #:lower16:1073762311
+ 301 01e0 C4F20003 		movt	r3, #:upper16:1073762311
+ 302 01e4 1B78     		ldrb	r3, [r3, #0]
+ 303 01e6 DBB2     		uxtb	r3, r3
+ 304 01e8 03F01003 		and	r3, r3, #16
+ 305 01ec FB77     		strb	r3, [r7, #31]
+ 174:.\version.c   **** 	bValuePullUp[4] = CyPins_ReadPin(Pin_HWVersionE_0);
+ 306              		.loc 1 174 0
+ 307 01ee 45F21A03 		movw	r3, #:lower16:1073762330
+ 308 01f2 C4F20003 		movt	r3, #:upper16:1073762330
+ 309 01f6 1B78     		ldrb	r3, [r3, #0]
+ 310 01f8 DBB2     		uxtb	r3, r3
+ 311 01fa 03F01003 		and	r3, r3, #16
+ 312 01fe 87F82030 		strb	r3, [r7, #32]
+ 175:.\version.c   **** 	bValuePullUp[5] = CyPins_ReadPin(Pin_HWVersionF_0);
+ 313              		.loc 1 175 0
+ 314 0202 45F21B03 		movw	r3, #:lower16:1073762331
+ 315 0206 C4F20003 		movt	r3, #:upper16:1073762331
+ 316 020a 1B78     		ldrb	r3, [r3, #0]
+ 317 020c DBB2     		uxtb	r3, r3
+ 318 020e 03F01003 		and	r3, r3, #16
+ 319 0212 87F82130 		strb	r3, [r7, #33]
+ 176:.\version.c   **** 	
+ 177:.\version.c   **** 	/* Clear the pins */
+ 178:.\version.c   ****     CyPins_ClearPin(Pin_HWVersionA_0);
+ 320              		.loc 1 178 0
+ 321 0216 45F20403 		movw	r3, #:lower16:1073762308
+ 322 021a C4F20003 		movt	r3, #:upper16:1073762308
+ 323 021e 45F20402 		movw	r2, #:lower16:1073762308
+ 324 0222 C4F20002 		movt	r2, #:upper16:1073762308
+ 325 0226 1278     		ldrb	r2, [r2, #0]
+ 326 0228 D2B2     		uxtb	r2, r2
+ 327 022a 02F0FE02 		and	r2, r2, #254
+ 328 022e 1A70     		strb	r2, [r3, #0]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 10
+
+
+ 179:.\version.c   **** 	CyPins_ClearPin(Pin_HWVersionB_0);
+ 329              		.loc 1 179 0
+ 330 0230 45F20503 		movw	r3, #:lower16:1073762309
+ 331 0234 C4F20003 		movt	r3, #:upper16:1073762309
+ 332 0238 45F20502 		movw	r2, #:lower16:1073762309
+ 333 023c C4F20002 		movt	r2, #:upper16:1073762309
+ 334 0240 1278     		ldrb	r2, [r2, #0]
+ 335 0242 D2B2     		uxtb	r2, r2
+ 336 0244 02F0FE02 		and	r2, r2, #254
+ 337 0248 1A70     		strb	r2, [r3, #0]
+ 180:.\version.c   **** 	CyPins_ClearPin(Pin_HWVersionC_0);
+ 338              		.loc 1 180 0
+ 339 024a 45F20603 		movw	r3, #:lower16:1073762310
+ 340 024e C4F20003 		movt	r3, #:upper16:1073762310
+ 341 0252 45F20602 		movw	r2, #:lower16:1073762310
+ 342 0256 C4F20002 		movt	r2, #:upper16:1073762310
+ 343 025a 1278     		ldrb	r2, [r2, #0]
+ 344 025c D2B2     		uxtb	r2, r2
+ 345 025e 02F0FE02 		and	r2, r2, #254
+ 346 0262 1A70     		strb	r2, [r3, #0]
+ 181:.\version.c   **** 	CyPins_ClearPin(Pin_HWVersionD_0);
+ 347              		.loc 1 181 0
+ 348 0264 45F20703 		movw	r3, #:lower16:1073762311
+ 349 0268 C4F20003 		movt	r3, #:upper16:1073762311
+ 350 026c 45F20702 		movw	r2, #:lower16:1073762311
+ 351 0270 C4F20002 		movt	r2, #:upper16:1073762311
+ 352 0274 1278     		ldrb	r2, [r2, #0]
+ 353 0276 D2B2     		uxtb	r2, r2
+ 354 0278 02F0FE02 		and	r2, r2, #254
+ 355 027c 1A70     		strb	r2, [r3, #0]
+ 182:.\version.c   **** 	CyPins_ClearPin(Pin_HWVersionE_0);
+ 356              		.loc 1 182 0
+ 357 027e 45F21A03 		movw	r3, #:lower16:1073762330
+ 358 0282 C4F20003 		movt	r3, #:upper16:1073762330
+ 359 0286 45F21A02 		movw	r2, #:lower16:1073762330
+ 360 028a C4F20002 		movt	r2, #:upper16:1073762330
+ 361 028e 1278     		ldrb	r2, [r2, #0]
+ 362 0290 D2B2     		uxtb	r2, r2
+ 363 0292 02F0FE02 		and	r2, r2, #254
+ 364 0296 1A70     		strb	r2, [r3, #0]
+ 183:.\version.c   **** 	CyPins_ClearPin(Pin_HWVersionF_0);
+ 365              		.loc 1 183 0
+ 366 0298 45F21B03 		movw	r3, #:lower16:1073762331
+ 367 029c C4F20003 		movt	r3, #:upper16:1073762331
+ 368 02a0 45F21B02 		movw	r2, #:lower16:1073762331
+ 369 02a4 C4F20002 		movt	r2, #:upper16:1073762331
+ 370 02a8 1278     		ldrb	r2, [r2, #0]
+ 371 02aa D2B2     		uxtb	r2, r2
+ 372 02ac 02F0FE02 		and	r2, r2, #254
+ 373 02b0 1A70     		strb	r2, [r3, #0]
+ 184:.\version.c   ****     
+ 185:.\version.c   **** 	CyDelay(10);
+ 374              		.loc 1 185 0
+ 375 02b2 4FF00A00 		mov	r0, #10
+ 376 02b6 FFF7FEFF 		bl	CyDelay
+ 186:.\version.c   **** 	/* Read back the pins */
+ 187:.\version.c   **** 	bValuePullDwn[0] = CyPins_ReadPin(Pin_HWVersionA_0);
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 11
+
+
+ 377              		.loc 1 187 0
+ 378 02ba 45F20403 		movw	r3, #:lower16:1073762308
+ 379 02be C4F20003 		movt	r3, #:upper16:1073762308
+ 380 02c2 1B78     		ldrb	r3, [r3, #0]
+ 381 02c4 DBB2     		uxtb	r3, r3
+ 382 02c6 03F01003 		and	r3, r3, #16
+ 383 02ca 3B75     		strb	r3, [r7, #20]
+ 188:.\version.c   **** 	bValuePullDwn[1] = CyPins_ReadPin(Pin_HWVersionB_0);
+ 384              		.loc 1 188 0
+ 385 02cc 45F20503 		movw	r3, #:lower16:1073762309
+ 386 02d0 C4F20003 		movt	r3, #:upper16:1073762309
+ 387 02d4 1B78     		ldrb	r3, [r3, #0]
+ 388 02d6 DBB2     		uxtb	r3, r3
+ 389 02d8 03F01003 		and	r3, r3, #16
+ 390 02dc 7B75     		strb	r3, [r7, #21]
+ 189:.\version.c   **** 	bValuePullDwn[2] = CyPins_ReadPin(Pin_HWVersionC_0);
+ 391              		.loc 1 189 0
+ 392 02de 45F20603 		movw	r3, #:lower16:1073762310
+ 393 02e2 C4F20003 		movt	r3, #:upper16:1073762310
+ 394 02e6 1B78     		ldrb	r3, [r3, #0]
+ 395 02e8 DBB2     		uxtb	r3, r3
+ 396 02ea 03F01003 		and	r3, r3, #16
+ 397 02ee BB75     		strb	r3, [r7, #22]
+ 190:.\version.c   **** 	bValuePullDwn[3] = CyPins_ReadPin(Pin_HWVersionD_0);
+ 398              		.loc 1 190 0
+ 399 02f0 45F20703 		movw	r3, #:lower16:1073762311
+ 400 02f4 C4F20003 		movt	r3, #:upper16:1073762311
+ 401 02f8 1B78     		ldrb	r3, [r3, #0]
+ 402 02fa DBB2     		uxtb	r3, r3
+ 403 02fc 03F01003 		and	r3, r3, #16
+ 404 0300 FB75     		strb	r3, [r7, #23]
+ 191:.\version.c   **** 	bValuePullDwn[4] = CyPins_ReadPin(Pin_HWVersionE_0);
+ 405              		.loc 1 191 0
+ 406 0302 45F21A03 		movw	r3, #:lower16:1073762330
+ 407 0306 C4F20003 		movt	r3, #:upper16:1073762330
+ 408 030a 1B78     		ldrb	r3, [r3, #0]
+ 409 030c DBB2     		uxtb	r3, r3
+ 410 030e 03F01003 		and	r3, r3, #16
+ 411 0312 3B76     		strb	r3, [r7, #24]
+ 192:.\version.c   **** 	bValuePullDwn[5] = CyPins_ReadPin(Pin_HWVersionF_0);
+ 412              		.loc 1 192 0
+ 413 0314 45F21B03 		movw	r3, #:lower16:1073762331
+ 414 0318 C4F20003 		movt	r3, #:upper16:1073762331
+ 415 031c 1B78     		ldrb	r3, [r3, #0]
+ 416 031e DBB2     		uxtb	r3, r3
+ 417 0320 03F01003 		and	r3, r3, #16
+ 418 0324 7B76     		strb	r3, [r7, #25]
+ 193:.\version.c   ****     
+ 194:.\version.c   ****     /* Drive to Hi-Z to save power */
+ 195:.\version.c   ****     CyPins_SetPinDriveMode(Pin_HWVersionA_0, Pin_HWVersionA_DM_DIG_HIZ);
+ 419              		.loc 1 195 0
+ 420 0326 45F20403 		movw	r3, #:lower16:1073762308
+ 421 032a C4F20003 		movt	r3, #:upper16:1073762308
+ 422 032e 45F20402 		movw	r2, #:lower16:1073762308
+ 423 0332 C4F20002 		movt	r2, #:upper16:1073762308
+ 424 0336 1278     		ldrb	r2, [r2, #0]
+ 425 0338 D2B2     		uxtb	r2, r2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 12
+
+
+ 426 033a D2B2     		uxtb	r2, r2
+ 427 033c 02F0F102 		and	r2, r2, #241
+ 428 0340 42F00202 		orr	r2, r2, #2
+ 429 0344 D2B2     		uxtb	r2, r2
+ 430 0346 D2B2     		uxtb	r2, r2
+ 431 0348 1A70     		strb	r2, [r3, #0]
+ 196:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionB_0, Pin_HWVersionB_DM_DIG_HIZ);
+ 432              		.loc 1 196 0
+ 433 034a 45F20503 		movw	r3, #:lower16:1073762309
+ 434 034e C4F20003 		movt	r3, #:upper16:1073762309
+ 435 0352 45F20502 		movw	r2, #:lower16:1073762309
+ 436 0356 C4F20002 		movt	r2, #:upper16:1073762309
+ 437 035a 1278     		ldrb	r2, [r2, #0]
+ 438 035c D2B2     		uxtb	r2, r2
+ 439 035e D2B2     		uxtb	r2, r2
+ 440 0360 02F0F102 		and	r2, r2, #241
+ 441 0364 42F00202 		orr	r2, r2, #2
+ 442 0368 D2B2     		uxtb	r2, r2
+ 443 036a D2B2     		uxtb	r2, r2
+ 444 036c 1A70     		strb	r2, [r3, #0]
+ 197:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionC_0, Pin_HWVersionC_DM_DIG_HIZ);
+ 445              		.loc 1 197 0
+ 446 036e 45F20603 		movw	r3, #:lower16:1073762310
+ 447 0372 C4F20003 		movt	r3, #:upper16:1073762310
+ 448 0376 45F20602 		movw	r2, #:lower16:1073762310
+ 449 037a C4F20002 		movt	r2, #:upper16:1073762310
+ 450 037e 1278     		ldrb	r2, [r2, #0]
+ 451 0380 D2B2     		uxtb	r2, r2
+ 452 0382 D2B2     		uxtb	r2, r2
+ 453 0384 02F0F102 		and	r2, r2, #241
+ 454 0388 42F00202 		orr	r2, r2, #2
+ 455 038c D2B2     		uxtb	r2, r2
+ 456 038e D2B2     		uxtb	r2, r2
+ 457 0390 1A70     		strb	r2, [r3, #0]
+ 198:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionD_0, Pin_HWVersionD_DM_DIG_HIZ);
+ 458              		.loc 1 198 0
+ 459 0392 45F20703 		movw	r3, #:lower16:1073762311
+ 460 0396 C4F20003 		movt	r3, #:upper16:1073762311
+ 461 039a 45F20702 		movw	r2, #:lower16:1073762311
+ 462 039e C4F20002 		movt	r2, #:upper16:1073762311
+ 463 03a2 1278     		ldrb	r2, [r2, #0]
+ 464 03a4 D2B2     		uxtb	r2, r2
+ 465 03a6 D2B2     		uxtb	r2, r2
+ 466 03a8 02F0F102 		and	r2, r2, #241
+ 467 03ac 42F00202 		orr	r2, r2, #2
+ 468 03b0 D2B2     		uxtb	r2, r2
+ 469 03b2 D2B2     		uxtb	r2, r2
+ 470 03b4 1A70     		strb	r2, [r3, #0]
+ 199:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionE_0, Pin_HWVersionE_DM_DIG_HIZ);
+ 471              		.loc 1 199 0
+ 472 03b6 45F21A03 		movw	r3, #:lower16:1073762330
+ 473 03ba C4F20003 		movt	r3, #:upper16:1073762330
+ 474 03be 45F21A02 		movw	r2, #:lower16:1073762330
+ 475 03c2 C4F20002 		movt	r2, #:upper16:1073762330
+ 476 03c6 1278     		ldrb	r2, [r2, #0]
+ 477 03c8 D2B2     		uxtb	r2, r2
+ 478 03ca D2B2     		uxtb	r2, r2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 13
+
+
+ 479 03cc 02F0F102 		and	r2, r2, #241
+ 480 03d0 42F00202 		orr	r2, r2, #2
+ 481 03d4 D2B2     		uxtb	r2, r2
+ 482 03d6 D2B2     		uxtb	r2, r2
+ 483 03d8 1A70     		strb	r2, [r3, #0]
+ 200:.\version.c   **** 	CyPins_SetPinDriveMode(Pin_HWVersionF_0, Pin_HWVersionF_DM_DIG_HIZ);
+ 484              		.loc 1 200 0
+ 485 03da 45F21B03 		movw	r3, #:lower16:1073762331
+ 486 03de C4F20003 		movt	r3, #:upper16:1073762331
+ 487 03e2 45F21B02 		movw	r2, #:lower16:1073762331
+ 488 03e6 C4F20002 		movt	r2, #:upper16:1073762331
+ 489 03ea 1278     		ldrb	r2, [r2, #0]
+ 490 03ec D2B2     		uxtb	r2, r2
+ 491 03ee D2B2     		uxtb	r2, r2
+ 492 03f0 02F0F102 		and	r2, r2, #241
+ 493 03f4 42F00202 		orr	r2, r2, #2
+ 494 03f8 D2B2     		uxtb	r2, r2
+ 495 03fa D2B2     		uxtb	r2, r2
+ 496 03fc 1A70     		strb	r2, [r3, #0]
+ 201:.\version.c   ****     
+ 202:.\version.c   ****     
+ 203:.\version.c   **** 	/* Calculate the HW version */
+ 204:.\version.c   **** 	for(index = 0; index < 6; index++)
+ 497              		.loc 1 204 0
+ 498 03fe 4FF00003 		mov	r3, #0
+ 499 0402 87F82630 		strb	r3, [r7, #38]
+ 500 0406 24E0     		b	.L6
+ 501              	.L7:
+ 205:.\version.c   **** 	{
+ 206:.\version.c   ****     	ver = ver + ((CheckHWVerPerPin(bValuePullUp[index], bValuePullDwn[index]) - 1) * (0x01 << inde
+ 502              		.loc 1 206 0
+ 503 0408 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
+ 504 040c 07F12801 		add	r1, r7, #40
+ 505 0410 0B44     		add	r3, r1, r3
+ 506 0412 13F80C2C 		ldrb	r2, [r3, #-12]	@ zero_extendqisi2
+ 507 0416 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
+ 508 041a 07F12801 		add	r1, r7, #40
+ 509 041e 0B44     		add	r3, r1, r3
+ 510 0420 13F8143C 		ldrb	r3, [r3, #-20]	@ zero_extendqisi2
+ 511 0424 1046     		mov	r0, r2
+ 512 0426 1946     		mov	r1, r3
+ 513 0428 FFF7FEFF 		bl	CheckHWVerPerPin
+ 514 042c 0346     		mov	r3, r0
+ 515 042e 03F1FF32 		add	r2, r3, #-1
+ 516 0432 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
+ 517 0436 02FA03F3 		lsl	r3, r2, r3
+ 518 043a DAB2     		uxtb	r2, r3
+ 519 043c 97F82730 		ldrb	r3, [r7, #39]
+ 520 0440 1344     		add	r3, r2, r3
+ 521 0442 87F82730 		strb	r3, [r7, #39]
+ 522              		.loc 1 204 0
+ 523 0446 97F82630 		ldrb	r3, [r7, #38]
+ 524 044a 03F10103 		add	r3, r3, #1
+ 525 044e 87F82630 		strb	r3, [r7, #38]
+ 526              	.L6:
+ 527 0452 97F82630 		ldrb	r3, [r7, #38]	@ zero_extendqisi2
+ 528 0456 052B     		cmp	r3, #5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 14
+
+
+ 529 0458 D6D9     		bls	.L7
+ 207:.\version.c   **** 	}
+ 208:.\version.c   **** 					 
+ 209:.\version.c   **** 	kitProgHWVersion = ver - 1;
+ 530              		.loc 1 209 0
+ 531 045a 97F82730 		ldrb	r3, [r7, #39]
+ 532 045e 03F1FF33 		add	r3, r3, #-1
+ 533 0462 DAB2     		uxtb	r2, r3
+ 534 0464 40F20003 		movw	r3, #:lower16:kitProgHWVersion
+ 535 0468 C0F20003 		movt	r3, #:upper16:kitProgHWVersion
+ 536 046c 1A70     		strb	r2, [r3, #0]
+ 210:.\version.c   **** 	return;
+ 211:.\version.c   **** }
+ 537              		.loc 1 211 0
+ 538 046e 07F12807 		add	r7, r7, #40
+ 539 0472 BD46     		mov	sp, r7
+ 540 0474 80BD     		pop	{r7, pc}
+ 541              		.cfi_endproc
+ 542              	.LFE30:
+ 543              		.size	GetHWVersion, .-GetHWVersion
+ 544 0476 00BF     		.text
+ 545              	.Letext0:
+ 546              		.section	.debug_loc,"",%progbits
+ 547              	.Ldebug_loc0:
+ 548              	.LLST0:
+ 549 0000 00000000 		.4byte	.LFB29
+ 550 0004 02000000 		.4byte	.LCFI0
+ 551 0008 0100     		.2byte	0x1
+ 552 000a 5D       		.byte	0x5d
+ 553 000b 02000000 		.4byte	.LCFI0
+ 554 000f 04000000 		.4byte	.LCFI1
+ 555 0013 0200     		.2byte	0x2
+ 556 0015 7D       		.byte	0x7d
+ 557 0016 04       		.sleb128 4
+ 558 0017 04000000 		.4byte	.LCFI1
+ 559 001b 06000000 		.4byte	.LCFI2
+ 560 001f 0200     		.2byte	0x2
+ 561 0021 7D       		.byte	0x7d
+ 562 0022 18       		.sleb128 24
+ 563 0023 06000000 		.4byte	.LCFI2
+ 564 0027 48000000 		.4byte	.LFE29
+ 565 002b 0200     		.2byte	0x2
+ 566 002d 77       		.byte	0x77
+ 567 002e 18       		.sleb128 24
+ 568 002f 00000000 		.4byte	0x0
+ 569 0033 00000000 		.4byte	0x0
+ 570              	.LLST1:
+ 571 0037 00000000 		.4byte	.LFB30
+ 572 003b 02000000 		.4byte	.LCFI3
+ 573 003f 0100     		.2byte	0x1
+ 574 0041 5D       		.byte	0x5d
+ 575 0042 02000000 		.4byte	.LCFI3
+ 576 0046 04000000 		.4byte	.LCFI4
+ 577 004a 0200     		.2byte	0x2
+ 578 004c 7D       		.byte	0x7d
+ 579 004d 08       		.sleb128 8
+ 580 004e 04000000 		.4byte	.LCFI4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 15
+
+
+ 581 0052 06000000 		.4byte	.LCFI5
+ 582 0056 0200     		.2byte	0x2
+ 583 0058 7D       		.byte	0x7d
+ 584 0059 30       		.sleb128 48
+ 585 005a 06000000 		.4byte	.LCFI5
+ 586 005e 76040000 		.4byte	.LFE30
+ 587 0062 0200     		.2byte	0x2
+ 588 0064 77       		.byte	0x77
+ 589 0065 30       		.sleb128 48
+ 590 0066 00000000 		.4byte	0x0
+ 591 006a 00000000 		.4byte	0x0
+ 592              		.file 2 "./Generated_Source/PSoC5/core_cm3.h"
+ 593              		.file 3 "./Generated_Source/PSoC5/cytypes.h"
+ 594              		.section	.debug_info
+ 595 0000 D3010000 		.4byte	0x1d3
+ 596 0004 0200     		.2byte	0x2
+ 597 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 598 000a 04       		.byte	0x4
+ 599 000b 01       		.uleb128 0x1
+ 600 000c E7000000 		.4byte	.LASF25
+ 601 0010 01       		.byte	0x1
+ 602 0011 99000000 		.4byte	.LASF26
+ 603 0015 3C010000 		.4byte	.LASF27
+ 604 0019 00000000 		.4byte	0x0
+ 605 001d 00000000 		.4byte	0x0
+ 606 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 607 0025 00000000 		.4byte	.Ldebug_line0
+ 608 0029 02       		.uleb128 0x2
+ 609 002a 01       		.byte	0x1
+ 610 002b 06       		.byte	0x6
+ 611 002c 30010000 		.4byte	.LASF0
+ 612 0030 02       		.uleb128 0x2
+ 613 0031 01       		.byte	0x1
+ 614 0032 08       		.byte	0x8
+ 615 0033 52000000 		.4byte	.LASF1
+ 616 0037 02       		.uleb128 0x2
+ 617 0038 02       		.byte	0x2
+ 618 0039 05       		.byte	0x5
+ 619 003a 10010000 		.4byte	.LASF2
+ 620 003e 02       		.uleb128 0x2
+ 621 003f 02       		.byte	0x2
+ 622 0040 07       		.byte	0x7
+ 623 0041 72000000 		.4byte	.LASF3
+ 624 0045 02       		.uleb128 0x2
+ 625 0046 04       		.byte	0x4
+ 626 0047 05       		.byte	0x5
+ 627 0048 20010000 		.4byte	.LASF4
+ 628 004c 02       		.uleb128 0x2
+ 629 004d 04       		.byte	0x4
+ 630 004e 07       		.byte	0x7
+ 631 004f 60000000 		.4byte	.LASF5
+ 632 0053 02       		.uleb128 0x2
+ 633 0054 08       		.byte	0x8
+ 634 0055 05       		.byte	0x5
+ 635 0056 00000000 		.4byte	.LASF6
+ 636 005a 02       		.uleb128 0x2
+ 637 005b 08       		.byte	0x8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 16
+
+
+ 638 005c 07       		.byte	0x7
+ 639 005d BA000000 		.4byte	.LASF7
+ 640 0061 03       		.uleb128 0x3
+ 641 0062 04       		.byte	0x4
+ 642 0063 05       		.byte	0x5
+ 643 0064 696E7400 		.ascii	"int\000"
+ 644 0068 02       		.uleb128 0x2
+ 645 0069 04       		.byte	0x4
+ 646 006a 07       		.byte	0x7
+ 647 006b AD000000 		.4byte	.LASF8
+ 648 006f 04       		.uleb128 0x4
+ 649 0070 1A010000 		.4byte	.LASF28
+ 650 0074 03       		.byte	0x3
+ 651 0075 4C       		.byte	0x4c
+ 652 0076 30000000 		.4byte	0x30
+ 653 007a 02       		.uleb128 0x2
+ 654 007b 04       		.byte	0x4
+ 655 007c 04       		.byte	0x4
+ 656 007d 4C000000 		.4byte	.LASF9
+ 657 0081 02       		.uleb128 0x2
+ 658 0082 08       		.byte	0x8
+ 659 0083 04       		.byte	0x4
+ 660 0084 92000000 		.4byte	.LASF10
+ 661 0088 02       		.uleb128 0x2
+ 662 0089 01       		.byte	0x1
+ 663 008a 08       		.byte	0x8
+ 664 008b F3000000 		.4byte	.LASF11
+ 665 008f 05       		.uleb128 0x5
+ 666 0090 04       		.byte	0x4
+ 667 0091 07       		.byte	0x7
+ 668 0092 06       		.uleb128 0x6
+ 669 0093 12       		.byte	0x12
+ 670 0094 01       		.byte	0x1
+ 671 0095 42       		.byte	0x42
+ 672 0096 C5000000 		.4byte	0xc5
+ 673 009a 07       		.uleb128 0x7
+ 674 009b 1F000000 		.4byte	.LASF12
+ 675 009f 01       		.byte	0x1
+ 676 00a0 43       		.byte	0x43
+ 677 00a1 C5000000 		.4byte	0xc5
+ 678 00a5 02       		.byte	0x2
+ 679 00a6 23       		.byte	0x23
+ 680 00a7 00       		.uleb128 0x0
+ 681 00a8 07       		.uleb128 0x7
+ 682 00a9 DE000000 		.4byte	.LASF13
+ 683 00ad 01       		.byte	0x1
+ 684 00ae 44       		.byte	0x44
+ 685 00af 6F000000 		.4byte	0x6f
+ 686 00b3 02       		.byte	0x2
+ 687 00b4 23       		.byte	0x23
+ 688 00b5 10       		.uleb128 0x10
+ 689 00b6 07       		.uleb128 0x7
+ 690 00b7 07010000 		.4byte	.LASF14
+ 691 00bb 01       		.byte	0x1
+ 692 00bc 45       		.byte	0x45
+ 693 00bd 6F000000 		.4byte	0x6f
+ 694 00c1 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 17
+
+
+ 695 00c2 23       		.byte	0x23
+ 696 00c3 11       		.uleb128 0x11
+ 697 00c4 00       		.byte	0x0
+ 698 00c5 08       		.uleb128 0x8
+ 699 00c6 6F000000 		.4byte	0x6f
+ 700 00ca D5000000 		.4byte	0xd5
+ 701 00ce 09       		.uleb128 0x9
+ 702 00cf 8F000000 		.4byte	0x8f
+ 703 00d3 0F       		.byte	0xf
+ 704 00d4 00       		.byte	0x0
+ 705 00d5 0A       		.uleb128 0xa
+ 706 00d6 0E000000 		.4byte	.LASF29
+ 707 00da 01       		.byte	0x1
+ 708 00db 66       		.byte	0x66
+ 709 00dc 01       		.byte	0x1
+ 710 00dd 6F000000 		.4byte	0x6f
+ 711 00e1 00000000 		.4byte	.LFB29
+ 712 00e5 48000000 		.4byte	.LFE29
+ 713 00e9 00000000 		.4byte	.LLST0
+ 714 00ed 1C010000 		.4byte	0x11c
+ 715 00f1 0B       		.uleb128 0xb
+ 716 00f2 29000000 		.4byte	.LASF15
+ 717 00f6 01       		.byte	0x1
+ 718 00f7 66       		.byte	0x66
+ 719 00f8 6F000000 		.4byte	0x6f
+ 720 00fc 02       		.byte	0x2
+ 721 00fd 91       		.byte	0x91
+ 722 00fe 6F       		.sleb128 -17
+ 723 00ff 0B       		.uleb128 0xb
+ 724 0100 7A010000 		.4byte	.LASF16
+ 725 0104 01       		.byte	0x1
+ 726 0105 66       		.byte	0x66
+ 727 0106 6F000000 		.4byte	0x6f
+ 728 010a 02       		.byte	0x2
+ 729 010b 91       		.byte	0x91
+ 730 010c 6E       		.sleb128 -18
+ 731 010d 0C       		.uleb128 0xc
+ 732 010e 29010000 		.4byte	.LASF17
+ 733 0112 01       		.byte	0x1
+ 734 0113 68       		.byte	0x68
+ 735 0114 6F000000 		.4byte	0x6f
+ 736 0118 02       		.byte	0x2
+ 737 0119 91       		.byte	0x91
+ 738 011a 77       		.sleb128 -9
+ 739 011b 00       		.byte	0x0
+ 740 011c 0D       		.uleb128 0xd
+ 741 011d 01       		.byte	0x1
+ 742 011e 85000000 		.4byte	.LASF30
+ 743 0122 01       		.byte	0x1
+ 744 0123 89       		.byte	0x89
+ 745 0124 01       		.byte	0x1
+ 746 0125 00000000 		.4byte	.LFB30
+ 747 0129 76040000 		.4byte	.LFE30
+ 748 012d 37000000 		.4byte	.LLST1
+ 749 0131 8A010000 		.4byte	0x18a
+ 750 0135 0C       		.uleb128 0xc
+ 751 0136 3F000000 		.4byte	.LASF18
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 18
+
+
+ 752 013a 01       		.byte	0x1
+ 753 013b 8B       		.byte	0x8b
+ 754 013c 8A010000 		.4byte	0x18a
+ 755 0140 02       		.byte	0x2
+ 756 0141 91       		.byte	0x91
+ 757 0142 6C       		.sleb128 -20
+ 758 0143 0C       		.uleb128 0xc
+ 759 0144 7A010000 		.4byte	.LASF16
+ 760 0148 01       		.byte	0x1
+ 761 0149 8C       		.byte	0x8c
+ 762 014a 8A010000 		.4byte	0x18a
+ 763 014e 02       		.byte	0x2
+ 764 014f 91       		.byte	0x91
+ 765 0150 64       		.sleb128 -28
+ 766 0151 0C       		.uleb128 0xc
+ 767 0152 36000000 		.4byte	.LASF19
+ 768 0156 01       		.byte	0x1
+ 769 0157 8D       		.byte	0x8d
+ 770 0158 C5000000 		.4byte	0xc5
+ 771 015c 02       		.byte	0x2
+ 772 015d 91       		.byte	0x91
+ 773 015e 54       		.sleb128 -44
+ 774 015f 0C       		.uleb128 0xc
+ 775 0160 F8000000 		.4byte	.LASF20
+ 776 0164 01       		.byte	0x1
+ 777 0165 8E       		.byte	0x8e
+ 778 0166 6F000000 		.4byte	0x6f
+ 779 016a 02       		.byte	0x2
+ 780 016b 91       		.byte	0x91
+ 781 016c 75       		.sleb128 -11
+ 782 016d 0C       		.uleb128 0xc
+ 783 016e 01010000 		.4byte	.LASF21
+ 784 0172 01       		.byte	0x1
+ 785 0173 8F       		.byte	0x8f
+ 786 0174 6F000000 		.4byte	0x6f
+ 787 0178 02       		.byte	0x2
+ 788 0179 91       		.byte	0x91
+ 789 017a 76       		.sleb128 -10
+ 790 017b 0E       		.uleb128 0xe
+ 791 017c 76657200 		.ascii	"ver\000"
+ 792 0180 01       		.byte	0x1
+ 793 0181 90       		.byte	0x90
+ 794 0182 6F000000 		.4byte	0x6f
+ 795 0186 02       		.byte	0x2
+ 796 0187 91       		.byte	0x91
+ 797 0188 77       		.sleb128 -9
+ 798 0189 00       		.byte	0x0
+ 799 018a 08       		.uleb128 0x8
+ 800 018b 6F000000 		.4byte	0x6f
+ 801 018f 9A010000 		.4byte	0x19a
+ 802 0193 09       		.uleb128 0x9
+ 803 0194 8F000000 		.4byte	0x8f
+ 804 0198 05       		.byte	0x5
+ 805 0199 00       		.byte	0x0
+ 806 019a 0F       		.uleb128 0xf
+ 807 019b D1000000 		.4byte	.LASF22
+ 808 019f 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 19
+
+
+ 809 01a0 CE06     		.2byte	0x6ce
+ 810 01a2 A8010000 		.4byte	0x1a8
+ 811 01a6 01       		.byte	0x1
+ 812 01a7 01       		.byte	0x1
+ 813 01a8 10       		.uleb128 0x10
+ 814 01a9 61000000 		.4byte	0x61
+ 815 01ad 11       		.uleb128 0x11
+ 816 01ae 88010000 		.4byte	.LASF23
+ 817 01b2 01       		.byte	0x1
+ 818 01b3 3D       		.byte	0x3d
+ 819 01b4 6F000000 		.4byte	0x6f
+ 820 01b8 01       		.byte	0x1
+ 821 01b9 05       		.byte	0x5
+ 822 01ba 03       		.byte	0x3
+ 823 01bb 00000000 		.4byte	kitProgHWVersion
+ 824 01bf 11       		.uleb128 0x11
+ 825 01c0 A5000000 		.4byte	.LASF24
+ 826 01c4 01       		.byte	0x1
+ 827 01c5 46       		.byte	0x46
+ 828 01c6 D1010000 		.4byte	0x1d1
+ 829 01ca 01       		.byte	0x1
+ 830 01cb 05       		.byte	0x5
+ 831 01cc 03       		.byte	0x3
+ 832 01cd 00000000 		.4byte	version
+ 833 01d1 10       		.uleb128 0x10
+ 834 01d2 92000000 		.4byte	0x92
+ 835 01d6 00       		.byte	0x0
+ 836              		.section	.debug_abbrev
+ 837 0000 01       		.uleb128 0x1
+ 838 0001 11       		.uleb128 0x11
+ 839 0002 01       		.byte	0x1
+ 840 0003 25       		.uleb128 0x25
+ 841 0004 0E       		.uleb128 0xe
+ 842 0005 13       		.uleb128 0x13
+ 843 0006 0B       		.uleb128 0xb
+ 844 0007 03       		.uleb128 0x3
+ 845 0008 0E       		.uleb128 0xe
+ 846 0009 1B       		.uleb128 0x1b
+ 847 000a 0E       		.uleb128 0xe
+ 848 000b 11       		.uleb128 0x11
+ 849 000c 01       		.uleb128 0x1
+ 850 000d 52       		.uleb128 0x52
+ 851 000e 01       		.uleb128 0x1
+ 852 000f 55       		.uleb128 0x55
+ 853 0010 06       		.uleb128 0x6
+ 854 0011 10       		.uleb128 0x10
+ 855 0012 06       		.uleb128 0x6
+ 856 0013 00       		.byte	0x0
+ 857 0014 00       		.byte	0x0
+ 858 0015 02       		.uleb128 0x2
+ 859 0016 24       		.uleb128 0x24
+ 860 0017 00       		.byte	0x0
+ 861 0018 0B       		.uleb128 0xb
+ 862 0019 0B       		.uleb128 0xb
+ 863 001a 3E       		.uleb128 0x3e
+ 864 001b 0B       		.uleb128 0xb
+ 865 001c 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 20
+
+
+ 866 001d 0E       		.uleb128 0xe
+ 867 001e 00       		.byte	0x0
+ 868 001f 00       		.byte	0x0
+ 869 0020 03       		.uleb128 0x3
+ 870 0021 24       		.uleb128 0x24
+ 871 0022 00       		.byte	0x0
+ 872 0023 0B       		.uleb128 0xb
+ 873 0024 0B       		.uleb128 0xb
+ 874 0025 3E       		.uleb128 0x3e
+ 875 0026 0B       		.uleb128 0xb
+ 876 0027 03       		.uleb128 0x3
+ 877 0028 08       		.uleb128 0x8
+ 878 0029 00       		.byte	0x0
+ 879 002a 00       		.byte	0x0
+ 880 002b 04       		.uleb128 0x4
+ 881 002c 16       		.uleb128 0x16
+ 882 002d 00       		.byte	0x0
+ 883 002e 03       		.uleb128 0x3
+ 884 002f 0E       		.uleb128 0xe
+ 885 0030 3A       		.uleb128 0x3a
+ 886 0031 0B       		.uleb128 0xb
+ 887 0032 3B       		.uleb128 0x3b
+ 888 0033 0B       		.uleb128 0xb
+ 889 0034 49       		.uleb128 0x49
+ 890 0035 13       		.uleb128 0x13
+ 891 0036 00       		.byte	0x0
+ 892 0037 00       		.byte	0x0
+ 893 0038 05       		.uleb128 0x5
+ 894 0039 24       		.uleb128 0x24
+ 895 003a 00       		.byte	0x0
+ 896 003b 0B       		.uleb128 0xb
+ 897 003c 0B       		.uleb128 0xb
+ 898 003d 3E       		.uleb128 0x3e
+ 899 003e 0B       		.uleb128 0xb
+ 900 003f 00       		.byte	0x0
+ 901 0040 00       		.byte	0x0
+ 902 0041 06       		.uleb128 0x6
+ 903 0042 13       		.uleb128 0x13
+ 904 0043 01       		.byte	0x1
+ 905 0044 0B       		.uleb128 0xb
+ 906 0045 0B       		.uleb128 0xb
+ 907 0046 3A       		.uleb128 0x3a
+ 908 0047 0B       		.uleb128 0xb
+ 909 0048 3B       		.uleb128 0x3b
+ 910 0049 0B       		.uleb128 0xb
+ 911 004a 01       		.uleb128 0x1
+ 912 004b 13       		.uleb128 0x13
+ 913 004c 00       		.byte	0x0
+ 914 004d 00       		.byte	0x0
+ 915 004e 07       		.uleb128 0x7
+ 916 004f 0D       		.uleb128 0xd
+ 917 0050 00       		.byte	0x0
+ 918 0051 03       		.uleb128 0x3
+ 919 0052 0E       		.uleb128 0xe
+ 920 0053 3A       		.uleb128 0x3a
+ 921 0054 0B       		.uleb128 0xb
+ 922 0055 3B       		.uleb128 0x3b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 21
+
+
+ 923 0056 0B       		.uleb128 0xb
+ 924 0057 49       		.uleb128 0x49
+ 925 0058 13       		.uleb128 0x13
+ 926 0059 38       		.uleb128 0x38
+ 927 005a 0A       		.uleb128 0xa
+ 928 005b 00       		.byte	0x0
+ 929 005c 00       		.byte	0x0
+ 930 005d 08       		.uleb128 0x8
+ 931 005e 01       		.uleb128 0x1
+ 932 005f 01       		.byte	0x1
+ 933 0060 49       		.uleb128 0x49
+ 934 0061 13       		.uleb128 0x13
+ 935 0062 01       		.uleb128 0x1
+ 936 0063 13       		.uleb128 0x13
+ 937 0064 00       		.byte	0x0
+ 938 0065 00       		.byte	0x0
+ 939 0066 09       		.uleb128 0x9
+ 940 0067 21       		.uleb128 0x21
+ 941 0068 00       		.byte	0x0
+ 942 0069 49       		.uleb128 0x49
+ 943 006a 13       		.uleb128 0x13
+ 944 006b 2F       		.uleb128 0x2f
+ 945 006c 0B       		.uleb128 0xb
+ 946 006d 00       		.byte	0x0
+ 947 006e 00       		.byte	0x0
+ 948 006f 0A       		.uleb128 0xa
+ 949 0070 2E       		.uleb128 0x2e
+ 950 0071 01       		.byte	0x1
+ 951 0072 03       		.uleb128 0x3
+ 952 0073 0E       		.uleb128 0xe
+ 953 0074 3A       		.uleb128 0x3a
+ 954 0075 0B       		.uleb128 0xb
+ 955 0076 3B       		.uleb128 0x3b
+ 956 0077 0B       		.uleb128 0xb
+ 957 0078 27       		.uleb128 0x27
+ 958 0079 0C       		.uleb128 0xc
+ 959 007a 49       		.uleb128 0x49
+ 960 007b 13       		.uleb128 0x13
+ 961 007c 11       		.uleb128 0x11
+ 962 007d 01       		.uleb128 0x1
+ 963 007e 12       		.uleb128 0x12
+ 964 007f 01       		.uleb128 0x1
+ 965 0080 40       		.uleb128 0x40
+ 966 0081 06       		.uleb128 0x6
+ 967 0082 01       		.uleb128 0x1
+ 968 0083 13       		.uleb128 0x13
+ 969 0084 00       		.byte	0x0
+ 970 0085 00       		.byte	0x0
+ 971 0086 0B       		.uleb128 0xb
+ 972 0087 05       		.uleb128 0x5
+ 973 0088 00       		.byte	0x0
+ 974 0089 03       		.uleb128 0x3
+ 975 008a 0E       		.uleb128 0xe
+ 976 008b 3A       		.uleb128 0x3a
+ 977 008c 0B       		.uleb128 0xb
+ 978 008d 3B       		.uleb128 0x3b
+ 979 008e 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 22
+
+
+ 980 008f 49       		.uleb128 0x49
+ 981 0090 13       		.uleb128 0x13
+ 982 0091 02       		.uleb128 0x2
+ 983 0092 0A       		.uleb128 0xa
+ 984 0093 00       		.byte	0x0
+ 985 0094 00       		.byte	0x0
+ 986 0095 0C       		.uleb128 0xc
+ 987 0096 34       		.uleb128 0x34
+ 988 0097 00       		.byte	0x0
+ 989 0098 03       		.uleb128 0x3
+ 990 0099 0E       		.uleb128 0xe
+ 991 009a 3A       		.uleb128 0x3a
+ 992 009b 0B       		.uleb128 0xb
+ 993 009c 3B       		.uleb128 0x3b
+ 994 009d 0B       		.uleb128 0xb
+ 995 009e 49       		.uleb128 0x49
+ 996 009f 13       		.uleb128 0x13
+ 997 00a0 02       		.uleb128 0x2
+ 998 00a1 0A       		.uleb128 0xa
+ 999 00a2 00       		.byte	0x0
+ 1000 00a3 00       		.byte	0x0
+ 1001 00a4 0D       		.uleb128 0xd
+ 1002 00a5 2E       		.uleb128 0x2e
+ 1003 00a6 01       		.byte	0x1
+ 1004 00a7 3F       		.uleb128 0x3f
+ 1005 00a8 0C       		.uleb128 0xc
+ 1006 00a9 03       		.uleb128 0x3
+ 1007 00aa 0E       		.uleb128 0xe
+ 1008 00ab 3A       		.uleb128 0x3a
+ 1009 00ac 0B       		.uleb128 0xb
+ 1010 00ad 3B       		.uleb128 0x3b
+ 1011 00ae 0B       		.uleb128 0xb
+ 1012 00af 27       		.uleb128 0x27
+ 1013 00b0 0C       		.uleb128 0xc
+ 1014 00b1 11       		.uleb128 0x11
+ 1015 00b2 01       		.uleb128 0x1
+ 1016 00b3 12       		.uleb128 0x12
+ 1017 00b4 01       		.uleb128 0x1
+ 1018 00b5 40       		.uleb128 0x40
+ 1019 00b6 06       		.uleb128 0x6
+ 1020 00b7 01       		.uleb128 0x1
+ 1021 00b8 13       		.uleb128 0x13
+ 1022 00b9 00       		.byte	0x0
+ 1023 00ba 00       		.byte	0x0
+ 1024 00bb 0E       		.uleb128 0xe
+ 1025 00bc 34       		.uleb128 0x34
+ 1026 00bd 00       		.byte	0x0
+ 1027 00be 03       		.uleb128 0x3
+ 1028 00bf 08       		.uleb128 0x8
+ 1029 00c0 3A       		.uleb128 0x3a
+ 1030 00c1 0B       		.uleb128 0xb
+ 1031 00c2 3B       		.uleb128 0x3b
+ 1032 00c3 0B       		.uleb128 0xb
+ 1033 00c4 49       		.uleb128 0x49
+ 1034 00c5 13       		.uleb128 0x13
+ 1035 00c6 02       		.uleb128 0x2
+ 1036 00c7 0A       		.uleb128 0xa
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 23
+
+
+ 1037 00c8 00       		.byte	0x0
+ 1038 00c9 00       		.byte	0x0
+ 1039 00ca 0F       		.uleb128 0xf
+ 1040 00cb 34       		.uleb128 0x34
+ 1041 00cc 00       		.byte	0x0
+ 1042 00cd 03       		.uleb128 0x3
+ 1043 00ce 0E       		.uleb128 0xe
+ 1044 00cf 3A       		.uleb128 0x3a
+ 1045 00d0 0B       		.uleb128 0xb
+ 1046 00d1 3B       		.uleb128 0x3b
+ 1047 00d2 05       		.uleb128 0x5
+ 1048 00d3 49       		.uleb128 0x49
+ 1049 00d4 13       		.uleb128 0x13
+ 1050 00d5 3F       		.uleb128 0x3f
+ 1051 00d6 0C       		.uleb128 0xc
+ 1052 00d7 3C       		.uleb128 0x3c
+ 1053 00d8 0C       		.uleb128 0xc
+ 1054 00d9 00       		.byte	0x0
+ 1055 00da 00       		.byte	0x0
+ 1056 00db 10       		.uleb128 0x10
+ 1057 00dc 35       		.uleb128 0x35
+ 1058 00dd 00       		.byte	0x0
+ 1059 00de 49       		.uleb128 0x49
+ 1060 00df 13       		.uleb128 0x13
+ 1061 00e0 00       		.byte	0x0
+ 1062 00e1 00       		.byte	0x0
+ 1063 00e2 11       		.uleb128 0x11
+ 1064 00e3 34       		.uleb128 0x34
+ 1065 00e4 00       		.byte	0x0
+ 1066 00e5 03       		.uleb128 0x3
+ 1067 00e6 0E       		.uleb128 0xe
+ 1068 00e7 3A       		.uleb128 0x3a
+ 1069 00e8 0B       		.uleb128 0xb
+ 1070 00e9 3B       		.uleb128 0x3b
+ 1071 00ea 0B       		.uleb128 0xb
+ 1072 00eb 49       		.uleb128 0x49
+ 1073 00ec 13       		.uleb128 0x13
+ 1074 00ed 3F       		.uleb128 0x3f
+ 1075 00ee 0C       		.uleb128 0xc
+ 1076 00ef 02       		.uleb128 0x2
+ 1077 00f0 0A       		.uleb128 0xa
+ 1078 00f1 00       		.byte	0x0
+ 1079 00f2 00       		.byte	0x0
+ 1080 00f3 00       		.byte	0x0
+ 1081              		.section	.debug_pubnames,"",%progbits
+ 1082 0000 40000000 		.4byte	0x40
+ 1083 0004 0200     		.2byte	0x2
+ 1084 0006 00000000 		.4byte	.Ldebug_info0
+ 1085 000a D7010000 		.4byte	0x1d7
+ 1086 000e 1C010000 		.4byte	0x11c
+ 1087 0012 47657448 		.ascii	"GetHWVersion\000"
+ 1087      57566572 
+ 1087      73696F6E 
+ 1087      00
+ 1088 001f AD010000 		.4byte	0x1ad
+ 1089 0023 6B697450 		.ascii	"kitProgHWVersion\000"
+ 1089      726F6748 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 24
+
+
+ 1089      57566572 
+ 1089      73696F6E 
+ 1089      00
+ 1090 0034 BF010000 		.4byte	0x1bf
+ 1091 0038 76657273 		.ascii	"version\000"
+ 1091      696F6E00 
+ 1092 0040 00000000 		.4byte	0x0
+ 1093              		.section	.debug_aranges,"",%progbits
+ 1094 0000 24000000 		.4byte	0x24
+ 1095 0004 0200     		.2byte	0x2
+ 1096 0006 00000000 		.4byte	.Ldebug_info0
+ 1097 000a 04       		.byte	0x4
+ 1098 000b 00       		.byte	0x0
+ 1099 000c 0000     		.2byte	0x0
+ 1100 000e 0000     		.2byte	0x0
+ 1101 0010 00000000 		.4byte	.LFB29
+ 1102 0014 48000000 		.4byte	.LFE29-.LFB29
+ 1103 0018 00000000 		.4byte	.LFB30
+ 1104 001c 76040000 		.4byte	.LFE30-.LFB30
+ 1105 0020 00000000 		.4byte	0x0
+ 1106 0024 00000000 		.4byte	0x0
+ 1107              		.section	.debug_ranges,"",%progbits
+ 1108              	.Ldebug_ranges0:
+ 1109 0000 00000000 		.4byte	.Ltext0
+ 1110 0004 00000000 		.4byte	.Letext0
+ 1111 0008 00000000 		.4byte	.LFB29
+ 1112 000c 48000000 		.4byte	.LFE29
+ 1113 0010 00000000 		.4byte	.LFB30
+ 1114 0014 76040000 		.4byte	.LFE30
+ 1115 0018 00000000 		.4byte	0x0
+ 1116 001c 00000000 		.4byte	0x0
+ 1117              		.section	.debug_str,"MS",%progbits,1
+ 1118              	.LASF6:
+ 1119 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1119      206C6F6E 
+ 1119      6720696E 
+ 1119      7400
+ 1120              	.LASF29:
+ 1121 000e 43686563 		.ascii	"CheckHWVerPerPin\000"
+ 1121      6B485756 
+ 1121      65725065 
+ 1121      7250696E 
+ 1121      00
+ 1122              	.LASF12:
+ 1123 001f 7369676E 		.ascii	"signature\000"
+ 1123      61747572 
+ 1123      6500
+ 1124              	.LASF15:
+ 1125 0029 6256616C 		.ascii	"bValuePullup\000"
+ 1125      75655075 
+ 1125      6C6C7570 
+ 1125      00
+ 1126              	.LASF19:
+ 1127 0036 73696743 		.ascii	"sigCheck\000"
+ 1127      6865636B 
+ 1127      00
+ 1128              	.LASF18:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 25
+
+
+ 1129 003f 6256616C 		.ascii	"bValuePullUp\000"
+ 1129      75655075 
+ 1129      6C6C5570 
+ 1129      00
+ 1130              	.LASF9:
+ 1131 004c 666C6F61 		.ascii	"float\000"
+ 1131      7400
+ 1132              	.LASF1:
+ 1133 0052 756E7369 		.ascii	"unsigned char\000"
+ 1133      676E6564 
+ 1133      20636861 
+ 1133      7200
+ 1134              	.LASF5:
+ 1135 0060 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1135      20756E73 
+ 1135      69676E65 
+ 1135      6420696E 
+ 1135      7400
+ 1136              	.LASF3:
+ 1137 0072 73686F72 		.ascii	"short unsigned int\000"
+ 1137      7420756E 
+ 1137      7369676E 
+ 1137      65642069 
+ 1137      6E7400
+ 1138              	.LASF30:
+ 1139 0085 47657448 		.ascii	"GetHWVersion\000"
+ 1139      57566572 
+ 1139      73696F6E 
+ 1139      00
+ 1140              	.LASF10:
+ 1141 0092 646F7562 		.ascii	"double\000"
+ 1141      6C6500
+ 1142              	.LASF26:
+ 1143 0099 2E5C7665 		.ascii	".\\version.c\000"
+ 1143      7273696F 
+ 1143      6E2E6300 
+ 1144              	.LASF24:
+ 1145 00a5 76657273 		.ascii	"version\000"
+ 1145      696F6E00 
+ 1146              	.LASF8:
+ 1147 00ad 756E7369 		.ascii	"unsigned int\000"
+ 1147      676E6564 
+ 1147      20696E74 
+ 1147      00
+ 1148              	.LASF7:
+ 1149 00ba 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1149      206C6F6E 
+ 1149      6720756E 
+ 1149      7369676E 
+ 1149      65642069 
+ 1150              	.LASF22:
+ 1151 00d1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1151      52784275 
+ 1151      66666572 
+ 1151      00
+ 1152              	.LASF13:
+ 1153 00de 7665724D 		.ascii	"verMajor\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 26
+
+
+ 1153      616A6F72 
+ 1153      00
+ 1154              	.LASF25:
+ 1155 00e7 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1155      4320342E 
+ 1155      342E3100 
+ 1156              	.LASF11:
+ 1157 00f3 63686172 		.ascii	"char\000"
+ 1157      00
+ 1158              	.LASF20:
+ 1159 00f8 76657243 		.ascii	"verCheck\000"
+ 1159      6865636B 
+ 1159      00
+ 1160              	.LASF21:
+ 1161 0101 696E6465 		.ascii	"index\000"
+ 1161      7800
+ 1162              	.LASF14:
+ 1163 0107 7665724D 		.ascii	"verMinor\000"
+ 1163      696E6F72 
+ 1163      00
+ 1164              	.LASF2:
+ 1165 0110 73686F72 		.ascii	"short int\000"
+ 1165      7420696E 
+ 1165      7400
+ 1166              	.LASF28:
+ 1167 011a 75696E74 		.ascii	"uint8\000"
+ 1167      3800
+ 1168              	.LASF4:
+ 1169 0120 6C6F6E67 		.ascii	"long int\000"
+ 1169      20696E74 
+ 1169      00
+ 1170              	.LASF17:
+ 1171 0129 62487756 		.ascii	"bHwVer\000"
+ 1171      657200
+ 1172              	.LASF0:
+ 1173 0130 7369676E 		.ascii	"signed char\000"
+ 1173      65642063 
+ 1173      68617200 
+ 1174              	.LASF27:
+ 1175 013c 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 1175      665C486F 
+ 1175      6D655C44 
+ 1175      65736B74 
+ 1175      6F705C4B 
+ 1176 0169 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 1176      69745072 
+ 1176      6F672E63 
+ 1176      7964736E 
+ 1176      00
+ 1177              	.LASF16:
+ 1178 017a 6256616C 		.ascii	"bValuePullDwn\000"
+ 1178      75655075 
+ 1178      6C6C4477 
+ 1178      6E00
+ 1179              	.LASF23:
+ 1180 0188 6B697450 		.ascii	"kitProgHWVersion\000"
+ 1180      726F6748 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccgimiBl.s 			page 27
+
+
+ 1180      57566572 
+ 1180      73696F6E 
+ 1180      00
+ 1181              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

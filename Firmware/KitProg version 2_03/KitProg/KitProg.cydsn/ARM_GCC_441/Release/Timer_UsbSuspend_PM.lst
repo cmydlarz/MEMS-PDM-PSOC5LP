@@ -1,0 +1,867 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Timer_UsbSuspend_PM.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 D5000000 		.text
+  20      02008200 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.Timer_UsbSuspend_SaveConfig,"ax",%progbits
+  24              		.align	1
+  25              		.global	Timer_UsbSuspend_SaveConfig
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	Timer_UsbSuspend_SaveConfig, %function
+  29              	Timer_UsbSuspend_SaveConfig:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\Timer_UsbSuspend_PM.c"
+   1:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * File Name: Timer_UsbSuspend_PM.c
+   3:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Version 2.50
+   4:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+   5:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Description:
+   6:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *     This file provides the power management source code to API for the
+   7:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *     Timer.
+   8:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+   9:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *   Note:
+  10:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *     None
+  11:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  12:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *******************************************************************************
+  13:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************/
+  18:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  19:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** #include "Timer_UsbSuspend.h"
+  20:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** static Timer_UsbSuspend_backupStruct Timer_UsbSuspend_backup;
+  21:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  22:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Function Name: Timer_UsbSuspend_SaveConfig
+  25:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  27:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Summary:
+  28:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *     Save the current user configuration
+  29:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  30:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+  32:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  33:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Return:
+  34:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+  35:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  36:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Global variables:
+  37:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Timer_UsbSuspend_backup:  Variables of this global structure are modified to
+  38:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  store the values of non retention configuration registers when Sleep() API is
+  39:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  called.
+  40:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  41:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *******************************************************************************/
+  42:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** void Timer_UsbSuspend_SaveConfig(void) 
+  43:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** {
+  32              		.loc 1 43 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  44:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #if (!Timer_UsbSuspend_UsingFixedFunction)
+  45:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         /* Backup the UDB non-rentention registers for CY_UDB_V0 */
+  46:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if (CY_UDB_V0)
+  47:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerUdb = Timer_UsbSuspend_ReadCounter();
+  48:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerPeriod = Timer_UsbSuspend_ReadPeriod();
+  49:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.InterruptMaskValue = Timer_UsbSuspend_STATUS_MASK;
+  50:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #if (Timer_UsbSuspend_UsingHWCaptureCounter)
+  51:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****                 Timer_UsbSuspend_backup.TimerCaptureCounter = Timer_UsbSuspend_ReadCaptureCount();
+  52:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #endif /* Backup the UDB non-rentention register capture counter for CY_UDB_V0 */
+  53:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Backup the UDB non-rentention registers for CY_UDB_V0 */
+  54:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  55:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if (CY_UDB_V1)
+  56:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerUdb = Timer_UsbSuspend_ReadCounter();
+  57:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.InterruptMaskValue = Timer_UsbSuspend_STATUS_MASK;
+  58:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #if (Timer_UsbSuspend_UsingHWCaptureCounter)
+  59:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****                 Timer_UsbSuspend_backup.TimerCaptureCounter = Timer_UsbSuspend_ReadCaptureCount();
+  60:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #endif /* Back Up capture counter register  */
+  61:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Backup non retention registers, interrupt mask and capture counter for CY_UDB_V1 
+  62:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  63:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if(!Timer_UsbSuspend_ControlRegRemoved)
+  64:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerControlRegister = Timer_UsbSuspend_ReadControlRegister();
+  65:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Backup the enable state of the Timer component */
+  66:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #endif /* Backup non retention registers in UDB implementation. All fixed function registers ar
+  67:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** }
+  37              		.loc 1 67 0
+  38 0000 7047     		bx	lr
+  39              		.cfi_endproc
+  40              	.LFE0:
+  41              		.size	Timer_UsbSuspend_SaveConfig, .-Timer_UsbSuspend_SaveConfig
+  42              		.section	.text.Timer_UsbSuspend_RestoreConfig,"ax",%progbits
+  43              		.align	1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 3
+
+
+  44              		.global	Timer_UsbSuspend_RestoreConfig
+  45              		.thumb
+  46              		.thumb_func
+  47              		.type	Timer_UsbSuspend_RestoreConfig, %function
+  48              	Timer_UsbSuspend_RestoreConfig:
+  49              	.LFB1:
+  68:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  69:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  70:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** /*******************************************************************************
+  71:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Function Name: Timer_UsbSuspend_RestoreConfig
+  72:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************
+  73:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  74:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Summary:
+  75:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Restores the current user configuration.
+  76:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  77:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Parameters:
+  78:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+  79:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  80:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Return:
+  81:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+  82:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  83:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Global variables:
+  84:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Timer_UsbSuspend_backup:  Variables of this global structure are used to
+  85:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  restore the values of non retention registers on wakeup from sleep mode.
+  86:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+  87:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *******************************************************************************/
+  88:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** void Timer_UsbSuspend_RestoreConfig(void) 
+  89:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** {   
+  50              		.loc 1 89 0
+  51              		.cfi_startproc
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              		@ link register save eliminated.
+  90:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #if (!Timer_UsbSuspend_UsingFixedFunction)
+  91:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         /* Restore the UDB non-rentention registers for CY_UDB_V0 */
+  92:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if (CY_UDB_V0)
+  93:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Interrupt State Backup for Critical Region*/
+  94:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             uint8 Timer_UsbSuspend_interruptState;
+  95:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+  96:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_WriteCounter(Timer_UsbSuspend_backup.TimerUdb);
+  97:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_WritePeriod(Timer_UsbSuspend_backup.TimerPeriod);
+  98:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+  99:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Enter Critical Region*/
+ 100:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_interruptState = CyEnterCriticalSection();
+ 101:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 102:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_STATUS_AUX_CTRL |= Timer_UsbSuspend_STATUS_ACTL_INT_EN_MASK;
+ 103:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Exit Critical Region*/
+ 104:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             CyExitCriticalSection(Timer_UsbSuspend_interruptState);
+ 105:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_STATUS_MASK =Timer_UsbSuspend_backup.InterruptMaskValue;
+ 106:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #if (Timer_UsbSuspend_UsingHWCaptureCounter)
+ 107:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****                 Timer_UsbSuspend_SetCaptureCount(Timer_UsbSuspend_backup.TimerCaptureCounter);
+ 108:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #endif /* Restore the UDB non-rentention register capture counter for CY_UDB_V0 */
+ 109:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Restore the UDB non-rentention registers for CY_UDB_V0 */
+ 110:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 111:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if (CY_UDB_V1)
+ 112:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_WriteCounter(Timer_UsbSuspend_backup.TimerUdb);
+ 113:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_STATUS_MASK =Timer_UsbSuspend_backup.InterruptMaskValue;
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 4
+
+
+ 114:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #if (Timer_UsbSuspend_UsingHWCaptureCounter)
+ 115:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****                 Timer_UsbSuspend_SetCaptureCount(Timer_UsbSuspend_backup.TimerCaptureCounter);
+ 116:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             #endif /* Restore Capture counter register*/
+ 117:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Restore up non retention registers, interrupt mask and capture counter for CY_UDB
+ 118:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 119:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #if(!Timer_UsbSuspend_ControlRegRemoved)
+ 120:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_WriteControlRegister(Timer_UsbSuspend_backup.TimerControlRegister);
+ 121:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         #endif /* Restore the enable state of the Timer component */
+ 122:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #endif /* Restore non retention registers in the UDB implementation only */
+ 123:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** }
+  55              		.loc 1 123 0
+  56 0000 7047     		bx	lr
+  57              		.cfi_endproc
+  58              	.LFE1:
+  59              		.size	Timer_UsbSuspend_RestoreConfig, .-Timer_UsbSuspend_RestoreConfig
+  60              		.section	.text.Timer_UsbSuspend_Wakeup,"ax",%progbits
+  61              		.align	1
+  62              		.global	Timer_UsbSuspend_Wakeup
+  63              		.thumb
+  64              		.thumb_func
+  65              		.type	Timer_UsbSuspend_Wakeup, %function
+  66              	Timer_UsbSuspend_Wakeup:
+  67              	.LFB3:
+ 124:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 125:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 126:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** /*******************************************************************************
+ 127:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Function Name: Timer_UsbSuspend_Sleep
+ 128:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************
+ 129:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 130:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Summary:
+ 131:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *     Stop and Save the user configuration
+ 132:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 133:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Parameters:
+ 134:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+ 135:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 136:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Return:
+ 137:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+ 138:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 139:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Global variables:
+ 140:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Timer_UsbSuspend_backup.TimerEnableState:  Is modified depending on the
+ 141:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  enable state of the block before entering sleep mode.
+ 142:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 143:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *******************************************************************************/
+ 144:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** void Timer_UsbSuspend_Sleep(void) 
+ 145:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** {
+ 146:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #if(!Timer_UsbSuspend_ControlRegRemoved)
+ 147:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         /* Save Counter's enable state */
+ 148:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         if(Timer_UsbSuspend_CTRL_ENABLE == (Timer_UsbSuspend_CONTROL & Timer_UsbSuspend_CTRL_ENABLE
+ 149:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         {
+ 150:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Timer is enabled */
+ 151:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerEnableState = 1u;
+ 152:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         }
+ 153:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         else
+ 154:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         {
+ 155:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             /* Timer is disabled */
+ 156:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****             Timer_UsbSuspend_backup.TimerEnableState = 0u;
+ 157:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 5
+
+
+ 158:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #endif /* Back up enable state from the Timer control register */
+ 159:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     Timer_UsbSuspend_Stop();
+ 160:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     Timer_UsbSuspend_SaveConfig();
+ 161:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** }
+ 162:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 163:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** 
+ 164:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** /*******************************************************************************
+ 165:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Function Name: Timer_UsbSuspend_Wakeup
+ 166:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** ********************************************************************************
+ 167:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 168:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Summary:
+ 169:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Restores and enables the user configuration
+ 170:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 171:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Parameters:
+ 172:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+ 173:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 174:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Return:
+ 175:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  void
+ 176:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 177:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** * Global variables:
+ 178:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  Timer_UsbSuspend_backup.enableState:  Is used to restore the enable state of
+ 179:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *  block on wakeup from sleep mode.
+ 180:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *
+ 181:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** *******************************************************************************/
+ 182:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** void Timer_UsbSuspend_Wakeup(void) 
+ 183:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** {
+  68              		.loc 1 183 0
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 0, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+ 184:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     Timer_UsbSuspend_RestoreConfig();
+ 185:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #if(!Timer_UsbSuspend_ControlRegRemoved)
+ 186:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         if(Timer_UsbSuspend_backup.TimerEnableState == 1u)
+  73              		.loc 1 186 0
+  74 0000 034B     		ldr	r3, .L9
+  75 0002 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  76 0004 012B     		cmp	r3, #1
+  77 0006 01D1     		bne	.L7
+ 187:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         {     /* Enable Timer's operation */
+ 188:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****                 Timer_UsbSuspend_Enable();
+ 189:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****         } /* Do nothing if Timer was disabled before */
+ 190:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c ****     #endif /* Remove this code section if Control register is removed */
+ 191:.\Generated_Source\PSoC5/Timer_UsbSuspend_PM.c **** }
+  78              		.loc 1 191 0
+  79              		.loc 1 188 0
+  80 0008 FFF7FEBF 		b	Timer_UsbSuspend_Enable
+  81              	.L7:
+  82 000c 7047     		bx	lr
+  83              	.L10:
+  84 000e 00BF     		.align	2
+  85              	.L9:
+  86 0010 00000000 		.word	.LANCHOR0
+  87              		.cfi_endproc
+  88              	.LFE3:
+  89              		.size	Timer_UsbSuspend_Wakeup, .-Timer_UsbSuspend_Wakeup
+  90              		.section	.text.Timer_UsbSuspend_Sleep,"ax",%progbits
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 6
+
+
+  91              		.align	1
+  92              		.global	Timer_UsbSuspend_Sleep
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	Timer_UsbSuspend_Sleep, %function
+  96              	Timer_UsbSuspend_Sleep:
+  97              	.LFB2:
+  98              		.loc 1 145 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+ 103              		.loc 1 148 0
+ 104 0000 044B     		ldr	r3, .L15
+ 105 0002 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 106 0004 13F00102 		ands	r2, r3, #1
+ 107 0008 034B     		ldr	r3, .L15+4
+ 108              		.loc 1 151 0
+ 109 000a 18BF     		it	ne
+ 110 000c 0122     		movne	r2, #1
+ 111              		.loc 1 156 0
+ 112 000e 1A70     		strb	r2, [r3, #0]
+ 113              		.loc 1 161 0
+ 114              		.loc 1 159 0
+ 115 0010 FFF7FEBF 		b	Timer_UsbSuspend_Stop
+ 116              	.L16:
+ 117              		.align	2
+ 118              	.L15:
+ 119 0014 004F0040 		.word	1073762048
+ 120 0018 00000000 		.word	.LANCHOR0
+ 121              		.cfi_endproc
+ 122              	.LFE2:
+ 123              		.size	Timer_UsbSuspend_Sleep, .-Timer_UsbSuspend_Sleep
+ 124              		.bss
+ 125              		.align	2
+ 126              		.set	.LANCHOR0,. + 0
+ 127              		.type	Timer_UsbSuspend_backup, %object
+ 128              		.size	Timer_UsbSuspend_backup, 1
+ 129              	Timer_UsbSuspend_backup:
+ 130 0000 00       		.space	1
+ 131 0001 000000   		.text
+ 132              	.Letext0:
+ 133              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 134              		.file 3 ".\\Generated_Source\\PSoC5\\/Timer_UsbSuspend.h"
+ 135              		.section	.debug_info
+ 136 0000 1A010000 		.4byte	0x11a
+ 137 0004 0200     		.2byte	0x2
+ 138 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 139 000a 04       		.byte	0x4
+ 140 000b 01       		.uleb128 0x1
+ 141 000c 4C010000 		.4byte	.LASF18
+ 142 0010 01       		.byte	0x1
+ 143 0011 0D010000 		.4byte	.LASF19
+ 144 0015 6A000000 		.4byte	.LASF20
+ 145 0019 00000000 		.4byte	0x0
+ 146 001d 00000000 		.4byte	0x0
+ 147 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 7
+
+
+ 148 0025 00000000 		.4byte	.Ldebug_line0
+ 149 0029 02       		.uleb128 0x2
+ 150 002a 01       		.byte	0x1
+ 151 002b 06       		.byte	0x6
+ 152 002c 6B010000 		.4byte	.LASF0
+ 153 0030 02       		.uleb128 0x2
+ 154 0031 01       		.byte	0x1
+ 155 0032 08       		.byte	0x8
+ 156 0033 D0000000 		.4byte	.LASF1
+ 157 0037 02       		.uleb128 0x2
+ 158 0038 02       		.byte	0x2
+ 159 0039 05       		.byte	0x5
+ 160 003a 7D010000 		.4byte	.LASF2
+ 161 003e 02       		.uleb128 0x2
+ 162 003f 02       		.byte	0x2
+ 163 0040 07       		.byte	0x7
+ 164 0041 58010000 		.4byte	.LASF3
+ 165 0045 02       		.uleb128 0x2
+ 166 0046 04       		.byte	0x4
+ 167 0047 05       		.byte	0x5
+ 168 0048 3C010000 		.4byte	.LASF4
+ 169 004c 02       		.uleb128 0x2
+ 170 004d 04       		.byte	0x4
+ 171 004e 07       		.byte	0x7
+ 172 004f 58000000 		.4byte	.LASF5
+ 173 0053 02       		.uleb128 0x2
+ 174 0054 08       		.byte	0x8
+ 175 0055 05       		.byte	0x5
+ 176 0056 00000000 		.4byte	.LASF6
+ 177 005a 02       		.uleb128 0x2
+ 178 005b 08       		.byte	0x8
+ 179 005c 07       		.byte	0x7
+ 180 005d B9000000 		.4byte	.LASF7
+ 181 0061 03       		.uleb128 0x3
+ 182 0062 04       		.byte	0x4
+ 183 0063 05       		.byte	0x5
+ 184 0064 696E7400 		.ascii	"int\000"
+ 185 0068 02       		.uleb128 0x2
+ 186 0069 04       		.byte	0x4
+ 187 006a 07       		.byte	0x7
+ 188 006b 0E000000 		.4byte	.LASF8
+ 189 006f 04       		.uleb128 0x4
+ 190 0070 52000000 		.4byte	.LASF12
+ 191 0074 02       		.byte	0x2
+ 192 0075 4C       		.byte	0x4c
+ 193 0076 30000000 		.4byte	0x30
+ 194 007a 02       		.uleb128 0x2
+ 195 007b 04       		.byte	0x4
+ 196 007c 04       		.byte	0x4
+ 197 007d 77010000 		.4byte	.LASF9
+ 198 0081 02       		.uleb128 0x2
+ 199 0082 08       		.byte	0x8
+ 200 0083 04       		.byte	0x4
+ 201 0084 45010000 		.4byte	.LASF10
+ 202 0088 02       		.uleb128 0x2
+ 203 0089 01       		.byte	0x1
+ 204 008a 08       		.byte	0x8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 8
+
+
+ 205 008b A5010000 		.4byte	.LASF11
+ 206 008f 05       		.uleb128 0x5
+ 207 0090 04       		.byte	0x4
+ 208 0091 07       		.byte	0x7
+ 209 0092 06       		.uleb128 0x6
+ 210 0093 01       		.byte	0x1
+ 211 0094 03       		.byte	0x3
+ 212 0095 3C       		.byte	0x3c
+ 213 0096 A9000000 		.4byte	0xa9
+ 214 009a 07       		.uleb128 0x7
+ 215 009b A8000000 		.4byte	.LASF21
+ 216 009f 03       		.byte	0x3
+ 217 00a0 3D       		.byte	0x3d
+ 218 00a1 6F000000 		.4byte	0x6f
+ 219 00a5 02       		.byte	0x2
+ 220 00a6 23       		.byte	0x23
+ 221 00a7 00       		.uleb128 0x0
+ 222 00a8 00       		.byte	0x0
+ 223 00a9 04       		.uleb128 0x4
+ 224 00aa 87010000 		.4byte	.LASF13
+ 225 00ae 03       		.byte	0x3
+ 226 00af 54       		.byte	0x54
+ 227 00b0 92000000 		.4byte	0x92
+ 228 00b4 08       		.uleb128 0x8
+ 229 00b5 01       		.byte	0x1
+ 230 00b6 1B000000 		.4byte	.LASF14
+ 231 00ba 01       		.byte	0x1
+ 232 00bb 58       		.byte	0x58
+ 233 00bc 01       		.byte	0x1
+ 234 00bd 01       		.byte	0x1
+ 235 00be 08       		.uleb128 0x8
+ 236 00bf 01       		.byte	0x1
+ 237 00c0 AA010000 		.4byte	.LASF15
+ 238 00c4 01       		.byte	0x1
+ 239 00c5 2A       		.byte	0x2a
+ 240 00c6 01       		.byte	0x1
+ 241 00c7 01       		.byte	0x1
+ 242 00c8 09       		.uleb128 0x9
+ 243 00c9 BE000000 		.4byte	0xbe
+ 244 00cd 00000000 		.4byte	.LFB0
+ 245 00d1 02000000 		.4byte	.LFE0
+ 246 00d5 01       		.byte	0x1
+ 247 00d6 5D       		.byte	0x5d
+ 248 00d7 09       		.uleb128 0x9
+ 249 00d8 B4000000 		.4byte	0xb4
+ 250 00dc 00000000 		.4byte	.LFB1
+ 251 00e0 02000000 		.4byte	.LFE1
+ 252 00e4 01       		.byte	0x1
+ 253 00e5 5D       		.byte	0x5d
+ 254 00e6 0A       		.uleb128 0xa
+ 255 00e7 01       		.byte	0x1
+ 256 00e8 F5000000 		.4byte	.LASF16
+ 257 00ec 01       		.byte	0x1
+ 258 00ed B6       		.byte	0xb6
+ 259 00ee 01       		.byte	0x1
+ 260 00ef 00000000 		.4byte	.LFB3
+ 261 00f3 14000000 		.4byte	.LFE3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 9
+
+
+ 262 00f7 01       		.byte	0x1
+ 263 00f8 5D       		.byte	0x5d
+ 264 00f9 0A       		.uleb128 0xa
+ 265 00fa 01       		.byte	0x1
+ 266 00fb DE000000 		.4byte	.LASF17
+ 267 00ff 01       		.byte	0x1
+ 268 0100 90       		.byte	0x90
+ 269 0101 01       		.byte	0x1
+ 270 0102 00000000 		.4byte	.LFB2
+ 271 0106 1C000000 		.4byte	.LFE2
+ 272 010a 01       		.byte	0x1
+ 273 010b 5D       		.byte	0x5d
+ 274 010c 0B       		.uleb128 0xb
+ 275 010d 3A000000 		.4byte	.LASF22
+ 276 0111 01       		.byte	0x1
+ 277 0112 14       		.byte	0x14
+ 278 0113 A9000000 		.4byte	0xa9
+ 279 0117 05       		.byte	0x5
+ 280 0118 03       		.byte	0x3
+ 281 0119 00000000 		.4byte	Timer_UsbSuspend_backup
+ 282 011d 00       		.byte	0x0
+ 283              		.section	.debug_abbrev
+ 284 0000 01       		.uleb128 0x1
+ 285 0001 11       		.uleb128 0x11
+ 286 0002 01       		.byte	0x1
+ 287 0003 25       		.uleb128 0x25
+ 288 0004 0E       		.uleb128 0xe
+ 289 0005 13       		.uleb128 0x13
+ 290 0006 0B       		.uleb128 0xb
+ 291 0007 03       		.uleb128 0x3
+ 292 0008 0E       		.uleb128 0xe
+ 293 0009 1B       		.uleb128 0x1b
+ 294 000a 0E       		.uleb128 0xe
+ 295 000b 11       		.uleb128 0x11
+ 296 000c 01       		.uleb128 0x1
+ 297 000d 52       		.uleb128 0x52
+ 298 000e 01       		.uleb128 0x1
+ 299 000f 55       		.uleb128 0x55
+ 300 0010 06       		.uleb128 0x6
+ 301 0011 10       		.uleb128 0x10
+ 302 0012 06       		.uleb128 0x6
+ 303 0013 00       		.byte	0x0
+ 304 0014 00       		.byte	0x0
+ 305 0015 02       		.uleb128 0x2
+ 306 0016 24       		.uleb128 0x24
+ 307 0017 00       		.byte	0x0
+ 308 0018 0B       		.uleb128 0xb
+ 309 0019 0B       		.uleb128 0xb
+ 310 001a 3E       		.uleb128 0x3e
+ 311 001b 0B       		.uleb128 0xb
+ 312 001c 03       		.uleb128 0x3
+ 313 001d 0E       		.uleb128 0xe
+ 314 001e 00       		.byte	0x0
+ 315 001f 00       		.byte	0x0
+ 316 0020 03       		.uleb128 0x3
+ 317 0021 24       		.uleb128 0x24
+ 318 0022 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 10
+
+
+ 319 0023 0B       		.uleb128 0xb
+ 320 0024 0B       		.uleb128 0xb
+ 321 0025 3E       		.uleb128 0x3e
+ 322 0026 0B       		.uleb128 0xb
+ 323 0027 03       		.uleb128 0x3
+ 324 0028 08       		.uleb128 0x8
+ 325 0029 00       		.byte	0x0
+ 326 002a 00       		.byte	0x0
+ 327 002b 04       		.uleb128 0x4
+ 328 002c 16       		.uleb128 0x16
+ 329 002d 00       		.byte	0x0
+ 330 002e 03       		.uleb128 0x3
+ 331 002f 0E       		.uleb128 0xe
+ 332 0030 3A       		.uleb128 0x3a
+ 333 0031 0B       		.uleb128 0xb
+ 334 0032 3B       		.uleb128 0x3b
+ 335 0033 0B       		.uleb128 0xb
+ 336 0034 49       		.uleb128 0x49
+ 337 0035 13       		.uleb128 0x13
+ 338 0036 00       		.byte	0x0
+ 339 0037 00       		.byte	0x0
+ 340 0038 05       		.uleb128 0x5
+ 341 0039 24       		.uleb128 0x24
+ 342 003a 00       		.byte	0x0
+ 343 003b 0B       		.uleb128 0xb
+ 344 003c 0B       		.uleb128 0xb
+ 345 003d 3E       		.uleb128 0x3e
+ 346 003e 0B       		.uleb128 0xb
+ 347 003f 00       		.byte	0x0
+ 348 0040 00       		.byte	0x0
+ 349 0041 06       		.uleb128 0x6
+ 350 0042 13       		.uleb128 0x13
+ 351 0043 01       		.byte	0x1
+ 352 0044 0B       		.uleb128 0xb
+ 353 0045 0B       		.uleb128 0xb
+ 354 0046 3A       		.uleb128 0x3a
+ 355 0047 0B       		.uleb128 0xb
+ 356 0048 3B       		.uleb128 0x3b
+ 357 0049 0B       		.uleb128 0xb
+ 358 004a 01       		.uleb128 0x1
+ 359 004b 13       		.uleb128 0x13
+ 360 004c 00       		.byte	0x0
+ 361 004d 00       		.byte	0x0
+ 362 004e 07       		.uleb128 0x7
+ 363 004f 0D       		.uleb128 0xd
+ 364 0050 00       		.byte	0x0
+ 365 0051 03       		.uleb128 0x3
+ 366 0052 0E       		.uleb128 0xe
+ 367 0053 3A       		.uleb128 0x3a
+ 368 0054 0B       		.uleb128 0xb
+ 369 0055 3B       		.uleb128 0x3b
+ 370 0056 0B       		.uleb128 0xb
+ 371 0057 49       		.uleb128 0x49
+ 372 0058 13       		.uleb128 0x13
+ 373 0059 38       		.uleb128 0x38
+ 374 005a 0A       		.uleb128 0xa
+ 375 005b 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 11
+
+
+ 376 005c 00       		.byte	0x0
+ 377 005d 08       		.uleb128 0x8
+ 378 005e 2E       		.uleb128 0x2e
+ 379 005f 00       		.byte	0x0
+ 380 0060 3F       		.uleb128 0x3f
+ 381 0061 0C       		.uleb128 0xc
+ 382 0062 03       		.uleb128 0x3
+ 383 0063 0E       		.uleb128 0xe
+ 384 0064 3A       		.uleb128 0x3a
+ 385 0065 0B       		.uleb128 0xb
+ 386 0066 3B       		.uleb128 0x3b
+ 387 0067 0B       		.uleb128 0xb
+ 388 0068 27       		.uleb128 0x27
+ 389 0069 0C       		.uleb128 0xc
+ 390 006a 20       		.uleb128 0x20
+ 391 006b 0B       		.uleb128 0xb
+ 392 006c 00       		.byte	0x0
+ 393 006d 00       		.byte	0x0
+ 394 006e 09       		.uleb128 0x9
+ 395 006f 2E       		.uleb128 0x2e
+ 396 0070 00       		.byte	0x0
+ 397 0071 31       		.uleb128 0x31
+ 398 0072 13       		.uleb128 0x13
+ 399 0073 11       		.uleb128 0x11
+ 400 0074 01       		.uleb128 0x1
+ 401 0075 12       		.uleb128 0x12
+ 402 0076 01       		.uleb128 0x1
+ 403 0077 40       		.uleb128 0x40
+ 404 0078 0A       		.uleb128 0xa
+ 405 0079 00       		.byte	0x0
+ 406 007a 00       		.byte	0x0
+ 407 007b 0A       		.uleb128 0xa
+ 408 007c 2E       		.uleb128 0x2e
+ 409 007d 00       		.byte	0x0
+ 410 007e 3F       		.uleb128 0x3f
+ 411 007f 0C       		.uleb128 0xc
+ 412 0080 03       		.uleb128 0x3
+ 413 0081 0E       		.uleb128 0xe
+ 414 0082 3A       		.uleb128 0x3a
+ 415 0083 0B       		.uleb128 0xb
+ 416 0084 3B       		.uleb128 0x3b
+ 417 0085 0B       		.uleb128 0xb
+ 418 0086 27       		.uleb128 0x27
+ 419 0087 0C       		.uleb128 0xc
+ 420 0088 11       		.uleb128 0x11
+ 421 0089 01       		.uleb128 0x1
+ 422 008a 12       		.uleb128 0x12
+ 423 008b 01       		.uleb128 0x1
+ 424 008c 40       		.uleb128 0x40
+ 425 008d 0A       		.uleb128 0xa
+ 426 008e 00       		.byte	0x0
+ 427 008f 00       		.byte	0x0
+ 428 0090 0B       		.uleb128 0xb
+ 429 0091 34       		.uleb128 0x34
+ 430 0092 00       		.byte	0x0
+ 431 0093 03       		.uleb128 0x3
+ 432 0094 0E       		.uleb128 0xe
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 12
+
+
+ 433 0095 3A       		.uleb128 0x3a
+ 434 0096 0B       		.uleb128 0xb
+ 435 0097 3B       		.uleb128 0x3b
+ 436 0098 0B       		.uleb128 0xb
+ 437 0099 49       		.uleb128 0x49
+ 438 009a 13       		.uleb128 0x13
+ 439 009b 02       		.uleb128 0x2
+ 440 009c 0A       		.uleb128 0xa
+ 441 009d 00       		.byte	0x0
+ 442 009e 00       		.byte	0x0
+ 443 009f 00       		.byte	0x0
+ 444              		.section	.debug_pubnames,"",%progbits
+ 445 0000 88000000 		.4byte	0x88
+ 446 0004 0200     		.2byte	0x2
+ 447 0006 00000000 		.4byte	.Ldebug_info0
+ 448 000a 1E010000 		.4byte	0x11e
+ 449 000e C8000000 		.4byte	0xc8
+ 450 0012 54696D65 		.ascii	"Timer_UsbSuspend_SaveConfig\000"
+ 450      725F5573 
+ 450      62537573 
+ 450      70656E64 
+ 450      5F536176 
+ 451 002e D7000000 		.4byte	0xd7
+ 452 0032 54696D65 		.ascii	"Timer_UsbSuspend_RestoreConfig\000"
+ 452      725F5573 
+ 452      62537573 
+ 452      70656E64 
+ 452      5F526573 
+ 453 0051 E6000000 		.4byte	0xe6
+ 454 0055 54696D65 		.ascii	"Timer_UsbSuspend_Wakeup\000"
+ 454      725F5573 
+ 454      62537573 
+ 454      70656E64 
+ 454      5F57616B 
+ 455 006d F9000000 		.4byte	0xf9
+ 456 0071 54696D65 		.ascii	"Timer_UsbSuspend_Sleep\000"
+ 456      725F5573 
+ 456      62537573 
+ 456      70656E64 
+ 456      5F536C65 
+ 457 0088 00000000 		.4byte	0x0
+ 458              		.section	.debug_aranges,"",%progbits
+ 459 0000 34000000 		.4byte	0x34
+ 460 0004 0200     		.2byte	0x2
+ 461 0006 00000000 		.4byte	.Ldebug_info0
+ 462 000a 04       		.byte	0x4
+ 463 000b 00       		.byte	0x0
+ 464 000c 0000     		.2byte	0x0
+ 465 000e 0000     		.2byte	0x0
+ 466 0010 00000000 		.4byte	.LFB0
+ 467 0014 02000000 		.4byte	.LFE0-.LFB0
+ 468 0018 00000000 		.4byte	.LFB1
+ 469 001c 02000000 		.4byte	.LFE1-.LFB1
+ 470 0020 00000000 		.4byte	.LFB3
+ 471 0024 14000000 		.4byte	.LFE3-.LFB3
+ 472 0028 00000000 		.4byte	.LFB2
+ 473 002c 1C000000 		.4byte	.LFE2-.LFB2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 13
+
+
+ 474 0030 00000000 		.4byte	0x0
+ 475 0034 00000000 		.4byte	0x0
+ 476              		.section	.debug_ranges,"",%progbits
+ 477              	.Ldebug_ranges0:
+ 478 0000 00000000 		.4byte	.Ltext0
+ 479 0004 00000000 		.4byte	.Letext0
+ 480 0008 00000000 		.4byte	.LFB0
+ 481 000c 02000000 		.4byte	.LFE0
+ 482 0010 00000000 		.4byte	.LFB1
+ 483 0014 02000000 		.4byte	.LFE1
+ 484 0018 00000000 		.4byte	.LFB3
+ 485 001c 14000000 		.4byte	.LFE3
+ 486 0020 00000000 		.4byte	.LFB2
+ 487 0024 1C000000 		.4byte	.LFE2
+ 488 0028 00000000 		.4byte	0x0
+ 489 002c 00000000 		.4byte	0x0
+ 490              		.section	.debug_str,"MS",%progbits,1
+ 491              	.LASF6:
+ 492 0000 6C6F6E67 		.ascii	"long long int\000"
+ 492      206C6F6E 
+ 492      6720696E 
+ 492      7400
+ 493              	.LASF8:
+ 494 000e 756E7369 		.ascii	"unsigned int\000"
+ 494      676E6564 
+ 494      20696E74 
+ 494      00
+ 495              	.LASF14:
+ 496 001b 54696D65 		.ascii	"Timer_UsbSuspend_RestoreConfig\000"
+ 496      725F5573 
+ 496      62537573 
+ 496      70656E64 
+ 496      5F526573 
+ 497              	.LASF22:
+ 498 003a 54696D65 		.ascii	"Timer_UsbSuspend_backup\000"
+ 498      725F5573 
+ 498      62537573 
+ 498      70656E64 
+ 498      5F626163 
+ 499              	.LASF12:
+ 500 0052 75696E74 		.ascii	"uint8\000"
+ 500      3800
+ 501              	.LASF5:
+ 502 0058 6C6F6E67 		.ascii	"long unsigned int\000"
+ 502      20756E73 
+ 502      69676E65 
+ 502      6420696E 
+ 502      7400
+ 503              	.LASF20:
+ 504 006a 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 504      665C486F 
+ 504      6D655C44 
+ 504      65736B74 
+ 504      6F705C4B 
+ 505 0097 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 505      69745072 
+ 505      6F672E63 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 14
+
+
+ 505      7964736E 
+ 505      00
+ 506              	.LASF21:
+ 507 00a8 54696D65 		.ascii	"TimerEnableState\000"
+ 507      72456E61 
+ 507      626C6553 
+ 507      74617465 
+ 507      00
+ 508              	.LASF7:
+ 509 00b9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 509      206C6F6E 
+ 509      6720756E 
+ 509      7369676E 
+ 509      65642069 
+ 510              	.LASF1:
+ 511 00d0 756E7369 		.ascii	"unsigned char\000"
+ 511      676E6564 
+ 511      20636861 
+ 511      7200
+ 512              	.LASF17:
+ 513 00de 54696D65 		.ascii	"Timer_UsbSuspend_Sleep\000"
+ 513      725F5573 
+ 513      62537573 
+ 513      70656E64 
+ 513      5F536C65 
+ 514              	.LASF16:
+ 515 00f5 54696D65 		.ascii	"Timer_UsbSuspend_Wakeup\000"
+ 515      725F5573 
+ 515      62537573 
+ 515      70656E64 
+ 515      5F57616B 
+ 516              	.LASF19:
+ 517 010d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Timer_UsbSuspend_PM.c\000"
+ 517      6E657261 
+ 517      7465645F 
+ 517      536F7572 
+ 517      63655C50 
+ 518              	.LASF4:
+ 519 013c 6C6F6E67 		.ascii	"long int\000"
+ 519      20696E74 
+ 519      00
+ 520              	.LASF10:
+ 521 0145 646F7562 		.ascii	"double\000"
+ 521      6C6500
+ 522              	.LASF18:
+ 523 014c 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 523      4320342E 
+ 523      342E3100 
+ 524              	.LASF3:
+ 525 0158 73686F72 		.ascii	"short unsigned int\000"
+ 525      7420756E 
+ 525      7369676E 
+ 525      65642069 
+ 525      6E7400
+ 526              	.LASF0:
+ 527 016b 7369676E 		.ascii	"signed char\000"
+ 527      65642063 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciKGBW8.s 			page 15
+
+
+ 527      68617200 
+ 528              	.LASF9:
+ 529 0177 666C6F61 		.ascii	"float\000"
+ 529      7400
+ 530              	.LASF2:
+ 531 017d 73686F72 		.ascii	"short int\000"
+ 531      7420696E 
+ 531      7400
+ 532              	.LASF13:
+ 533 0187 54696D65 		.ascii	"Timer_UsbSuspend_backupStruct\000"
+ 533      725F5573 
+ 533      62537573 
+ 533      70656E64 
+ 533      5F626163 
+ 534              	.LASF11:
+ 535 01a5 63686172 		.ascii	"char\000"
+ 535      00
+ 536              	.LASF15:
+ 537 01aa 54696D65 		.ascii	"Timer_UsbSuspend_SaveConfig\000"
+ 537      725F5573 
+ 537      62537573 
+ 537      70656E64 
+ 537      5F536176 
+ 538              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

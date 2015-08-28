@@ -1,0 +1,56 @@
+Last Modified Date & Time: 08/26/2015 18:19:45
+
+Project : KitProg_Bootloader
+		Schematic : TopDesign/TopDesign.cysch
+
+		Bootloader	v 1.0	v 1.10
+		Pin_PSoC4A_XRES	v 1.80	v 1.90
+		Pin_Status_LED	v 1.80	v 1.90
+		PWM	v 2.30	v 2.40
+
+		Schematic : USBFS_v2_51/USBFS_v2_51.cysch
+
+		Dm	v 1.80	v 1.90
+		VBUS	v 1.80	v 1.90
+		Dp	v 1.80	v 1.90
+		Dp_1	v 1.80	v 1.90
+
+		Schematic : USBFS_v2_51/USBMIDI.cymacro
+
+		MIDI_IN1	v 1.80	v 1.90
+		MIDI_OUT1	v 1.80	v 1.90
+
+Project : KitProg
+		Schematic : TopDesign/TopDesign.cysch
+
+		Pin_StatusLED	v 1.80	v 1.90
+		SWDCLK	v 1.80	v 1.90
+		SWDXRES	v 1.80	v 1.90
+		SWDIO	v 1.80	v 1.90
+		Pin_VTarget	v 1.80	v 1.90
+		Pin_HWVersionA	v 1.80	v 1.90
+		Pin_I2C_SCL	v 1.80	v 1.90
+		Pin_I2C_SDA	v 1.80	v 1.90
+		Pin_UART_Tx	v 1.80	v 1.90
+		Pin_UART_Rx	v 1.80	v 1.90
+		Pin_SDAPullUp_Enable	v 1.80	v 1.90
+		Pin_SCLPullUp_Enable	v 1.80	v 1.90
+		Pin_HWVersionB	v 1.80	v 1.90
+		Pin_HWVersionC	v 1.80	v 1.90
+		Pin_HWVersionD	v 1.80	v 1.90
+		Pin_HWVersionE	v 1.80	v 1.90
+		Pin_HWVersionF	v 1.80	v 1.90
+		Bootloadable	v 1.0	v 1.10
+		Timer_UsbSuspend	v 2.40	v 2.50
+
+Project : KitProg_Bootloader
+		Design Wide APIs
+
+		cy_boot	v 3.30	v 3.40
+
+Project : KitProg
+		Design Wide APIs
+
+		cy_boot	v 3.30	v 3.40
+
+

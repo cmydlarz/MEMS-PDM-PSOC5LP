@@ -1,0 +1,1024 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"UART_Bridge_INT.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 C0000000 		.text
+  20      02007900 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.UART_Bridge_RXISR,"ax",%progbits
+  24              		.align	1
+  25              		.global	UART_Bridge_RXISR
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	UART_Bridge_RXISR, %function
+  29              	UART_Bridge_RXISR:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\UART_Bridge_INT.c"
+   1:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * File Name: UART_Bridge_INT.c
+   3:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * Version 2.30
+   4:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *
+   5:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * Description:
+   6:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *  This file provides all Interrupt Service functionality of the UART component
+   7:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *
+   8:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * Note:
+   9:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *  Any unusual or non-standard behavior should be noted here. Other-
+  10:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *  wise, this section should remain blank.
+  11:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *
+  12:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** ********************************************************************************
+  13:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** *******************************************************************************/
+  18:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  19:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** #include "UART_Bridge.h"
+  20:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** #include "CyLib.h"
+  21:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  22:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** /***************************************
+  24:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** * Custom Declratations
+  25:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** ***************************************/
+  26:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** /* `#START CUSTOM_DECLARATIONS` Place your declaration here */
+  27:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  28:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** /* `#END` */
+  29:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  30:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** #if( (UART_Bridge_RX_ENABLED || UART_Bridge_HD_ENABLED) && \
+  31:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****      (UART_Bridge_RXBUFFERSIZE > UART_Bridge_FIFO_LENGTH))
+  32:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  33:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  34:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     /*******************************************************************************
+  35:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Function Name: UART_Bridge_RXISR
+  36:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     ********************************************************************************
+  37:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+  38:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Summary:
+  39:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  Interrupt Service Routine for RX portion of the UART
+  40:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+  41:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Parameters:
+  42:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  None.
+  43:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+  44:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Return:
+  45:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  None.
+  46:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+  47:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Global Variables:
+  48:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBuffer - RAM buffer pointer for save received data.
+  49:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBufferWrite - cyclic index for write to rxBuffer,
+  50:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     increments after each byte saved to buffer.
+  51:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBufferRead - cyclic index for read from rxBuffer,
+  52:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     checked to detect overflow condition.
+  53:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBufferOverflow - software overflow flag. Set to one
+  54:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     when UART_Bridge_rxBufferWrite index overtakes
+  55:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     UART_Bridge_rxBufferRead index.
+  56:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBufferLoopDetect - additional variable to detect overflow.
+  57:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     Set to one when UART_Bridge_rxBufferWrite is equal to
+  58:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *    UART_Bridge_rxBufferRead
+  59:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxAddressMode - this variable contains the Address mode,
+  60:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     selected in customizer or set by UART_SetRxAddressMode() API.
+  61:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxAddressDetected - set to 1 when correct address received,
+  62:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     and analysed to store following addressed data bytes to the buffer.
+  63:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     When not correct address received, set to 0 to skip following data bytes.
+  64:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+  65:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *******************************************************************************/
+  66:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     CY_ISR(UART_Bridge_RXISR)
+  67:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     {
+  32              		.loc 1 67 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37 0000 1FE0     		b	.L5
+  38              	.LVL0:
+  39              	.L6:
+  68:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         uint8 readData;
+  69:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         uint8 increment_pointer = 0u;
+  70:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #if(CY_PSOC3)
+  71:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             uint8 int_en;
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 3
+
+
+  72:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #endif /* CY_PSOC3 */
+  73:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  74:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* User code required at start of ISR */
+  75:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#START UART_Bridge_RXISR_START` */
+  76:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  77:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#END` */
+  78:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  79:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #if(CY_PSOC3)   /* Make sure nested interrupt is enabled */
+  80:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             int_en = EA;
+  81:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             CyGlobalIntEnable;
+  82:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #endif /* CY_PSOC3 */
+  83:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  84:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         readData = UART_Bridge_RXSTATUS_REG;
+  85:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  86:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         if((readData & (UART_Bridge_RX_STS_BREAK | UART_Bridge_RX_STS_PAR_ERROR |
+  87:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         UART_Bridge_RX_STS_STOP_ERROR | UART_Bridge_RX_STS_OVERRUN)) != 0u)
+  88:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         {
+  89:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* ERROR handling. */
+  90:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* `#START UART_Bridge_RXISR_ERROR` */
+  91:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  92:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* `#END` */
+  93:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         }
+  94:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  95:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         while((readData & UART_Bridge_RX_STS_FIFO_NOTEMPTY) != 0u)
+  96:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         {
+  97:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+  98:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             #if (UART_Bridge_RXHW_ADDRESS_ENABLED)
+  99:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 if(UART_Bridge_rxAddressMode == (uint8)UART_Bridge__B_UART__AM_SW_DETECT_TO_BUFFER)
+ 100:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 {
+ 101:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     if((readData & UART_Bridge_RX_STS_MRKSPC) != 0u)
+ 102:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     {
+ 103:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         if ((readData & UART_Bridge_RX_STS_ADDR_MATCH) != 0u)
+ 104:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         {
+ 105:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                             UART_Bridge_rxAddressDetected = 1u;
+ 106:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         }
+ 107:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         else
+ 108:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         {
+ 109:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                             UART_Bridge_rxAddressDetected = 0u;
+ 110:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         }
+ 111:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     }
+ 112:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 113:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     readData = UART_Bridge_RXDATA_REG;
+ 114:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     if(UART_Bridge_rxAddressDetected != 0u)
+ 115:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     {   /* store only addressed data */
+ 116:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         UART_Bridge_rxBuffer[UART_Bridge_rxBufferWrite] = readData;
+ 117:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         increment_pointer = 1u;
+ 118:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     }
+ 119:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 }
+ 120:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 else /* without software addressing */
+ 121:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 {
+ 122:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     UART_Bridge_rxBuffer[UART_Bridge_rxBufferWrite] = UART_Bridge_RXDATA_REG;
+ 123:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     increment_pointer = 1u;
+ 124:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 }
+ 125:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             #else  /* without addressing */
+ 126:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 UART_Bridge_rxBuffer[UART_Bridge_rxBufferWrite] = UART_Bridge_RXDATA_REG;
+  40              		.loc 1 126 0
+  41 0002 134A     		ldr	r2, .L9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 4
+
+
+  42 0004 134B     		ldr	r3, .L9+4
+  43              	.LVL1:
+  44 0006 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  45 0008 1178     		ldrb	r1, [r2, #0]	@ zero_extendqisi2
+  46 000a 134A     		ldr	r2, .L9+8
+  47 000c D154     		strb	r1, [r2, r3]
+ 127:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 increment_pointer = 1u;
+ 128:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             #endif /* End SW_DETECT_TO_BUFFER */
+ 129:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 130:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* do not increment buffer pointer when skip not adderessed data */
+ 131:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             if( increment_pointer != 0u )
+ 132:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             {
+ 133:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 if(UART_Bridge_rxBufferLoopDetect != 0u)
+  48              		.loc 1 133 0
+  49 000e 134B     		ldr	r3, .L9+12
+  50 0010 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  51 0012 13B1     		cbz	r3, .L3
+ 134:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 {   /* Set Software Buffer status Overflow */
+ 135:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     UART_Bridge_rxBufferOverflow = 1u;
+  52              		.loc 1 135 0
+  53 0014 124B     		ldr	r3, .L9+16
+  54 0016 0122     		movs	r2, #1
+  55 0018 1A70     		strb	r2, [r3, #0]
+  56              	.L3:
+ 136:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 }
+ 137:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 /* Set next pointer. */
+ 138:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 UART_Bridge_rxBufferWrite++;
+  57              		.loc 1 138 0
+  58 001a 0E4B     		ldr	r3, .L9+4
+  59 001c 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  60 001e 0132     		adds	r2, r2, #1
+  61 0020 D2B2     		uxtb	r2, r2
+  62              	.LVL2:
+  63 0022 1A70     		strb	r2, [r3, #0]
+ 139:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 140:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 /* Check pointer for a loop condition */
+ 141:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 if(UART_Bridge_rxBufferWrite >= UART_Bridge_RXBUFFERSIZE)
+  64              		.loc 1 141 0
+  65 0024 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  66              	.LVL3:
+  67 0026 12F0800F 		tst	r2, #128
+  68 002a 01D0     		beq	.L4
+ 142:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 {
+ 143:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     UART_Bridge_rxBufferWrite = 0u;
+  69              		.loc 1 143 0
+  70 002c 0022     		movs	r2, #0
+  71 002e 1A70     		strb	r2, [r3, #0]
+  72              	.L4:
+ 144:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 }
+ 145:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 /* Detect pre-overload condition and set flag */
+ 146:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 if(UART_Bridge_rxBufferWrite == UART_Bridge_rxBufferRead)
+  73              		.loc 1 146 0
+  74 0030 084B     		ldr	r3, .L9+4
+  75 0032 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+  76 0034 0B4B     		ldr	r3, .L9+20
+  77 0036 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  78 0038 9A42     		cmp	r2, r3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 5
+
+
+  79 003a 02D1     		bne	.L5
+ 147:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 {
+ 148:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     UART_Bridge_rxBufferLoopDetect = 1u;
+  80              		.loc 1 148 0
+  81 003c 074B     		ldr	r3, .L9+12
+  82 003e 0122     		movs	r2, #1
+  83 0040 1A70     		strb	r2, [r3, #0]
+  84              	.L5:
+ 149:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     /* When Hardware Flow Control selected */
+ 150:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     #if(UART_Bridge_FLOW_CONTROL != 0u)
+ 151:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     /* Disable RX interrupt mask, it will be enabled when user read data from the b
+ 152:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         UART_Bridge_RXSTATUS_MASK_REG  &= (uint8)~UART_Bridge_RX_STS_FIFO_NOTEMPTY;
+ 153:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         CyIntClearPending(UART_Bridge_RX_VECT_NUM);
+ 154:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                         break; /* Break the reading of the FIFO loop, leave the data there for gene
+ 155:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                     #endif /* End UART_Bridge_FLOW_CONTROL != 0 */
+ 156:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 }
+ 157:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             }
+ 158:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 159:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* Check again if there is data. */
+ 160:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             readData = UART_Bridge_RXSTATUS_REG;
+  85              		.loc 1 160 0
+  86 0042 094B     		ldr	r3, .L9+24
+  87 0044 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  88              		.loc 1 95 0
+  89 0046 13F0200F 		tst	r3, #32
+  90              	.LVL4:
+  91 004a DAD1     		bne	.L6
+ 161:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         }
+ 162:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 163:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* User code required at end of ISR (Optional) */
+ 164:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#START UART_Bridge_RXISR_END` */
+ 165:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 166:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#END` */
+ 167:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 168:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #if(CY_PSOC3)
+ 169:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             EA = int_en;
+ 170:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #endif /* CY_PSOC3 */
+ 171:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 172:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     }
+  92              		.loc 1 172 0
+  93 004c 7047     		bx	lr
+  94              	.L10:
+  95 004e 00BF     		.align	2
+  96              	.L9:
+  97 0050 40640040 		.word	1073767488
+  98 0054 00000000 		.word	UART_Bridge_rxBufferWrite
+  99 0058 00000000 		.word	UART_Bridge_rxBuffer
+ 100 005c 00000000 		.word	UART_Bridge_rxBufferLoopDetect
+ 101 0060 00000000 		.word	UART_Bridge_rxBufferOverflow
+ 102 0064 00000000 		.word	UART_Bridge_rxBufferRead
+ 103 0068 64640040 		.word	1073767524
+ 104              		.cfi_endproc
+ 105              	.LFE0:
+ 106              		.size	UART_Bridge_RXISR, .-UART_Bridge_RXISR
+ 107              		.section	.text.UART_Bridge_TXISR,"ax",%progbits
+ 108              		.align	1
+ 109              		.global	UART_Bridge_TXISR
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 6
+
+
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.type	UART_Bridge_TXISR, %function
+ 113              	UART_Bridge_TXISR:
+ 114              	.LFB1:
+ 173:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 174:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** #endif /* End UART_Bridge_RX_ENABLED && (UART_Bridge_RXBUFFERSIZE > UART_Bridge_FIFO_LENGTH) */
+ 175:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 176:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 177:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** #if(UART_Bridge_TX_ENABLED && (UART_Bridge_TXBUFFERSIZE > UART_Bridge_FIFO_LENGTH))
+ 178:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 179:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 180:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     /*******************************************************************************
+ 181:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Function Name: UART_Bridge_TXISR
+ 182:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     ********************************************************************************
+ 183:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+ 184:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Summary:
+ 185:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Interrupt Service Routine for the TX portion of the UART
+ 186:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+ 187:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Parameters:
+ 188:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  None.
+ 189:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+ 190:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Return:
+ 191:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  None.
+ 192:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+ 193:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     * Global Variables:
+ 194:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_txBuffer - RAM buffer pointer for transmit data from.
+ 195:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_txBufferRead - cyclic index for read and transmit data
+ 196:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     from txBuffer, increments after each transmited byte.
+ 197:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *  UART_Bridge_rxBufferWrite - cyclic index for write to txBuffer,
+ 198:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *     checked to detect available for transmission bytes.
+ 199:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *
+ 200:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     *******************************************************************************/
+ 201:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     CY_ISR(UART_Bridge_TXISR)
+ 202:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****     {
+ 115              		.loc 1 202 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 203:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 204:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #if(CY_PSOC3)
+ 205:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             uint8 int_en;
+ 206:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #endif /* CY_PSOC3 */
+ 207:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 208:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* User code required at start of ISR */
+ 209:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#START UART_Bridge_TXISR_START` */
+ 210:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 211:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         /* `#END` */
+ 212:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 213:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #if(CY_PSOC3)   /* Make sure nested interrupt is enabled */
+ 214:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             int_en = EA;
+ 215:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             CyGlobalIntEnable;
+ 216:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         #endif /* CY_PSOC3 */
+ 217:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 218:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         while((UART_Bridge_txBufferRead != UART_Bridge_txBufferWrite) &&
+ 120              		.loc 1 218 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 7
+
+
+ 121 0000 0D4B     		ldr	r3, .L17
+ 122 0002 1978     		ldrb	r1, [r3, #0]	@ zero_extendqisi2
+ 123 0004 0EE0     		b	.L12
+ 124              	.L15:
+ 219:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****              ((UART_Bridge_TXSTATUS_REG & UART_Bridge_TX_STS_FIFO_FULL) == 0u))
+ 220:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****         {
+ 221:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* Check pointer. */
+ 222:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             if(UART_Bridge_txBufferRead >= UART_Bridge_TXBUFFERSIZE)
+ 125              		.loc 1 222 0
+ 126 0006 1878     		ldrb	r0, [r3, #0]	@ zero_extendqisi2
+ 127 0008 10F0800F 		tst	r0, #128
+ 223:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             {
+ 224:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****                 UART_Bridge_txBufferRead = 0u;
+ 128              		.loc 1 224 0
+ 129 000c 18BF     		it	ne
+ 130 000e 1A70     		strbne	r2, [r3, #0]
+ 225:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             }
+ 226:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 227:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             UART_Bridge_TXDATA_REG = UART_Bridge_txBuffer[UART_Bridge_txBufferRead];
+ 131              		.loc 1 227 0
+ 132 0010 0A4B     		ldr	r3, .L17+4
+ 133 0012 0B48     		ldr	r0, .L17+8
+ 134 0014 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 135 0016 805C     		ldrb	r0, [r0, r2]	@ zero_extendqisi2
+ 136 0018 0A4A     		ldr	r2, .L17+12
+ 137 001a 1070     		strb	r0, [r2, #0]
+ 228:.\Generated_Source\PSoC5/UART_Bridge_INT.c **** 
+ 229:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             /* Set next pointer. */
+ 230:.\Generated_Source\PSoC5/UART_Bridge_INT.c ****             UART_Bridge_txBufferRead++;
+ 138              		.loc 1 230 0
+ 139 001c 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 140 001e 0132     		adds	r2, r2, #1
+ 141 0020 D2B2     		uxtb	r2, r2
+ 142              	.LVL5:
+ 143 0022 1A70     		strb	r2, [r3, #0]
+ 144              	.L12:
+ 145              		.loc 1 218 0
+ 146 0024 054B     		ldr	r3, .L17+4
+ 147 0026 1A78     		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 148              	.LVL6:
+ 149 0028 8A42     		cmp	r2, r1
+ 150 002a 04D0     		beq	.L16
+ 151              		.loc 1 219 0
+ 152 002c 064A     		ldr	r2, .L17+16
+ 153 002e 1278     		ldrb	r2, [r2, #0]	@ zero_extendqisi2
+ 154              		.loc 1 218 0
+ 155 0030 12F00402 		ands	r2, r2, #4
+ 156 0034 E7D0     		beq	.L15
+ 157              	.L16:
+ 158 0036 7047     		bx	lr
+ 159              	.L18:
+ 160              		.align	2
+ 161              	.L17:
+ 162 0038 00000000 		.word	UART_Bridge_txBufferWrite
+ 163 003c 00000000 		.word	UART_Bridge_txBufferRead
+ 164 0040 00000000 		.word	UART_Bridge_txBuffer
+ 165 0044 42640040 		.word	1073767490
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 8
+
+
+ 166 0048 62640040 		.word	1073767522
+ 167              		.cfi_endproc
+ 168              	.LFE1:
+ 169              		.size	UART_Bridge_TXISR, .-UART_Bridge_TXISR
+ 170              		.text
+ 171              	.Letext0:
+ 172              		.section	.debug_loc,"",%progbits
+ 173              	.Ldebug_loc0:
+ 174              	.LLST1:
+ 175 0000 02000000 		.4byte	.LVL0
+ 176 0004 06000000 		.4byte	.LVL1
+ 177 0008 0100     		.2byte	0x1
+ 178 000a 53       		.byte	0x53
+ 179 000b 4A000000 		.4byte	.LVL4
+ 180 000f 6C000000 		.4byte	.LFE0
+ 181 0013 0100     		.2byte	0x1
+ 182 0015 53       		.byte	0x53
+ 183 0016 00000000 		.4byte	0x0
+ 184 001a 00000000 		.4byte	0x0
+ 185              		.file 2 ".\\Generated_Source\\PSoC5\\/UART_Bridge.h"
+ 186              		.file 3 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 187              		.section	.debug_info
+ 188 0000 63010000 		.4byte	0x163
+ 189 0004 0200     		.2byte	0x2
+ 190 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 191 000a 04       		.byte	0x4
+ 192 000b 01       		.uleb128 0x1
+ 193 000c 2A010000 		.4byte	.LASF20
+ 194 0010 01       		.byte	0x1
+ 195 0011 55010000 		.4byte	.LASF21
+ 196 0015 74000000 		.4byte	.LASF22
+ 197 0019 00000000 		.4byte	0x0
+ 198 001d 00000000 		.4byte	0x0
+ 199 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 200 0025 00000000 		.4byte	.Ldebug_line0
+ 201 0029 02       		.uleb128 0x2
+ 202 002a 01       		.byte	0x1
+ 203 002b 06       		.byte	0x6
+ 204 002c 49010000 		.4byte	.LASF0
+ 205 0030 02       		.uleb128 0x2
+ 206 0031 01       		.byte	0x1
+ 207 0032 08       		.byte	0x8
+ 208 0033 E4000000 		.4byte	.LASF1
+ 209 0037 02       		.uleb128 0x2
+ 210 0038 02       		.byte	0x2
+ 211 0039 05       		.byte	0x5
+ 212 003a 19010000 		.4byte	.LASF2
+ 213 003e 02       		.uleb128 0x2
+ 214 003f 02       		.byte	0x2
+ 215 0040 07       		.byte	0x7
+ 216 0041 36010000 		.4byte	.LASF3
+ 217 0045 02       		.uleb128 0x2
+ 218 0046 04       		.byte	0x4
+ 219 0047 05       		.byte	0x5
+ 220 0048 10010000 		.4byte	.LASF4
+ 221 004c 02       		.uleb128 0x2
+ 222 004d 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 9
+
+
+ 223 004e 07       		.byte	0x7
+ 224 004f 62000000 		.4byte	.LASF5
+ 225 0053 02       		.uleb128 0x2
+ 226 0054 08       		.byte	0x8
+ 227 0055 05       		.byte	0x5
+ 228 0056 00000000 		.4byte	.LASF6
+ 229 005a 02       		.uleb128 0x2
+ 230 005b 08       		.byte	0x8
+ 231 005c 07       		.byte	0x7
+ 232 005d CD000000 		.4byte	.LASF7
+ 233 0061 03       		.uleb128 0x3
+ 234 0062 04       		.byte	0x4
+ 235 0063 05       		.byte	0x5
+ 236 0064 696E7400 		.ascii	"int\000"
+ 237 0068 02       		.uleb128 0x2
+ 238 0069 04       		.byte	0x4
+ 239 006a 07       		.byte	0x7
+ 240 006b 0E000000 		.4byte	.LASF8
+ 241 006f 04       		.uleb128 0x4
+ 242 0070 5C000000 		.4byte	.LASF23
+ 243 0074 03       		.byte	0x3
+ 244 0075 4C       		.byte	0x4c
+ 245 0076 30000000 		.4byte	0x30
+ 246 007a 02       		.uleb128 0x2
+ 247 007b 04       		.byte	0x4
+ 248 007c 04       		.byte	0x4
+ 249 007d A7010000 		.4byte	.LASF9
+ 250 0081 02       		.uleb128 0x2
+ 251 0082 08       		.byte	0x8
+ 252 0083 04       		.byte	0x4
+ 253 0084 23010000 		.4byte	.LASF10
+ 254 0088 02       		.uleb128 0x2
+ 255 0089 01       		.byte	0x1
+ 256 008a 08       		.byte	0x8
+ 257 008b 0B010000 		.4byte	.LASF11
+ 258 008f 05       		.uleb128 0x5
+ 259 0090 6F000000 		.4byte	0x6f
+ 260 0094 06       		.uleb128 0x6
+ 261 0095 04       		.byte	0x4
+ 262 0096 07       		.byte	0x7
+ 263 0097 07       		.uleb128 0x7
+ 264 0098 01       		.byte	0x1
+ 265 0099 BB000000 		.4byte	.LASF24
+ 266 009d 01       		.byte	0x1
+ 267 009e 42       		.byte	0x42
+ 268 009f 01       		.byte	0x1
+ 269 00a0 00000000 		.4byte	.LFB0
+ 270 00a4 6C000000 		.4byte	.LFE0
+ 271 00a8 01       		.byte	0x1
+ 272 00a9 5D       		.byte	0x5d
+ 273 00aa C9000000 		.4byte	0xc9
+ 274 00ae 08       		.uleb128 0x8
+ 275 00af B2000000 		.4byte	.LASF25
+ 276 00b3 01       		.byte	0x1
+ 277 00b4 44       		.byte	0x44
+ 278 00b5 6F000000 		.4byte	0x6f
+ 279 00b9 00000000 		.4byte	.LLST1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 10
+
+
+ 280 00bd 09       		.uleb128 0x9
+ 281 00be 1B000000 		.4byte	.LASF26
+ 282 00c2 01       		.byte	0x1
+ 283 00c3 45       		.byte	0x45
+ 284 00c4 6F000000 		.4byte	0x6f
+ 285 00c8 00       		.byte	0x0
+ 286 00c9 0A       		.uleb128 0xa
+ 287 00ca 01       		.byte	0x1
+ 288 00cb 95010000 		.4byte	.LASF27
+ 289 00cf 01       		.byte	0x1
+ 290 00d0 C9       		.byte	0xc9
+ 291 00d1 01       		.byte	0x1
+ 292 00d2 00000000 		.4byte	.LFB1
+ 293 00d6 4C000000 		.4byte	.LFE1
+ 294 00da 01       		.byte	0x1
+ 295 00db 5D       		.byte	0x5d
+ 296 00dc 0B       		.uleb128 0xb
+ 297 00dd 6F000000 		.4byte	0x6f
+ 298 00e1 EC000000 		.4byte	0xec
+ 299 00e5 0C       		.uleb128 0xc
+ 300 00e6 94000000 		.4byte	0x94
+ 301 00ea 7F       		.byte	0x7f
+ 302 00eb 00       		.byte	0x0
+ 303 00ec 0D       		.uleb128 0xd
+ 304 00ed 80010000 		.4byte	.LASF12
+ 305 00f1 02       		.byte	0x2
+ 306 00f2 4C01     		.2byte	0x14c
+ 307 00f4 FA000000 		.4byte	0xfa
+ 308 00f8 01       		.byte	0x1
+ 309 00f9 01       		.byte	0x1
+ 310 00fa 05       		.uleb128 0x5
+ 311 00fb DC000000 		.4byte	0xdc
+ 312 00ff 0D       		.uleb128 0xd
+ 313 0100 E4010000 		.4byte	.LASF13
+ 314 0104 02       		.byte	0x2
+ 315 0105 4D01     		.2byte	0x14d
+ 316 0107 8F000000 		.4byte	0x8f
+ 317 010b 01       		.byte	0x1
+ 318 010c 01       		.byte	0x1
+ 319 010d 0D       		.uleb128 0xd
+ 320 010e CA010000 		.4byte	.LASF14
+ 321 0112 02       		.byte	0x2
+ 322 0113 4E01     		.2byte	0x14e
+ 323 0115 6F000000 		.4byte	0x6f
+ 324 0119 01       		.byte	0x1
+ 325 011a 01       		.byte	0x1
+ 326 011b 0D       		.uleb128 0xd
+ 327 011c 47000000 		.4byte	.LASF15
+ 328 0120 02       		.byte	0x2
+ 329 0121 5201     		.2byte	0x152
+ 330 0123 29010000 		.4byte	0x129
+ 331 0127 01       		.byte	0x1
+ 332 0128 01       		.byte	0x1
+ 333 0129 05       		.uleb128 0x5
+ 334 012a DC000000 		.4byte	0xdc
+ 335 012e 0D       		.uleb128 0xd
+ 336 012f F2000000 		.4byte	.LASF16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 11
+
+
+ 337 0133 02       		.byte	0x2
+ 338 0134 5301     		.2byte	0x153
+ 339 0136 8F000000 		.4byte	0x8f
+ 340 013a 01       		.byte	0x1
+ 341 013b 01       		.byte	0x1
+ 342 013c 0D       		.uleb128 0xd
+ 343 013d 2D000000 		.4byte	.LASF17
+ 344 0141 02       		.byte	0x2
+ 345 0142 5401     		.2byte	0x154
+ 346 0144 8F000000 		.4byte	0x8f
+ 347 0148 01       		.byte	0x1
+ 348 0149 01       		.byte	0x1
+ 349 014a 0D       		.uleb128 0xd
+ 350 014b FD010000 		.4byte	.LASF18
+ 351 014f 02       		.byte	0x2
+ 352 0150 5501     		.2byte	0x155
+ 353 0152 8F000000 		.4byte	0x8f
+ 354 0156 01       		.byte	0x1
+ 355 0157 01       		.byte	0x1
+ 356 0158 0D       		.uleb128 0xd
+ 357 0159 AD010000 		.4byte	.LASF19
+ 358 015d 02       		.byte	0x2
+ 359 015e 5601     		.2byte	0x156
+ 360 0160 8F000000 		.4byte	0x8f
+ 361 0164 01       		.byte	0x1
+ 362 0165 01       		.byte	0x1
+ 363 0166 00       		.byte	0x0
+ 364              		.section	.debug_abbrev
+ 365 0000 01       		.uleb128 0x1
+ 366 0001 11       		.uleb128 0x11
+ 367 0002 01       		.byte	0x1
+ 368 0003 25       		.uleb128 0x25
+ 369 0004 0E       		.uleb128 0xe
+ 370 0005 13       		.uleb128 0x13
+ 371 0006 0B       		.uleb128 0xb
+ 372 0007 03       		.uleb128 0x3
+ 373 0008 0E       		.uleb128 0xe
+ 374 0009 1B       		.uleb128 0x1b
+ 375 000a 0E       		.uleb128 0xe
+ 376 000b 11       		.uleb128 0x11
+ 377 000c 01       		.uleb128 0x1
+ 378 000d 52       		.uleb128 0x52
+ 379 000e 01       		.uleb128 0x1
+ 380 000f 55       		.uleb128 0x55
+ 381 0010 06       		.uleb128 0x6
+ 382 0011 10       		.uleb128 0x10
+ 383 0012 06       		.uleb128 0x6
+ 384 0013 00       		.byte	0x0
+ 385 0014 00       		.byte	0x0
+ 386 0015 02       		.uleb128 0x2
+ 387 0016 24       		.uleb128 0x24
+ 388 0017 00       		.byte	0x0
+ 389 0018 0B       		.uleb128 0xb
+ 390 0019 0B       		.uleb128 0xb
+ 391 001a 3E       		.uleb128 0x3e
+ 392 001b 0B       		.uleb128 0xb
+ 393 001c 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 12
+
+
+ 394 001d 0E       		.uleb128 0xe
+ 395 001e 00       		.byte	0x0
+ 396 001f 00       		.byte	0x0
+ 397 0020 03       		.uleb128 0x3
+ 398 0021 24       		.uleb128 0x24
+ 399 0022 00       		.byte	0x0
+ 400 0023 0B       		.uleb128 0xb
+ 401 0024 0B       		.uleb128 0xb
+ 402 0025 3E       		.uleb128 0x3e
+ 403 0026 0B       		.uleb128 0xb
+ 404 0027 03       		.uleb128 0x3
+ 405 0028 08       		.uleb128 0x8
+ 406 0029 00       		.byte	0x0
+ 407 002a 00       		.byte	0x0
+ 408 002b 04       		.uleb128 0x4
+ 409 002c 16       		.uleb128 0x16
+ 410 002d 00       		.byte	0x0
+ 411 002e 03       		.uleb128 0x3
+ 412 002f 0E       		.uleb128 0xe
+ 413 0030 3A       		.uleb128 0x3a
+ 414 0031 0B       		.uleb128 0xb
+ 415 0032 3B       		.uleb128 0x3b
+ 416 0033 0B       		.uleb128 0xb
+ 417 0034 49       		.uleb128 0x49
+ 418 0035 13       		.uleb128 0x13
+ 419 0036 00       		.byte	0x0
+ 420 0037 00       		.byte	0x0
+ 421 0038 05       		.uleb128 0x5
+ 422 0039 35       		.uleb128 0x35
+ 423 003a 00       		.byte	0x0
+ 424 003b 49       		.uleb128 0x49
+ 425 003c 13       		.uleb128 0x13
+ 426 003d 00       		.byte	0x0
+ 427 003e 00       		.byte	0x0
+ 428 003f 06       		.uleb128 0x6
+ 429 0040 24       		.uleb128 0x24
+ 430 0041 00       		.byte	0x0
+ 431 0042 0B       		.uleb128 0xb
+ 432 0043 0B       		.uleb128 0xb
+ 433 0044 3E       		.uleb128 0x3e
+ 434 0045 0B       		.uleb128 0xb
+ 435 0046 00       		.byte	0x0
+ 436 0047 00       		.byte	0x0
+ 437 0048 07       		.uleb128 0x7
+ 438 0049 2E       		.uleb128 0x2e
+ 439 004a 01       		.byte	0x1
+ 440 004b 3F       		.uleb128 0x3f
+ 441 004c 0C       		.uleb128 0xc
+ 442 004d 03       		.uleb128 0x3
+ 443 004e 0E       		.uleb128 0xe
+ 444 004f 3A       		.uleb128 0x3a
+ 445 0050 0B       		.uleb128 0xb
+ 446 0051 3B       		.uleb128 0x3b
+ 447 0052 0B       		.uleb128 0xb
+ 448 0053 27       		.uleb128 0x27
+ 449 0054 0C       		.uleb128 0xc
+ 450 0055 11       		.uleb128 0x11
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 13
+
+
+ 451 0056 01       		.uleb128 0x1
+ 452 0057 12       		.uleb128 0x12
+ 453 0058 01       		.uleb128 0x1
+ 454 0059 40       		.uleb128 0x40
+ 455 005a 0A       		.uleb128 0xa
+ 456 005b 01       		.uleb128 0x1
+ 457 005c 13       		.uleb128 0x13
+ 458 005d 00       		.byte	0x0
+ 459 005e 00       		.byte	0x0
+ 460 005f 08       		.uleb128 0x8
+ 461 0060 34       		.uleb128 0x34
+ 462 0061 00       		.byte	0x0
+ 463 0062 03       		.uleb128 0x3
+ 464 0063 0E       		.uleb128 0xe
+ 465 0064 3A       		.uleb128 0x3a
+ 466 0065 0B       		.uleb128 0xb
+ 467 0066 3B       		.uleb128 0x3b
+ 468 0067 0B       		.uleb128 0xb
+ 469 0068 49       		.uleb128 0x49
+ 470 0069 13       		.uleb128 0x13
+ 471 006a 02       		.uleb128 0x2
+ 472 006b 06       		.uleb128 0x6
+ 473 006c 00       		.byte	0x0
+ 474 006d 00       		.byte	0x0
+ 475 006e 09       		.uleb128 0x9
+ 476 006f 34       		.uleb128 0x34
+ 477 0070 00       		.byte	0x0
+ 478 0071 03       		.uleb128 0x3
+ 479 0072 0E       		.uleb128 0xe
+ 480 0073 3A       		.uleb128 0x3a
+ 481 0074 0B       		.uleb128 0xb
+ 482 0075 3B       		.uleb128 0x3b
+ 483 0076 0B       		.uleb128 0xb
+ 484 0077 49       		.uleb128 0x49
+ 485 0078 13       		.uleb128 0x13
+ 486 0079 00       		.byte	0x0
+ 487 007a 00       		.byte	0x0
+ 488 007b 0A       		.uleb128 0xa
+ 489 007c 2E       		.uleb128 0x2e
+ 490 007d 00       		.byte	0x0
+ 491 007e 3F       		.uleb128 0x3f
+ 492 007f 0C       		.uleb128 0xc
+ 493 0080 03       		.uleb128 0x3
+ 494 0081 0E       		.uleb128 0xe
+ 495 0082 3A       		.uleb128 0x3a
+ 496 0083 0B       		.uleb128 0xb
+ 497 0084 3B       		.uleb128 0x3b
+ 498 0085 0B       		.uleb128 0xb
+ 499 0086 27       		.uleb128 0x27
+ 500 0087 0C       		.uleb128 0xc
+ 501 0088 11       		.uleb128 0x11
+ 502 0089 01       		.uleb128 0x1
+ 503 008a 12       		.uleb128 0x12
+ 504 008b 01       		.uleb128 0x1
+ 505 008c 40       		.uleb128 0x40
+ 506 008d 0A       		.uleb128 0xa
+ 507 008e 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 14
+
+
+ 508 008f 00       		.byte	0x0
+ 509 0090 0B       		.uleb128 0xb
+ 510 0091 01       		.uleb128 0x1
+ 511 0092 01       		.byte	0x1
+ 512 0093 49       		.uleb128 0x49
+ 513 0094 13       		.uleb128 0x13
+ 514 0095 01       		.uleb128 0x1
+ 515 0096 13       		.uleb128 0x13
+ 516 0097 00       		.byte	0x0
+ 517 0098 00       		.byte	0x0
+ 518 0099 0C       		.uleb128 0xc
+ 519 009a 21       		.uleb128 0x21
+ 520 009b 00       		.byte	0x0
+ 521 009c 49       		.uleb128 0x49
+ 522 009d 13       		.uleb128 0x13
+ 523 009e 2F       		.uleb128 0x2f
+ 524 009f 0B       		.uleb128 0xb
+ 525 00a0 00       		.byte	0x0
+ 526 00a1 00       		.byte	0x0
+ 527 00a2 0D       		.uleb128 0xd
+ 528 00a3 34       		.uleb128 0x34
+ 529 00a4 00       		.byte	0x0
+ 530 00a5 03       		.uleb128 0x3
+ 531 00a6 0E       		.uleb128 0xe
+ 532 00a7 3A       		.uleb128 0x3a
+ 533 00a8 0B       		.uleb128 0xb
+ 534 00a9 3B       		.uleb128 0x3b
+ 535 00aa 05       		.uleb128 0x5
+ 536 00ab 49       		.uleb128 0x49
+ 537 00ac 13       		.uleb128 0x13
+ 538 00ad 3F       		.uleb128 0x3f
+ 539 00ae 0C       		.uleb128 0xc
+ 540 00af 3C       		.uleb128 0x3c
+ 541 00b0 0C       		.uleb128 0xc
+ 542 00b1 00       		.byte	0x0
+ 543 00b2 00       		.byte	0x0
+ 544 00b3 00       		.byte	0x0
+ 545              		.section	.debug_pubnames,"",%progbits
+ 546 0000 3A000000 		.4byte	0x3a
+ 547 0004 0200     		.2byte	0x2
+ 548 0006 00000000 		.4byte	.Ldebug_info0
+ 549 000a 67010000 		.4byte	0x167
+ 550 000e 97000000 		.4byte	0x97
+ 551 0012 55415254 		.ascii	"UART_Bridge_RXISR\000"
+ 551      5F427269 
+ 551      6467655F 
+ 551      52584953 
+ 551      5200
+ 552 0024 C9000000 		.4byte	0xc9
+ 553 0028 55415254 		.ascii	"UART_Bridge_TXISR\000"
+ 553      5F427269 
+ 553      6467655F 
+ 553      54584953 
+ 553      5200
+ 554 003a 00000000 		.4byte	0x0
+ 555              		.section	.debug_aranges,"",%progbits
+ 556 0000 24000000 		.4byte	0x24
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 15
+
+
+ 557 0004 0200     		.2byte	0x2
+ 558 0006 00000000 		.4byte	.Ldebug_info0
+ 559 000a 04       		.byte	0x4
+ 560 000b 00       		.byte	0x0
+ 561 000c 0000     		.2byte	0x0
+ 562 000e 0000     		.2byte	0x0
+ 563 0010 00000000 		.4byte	.LFB0
+ 564 0014 6C000000 		.4byte	.LFE0-.LFB0
+ 565 0018 00000000 		.4byte	.LFB1
+ 566 001c 4C000000 		.4byte	.LFE1-.LFB1
+ 567 0020 00000000 		.4byte	0x0
+ 568 0024 00000000 		.4byte	0x0
+ 569              		.section	.debug_ranges,"",%progbits
+ 570              	.Ldebug_ranges0:
+ 571 0000 00000000 		.4byte	.Ltext0
+ 572 0004 00000000 		.4byte	.Letext0
+ 573 0008 00000000 		.4byte	.LFB0
+ 574 000c 6C000000 		.4byte	.LFE0
+ 575 0010 00000000 		.4byte	.LFB1
+ 576 0014 4C000000 		.4byte	.LFE1
+ 577 0018 00000000 		.4byte	0x0
+ 578 001c 00000000 		.4byte	0x0
+ 579              		.section	.debug_str,"MS",%progbits,1
+ 580              	.LASF6:
+ 581 0000 6C6F6E67 		.ascii	"long long int\000"
+ 581      206C6F6E 
+ 581      6720696E 
+ 581      7400
+ 582              	.LASF8:
+ 583 000e 756E7369 		.ascii	"unsigned int\000"
+ 583      676E6564 
+ 583      20696E74 
+ 583      00
+ 584              	.LASF26:
+ 585 001b 696E6372 		.ascii	"increment_pointer\000"
+ 585      656D656E 
+ 585      745F706F 
+ 585      696E7465 
+ 585      7200
+ 586              	.LASF17:
+ 587 002d 55415254 		.ascii	"UART_Bridge_rxBufferWrite\000"
+ 587      5F427269 
+ 587      6467655F 
+ 587      72784275 
+ 587      66666572 
+ 588              	.LASF15:
+ 589 0047 55415254 		.ascii	"UART_Bridge_rxBuffer\000"
+ 589      5F427269 
+ 589      6467655F 
+ 589      72784275 
+ 589      66666572 
+ 590              	.LASF23:
+ 591 005c 75696E74 		.ascii	"uint8\000"
+ 591      3800
+ 592              	.LASF5:
+ 593 0062 6C6F6E67 		.ascii	"long unsigned int\000"
+ 593      20756E73 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 16
+
+
+ 593      69676E65 
+ 593      6420696E 
+ 593      7400
+ 594              	.LASF22:
+ 595 0074 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\KitProg version 2_03\\KitPr"
+ 595      665C486F 
+ 595      6D655C44 
+ 595      65736B74 
+ 595      6F705C4B 
+ 596 00a1 6F675C4B 		.ascii	"og\\KitProg.cydsn\000"
+ 596      69745072 
+ 596      6F672E63 
+ 596      7964736E 
+ 596      00
+ 597              	.LASF25:
+ 598 00b2 72656164 		.ascii	"readData\000"
+ 598      44617461 
+ 598      00
+ 599              	.LASF24:
+ 600 00bb 55415254 		.ascii	"UART_Bridge_RXISR\000"
+ 600      5F427269 
+ 600      6467655F 
+ 600      52584953 
+ 600      5200
+ 601              	.LASF7:
+ 602 00cd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 602      206C6F6E 
+ 602      6720756E 
+ 602      7369676E 
+ 602      65642069 
+ 603              	.LASF1:
+ 604 00e4 756E7369 		.ascii	"unsigned char\000"
+ 604      676E6564 
+ 604      20636861 
+ 604      7200
+ 605              	.LASF16:
+ 606 00f2 55415254 		.ascii	"UART_Bridge_rxBufferRead\000"
+ 606      5F427269 
+ 606      6467655F 
+ 606      72784275 
+ 606      66666572 
+ 607              	.LASF11:
+ 608 010b 63686172 		.ascii	"char\000"
+ 608      00
+ 609              	.LASF4:
+ 610 0110 6C6F6E67 		.ascii	"long int\000"
+ 610      20696E74 
+ 610      00
+ 611              	.LASF2:
+ 612 0119 73686F72 		.ascii	"short int\000"
+ 612      7420696E 
+ 612      7400
+ 613              	.LASF10:
+ 614 0123 646F7562 		.ascii	"double\000"
+ 614      6C6500
+ 615              	.LASF20:
+ 616 012a 474E5520 		.ascii	"GNU C 4.4.1\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 17
+
+
+ 616      4320342E 
+ 616      342E3100 
+ 617              	.LASF3:
+ 618 0136 73686F72 		.ascii	"short unsigned int\000"
+ 618      7420756E 
+ 618      7369676E 
+ 618      65642069 
+ 618      6E7400
+ 619              	.LASF0:
+ 620 0149 7369676E 		.ascii	"signed char\000"
+ 620      65642063 
+ 620      68617200 
+ 621              	.LASF21:
+ 622 0155 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_Bridge_INT.c\000"
+ 622      6E657261 
+ 622      7465645F 
+ 622      536F7572 
+ 622      63655C50 
+ 623              	.LASF12:
+ 624 0180 55415254 		.ascii	"UART_Bridge_txBuffer\000"
+ 624      5F427269 
+ 624      6467655F 
+ 624      74784275 
+ 624      66666572 
+ 625              	.LASF27:
+ 626 0195 55415254 		.ascii	"UART_Bridge_TXISR\000"
+ 626      5F427269 
+ 626      6467655F 
+ 626      54584953 
+ 626      5200
+ 627              	.LASF9:
+ 628 01a7 666C6F61 		.ascii	"float\000"
+ 628      7400
+ 629              	.LASF19:
+ 630 01ad 55415254 		.ascii	"UART_Bridge_rxBufferOverflow\000"
+ 630      5F427269 
+ 630      6467655F 
+ 630      72784275 
+ 630      66666572 
+ 631              	.LASF14:
+ 632 01ca 55415254 		.ascii	"UART_Bridge_txBufferWrite\000"
+ 632      5F427269 
+ 632      6467655F 
+ 632      74784275 
+ 632      66666572 
+ 633              	.LASF13:
+ 634 01e4 55415254 		.ascii	"UART_Bridge_txBufferRead\000"
+ 634      5F427269 
+ 634      6467655F 
+ 634      74784275 
+ 634      66666572 
+ 635              	.LASF18:
+ 636 01fd 55415254 		.ascii	"UART_Bridge_rxBufferLoopDetect\000"
+ 636      5F427269 
+ 636      6467655F 
+ 636      72784275 
+ 636      66666572 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccagJP3S.s 			page 18
+
+
+ 637              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
