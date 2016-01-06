@@ -1,0 +1,665 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Filter_1_PVT.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 90000000 		.text
+  20      02006500 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.Filter_1_SetInterruptMode,"ax",%progbits
+  24              		.align	2
+  25              		.global	Filter_1_SetInterruptMode
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	Filter_1_SetInterruptMode, %function
+  29              	Filter_1_SetInterruptMode:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\Filter_1_PVT.c"
+   1:.\Generated_Source\PSoC5/Filter_1_PVT.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * File Name: Filter_1_PVT.c
+   3:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Version 2.10
+   4:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+   5:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Description:
+   6:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  This file provides source code for FILT component internal functions.
+   7:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+   8:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Note:
+   9:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  
+  10:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *******************************************************************************
+  11:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC5/Filter_1_PVT.c **** ********************************************************************************/
+  16:.\Generated_Source\PSoC5/Filter_1_PVT.c **** 
+  17:.\Generated_Source\PSoC5/Filter_1_PVT.c **** #include "Filter_1_PVT.h"
+  18:.\Generated_Source\PSoC5/Filter_1_PVT.c **** 
+  19:.\Generated_Source\PSoC5/Filter_1_PVT.c **** 
+  20:.\Generated_Source\PSoC5/Filter_1_PVT.c **** /*******************************************************************************
+  21:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Function Name: Filter_1_SetInterruptMode
+  22:.\Generated_Source\PSoC5/Filter_1_PVT.c **** ********************************************************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  24:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Summary:
+  25:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  Assign the events which will trigger a DFB interrupt to be triggered. 
+  26:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  27:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Parameters:  
+  28:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  events:  Bits [0:5] of events represent the events which will trigger DFB
+  29:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *           interrupts.
+  30:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            Bit 0 - Output value ready in the holding register on channel A
+  31:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            Bit 1 - Output value ready in the holding register on channel B
+  32:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            Bit 2 - '1' written to Semaphore 0  - See Note
+  33:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            Bit 3 - '1' written to Semaphore 1  - See Note
+  34:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            Bit 4 - '1' written to Semaphore 2
+  35:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  36:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Return: 
+  37:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  void
+  38:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  39:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Note:
+  40:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  Semaphore 0 and Semaphore 1 should not be configured as both a DMA request 
+  41:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  and an interrupt event, because, after one clock cycle, the system 
+  42:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  automatically clears any semaphore which triggered a DMA request.
+  43:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  44:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *******************************************************************************/
+  45:.\Generated_Source\PSoC5/Filter_1_PVT.c **** void Filter_1_SetInterruptMode(uint8 events) 
+  46:.\Generated_Source\PSoC5/Filter_1_PVT.c **** {
+  32              		.loc 1 46 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37 0000 80B4     		push	{r7}
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 4
+  40 0002 83B0     		sub	sp, sp, #12
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 16
+  43 0004 00AF     		add	r7, sp, #0
+  44              		.cfi_offset 7, -4
+  45              	.LCFI2:
+  46              		.cfi_def_cfa_register 7
+  47 0006 0346     		mov	r3, r0
+  48 0008 FB71     		strb	r3, [r7, #7]
+  47:.\Generated_Source\PSoC5/Filter_1_PVT.c ****     events &= Filter_1_EVENT_MASK;
+  49              		.loc 1 47 0
+  50 000a FB79     		ldrb	r3, [r7, #7]
+  51 000c 03F01F03 		and	r3, r3, #31
+  52 0010 FB71     		strb	r3, [r7, #7]
+  48:.\Generated_Source\PSoC5/Filter_1_PVT.c ****     Filter_1_INT_CTRL_REG = events;
+  53              		.loc 1 48 0
+  54 0012 4CF29873 		movw	r3, #:lower16:1073792920
+  55 0016 C4F20003 		movt	r3, #:upper16:1073792920
+  56 001a FA79     		ldrb	r2, [r7, #7]
+  57 001c 1A70     		strb	r2, [r3, #0]
+  49:.\Generated_Source\PSoC5/Filter_1_PVT.c **** }
+  58              		.loc 1 49 0
+  59 001e 07F10C07 		add	r7, r7, #12
+  60 0022 BD46     		mov	sp, r7
+  61 0024 80BC     		pop	{r7}
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 3
+
+
+  62 0026 7047     		bx	lr
+  63              		.cfi_endproc
+  64              	.LFE0:
+  65              		.size	Filter_1_SetInterruptMode, .-Filter_1_SetInterruptMode
+  66              		.section	.text.Filter_1_SetDMAMode,"ax",%progbits
+  67              		.align	2
+  68              		.global	Filter_1_SetDMAMode
+  69              		.thumb
+  70              		.thumb_func
+  71              		.type	Filter_1_SetDMAMode, %function
+  72              	Filter_1_SetDMAMode:
+  73              	.LFB1:
+  50:.\Generated_Source\PSoC5/Filter_1_PVT.c **** 
+  51:.\Generated_Source\PSoC5/Filter_1_PVT.c **** 
+  52:.\Generated_Source\PSoC5/Filter_1_PVT.c **** /*******************************************************************************
+  53:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Function Name: Filter_1_SetDMAMode
+  54:.\Generated_Source\PSoC5/Filter_1_PVT.c **** ********************************************************************************
+  55:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  56:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Summary:
+  57:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  Assign the events which will trigger a DMA request for the DFB.  There are 
+  58:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  two different DMA requests that can be triggered.
+  59:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  60:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Parameters:  
+  61:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  events:  A set of 4 bits which configure what event, if any, triggers a DMA 
+  62:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *           request for the DFB.  
+  63:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *           Bits [0:1] configure the trigger for DMA Request 1
+  64:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *           Bits [2:3] configure the trigger for DMA Request 2
+  65:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            DMA Request 1: 
+  66:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               0 - no request will be generated
+  67:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               1 - Output value ready in the holding register on channel A
+  68:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               2 - Semaphore 0
+  69:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               3 - Sempahore 1
+  70:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *            DMA Request 2: 
+  71:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               0 - no request will be generated
+  72:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               1 - Output value ready in the holding register on channel B
+  73:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               2 - Semaphore 0
+  74:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *               3 - Sempahore 1
+  75:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  76:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Return: 
+  77:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  void
+  78:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  79:.\Generated_Source\PSoC5/Filter_1_PVT.c **** * Note:
+  80:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  Semaphore 0 and Semaphore 1 should not be configured as both a DMA request 
+  81:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  and an interrupt event, because, after one clock cycle, the system 
+  82:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *  automatically clears any semaphore which triggered a DMA request.
+  83:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *
+  84:.\Generated_Source\PSoC5/Filter_1_PVT.c **** *******************************************************************************/
+  85:.\Generated_Source\PSoC5/Filter_1_PVT.c **** void Filter_1_SetDMAMode(uint8 events) 
+  86:.\Generated_Source\PSoC5/Filter_1_PVT.c **** {
+  74              		.loc 1 86 0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 8
+  77              		@ frame_needed = 1, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79 0000 80B4     		push	{r7}
+  80              	.LCFI3:
+  81              		.cfi_def_cfa_offset 4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 4
+
+
+  82 0002 83B0     		sub	sp, sp, #12
+  83              	.LCFI4:
+  84              		.cfi_def_cfa_offset 16
+  85 0004 00AF     		add	r7, sp, #0
+  86              		.cfi_offset 7, -4
+  87              	.LCFI5:
+  88              		.cfi_def_cfa_register 7
+  89 0006 0346     		mov	r3, r0
+  90 0008 FB71     		strb	r3, [r7, #7]
+  87:.\Generated_Source\PSoC5/Filter_1_PVT.c ****     events &= Filter_1_DMA_CTRL_MASK;
+  91              		.loc 1 87 0
+  92 000a FB79     		ldrb	r3, [r7, #7]
+  93 000c 03F00F03 		and	r3, r3, #15
+  94 0010 FB71     		strb	r3, [r7, #7]
+  88:.\Generated_Source\PSoC5/Filter_1_PVT.c ****     Filter_1_DMA_CTRL_REG = events;
+  95              		.loc 1 88 0
+  96 0012 4CF29C73 		movw	r3, #:lower16:1073792924
+  97 0016 C4F20003 		movt	r3, #:upper16:1073792924
+  98 001a FA79     		ldrb	r2, [r7, #7]
+  99 001c 1A70     		strb	r2, [r3, #0]
+  89:.\Generated_Source\PSoC5/Filter_1_PVT.c **** }
+ 100              		.loc 1 89 0
+ 101 001e 07F10C07 		add	r7, r7, #12
+ 102 0022 BD46     		mov	sp, r7
+ 103 0024 80BC     		pop	{r7}
+ 104 0026 7047     		bx	lr
+ 105              		.cfi_endproc
+ 106              	.LFE1:
+ 107              		.size	Filter_1_SetDMAMode, .-Filter_1_SetDMAMode
+ 108              		.text
+ 109              	.Letext0:
+ 110              		.section	.debug_loc,"",%progbits
+ 111              	.Ldebug_loc0:
+ 112              	.LLST0:
+ 113 0000 00000000 		.4byte	.LFB0
+ 114 0004 02000000 		.4byte	.LCFI0
+ 115 0008 0100     		.2byte	0x1
+ 116 000a 5D       		.byte	0x5d
+ 117 000b 02000000 		.4byte	.LCFI0
+ 118 000f 04000000 		.4byte	.LCFI1
+ 119 0013 0200     		.2byte	0x2
+ 120 0015 7D       		.byte	0x7d
+ 121 0016 04       		.sleb128 4
+ 122 0017 04000000 		.4byte	.LCFI1
+ 123 001b 06000000 		.4byte	.LCFI2
+ 124 001f 0200     		.2byte	0x2
+ 125 0021 7D       		.byte	0x7d
+ 126 0022 10       		.sleb128 16
+ 127 0023 06000000 		.4byte	.LCFI2
+ 128 0027 28000000 		.4byte	.LFE0
+ 129 002b 0200     		.2byte	0x2
+ 130 002d 77       		.byte	0x77
+ 131 002e 10       		.sleb128 16
+ 132 002f 00000000 		.4byte	0x0
+ 133 0033 00000000 		.4byte	0x0
+ 134              	.LLST1:
+ 135 0037 00000000 		.4byte	.LFB1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 5
+
+
+ 136 003b 02000000 		.4byte	.LCFI3
+ 137 003f 0100     		.2byte	0x1
+ 138 0041 5D       		.byte	0x5d
+ 139 0042 02000000 		.4byte	.LCFI3
+ 140 0046 04000000 		.4byte	.LCFI4
+ 141 004a 0200     		.2byte	0x2
+ 142 004c 7D       		.byte	0x7d
+ 143 004d 04       		.sleb128 4
+ 144 004e 04000000 		.4byte	.LCFI4
+ 145 0052 06000000 		.4byte	.LCFI5
+ 146 0056 0200     		.2byte	0x2
+ 147 0058 7D       		.byte	0x7d
+ 148 0059 10       		.sleb128 16
+ 149 005a 06000000 		.4byte	.LCFI5
+ 150 005e 28000000 		.4byte	.LFE1
+ 151 0062 0200     		.2byte	0x2
+ 152 0064 77       		.byte	0x77
+ 153 0065 10       		.sleb128 16
+ 154 0066 00000000 		.4byte	0x0
+ 155 006a 00000000 		.4byte	0x0
+ 156              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 157              		.section	.debug_info
+ 158 0000 DB000000 		.4byte	0xdb
+ 159 0004 0200     		.2byte	0x2
+ 160 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 161 000a 04       		.byte	0x4
+ 162 000b 01       		.uleb128 0x1
+ 163 000c A7000000 		.4byte	.LASF13
+ 164 0010 01       		.byte	0x1
+ 165 0011 35000000 		.4byte	.LASF14
+ 166 0015 D6000000 		.4byte	.LASF15
+ 167 0019 00000000 		.4byte	0x0
+ 168 001d 00000000 		.4byte	0x0
+ 169 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 170 0025 00000000 		.4byte	.Ldebug_line0
+ 171 0029 02       		.uleb128 0x2
+ 172 002a 01       		.byte	0x1
+ 173 002b 06       		.byte	0x6
+ 174 002c 5E010000 		.4byte	.LASF0
+ 175 0030 02       		.uleb128 0x2
+ 176 0031 01       		.byte	0x1
+ 177 0032 08       		.byte	0x8
+ 178 0033 B3000000 		.4byte	.LASF1
+ 179 0037 02       		.uleb128 0x2
+ 180 0038 02       		.byte	0x2
+ 181 0039 05       		.byte	0x5
+ 182 003a 70010000 		.4byte	.LASF2
+ 183 003e 02       		.uleb128 0x2
+ 184 003f 02       		.byte	0x2
+ 185 0040 07       		.byte	0x7
+ 186 0041 4B010000 		.4byte	.LASF3
+ 187 0045 03       		.uleb128 0x3
+ 188 0046 04       		.byte	0x4
+ 189 0047 05       		.byte	0x5
+ 190 0048 696E7400 		.ascii	"int\000"
+ 191 004c 02       		.uleb128 0x2
+ 192 004d 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 6
+
+
+ 193 004e 07       		.byte	0x7
+ 194 004f 0E000000 		.4byte	.LASF4
+ 195 0053 02       		.uleb128 0x2
+ 196 0054 08       		.byte	0x8
+ 197 0055 05       		.byte	0x5
+ 198 0056 00000000 		.4byte	.LASF5
+ 199 005a 02       		.uleb128 0x2
+ 200 005b 08       		.byte	0x8
+ 201 005c 07       		.byte	0x7
+ 202 005d 75000000 		.4byte	.LASF6
+ 203 0061 02       		.uleb128 0x2
+ 204 0062 04       		.byte	0x4
+ 205 0063 05       		.byte	0x5
+ 206 0064 C6000000 		.4byte	.LASF7
+ 207 0068 04       		.uleb128 0x4
+ 208 0069 04       		.byte	0x4
+ 209 006a 07       		.byte	0x7
+ 210 006b 02       		.uleb128 0x2
+ 211 006c 04       		.byte	0x4
+ 212 006d 07       		.byte	0x7
+ 213 006e 63000000 		.4byte	.LASF8
+ 214 0072 02       		.uleb128 0x2
+ 215 0073 01       		.byte	0x1
+ 216 0074 08       		.byte	0x8
+ 217 0075 C1000000 		.4byte	.LASF9
+ 218 0079 05       		.uleb128 0x5
+ 219 007a 5D000000 		.4byte	.LASF16
+ 220 007e 02       		.byte	0x2
+ 221 007f 4C       		.byte	0x4c
+ 222 0080 30000000 		.4byte	0x30
+ 223 0084 02       		.uleb128 0x2
+ 224 0085 04       		.byte	0x4
+ 225 0086 04       		.byte	0x4
+ 226 0087 6A010000 		.4byte	.LASF10
+ 227 008b 02       		.uleb128 0x2
+ 228 008c 08       		.byte	0x8
+ 229 008d 04       		.byte	0x4
+ 230 008e CF000000 		.4byte	.LASF11
+ 231 0092 06       		.uleb128 0x6
+ 232 0093 01       		.byte	0x1
+ 233 0094 1B000000 		.4byte	.LASF17
+ 234 0098 01       		.byte	0x1
+ 235 0099 2D       		.byte	0x2d
+ 236 009a 01       		.byte	0x1
+ 237 009b 00000000 		.4byte	.LFB0
+ 238 009f 28000000 		.4byte	.LFE0
+ 239 00a3 00000000 		.4byte	.LLST0
+ 240 00a7 BA000000 		.4byte	0xba
+ 241 00ab 07       		.uleb128 0x7
+ 242 00ac 8C000000 		.4byte	.LASF12
+ 243 00b0 01       		.byte	0x1
+ 244 00b1 2D       		.byte	0x2d
+ 245 00b2 79000000 		.4byte	0x79
+ 246 00b6 02       		.byte	0x2
+ 247 00b7 91       		.byte	0x91
+ 248 00b8 77       		.sleb128 -9
+ 249 00b9 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 7
+
+
+ 250 00ba 08       		.uleb128 0x8
+ 251 00bb 01       		.byte	0x1
+ 252 00bc 93000000 		.4byte	.LASF18
+ 253 00c0 01       		.byte	0x1
+ 254 00c1 55       		.byte	0x55
+ 255 00c2 01       		.byte	0x1
+ 256 00c3 00000000 		.4byte	.LFB1
+ 257 00c7 28000000 		.4byte	.LFE1
+ 258 00cb 37000000 		.4byte	.LLST1
+ 259 00cf 07       		.uleb128 0x7
+ 260 00d0 8C000000 		.4byte	.LASF12
+ 261 00d4 01       		.byte	0x1
+ 262 00d5 55       		.byte	0x55
+ 263 00d6 79000000 		.4byte	0x79
+ 264 00da 02       		.byte	0x2
+ 265 00db 91       		.byte	0x91
+ 266 00dc 77       		.sleb128 -9
+ 267 00dd 00       		.byte	0x0
+ 268 00de 00       		.byte	0x0
+ 269              		.section	.debug_abbrev
+ 270 0000 01       		.uleb128 0x1
+ 271 0001 11       		.uleb128 0x11
+ 272 0002 01       		.byte	0x1
+ 273 0003 25       		.uleb128 0x25
+ 274 0004 0E       		.uleb128 0xe
+ 275 0005 13       		.uleb128 0x13
+ 276 0006 0B       		.uleb128 0xb
+ 277 0007 03       		.uleb128 0x3
+ 278 0008 0E       		.uleb128 0xe
+ 279 0009 1B       		.uleb128 0x1b
+ 280 000a 0E       		.uleb128 0xe
+ 281 000b 11       		.uleb128 0x11
+ 282 000c 01       		.uleb128 0x1
+ 283 000d 52       		.uleb128 0x52
+ 284 000e 01       		.uleb128 0x1
+ 285 000f 55       		.uleb128 0x55
+ 286 0010 06       		.uleb128 0x6
+ 287 0011 10       		.uleb128 0x10
+ 288 0012 06       		.uleb128 0x6
+ 289 0013 00       		.byte	0x0
+ 290 0014 00       		.byte	0x0
+ 291 0015 02       		.uleb128 0x2
+ 292 0016 24       		.uleb128 0x24
+ 293 0017 00       		.byte	0x0
+ 294 0018 0B       		.uleb128 0xb
+ 295 0019 0B       		.uleb128 0xb
+ 296 001a 3E       		.uleb128 0x3e
+ 297 001b 0B       		.uleb128 0xb
+ 298 001c 03       		.uleb128 0x3
+ 299 001d 0E       		.uleb128 0xe
+ 300 001e 00       		.byte	0x0
+ 301 001f 00       		.byte	0x0
+ 302 0020 03       		.uleb128 0x3
+ 303 0021 24       		.uleb128 0x24
+ 304 0022 00       		.byte	0x0
+ 305 0023 0B       		.uleb128 0xb
+ 306 0024 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 8
+
+
+ 307 0025 3E       		.uleb128 0x3e
+ 308 0026 0B       		.uleb128 0xb
+ 309 0027 03       		.uleb128 0x3
+ 310 0028 08       		.uleb128 0x8
+ 311 0029 00       		.byte	0x0
+ 312 002a 00       		.byte	0x0
+ 313 002b 04       		.uleb128 0x4
+ 314 002c 24       		.uleb128 0x24
+ 315 002d 00       		.byte	0x0
+ 316 002e 0B       		.uleb128 0xb
+ 317 002f 0B       		.uleb128 0xb
+ 318 0030 3E       		.uleb128 0x3e
+ 319 0031 0B       		.uleb128 0xb
+ 320 0032 00       		.byte	0x0
+ 321 0033 00       		.byte	0x0
+ 322 0034 05       		.uleb128 0x5
+ 323 0035 16       		.uleb128 0x16
+ 324 0036 00       		.byte	0x0
+ 325 0037 03       		.uleb128 0x3
+ 326 0038 0E       		.uleb128 0xe
+ 327 0039 3A       		.uleb128 0x3a
+ 328 003a 0B       		.uleb128 0xb
+ 329 003b 3B       		.uleb128 0x3b
+ 330 003c 0B       		.uleb128 0xb
+ 331 003d 49       		.uleb128 0x49
+ 332 003e 13       		.uleb128 0x13
+ 333 003f 00       		.byte	0x0
+ 334 0040 00       		.byte	0x0
+ 335 0041 06       		.uleb128 0x6
+ 336 0042 2E       		.uleb128 0x2e
+ 337 0043 01       		.byte	0x1
+ 338 0044 3F       		.uleb128 0x3f
+ 339 0045 0C       		.uleb128 0xc
+ 340 0046 03       		.uleb128 0x3
+ 341 0047 0E       		.uleb128 0xe
+ 342 0048 3A       		.uleb128 0x3a
+ 343 0049 0B       		.uleb128 0xb
+ 344 004a 3B       		.uleb128 0x3b
+ 345 004b 0B       		.uleb128 0xb
+ 346 004c 27       		.uleb128 0x27
+ 347 004d 0C       		.uleb128 0xc
+ 348 004e 11       		.uleb128 0x11
+ 349 004f 01       		.uleb128 0x1
+ 350 0050 12       		.uleb128 0x12
+ 351 0051 01       		.uleb128 0x1
+ 352 0052 40       		.uleb128 0x40
+ 353 0053 06       		.uleb128 0x6
+ 354 0054 01       		.uleb128 0x1
+ 355 0055 13       		.uleb128 0x13
+ 356 0056 00       		.byte	0x0
+ 357 0057 00       		.byte	0x0
+ 358 0058 07       		.uleb128 0x7
+ 359 0059 05       		.uleb128 0x5
+ 360 005a 00       		.byte	0x0
+ 361 005b 03       		.uleb128 0x3
+ 362 005c 0E       		.uleb128 0xe
+ 363 005d 3A       		.uleb128 0x3a
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 9
+
+
+ 364 005e 0B       		.uleb128 0xb
+ 365 005f 3B       		.uleb128 0x3b
+ 366 0060 0B       		.uleb128 0xb
+ 367 0061 49       		.uleb128 0x49
+ 368 0062 13       		.uleb128 0x13
+ 369 0063 02       		.uleb128 0x2
+ 370 0064 0A       		.uleb128 0xa
+ 371 0065 00       		.byte	0x0
+ 372 0066 00       		.byte	0x0
+ 373 0067 08       		.uleb128 0x8
+ 374 0068 2E       		.uleb128 0x2e
+ 375 0069 01       		.byte	0x1
+ 376 006a 3F       		.uleb128 0x3f
+ 377 006b 0C       		.uleb128 0xc
+ 378 006c 03       		.uleb128 0x3
+ 379 006d 0E       		.uleb128 0xe
+ 380 006e 3A       		.uleb128 0x3a
+ 381 006f 0B       		.uleb128 0xb
+ 382 0070 3B       		.uleb128 0x3b
+ 383 0071 0B       		.uleb128 0xb
+ 384 0072 27       		.uleb128 0x27
+ 385 0073 0C       		.uleb128 0xc
+ 386 0074 11       		.uleb128 0x11
+ 387 0075 01       		.uleb128 0x1
+ 388 0076 12       		.uleb128 0x12
+ 389 0077 01       		.uleb128 0x1
+ 390 0078 40       		.uleb128 0x40
+ 391 0079 06       		.uleb128 0x6
+ 392 007a 00       		.byte	0x0
+ 393 007b 00       		.byte	0x0
+ 394 007c 00       		.byte	0x0
+ 395              		.section	.debug_pubnames,"",%progbits
+ 396 0000 44000000 		.4byte	0x44
+ 397 0004 0200     		.2byte	0x2
+ 398 0006 00000000 		.4byte	.Ldebug_info0
+ 399 000a DF000000 		.4byte	0xdf
+ 400 000e 92000000 		.4byte	0x92
+ 401 0012 46696C74 		.ascii	"Filter_1_SetInterruptMode\000"
+ 401      65725F31 
+ 401      5F536574 
+ 401      496E7465 
+ 401      72727570 
+ 402 002c BA000000 		.4byte	0xba
+ 403 0030 46696C74 		.ascii	"Filter_1_SetDMAMode\000"
+ 403      65725F31 
+ 403      5F536574 
+ 403      444D414D 
+ 403      6F646500 
+ 404 0044 00000000 		.4byte	0x0
+ 405              		.section	.debug_aranges,"",%progbits
+ 406 0000 24000000 		.4byte	0x24
+ 407 0004 0200     		.2byte	0x2
+ 408 0006 00000000 		.4byte	.Ldebug_info0
+ 409 000a 04       		.byte	0x4
+ 410 000b 00       		.byte	0x0
+ 411 000c 0000     		.2byte	0x0
+ 412 000e 0000     		.2byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 10
+
+
+ 413 0010 00000000 		.4byte	.LFB0
+ 414 0014 28000000 		.4byte	.LFE0-.LFB0
+ 415 0018 00000000 		.4byte	.LFB1
+ 416 001c 28000000 		.4byte	.LFE1-.LFB1
+ 417 0020 00000000 		.4byte	0x0
+ 418 0024 00000000 		.4byte	0x0
+ 419              		.section	.debug_ranges,"",%progbits
+ 420              	.Ldebug_ranges0:
+ 421 0000 00000000 		.4byte	.Ltext0
+ 422 0004 00000000 		.4byte	.Letext0
+ 423 0008 00000000 		.4byte	.LFB0
+ 424 000c 28000000 		.4byte	.LFE0
+ 425 0010 00000000 		.4byte	.LFB1
+ 426 0014 28000000 		.4byte	.LFE1
+ 427 0018 00000000 		.4byte	0x0
+ 428 001c 00000000 		.4byte	0x0
+ 429              		.section	.debug_str,"MS",%progbits,1
+ 430              	.LASF5:
+ 431 0000 6C6F6E67 		.ascii	"long long int\000"
+ 431      206C6F6E 
+ 431      6720696E 
+ 431      7400
+ 432              	.LASF4:
+ 433 000e 756E7369 		.ascii	"unsigned int\000"
+ 433      676E6564 
+ 433      20696E74 
+ 433      00
+ 434              	.LASF17:
+ 435 001b 46696C74 		.ascii	"Filter_1_SetInterruptMode\000"
+ 435      65725F31 
+ 435      5F536574 
+ 435      496E7465 
+ 435      72727570 
+ 436              	.LASF14:
+ 437 0035 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Filter_1_PVT.c\000"
+ 437      6E657261 
+ 437      7465645F 
+ 437      536F7572 
+ 437      63655C50 
+ 438              	.LASF16:
+ 439 005d 75696E74 		.ascii	"uint8\000"
+ 439      3800
+ 440              	.LASF8:
+ 441 0063 6C6F6E67 		.ascii	"long unsigned int\000"
+ 441      20756E73 
+ 441      69676E65 
+ 441      6420696E 
+ 441      7400
+ 442              	.LASF6:
+ 443 0075 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 443      206C6F6E 
+ 443      6720756E 
+ 443      7369676E 
+ 443      65642069 
+ 444              	.LASF12:
+ 445 008c 6576656E 		.ascii	"events\000"
+ 445      747300
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 11
+
+
+ 446              	.LASF18:
+ 447 0093 46696C74 		.ascii	"Filter_1_SetDMAMode\000"
+ 447      65725F31 
+ 447      5F536574 
+ 447      444D414D 
+ 447      6F646500 
+ 448              	.LASF13:
+ 449 00a7 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 449      4320342E 
+ 449      342E3100 
+ 450              	.LASF1:
+ 451 00b3 756E7369 		.ascii	"unsigned char\000"
+ 451      676E6564 
+ 451      20636861 
+ 451      7200
+ 452              	.LASF9:
+ 453 00c1 63686172 		.ascii	"char\000"
+ 453      00
+ 454              	.LASF7:
+ 455 00c6 6C6F6E67 		.ascii	"long int\000"
+ 455      20696E74 
+ 455      00
+ 456              	.LASF11:
+ 457 00cf 646F7562 		.ascii	"double\000"
+ 457      6C6500
+ 458              	.LASF15:
+ 459 00d6 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 459      665C486F 
+ 459      6D655C44 
+ 459      65736B74 
+ 459      6F705C50 
+ 460 0103 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 460      2D435938 
+ 460      43353636 
+ 460      375C5069 
+ 460      6F6E6565 
+ 461 0134 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 461      4C505F55 
+ 461      53425F41 
+ 461      7564696F 
+ 461      2E637964 
+ 462              	.LASF3:
+ 463 014b 73686F72 		.ascii	"short unsigned int\000"
+ 463      7420756E 
+ 463      7369676E 
+ 463      65642069 
+ 463      6E7400
+ 464              	.LASF0:
+ 465 015e 7369676E 		.ascii	"signed char\000"
+ 465      65642063 
+ 465      68617200 
+ 466              	.LASF10:
+ 467 016a 666C6F61 		.ascii	"float\000"
+ 467      7400
+ 468              	.LASF2:
+ 469 0170 73686F72 		.ascii	"short int\000"
+ 469      7420696E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccEb4wBW.s 			page 12
+
+
+ 469      7400
+ 470              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

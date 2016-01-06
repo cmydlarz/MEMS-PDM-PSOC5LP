@@ -1,0 +1,729 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Codec.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 7B000000 		.text
+  20      02006100 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.comm	CodecWrite,2,4
+  24              		.global	codecInit
+  25              		.bss
+  26              		.type	codecInit, %object
+  27              		.size	codecInit, 1
+  28              	codecInit:
+  29 0000 00       		.space	1
+  30              		.section	.text.InitCirrusCodec,"ax",%progbits
+  31              		.align	2
+  32              		.global	InitCirrusCodec
+  33              		.thumb
+  34              		.thumb_func
+  35              		.type	InitCirrusCodec, %function
+  36              	InitCirrusCodec:
+  37              	.LFB29:
+  38              		.file 1 ".\\Codec.c"
+   1:.\Codec.c     **** /*******************************************************************************
+   2:.\Codec.c     **** * File Name: Codec.c
+   3:.\Codec.c     **** *
+   4:.\Codec.c     **** * Version 1.0
+   5:.\Codec.c     **** *
+   6:.\Codec.c     **** *  Description: This file contains the Codec initialization and volume update
+   7:.\Codec.c     **** *				routines for Cirrus Codec
+   8:.\Codec.c     **** *
+   9:.\Codec.c     **** ********************************************************************************
+  10:.\Codec.c     **** * Copyright (2008-2013), Cypress Semiconductor Corporation.
+  11:.\Codec.c     **** ********************************************************************************
+  12:.\Codec.c     **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  13:.\Codec.c     **** * protected by and subject to worldwide patent protection (United States and
+  14:.\Codec.c     **** * foreign), United States copyright laws and international treaty provisions.
+  15:.\Codec.c     **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 2
+
+
+  16:.\Codec.c     **** * license to copy, use, modify, create derivative works of, and compile the
+  17:.\Codec.c     **** * Cypress Source Code and derivative works for the sole purpose of creating
+  18:.\Codec.c     **** * custom software in support of licensee product to be used only in conjunction
+  19:.\Codec.c     **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  20:.\Codec.c     **** * Any reproduction, modification, translation, compilation, or representation of
+  21:.\Codec.c     **** * this software except as specified above is prohibited without the express
+  22:.\Codec.c     **** * written permission of Cypress.
+  23:.\Codec.c     **** *
+  24:.\Codec.c     **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  25:.\Codec.c     **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  26:.\Codec.c     **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  27:.\Codec.c     **** * Cypress reserves the right to make changes without further notice to the
+  28:.\Codec.c     **** * materials described herein. Cypress does not assume any liability arising out
+  29:.\Codec.c     **** * of the application or use of any product or circuit described herein. Cypress
+  30:.\Codec.c     **** * does not authorize its products for use as critical components in life-support
+  31:.\Codec.c     **** * systems where a malfunction or failure may reasonably be expected to result in
+  32:.\Codec.c     **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  33:.\Codec.c     **** * support systems application implies that the manufacturer assumes all risk of
+  34:.\Codec.c     **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  35:.\Codec.c     **** * limited by and subject to the applicable Cypress software license agreement.
+  36:.\Codec.c     **** *******************************************************************************/
+  37:.\Codec.c     **** #include <AudioControl.h>
+  38:.\Codec.c     **** #include <Application.h>
+  39:.\Codec.c     **** #include <Codec.h>
+  40:.\Codec.c     **** #include <Configuration.h>
+  41:.\Codec.c     **** #include <Project.h>
+  42:.\Codec.c     **** #include <VolumeControl.h>
+  43:.\Codec.c     **** 
+  44:.\Codec.c     **** CYDATA CodecRegister CodecWrite;    /* codec register read/write structure */
+  45:.\Codec.c     **** CYBIT codecInit = 0;                /* codec initialization status flag */
+  46:.\Codec.c     **** 
+  47:.\Codec.c     **** extern volatile uint8 USBFS_currentVolume[];
+  48:.\Codec.c     **** extern volatile uint8 USBFS_currentMute;
+  49:.\Codec.c     **** 
+  50:.\Codec.c     **** #ifndef ENABLE_DIGITAL_AUDIO_OUT_ONLY		
+  51:.\Codec.c     **** extern volatile uint8 USB_inputMute;
+  52:.\Codec.c     **** extern volatile uint8 USB_inputVolume[];  /* USB component audio IN path volume level */
+  53:.\Codec.c     **** #endif
+  54:.\Codec.c     **** 
+  55:.\Codec.c     **** /*******************************************************************************
+  56:.\Codec.c     **** * Function Name: InitCirrusCodec
+  57:.\Codec.c     **** ********************************************************************************
+  58:.\Codec.c     **** * Summary: Initializes the CS42L51 codec as per the CS42L51 datasheet to enable
+  59:.\Codec.c     **** *          audio output DAC (with volume control support enabled) and audio input
+  60:.\Codec.c     **** *          ADC
+  61:.\Codec.c     **** *
+  62:.\Codec.c     **** * Parameters:
+  63:.\Codec.c     **** *  void
+  64:.\Codec.c     **** *
+  65:.\Codec.c     **** * Return:
+  66:.\Codec.c     **** *  void
+  67:.\Codec.c     **** *
+  68:.\Codec.c     **** *******************************************************************************/
+  69:.\Codec.c     **** void InitCirrusCodec(void)
+  70:.\Codec.c     **** {
+  39              		.loc 1 70 0
+  40              		.cfi_startproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 3
+
+
+  41              		@ args = 0, pretend = 0, frame = 0
+  42              		@ frame_needed = 1, uses_anonymous_args = 0
+  43              		@ link register save eliminated.
+  44 0000 80B4     		push	{r7}
+  45              	.LCFI0:
+  46              		.cfi_def_cfa_offset 4
+  47 0002 00AF     		add	r7, sp, #0
+  48              		.cfi_offset 7, -4
+  49              	.LCFI1:
+  50              		.cfi_def_cfa_register 7
+  71:.\Codec.c     **** #ifdef CODEC_I2C_SUPPORTED
+  72:.\Codec.c     **** 	if (!codecInit)
+  73:.\Codec.c     **** 	{
+  74:.\Codec.c     ****         /* USER_CODE: [CODEC configuration] Placeholder for configuring a different codec instead o
+  75:.\Codec.c     ****          * CS42L51 codec. Comment out below piece of I2C configuration before adding your custom co
+  76:.\Codec.c     ****          * code */
+  77:.\Codec.c     **** 		PSOC_CODEC_RST_Write(RELEASE_RESET);
+  78:.\Codec.c     **** 	   
+  79:.\Codec.c     **** 	    CodecWrite.address = CODEC_POWER_CTRL_REGISTER;
+  80:.\Codec.c     **** 	    CodecWrite.value = CODEC_PDN_MASK;
+  81:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+  82:.\Codec.c     **** 		
+  83:.\Codec.c     **** 		    
+  84:.\Codec.c     **** 	    CodecWrite.address = CODEC_INTERFACE_CTRL_REGISTER;
+  85:.\Codec.c     **** 	    CodecWrite.value = CODEC_DAC_DIGITAL_INTERFACE_I2S_MASK | CODEC_ADC_DIGITAL_INTERFACE_I2S_MASK
+  86:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address,  sizeof(CodecWrite));
+  87:.\Codec.c     **** 	            
+  88:.\Codec.c     **** 	    /* Enable the Input PCM samples to pass through the Signal processing engine on the Codec for 
+  89:.\Codec.c     **** 	    CodecWrite.address = CODEC_DAC_CONTROL_REGISTER;
+  90:.\Codec.c     **** 	    CodecWrite.value = SIGNAL_PROCESSING_ENGINE_TO_DAC | DAC_SZC_SOFT_RAMP;
+  91:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+  92:.\Codec.c     **** 	    
+  93:.\Codec.c     **** 	    /* Single volume control for DAC */
+  94:.\Codec.c     **** 	    CodecWrite.address = CODEC_DAC_OUTPUT_CTRL_REGISTER;
+  95:.\Codec.c     **** 	    CodecWrite.value = DAC_DEFAULT_HEADPHONE_GAIN | DAC_SINGLE_VOLUME_CONTROL;
+  96:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+  97:.\Codec.c     **** 	    
+  98:.\Codec.c     **** 	    /* Single volume for ADC */
+  99:.\Codec.c     **** 	    CodecWrite.address = CODEC_MIC_CTRL_REGISTER;
+ 100:.\Codec.c     **** 	    #ifdef MIC_ENABLE
+ 101:.\Codec.c     **** 	    /* ADC 20dB boost, MIC bias on AIN3B pin ,  0.8 * VA bias and +16dB gain */
+ 102:.\Codec.c     **** 	    CodecWrite.value = ADC_SINGLE_VOLUME_CONTROL | ADCB_20dB_DIGITAL_BOOST | ADCA_20dB_DIGITAL_BOO
+ 103:.\Codec.c     **** 	    #else
+ 104:.\Codec.c     **** 	    CodecWrite.value = ADC_SINGLE_VOLUME_CONTROL;
+ 105:.\Codec.c     **** 	    #endif
+ 106:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address,  sizeof(CodecWrite));
+ 107:.\Codec.c     **** 	    
+ 108:.\Codec.c     **** 	    #ifdef MIC_ENABLE
+ 109:.\Codec.c     **** 	    /* Route MIC as the ADC input */
+ 110:.\Codec.c     **** 	    CodecWrite.address = CODEC_ADC_SELECT_REGISTER;
+ 111:.\Codec.c     **** 	    CodecWrite.value = MIC_IN_TO_PRE_AMP_TO_PGA_INPUT; /* Route MIC input to PGA */
+ 112:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address,  sizeof(CodecWrite));
+ 113:.\Codec.c     **** 	    #endif
+ 114:.\Codec.c     **** 
+ 115:.\Codec.c     **** 	    /* Enable below piece of code and comment out the next register write for DAC Output for enabl
+ 116:.\Codec.c     **** 	    /* Limiter threshold configuration */
+ 117:.\Codec.c     **** 	    CodecWrite.address = CODEC_LIMITER_THRESHOLD_SZC_DISABLE_REGISTER;
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 4
+
+
+ 118:.\Codec.c     **** 	    CodecWrite.value = LIMITER_CUSHION_THRESHOLD | LIMITER_SOFT_RAMP_ENABLE;
+ 119:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+ 120:.\Codec.c     **** 	    
+ 121:.\Codec.c     **** 	    /* limit DAC Output */
+ 122:.\Codec.c     **** 	    CodecWrite.address = CODEC_LIMITER_CONFIG_RELEASE_RATE_REGISTER;
+ 123:.\Codec.c     **** 	    CodecWrite.value = LIMITER_RELEASE_ENABLE | LIMITER_RELEASE_ALL | LIMITER_RELEASE_RATE_SLOWEST
+ 124:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+ 125:.\Codec.c     **** 		
+ 126:.\Codec.c     **** 	    #ifdef ENABLE_VOLUME_CONTROL
+ 127:.\Codec.c     **** 	    UpdateCodecVolume((int8)USBFS_currentVolume[1] * VOLUME_STEP_SIZE_MAPPING);
+ 128:.\Codec.c     **** 		#else		
+ 129:.\Codec.c     **** 		UpdateCodecVolume(USBFS_currentVolume[1]);
+ 130:.\Codec.c     **** 		#endif
+ 131:.\Codec.c     **** 		
+ 132:.\Codec.c     **** 	    #ifndef ENABLE_DIGITAL_AUDIO_OUT_ONLY
+ 133:.\Codec.c     **** 		#ifdef ENABLE_VOLUME_CONTROL
+ 134:.\Codec.c     **** 		UpdateCodecAttenuation(USB_inputVolume[1]);		
+ 135:.\Codec.c     **** 		#endif
+ 136:.\Codec.c     **** 		#endif
+ 137:.\Codec.c     **** 			
+ 138:.\Codec.c     **** 	    CodecWrite.address = CODEC_POWER_CTRL_REGISTER;
+ 139:.\Codec.c     **** 	    CodecWrite.value = CODEC_POWER_ON_ALL;
+ 140:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+ 141:.\Codec.c     **** 	    
+ 142:.\Codec.c     **** 	    #ifdef MIC_ENABLE
+ 143:.\Codec.c     **** 	    CodecWrite.address = CODEC_SPEED_POWER_CTRL_REGISTER;
+ 144:.\Codec.c     **** 	    /* Auto detect codec speed, power up MICA, enable BIAS */
+ 145:.\Codec.c     **** 	    CodecWrite.value = AUTO_DETECT_CODEC_SPEED | POWER_DOWN_MICB;
+ 146:.\Codec.c     **** 	    WriteToSlave(CODEC_I2C_ADDRESS, &CodecWrite.address, sizeof(CodecWrite));
+ 147:.\Codec.c     **** 	    #endif
+ 148:.\Codec.c     **** 	    
+ 149:.\Codec.c     **** 		codecInit = 1;
+ 150:.\Codec.c     **** 	}	
+ 151:.\Codec.c     **** #endif
+ 152:.\Codec.c     **** }
+  51              		.loc 1 152 0
+  52 0004 BD46     		mov	sp, r7
+  53 0006 80BC     		pop	{r7}
+  54 0008 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE29:
+  57              		.size	InitCirrusCodec, .-InitCirrusCodec
+  58 000a 00BF     		.text
+  59              	.Letext0:
+  60              		.section	.debug_loc,"",%progbits
+  61              	.Ldebug_loc0:
+  62              	.LLST0:
+  63 0000 00000000 		.4byte	.LFB29
+  64 0004 02000000 		.4byte	.LCFI0
+  65 0008 0100     		.2byte	0x1
+  66 000a 5D       		.byte	0x5d
+  67 000b 02000000 		.4byte	.LCFI0
+  68 000f 04000000 		.4byte	.LCFI1
+  69 0013 0200     		.2byte	0x2
+  70 0015 7D       		.byte	0x7d
+  71 0016 04       		.sleb128 4
+  72 0017 04000000 		.4byte	.LCFI1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 5
+
+
+  73 001b 0A000000 		.4byte	.LFE29
+  74 001f 0200     		.2byte	0x2
+  75 0021 77       		.byte	0x77
+  76 0022 04       		.sleb128 4
+  77 0023 00000000 		.4byte	0x0
+  78 0027 00000000 		.4byte	0x0
+  79              		.file 2 "./Codec.h"
+  80              		.file 3 "./Generated_Source/PSoC5/cytypes.h"
+  81              		.file 4 "./Generated_Source/PSoC5/core_cm3.h"
+  82              		.section	.debug_info
+  83 0000 0F010000 		.4byte	0x10f
+  84 0004 0200     		.2byte	0x2
+  85 0006 00000000 		.4byte	.Ldebug_abbrev0
+  86 000a 04       		.byte	0x4
+  87 000b 01       		.uleb128 0x1
+  88 000c 8C000000 		.4byte	.LASF19
+  89 0010 01       		.byte	0x1
+  90 0011 59010000 		.4byte	.LASF20
+  91 0015 CB000000 		.4byte	.LASF21
+  92 0019 00000000 		.4byte	0x0
+  93 001d 00000000 		.4byte	0x0
+  94 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+  95 0025 00000000 		.4byte	.Ldebug_line0
+  96 0029 02       		.uleb128 0x2
+  97 002a 01       		.byte	0x1
+  98 002b 06       		.byte	0x6
+  99 002c 4D010000 		.4byte	.LASF0
+ 100 0030 02       		.uleb128 0x2
+ 101 0031 01       		.byte	0x1
+ 102 0032 08       		.byte	0x8
+ 103 0033 98000000 		.4byte	.LASF1
+ 104 0037 02       		.uleb128 0x2
+ 105 0038 02       		.byte	0x2
+ 106 0039 05       		.byte	0x5
+ 107 003a 69010000 		.4byte	.LASF2
+ 108 003e 02       		.uleb128 0x2
+ 109 003f 02       		.byte	0x2
+ 110 0040 07       		.byte	0x7
+ 111 0041 6E000000 		.4byte	.LASF3
+ 112 0045 02       		.uleb128 0x2
+ 113 0046 04       		.byte	0x4
+ 114 0047 05       		.byte	0x5
+ 115 0048 AB000000 		.4byte	.LASF4
+ 116 004c 02       		.uleb128 0x2
+ 117 004d 04       		.byte	0x4
+ 118 004e 07       		.byte	0x7
+ 119 004f 45000000 		.4byte	.LASF5
+ 120 0053 02       		.uleb128 0x2
+ 121 0054 08       		.byte	0x8
+ 122 0055 05       		.byte	0x5
+ 123 0056 00000000 		.4byte	.LASF6
+ 124 005a 02       		.uleb128 0x2
+ 125 005b 08       		.byte	0x8
+ 126 005c 07       		.byte	0x7
+ 127 005d 57000000 		.4byte	.LASF7
+ 128 0061 03       		.uleb128 0x3
+ 129 0062 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 6
+
+
+ 130 0063 05       		.byte	0x5
+ 131 0064 696E7400 		.ascii	"int\000"
+ 132 0068 02       		.uleb128 0x2
+ 133 0069 04       		.byte	0x4
+ 134 006a 07       		.byte	0x7
+ 135 006b 14000000 		.4byte	.LASF8
+ 136 006f 04       		.uleb128 0x4
+ 137 0070 37000000 		.4byte	.LASF14
+ 138 0074 03       		.byte	0x3
+ 139 0075 4C       		.byte	0x4c
+ 140 0076 30000000 		.4byte	0x30
+ 141 007a 02       		.uleb128 0x2
+ 142 007b 04       		.byte	0x4
+ 143 007c 04       		.byte	0x4
+ 144 007d 63010000 		.4byte	.LASF9
+ 145 0081 02       		.uleb128 0x2
+ 146 0082 08       		.byte	0x8
+ 147 0083 04       		.byte	0x4
+ 148 0084 B4000000 		.4byte	.LASF10
+ 149 0088 02       		.uleb128 0x2
+ 150 0089 01       		.byte	0x1
+ 151 008a 08       		.byte	0x8
+ 152 008b A6000000 		.4byte	.LASF11
+ 153 008f 05       		.uleb128 0x5
+ 154 0090 04       		.byte	0x4
+ 155 0091 07       		.byte	0x7
+ 156 0092 06       		.uleb128 0x6
+ 157 0093 2B000000 		.4byte	.LASF22
+ 158 0097 02       		.byte	0x2
+ 159 0098 02       		.byte	0x2
+ 160 0099 9D       		.byte	0x9d
+ 161 009a BB000000 		.4byte	0xbb
+ 162 009e 07       		.uleb128 0x7
+ 163 009f 3D000000 		.4byte	.LASF12
+ 164 00a3 02       		.byte	0x2
+ 165 00a4 9E       		.byte	0x9e
+ 166 00a5 6F000000 		.4byte	0x6f
+ 167 00a9 02       		.byte	0x2
+ 168 00aa 23       		.byte	0x23
+ 169 00ab 00       		.uleb128 0x0
+ 170 00ac 07       		.uleb128 0x7
+ 171 00ad 0E000000 		.4byte	.LASF13
+ 172 00b1 02       		.byte	0x2
+ 173 00b2 9F       		.byte	0x9f
+ 174 00b3 6F000000 		.4byte	0x6f
+ 175 00b7 02       		.byte	0x2
+ 176 00b8 23       		.byte	0x23
+ 177 00b9 01       		.uleb128 0x1
+ 178 00ba 00       		.byte	0x0
+ 179 00bb 04       		.uleb128 0x4
+ 180 00bc 73010000 		.4byte	.LASF15
+ 181 00c0 02       		.byte	0x2
+ 182 00c1 A0       		.byte	0xa0
+ 183 00c2 92000000 		.4byte	0x92
+ 184 00c6 08       		.uleb128 0x8
+ 185 00c7 01       		.byte	0x1
+ 186 00c8 BB000000 		.4byte	.LASF23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 7
+
+
+ 187 00cc 01       		.byte	0x1
+ 188 00cd 45       		.byte	0x45
+ 189 00ce 01       		.byte	0x1
+ 190 00cf 00000000 		.4byte	.LFB29
+ 191 00d3 0A000000 		.4byte	.LFE29
+ 192 00d7 00000000 		.4byte	.LLST0
+ 193 00db 09       		.uleb128 0x9
+ 194 00dc 40010000 		.4byte	.LASF16
+ 195 00e0 04       		.byte	0x4
+ 196 00e1 CE06     		.2byte	0x6ce
+ 197 00e3 E9000000 		.4byte	0xe9
+ 198 00e7 01       		.byte	0x1
+ 199 00e8 01       		.byte	0x1
+ 200 00e9 0A       		.uleb128 0xa
+ 201 00ea 61000000 		.4byte	0x61
+ 202 00ee 0B       		.uleb128 0xb
+ 203 00ef 21000000 		.4byte	.LASF17
+ 204 00f3 01       		.byte	0x1
+ 205 00f4 2D       		.byte	0x2d
+ 206 00f5 6F000000 		.4byte	0x6f
+ 207 00f9 01       		.byte	0x1
+ 208 00fa 05       		.byte	0x5
+ 209 00fb 03       		.byte	0x3
+ 210 00fc 00000000 		.4byte	codecInit
+ 211 0100 0B       		.uleb128 0xb
+ 212 0101 81000000 		.4byte	.LASF18
+ 213 0105 01       		.byte	0x1
+ 214 0106 2C       		.byte	0x2c
+ 215 0107 BB000000 		.4byte	0xbb
+ 216 010b 01       		.byte	0x1
+ 217 010c 05       		.byte	0x5
+ 218 010d 03       		.byte	0x3
+ 219 010e 00000000 		.4byte	CodecWrite
+ 220 0112 00       		.byte	0x0
+ 221              		.section	.debug_abbrev
+ 222 0000 01       		.uleb128 0x1
+ 223 0001 11       		.uleb128 0x11
+ 224 0002 01       		.byte	0x1
+ 225 0003 25       		.uleb128 0x25
+ 226 0004 0E       		.uleb128 0xe
+ 227 0005 13       		.uleb128 0x13
+ 228 0006 0B       		.uleb128 0xb
+ 229 0007 03       		.uleb128 0x3
+ 230 0008 0E       		.uleb128 0xe
+ 231 0009 1B       		.uleb128 0x1b
+ 232 000a 0E       		.uleb128 0xe
+ 233 000b 11       		.uleb128 0x11
+ 234 000c 01       		.uleb128 0x1
+ 235 000d 52       		.uleb128 0x52
+ 236 000e 01       		.uleb128 0x1
+ 237 000f 55       		.uleb128 0x55
+ 238 0010 06       		.uleb128 0x6
+ 239 0011 10       		.uleb128 0x10
+ 240 0012 06       		.uleb128 0x6
+ 241 0013 00       		.byte	0x0
+ 242 0014 00       		.byte	0x0
+ 243 0015 02       		.uleb128 0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 8
+
+
+ 244 0016 24       		.uleb128 0x24
+ 245 0017 00       		.byte	0x0
+ 246 0018 0B       		.uleb128 0xb
+ 247 0019 0B       		.uleb128 0xb
+ 248 001a 3E       		.uleb128 0x3e
+ 249 001b 0B       		.uleb128 0xb
+ 250 001c 03       		.uleb128 0x3
+ 251 001d 0E       		.uleb128 0xe
+ 252 001e 00       		.byte	0x0
+ 253 001f 00       		.byte	0x0
+ 254 0020 03       		.uleb128 0x3
+ 255 0021 24       		.uleb128 0x24
+ 256 0022 00       		.byte	0x0
+ 257 0023 0B       		.uleb128 0xb
+ 258 0024 0B       		.uleb128 0xb
+ 259 0025 3E       		.uleb128 0x3e
+ 260 0026 0B       		.uleb128 0xb
+ 261 0027 03       		.uleb128 0x3
+ 262 0028 08       		.uleb128 0x8
+ 263 0029 00       		.byte	0x0
+ 264 002a 00       		.byte	0x0
+ 265 002b 04       		.uleb128 0x4
+ 266 002c 16       		.uleb128 0x16
+ 267 002d 00       		.byte	0x0
+ 268 002e 03       		.uleb128 0x3
+ 269 002f 0E       		.uleb128 0xe
+ 270 0030 3A       		.uleb128 0x3a
+ 271 0031 0B       		.uleb128 0xb
+ 272 0032 3B       		.uleb128 0x3b
+ 273 0033 0B       		.uleb128 0xb
+ 274 0034 49       		.uleb128 0x49
+ 275 0035 13       		.uleb128 0x13
+ 276 0036 00       		.byte	0x0
+ 277 0037 00       		.byte	0x0
+ 278 0038 05       		.uleb128 0x5
+ 279 0039 24       		.uleb128 0x24
+ 280 003a 00       		.byte	0x0
+ 281 003b 0B       		.uleb128 0xb
+ 282 003c 0B       		.uleb128 0xb
+ 283 003d 3E       		.uleb128 0x3e
+ 284 003e 0B       		.uleb128 0xb
+ 285 003f 00       		.byte	0x0
+ 286 0040 00       		.byte	0x0
+ 287 0041 06       		.uleb128 0x6
+ 288 0042 13       		.uleb128 0x13
+ 289 0043 01       		.byte	0x1
+ 290 0044 03       		.uleb128 0x3
+ 291 0045 0E       		.uleb128 0xe
+ 292 0046 0B       		.uleb128 0xb
+ 293 0047 0B       		.uleb128 0xb
+ 294 0048 3A       		.uleb128 0x3a
+ 295 0049 0B       		.uleb128 0xb
+ 296 004a 3B       		.uleb128 0x3b
+ 297 004b 0B       		.uleb128 0xb
+ 298 004c 01       		.uleb128 0x1
+ 299 004d 13       		.uleb128 0x13
+ 300 004e 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 9
+
+
+ 301 004f 00       		.byte	0x0
+ 302 0050 07       		.uleb128 0x7
+ 303 0051 0D       		.uleb128 0xd
+ 304 0052 00       		.byte	0x0
+ 305 0053 03       		.uleb128 0x3
+ 306 0054 0E       		.uleb128 0xe
+ 307 0055 3A       		.uleb128 0x3a
+ 308 0056 0B       		.uleb128 0xb
+ 309 0057 3B       		.uleb128 0x3b
+ 310 0058 0B       		.uleb128 0xb
+ 311 0059 49       		.uleb128 0x49
+ 312 005a 13       		.uleb128 0x13
+ 313 005b 38       		.uleb128 0x38
+ 314 005c 0A       		.uleb128 0xa
+ 315 005d 00       		.byte	0x0
+ 316 005e 00       		.byte	0x0
+ 317 005f 08       		.uleb128 0x8
+ 318 0060 2E       		.uleb128 0x2e
+ 319 0061 00       		.byte	0x0
+ 320 0062 3F       		.uleb128 0x3f
+ 321 0063 0C       		.uleb128 0xc
+ 322 0064 03       		.uleb128 0x3
+ 323 0065 0E       		.uleb128 0xe
+ 324 0066 3A       		.uleb128 0x3a
+ 325 0067 0B       		.uleb128 0xb
+ 326 0068 3B       		.uleb128 0x3b
+ 327 0069 0B       		.uleb128 0xb
+ 328 006a 27       		.uleb128 0x27
+ 329 006b 0C       		.uleb128 0xc
+ 330 006c 11       		.uleb128 0x11
+ 331 006d 01       		.uleb128 0x1
+ 332 006e 12       		.uleb128 0x12
+ 333 006f 01       		.uleb128 0x1
+ 334 0070 40       		.uleb128 0x40
+ 335 0071 06       		.uleb128 0x6
+ 336 0072 00       		.byte	0x0
+ 337 0073 00       		.byte	0x0
+ 338 0074 09       		.uleb128 0x9
+ 339 0075 34       		.uleb128 0x34
+ 340 0076 00       		.byte	0x0
+ 341 0077 03       		.uleb128 0x3
+ 342 0078 0E       		.uleb128 0xe
+ 343 0079 3A       		.uleb128 0x3a
+ 344 007a 0B       		.uleb128 0xb
+ 345 007b 3B       		.uleb128 0x3b
+ 346 007c 05       		.uleb128 0x5
+ 347 007d 49       		.uleb128 0x49
+ 348 007e 13       		.uleb128 0x13
+ 349 007f 3F       		.uleb128 0x3f
+ 350 0080 0C       		.uleb128 0xc
+ 351 0081 3C       		.uleb128 0x3c
+ 352 0082 0C       		.uleb128 0xc
+ 353 0083 00       		.byte	0x0
+ 354 0084 00       		.byte	0x0
+ 355 0085 0A       		.uleb128 0xa
+ 356 0086 35       		.uleb128 0x35
+ 357 0087 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 10
+
+
+ 358 0088 49       		.uleb128 0x49
+ 359 0089 13       		.uleb128 0x13
+ 360 008a 00       		.byte	0x0
+ 361 008b 00       		.byte	0x0
+ 362 008c 0B       		.uleb128 0xb
+ 363 008d 34       		.uleb128 0x34
+ 364 008e 00       		.byte	0x0
+ 365 008f 03       		.uleb128 0x3
+ 366 0090 0E       		.uleb128 0xe
+ 367 0091 3A       		.uleb128 0x3a
+ 368 0092 0B       		.uleb128 0xb
+ 369 0093 3B       		.uleb128 0x3b
+ 370 0094 0B       		.uleb128 0xb
+ 371 0095 49       		.uleb128 0x49
+ 372 0096 13       		.uleb128 0x13
+ 373 0097 3F       		.uleb128 0x3f
+ 374 0098 0C       		.uleb128 0xc
+ 375 0099 02       		.uleb128 0x2
+ 376 009a 0A       		.uleb128 0xa
+ 377 009b 00       		.byte	0x0
+ 378 009c 00       		.byte	0x0
+ 379 009d 00       		.byte	0x0
+ 380              		.section	.debug_pubnames,"",%progbits
+ 381 0000 3F000000 		.4byte	0x3f
+ 382 0004 0200     		.2byte	0x2
+ 383 0006 00000000 		.4byte	.Ldebug_info0
+ 384 000a 13010000 		.4byte	0x113
+ 385 000e C6000000 		.4byte	0xc6
+ 386 0012 496E6974 		.ascii	"InitCirrusCodec\000"
+ 386      43697272 
+ 386      7573436F 
+ 386      64656300 
+ 387 0022 EE000000 		.4byte	0xee
+ 388 0026 636F6465 		.ascii	"codecInit\000"
+ 388      63496E69 
+ 388      7400
+ 389 0030 00010000 		.4byte	0x100
+ 390 0034 436F6465 		.ascii	"CodecWrite\000"
+ 390      63577269 
+ 390      746500
+ 391 003f 00000000 		.4byte	0x0
+ 392              		.section	.debug_aranges,"",%progbits
+ 393 0000 1C000000 		.4byte	0x1c
+ 394 0004 0200     		.2byte	0x2
+ 395 0006 00000000 		.4byte	.Ldebug_info0
+ 396 000a 04       		.byte	0x4
+ 397 000b 00       		.byte	0x0
+ 398 000c 0000     		.2byte	0x0
+ 399 000e 0000     		.2byte	0x0
+ 400 0010 00000000 		.4byte	.LFB29
+ 401 0014 0A000000 		.4byte	.LFE29-.LFB29
+ 402 0018 00000000 		.4byte	0x0
+ 403 001c 00000000 		.4byte	0x0
+ 404              		.section	.debug_ranges,"",%progbits
+ 405              	.Ldebug_ranges0:
+ 406 0000 00000000 		.4byte	.Ltext0
+ 407 0004 00000000 		.4byte	.Letext0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 11
+
+
+ 408 0008 00000000 		.4byte	.LFB29
+ 409 000c 0A000000 		.4byte	.LFE29
+ 410 0010 00000000 		.4byte	0x0
+ 411 0014 00000000 		.4byte	0x0
+ 412              		.section	.debug_str,"MS",%progbits,1
+ 413              	.LASF6:
+ 414 0000 6C6F6E67 		.ascii	"long long int\000"
+ 414      206C6F6E 
+ 414      6720696E 
+ 414      7400
+ 415              	.LASF13:
+ 416 000e 76616C75 		.ascii	"value\000"
+ 416      6500
+ 417              	.LASF8:
+ 418 0014 756E7369 		.ascii	"unsigned int\000"
+ 418      676E6564 
+ 418      20696E74 
+ 418      00
+ 419              	.LASF17:
+ 420 0021 636F6465 		.ascii	"codecInit\000"
+ 420      63496E69 
+ 420      7400
+ 421              	.LASF22:
+ 422 002b 436F6465 		.ascii	"CodecConfig\000"
+ 422      63436F6E 
+ 422      66696700 
+ 423              	.LASF14:
+ 424 0037 75696E74 		.ascii	"uint8\000"
+ 424      3800
+ 425              	.LASF12:
+ 426 003d 61646472 		.ascii	"address\000"
+ 426      65737300 
+ 427              	.LASF5:
+ 428 0045 6C6F6E67 		.ascii	"long unsigned int\000"
+ 428      20756E73 
+ 428      69676E65 
+ 428      6420696E 
+ 428      7400
+ 429              	.LASF7:
+ 430 0057 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 430      206C6F6E 
+ 430      6720756E 
+ 430      7369676E 
+ 430      65642069 
+ 431              	.LASF3:
+ 432 006e 73686F72 		.ascii	"short unsigned int\000"
+ 432      7420756E 
+ 432      7369676E 
+ 432      65642069 
+ 432      6E7400
+ 433              	.LASF18:
+ 434 0081 436F6465 		.ascii	"CodecWrite\000"
+ 434      63577269 
+ 434      746500
+ 435              	.LASF19:
+ 436 008c 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 436      4320342E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 12
+
+
+ 436      342E3100 
+ 437              	.LASF1:
+ 438 0098 756E7369 		.ascii	"unsigned char\000"
+ 438      676E6564 
+ 438      20636861 
+ 438      7200
+ 439              	.LASF11:
+ 440 00a6 63686172 		.ascii	"char\000"
+ 440      00
+ 441              	.LASF4:
+ 442 00ab 6C6F6E67 		.ascii	"long int\000"
+ 442      20696E74 
+ 442      00
+ 443              	.LASF10:
+ 444 00b4 646F7562 		.ascii	"double\000"
+ 444      6C6500
+ 445              	.LASF23:
+ 446 00bb 496E6974 		.ascii	"InitCirrusCodec\000"
+ 446      43697272 
+ 446      7573436F 
+ 446      64656300 
+ 447              	.LASF21:
+ 448 00cb 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 448      665C486F 
+ 448      6D655C44 
+ 448      65736B74 
+ 448      6F705C50 
+ 449 00f8 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 449      2D435938 
+ 449      43353636 
+ 449      375C5069 
+ 449      6F6E6565 
+ 450 0129 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 450      4C505F55 
+ 450      53425F41 
+ 450      7564696F 
+ 450      2E637964 
+ 451              	.LASF16:
+ 452 0140 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 452      52784275 
+ 452      66666572 
+ 452      00
+ 453              	.LASF0:
+ 454 014d 7369676E 		.ascii	"signed char\000"
+ 454      65642063 
+ 454      68617200 
+ 455              	.LASF20:
+ 456 0159 2E5C436F 		.ascii	".\\Codec.c\000"
+ 456      6465632E 
+ 456      6300
+ 457              	.LASF9:
+ 458 0163 666C6F61 		.ascii	"float\000"
+ 458      7400
+ 459              	.LASF2:
+ 460 0169 73686F72 		.ascii	"short int\000"
+ 460      7420696E 
+ 460      7400
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cc4DGdKb.s 			page 13
+
+
+ 461              	.LASF15:
+ 462 0173 436F6465 		.ascii	"CodecRegister\000"
+ 462      63526567 
+ 462      69737465 
+ 462      7200
+ 463              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

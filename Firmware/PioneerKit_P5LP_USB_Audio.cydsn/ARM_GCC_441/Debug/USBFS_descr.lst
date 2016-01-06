@@ -1,0 +1,1974 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"USBFS_descr.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 75000000 		.text
+  20      02006F00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	USBFS_DEVICE0_DESCR
+  24              		.section	.rodata
+  25              		.align	2
+  26              		.type	USBFS_DEVICE0_DESCR, %object
+  27              		.size	USBFS_DEVICE0_DESCR, 18
+  28              	USBFS_DEVICE0_DESCR:
+  29 0000 12       		.byte	18
+  30 0001 01       		.byte	1
+  31 0002 00       		.byte	0
+  32 0003 02       		.byte	2
+  33 0004 00       		.byte	0
+  34 0005 00       		.byte	0
+  35 0006 00       		.byte	0
+  36 0007 08       		.byte	8
+  37 0008 B4       		.byte	-76
+  38 0009 04       		.byte	4
+  39 000a 00       		.byte	0
+  40 000b C4       		.byte	-60
+  41 000c 00       		.byte	0
+  42 000d 10       		.byte	16
+  43 000e 01       		.byte	1
+  44 000f 0C       		.byte	12
+  45 0010 80       		.byte	-128
+  46 0011 01       		.byte	1
+  47              		.global	USBFS_DEVICE0_CONFIGURATION0_DESCR
+  48 0012 0000     		.align	2
+  49              		.type	USBFS_DEVICE0_CONFIGURATION0_DESCR, %object
+  50              		.size	USBFS_DEVICE0_CONFIGURATION0_DESCR, 270
+  51              	USBFS_DEVICE0_CONFIGURATION0_DESCR:
+  52 0014 09       		.byte	9
+  53 0015 02       		.byte	2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 2
+
+
+  54 0016 0E       		.byte	14
+  55 0017 01       		.byte	1
+  56 0018 04       		.byte	4
+  57 0019 01       		.byte	1
+  58 001a 0A       		.byte	10
+  59 001b 80       		.byte	-128
+  60 001c 32       		.byte	50
+  61 001d 09       		.byte	9
+  62 001e 04       		.byte	4
+  63 001f 00       		.byte	0
+  64 0020 00       		.byte	0
+  65 0021 01       		.byte	1
+  66 0022 01       		.byte	1
+  67 0023 01       		.byte	1
+  68 0024 00       		.byte	0
+  69 0025 0C       		.byte	12
+  70 0026 0A       		.byte	10
+  71 0027 24       		.byte	36
+  72 0028 01       		.byte	1
+  73 0029 00       		.byte	0
+  74 002a 01       		.byte	1
+  75 002b 3E       		.byte	62
+  76 002c 00       		.byte	0
+  77 002d 02       		.byte	2
+  78 002e 01       		.byte	1
+  79 002f 02       		.byte	2
+  80 0030 0A       		.byte	10
+  81 0031 24       		.byte	36
+  82 0032 06       		.byte	6
+  83 0033 02       		.byte	2
+  84 0034 01       		.byte	1
+  85 0035 01       		.byte	1
+  86 0036 02       		.byte	2
+  87 0037 02       		.byte	2
+  88 0038 02       		.byte	2
+  89 0039 00       		.byte	0
+  90 003a 0C       		.byte	12
+  91 003b 24       		.byte	36
+  92 003c 02       		.byte	2
+  93 003d 01       		.byte	1
+  94 003e 01       		.byte	1
+  95 003f 01       		.byte	1
+  96 0040 00       		.byte	0
+  97 0041 02       		.byte	2
+  98 0042 03       		.byte	3
+  99 0043 00       		.byte	0
+ 100 0044 00       		.byte	0
+ 101 0045 06       		.byte	6
+ 102 0046 09       		.byte	9
+ 103 0047 24       		.byte	36
+ 104 0048 03       		.byte	3
+ 105 0049 03       		.byte	3
+ 106 004a 01       		.byte	1
+ 107 004b 03       		.byte	3
+ 108 004c 00       		.byte	0
+ 109 004d 02       		.byte	2
+ 110 004e 05       		.byte	5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 3
+
+
+ 111 004f 0C       		.byte	12
+ 112 0050 24       		.byte	36
+ 113 0051 02       		.byte	2
+ 114 0052 04       		.byte	4
+ 115 0053 01       		.byte	1
+ 116 0054 02       		.byte	2
+ 117 0055 00       		.byte	0
+ 118 0056 02       		.byte	2
+ 119 0057 03       		.byte	3
+ 120 0058 00       		.byte	0
+ 121 0059 00       		.byte	0
+ 122 005a 04       		.byte	4
+ 123 005b 09       		.byte	9
+ 124 005c 24       		.byte	36
+ 125 005d 03       		.byte	3
+ 126 005e 05       		.byte	5
+ 127 005f 01       		.byte	1
+ 128 0060 01       		.byte	1
+ 129 0061 00       		.byte	0
+ 130 0062 04       		.byte	4
+ 131 0063 06       		.byte	6
+ 132 0064 09       		.byte	9
+ 133 0065 05       		.byte	5
+ 134 0066 86       		.byte	-122
+ 135 0067 03       		.byte	3
+ 136 0068 02       		.byte	2
+ 137 0069 00       		.byte	0
+ 138 006a 1E       		.byte	30
+ 139 006b 00       		.byte	0
+ 140 006c 00       		.byte	0
+ 141 006d 09       		.byte	9
+ 142 006e 04       		.byte	4
+ 143 006f 01       		.byte	1
+ 144 0070 00       		.byte	0
+ 145 0071 00       		.byte	0
+ 146 0072 01       		.byte	1
+ 147 0073 02       		.byte	2
+ 148 0074 00       		.byte	0
+ 149 0075 0C       		.byte	12
+ 150 0076 09       		.byte	9
+ 151 0077 04       		.byte	4
+ 152 0078 01       		.byte	1
+ 153 0079 01       		.byte	1
+ 154 007a 01       		.byte	1
+ 155 007b 01       		.byte	1
+ 156 007c 02       		.byte	2
+ 157 007d 00       		.byte	0
+ 158 007e 08       		.byte	8
+ 159 007f 07       		.byte	7
+ 160 0080 24       		.byte	36
+ 161 0081 01       		.byte	1
+ 162 0082 01       		.byte	1
+ 163 0083 01       		.byte	1
+ 164 0084 01       		.byte	1
+ 165 0085 00       		.byte	0
+ 166 0086 0E       		.byte	14
+ 167 0087 24       		.byte	36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 4
+
+
+ 168 0088 02       		.byte	2
+ 169 0089 01       		.byte	1
+ 170 008a 02       		.byte	2
+ 171 008b 02       		.byte	2
+ 172 008c 10       		.byte	16
+ 173 008d 02       		.byte	2
+ 174 008e 44       		.byte	68
+ 175 008f AC       		.byte	-84
+ 176 0090 00       		.byte	0
+ 177 0091 80       		.byte	-128
+ 178 0092 BB       		.byte	-69
+ 179 0093 00       		.byte	0
+ 180 0094 09       		.byte	9
+ 181 0095 05       		.byte	5
+ 182 0096 01       		.byte	1
+ 183 0097 01       		.byte	1
+ 184 0098 C0       		.byte	-64
+ 185 0099 00       		.byte	0
+ 186 009a 01       		.byte	1
+ 187 009b 00       		.byte	0
+ 188 009c 00       		.byte	0
+ 189 009d 07       		.byte	7
+ 190 009e 25       		.byte	37
+ 191 009f 01       		.byte	1
+ 192 00a0 01       		.byte	1
+ 193 00a1 01       		.byte	1
+ 194 00a2 01       		.byte	1
+ 195 00a3 00       		.byte	0
+ 196 00a4 09       		.byte	9
+ 197 00a5 04       		.byte	4
+ 198 00a6 01       		.byte	1
+ 199 00a7 02       		.byte	2
+ 200 00a8 01       		.byte	1
+ 201 00a9 01       		.byte	1
+ 202 00aa 02       		.byte	2
+ 203 00ab 00       		.byte	0
+ 204 00ac 09       		.byte	9
+ 205 00ad 07       		.byte	7
+ 206 00ae 24       		.byte	36
+ 207 00af 01       		.byte	1
+ 208 00b0 01       		.byte	1
+ 209 00b1 01       		.byte	1
+ 210 00b2 01       		.byte	1
+ 211 00b3 00       		.byte	0
+ 212 00b4 0E       		.byte	14
+ 213 00b5 24       		.byte	36
+ 214 00b6 02       		.byte	2
+ 215 00b7 01       		.byte	1
+ 216 00b8 02       		.byte	2
+ 217 00b9 03       		.byte	3
+ 218 00ba 18       		.byte	24
+ 219 00bb 02       		.byte	2
+ 220 00bc 44       		.byte	68
+ 221 00bd AC       		.byte	-84
+ 222 00be 00       		.byte	0
+ 223 00bf 80       		.byte	-128
+ 224 00c0 BB       		.byte	-69
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 5
+
+
+ 225 00c1 00       		.byte	0
+ 226 00c2 09       		.byte	9
+ 227 00c3 05       		.byte	5
+ 228 00c4 01       		.byte	1
+ 229 00c5 0D       		.byte	13
+ 230 00c6 20       		.byte	32
+ 231 00c7 01       		.byte	1
+ 232 00c8 01       		.byte	1
+ 233 00c9 00       		.byte	0
+ 234 00ca 00       		.byte	0
+ 235 00cb 07       		.byte	7
+ 236 00cc 25       		.byte	37
+ 237 00cd 01       		.byte	1
+ 238 00ce 01       		.byte	1
+ 239 00cf 01       		.byte	1
+ 240 00d0 01       		.byte	1
+ 241 00d1 00       		.byte	0
+ 242 00d2 09       		.byte	9
+ 243 00d3 04       		.byte	4
+ 244 00d4 02       		.byte	2
+ 245 00d5 00       		.byte	0
+ 246 00d6 00       		.byte	0
+ 247 00d7 01       		.byte	1
+ 248 00d8 02       		.byte	2
+ 249 00d9 00       		.byte	0
+ 250 00da 0C       		.byte	12
+ 251 00db 09       		.byte	9
+ 252 00dc 04       		.byte	4
+ 253 00dd 02       		.byte	2
+ 254 00de 01       		.byte	1
+ 255 00df 01       		.byte	1
+ 256 00e0 01       		.byte	1
+ 257 00e1 02       		.byte	2
+ 258 00e2 00       		.byte	0
+ 259 00e3 08       		.byte	8
+ 260 00e4 07       		.byte	7
+ 261 00e5 24       		.byte	36
+ 262 00e6 01       		.byte	1
+ 263 00e7 05       		.byte	5
+ 264 00e8 01       		.byte	1
+ 265 00e9 01       		.byte	1
+ 266 00ea 00       		.byte	0
+ 267 00eb 0E       		.byte	14
+ 268 00ec 24       		.byte	36
+ 269 00ed 02       		.byte	2
+ 270 00ee 01       		.byte	1
+ 271 00ef 02       		.byte	2
+ 272 00f0 02       		.byte	2
+ 273 00f1 10       		.byte	16
+ 274 00f2 02       		.byte	2
+ 275 00f3 44       		.byte	68
+ 276 00f4 AC       		.byte	-84
+ 277 00f5 00       		.byte	0
+ 278 00f6 80       		.byte	-128
+ 279 00f7 BB       		.byte	-69
+ 280 00f8 00       		.byte	0
+ 281 00f9 09       		.byte	9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 6
+
+
+ 282 00fa 05       		.byte	5
+ 283 00fb 82       		.byte	-126
+ 284 00fc 0D       		.byte	13
+ 285 00fd C0       		.byte	-64
+ 286 00fe 00       		.byte	0
+ 287 00ff 01       		.byte	1
+ 288 0100 00       		.byte	0
+ 289 0101 00       		.byte	0
+ 290 0102 07       		.byte	7
+ 291 0103 25       		.byte	37
+ 292 0104 01       		.byte	1
+ 293 0105 01       		.byte	1
+ 294 0106 01       		.byte	1
+ 295 0107 01       		.byte	1
+ 296 0108 00       		.byte	0
+ 297 0109 09       		.byte	9
+ 298 010a 04       		.byte	4
+ 299 010b 03       		.byte	3
+ 300 010c 00       		.byte	0
+ 301 010d 01       		.byte	1
+ 302 010e 03       		.byte	3
+ 303 010f 00       		.byte	0
+ 304 0110 00       		.byte	0
+ 305 0111 0B       		.byte	11
+ 306 0112 09       		.byte	9
+ 307 0113 21       		.byte	33
+ 308 0114 11       		.byte	17
+ 309 0115 01       		.byte	1
+ 310 0116 00       		.byte	0
+ 311 0117 01       		.byte	1
+ 312 0118 22       		.byte	34
+ 313 0119 17       		.byte	23
+ 314 011a 00       		.byte	0
+ 315 011b 07       		.byte	7
+ 316 011c 05       		.byte	5
+ 317 011d 84       		.byte	-124
+ 318 011e 03       		.byte	3
+ 319 011f 01       		.byte	1
+ 320 0120 00       		.byte	0
+ 321 0121 28       		.byte	40
+ 322              		.global	USBFS_STRING_DESCRIPTORS
+ 323 0122 0000     		.align	2
+ 324              		.type	USBFS_STRING_DESCRIPTORS, %object
+ 325              		.size	USBFS_STRING_DESCRIPTORS, 299
+ 326              	USBFS_STRING_DESCRIPTORS:
+ 327 0124 04       		.byte	4
+ 328 0125 03       		.byte	3
+ 329 0126 09       		.byte	9
+ 330 0127 04       		.byte	4
+ 331 0128 12       		.byte	18
+ 332 0129 03       		.byte	3
+ 333 012a 4E       		.byte	78
+ 334 012b 00       		.byte	0
+ 335 012c 59       		.byte	89
+ 336 012d 00       		.byte	0
+ 337 012e 55       		.byte	85
+ 338 012f 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 7
+
+
+ 339 0130 20       		.byte	32
+ 340 0131 00       		.byte	0
+ 341 0132 43       		.byte	67
+ 342 0133 00       		.byte	0
+ 343 0134 55       		.byte	85
+ 344 0135 00       		.byte	0
+ 345 0136 53       		.byte	83
+ 346 0137 00       		.byte	0
+ 347 0138 50       		.byte	80
+ 348 0139 00       		.byte	0
+ 349 013a 28       		.byte	40
+ 350 013b 03       		.byte	3
+ 351 013c 43       		.byte	67
+ 352 013d 00       		.byte	0
+ 353 013e 79       		.byte	121
+ 354 013f 00       		.byte	0
+ 355 0140 70       		.byte	112
+ 356 0141 00       		.byte	0
+ 357 0142 72       		.byte	114
+ 358 0143 00       		.byte	0
+ 359 0144 65       		.byte	101
+ 360 0145 00       		.byte	0
+ 361 0146 73       		.byte	115
+ 362 0147 00       		.byte	0
+ 363 0148 73       		.byte	115
+ 364 0149 00       		.byte	0
+ 365 014a 41       		.byte	65
+ 366 014b 00       		.byte	0
+ 367 014c 75       		.byte	117
+ 368 014d 00       		.byte	0
+ 369 014e 64       		.byte	100
+ 370 014f 00       		.byte	0
+ 371 0150 69       		.byte	105
+ 372 0151 00       		.byte	0
+ 373 0152 6F       		.byte	111
+ 374 0153 00       		.byte	0
+ 375 0154 43       		.byte	67
+ 376 0155 00       		.byte	0
+ 377 0156 6F       		.byte	111
+ 378 0157 00       		.byte	0
+ 379 0158 6E       		.byte	110
+ 380 0159 00       		.byte	0
+ 381 015a 74       		.byte	116
+ 382 015b 00       		.byte	0
+ 383 015c 72       		.byte	114
+ 384 015d 00       		.byte	0
+ 385 015e 6F       		.byte	111
+ 386 015f 00       		.byte	0
+ 387 0160 6C       		.byte	108
+ 388 0161 00       		.byte	0
+ 389 0162 1C       		.byte	28
+ 390 0163 03       		.byte	3
+ 391 0164 5A       		.byte	90
+ 392 0165 00       		.byte	0
+ 393 0166 65       		.byte	101
+ 394 0167 00       		.byte	0
+ 395 0168 72       		.byte	114
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 8
+
+
+ 396 0169 00       		.byte	0
+ 397 016a 6F       		.byte	111
+ 398 016b 00       		.byte	0
+ 399 016c 42       		.byte	66
+ 400 016d 00       		.byte	0
+ 401 016e 61       		.byte	97
+ 402 016f 00       		.byte	0
+ 403 0170 6E       		.byte	110
+ 404 0171 00       		.byte	0
+ 405 0172 64       		.byte	100
+ 406 0173 00       		.byte	0
+ 407 0174 77       		.byte	119
+ 408 0175 00       		.byte	0
+ 409 0176 69       		.byte	105
+ 410 0177 00       		.byte	0
+ 411 0178 64       		.byte	100
+ 412 0179 00       		.byte	0
+ 413 017a 74       		.byte	116
+ 414 017b 00       		.byte	0
+ 415 017c 68       		.byte	104
+ 416 017d 00       		.byte	0
+ 417 017e 16       		.byte	22
+ 418 017f 03       		.byte	3
+ 419 0180 4D       		.byte	77
+ 420 0181 00       		.byte	0
+ 421 0182 69       		.byte	105
+ 422 0183 00       		.byte	0
+ 423 0184 63       		.byte	99
+ 424 0185 00       		.byte	0
+ 425 0186 72       		.byte	114
+ 426 0187 00       		.byte	0
+ 427 0188 6F       		.byte	111
+ 428 0189 00       		.byte	0
+ 429 018a 70       		.byte	112
+ 430 018b 00       		.byte	0
+ 431 018c 68       		.byte	104
+ 432 018d 00       		.byte	0
+ 433 018e 6F       		.byte	111
+ 434 018f 00       		.byte	0
+ 435 0190 6E       		.byte	110
+ 436 0191 00       		.byte	0
+ 437 0192 65       		.byte	101
+ 438 0193 00       		.byte	0
+ 439 0194 10       		.byte	16
+ 440 0195 03       		.byte	3
+ 441 0196 53       		.byte	83
+ 442 0197 00       		.byte	0
+ 443 0198 70       		.byte	112
+ 444 0199 00       		.byte	0
+ 445 019a 65       		.byte	101
+ 446 019b 00       		.byte	0
+ 447 019c 61       		.byte	97
+ 448 019d 00       		.byte	0
+ 449 019e 6B       		.byte	107
+ 450 019f 00       		.byte	0
+ 451 01a0 65       		.byte	101
+ 452 01a1 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 9
+
+
+ 453 01a2 72       		.byte	114
+ 454 01a3 00       		.byte	0
+ 455 01a4 1C       		.byte	28
+ 456 01a5 03       		.byte	3
+ 457 01a6 55       		.byte	85
+ 458 01a7 00       		.byte	0
+ 459 01a8 53       		.byte	83
+ 460 01a9 00       		.byte	0
+ 461 01aa 42       		.byte	66
+ 462 01ab 00       		.byte	0
+ 463 01ac 20       		.byte	32
+ 464 01ad 00       		.byte	0
+ 465 01ae 53       		.byte	83
+ 466 01af 00       		.byte	0
+ 467 01b0 74       		.byte	116
+ 468 01b1 00       		.byte	0
+ 469 01b2 72       		.byte	114
+ 470 01b3 00       		.byte	0
+ 471 01b4 65       		.byte	101
+ 472 01b5 00       		.byte	0
+ 473 01b6 61       		.byte	97
+ 474 01b7 00       		.byte	0
+ 475 01b8 6D       		.byte	109
+ 476 01b9 00       		.byte	0
+ 477 01ba 69       		.byte	105
+ 478 01bb 00       		.byte	0
+ 479 01bc 6E       		.byte	110
+ 480 01bd 00       		.byte	0
+ 481 01be 67       		.byte	103
+ 482 01bf 00       		.byte	0
+ 483 01c0 0E       		.byte	14
+ 484 01c1 03       		.byte	3
+ 485 01c2 41       		.byte	65
+ 486 01c3 00       		.byte	0
+ 487 01c4 63       		.byte	99
+ 488 01c5 00       		.byte	0
+ 489 01c6 74       		.byte	116
+ 490 01c7 00       		.byte	0
+ 491 01c8 69       		.byte	105
+ 492 01c9 00       		.byte	0
+ 493 01ca 76       		.byte	118
+ 494 01cb 00       		.byte	0
+ 495 01cc 65       		.byte	101
+ 496 01cd 00       		.byte	0
+ 497 01ce 1C       		.byte	28
+ 498 01cf 03       		.byte	3
+ 499 01d0 41       		.byte	65
+ 500 01d1 00       		.byte	0
+ 501 01d2 63       		.byte	99
+ 502 01d3 00       		.byte	0
+ 503 01d4 74       		.byte	116
+ 504 01d5 00       		.byte	0
+ 505 01d6 69       		.byte	105
+ 506 01d7 00       		.byte	0
+ 507 01d8 76       		.byte	118
+ 508 01d9 00       		.byte	0
+ 509 01da 65       		.byte	101
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 10
+
+
+ 510 01db 00       		.byte	0
+ 511 01dc 20       		.byte	32
+ 512 01dd 00       		.byte	0
+ 513 01de 31       		.byte	49
+ 514 01df 00       		.byte	0
+ 515 01e0 36       		.byte	54
+ 516 01e1 00       		.byte	0
+ 517 01e2 20       		.byte	32
+ 518 01e3 00       		.byte	0
+ 519 01e4 62       		.byte	98
+ 520 01e5 00       		.byte	0
+ 521 01e6 69       		.byte	105
+ 522 01e7 00       		.byte	0
+ 523 01e8 74       		.byte	116
+ 524 01e9 00       		.byte	0
+ 525 01ea 1C       		.byte	28
+ 526 01eb 03       		.byte	3
+ 527 01ec 41       		.byte	65
+ 528 01ed 00       		.byte	0
+ 529 01ee 63       		.byte	99
+ 530 01ef 00       		.byte	0
+ 531 01f0 74       		.byte	116
+ 532 01f1 00       		.byte	0
+ 533 01f2 69       		.byte	105
+ 534 01f3 00       		.byte	0
+ 535 01f4 76       		.byte	118
+ 536 01f5 00       		.byte	0
+ 537 01f6 65       		.byte	101
+ 538 01f7 00       		.byte	0
+ 539 01f8 20       		.byte	32
+ 540 01f9 00       		.byte	0
+ 541 01fa 32       		.byte	50
+ 542 01fb 00       		.byte	0
+ 543 01fc 34       		.byte	52
+ 544 01fd 00       		.byte	0
+ 545 01fe 20       		.byte	32
+ 546 01ff 00       		.byte	0
+ 547 0200 62       		.byte	98
+ 548 0201 00       		.byte	0
+ 549 0202 69       		.byte	105
+ 550 0203 00       		.byte	0
+ 551 0204 74       		.byte	116
+ 552 0205 00       		.byte	0
+ 553 0206 08       		.byte	8
+ 554 0207 03       		.byte	3
+ 555 0208 4D       		.byte	77
+ 556 0209 00       		.byte	0
+ 557 020a 61       		.byte	97
+ 558 020b 00       		.byte	0
+ 559 020c 63       		.byte	99
+ 560 020d 00       		.byte	0
+ 561 020e 20       		.byte	32
+ 562 020f 03       		.byte	3
+ 563 0210 50       		.byte	80
+ 564 0211 00       		.byte	0
+ 565 0212 6C       		.byte	108
+ 566 0213 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 11
+
+
+ 567 0214 61       		.byte	97
+ 568 0215 00       		.byte	0
+ 569 0216 79       		.byte	121
+ 570 0217 00       		.byte	0
+ 571 0218 6C       		.byte	108
+ 572 0219 00       		.byte	0
+ 573 021a 69       		.byte	105
+ 574 021b 00       		.byte	0
+ 575 021c 73       		.byte	115
+ 576 021d 00       		.byte	0
+ 577 021e 74       		.byte	116
+ 578 021f 00       		.byte	0
+ 579 0220 43       		.byte	67
+ 580 0221 00       		.byte	0
+ 581 0222 6F       		.byte	111
+ 582 0223 00       		.byte	0
+ 583 0224 6E       		.byte	110
+ 584 0225 00       		.byte	0
+ 585 0226 74       		.byte	116
+ 586 0227 00       		.byte	0
+ 587 0228 72       		.byte	114
+ 588 0229 00       		.byte	0
+ 589 022a 6F       		.byte	111
+ 590 022b 00       		.byte	0
+ 591 022c 6C       		.byte	108
+ 592 022d 00       		.byte	0
+ 593 022e 20       		.byte	32
+ 594 022f 03       		.byte	3
+ 595 0230 53       		.byte	83
+ 596 0231 00       		.byte	0
+ 597 0232 4F       		.byte	79
+ 598 0233 00       		.byte	0
+ 599 0234 4E       		.byte	78
+ 600 0235 00       		.byte	0
+ 601 0236 59       		.byte	89
+ 602 0237 00       		.byte	0
+ 603 0238 43       		.byte	67
+ 604 0239 00       		.byte	0
+ 605 023a 20       		.byte	32
+ 606 023b 00       		.byte	0
+ 607 023c 55       		.byte	85
+ 608 023d 00       		.byte	0
+ 609 023e 53       		.byte	83
+ 610 023f 00       		.byte	0
+ 611 0240 42       		.byte	66
+ 612 0241 00       		.byte	0
+ 613 0242 20       		.byte	32
+ 614 0243 00       		.byte	0
+ 615 0244 41       		.byte	65
+ 616 0245 00       		.byte	0
+ 617 0246 75       		.byte	117
+ 618 0247 00       		.byte	0
+ 619 0248 64       		.byte	100
+ 620 0249 00       		.byte	0
+ 621 024a 69       		.byte	105
+ 622 024b 00       		.byte	0
+ 623 024c 6F       		.byte	111
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 12
+
+
+ 624 024d 00       		.byte	0
+ 625 024e 00       		.byte	0
+ 626              		.global	USBFS_SN_STRING_DESCRIPTOR
+ 627 024f 00       		.align	2
+ 628              		.type	USBFS_SN_STRING_DESCRIPTOR, %object
+ 629              		.size	USBFS_SN_STRING_DESCRIPTOR, 2
+ 630              	USBFS_SN_STRING_DESCRIPTOR:
+ 631 0250 02       		.byte	2
+ 632 0251 03       		.byte	3
+ 633              		.global	USBFS_HIDREPORT_DESCRIPTOR1
+ 634 0252 0000     		.align	2
+ 635              		.type	USBFS_HIDREPORT_DESCRIPTOR1, %object
+ 636              		.size	USBFS_HIDREPORT_DESCRIPTOR1, 27
+ 637              	USBFS_HIDREPORT_DESCRIPTOR1:
+ 638 0254 17       		.byte	23
+ 639 0255 00       		.byte	0
+ 640 0256 05       		.byte	5
+ 641 0257 0C       		.byte	12
+ 642 0258 09       		.byte	9
+ 643 0259 01       		.byte	1
+ 644 025a A1       		.byte	-95
+ 645 025b 01       		.byte	1
+ 646 025c 15       		.byte	21
+ 647 025d 00       		.byte	0
+ 648 025e 25       		.byte	37
+ 649 025f 01       		.byte	1
+ 650 0260 75       		.byte	117
+ 651 0261 01       		.byte	1
+ 652 0262 95       		.byte	-107
+ 653 0263 01       		.byte	1
+ 654 0264 09       		.byte	9
+ 655 0265 CD       		.byte	-51
+ 656 0266 81       		.byte	-127
+ 657 0267 02       		.byte	2
+ 658 0268 95       		.byte	-107
+ 659 0269 07       		.byte	7
+ 660 026a 81       		.byte	-127
+ 661 026b 01       		.byte	1
+ 662 026c C0       		.byte	-64
+ 663 026d 00       		.byte	0
+ 664 026e 00       		.byte	0
+ 665              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB,4,4
+ 666              		.comm	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF,2,4
+ 667              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
+ 668 026f 00       		.align	2
+ 669              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE, %object
+ 670              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE, 12
+ 671              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE:
+ 672 0270 0200     		.short	2
+ 673 0272 0000     		.space	2
+ 674 0274 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF
+ 675 0278 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB
+ 676              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
+ 677              		.align	2
+ 678              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE, %object
+ 679              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE, 40
+ 680              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 13
+
+
+ 681 027c 00       		.byte	0
+ 682 027d 000000   		.space	3
+ 683 0280 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
+ 684 0284 00       		.byte	0
+ 685 0285 000000   		.space	3
+ 686 0288 00000000 		.word	0
+ 687 028c 00       		.byte	0
+ 688 028d 000000   		.space	3
+ 689 0290 00000000 		.word	0
+ 690 0294 01       		.byte	1
+ 691 0295 000000   		.space	3
+ 692 0298 00000000 		.word	USBFS_HIDREPORT_DESCRIPTOR1
+ 693 029c 01       		.byte	1
+ 694 029d 000000   		.space	3
+ 695 02a0 FE000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR+254
+ 696              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
+ 697              		.align	2
+ 698              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE, %object
+ 699              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE, 8
+ 700              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE:
+ 701 02a4 01       		.byte	1
+ 702 02a5 000000   		.space	3
+ 703 02a8 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
+ 704              		.global	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 705              		.align	2
+ 706              		.type	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, %object
+ 707              		.size	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE, 40
+ 708              	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE:
+ 709 02ac 00       		.byte	0
+ 710 02ad 00       		.byte	0
+ 711 02ae 86       		.byte	-122
+ 712 02af 03       		.byte	3
+ 713 02b0 0200     		.short	2
+ 714 02b2 01       		.byte	1
+ 715 02b3 00       		.space	1
+ 716 02b4 01       		.byte	1
+ 717 02b5 01       		.byte	1
+ 718 02b6 01       		.byte	1
+ 719 02b7 01       		.byte	1
+ 720 02b8 C000     		.short	192
+ 721 02ba 01       		.byte	1
+ 722 02bb 00       		.space	1
+ 723 02bc 01       		.byte	1
+ 724 02bd 02       		.byte	2
+ 725 02be 01       		.byte	1
+ 726 02bf 0D       		.byte	13
+ 727 02c0 2001     		.short	288
+ 728 02c2 01       		.byte	1
+ 729 02c3 00       		.space	1
+ 730 02c4 02       		.byte	2
+ 731 02c5 01       		.byte	1
+ 732 02c6 82       		.byte	-126
+ 733 02c7 0D       		.byte	13
+ 734 02c8 C000     		.short	192
+ 735 02ca 01       		.byte	1
+ 736 02cb 00       		.space	1
+ 737 02cc 03       		.byte	3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 14
+
+
+ 738 02cd 00       		.byte	0
+ 739 02ce 84       		.byte	-124
+ 740 02cf 03       		.byte	3
+ 741 02d0 0100     		.short	1
+ 742 02d2 03       		.byte	3
+ 743 02d3 00       		.space	1
+ 744              		.global	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 745              		.align	2
+ 746              		.type	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, %object
+ 747              		.size	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS, 4
+ 748              	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS:
+ 749 02d4 01       		.byte	1
+ 750 02d5 01       		.byte	1
+ 751 02d6 01       		.byte	1
+ 752 02d7 03       		.byte	3
+ 753              		.global	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 754              		.align	2
+ 755              		.type	USBFS_DEVICE0_CONFIGURATION0_TABLE, %object
+ 756              		.size	USBFS_DEVICE0_CONFIGURATION0_TABLE, 56
+ 757              	USBFS_DEVICE0_CONFIGURATION0_TABLE:
+ 758 02d8 01       		.byte	1
+ 759 02d9 000000   		.space	3
+ 760 02dc 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_DESCR
+ 761 02e0 05       		.byte	5
+ 762 02e1 000000   		.space	3
+ 763 02e4 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 764 02e8 00       		.byte	0
+ 765 02e9 000000   		.space	3
+ 766 02ec 00000000 		.word	0
+ 767 02f0 00       		.byte	0
+ 768 02f1 000000   		.space	3
+ 769 02f4 00000000 		.word	0
+ 770 02f8 00       		.byte	0
+ 771 02f9 000000   		.space	3
+ 772 02fc 00000000 		.word	0
+ 773 0300 01       		.byte	1
+ 774 0301 000000   		.space	3
+ 775 0304 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
+ 776 0308 00       		.byte	0
+ 777 0309 000000   		.space	3
+ 778 030c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 779              		.global	USBFS_DEVICE0_TABLE
+ 780              		.align	2
+ 781              		.type	USBFS_DEVICE0_TABLE, %object
+ 782              		.size	USBFS_DEVICE0_TABLE, 16
+ 783              	USBFS_DEVICE0_TABLE:
+ 784 0310 01       		.byte	1
+ 785 0311 000000   		.space	3
+ 786 0314 00000000 		.word	USBFS_DEVICE0_DESCR
+ 787 0318 01       		.byte	1
+ 788 0319 000000   		.space	3
+ 789 031c 00000000 		.word	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 790              		.global	USBFS_TABLE
+ 791              		.align	2
+ 792              		.type	USBFS_TABLE, %object
+ 793              		.size	USBFS_TABLE, 8
+ 794              	USBFS_TABLE:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 15
+
+
+ 795 0320 01       		.byte	1
+ 796 0321 000000   		.space	3
+ 797 0324 00000000 		.word	USBFS_DEVICE0_TABLE
+ 798              		.text
+ 799              	.Letext0:
+ 800              		.file 1 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 801              		.file 2 ".\\Generated_Source\\PSoC5\\/USBFS.h"
+ 802              		.file 3 ".\\Generated_Source\\PSoC5\\USBFS_descr.c"
+ 803              		.section	.debug_info
+ 804 0000 DB030000 		.4byte	0x3db
+ 805 0004 0200     		.2byte	0x2
+ 806 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 807 000a 04       		.byte	0x4
+ 808 000b 01       		.uleb128 0x1
+ 809 000c EC020000 		.4byte	.LASF49
+ 810 0010 01       		.byte	0x1
+ 811 0011 09030000 		.4byte	.LASF50
+ 812 0015 AE030000 		.4byte	.LASF51
+ 813 0019 00000000 		.4byte	.Ltext0
+ 814 001d 00000000 		.4byte	.Letext0
+ 815 0021 00000000 		.4byte	.Ldebug_line0
+ 816 0025 02       		.uleb128 0x2
+ 817 0026 01       		.byte	0x1
+ 818 0027 06       		.byte	0x6
+ 819 0028 2C040000 		.4byte	.LASF0
+ 820 002c 02       		.uleb128 0x2
+ 821 002d 01       		.byte	0x1
+ 822 002e 08       		.byte	0x8
+ 823 002f CA020000 		.4byte	.LASF1
+ 824 0033 02       		.uleb128 0x2
+ 825 0034 02       		.byte	0x2
+ 826 0035 05       		.byte	0x5
+ 827 0036 3B030000 		.4byte	.LASF2
+ 828 003a 02       		.uleb128 0x2
+ 829 003b 02       		.byte	0x2
+ 830 003c 07       		.byte	0x7
+ 831 003d 5A000000 		.4byte	.LASF3
+ 832 0041 02       		.uleb128 0x2
+ 833 0042 04       		.byte	0x4
+ 834 0043 05       		.byte	0x5
+ 835 0044 23040000 		.4byte	.LASF4
+ 836 0048 02       		.uleb128 0x2
+ 837 0049 04       		.byte	0x4
+ 838 004a 07       		.byte	0x7
+ 839 004b 59020000 		.4byte	.LASF5
+ 840 004f 02       		.uleb128 0x2
+ 841 0050 08       		.byte	0x8
+ 842 0051 05       		.byte	0x5
+ 843 0052 00000000 		.4byte	.LASF6
+ 844 0056 02       		.uleb128 0x2
+ 845 0057 08       		.byte	0x8
+ 846 0058 07       		.byte	0x7
+ 847 0059 78020000 		.4byte	.LASF7
+ 848 005d 03       		.uleb128 0x3
+ 849 005e 04       		.byte	0x4
+ 850 005f 05       		.byte	0x5
+ 851 0060 696E7400 		.ascii	"int\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 16
+
+
+ 852 0064 02       		.uleb128 0x2
+ 853 0065 04       		.byte	0x4
+ 854 0066 07       		.byte	0x7
+ 855 0067 6B020000 		.4byte	.LASF8
+ 856 006b 04       		.uleb128 0x4
+ 857 006c 61030000 		.4byte	.LASF9
+ 858 0070 01       		.byte	0x1
+ 859 0071 4C       		.byte	0x4c
+ 860 0072 2C000000 		.4byte	0x2c
+ 861 0076 04       		.uleb128 0x4
+ 862 0077 DF010000 		.4byte	.LASF10
+ 863 007b 01       		.byte	0x1
+ 864 007c 4D       		.byte	0x4d
+ 865 007d 3A000000 		.4byte	0x3a
+ 866 0081 02       		.uleb128 0x2
+ 867 0082 04       		.byte	0x4
+ 868 0083 04       		.byte	0x4
+ 869 0084 A0000000 		.4byte	.LASF11
+ 870 0088 02       		.uleb128 0x2
+ 871 0089 08       		.byte	0x8
+ 872 008a 04       		.byte	0x4
+ 873 008b D8010000 		.4byte	.LASF12
+ 874 008f 02       		.uleb128 0x2
+ 875 0090 01       		.byte	0x1
+ 876 0091 08       		.byte	0x8
+ 877 0092 04030000 		.4byte	.LASF13
+ 878 0096 05       		.uleb128 0x5
+ 879 0097 6B000000 		.4byte	0x6b
+ 880 009b 06       		.uleb128 0x6
+ 881 009c 04       		.byte	0x4
+ 882 009d 07       		.byte	0x7
+ 883 009e 07       		.uleb128 0x7
+ 884 009f 04       		.byte	0x4
+ 885 00a0 08       		.uleb128 0x8
+ 886 00a1 15020000 		.4byte	.LASF21
+ 887 00a5 08       		.byte	0x8
+ 888 00a6 02       		.byte	0x2
+ 889 00a7 87       		.byte	0x87
+ 890 00a8 01010000 		.4byte	0x101
+ 891 00ac 09       		.uleb128 0x9
+ 892 00ad A4030000 		.4byte	.LASF14
+ 893 00b1 02       		.byte	0x2
+ 894 00b2 88       		.byte	0x88
+ 895 00b3 6B000000 		.4byte	0x6b
+ 896 00b7 02       		.byte	0x2
+ 897 00b8 23       		.byte	0x23
+ 898 00b9 00       		.uleb128 0x0
+ 899 00ba 09       		.uleb128 0x9
+ 900 00bb A6000000 		.4byte	.LASF15
+ 901 00bf 02       		.byte	0x2
+ 902 00c0 89       		.byte	0x89
+ 903 00c1 6B000000 		.4byte	0x6b
+ 904 00c5 02       		.byte	0x2
+ 905 00c6 23       		.byte	0x23
+ 906 00c7 01       		.uleb128 0x1
+ 907 00c8 09       		.uleb128 0x9
+ 908 00c9 4D010000 		.4byte	.LASF16
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 17
+
+
+ 909 00cd 02       		.byte	0x2
+ 910 00ce 8A       		.byte	0x8a
+ 911 00cf 6B000000 		.4byte	0x6b
+ 912 00d3 02       		.byte	0x2
+ 913 00d4 23       		.byte	0x23
+ 914 00d5 02       		.uleb128 0x2
+ 915 00d6 09       		.uleb128 0x9
+ 916 00d7 E1000000 		.4byte	.LASF17
+ 917 00db 02       		.byte	0x2
+ 918 00dc 8B       		.byte	0x8b
+ 919 00dd 6B000000 		.4byte	0x6b
+ 920 00e1 02       		.byte	0x2
+ 921 00e2 23       		.byte	0x23
+ 922 00e3 03       		.uleb128 0x3
+ 923 00e4 09       		.uleb128 0x9
+ 924 00e5 30030000 		.4byte	.LASF18
+ 925 00e9 02       		.byte	0x2
+ 926 00ea 8C       		.byte	0x8c
+ 927 00eb 76000000 		.4byte	0x76
+ 928 00ef 02       		.byte	0x2
+ 929 00f0 23       		.byte	0x23
+ 930 00f1 04       		.uleb128 0x4
+ 931 00f2 09       		.uleb128 0x9
+ 932 00f3 8C040000 		.4byte	.LASF19
+ 933 00f7 02       		.byte	0x2
+ 934 00f8 8D       		.byte	0x8d
+ 935 00f9 6B000000 		.4byte	0x6b
+ 936 00fd 02       		.byte	0x2
+ 937 00fe 23       		.byte	0x23
+ 938 00ff 06       		.uleb128 0x6
+ 939 0100 00       		.byte	0x0
+ 940 0101 04       		.uleb128 0x4
+ 941 0102 96020000 		.4byte	.LASF20
+ 942 0106 02       		.byte	0x2
+ 943 0107 8E       		.byte	0x8e
+ 944 0108 A0000000 		.4byte	0xa0
+ 945 010c 08       		.uleb128 0x8
+ 946 010d CA000000 		.4byte	.LASF22
+ 947 0111 04       		.byte	0x4
+ 948 0112 02       		.byte	0x2
+ 949 0113 91       		.byte	0x91
+ 950 0114 35010000 		.4byte	0x135
+ 951 0118 09       		.uleb128 0x9
+ 952 0119 88000000 		.4byte	.LASF23
+ 953 011d 02       		.byte	0x2
+ 954 011e 92       		.byte	0x92
+ 955 011f 6B000000 		.4byte	0x6b
+ 956 0123 02       		.byte	0x2
+ 957 0124 23       		.byte	0x23
+ 958 0125 00       		.uleb128 0x0
+ 959 0126 09       		.uleb128 0x9
+ 960 0127 7A040000 		.4byte	.LASF24
+ 961 012b 02       		.byte	0x2
+ 962 012c 93       		.byte	0x93
+ 963 012d 76000000 		.4byte	0x76
+ 964 0131 02       		.byte	0x2
+ 965 0132 23       		.byte	0x23
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 18
+
+
+ 966 0133 02       		.uleb128 0x2
+ 967 0134 00       		.byte	0x0
+ 968 0135 04       		.uleb128 0x4
+ 969 0136 B0020000 		.4byte	.LASF25
+ 970 013a 02       		.byte	0x2
+ 971 013b 94       		.byte	0x94
+ 972 013c 0C010000 		.4byte	0x10c
+ 973 0140 08       		.uleb128 0x8
+ 974 0141 4F020000 		.4byte	.LASF26
+ 975 0145 0C       		.byte	0xc
+ 976 0146 02       		.byte	0x2
+ 977 0147 97       		.byte	0x97
+ 978 0148 77010000 		.4byte	0x177
+ 979 014c 09       		.uleb128 0x9
+ 980 014d 54000000 		.4byte	.LASF27
+ 981 0151 02       		.byte	0x2
+ 982 0152 98       		.byte	0x98
+ 983 0153 76000000 		.4byte	0x76
+ 984 0157 02       		.byte	0x2
+ 985 0158 23       		.byte	0x23
+ 986 0159 00       		.uleb128 0x0
+ 987 015a 09       		.uleb128 0x9
+ 988 015b 8F000000 		.4byte	.LASF28
+ 989 015f 02       		.byte	0x2
+ 990 0160 99       		.byte	0x99
+ 991 0161 77010000 		.4byte	0x177
+ 992 0165 02       		.byte	0x2
+ 993 0166 23       		.byte	0x23
+ 994 0167 04       		.uleb128 0x4
+ 995 0168 09       		.uleb128 0x9
+ 996 0169 0E000000 		.4byte	.LASF29
+ 997 016d 02       		.byte	0x2
+ 998 016e 9A       		.byte	0x9a
+ 999 016f 7D010000 		.4byte	0x17d
+ 1000 0173 02       		.byte	0x2
+ 1001 0174 23       		.byte	0x23
+ 1002 0175 08       		.uleb128 0x8
+ 1003 0176 00       		.byte	0x0
+ 1004 0177 0A       		.uleb128 0xa
+ 1005 0178 04       		.byte	0x4
+ 1006 0179 96000000 		.4byte	0x96
+ 1007 017d 0A       		.uleb128 0xa
+ 1008 017e 04       		.byte	0x4
+ 1009 017f 35010000 		.4byte	0x135
+ 1010 0183 04       		.uleb128 0x4
+ 1011 0184 95000000 		.4byte	.LASF30
+ 1012 0188 02       		.byte	0x2
+ 1013 0189 9B       		.byte	0x9b
+ 1014 018a 40010000 		.4byte	0x140
+ 1015 018e 08       		.uleb128 0x8
+ 1016 018f 81040000 		.4byte	.LASF31
+ 1017 0193 08       		.byte	0x8
+ 1018 0194 02       		.byte	0x2
+ 1019 0195 9E       		.byte	0x9e
+ 1020 0196 B5010000 		.4byte	0x1b5
+ 1021 019a 0B       		.uleb128 0xb
+ 1022 019b 6300     		.ascii	"c\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 19
+
+
+ 1023 019d 02       		.byte	0x2
+ 1024 019e 9F       		.byte	0x9f
+ 1025 019f 6B000000 		.4byte	0x6b
+ 1026 01a3 02       		.byte	0x2
+ 1027 01a4 23       		.byte	0x23
+ 1028 01a5 00       		.uleb128 0x0
+ 1029 01a6 09       		.uleb128 0x9
+ 1030 01a7 8F020000 		.4byte	.LASF32
+ 1031 01ab 02       		.byte	0x2
+ 1032 01ac A0       		.byte	0xa0
+ 1033 01ad 9E000000 		.4byte	0x9e
+ 1034 01b1 02       		.byte	0x2
+ 1035 01b2 23       		.byte	0x23
+ 1036 01b3 04       		.uleb128 0x4
+ 1037 01b4 00       		.byte	0x0
+ 1038 01b5 04       		.uleb128 0x4
+ 1039 01b6 F8020000 		.4byte	.LASF33
+ 1040 01ba 02       		.byte	0x2
+ 1041 01bb A1       		.byte	0xa1
+ 1042 01bc 8E010000 		.4byte	0x18e
+ 1043 01c0 0C       		.uleb128 0xc
+ 1044 01c1 6B000000 		.4byte	0x6b
+ 1045 01c5 D0010000 		.4byte	0x1d0
+ 1046 01c9 0D       		.uleb128 0xd
+ 1047 01ca 9B000000 		.4byte	0x9b
+ 1048 01ce 11       		.byte	0x11
+ 1049 01cf 00       		.byte	0x0
+ 1050 01d0 0E       		.uleb128 0xe
+ 1051 01d1 D8020000 		.4byte	.LASF34
+ 1052 01d5 03       		.byte	0x3
+ 1053 01d6 26       		.byte	0x26
+ 1054 01d7 E2010000 		.4byte	0x1e2
+ 1055 01db 01       		.byte	0x1
+ 1056 01dc 05       		.byte	0x5
+ 1057 01dd 03       		.byte	0x3
+ 1058 01de 00000000 		.4byte	USBFS_DEVICE0_DESCR
+ 1059 01e2 0F       		.uleb128 0xf
+ 1060 01e3 C0010000 		.4byte	0x1c0
+ 1061 01e7 0C       		.uleb128 0xc
+ 1062 01e8 6B000000 		.4byte	0x6b
+ 1063 01ec F8010000 		.4byte	0x1f8
+ 1064 01f0 10       		.uleb128 0x10
+ 1065 01f1 9B000000 		.4byte	0x9b
+ 1066 01f5 0D01     		.2byte	0x10d
+ 1067 01f7 00       		.byte	0x0
+ 1068 01f8 0E       		.uleb128 0xe
+ 1069 01f9 2C020000 		.4byte	.LASF35
+ 1070 01fd 03       		.byte	0x3
+ 1071 01fe 39       		.byte	0x39
+ 1072 01ff 0A020000 		.4byte	0x20a
+ 1073 0203 01       		.byte	0x1
+ 1074 0204 05       		.byte	0x5
+ 1075 0205 03       		.byte	0x3
+ 1076 0206 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_DESCR
+ 1077 020a 0F       		.uleb128 0xf
+ 1078 020b E7010000 		.4byte	0x1e7
+ 1079 020f 0C       		.uleb128 0xc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 20
+
+
+ 1080 0210 6B000000 		.4byte	0x6b
+ 1081 0214 20020000 		.4byte	0x220
+ 1082 0218 10       		.uleb128 0x10
+ 1083 0219 9B000000 		.4byte	0x9b
+ 1084 021d 2A01     		.2byte	0x12a
+ 1085 021f 00       		.byte	0x0
+ 1086 0220 11       		.uleb128 0x11
+ 1087 0221 B1000000 		.4byte	.LASF36
+ 1088 0225 03       		.byte	0x3
+ 1089 0226 7F01     		.2byte	0x17f
+ 1090 0228 33020000 		.4byte	0x233
+ 1091 022c 01       		.byte	0x1
+ 1092 022d 05       		.byte	0x5
+ 1093 022e 03       		.byte	0x3
+ 1094 022f 00000000 		.4byte	USBFS_STRING_DESCRIPTORS
+ 1095 0233 0F       		.uleb128 0xf
+ 1096 0234 0F020000 		.4byte	0x20f
+ 1097 0238 0C       		.uleb128 0xc
+ 1098 0239 6B000000 		.4byte	0x6b
+ 1099 023d 48020000 		.4byte	0x248
+ 1100 0241 0D       		.uleb128 0xd
+ 1101 0242 9B000000 		.4byte	0x9b
+ 1102 0246 01       		.byte	0x1
+ 1103 0247 00       		.byte	0x0
+ 1104 0248 11       		.uleb128 0x11
+ 1105 0249 6D000000 		.4byte	.LASF37
+ 1106 024d 03       		.byte	0x3
+ 1107 024e DC01     		.2byte	0x1dc
+ 1108 0250 5B020000 		.4byte	0x25b
+ 1109 0254 01       		.byte	0x1
+ 1110 0255 05       		.byte	0x5
+ 1111 0256 03       		.byte	0x3
+ 1112 0257 00000000 		.4byte	USBFS_SN_STRING_DESCRIPTOR
+ 1113 025b 0F       		.uleb128 0xf
+ 1114 025c 38020000 		.4byte	0x238
+ 1115 0260 0C       		.uleb128 0xc
+ 1116 0261 6B000000 		.4byte	0x6b
+ 1117 0265 70020000 		.4byte	0x270
+ 1118 0269 0D       		.uleb128 0xd
+ 1119 026a 9B000000 		.4byte	0x9b
+ 1120 026e 1A       		.byte	0x1a
+ 1121 026f 00       		.byte	0x0
+ 1122 0270 11       		.uleb128 0x11
+ 1123 0271 45030000 		.4byte	.LASF38
+ 1124 0275 03       		.byte	0x3
+ 1125 0276 E401     		.2byte	0x1e4
+ 1126 0278 83020000 		.4byte	0x283
+ 1127 027c 01       		.byte	0x1
+ 1128 027d 05       		.byte	0x5
+ 1129 027e 03       		.byte	0x3
+ 1130 027f 00000000 		.4byte	USBFS_HIDREPORT_DESCRIPTOR1
+ 1131 0283 0F       		.uleb128 0xf
+ 1132 0284 60020000 		.4byte	0x260
+ 1133 0288 11       		.uleb128 0x11
+ 1134 0289 38040000 		.4byte	.LASF39
+ 1135 028d 03       		.byte	0x3
+ 1136 028e FB01     		.2byte	0x1fb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 21
+
+
+ 1137 0290 35010000 		.4byte	0x135
+ 1138 0294 01       		.byte	0x1
+ 1139 0295 05       		.byte	0x5
+ 1140 0296 03       		.byte	0x3
+ 1141 0297 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_SCB
+ 1142 029b 11       		.uleb128 0x11
+ 1143 029c EC000000 		.4byte	.LASF40
+ 1144 02a0 03       		.byte	0x3
+ 1145 02a1 FC01     		.2byte	0x1fc
+ 1146 02a3 38020000 		.4byte	0x238
+ 1147 02a7 01       		.byte	0x1
+ 1148 02a8 05       		.byte	0x5
+ 1149 02a9 03       		.byte	0x3
+ 1150 02aa 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_BUF
+ 1151 02ae 0C       		.uleb128 0xc
+ 1152 02af 83010000 		.4byte	0x183
+ 1153 02b3 BE020000 		.4byte	0x2be
+ 1154 02b7 0D       		.uleb128 0xd
+ 1155 02b8 9B000000 		.4byte	0x9b
+ 1156 02bc 00       		.byte	0x0
+ 1157 02bd 00       		.byte	0x0
+ 1158 02be 11       		.uleb128 0x11
+ 1159 02bf 94010000 		.4byte	.LASF41
+ 1160 02c3 03       		.byte	0x3
+ 1161 02c4 0202     		.2byte	0x202
+ 1162 02c6 D1020000 		.4byte	0x2d1
+ 1163 02ca 01       		.byte	0x1
+ 1164 02cb 05       		.byte	0x5
+ 1165 02cc 03       		.byte	0x3
+ 1166 02cd 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_IN_RPT_TABLE
+ 1167 02d1 0F       		.uleb128 0xf
+ 1168 02d2 AE020000 		.4byte	0x2ae
+ 1169 02d6 0C       		.uleb128 0xc
+ 1170 02d7 B5010000 		.4byte	0x1b5
+ 1171 02db E6020000 		.4byte	0x2e6
+ 1172 02df 0D       		.uleb128 0xd
+ 1173 02e0 9B000000 		.4byte	0x9b
+ 1174 02e4 04       		.byte	0x4
+ 1175 02e5 00       		.byte	0x0
+ 1176 02e6 11       		.uleb128 0x11
+ 1177 02e7 67030000 		.4byte	.LASF42
+ 1178 02eb 03       		.byte	0x3
+ 1179 02ec 0F02     		.2byte	0x20f
+ 1180 02ee F9020000 		.4byte	0x2f9
+ 1181 02f2 01       		.byte	0x1
+ 1182 02f3 05       		.byte	0x5
+ 1183 02f4 03       		.byte	0x3
+ 1184 02f5 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_HID_TABLE
+ 1185 02f9 0F       		.uleb128 0xf
+ 1186 02fa D6020000 		.4byte	0x2d6
+ 1187 02fe 0C       		.uleb128 0xc
+ 1188 02ff B5010000 		.4byte	0x1b5
+ 1189 0303 0E030000 		.4byte	0x30e
+ 1190 0307 0D       		.uleb128 0xd
+ 1191 0308 9B000000 		.4byte	0x9b
+ 1192 030c 00       		.byte	0x0
+ 1193 030d 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 22
+
+
+ 1194 030e 11       		.uleb128 0x11
+ 1195 030f 66010000 		.4byte	.LASF43
+ 1196 0313 03       		.byte	0x3
+ 1197 0314 1B02     		.2byte	0x21b
+ 1198 0316 21030000 		.4byte	0x321
+ 1199 031a 01       		.byte	0x1
+ 1200 031b 05       		.byte	0x5
+ 1201 031c 03       		.byte	0x3
+ 1202 031d 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE
+ 1203 0321 0F       		.uleb128 0xf
+ 1204 0322 FE020000 		.4byte	0x2fe
+ 1205 0326 0C       		.uleb128 0xc
+ 1206 0327 01010000 		.4byte	0x101
+ 1207 032b 36030000 		.4byte	0x336
+ 1208 032f 0D       		.uleb128 0xd
+ 1209 0330 9B000000 		.4byte	0x9b
+ 1210 0334 04       		.byte	0x4
+ 1211 0335 00       		.byte	0x0
+ 1212 0336 11       		.uleb128 0x11
+ 1213 0337 E6010000 		.4byte	.LASF44
+ 1214 033b 03       		.byte	0x3
+ 1215 033c 2602     		.2byte	0x226
+ 1216 033e 49030000 		.4byte	0x349
+ 1217 0342 01       		.byte	0x1
+ 1218 0343 05       		.byte	0x5
+ 1219 0344 03       		.byte	0x3
+ 1220 0345 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+ 1221 0349 0F       		.uleb128 0xf
+ 1222 034a 26030000 		.4byte	0x326
+ 1223 034e 0C       		.uleb128 0xc
+ 1224 034f 6B000000 		.4byte	0x6b
+ 1225 0353 5E030000 		.4byte	0x35e
+ 1226 0357 0D       		.uleb128 0xd
+ 1227 0358 9B000000 		.4byte	0x9b
+ 1228 035c 03       		.byte	0x3
+ 1229 035d 00       		.byte	0x0
+ 1230 035e 11       		.uleb128 0x11
+ 1231 035f 1B000000 		.4byte	.LASF45
+ 1232 0363 03       		.byte	0x3
+ 1233 0364 2E02     		.2byte	0x22e
+ 1234 0366 71030000 		.4byte	0x371
+ 1235 036a 01       		.byte	0x1
+ 1236 036b 05       		.byte	0x5
+ 1237 036c 03       		.byte	0x3
+ 1238 036d 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+ 1239 0371 0F       		.uleb128 0xf
+ 1240 0372 4E030000 		.4byte	0x34e
+ 1241 0376 0C       		.uleb128 0xc
+ 1242 0377 B5010000 		.4byte	0x1b5
+ 1243 037b 86030000 		.4byte	0x386
+ 1244 037f 0D       		.uleb128 0xd
+ 1245 0380 9B000000 		.4byte	0x9b
+ 1246 0384 06       		.byte	0x6
+ 1247 0385 00       		.byte	0x0
+ 1248 0386 11       		.uleb128 0x11
+ 1249 0387 2A010000 		.4byte	.LASF46
+ 1250 038b 03       		.byte	0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 23
+
+
+ 1251 038c 3602     		.2byte	0x236
+ 1252 038e 99030000 		.4byte	0x399
+ 1253 0392 01       		.byte	0x1
+ 1254 0393 05       		.byte	0x5
+ 1255 0394 03       		.byte	0x3
+ 1256 0395 00000000 		.4byte	USBFS_DEVICE0_CONFIGURATION0_TABLE
+ 1257 0399 0F       		.uleb128 0xf
+ 1258 039a 76030000 		.4byte	0x376
+ 1259 039e 0C       		.uleb128 0xc
+ 1260 039f B5010000 		.4byte	0x1b5
+ 1261 03a3 AE030000 		.4byte	0x3ae
+ 1262 03a7 0D       		.uleb128 0xd
+ 1263 03a8 9B000000 		.4byte	0x9b
+ 1264 03ac 01       		.byte	0x1
+ 1265 03ad 00       		.byte	0x0
+ 1266 03ae 11       		.uleb128 0x11
+ 1267 03af 52010000 		.4byte	.LASF47
+ 1268 03b3 03       		.byte	0x3
+ 1269 03b4 4302     		.2byte	0x243
+ 1270 03b6 C1030000 		.4byte	0x3c1
+ 1271 03ba 01       		.byte	0x1
+ 1272 03bb 05       		.byte	0x5
+ 1273 03bc 03       		.byte	0x3
+ 1274 03bd 00000000 		.4byte	USBFS_DEVICE0_TABLE
+ 1275 03c1 0F       		.uleb128 0xf
+ 1276 03c2 9E030000 		.4byte	0x39e
+ 1277 03c6 11       		.uleb128 0x11
+ 1278 03c7 48000000 		.4byte	.LASF48
+ 1279 03cb 03       		.byte	0x3
+ 1280 03cc 4A02     		.2byte	0x24a
+ 1281 03ce D9030000 		.4byte	0x3d9
+ 1282 03d2 01       		.byte	0x1
+ 1283 03d3 05       		.byte	0x5
+ 1284 03d4 03       		.byte	0x3
+ 1285 03d5 00000000 		.4byte	USBFS_TABLE
+ 1286 03d9 0F       		.uleb128 0xf
+ 1287 03da FE020000 		.4byte	0x2fe
+ 1288 03de 00       		.byte	0x0
+ 1289              		.section	.debug_abbrev
+ 1290 0000 01       		.uleb128 0x1
+ 1291 0001 11       		.uleb128 0x11
+ 1292 0002 01       		.byte	0x1
+ 1293 0003 25       		.uleb128 0x25
+ 1294 0004 0E       		.uleb128 0xe
+ 1295 0005 13       		.uleb128 0x13
+ 1296 0006 0B       		.uleb128 0xb
+ 1297 0007 03       		.uleb128 0x3
+ 1298 0008 0E       		.uleb128 0xe
+ 1299 0009 1B       		.uleb128 0x1b
+ 1300 000a 0E       		.uleb128 0xe
+ 1301 000b 11       		.uleb128 0x11
+ 1302 000c 01       		.uleb128 0x1
+ 1303 000d 12       		.uleb128 0x12
+ 1304 000e 01       		.uleb128 0x1
+ 1305 000f 10       		.uleb128 0x10
+ 1306 0010 06       		.uleb128 0x6
+ 1307 0011 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 24
+
+
+ 1308 0012 00       		.byte	0x0
+ 1309 0013 02       		.uleb128 0x2
+ 1310 0014 24       		.uleb128 0x24
+ 1311 0015 00       		.byte	0x0
+ 1312 0016 0B       		.uleb128 0xb
+ 1313 0017 0B       		.uleb128 0xb
+ 1314 0018 3E       		.uleb128 0x3e
+ 1315 0019 0B       		.uleb128 0xb
+ 1316 001a 03       		.uleb128 0x3
+ 1317 001b 0E       		.uleb128 0xe
+ 1318 001c 00       		.byte	0x0
+ 1319 001d 00       		.byte	0x0
+ 1320 001e 03       		.uleb128 0x3
+ 1321 001f 24       		.uleb128 0x24
+ 1322 0020 00       		.byte	0x0
+ 1323 0021 0B       		.uleb128 0xb
+ 1324 0022 0B       		.uleb128 0xb
+ 1325 0023 3E       		.uleb128 0x3e
+ 1326 0024 0B       		.uleb128 0xb
+ 1327 0025 03       		.uleb128 0x3
+ 1328 0026 08       		.uleb128 0x8
+ 1329 0027 00       		.byte	0x0
+ 1330 0028 00       		.byte	0x0
+ 1331 0029 04       		.uleb128 0x4
+ 1332 002a 16       		.uleb128 0x16
+ 1333 002b 00       		.byte	0x0
+ 1334 002c 03       		.uleb128 0x3
+ 1335 002d 0E       		.uleb128 0xe
+ 1336 002e 3A       		.uleb128 0x3a
+ 1337 002f 0B       		.uleb128 0xb
+ 1338 0030 3B       		.uleb128 0x3b
+ 1339 0031 0B       		.uleb128 0xb
+ 1340 0032 49       		.uleb128 0x49
+ 1341 0033 13       		.uleb128 0x13
+ 1342 0034 00       		.byte	0x0
+ 1343 0035 00       		.byte	0x0
+ 1344 0036 05       		.uleb128 0x5
+ 1345 0037 35       		.uleb128 0x35
+ 1346 0038 00       		.byte	0x0
+ 1347 0039 49       		.uleb128 0x49
+ 1348 003a 13       		.uleb128 0x13
+ 1349 003b 00       		.byte	0x0
+ 1350 003c 00       		.byte	0x0
+ 1351 003d 06       		.uleb128 0x6
+ 1352 003e 24       		.uleb128 0x24
+ 1353 003f 00       		.byte	0x0
+ 1354 0040 0B       		.uleb128 0xb
+ 1355 0041 0B       		.uleb128 0xb
+ 1356 0042 3E       		.uleb128 0x3e
+ 1357 0043 0B       		.uleb128 0xb
+ 1358 0044 00       		.byte	0x0
+ 1359 0045 00       		.byte	0x0
+ 1360 0046 07       		.uleb128 0x7
+ 1361 0047 0F       		.uleb128 0xf
+ 1362 0048 00       		.byte	0x0
+ 1363 0049 0B       		.uleb128 0xb
+ 1364 004a 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 25
+
+
+ 1365 004b 00       		.byte	0x0
+ 1366 004c 00       		.byte	0x0
+ 1367 004d 08       		.uleb128 0x8
+ 1368 004e 13       		.uleb128 0x13
+ 1369 004f 01       		.byte	0x1
+ 1370 0050 03       		.uleb128 0x3
+ 1371 0051 0E       		.uleb128 0xe
+ 1372 0052 0B       		.uleb128 0xb
+ 1373 0053 0B       		.uleb128 0xb
+ 1374 0054 3A       		.uleb128 0x3a
+ 1375 0055 0B       		.uleb128 0xb
+ 1376 0056 3B       		.uleb128 0x3b
+ 1377 0057 0B       		.uleb128 0xb
+ 1378 0058 01       		.uleb128 0x1
+ 1379 0059 13       		.uleb128 0x13
+ 1380 005a 00       		.byte	0x0
+ 1381 005b 00       		.byte	0x0
+ 1382 005c 09       		.uleb128 0x9
+ 1383 005d 0D       		.uleb128 0xd
+ 1384 005e 00       		.byte	0x0
+ 1385 005f 03       		.uleb128 0x3
+ 1386 0060 0E       		.uleb128 0xe
+ 1387 0061 3A       		.uleb128 0x3a
+ 1388 0062 0B       		.uleb128 0xb
+ 1389 0063 3B       		.uleb128 0x3b
+ 1390 0064 0B       		.uleb128 0xb
+ 1391 0065 49       		.uleb128 0x49
+ 1392 0066 13       		.uleb128 0x13
+ 1393 0067 38       		.uleb128 0x38
+ 1394 0068 0A       		.uleb128 0xa
+ 1395 0069 00       		.byte	0x0
+ 1396 006a 00       		.byte	0x0
+ 1397 006b 0A       		.uleb128 0xa
+ 1398 006c 0F       		.uleb128 0xf
+ 1399 006d 00       		.byte	0x0
+ 1400 006e 0B       		.uleb128 0xb
+ 1401 006f 0B       		.uleb128 0xb
+ 1402 0070 49       		.uleb128 0x49
+ 1403 0071 13       		.uleb128 0x13
+ 1404 0072 00       		.byte	0x0
+ 1405 0073 00       		.byte	0x0
+ 1406 0074 0B       		.uleb128 0xb
+ 1407 0075 0D       		.uleb128 0xd
+ 1408 0076 00       		.byte	0x0
+ 1409 0077 03       		.uleb128 0x3
+ 1410 0078 08       		.uleb128 0x8
+ 1411 0079 3A       		.uleb128 0x3a
+ 1412 007a 0B       		.uleb128 0xb
+ 1413 007b 3B       		.uleb128 0x3b
+ 1414 007c 0B       		.uleb128 0xb
+ 1415 007d 49       		.uleb128 0x49
+ 1416 007e 13       		.uleb128 0x13
+ 1417 007f 38       		.uleb128 0x38
+ 1418 0080 0A       		.uleb128 0xa
+ 1419 0081 00       		.byte	0x0
+ 1420 0082 00       		.byte	0x0
+ 1421 0083 0C       		.uleb128 0xc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 26
+
+
+ 1422 0084 01       		.uleb128 0x1
+ 1423 0085 01       		.byte	0x1
+ 1424 0086 49       		.uleb128 0x49
+ 1425 0087 13       		.uleb128 0x13
+ 1426 0088 01       		.uleb128 0x1
+ 1427 0089 13       		.uleb128 0x13
+ 1428 008a 00       		.byte	0x0
+ 1429 008b 00       		.byte	0x0
+ 1430 008c 0D       		.uleb128 0xd
+ 1431 008d 21       		.uleb128 0x21
+ 1432 008e 00       		.byte	0x0
+ 1433 008f 49       		.uleb128 0x49
+ 1434 0090 13       		.uleb128 0x13
+ 1435 0091 2F       		.uleb128 0x2f
+ 1436 0092 0B       		.uleb128 0xb
+ 1437 0093 00       		.byte	0x0
+ 1438 0094 00       		.byte	0x0
+ 1439 0095 0E       		.uleb128 0xe
+ 1440 0096 34       		.uleb128 0x34
+ 1441 0097 00       		.byte	0x0
+ 1442 0098 03       		.uleb128 0x3
+ 1443 0099 0E       		.uleb128 0xe
+ 1444 009a 3A       		.uleb128 0x3a
+ 1445 009b 0B       		.uleb128 0xb
+ 1446 009c 3B       		.uleb128 0x3b
+ 1447 009d 0B       		.uleb128 0xb
+ 1448 009e 49       		.uleb128 0x49
+ 1449 009f 13       		.uleb128 0x13
+ 1450 00a0 3F       		.uleb128 0x3f
+ 1451 00a1 0C       		.uleb128 0xc
+ 1452 00a2 02       		.uleb128 0x2
+ 1453 00a3 0A       		.uleb128 0xa
+ 1454 00a4 00       		.byte	0x0
+ 1455 00a5 00       		.byte	0x0
+ 1456 00a6 0F       		.uleb128 0xf
+ 1457 00a7 26       		.uleb128 0x26
+ 1458 00a8 00       		.byte	0x0
+ 1459 00a9 49       		.uleb128 0x49
+ 1460 00aa 13       		.uleb128 0x13
+ 1461 00ab 00       		.byte	0x0
+ 1462 00ac 00       		.byte	0x0
+ 1463 00ad 10       		.uleb128 0x10
+ 1464 00ae 21       		.uleb128 0x21
+ 1465 00af 00       		.byte	0x0
+ 1466 00b0 49       		.uleb128 0x49
+ 1467 00b1 13       		.uleb128 0x13
+ 1468 00b2 2F       		.uleb128 0x2f
+ 1469 00b3 05       		.uleb128 0x5
+ 1470 00b4 00       		.byte	0x0
+ 1471 00b5 00       		.byte	0x0
+ 1472 00b6 11       		.uleb128 0x11
+ 1473 00b7 34       		.uleb128 0x34
+ 1474 00b8 00       		.byte	0x0
+ 1475 00b9 03       		.uleb128 0x3
+ 1476 00ba 0E       		.uleb128 0xe
+ 1477 00bb 3A       		.uleb128 0x3a
+ 1478 00bc 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 27
+
+
+ 1479 00bd 3B       		.uleb128 0x3b
+ 1480 00be 05       		.uleb128 0x5
+ 1481 00bf 49       		.uleb128 0x49
+ 1482 00c0 13       		.uleb128 0x13
+ 1483 00c1 3F       		.uleb128 0x3f
+ 1484 00c2 0C       		.uleb128 0xc
+ 1485 00c3 02       		.uleb128 0x2
+ 1486 00c4 0A       		.uleb128 0xa
+ 1487 00c5 00       		.byte	0x0
+ 1488 00c6 00       		.byte	0x0
+ 1489 00c7 00       		.byte	0x0
+ 1490              		.section	.debug_pubnames,"",%progbits
+ 1491 0000 9F020000 		.4byte	0x29f
+ 1492 0004 0200     		.2byte	0x2
+ 1493 0006 00000000 		.4byte	.Ldebug_info0
+ 1494 000a DF030000 		.4byte	0x3df
+ 1495 000e D0010000 		.4byte	0x1d0
+ 1496 0012 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
+ 1496      535F4445 
+ 1496      56494345 
+ 1496      305F4445 
+ 1496      53435200 
+ 1497 0026 F8010000 		.4byte	0x1f8
+ 1498 002a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
+ 1498      535F4445 
+ 1498      56494345 
+ 1498      305F434F 
+ 1498      4E464947 
+ 1499 004d 20020000 		.4byte	0x220
+ 1500 0051 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
+ 1500      535F5354 
+ 1500      52494E47 
+ 1500      5F444553 
+ 1500      43524950 
+ 1501 006a 48020000 		.4byte	0x248
+ 1502 006e 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
+ 1502      535F534E 
+ 1502      5F535452 
+ 1502      494E475F 
+ 1502      44455343 
+ 1503 0089 70020000 		.4byte	0x270
+ 1504 008d 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
+ 1504      535F4849 
+ 1504      44524550 
+ 1504      4F52545F 
+ 1504      44455343 
+ 1505 00a9 88020000 		.4byte	0x288
+ 1506 00ad 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1506      535F4445 
+ 1506      56494345 
+ 1506      305F434F 
+ 1506      4E464947 
+ 1507 00e0 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
+ 1507      494E5F52 
+ 1507      50545F53 
+ 1507      434200
+ 1508 00ef 9B020000 		.4byte	0x29b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 28
+
+
+ 1509 00f3 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1509      535F4445 
+ 1509      56494345 
+ 1509      305F434F 
+ 1509      4E464947 
+ 1510 0126 4849445F 		.ascii	"HID_IN_BUF\000"
+ 1510      494E5F42 
+ 1510      554600
+ 1511 0131 BE020000 		.4byte	0x2be
+ 1512 0135 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1512      535F4445 
+ 1512      56494345 
+ 1512      305F434F 
+ 1512      4E464947 
+ 1513 0168 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
+ 1513      494E5F52 
+ 1513      50545F54 
+ 1513      41424C45 
+ 1513      00
+ 1514 0179 E6020000 		.4byte	0x2e6
+ 1515 017d 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1515      535F4445 
+ 1515      56494345 
+ 1515      305F434F 
+ 1515      4E464947 
+ 1516 01b0 4849445F 		.ascii	"HID_TABLE\000"
+ 1516      5441424C 
+ 1516      4500
+ 1517 01ba 0E030000 		.4byte	0x30e
+ 1518 01be 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE\000"
+ 1518      535F4445 
+ 1518      56494345 
+ 1518      305F434F 
+ 1518      4E464947 
+ 1519 01ec 36030000 		.4byte	0x336
+ 1520 01f0 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 1520      535F4445 
+ 1520      56494345 
+ 1520      305F434F 
+ 1520      4E464947 
+ 1521 021f 5E030000 		.4byte	0x35e
+ 1522 0223 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 1522      535F4445 
+ 1522      56494345 
+ 1522      305F434F 
+ 1522      4E464947 
+ 1523 0250 86030000 		.4byte	0x386
+ 1524 0254 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
+ 1524      535F4445 
+ 1524      56494345 
+ 1524      305F434F 
+ 1524      4E464947 
+ 1525 0277 AE030000 		.4byte	0x3ae
+ 1526 027b 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
+ 1526      535F4445 
+ 1526      56494345 
+ 1526      305F5441 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 29
+
+
+ 1526      424C4500 
+ 1527 028f C6030000 		.4byte	0x3c6
+ 1528 0293 55534246 		.ascii	"USBFS_TABLE\000"
+ 1528      535F5441 
+ 1528      424C4500 
+ 1529 029f 00000000 		.4byte	0x0
+ 1530              		.section	.debug_str,"MS",%progbits,1
+ 1531              	.LASF6:
+ 1532 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1532      206C6F6E 
+ 1532      6720696E 
+ 1532      7400
+ 1533              	.LASF29:
+ 1534 000e 70537461 		.ascii	"pStatusBlock\000"
+ 1534      74757342 
+ 1534      6C6F636B 
+ 1534      00
+ 1535              	.LASF45:
+ 1536 001b 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE_CLASS\000"
+ 1536      535F4445 
+ 1536      56494345 
+ 1536      305F434F 
+ 1536      4E464947 
+ 1537              	.LASF48:
+ 1538 0048 55534246 		.ascii	"USBFS_TABLE\000"
+ 1538      535F5441 
+ 1538      424C4500 
+ 1539              	.LASF27:
+ 1540 0054 636F756E 		.ascii	"count\000"
+ 1540      7400
+ 1541              	.LASF3:
+ 1542 005a 73686F72 		.ascii	"short unsigned int\000"
+ 1542      7420756E 
+ 1542      7369676E 
+ 1542      65642069 
+ 1542      6E7400
+ 1543              	.LASF37:
+ 1544 006d 55534246 		.ascii	"USBFS_SN_STRING_DESCRIPTOR\000"
+ 1544      535F534E 
+ 1544      5F535452 
+ 1544      494E475F 
+ 1544      44455343 
+ 1545              	.LASF23:
+ 1546 0088 73746174 		.ascii	"status\000"
+ 1546      757300
+ 1547              	.LASF28:
+ 1548 008f 70446174 		.ascii	"pData\000"
+ 1548      6100
+ 1549              	.LASF30:
+ 1550 0095 545F5553 		.ascii	"T_USBFS_TD\000"
+ 1550      4246535F 
+ 1550      544400
+ 1551              	.LASF11:
+ 1552 00a0 666C6F61 		.ascii	"float\000"
+ 1552      7400
+ 1553              	.LASF15:
+ 1554 00a6 616C7453 		.ascii	"altSetting\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 30
+
+
+ 1554      65747469 
+ 1554      6E6700
+ 1555              	.LASF36:
+ 1556 00b1 55534246 		.ascii	"USBFS_STRING_DESCRIPTORS\000"
+ 1556      535F5354 
+ 1556      52494E47 
+ 1556      5F444553 
+ 1556      43524950 
+ 1557              	.LASF22:
+ 1558 00ca 5F555342 		.ascii	"_USBFS_XferStatusBlock\000"
+ 1558      46535F58 
+ 1558      66657253 
+ 1558      74617475 
+ 1558      73426C6F 
+ 1559              	.LASF17:
+ 1560 00e1 61747472 		.ascii	"attributes\000"
+ 1560      69627574 
+ 1560      657300
+ 1561              	.LASF40:
+ 1562 00ec 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1562      535F4445 
+ 1562      56494345 
+ 1562      305F434F 
+ 1562      4E464947 
+ 1563 011f 4849445F 		.ascii	"HID_IN_BUF\000"
+ 1563      494E5F42 
+ 1563      554600
+ 1564              	.LASF46:
+ 1565 012a 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_TABLE\000"
+ 1565      535F4445 
+ 1565      56494345 
+ 1565      305F434F 
+ 1565      4E464947 
+ 1566              	.LASF16:
+ 1567 014d 61646472 		.ascii	"addr\000"
+ 1567      00
+ 1568              	.LASF47:
+ 1569 0152 55534246 		.ascii	"USBFS_DEVICE0_TABLE\000"
+ 1569      535F4445 
+ 1569      56494345 
+ 1569      305F5441 
+ 1569      424C4500 
+ 1570              	.LASF43:
+ 1571 0166 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_TABLE\000"
+ 1571      535F4445 
+ 1571      56494345 
+ 1571      305F434F 
+ 1571      4E464947 
+ 1572              	.LASF41:
+ 1573 0194 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1573      535F4445 
+ 1573      56494345 
+ 1573      305F434F 
+ 1573      4E464947 
+ 1574 01c7 4849445F 		.ascii	"HID_IN_RPT_TABLE\000"
+ 1574      494E5F52 
+ 1574      50545F54 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 31
+
+
+ 1574      41424C45 
+ 1574      00
+ 1575              	.LASF12:
+ 1576 01d8 646F7562 		.ascii	"double\000"
+ 1576      6C6500
+ 1577              	.LASF10:
+ 1578 01df 75696E74 		.ascii	"uint16\000"
+ 1578      313600
+ 1579              	.LASF44:
+ 1580 01e6 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE\000"
+ 1580      535F4445 
+ 1580      56494345 
+ 1580      305F434F 
+ 1580      4E464947 
+ 1581              	.LASF21:
+ 1582 0215 5F555342 		.ascii	"_USBFS_EpSettingsBlock\000"
+ 1582      46535F45 
+ 1582      70536574 
+ 1582      74696E67 
+ 1582      73426C6F 
+ 1583              	.LASF35:
+ 1584 022c 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_DESCR\000"
+ 1584      535F4445 
+ 1584      56494345 
+ 1584      305F434F 
+ 1584      4E464947 
+ 1585              	.LASF26:
+ 1586 024f 5F555342 		.ascii	"_USBFS_Td\000"
+ 1586      46535F54 
+ 1586      6400
+ 1587              	.LASF5:
+ 1588 0259 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1588      20756E73 
+ 1588      69676E65 
+ 1588      6420696E 
+ 1588      7400
+ 1589              	.LASF8:
+ 1590 026b 756E7369 		.ascii	"unsigned int\000"
+ 1590      676E6564 
+ 1590      20696E74 
+ 1590      00
+ 1591              	.LASF7:
+ 1592 0278 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1592      206C6F6E 
+ 1592      6720756E 
+ 1592      7369676E 
+ 1592      65642069 
+ 1593              	.LASF32:
+ 1594 028f 705F6C69 		.ascii	"p_list\000"
+ 1594      737400
+ 1595              	.LASF20:
+ 1596 0296 545F5553 		.ascii	"T_USBFS_EP_SETTINGS_BLOCK\000"
+ 1596      4246535F 
+ 1596      45505F53 
+ 1596      45545449 
+ 1596      4E47535F 
+ 1597              	.LASF25:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 32
+
+
+ 1598 02b0 545F5553 		.ascii	"T_USBFS_XFER_STATUS_BLOCK\000"
+ 1598      4246535F 
+ 1598      58464552 
+ 1598      5F535441 
+ 1598      5455535F 
+ 1599              	.LASF1:
+ 1600 02ca 756E7369 		.ascii	"unsigned char\000"
+ 1600      676E6564 
+ 1600      20636861 
+ 1600      7200
+ 1601              	.LASF34:
+ 1602 02d8 55534246 		.ascii	"USBFS_DEVICE0_DESCR\000"
+ 1602      535F4445 
+ 1602      56494345 
+ 1602      305F4445 
+ 1602      53435200 
+ 1603              	.LASF49:
+ 1604 02ec 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1604      4320342E 
+ 1604      342E3100 
+ 1605              	.LASF33:
+ 1606 02f8 545F5553 		.ascii	"T_USBFS_LUT\000"
+ 1606      4246535F 
+ 1606      4C555400 
+ 1607              	.LASF13:
+ 1608 0304 63686172 		.ascii	"char\000"
+ 1608      00
+ 1609              	.LASF50:
+ 1610 0309 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBFS_descr.c\000"
+ 1610      6E657261 
+ 1610      7465645F 
+ 1610      536F7572 
+ 1610      63655C50 
+ 1611              	.LASF18:
+ 1612 0330 62756666 		.ascii	"bufferSize\000"
+ 1612      65725369 
+ 1612      7A6500
+ 1613              	.LASF2:
+ 1614 033b 73686F72 		.ascii	"short int\000"
+ 1614      7420696E 
+ 1614      7400
+ 1615              	.LASF38:
+ 1616 0345 55534246 		.ascii	"USBFS_HIDREPORT_DESCRIPTOR1\000"
+ 1616      535F4849 
+ 1616      44524550 
+ 1616      4F52545F 
+ 1616      44455343 
+ 1617              	.LASF9:
+ 1618 0361 75696E74 		.ascii	"uint8\000"
+ 1618      3800
+ 1619              	.LASF42:
+ 1620 0367 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1620      535F4445 
+ 1620      56494345 
+ 1620      305F434F 
+ 1620      4E464947 
+ 1621 039a 4849445F 		.ascii	"HID_TABLE\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cctDV7Dl.s 			page 33
+
+
+ 1621      5441424C 
+ 1621      4500
+ 1622              	.LASF14:
+ 1623 03a4 696E7465 		.ascii	"interface\000"
+ 1623      72666163 
+ 1623      6500
+ 1624              	.LASF51:
+ 1625 03ae 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 1625      665C486F 
+ 1625      6D655C44 
+ 1625      65736B74 
+ 1625      6F705C50 
+ 1626 03db 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 1626      2D435938 
+ 1626      43353636 
+ 1626      375C5069 
+ 1626      6F6E6565 
+ 1627 040c 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 1627      4C505F55 
+ 1627      53425F41 
+ 1627      7564696F 
+ 1627      2E637964 
+ 1628              	.LASF4:
+ 1629 0423 6C6F6E67 		.ascii	"long int\000"
+ 1629      20696E74 
+ 1629      00
+ 1630              	.LASF0:
+ 1631 042c 7369676E 		.ascii	"signed char\000"
+ 1631      65642063 
+ 1631      68617200 
+ 1632              	.LASF39:
+ 1633 0438 55534246 		.ascii	"USBFS_DEVICE0_CONFIGURATION0_INTERFACE3_ALTERNATE0_"
+ 1633      535F4445 
+ 1633      56494345 
+ 1633      305F434F 
+ 1633      4E464947 
+ 1634 046b 4849445F 		.ascii	"HID_IN_RPT_SCB\000"
+ 1634      494E5F52 
+ 1634      50545F53 
+ 1634      434200
+ 1635              	.LASF24:
+ 1636 047a 6C656E67 		.ascii	"length\000"
+ 1636      746800
+ 1637              	.LASF31:
+ 1638 0481 5F555342 		.ascii	"_USBFS_Lut\000"
+ 1638      46535F4C 
+ 1638      757400
+ 1639              	.LASF19:
+ 1640 048c 624D6973 		.ascii	"bMisc\000"
+ 1640      6300
+ 1641              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

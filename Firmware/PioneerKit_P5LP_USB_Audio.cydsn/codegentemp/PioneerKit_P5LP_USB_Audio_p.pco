@@ -1,0 +1,181 @@
+set_location "\PDM_CIC:Net_2665\" macrocell 2 1 0 0
+set_location "\PDM_CIC:Comb_L:genblk2:dp32:u0\" datapathcell 2 3 2 
+set_location "\PDM_CIC:Comb_R:genblk2:dp32:u0\" datapathcell 2 0 2 
+set_location "\PDM_CIC:Integrator:first_count_0\" macrocell 3 3 1 1
+set_location "\PDM_CIC:Comb_L:f1_load\" macrocell 2 5 0 1
+set_location "\PDM_CIC:Comb_R:f1_load\" macrocell 2 0 0 1
+set_location "\PDM_CIC:Integrator:f0_load\" macrocell 1 5 1 1
+set_location "\PDM_CIC:tmp__LUT_DmaThrottle_L_ins_2\" macrocell 3 4 1 1
+set_location "\PDM_CIC:Comb_L:first_count_0\" macrocell 2 3 1 1
+set_location "\PDM_CIC:Comb_R:first_count_0\" macrocell 3 1 0 1
+set_location "\PDM_CIC:PulseConvert_D0DmaNrq_L:out_sample\" macrocell 3 4 0 3
+set_location "\I2S:Tx:TxStsReg\" statusicell 1 0 4 
+set_location "\ByteSwap_Tx:State_3\" macrocell 0 1 0 0
+set_location "\PDM_CIC:PulseConvert_IntDmaNrq_L:in_sample\" macrocell 3 0 0 1
+set_location "\PDM_CIC:PulseConvert_IntDmaNrq_R:in_sample\" macrocell 3 0 0 0
+set_location "\I2S:tx_underflow_sticky\" macrocell 1 1 1 2
+set_location "\PDM_CIC:Comb_L:first_count_1\" macrocell 2 3 1 3
+set_location "\PDM_CIC:Comb_R:first_count_1\" macrocell 3 1 1 1
+set_location "\I2S:reset\" macrocell 2 0 1 1
+set_location "\AudioClkGen:UDB_ACG:sync:counterAddr_2\" macrocell 0 5 1 2
+set_location "\PDM_CIC:tmp__LUT_DmaThrottle_R_ins_2\" macrocell 2 2 0 1
+set_location "\AudioClkGen:UDB_ACG:sync:SofCounter:u0\" datapathcell 1 2 2 
+set_location "\PDM_CIC:Comb_L:comb_loop_count_1\" macrocell 3 5 1 3
+set_location "\PDM_CIC:Comb_R:comb_loop_count_1\" macrocell 3 1 1 3
+set_location "\AudioClkGen:UDB_ACG:div:state_1\" macrocell 1 3 1 3
+set_location "\PDM_CIC:Comb_L:right_shift_msb\" macrocell 2 3 0 0
+set_location "\PDM_CIC:Comb_R:right_shift_msb\" macrocell 2 1 0 2
+set_location "\PDM_CIC:Comb_L:genblk2:dp32:u1\" datapathcell 3 3 2 
+set_location "\PDM_CIC:Comb_R:genblk2:dp32:u1\" datapathcell 3 0 2 
+set_location "\PDM_CIC:Integrator:genblk3:dp32_r:u0\" datapathcell 2 5 2 
+set_location "\PDM_CIC:PulseConvert_D0DmaNrq_L:in_sample\" macrocell 3 4 1 0
+set_location "\PDM_CIC:PulseConvert_D0DmaNrq_R:in_sample\" macrocell 2 1 1 1
+set_location "\PDM_CIC:Comb_L:genblk2:dp32:u2\" datapathcell 3 2 2 
+set_location "\PDM_CIC:Comb_R:genblk2:dp32:u2\" datapathcell 3 1 2 
+set_location "\PDM_CIC:Integrator:genblk3:dp32_r:u1\" datapathcell 3 5 2 
+set_location "\PDM_CIC:Integrator:genblk2:dp32_l:u3\" datapathcell 1 5 2 
+set_location "\PDM_CIC:Integrator:out_fifo_full_r\" macrocell 2 4 0 1
+set_location "\PDM_CIC:Comb_L:genblk2:dp32:u3\" datapathcell 2 2 2 
+set_location "\PDM_CIC:Comb_R:genblk2:dp32:u3\" datapathcell 2 1 2 
+set_location "\PDM_CIC:Net_2548\" macrocell 3 0 1 1
+set_location "\PDM_CIC:Net_2664\" macrocell 3 0 1 3
+set_location "\PDM_CIC:Net_3007\" macrocell 2 5 1 3
+set_location "\PDM_CIC:Net_3010\" macrocell 2 5 0 3
+set_location "\PDM_CIC:Integrator:genblk2:dp32_l:u2\" datapathcell 0 5 2 
+set_location "\I2S:tx_status_0\" macrocell 1 1 0 1
+set_location "\PDM_CIC:Comb_L:cs_addr_0\" macrocell 2 4 1 0
+set_location "\PDM_CIC:Comb_R:cs_addr_0\" macrocell 3 2 1 1
+set_location "\PDM_CIC:Comb_L:comb_loop_count_0\" macrocell 2 3 0 3
+set_location "\PDM_CIC:Comb_R:comb_loop_count_0\" macrocell 2 0 0 2
+set_location "\AudioClkGen:UDB_ACG:sync:lastSof\" macrocell 0 3 0 0
+set_location "\PDM_CIC:Integrator:cnt_enable\" macrocell 3 3 1 2
+set_location "\ByteSwap_Tx:State_2\" macrocell 0 0 0 3
+set_location "\AudioClkGen:UDB_ACG:div:Div:u0\" datapathcell 1 1 2 
+set_location "\I2S:tx_state_0\" macrocell 1 1 1 1
+set_location "\AudioClkGen:UDB_ACG:div:state_0\" macrocell 1 3 0 3
+set_location "\PDM_CIC:Integrator:cs_addr_1\" macrocell 1 4 0 2
+set_location "\PDM_CIC:PulseConvert_D0DmaNrq_R:out_sample\" macrocell 2 1 0 3
+set_location "\PDM_CIC:Integrator:genblk2:dp32_l:u0\" datapathcell 1 4 2 
+set_location "\PDM_CIC:Status_Reg:sts_intr:sts_reg\" statusicell 2 5 4 
+set_location "\PDM_CIC:Integrator:genblk3:dp32_r:u2\" datapathcell 3 4 2 
+set_location "\PDM_CIC:Integrator:pdm_data_reg_r\" macrocell 3 3 1 0
+set_location "\ByteSwap_Tx:resolution_ctrl\" macrocell 1 0 1 3
+set_location "\PDM_CIC:Net_2654\" macrocell 3 4 0 2
+set_location "\AudioClkGen:UDB_ACG:shaper:state_1\" macrocell 0 4 1 1
+set_location "\AudioClkGen:UDB_ACG:shaper:Div:u1\" datapathcell 1 3 2 
+set_location "\PDM_CIC:Integrator:genblk2:dp32_l:u1\" datapathcell 0 4 2 
+set_location "\AudioClkGen:UDB_ACG:shaper:state_0\" macrocell 1 3 0 0
+set_location "\PDM_CIC:Integrator:first_count_1\" macrocell 3 3 0 1
+set_location "GenClock" macrocell 1 4 1 1
+set_location "\I2S:tx_state_1\" macrocell 1 1 1 0
+set_location "\PDM_CIC:Comb_R:cs_addr_1\" macrocell 2 2 1 2
+set_location "\PDM_CIC:Comb_L:cs_addr_1\" macrocell 2 4 1 2
+set_location "\AudioClkGen:UDB_ACG:shaper:Div:u0\" datapathcell 0 3 2 
+set_location "\AudioClkGen:UDB_ACG:shaper:state_2\" macrocell 0 4 0 2
+set_location "Net_3458" macrocell 0 5 1 3
+set_location "Net_2731" macrocell 0 1 0 3
+set_location "\PDM_CIC:wire_comb_ov_r\" macrocell 2 5 0 0
+set_location "\PDM_CIC:Integrator:cs_addr_0\" macrocell 3 3 0 0
+set_location "\PDM_CIC:wire_comb_ov_l\" macrocell 2 5 0 2
+set_location "\ByteSwap_Tx:enable\" macrocell 1 0 0 1
+set_location "\AudioClkGen:UDB_ACG:sync:addr_0\" macrocell 0 3 1 1
+set_location "\AudioClkGen:UDB_ACG:sync:SofCounter:u1\" datapathcell 0 2 2 
+set_location "\AudioClkGen:UDB_ACG:sync:state_3\" macrocell 0 4 1 3
+set_location "\ByteSwap_Tx:State_4\" macrocell 0 1 1 2
+set_location "\PDM_CIC:Integrator:genblk3:dp32_r:u3\" datapathcell 2 4 2 
+set_location "\AudioClkGen:UDB_ACG:sync:addr_2\" macrocell 0 2 1 2
+set_location "\AudioClkGen:UDB_ACG:sync_ready\" macrocell 0 5 0 3
+set_location "\ByteSwap_Tx:d0_load\" macrocell 0 0 0 0
+set_location "\PDM_CIC:Integrator:f1_load\" macrocell 1 5 0 1
+set_location "\ByteSwap_Tx:f1_load\" macrocell 0 0 1 1
+set_location "\PDM_CIC:PulseConvert_IntDmaNrq_R:out_sample\" macrocell 3 0 1 2
+set_location "\AudioClkGen:UDB_ACG:sync:Counter:u0\" datapathcell 0 1 2 
+set_location "\I2S:Tx:dpTx:u0\" datapathcell 1 0 2 
+set_location "\AudioClkGen:UDB_ACG:transfer\" macrocell 0 4 0 3
+set_location "\AudioClkGen:UDB_ACG:div:deltaReg\" macrocell 1 4 1 0
+set_location "\PDM_CIC:Integrator:cs_addr_2\" macrocell 1 4 0 0
+set_location "\ByteSwap_Tx:dp_ByteSwap:u0\" datapathcell 0 0 2 
+set_location "\AudioClkGen:UDB_ACG:sync:addr_1\" macrocell 0 2 0 0
+set_location "\ByteSwap_Tx:State_0\" macrocell 0 0 1 0
+set_location "\PDM_CIC:Integrator:out_fifo_full_l\" macrocell 1 5 1 2
+set_location "\PDM_CIC:Comb_L:out_fifo_full\" macrocell 2 2 1 3
+set_location "\PDM_CIC:Comb_R:out_fifo_full\" macrocell 2 1 0 1
+set_location "\AudioClkGen:UDB_ACG:delta\" macrocell 1 3 1 1
+set_location "\PDM_CIC:Comb_R:cs_addr_2\" macrocell 3 2 1 3
+set_location "\PDM_CIC:Comb_L:cs_addr_2\" macrocell 3 4 0 0
+set_location "Net_2161" macrocell 2 0 1 2
+set_location "\PDM_CIC:Integrator:Counter7\" count7cell 1 5 7 
+set_location "\AudioClkGen:UDB_ACG:sync:counterAddr_1\" macrocell 0 3 0 3
+set_location "\PDM_CIC:Comb_L:d0_reg_updated\" macrocell 3 5 0 2
+set_location "\PDM_CIC:Comb_R:d0_reg_updated\" macrocell 2 2 1 1
+set_location "\I2S:txenable\" macrocell 1 2 0 0
+set_location "Net_2586" macrocell 2 0 1 0
+set_location "\AudioClkGen:UDB_ACG:sync:counterAddr_0\" macrocell 0 2 0 1
+set_location "\PDM_CIC:Integrator:pdm_data_reg_l\" macrocell 3 3 1 3
+set_location "\PDM_CIC:Comb_R:f0_load\" macrocell 2 2 1 0
+set_location "\PDM_CIC:Comb_L:f0_load\" macrocell 3 4 0 1
+set_location "\ByteSwap_Tx:State_1\" macrocell 1 0 0 0
+set_location "\PDM_CIC:PulseConvert_IntDmaNrq_L:out_sample\" macrocell 3 0 1 0
+set_location "\I2S:BitCounter\" count7cell 1 2 7 
+# Note: port 12 is the logical name for port 7
+set_io "PSOC_PDM_ClkOut(0)" iocell 12 6
+set_location "\I2C_Master:I2C_FF\" i2ccell -1 -1 0
+set_location "isr_InDMADone" interrupt -1 -1 5
+set_location "isr_RxDMADone" interrupt -1 -1 6
+set_location "isr_TxDMADone" interrupt -1 -1 8
+set_io "PSOC_I2S_SCLK(0)" iocell 3 5
+set_location "USBOutDMA" drqcell -1 -1 10
+set_location "\USBFS:ep_6\" interrupt -1 -1 3
+set_location "\USBFS:ep_0\" interrupt -1 -1 24
+set_location "\USBFS:ep_2\" interrupt -1 -1 1
+set_location "\USBFS:ep_1\" interrupt -1 -1 0
+set_location "\USBFS:ep_4\" interrupt -1 -1 2
+set_io "SDA(0)" iocell 3 0
+set_location "\ByteSwap_Tx:ControlReg\" controlcell 1 0 6 
+set_location "\USBFS:ep4\" drqcell -1 -1 3
+set_location "isr_CICOverflow" interrupt -1 -1 4
+set_location "\USBFS:dp_int\" interrupt -1 -1 12
+set_location "\I2C_Master:I2C_IRQ\" interrupt -1 -1 15
+set_location "\USBFS:Dp\" logicalport -1 -1 8
+set_location "TxDMA" drqcell -1 -1 2
+set_location "\USBFS:ep1\" drqcell -1 -1 0
+set_io "PSOC_SW(0)" iocell 2 4
+set_io "SCL(0)" iocell 1 2
+set_location "\USBFS:ep2\" drqcell -1 -1 1
+set_io "PSOC_I2S_LRCLK(0)" iocell 0 1
+set_location "\PDM_CIC:DMA_IntOut_L\" drqcell -1 -1 13
+set_location "\PDM_CIC:DMA_IntOut_R\" drqcell -1 -1 14
+set_location "\USBFS:bus_reset\" interrupt -1 -1 23
+set_location "USBInDMA" drqcell -1 -1 4
+set_location "PM" pmcell -1 -1 0
+set_io "PSOC_PDM_DataIn(0)" iocell 0 0
+set_io "PSOC_I2S_SDTO(0)" iocell 3 7
+set_location "\USBFS:ord_int\" interrupt -1 -1 25
+set_location "\USBFS:arb_int\" interrupt -1 -1 22
+set_location "\USBFS:sof_int\" interrupt -1 -1 21
+set_location "\PDM_CIC:DMA_CombD0Update_L\" drqcell -1 -1 11
+set_location "\PDM_CIC:DMA_CombD0Update_R\" drqcell -1 -1 12
+set_location "\USBFS:USB\" usbcell -1 -1 0
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\Droop_Filter:DFB\" dfbcell -1 -1 0
+set_location "\PDM_CIC:Int_Ctrl_Reg:Sync:ctrl_reg\" controlcell 1 4 6 
+# Note: port 12 is the logical name for port 7
+set_io "PSOC_I2S_MCLK(0)" iocell 12 7
+set_location "\I2S:Sync:CtlReg\" controlcell 1 1 6 
+set_location "\TX_Sync:genblk1[0]:INST\" synccell 0 3 5 0
+set_location "CICOut_L" drqcell -1 -1 6
+set_location "CICOut_R" drqcell -1 -1 7
+set_location "I2S_Tx_DMA" drqcell -1 -1 9
+set_location "\USBFS:ep6\" drqcell -1 -1 5
+set_location "RxDMA" drqcell -1 -1 8
+set_io "PSOC_CODEC_RST(0)" iocell 3 6
+set_io "PSOC_PDM_LR_SEL(0)" iocell 3 4
+set_io "PSOC_STATUS_LED(0)" iocell 3 1
+# Note: port 15 is the logical name for port 8
+set_io "\USBFS:Dm(0)\" iocell 15 7
+set_location "isr_Tick" interrupt -1 -1 7
+set_location "SCL(0)_SYNC" synccell 0 2 5 0
+set_location "SDA(0)_SYNC" synccell 3 0 5 0
+set_location "PSOC_PDM_DataIn(0)_SYNC" synccell 3 3 5 0
+# Note: port 15 is the logical name for port 8
+set_io "\USBFS:Dp(0)\" iocell 15 6

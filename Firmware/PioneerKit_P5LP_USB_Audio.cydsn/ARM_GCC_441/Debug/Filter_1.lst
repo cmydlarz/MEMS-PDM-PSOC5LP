@@ -1,0 +1,2636 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Filter_1.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 74010000 		.text
+  20      02007300 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	Filter_1_initVar
+  24              		.bss
+  25              		.type	Filter_1_initVar, %object
+  26              		.size	Filter_1_initVar, 1
+  27              	Filter_1_initVar:
+  28 0000 00       		.space	1
+  29              		.section	.text.Filter_1_Init,"ax",%progbits
+  30              		.align	2
+  31              		.global	Filter_1_Init
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	Filter_1_Init, %function
+  35              	Filter_1_Init:
+  36              	.LFB0:
+  37              		.file 1 ".\\Generated_Source\\PSoC5\\Filter_1.c"
+   1:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/Filter_1.c **** * File Name: Filter_1.c
+   3:.\Generated_Source\PSoC5/Filter_1.c **** * Version 2.10
+   4:.\Generated_Source\PSoC5/Filter_1.c **** *
+   5:.\Generated_Source\PSoC5/Filter_1.c **** * Description:
+   6:.\Generated_Source\PSoC5/Filter_1.c **** *  This file provides the API source code for the FILT component.
+   7:.\Generated_Source\PSoC5/Filter_1.c **** *
+   8:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+   9:.\Generated_Source\PSoC5/Filter_1.c **** *  
+  10:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************
+  11:.\Generated_Source\PSoC5/Filter_1.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC5/Filter_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC5/Filter_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC5/Filter_1.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************/
+  16:.\Generated_Source\PSoC5/Filter_1.c **** 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 2
+
+
+  17:.\Generated_Source\PSoC5/Filter_1.c **** #include "Filter_1_PVT.h"
+  18:.\Generated_Source\PSoC5/Filter_1.c **** 
+  19:.\Generated_Source\PSoC5/Filter_1.c **** 
+  20:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+  21:.\Generated_Source\PSoC5/Filter_1.c **** * FILT component internal variables.
+  22:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+  23:.\Generated_Source\PSoC5/Filter_1.c **** 
+  24:.\Generated_Source\PSoC5/Filter_1.c **** uint8 Filter_1_initVar = 0u;
+  25:.\Generated_Source\PSoC5/Filter_1.c **** 
+  26:.\Generated_Source\PSoC5/Filter_1.c **** 
+  27:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+  28:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Init
+  29:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+  30:.\Generated_Source\PSoC5/Filter_1.c **** *
+  31:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+  32:.\Generated_Source\PSoC5/Filter_1.c **** *  Initialize component's parameters to the parameters set by user in the 
+  33:.\Generated_Source\PSoC5/Filter_1.c **** *  customizer of the component placed onto schematic. Usually called in 
+  34:.\Generated_Source\PSoC5/Filter_1.c **** *  Filter_1_Start().
+  35:.\Generated_Source\PSoC5/Filter_1.c **** *
+  36:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+  37:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+  38:.\Generated_Source\PSoC5/Filter_1.c **** *
+  39:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+  40:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+  41:.\Generated_Source\PSoC5/Filter_1.c **** *
+  42:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+  43:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_Init(void) 
+  44:.\Generated_Source\PSoC5/Filter_1.c **** {
+  38              		.loc 1 44 0
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 1, uses_anonymous_args = 0
+  42 0000 80B5     		push	{r7, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 8
+  45 0002 00AF     		add	r7, sp, #0
+  46              		.cfi_offset 14, -4
+  47              		.cfi_offset 7, -8
+  48              	.LCFI1:
+  49              		.cfi_def_cfa_register 7
+  45:.\Generated_Source\PSoC5/Filter_1.c ****         /* Power on DFB before initializing the RAMs */
+  46:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_PM_ACT_CFG_REG |= Filter_1_PM_ACT_MSK;
+  50              		.loc 1 46 0
+  51 0004 44F2A633 		movw	r3, #:lower16:1073759142
+  52 0008 C4F20003 		movt	r3, #:upper16:1073759142
+  53 000c 44F2A632 		movw	r2, #:lower16:1073759142
+  54 0010 C4F20002 		movt	r2, #:upper16:1073759142
+  55 0014 1278     		ldrb	r2, [r2, #0]
+  56 0016 D2B2     		uxtb	r2, r2
+  57 0018 42F01002 		orr	r2, r2, #16
+  58 001c D2B2     		uxtb	r2, r2
+  59 001e 1A70     		strb	r2, [r3, #0]
+  47:.\Generated_Source\PSoC5/Filter_1.c **** 
+  48:.\Generated_Source\PSoC5/Filter_1.c ****     /* Turn off Run Bit */
+  49:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_CR_REG &= ~Filter_1_RUN_MASK;
+  60              		.loc 1 49 0
+  61 0020 4CF28073 		movw	r3, #:lower16:1073792896
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 3
+
+
+  62 0024 C4F20003 		movt	r3, #:upper16:1073792896
+  63 0028 4CF28072 		movw	r2, #:lower16:1073792896
+  64 002c C4F20002 		movt	r2, #:upper16:1073792896
+  65 0030 1278     		ldrb	r2, [r2, #0]
+  66 0032 D2B2     		uxtb	r2, r2
+  67 0034 02F0FE02 		and	r2, r2, #254
+  68 0038 1A70     		strb	r2, [r3, #0]
+  50:.\Generated_Source\PSoC5/Filter_1.c ****                 
+  51:.\Generated_Source\PSoC5/Filter_1.c ****     /* Enable the DFB RAMS */
+  52:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_RAM_EN_REG = Filter_1_RAM_DIR_BUS;
+  69              		.loc 1 52 0
+  70 003a 4CF28873 		movw	r3, #:lower16:1073792904
+  71 003e C4F20003 		movt	r3, #:upper16:1073792904
+  72 0042 4FF03F02 		mov	r2, #63
+  73 0046 1A70     		strb	r2, [r3, #0]
+  53:.\Generated_Source\PSoC5/Filter_1.c ****         
+  54:.\Generated_Source\PSoC5/Filter_1.c ****     /* Put DFB RAM on the bus */
+  55:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_RAM_DIR_REG = Filter_1_RAM_DIR_BUS;
+  74              		.loc 1 55 0
+  75 0048 4CF28C73 		movw	r3, #:lower16:1073792908
+  76 004c C4F20003 		movt	r3, #:upper16:1073792908
+  77 0050 4FF03F02 		mov	r2, #63
+  78 0054 1A70     		strb	r2, [r3, #0]
+  56:.\Generated_Source\PSoC5/Filter_1.c ****         
+  57:.\Generated_Source\PSoC5/Filter_1.c ****     /* Write DFB RAMs */
+  58:.\Generated_Source\PSoC5/Filter_1.c ****     /* Control Store RAMs */
+  59:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy( Filter_1_CSA_RAM,
+  79              		.loc 1 59 0
+  80 0056 4CF20040 		movw	r0, #:lower16:1073792000
+  81 005a C4F20000 		movt	r0, #:upper16:1073792000
+  82 005e 40F20001 		movw	r1, #:lower16:Filter_1_control
+  83 0062 C0F20001 		movt	r1, #:upper16:Filter_1_control
+  84 0066 4FF48072 		mov	r2, #256
+  85 006a FFF7FEFF 		bl	memcpy
+  60:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_control, Filter_1_CSA_RAM_SIZE); 
+  61:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy(Filter_1_CSB_RAM,
+  86              		.loc 1 61 0
+  87 006e 4CF20050 		movw	r0, #:lower16:1073792256
+  88 0072 C4F20000 		movt	r0, #:upper16:1073792256
+  89 0076 40F20001 		movw	r1, #:lower16:Filter_1_control
+  90 007a C0F20001 		movt	r1, #:upper16:Filter_1_control
+  91 007e 4FF48072 		mov	r2, #256
+  92 0082 FFF7FEFF 		bl	memcpy
+  62:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_control, Filter_1_CSB_RAM_SIZE); 
+  63:.\Generated_Source\PSoC5/Filter_1.c ****     /* CFSM RAM */
+  64:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy(Filter_1_CFSM_RAM,
+  93              		.loc 1 64 0
+  94 0086 4CF20060 		movw	r0, #:lower16:1073792512
+  95 008a C4F20000 		movt	r0, #:upper16:1073792512
+  96 008e 40F20001 		movw	r1, #:lower16:Filter_1_cfsm
+  97 0092 C0F20001 		movt	r1, #:upper16:Filter_1_cfsm
+  98 0096 4FF48072 		mov	r2, #256
+  99 009a FFF7FEFF 		bl	memcpy
+  65:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_cfsm, Filter_1_CFSM_RAM_SIZE); 
+  66:.\Generated_Source\PSoC5/Filter_1.c ****     /* DAta RAMs */
+  67:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy(Filter_1_DA_RAM,
+ 100              		.loc 1 67 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 4
+
+
+ 101 009e 4CF20000 		movw	r0, #:lower16:1073790976
+ 102 00a2 C4F20000 		movt	r0, #:upper16:1073790976
+ 103 00a6 40F20001 		movw	r1, #:lower16:Filter_1_data_a
+ 104 00aa C0F20001 		movt	r1, #:upper16:Filter_1_data_a
+ 105 00ae 4FF40072 		mov	r2, #512
+ 106 00b2 FFF7FEFF 		bl	memcpy
+  68:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_data_a, Filter_1_DA_RAM_SIZE); 
+  69:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy(Filter_1_DB_RAM,
+ 107              		.loc 1 69 0
+ 108 00b6 4CF20020 		movw	r0, #:lower16:1073791488
+ 109 00ba C4F20000 		movt	r0, #:upper16:1073791488
+ 110 00be 40F20001 		movw	r1, #:lower16:Filter_1_data_b
+ 111 00c2 C0F20001 		movt	r1, #:upper16:Filter_1_data_b
+ 112 00c6 4FF40072 		mov	r2, #512
+ 113 00ca FFF7FEFF 		bl	memcpy
+  70:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_data_b, Filter_1_DB_RAM_SIZE); 
+  71:.\Generated_Source\PSoC5/Filter_1.c ****     /* ACU RAM */
+  72:.\Generated_Source\PSoC5/Filter_1.c ****     memcpy(Filter_1_ACU_RAM,
+ 114              		.loc 1 72 0
+ 115 00ce 4CF20070 		movw	r0, #:lower16:1073792768
+ 116 00d2 C4F20000 		movt	r0, #:upper16:1073792768
+ 117 00d6 40F20001 		movw	r1, #:lower16:Filter_1_acu
+ 118 00da C0F20001 		movt	r1, #:upper16:Filter_1_acu
+ 119 00de 4FF04002 		mov	r2, #64
+ 120 00e2 FFF7FEFF 		bl	memcpy
+  73:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_acu, Filter_1_ACU_RAM_SIZE); 
+  74:.\Generated_Source\PSoC5/Filter_1.c **** 
+  75:.\Generated_Source\PSoC5/Filter_1.c ****     /* Take DFB RAM off the bus */
+  76:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_RAM_DIR_REG = Filter_1_RAM_DIR_DFB;
+ 121              		.loc 1 76 0
+ 122 00e6 4CF28C73 		movw	r3, #:lower16:1073792908
+ 123 00ea C4F20003 		movt	r3, #:upper16:1073792908
+ 124 00ee 4FF00002 		mov	r2, #0
+ 125 00f2 1A70     		strb	r2, [r3, #0]
+  77:.\Generated_Source\PSoC5/Filter_1.c **** 
+  78:.\Generated_Source\PSoC5/Filter_1.c ****     /* Set up interrupt and DMA events */
+  79:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_SetInterruptMode(Filter_1_INIT_INTERRUPT_MODE);
+ 126              		.loc 1 79 0
+ 127 00f4 4FF00000 		mov	r0, #0
+ 128 00f8 FFF7FEFF 		bl	Filter_1_SetInterruptMode
+  80:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_SetDMAMode(Filter_1_INIT_DMA_MODE);
+ 129              		.loc 1 80 0
+ 130 00fc 4FF00100 		mov	r0, #1
+ 131 0100 FFF7FEFF 		bl	Filter_1_SetDMAMode
+  81:.\Generated_Source\PSoC5/Filter_1.c ****         
+  82:.\Generated_Source\PSoC5/Filter_1.c ****     /* Clear any pending interrupts */
+  83:.\Generated_Source\PSoC5/Filter_1.c ****     /* Bits [2..0] of this register are readonly. */
+  84:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_SR_REG = 0xf8;   
+ 132              		.loc 1 84 0
+ 133 0104 4CF28473 		movw	r3, #:lower16:1073792900
+ 134 0108 C4F20003 		movt	r3, #:upper16:1073792900
+ 135 010c 6FF00702 		mvn	r2, #7
+ 136 0110 1A70     		strb	r2, [r3, #0]
+  85:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 137              		.loc 1 85 0
+ 138 0112 80BD     		pop	{r7, pc}
+ 139              		.cfi_endproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 5
+
+
+ 140              	.LFE0:
+ 141              		.size	Filter_1_Init, .-Filter_1_Init
+ 142              		.section	.text.Filter_1_Enable,"ax",%progbits
+ 143              		.align	2
+ 144              		.global	Filter_1_Enable
+ 145              		.thumb
+ 146              		.thumb_func
+ 147              		.type	Filter_1_Enable, %function
+ 148              	Filter_1_Enable:
+ 149              	.LFB1:
+  86:.\Generated_Source\PSoC5/Filter_1.c **** 
+  87:.\Generated_Source\PSoC5/Filter_1.c **** 
+  88:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+  89:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Enable
+  90:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+  91:.\Generated_Source\PSoC5/Filter_1.c **** *  
+  92:.\Generated_Source\PSoC5/Filter_1.c **** * Summary: 
+  93:.\Generated_Source\PSoC5/Filter_1.c **** *  Enables the DFB run bit.
+  94:.\Generated_Source\PSoC5/Filter_1.c **** *
+  95:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+  96:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+  97:.\Generated_Source\PSoC5/Filter_1.c **** *
+  98:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+  99:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 100:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 101:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 102:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_Enable(void) 
+ 103:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 150              		.loc 1 103 0
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 0
+ 153              		@ frame_needed = 1, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+ 155 0000 80B4     		push	{r7}
+ 156              	.LCFI2:
+ 157              		.cfi_def_cfa_offset 4
+ 158 0002 00AF     		add	r7, sp, #0
+ 159              		.cfi_offset 7, -4
+ 160              	.LCFI3:
+ 161              		.cfi_def_cfa_register 7
+ 104:.\Generated_Source\PSoC5/Filter_1.c ****     /* Power on DFB in Active mode */
+ 105:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_PM_ACT_CFG_REG |= Filter_1_PM_ACT_MSK;
+ 162              		.loc 1 105 0
+ 163 0004 44F2A633 		movw	r3, #:lower16:1073759142
+ 164 0008 C4F20003 		movt	r3, #:upper16:1073759142
+ 165 000c 44F2A632 		movw	r2, #:lower16:1073759142
+ 166 0010 C4F20002 		movt	r2, #:upper16:1073759142
+ 167 0014 1278     		ldrb	r2, [r2, #0]
+ 168 0016 D2B2     		uxtb	r2, r2
+ 169 0018 42F01002 		orr	r2, r2, #16
+ 170 001c D2B2     		uxtb	r2, r2
+ 171 001e 1A70     		strb	r2, [r3, #0]
+ 106:.\Generated_Source\PSoC5/Filter_1.c ****         
+ 107:.\Generated_Source\PSoC5/Filter_1.c ****     /* Power on DFB in Alternative Active mode */
+ 108:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_PM_STBY_CFG_REG |= Filter_1_PM_STBY_MSK;
+ 172              		.loc 1 108 0
+ 173 0020 44F2B633 		movw	r3, #:lower16:1073759158
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 6
+
+
+ 174 0024 C4F20003 		movt	r3, #:upper16:1073759158
+ 175 0028 44F2B632 		movw	r2, #:lower16:1073759158
+ 176 002c C4F20002 		movt	r2, #:upper16:1073759158
+ 177 0030 1278     		ldrb	r2, [r2, #0]
+ 178 0032 D2B2     		uxtb	r2, r2
+ 179 0034 42F01002 		orr	r2, r2, #16
+ 180 0038 D2B2     		uxtb	r2, r2
+ 181 003a 1A70     		strb	r2, [r3, #0]
+ 109:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 110:.\Generated_Source\PSoC5/Filter_1.c ****     /* Turn on Run Bit */
+ 111:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_CR_REG |= Filter_1_RUN_MASK;
+ 182              		.loc 1 111 0
+ 183 003c 4CF28073 		movw	r3, #:lower16:1073792896
+ 184 0040 C4F20003 		movt	r3, #:upper16:1073792896
+ 185 0044 4CF28072 		movw	r2, #:lower16:1073792896
+ 186 0048 C4F20002 		movt	r2, #:upper16:1073792896
+ 187 004c 1278     		ldrb	r2, [r2, #0]
+ 188 004e D2B2     		uxtb	r2, r2
+ 189 0050 42F00102 		orr	r2, r2, #1
+ 190 0054 D2B2     		uxtb	r2, r2
+ 191 0056 1A70     		strb	r2, [r3, #0]
+ 112:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 192              		.loc 1 112 0
+ 193 0058 BD46     		mov	sp, r7
+ 194 005a 80BC     		pop	{r7}
+ 195 005c 7047     		bx	lr
+ 196              		.cfi_endproc
+ 197              	.LFE1:
+ 198              		.size	Filter_1_Enable, .-Filter_1_Enable
+ 199 005e 00BF     		.section	.text.Filter_1_Start,"ax",%progbits
+ 200              		.align	2
+ 201              		.global	Filter_1_Start
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.type	Filter_1_Start, %function
+ 205              	Filter_1_Start:
+ 206              	.LFB2:
+ 113:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 114:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 115:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 116:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Start
+ 117:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 118:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 119:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 120:.\Generated_Source\PSoC5/Filter_1.c **** *  This method does the prep work necessary to setup DFB.  This includes loading 
+ 121:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 122:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 123:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 124:.\Generated_Source\PSoC5/Filter_1.c **** * 
+ 125:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 126:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 127:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 128:.\Generated_Source\PSoC5/Filter_1.c **** * Global variables:
+ 129:.\Generated_Source\PSoC5/Filter_1.c **** *  Filter_1_initVar:  Used to check the initial configuration,
+ 130:.\Generated_Source\PSoC5/Filter_1.c **** *  modified when this function is called for the first time.
+ 131:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 132:.\Generated_Source\PSoC5/Filter_1.c **** * Note: 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 7
+
+
+ 133:.\Generated_Source\PSoC5/Filter_1.c **** *  Use Filter_1_InterruptConfig to control which events trigger 
+ 134:.\Generated_Source\PSoC5/Filter_1.c **** *  interrupts in the DFB. 
+ 135:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 136:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 137:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_Start() 
+ 138:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 207              		.loc 1 138 0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 1, uses_anonymous_args = 0
+ 211 0000 80B5     		push	{r7, lr}
+ 212              	.LCFI4:
+ 213              		.cfi_def_cfa_offset 8
+ 214 0002 00AF     		add	r7, sp, #0
+ 215              		.cfi_offset 14, -4
+ 216              		.cfi_offset 7, -8
+ 217              	.LCFI5:
+ 218              		.cfi_def_cfa_register 7
+ 139:.\Generated_Source\PSoC5/Filter_1.c ****      /* If not Initialized then initialize all required hardware and software */
+ 140:.\Generated_Source\PSoC5/Filter_1.c ****     if(Filter_1_initVar == 0u)
+ 219              		.loc 1 140 0
+ 220 0004 40F20003 		movw	r3, #:lower16:Filter_1_initVar
+ 221 0008 C0F20003 		movt	r3, #:upper16:Filter_1_initVar
+ 222 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 223 000e 002B     		cmp	r3, #0
+ 224 0010 08D1     		bne	.L6
+ 141:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 142:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_Init();
+ 225              		.loc 1 142 0
+ 226 0012 FFF7FEFF 		bl	Filter_1_Init
+ 143:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_initVar = 1u;
+ 227              		.loc 1 143 0
+ 228 0016 40F20003 		movw	r3, #:lower16:Filter_1_initVar
+ 229 001a C0F20003 		movt	r3, #:upper16:Filter_1_initVar
+ 230 001e 4FF00102 		mov	r2, #1
+ 231 0022 1A70     		strb	r2, [r3, #0]
+ 232              	.L6:
+ 144:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 145:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 146:.\Generated_Source\PSoC5/Filter_1.c ****     /* Enable the DFB block */
+ 147:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_Enable();
+ 233              		.loc 1 147 0
+ 234 0024 FFF7FEFF 		bl	Filter_1_Enable
+ 148:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 235              		.loc 1 148 0
+ 236 0028 80BD     		pop	{r7, pc}
+ 237              		.cfi_endproc
+ 238              	.LFE2:
+ 239              		.size	Filter_1_Start, .-Filter_1_Start
+ 240 002a 00BF     		.section	.text.Filter_1_Stop,"ax",%progbits
+ 241              		.align	2
+ 242              		.global	Filter_1_Stop
+ 243              		.thumb
+ 244              		.thumb_func
+ 245              		.type	Filter_1_Stop, %function
+ 246              	Filter_1_Stop:
+ 247              	.LFB3:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 8
+
+
+ 149:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 150:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 151:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 152:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Stop
+ 153:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 154:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 155:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 156:.\Generated_Source\PSoC5/Filter_1.c **** *  Turn off the run bit.  If DMA control is used to feed the channels, allow 
+ 157:.\Generated_Source\PSoC5/Filter_1.c **** *  arguments to turn one of the TD channels off. 
+ 158:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 159:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 160:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 161:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 162:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 163:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 164:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 165:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 166:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_Stop() 
+ 167:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 248              		.loc 1 167 0
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 1, uses_anonymous_args = 0
+ 252              		@ link register save eliminated.
+ 253 0000 80B4     		push	{r7}
+ 254              	.LCFI6:
+ 255              		.cfi_def_cfa_offset 4
+ 256 0002 00AF     		add	r7, sp, #0
+ 257              		.cfi_offset 7, -4
+ 258              	.LCFI7:
+ 259              		.cfi_def_cfa_register 7
+ 168:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_CR_REG &= ~(Filter_1_RUN_MASK);
+ 260              		.loc 1 168 0
+ 261 0004 4CF28073 		movw	r3, #:lower16:1073792896
+ 262 0008 C4F20003 		movt	r3, #:upper16:1073792896
+ 263 000c 4CF28072 		movw	r2, #:lower16:1073792896
+ 264 0010 C4F20002 		movt	r2, #:upper16:1073792896
+ 265 0014 1278     		ldrb	r2, [r2, #0]
+ 266 0016 D2B2     		uxtb	r2, r2
+ 267 0018 02F0FE02 		and	r2, r2, #254
+ 268 001c 1A70     		strb	r2, [r3, #0]
+ 169:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 170:.\Generated_Source\PSoC5/Filter_1.c ****     /* Power off DFB in Active mode */
+ 171:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_PM_ACT_CFG_REG &= ~Filter_1_PM_ACT_MSK;
+ 269              		.loc 1 171 0
+ 270 001e 44F2A633 		movw	r3, #:lower16:1073759142
+ 271 0022 C4F20003 		movt	r3, #:upper16:1073759142
+ 272 0026 44F2A632 		movw	r2, #:lower16:1073759142
+ 273 002a C4F20002 		movt	r2, #:upper16:1073759142
+ 274 002e 1278     		ldrb	r2, [r2, #0]
+ 275 0030 D2B2     		uxtb	r2, r2
+ 276 0032 02F0EF02 		and	r2, r2, #239
+ 277 0036 1A70     		strb	r2, [r3, #0]
+ 172:.\Generated_Source\PSoC5/Filter_1.c ****     
+ 173:.\Generated_Source\PSoC5/Filter_1.c ****     /* Power off DFB in Alternative Active mode */
+ 174:.\Generated_Source\PSoC5/Filter_1.c ****     Filter_1_PM_STBY_CFG_REG &= ~Filter_1_PM_STBY_MSK;
+ 278              		.loc 1 174 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 9
+
+
+ 279 0038 44F2B633 		movw	r3, #:lower16:1073759158
+ 280 003c C4F20003 		movt	r3, #:upper16:1073759158
+ 281 0040 44F2B632 		movw	r2, #:lower16:1073759158
+ 282 0044 C4F20002 		movt	r2, #:upper16:1073759158
+ 283 0048 1278     		ldrb	r2, [r2, #0]
+ 284 004a D2B2     		uxtb	r2, r2
+ 285 004c 02F0EF02 		and	r2, r2, #239
+ 286 0050 1A70     		strb	r2, [r3, #0]
+ 175:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 287              		.loc 1 175 0
+ 288 0052 BD46     		mov	sp, r7
+ 289 0054 80BC     		pop	{r7}
+ 290 0056 7047     		bx	lr
+ 291              		.cfi_endproc
+ 292              	.LFE3:
+ 293              		.size	Filter_1_Stop, .-Filter_1_Stop
+ 294              		.section	.text.Filter_1_Read8,"ax",%progbits
+ 295              		.align	2
+ 296              		.global	Filter_1_Read8
+ 297              		.thumb
+ 298              		.thumb_func
+ 299              		.type	Filter_1_Read8, %function
+ 300              	Filter_1_Read8:
+ 301              	.LFB4:
+ 176:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 177:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 178:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 179:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Read8
+ 180:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 181:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 182:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 183:.\Generated_Source\PSoC5/Filter_1.c **** *  Get the value in one of the DFB Output Holding Registers 
+ 184:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 185:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 186:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Filter_1_CHANNEL_A or Filter_1_CHANNEL_B
+ 187:.\Generated_Source\PSoC5/Filter_1.c **** *            
+ 188:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 189:.\Generated_Source\PSoC5/Filter_1.c **** *  The most significant 8 bits of the current output value sitting in the 
+ 190:.\Generated_Source\PSoC5/Filter_1.c **** *  selected channel's holding register or 0x00 for invalid channel numbers.
+ 191:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 192:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 193:.\Generated_Source\PSoC5/Filter_1.c **** uint8 Filter_1_Read8(uint8 channel) 
+ 194:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 302              		.loc 1 194 0
+ 303              		.cfi_startproc
+ 304              		@ args = 0, pretend = 0, frame = 16
+ 305              		@ frame_needed = 1, uses_anonymous_args = 0
+ 306              		@ link register save eliminated.
+ 307 0000 80B4     		push	{r7}
+ 308              	.LCFI8:
+ 309              		.cfi_def_cfa_offset 4
+ 310 0002 85B0     		sub	sp, sp, #20
+ 311              	.LCFI9:
+ 312              		.cfi_def_cfa_offset 24
+ 313 0004 00AF     		add	r7, sp, #0
+ 314              		.cfi_offset 7, -4
+ 315              	.LCFI10:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 10
+
+
+ 316              		.cfi_def_cfa_register 7
+ 317 0006 0346     		mov	r3, r0
+ 318 0008 FB71     		strb	r3, [r7, #7]
+ 195:.\Generated_Source\PSoC5/Filter_1.c ****     uint8 value;
+ 196:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 197:.\Generated_Source\PSoC5/Filter_1.c ****     if (channel == Filter_1_CHANNEL_A)
+ 319              		.loc 1 197 0
+ 320 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 321 000c 002B     		cmp	r3, #0
+ 322 000e 06D1     		bne	.L11
+ 198:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 199:.\Generated_Source\PSoC5/Filter_1.c ****         value = Filter_1_HOLDAH_REG;
+ 323              		.loc 1 199 0
+ 324 0010 4CF2AA73 		movw	r3, #:lower16:1073792938
+ 325 0014 C4F20003 		movt	r3, #:upper16:1073792938
+ 326 0018 1B78     		ldrb	r3, [r3, #0]
+ 327 001a FB73     		strb	r3, [r7, #15]
+ 328 001c 0CE0     		b	.L12
+ 329              	.L11:
+ 200:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 201:.\Generated_Source\PSoC5/Filter_1.c ****     else if (channel == Filter_1_CHANNEL_B)
+ 330              		.loc 1 201 0
+ 331 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 332 0020 012B     		cmp	r3, #1
+ 333 0022 06D1     		bne	.L13
+ 202:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 203:.\Generated_Source\PSoC5/Filter_1.c ****         value = Filter_1_HOLDBH_REG;
+ 334              		.loc 1 203 0
+ 335 0024 4CF2AE73 		movw	r3, #:lower16:1073792942
+ 336 0028 C4F20003 		movt	r3, #:upper16:1073792942
+ 337 002c 1B78     		ldrb	r3, [r3, #0]
+ 338 002e FB73     		strb	r3, [r7, #15]
+ 339 0030 02E0     		b	.L12
+ 340              	.L13:
+ 204:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 205:.\Generated_Source\PSoC5/Filter_1.c ****     else
+ 206:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 207:.\Generated_Source\PSoC5/Filter_1.c ****         value = 0x0u;
+ 341              		.loc 1 207 0
+ 342 0032 4FF00003 		mov	r3, #0
+ 343 0036 FB73     		strb	r3, [r7, #15]
+ 344              	.L12:
+ 208:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 209:.\Generated_Source\PSoC5/Filter_1.c ****     return value;
+ 345              		.loc 1 209 0
+ 346 0038 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 210:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 347              		.loc 1 210 0
+ 348 003a 1846     		mov	r0, r3
+ 349 003c 07F11407 		add	r7, r7, #20
+ 350 0040 BD46     		mov	sp, r7
+ 351 0042 80BC     		pop	{r7}
+ 352 0044 7047     		bx	lr
+ 353              		.cfi_endproc
+ 354              	.LFE4:
+ 355              		.size	Filter_1_Read8, .-Filter_1_Read8
+ 356 0046 00BF     		.section	.text.Filter_1_Read16,"ax",%progbits
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 11
+
+
+ 357              		.align	2
+ 358              		.global	Filter_1_Read16
+ 359              		.thumb
+ 360              		.thumb_func
+ 361              		.type	Filter_1_Read16, %function
+ 362              	Filter_1_Read16:
+ 363              	.LFB5:
+ 211:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 212:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 213:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 214:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Read16
+ 215:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 216:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 217:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 218:.\Generated_Source\PSoC5/Filter_1.c **** *  Get the value in one of the DFB Output Holding Registers 
+ 219:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 220:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 221:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Filter_1_CHANNEL_A or Filter_1_CHANNEL_B
+ 222:.\Generated_Source\PSoC5/Filter_1.c **** *            
+ 223:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 224:.\Generated_Source\PSoC5/Filter_1.c **** *  The most significant 16 bits of the current output value sitting in the 
+ 225:.\Generated_Source\PSoC5/Filter_1.c **** *  selected channel's holding register or 0x0000 for invalid channel numbers
+ 226:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 227:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+ 228:.\Generated_Source\PSoC5/Filter_1.c **** *  Order of the read is important.  On the read of the high byte, the DFB clears
+ 229:.\Generated_Source\PSoC5/Filter_1.c **** *  the data ready bit.
+ 230:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 231:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 232:.\Generated_Source\PSoC5/Filter_1.c **** #if defined(__C51__) || defined(__CX51__) 
+ 233:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 234:.\Generated_Source\PSoC5/Filter_1.c ****     uint16 Filter_1_Read16(uint8 channel) 
+ 235:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 236:.\Generated_Source\PSoC5/Filter_1.c ****         uint16 val;
+ 237:.\Generated_Source\PSoC5/Filter_1.c ****     
+ 238:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 239:.\Generated_Source\PSoC5/Filter_1.c ****         {        
+ 240:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDAM_REG;
+ 241:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint16)(Filter_1_HOLDAH_REG) << 8;
+ 242:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 243:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 244:.\Generated_Source\PSoC5/Filter_1.c ****         {      
+ 245:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDBM_REG;
+ 246:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint16)Filter_1_HOLDBH_REG << 8;
+ 247:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 248:.\Generated_Source\PSoC5/Filter_1.c ****         else
+ 249:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 250:.\Generated_Source\PSoC5/Filter_1.c ****             val = 0x0u;
+ 251:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 252:.\Generated_Source\PSoC5/Filter_1.c ****         return val;
+ 253:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 254:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 255:.\Generated_Source\PSoC5/Filter_1.c **** #else
+ 256:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 257:.\Generated_Source\PSoC5/Filter_1.c ****     uint16 Filter_1_Read16(uint8 channel) 
+ 258:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 364              		.loc 1 258 0
+ 365              		.cfi_startproc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 12
+
+
+ 366              		@ args = 0, pretend = 0, frame = 16
+ 367              		@ frame_needed = 1, uses_anonymous_args = 0
+ 368              		@ link register save eliminated.
+ 369 0000 80B4     		push	{r7}
+ 370              	.LCFI11:
+ 371              		.cfi_def_cfa_offset 4
+ 372 0002 85B0     		sub	sp, sp, #20
+ 373              	.LCFI12:
+ 374              		.cfi_def_cfa_offset 24
+ 375 0004 00AF     		add	r7, sp, #0
+ 376              		.cfi_offset 7, -4
+ 377              	.LCFI13:
+ 378              		.cfi_def_cfa_register 7
+ 379 0006 0346     		mov	r3, r0
+ 380 0008 FB71     		strb	r3, [r7, #7]
+ 259:.\Generated_Source\PSoC5/Filter_1.c ****         uint16 val;
+ 260:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 261:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 381              		.loc 1 261 0
+ 382 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 383 000c 002B     		cmp	r3, #0
+ 384 000e 06D1     		bne	.L16
+ 262:.\Generated_Source\PSoC5/Filter_1.c ****         {        
+ 263:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDA16_REG;
+ 385              		.loc 1 263 0
+ 386 0010 4CF2A973 		movw	r3, #:lower16:1073792937
+ 387 0014 C4F20003 		movt	r3, #:upper16:1073792937
+ 388 0018 1B88     		ldrh	r3, [r3, #0]	@ movhi
+ 389 001a FB81     		strh	r3, [r7, #14]	@ movhi
+ 390 001c 0CE0     		b	.L17
+ 391              	.L16:
+ 264:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 265:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 392              		.loc 1 265 0
+ 393 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 394 0020 012B     		cmp	r3, #1
+ 395 0022 06D1     		bne	.L18
+ 266:.\Generated_Source\PSoC5/Filter_1.c ****         {      
+ 267:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDB16_REG;
+ 396              		.loc 1 267 0
+ 397 0024 4CF2AD73 		movw	r3, #:lower16:1073792941
+ 398 0028 C4F20003 		movt	r3, #:upper16:1073792941
+ 399 002c 1B88     		ldrh	r3, [r3, #0]	@ movhi
+ 400 002e FB81     		strh	r3, [r7, #14]	@ movhi
+ 401 0030 02E0     		b	.L17
+ 402              	.L18:
+ 268:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 269:.\Generated_Source\PSoC5/Filter_1.c ****         else
+ 270:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 271:.\Generated_Source\PSoC5/Filter_1.c ****             val = 0x0u;
+ 403              		.loc 1 271 0
+ 404 0032 4FF00003 		mov	r3, #0
+ 405 0036 FB81     		strh	r3, [r7, #14]	@ movhi
+ 406              	.L17:
+ 272:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 273:.\Generated_Source\PSoC5/Filter_1.c ****         return val;
+ 407              		.loc 1 273 0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 13
+
+
+ 408 0038 FB89     		ldrh	r3, [r7, #14]
+ 274:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 409              		.loc 1 274 0
+ 410 003a 1846     		mov	r0, r3
+ 411 003c 07F11407 		add	r7, r7, #20
+ 412 0040 BD46     		mov	sp, r7
+ 413 0042 80BC     		pop	{r7}
+ 414 0044 7047     		bx	lr
+ 415              		.cfi_endproc
+ 416              	.LFE5:
+ 417              		.size	Filter_1_Read16, .-Filter_1_Read16
+ 418 0046 00BF     		.section	.text.Filter_1_Read24,"ax",%progbits
+ 419              		.align	2
+ 420              		.global	Filter_1_Read24
+ 421              		.thumb
+ 422              		.thumb_func
+ 423              		.type	Filter_1_Read24, %function
+ 424              	Filter_1_Read24:
+ 425              	.LFB6:
+ 275:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 276:.\Generated_Source\PSoC5/Filter_1.c **** #endif /* defined(__C51__) || defined(__CX51__) */
+ 277:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 278:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 279:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 280:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Read24
+ 281:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 282:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 283:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 284:.\Generated_Source\PSoC5/Filter_1.c **** *  Get the value in one of the DFB Output Holding Registers 
+ 285:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 286:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 287:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Filter_1_CHANNEL_A or Filter_1_CHANNEL_B
+ 288:.\Generated_Source\PSoC5/Filter_1.c **** *            
+ 289:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 290:.\Generated_Source\PSoC5/Filter_1.c **** *  The current 24-bit output value sitting in the selected channel's
+ 291:.\Generated_Source\PSoC5/Filter_1.c **** *  holding register or 0x00000000 for invalid channel numbers
+ 292:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 293:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+ 294:.\Generated_Source\PSoC5/Filter_1.c **** *  Order of the read is important.  On the read of the high byte, the DFB clears
+ 295:.\Generated_Source\PSoC5/Filter_1.c **** *  the data ready bit.
+ 296:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 297:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 298:.\Generated_Source\PSoC5/Filter_1.c **** #if defined(__C51__) || defined(__CX51__)
+ 299:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 300:.\Generated_Source\PSoC5/Filter_1.c ****     uint32 Filter_1_Read24(uint8 channel) 
+ 301:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 302:.\Generated_Source\PSoC5/Filter_1.c ****         uint32 val;
+ 303:.\Generated_Source\PSoC5/Filter_1.c ****     
+ 304:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 305:.\Generated_Source\PSoC5/Filter_1.c ****         {        
+ 306:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDA_REG;
+ 307:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint32)(Filter_1_HOLDAM_REG) << 8;
+ 308:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint32)(Filter_1_HOLDAH_REG) << 16;
+ 309:.\Generated_Source\PSoC5/Filter_1.c ****             
+ 310:.\Generated_Source\PSoC5/Filter_1.c ****             /* SignExtend */
+ 311:.\Generated_Source\PSoC5/Filter_1.c ****             if(val & Filter_1_SIGN_BIT)
+ 312:.\Generated_Source\PSoC5/Filter_1.c ****                 val |= Filter_1_SIGN_BYTE;
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 14
+
+
+ 313:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 314:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 315:.\Generated_Source\PSoC5/Filter_1.c ****         {      
+ 316:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDB_REG;
+ 317:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint32)Filter_1_HOLDBM_REG << 8;
+ 318:.\Generated_Source\PSoC5/Filter_1.c ****             val |= (uint32)Filter_1_HOLDBH_REG << 16;
+ 319:.\Generated_Source\PSoC5/Filter_1.c ****             
+ 320:.\Generated_Source\PSoC5/Filter_1.c ****             /* SignExtend */
+ 321:.\Generated_Source\PSoC5/Filter_1.c ****             if(val & Filter_1_SIGN_BIT)
+ 322:.\Generated_Source\PSoC5/Filter_1.c ****                 val |= Filter_1_SIGN_BYTE;
+ 323:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 324:.\Generated_Source\PSoC5/Filter_1.c ****         else
+ 325:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 326:.\Generated_Source\PSoC5/Filter_1.c ****             val = 0x0u;
+ 327:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 328:.\Generated_Source\PSoC5/Filter_1.c ****         return val;
+ 329:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 330:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 331:.\Generated_Source\PSoC5/Filter_1.c **** #else
+ 332:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 333:.\Generated_Source\PSoC5/Filter_1.c ****     uint32 Filter_1_Read24(uint8 channel) 
+ 334:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 426              		.loc 1 334 0
+ 427              		.cfi_startproc
+ 428              		@ args = 0, pretend = 0, frame = 16
+ 429              		@ frame_needed = 1, uses_anonymous_args = 0
+ 430              		@ link register save eliminated.
+ 431 0000 80B4     		push	{r7}
+ 432              	.LCFI14:
+ 433              		.cfi_def_cfa_offset 4
+ 434 0002 85B0     		sub	sp, sp, #20
+ 435              	.LCFI15:
+ 436              		.cfi_def_cfa_offset 24
+ 437 0004 00AF     		add	r7, sp, #0
+ 438              		.cfi_offset 7, -4
+ 439              	.LCFI16:
+ 440              		.cfi_def_cfa_register 7
+ 441 0006 0346     		mov	r3, r0
+ 442 0008 FB71     		strb	r3, [r7, #7]
+ 335:.\Generated_Source\PSoC5/Filter_1.c ****         uint32 val;
+ 336:.\Generated_Source\PSoC5/Filter_1.c ****          
+ 337:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 443              		.loc 1 337 0
+ 444 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 445 000c 002B     		cmp	r3, #0
+ 446 000e 06D1     		bne	.L21
+ 338:.\Generated_Source\PSoC5/Filter_1.c ****         {        
+ 339:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDA24_REG;
+ 447              		.loc 1 339 0
+ 448 0010 4CF2A873 		movw	r3, #:lower16:1073792936
+ 449 0014 C4F20003 		movt	r3, #:upper16:1073792936
+ 450 0018 1B68     		ldr	r3, [r3, #0]
+ 451 001a FB60     		str	r3, [r7, #12]
+ 452 001c 0CE0     		b	.L22
+ 453              	.L21:
+ 340:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 341:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 15
+
+
+ 454              		.loc 1 341 0
+ 455 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 456 0020 012B     		cmp	r3, #1
+ 457 0022 06D1     		bne	.L23
+ 342:.\Generated_Source\PSoC5/Filter_1.c ****         {      
+ 343:.\Generated_Source\PSoC5/Filter_1.c ****             val = Filter_1_HOLDB24_REG;
+ 458              		.loc 1 343 0
+ 459 0024 4CF2AC73 		movw	r3, #:lower16:1073792940
+ 460 0028 C4F20003 		movt	r3, #:upper16:1073792940
+ 461 002c 1B68     		ldr	r3, [r3, #0]
+ 462 002e FB60     		str	r3, [r7, #12]
+ 463 0030 02E0     		b	.L22
+ 464              	.L23:
+ 344:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 345:.\Generated_Source\PSoC5/Filter_1.c ****         else
+ 346:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 347:.\Generated_Source\PSoC5/Filter_1.c ****             val = 0x0u;
+ 465              		.loc 1 347 0
+ 466 0032 4FF00003 		mov	r3, #0
+ 467 0036 FB60     		str	r3, [r7, #12]
+ 468              	.L22:
+ 348:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 349:.\Generated_Source\PSoC5/Filter_1.c ****         return val;
+ 469              		.loc 1 349 0
+ 470 0038 FB68     		ldr	r3, [r7, #12]
+ 350:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 471              		.loc 1 350 0
+ 472 003a 1846     		mov	r0, r3
+ 473 003c 07F11407 		add	r7, r7, #20
+ 474 0040 BD46     		mov	sp, r7
+ 475 0042 80BC     		pop	{r7}
+ 476 0044 7047     		bx	lr
+ 477              		.cfi_endproc
+ 478              	.LFE6:
+ 479              		.size	Filter_1_Read24, .-Filter_1_Read24
+ 480 0046 00BF     		.section	.text.Filter_1_Write8,"ax",%progbits
+ 481              		.align	2
+ 482              		.global	Filter_1_Write8
+ 483              		.thumb
+ 484              		.thumb_func
+ 485              		.type	Filter_1_Write8, %function
+ 486              	Filter_1_Write8:
+ 487              	.LFB7:
+ 351:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 352:.\Generated_Source\PSoC5/Filter_1.c **** #endif /* defined(__C51__) || defined(__CX51__) */
+ 353:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 354:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 355:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 356:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Write8
+ 357:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 358:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 359:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 360:.\Generated_Source\PSoC5/Filter_1.c **** *  Set the value in one of the DFB Input Staging Registers 
+ 361:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 362:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 363:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Use either Filter_1_CHANNEL_A or 
+ 364:.\Generated_Source\PSoC5/Filter_1.c **** *            Filter_1_CHANNEL_B as arguments to the function.  
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 16
+
+
+ 365:.\Generated_Source\PSoC5/Filter_1.c **** *  sample:   The 8-bit, right justified input sample. 
+ 366:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 367:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 368:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 369:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 370:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+ 371:.\Generated_Source\PSoC5/Filter_1.c **** *  Order of the write is important.  On the load of the high byte, the DFB sets
+ 372:.\Generated_Source\PSoC5/Filter_1.c **** *  the input ready bit.
+ 373:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 374:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 375:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_Write8(uint8 channel, uint8 sample) 
+ 376:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 488              		.loc 1 376 0
+ 489              		.cfi_startproc
+ 490              		@ args = 0, pretend = 0, frame = 8
+ 491              		@ frame_needed = 1, uses_anonymous_args = 0
+ 492              		@ link register save eliminated.
+ 493 0000 80B4     		push	{r7}
+ 494              	.LCFI17:
+ 495              		.cfi_def_cfa_offset 4
+ 496 0002 83B0     		sub	sp, sp, #12
+ 497              	.LCFI18:
+ 498              		.cfi_def_cfa_offset 16
+ 499 0004 00AF     		add	r7, sp, #0
+ 500              		.cfi_offset 7, -4
+ 501              	.LCFI19:
+ 502              		.cfi_def_cfa_register 7
+ 503 0006 0246     		mov	r2, r0
+ 504 0008 0B46     		mov	r3, r1
+ 505 000a FA71     		strb	r2, [r7, #7]
+ 506 000c BB71     		strb	r3, [r7, #6]
+ 377:.\Generated_Source\PSoC5/Filter_1.c ****     if (channel == Filter_1_CHANNEL_A)
+ 507              		.loc 1 377 0
+ 508 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 509 0010 002B     		cmp	r3, #0
+ 510 0012 06D1     		bne	.L26
+ 378:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 379:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_STAGEAH_REG = sample;
+ 511              		.loc 1 379 0
+ 512 0014 4CF2A273 		movw	r3, #:lower16:1073792930
+ 513 0018 C4F20003 		movt	r3, #:upper16:1073792930
+ 514 001c BA79     		ldrb	r2, [r7, #6]
+ 515 001e 1A70     		strb	r2, [r3, #0]
+ 516 0020 08E0     		b	.L28
+ 517              	.L26:
+ 380:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 381:.\Generated_Source\PSoC5/Filter_1.c ****     else if (channel == Filter_1_CHANNEL_B)
+ 518              		.loc 1 381 0
+ 519 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 520 0024 012B     		cmp	r3, #1
+ 521 0026 05D1     		bne	.L28
+ 382:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 383:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_STAGEBH_REG = sample;
+ 522              		.loc 1 383 0
+ 523 0028 4CF2A673 		movw	r3, #:lower16:1073792934
+ 524 002c C4F20003 		movt	r3, #:upper16:1073792934
+ 525 0030 BA79     		ldrb	r2, [r7, #6]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 17
+
+
+ 526 0032 1A70     		strb	r2, [r3, #0]
+ 527              	.L28:
+ 384:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 385:.\Generated_Source\PSoC5/Filter_1.c ****     /* No Final else statement: No value is loaded on bad channel input */
+ 386:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 528              		.loc 1 386 0
+ 529 0034 07F10C07 		add	r7, r7, #12
+ 530 0038 BD46     		mov	sp, r7
+ 531 003a 80BC     		pop	{r7}
+ 532 003c 7047     		bx	lr
+ 533              		.cfi_endproc
+ 534              	.LFE7:
+ 535              		.size	Filter_1_Write8, .-Filter_1_Write8
+ 536 003e 00BF     		.section	.text.Filter_1_Write16,"ax",%progbits
+ 537              		.align	2
+ 538              		.global	Filter_1_Write16
+ 539              		.thumb
+ 540              		.thumb_func
+ 541              		.type	Filter_1_Write16, %function
+ 542              	Filter_1_Write16:
+ 543              	.LFB8:
+ 387:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 388:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 389:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 390:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Write16
+ 391:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 392:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 393:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 394:.\Generated_Source\PSoC5/Filter_1.c **** *  Set the value in one of the DFB Input Staging Registers 
+ 395:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 396:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 397:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Use either Filter_1_CHANNEL_A or 
+ 398:.\Generated_Source\PSoC5/Filter_1.c **** *            Filter_1_CHANNEL_B as arguments to the function.  
+ 399:.\Generated_Source\PSoC5/Filter_1.c **** *  sample:   The 16-bit, right justified input sample. 
+ 400:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 401:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 402:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 403:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 404:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+ 405:.\Generated_Source\PSoC5/Filter_1.c **** *  Order of the write is important.  On the load of the high byte, the DFB sets
+ 406:.\Generated_Source\PSoC5/Filter_1.c **** *  the input ready bit.
+ 407:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 408:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 409:.\Generated_Source\PSoC5/Filter_1.c **** #if defined(__C51__) || defined(__CX51__)
+ 410:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 411:.\Generated_Source\PSoC5/Filter_1.c ****     void Filter_1_Write16(uint8 channel, uint16 sample) 
+ 412:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 413:.\Generated_Source\PSoC5/Filter_1.c ****         /* Write the STAGE MSB reg last as it signals a complete wrote to the 
+ 414:.\Generated_Source\PSoC5/Filter_1.c ****            DFB.*/
+ 415:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 416:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 417:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEAM_REG = (uint8)(sample);
+ 418:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEAH_REG = (uint8)(sample >> 8 );
+ 419:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 420:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 421:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 422:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEBM_REG = (uint8)(sample);
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 18
+
+
+ 423:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEBH_REG = (uint8)(sample >> 8);
+ 424:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 425:.\Generated_Source\PSoC5/Filter_1.c ****         /* No Final else statement: No value is loaded on bad channel input */
+ 426:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 427:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 428:.\Generated_Source\PSoC5/Filter_1.c **** #else
+ 429:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 430:.\Generated_Source\PSoC5/Filter_1.c ****     void Filter_1_Write16(uint8 channel, uint16 sample) 
+ 431:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 544              		.loc 1 431 0
+ 545              		.cfi_startproc
+ 546              		@ args = 0, pretend = 0, frame = 8
+ 547              		@ frame_needed = 1, uses_anonymous_args = 0
+ 548              		@ link register save eliminated.
+ 549 0000 80B4     		push	{r7}
+ 550              	.LCFI20:
+ 551              		.cfi_def_cfa_offset 4
+ 552 0002 83B0     		sub	sp, sp, #12
+ 553              	.LCFI21:
+ 554              		.cfi_def_cfa_offset 16
+ 555 0004 00AF     		add	r7, sp, #0
+ 556              		.cfi_offset 7, -4
+ 557              	.LCFI22:
+ 558              		.cfi_def_cfa_register 7
+ 559 0006 0246     		mov	r2, r0
+ 560 0008 0B46     		mov	r3, r1
+ 561 000a FA71     		strb	r2, [r7, #7]
+ 562 000c BB80     		strh	r3, [r7, #4]	@ movhi
+ 432:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 563              		.loc 1 432 0
+ 564 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 565 0010 002B     		cmp	r3, #0
+ 566 0012 06D1     		bne	.L30
+ 433:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 434:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEA16_REG = sample;
+ 567              		.loc 1 434 0
+ 568 0014 4CF2A173 		movw	r3, #:lower16:1073792929
+ 569 0018 C4F20003 		movt	r3, #:upper16:1073792929
+ 570 001c BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 571 001e 1A80     		strh	r2, [r3, #0]	@ movhi
+ 572 0020 08E0     		b	.L32
+ 573              	.L30:
+ 435:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 436:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 574              		.loc 1 436 0
+ 575 0022 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 576 0024 012B     		cmp	r3, #1
+ 577 0026 05D1     		bne	.L32
+ 437:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 438:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEB16_REG = sample;
+ 578              		.loc 1 438 0
+ 579 0028 4CF2A573 		movw	r3, #:lower16:1073792933
+ 580 002c C4F20003 		movt	r3, #:upper16:1073792933
+ 581 0030 BA88     		ldrh	r2, [r7, #4]	@ movhi
+ 582 0032 1A80     		strh	r2, [r3, #0]	@ movhi
+ 583              	.L32:
+ 439:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 19
+
+
+ 440:.\Generated_Source\PSoC5/Filter_1.c ****         /* No Final else statement: No value is loaded on bad channel input */
+ 441:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 584              		.loc 1 441 0
+ 585 0034 07F10C07 		add	r7, r7, #12
+ 586 0038 BD46     		mov	sp, r7
+ 587 003a 80BC     		pop	{r7}
+ 588 003c 7047     		bx	lr
+ 589              		.cfi_endproc
+ 590              	.LFE8:
+ 591              		.size	Filter_1_Write16, .-Filter_1_Write16
+ 592 003e 00BF     		.section	.text.Filter_1_Write24,"ax",%progbits
+ 593              		.align	2
+ 594              		.global	Filter_1_Write24
+ 595              		.thumb
+ 596              		.thumb_func
+ 597              		.type	Filter_1_Write24, %function
+ 598              	Filter_1_Write24:
+ 599              	.LFB9:
+ 442:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 443:.\Generated_Source\PSoC5/Filter_1.c **** #endif /* defined(__C51__) || defined(__CX51__) */
+ 444:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 445:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 446:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 447:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_Write24
+ 448:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 449:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 450:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 451:.\Generated_Source\PSoC5/Filter_1.c **** *  Set the value in one of the DFB Input Staging Registers 
+ 452:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 453:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 454:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Use either Filter_1_CHANNEL_A or 
+ 455:.\Generated_Source\PSoC5/Filter_1.c **** *            Filter_1_CHANNEL_B as arguments to the function.  
+ 456:.\Generated_Source\PSoC5/Filter_1.c **** *  sample:   The 24-bit, right justified input sample inside of a uint32. 
+ 457:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 458:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 459:.\Generated_Source\PSoC5/Filter_1.c **** *  void
+ 460:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 461:.\Generated_Source\PSoC5/Filter_1.c **** * Note:
+ 462:.\Generated_Source\PSoC5/Filter_1.c **** *  Order of the write is important.  On the load of the high byte, the DFB sets
+ 463:.\Generated_Source\PSoC5/Filter_1.c **** *  the input ready bit.
+ 464:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 465:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 466:.\Generated_Source\PSoC5/Filter_1.c **** #if defined(__C51__) || defined(__CX51__)
+ 467:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 468:.\Generated_Source\PSoC5/Filter_1.c ****     void Filter_1_Write24(uint8 channel, uint32 sample) 
+ 469:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 470:.\Generated_Source\PSoC5/Filter_1.c ****         /* Write the STAGE LSB reg last as it signals a complete wrote to 
+ 471:.\Generated_Source\PSoC5/Filter_1.c ****            the DFB.*/
+ 472:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 473:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 474:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEA_REG  = (uint8)(sample);
+ 475:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEAM_REG = (uint8)(sample >> 8 );
+ 476:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEAH_REG = (uint8)(sample >> 16);
+ 477:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 478:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 479:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 480:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEB_REG = (uint8)(sample);
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 20
+
+
+ 481:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEBM_REG = (uint8)(sample >> 8);
+ 482:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEBH_REG = (uint8)(sample >> 16);
+ 483:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 484:.\Generated_Source\PSoC5/Filter_1.c ****         /* No Final else statement: No value is loaded on bad channel input */
+ 485:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 486:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 487:.\Generated_Source\PSoC5/Filter_1.c **** #else
+ 488:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 489:.\Generated_Source\PSoC5/Filter_1.c ****     void Filter_1_Write24(uint8 channel, uint32 sample) 
+ 490:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 600              		.loc 1 490 0
+ 601              		.cfi_startproc
+ 602              		@ args = 0, pretend = 0, frame = 8
+ 603              		@ frame_needed = 1, uses_anonymous_args = 0
+ 604              		@ link register save eliminated.
+ 605 0000 80B4     		push	{r7}
+ 606              	.LCFI23:
+ 607              		.cfi_def_cfa_offset 4
+ 608 0002 83B0     		sub	sp, sp, #12
+ 609              	.LCFI24:
+ 610              		.cfi_def_cfa_offset 16
+ 611 0004 00AF     		add	r7, sp, #0
+ 612              		.cfi_offset 7, -4
+ 613              	.LCFI25:
+ 614              		.cfi_def_cfa_register 7
+ 615 0006 0346     		mov	r3, r0
+ 616 0008 3960     		str	r1, [r7, #0]
+ 617 000a FB71     		strb	r3, [r7, #7]
+ 491:.\Generated_Source\PSoC5/Filter_1.c ****         if (channel == Filter_1_CHANNEL_A)
+ 618              		.loc 1 491 0
+ 619 000c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 620 000e 002B     		cmp	r3, #0
+ 621 0010 06D1     		bne	.L34
+ 492:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 493:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEA24_REG = sample;
+ 622              		.loc 1 493 0
+ 623 0012 4CF2A073 		movw	r3, #:lower16:1073792928
+ 624 0016 C4F20003 		movt	r3, #:upper16:1073792928
+ 625 001a 3A68     		ldr	r2, [r7, #0]
+ 626 001c 1A60     		str	r2, [r3, #0]
+ 627 001e 08E0     		b	.L36
+ 628              	.L34:
+ 494:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ 495:.\Generated_Source\PSoC5/Filter_1.c ****         else if (channel == Filter_1_CHANNEL_B)
+ 629              		.loc 1 495 0
+ 630 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 631 0022 012B     		cmp	r3, #1
+ 632 0024 05D1     		bne	.L36
+ 496:.\Generated_Source\PSoC5/Filter_1.c ****         {
+ 497:.\Generated_Source\PSoC5/Filter_1.c ****             Filter_1_STAGEB24_REG = sample;
+ 633              		.loc 1 497 0
+ 634 0026 4CF2A473 		movw	r3, #:lower16:1073792932
+ 635 002a C4F20003 		movt	r3, #:upper16:1073792932
+ 636 002e 3A68     		ldr	r2, [r7, #0]
+ 637 0030 1A60     		str	r2, [r3, #0]
+ 638              	.L36:
+ 498:.\Generated_Source\PSoC5/Filter_1.c ****         }
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 21
+
+
+ 499:.\Generated_Source\PSoC5/Filter_1.c ****         /* No Final else statement: No value is loaded on bad channel input */
+ 500:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 639              		.loc 1 500 0
+ 640 0032 07F10C07 		add	r7, r7, #12
+ 641 0036 BD46     		mov	sp, r7
+ 642 0038 80BC     		pop	{r7}
+ 643 003a 7047     		bx	lr
+ 644              		.cfi_endproc
+ 645              	.LFE9:
+ 646              		.size	Filter_1_Write24, .-Filter_1_Write24
+ 647              		.section	.text.Filter_1_SetCoherency,"ax",%progbits
+ 648              		.align	2
+ 649              		.global	Filter_1_SetCoherency
+ 650              		.thumb
+ 651              		.thumb_func
+ 652              		.type	Filter_1_SetCoherency, %function
+ 653              	Filter_1_SetCoherency:
+ 654              	.LFB10:
+ 501:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 502:.\Generated_Source\PSoC5/Filter_1.c **** #endif /* defined(__C51__) || defined(__CX51__) */
+ 503:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 504:.\Generated_Source\PSoC5/Filter_1.c **** 
+ 505:.\Generated_Source\PSoC5/Filter_1.c **** /*******************************************************************************
+ 506:.\Generated_Source\PSoC5/Filter_1.c **** * Function Name: Filter_1_SetCoherency
+ 507:.\Generated_Source\PSoC5/Filter_1.c **** ********************************************************************************
+ 508:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 509:.\Generated_Source\PSoC5/Filter_1.c **** * Summary:
+ 510:.\Generated_Source\PSoC5/Filter_1.c **** *  Sets the DFB coherency register with the user provided input 
+ 511:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 512:.\Generated_Source\PSoC5/Filter_1.c **** * Parameters:  
+ 513:.\Generated_Source\PSoC5/Filter_1.c **** *  channel:  Filter_1_CHANNEL_A or Filter_1_CHANNEL_B
+ 514:.\Generated_Source\PSoC5/Filter_1.c **** *  byteSelect:  High byte, Middle byte or Low byte as the key coherency byte.
+ 515:.\Generated_Source\PSoC5/Filter_1.c **** *            
+ 516:.\Generated_Source\PSoC5/Filter_1.c **** * Return: 
+ 517:.\Generated_Source\PSoC5/Filter_1.c **** *  None.
+ 518:.\Generated_Source\PSoC5/Filter_1.c **** *
+ 519:.\Generated_Source\PSoC5/Filter_1.c **** *******************************************************************************/
+ 520:.\Generated_Source\PSoC5/Filter_1.c **** void Filter_1_SetCoherency(uint8 channel, uint8 byteSelect) 
+ 521:.\Generated_Source\PSoC5/Filter_1.c **** {
+ 655              		.loc 1 521 0
+ 656              		.cfi_startproc
+ 657              		@ args = 0, pretend = 0, frame = 8
+ 658              		@ frame_needed = 1, uses_anonymous_args = 0
+ 659              		@ link register save eliminated.
+ 660 0000 80B4     		push	{r7}
+ 661              	.LCFI26:
+ 662              		.cfi_def_cfa_offset 4
+ 663 0002 83B0     		sub	sp, sp, #12
+ 664              	.LCFI27:
+ 665              		.cfi_def_cfa_offset 16
+ 666 0004 00AF     		add	r7, sp, #0
+ 667              		.cfi_offset 7, -4
+ 668              	.LCFI28:
+ 669              		.cfi_def_cfa_register 7
+ 670 0006 0246     		mov	r2, r0
+ 671 0008 0B46     		mov	r3, r1
+ 672 000a FA71     		strb	r2, [r7, #7]
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 22
+
+
+ 673 000c BB71     		strb	r3, [r7, #6]
+ 522:.\Generated_Source\PSoC5/Filter_1.c ****     if (channel == Filter_1_CHANNEL_A)
+ 674              		.loc 1 522 0
+ 675 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 676 0010 002B     		cmp	r3, #0
+ 677 0012 30D1     		bne	.L38
+ 523:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 524:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG &= ~(Filter_1_STAGEA_COHER_MASK | Filter_1_HOLDA_COHER_MASK);
+ 678              		.loc 1 524 0
+ 679 0014 4CF2B073 		movw	r3, #:lower16:1073792944
+ 680 0018 C4F20003 		movt	r3, #:upper16:1073792944
+ 681 001c 4CF2B072 		movw	r2, #:lower16:1073792944
+ 682 0020 C4F20002 		movt	r2, #:upper16:1073792944
+ 683 0024 1278     		ldrb	r2, [r2, #0]
+ 684 0026 D2B2     		uxtb	r2, r2
+ 685 0028 02F0CC02 		and	r2, r2, #204
+ 686 002c 1A70     		strb	r2, [r3, #0]
+ 525:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG |= byteSelect;
+ 687              		.loc 1 525 0
+ 688 002e 4CF2B073 		movw	r3, #:lower16:1073792944
+ 689 0032 C4F20003 		movt	r3, #:upper16:1073792944
+ 690 0036 4CF2B072 		movw	r2, #:lower16:1073792944
+ 691 003a C4F20002 		movt	r2, #:upper16:1073792944
+ 692 003e 1278     		ldrb	r2, [r2, #0]
+ 693 0040 D1B2     		uxtb	r1, r2
+ 694 0042 BA79     		ldrb	r2, [r7, #6]
+ 695 0044 41EA0202 		orr	r2, r1, r2
+ 696 0048 D2B2     		uxtb	r2, r2
+ 697 004a 1A70     		strb	r2, [r3, #0]
+ 526:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG |= (byteSelect << 4);
+ 698              		.loc 1 526 0
+ 699 004c 4CF2B073 		movw	r3, #:lower16:1073792944
+ 700 0050 C4F20003 		movt	r3, #:upper16:1073792944
+ 701 0054 4CF2B072 		movw	r2, #:lower16:1073792944
+ 702 0058 C4F20002 		movt	r2, #:upper16:1073792944
+ 703 005c 1278     		ldrb	r2, [r2, #0]
+ 704 005e D2B2     		uxtb	r2, r2
+ 705 0060 1146     		mov	r1, r2
+ 706 0062 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 707 0064 4FEA0212 		lsl	r2, r2, #4
+ 708 0068 D2B2     		uxtb	r2, r2
+ 709 006a 41EA0202 		orr	r2, r1, r2
+ 710 006e D2B2     		uxtb	r2, r2
+ 711 0070 D2B2     		uxtb	r2, r2
+ 712 0072 1A70     		strb	r2, [r3, #0]
+ 713 0074 37E0     		b	.L40
+ 714              	.L38:
+ 527:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 528:.\Generated_Source\PSoC5/Filter_1.c ****     else if (channel == Filter_1_CHANNEL_B)
+ 715              		.loc 1 528 0
+ 716 0076 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 717 0078 012B     		cmp	r3, #1
+ 718 007a 34D1     		bne	.L40
+ 529:.\Generated_Source\PSoC5/Filter_1.c ****     {
+ 530:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG &= ~(Filter_1_STAGEB_COHER_MASK | Filter_1_HOLDB_COHER_MASK);
+ 719              		.loc 1 530 0
+ 720 007c 4CF2B073 		movw	r3, #:lower16:1073792944
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 23
+
+
+ 721 0080 C4F20003 		movt	r3, #:upper16:1073792944
+ 722 0084 4CF2B072 		movw	r2, #:lower16:1073792944
+ 723 0088 C4F20002 		movt	r2, #:upper16:1073792944
+ 724 008c 1278     		ldrb	r2, [r2, #0]
+ 725 008e D2B2     		uxtb	r2, r2
+ 726 0090 02F03302 		and	r2, r2, #51
+ 727 0094 1A70     		strb	r2, [r3, #0]
+ 531:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG |= byteSelect << 2;
+ 728              		.loc 1 531 0
+ 729 0096 4CF2B073 		movw	r3, #:lower16:1073792944
+ 730 009a C4F20003 		movt	r3, #:upper16:1073792944
+ 731 009e 4CF2B072 		movw	r2, #:lower16:1073792944
+ 732 00a2 C4F20002 		movt	r2, #:upper16:1073792944
+ 733 00a6 1278     		ldrb	r2, [r2, #0]
+ 734 00a8 D2B2     		uxtb	r2, r2
+ 735 00aa 1146     		mov	r1, r2
+ 736 00ac BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 737 00ae 4FEA8202 		lsl	r2, r2, #2
+ 738 00b2 D2B2     		uxtb	r2, r2
+ 739 00b4 41EA0202 		orr	r2, r1, r2
+ 740 00b8 D2B2     		uxtb	r2, r2
+ 741 00ba D2B2     		uxtb	r2, r2
+ 742 00bc 1A70     		strb	r2, [r3, #0]
+ 532:.\Generated_Source\PSoC5/Filter_1.c ****         Filter_1_COHER_REG |= (byteSelect << 6);
+ 743              		.loc 1 532 0
+ 744 00be 4CF2B073 		movw	r3, #:lower16:1073792944
+ 745 00c2 C4F20003 		movt	r3, #:upper16:1073792944
+ 746 00c6 4CF2B072 		movw	r2, #:lower16:1073792944
+ 747 00ca C4F20002 		movt	r2, #:upper16:1073792944
+ 748 00ce 1278     		ldrb	r2, [r2, #0]
+ 749 00d0 D2B2     		uxtb	r2, r2
+ 750 00d2 1146     		mov	r1, r2
+ 751 00d4 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 752 00d6 4FEA8212 		lsl	r2, r2, #6
+ 753 00da D2B2     		uxtb	r2, r2
+ 754 00dc 41EA0202 		orr	r2, r1, r2
+ 755 00e0 D2B2     		uxtb	r2, r2
+ 756 00e2 D2B2     		uxtb	r2, r2
+ 757 00e4 1A70     		strb	r2, [r3, #0]
+ 758              	.L40:
+ 533:.\Generated_Source\PSoC5/Filter_1.c ****     }
+ 534:.\Generated_Source\PSoC5/Filter_1.c **** }
+ 759              		.loc 1 534 0
+ 760 00e6 07F10C07 		add	r7, r7, #12
+ 761 00ea BD46     		mov	sp, r7
+ 762 00ec 80BC     		pop	{r7}
+ 763 00ee 7047     		bx	lr
+ 764              		.cfi_endproc
+ 765              	.LFE10:
+ 766              		.size	Filter_1_SetCoherency, .-Filter_1_SetCoherency
+ 767              		.text
+ 768              	.Letext0:
+ 769              		.section	.debug_loc,"",%progbits
+ 770              	.Ldebug_loc0:
+ 771              	.LLST0:
+ 772 0000 00000000 		.4byte	.LFB0
+ 773 0004 02000000 		.4byte	.LCFI0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 24
+
+
+ 774 0008 0100     		.2byte	0x1
+ 775 000a 5D       		.byte	0x5d
+ 776 000b 02000000 		.4byte	.LCFI0
+ 777 000f 04000000 		.4byte	.LCFI1
+ 778 0013 0200     		.2byte	0x2
+ 779 0015 7D       		.byte	0x7d
+ 780 0016 08       		.sleb128 8
+ 781 0017 04000000 		.4byte	.LCFI1
+ 782 001b 14010000 		.4byte	.LFE0
+ 783 001f 0200     		.2byte	0x2
+ 784 0021 77       		.byte	0x77
+ 785 0022 08       		.sleb128 8
+ 786 0023 00000000 		.4byte	0x0
+ 787 0027 00000000 		.4byte	0x0
+ 788              	.LLST1:
+ 789 002b 00000000 		.4byte	.LFB1
+ 790 002f 02000000 		.4byte	.LCFI2
+ 791 0033 0100     		.2byte	0x1
+ 792 0035 5D       		.byte	0x5d
+ 793 0036 02000000 		.4byte	.LCFI2
+ 794 003a 04000000 		.4byte	.LCFI3
+ 795 003e 0200     		.2byte	0x2
+ 796 0040 7D       		.byte	0x7d
+ 797 0041 04       		.sleb128 4
+ 798 0042 04000000 		.4byte	.LCFI3
+ 799 0046 5E000000 		.4byte	.LFE1
+ 800 004a 0200     		.2byte	0x2
+ 801 004c 77       		.byte	0x77
+ 802 004d 04       		.sleb128 4
+ 803 004e 00000000 		.4byte	0x0
+ 804 0052 00000000 		.4byte	0x0
+ 805              	.LLST2:
+ 806 0056 00000000 		.4byte	.LFB2
+ 807 005a 02000000 		.4byte	.LCFI4
+ 808 005e 0100     		.2byte	0x1
+ 809 0060 5D       		.byte	0x5d
+ 810 0061 02000000 		.4byte	.LCFI4
+ 811 0065 04000000 		.4byte	.LCFI5
+ 812 0069 0200     		.2byte	0x2
+ 813 006b 7D       		.byte	0x7d
+ 814 006c 08       		.sleb128 8
+ 815 006d 04000000 		.4byte	.LCFI5
+ 816 0071 2A000000 		.4byte	.LFE2
+ 817 0075 0200     		.2byte	0x2
+ 818 0077 77       		.byte	0x77
+ 819 0078 08       		.sleb128 8
+ 820 0079 00000000 		.4byte	0x0
+ 821 007d 00000000 		.4byte	0x0
+ 822              	.LLST3:
+ 823 0081 00000000 		.4byte	.LFB3
+ 824 0085 02000000 		.4byte	.LCFI6
+ 825 0089 0100     		.2byte	0x1
+ 826 008b 5D       		.byte	0x5d
+ 827 008c 02000000 		.4byte	.LCFI6
+ 828 0090 04000000 		.4byte	.LCFI7
+ 829 0094 0200     		.2byte	0x2
+ 830 0096 7D       		.byte	0x7d
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 25
+
+
+ 831 0097 04       		.sleb128 4
+ 832 0098 04000000 		.4byte	.LCFI7
+ 833 009c 58000000 		.4byte	.LFE3
+ 834 00a0 0200     		.2byte	0x2
+ 835 00a2 77       		.byte	0x77
+ 836 00a3 04       		.sleb128 4
+ 837 00a4 00000000 		.4byte	0x0
+ 838 00a8 00000000 		.4byte	0x0
+ 839              	.LLST4:
+ 840 00ac 00000000 		.4byte	.LFB4
+ 841 00b0 02000000 		.4byte	.LCFI8
+ 842 00b4 0100     		.2byte	0x1
+ 843 00b6 5D       		.byte	0x5d
+ 844 00b7 02000000 		.4byte	.LCFI8
+ 845 00bb 04000000 		.4byte	.LCFI9
+ 846 00bf 0200     		.2byte	0x2
+ 847 00c1 7D       		.byte	0x7d
+ 848 00c2 04       		.sleb128 4
+ 849 00c3 04000000 		.4byte	.LCFI9
+ 850 00c7 06000000 		.4byte	.LCFI10
+ 851 00cb 0200     		.2byte	0x2
+ 852 00cd 7D       		.byte	0x7d
+ 853 00ce 18       		.sleb128 24
+ 854 00cf 06000000 		.4byte	.LCFI10
+ 855 00d3 46000000 		.4byte	.LFE4
+ 856 00d7 0200     		.2byte	0x2
+ 857 00d9 77       		.byte	0x77
+ 858 00da 18       		.sleb128 24
+ 859 00db 00000000 		.4byte	0x0
+ 860 00df 00000000 		.4byte	0x0
+ 861              	.LLST5:
+ 862 00e3 00000000 		.4byte	.LFB5
+ 863 00e7 02000000 		.4byte	.LCFI11
+ 864 00eb 0100     		.2byte	0x1
+ 865 00ed 5D       		.byte	0x5d
+ 866 00ee 02000000 		.4byte	.LCFI11
+ 867 00f2 04000000 		.4byte	.LCFI12
+ 868 00f6 0200     		.2byte	0x2
+ 869 00f8 7D       		.byte	0x7d
+ 870 00f9 04       		.sleb128 4
+ 871 00fa 04000000 		.4byte	.LCFI12
+ 872 00fe 06000000 		.4byte	.LCFI13
+ 873 0102 0200     		.2byte	0x2
+ 874 0104 7D       		.byte	0x7d
+ 875 0105 18       		.sleb128 24
+ 876 0106 06000000 		.4byte	.LCFI13
+ 877 010a 46000000 		.4byte	.LFE5
+ 878 010e 0200     		.2byte	0x2
+ 879 0110 77       		.byte	0x77
+ 880 0111 18       		.sleb128 24
+ 881 0112 00000000 		.4byte	0x0
+ 882 0116 00000000 		.4byte	0x0
+ 883              	.LLST6:
+ 884 011a 00000000 		.4byte	.LFB6
+ 885 011e 02000000 		.4byte	.LCFI14
+ 886 0122 0100     		.2byte	0x1
+ 887 0124 5D       		.byte	0x5d
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 26
+
+
+ 888 0125 02000000 		.4byte	.LCFI14
+ 889 0129 04000000 		.4byte	.LCFI15
+ 890 012d 0200     		.2byte	0x2
+ 891 012f 7D       		.byte	0x7d
+ 892 0130 04       		.sleb128 4
+ 893 0131 04000000 		.4byte	.LCFI15
+ 894 0135 06000000 		.4byte	.LCFI16
+ 895 0139 0200     		.2byte	0x2
+ 896 013b 7D       		.byte	0x7d
+ 897 013c 18       		.sleb128 24
+ 898 013d 06000000 		.4byte	.LCFI16
+ 899 0141 46000000 		.4byte	.LFE6
+ 900 0145 0200     		.2byte	0x2
+ 901 0147 77       		.byte	0x77
+ 902 0148 18       		.sleb128 24
+ 903 0149 00000000 		.4byte	0x0
+ 904 014d 00000000 		.4byte	0x0
+ 905              	.LLST7:
+ 906 0151 00000000 		.4byte	.LFB7
+ 907 0155 02000000 		.4byte	.LCFI17
+ 908 0159 0100     		.2byte	0x1
+ 909 015b 5D       		.byte	0x5d
+ 910 015c 02000000 		.4byte	.LCFI17
+ 911 0160 04000000 		.4byte	.LCFI18
+ 912 0164 0200     		.2byte	0x2
+ 913 0166 7D       		.byte	0x7d
+ 914 0167 04       		.sleb128 4
+ 915 0168 04000000 		.4byte	.LCFI18
+ 916 016c 06000000 		.4byte	.LCFI19
+ 917 0170 0200     		.2byte	0x2
+ 918 0172 7D       		.byte	0x7d
+ 919 0173 10       		.sleb128 16
+ 920 0174 06000000 		.4byte	.LCFI19
+ 921 0178 3E000000 		.4byte	.LFE7
+ 922 017c 0200     		.2byte	0x2
+ 923 017e 77       		.byte	0x77
+ 924 017f 10       		.sleb128 16
+ 925 0180 00000000 		.4byte	0x0
+ 926 0184 00000000 		.4byte	0x0
+ 927              	.LLST8:
+ 928 0188 00000000 		.4byte	.LFB8
+ 929 018c 02000000 		.4byte	.LCFI20
+ 930 0190 0100     		.2byte	0x1
+ 931 0192 5D       		.byte	0x5d
+ 932 0193 02000000 		.4byte	.LCFI20
+ 933 0197 04000000 		.4byte	.LCFI21
+ 934 019b 0200     		.2byte	0x2
+ 935 019d 7D       		.byte	0x7d
+ 936 019e 04       		.sleb128 4
+ 937 019f 04000000 		.4byte	.LCFI21
+ 938 01a3 06000000 		.4byte	.LCFI22
+ 939 01a7 0200     		.2byte	0x2
+ 940 01a9 7D       		.byte	0x7d
+ 941 01aa 10       		.sleb128 16
+ 942 01ab 06000000 		.4byte	.LCFI22
+ 943 01af 3E000000 		.4byte	.LFE8
+ 944 01b3 0200     		.2byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 27
+
+
+ 945 01b5 77       		.byte	0x77
+ 946 01b6 10       		.sleb128 16
+ 947 01b7 00000000 		.4byte	0x0
+ 948 01bb 00000000 		.4byte	0x0
+ 949              	.LLST9:
+ 950 01bf 00000000 		.4byte	.LFB9
+ 951 01c3 02000000 		.4byte	.LCFI23
+ 952 01c7 0100     		.2byte	0x1
+ 953 01c9 5D       		.byte	0x5d
+ 954 01ca 02000000 		.4byte	.LCFI23
+ 955 01ce 04000000 		.4byte	.LCFI24
+ 956 01d2 0200     		.2byte	0x2
+ 957 01d4 7D       		.byte	0x7d
+ 958 01d5 04       		.sleb128 4
+ 959 01d6 04000000 		.4byte	.LCFI24
+ 960 01da 06000000 		.4byte	.LCFI25
+ 961 01de 0200     		.2byte	0x2
+ 962 01e0 7D       		.byte	0x7d
+ 963 01e1 10       		.sleb128 16
+ 964 01e2 06000000 		.4byte	.LCFI25
+ 965 01e6 3C000000 		.4byte	.LFE9
+ 966 01ea 0200     		.2byte	0x2
+ 967 01ec 77       		.byte	0x77
+ 968 01ed 10       		.sleb128 16
+ 969 01ee 00000000 		.4byte	0x0
+ 970 01f2 00000000 		.4byte	0x0
+ 971              	.LLST10:
+ 972 01f6 00000000 		.4byte	.LFB10
+ 973 01fa 02000000 		.4byte	.LCFI26
+ 974 01fe 0100     		.2byte	0x1
+ 975 0200 5D       		.byte	0x5d
+ 976 0201 02000000 		.4byte	.LCFI26
+ 977 0205 04000000 		.4byte	.LCFI27
+ 978 0209 0200     		.2byte	0x2
+ 979 020b 7D       		.byte	0x7d
+ 980 020c 04       		.sleb128 4
+ 981 020d 04000000 		.4byte	.LCFI27
+ 982 0211 06000000 		.4byte	.LCFI28
+ 983 0215 0200     		.2byte	0x2
+ 984 0217 7D       		.byte	0x7d
+ 985 0218 10       		.sleb128 16
+ 986 0219 06000000 		.4byte	.LCFI28
+ 987 021d F0000000 		.4byte	.LFE10
+ 988 0221 0200     		.2byte	0x2
+ 989 0223 77       		.byte	0x77
+ 990 0224 10       		.sleb128 16
+ 991 0225 00000000 		.4byte	0x0
+ 992 0229 00000000 		.4byte	0x0
+ 993              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 994              		.file 3 ".\\Generated_Source\\PSoC5\\/Filter_1_PVT.h"
+ 995              		.section	.debug_info
+ 996 0000 08030000 		.4byte	0x308
+ 997 0004 0200     		.2byte	0x2
+ 998 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 999 000a 04       		.byte	0x4
+ 1000 000b 01       		.uleb128 0x1
+ 1001 000c 9E010000 		.4byte	.LASF36
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 28
+
+
+ 1002 0010 01       		.byte	0x1
+ 1003 0011 E2000000 		.4byte	.LASF37
+ 1004 0015 E5010000 		.4byte	.LASF38
+ 1005 0019 00000000 		.4byte	0x0
+ 1006 001d 00000000 		.4byte	0x0
+ 1007 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 1008 0025 00000000 		.4byte	.Ldebug_line0
+ 1009 0029 02       		.uleb128 0x2
+ 1010 002a 01       		.byte	0x1
+ 1011 002b 06       		.byte	0x6
+ 1012 002c 61020000 		.4byte	.LASF0
+ 1013 0030 02       		.uleb128 0x2
+ 1014 0031 01       		.byte	0x1
+ 1015 0032 08       		.byte	0x8
+ 1016 0033 D4000000 		.4byte	.LASF1
+ 1017 0037 02       		.uleb128 0x2
+ 1018 0038 02       		.byte	0x2
+ 1019 0039 05       		.byte	0x5
+ 1020 003a DB010000 		.4byte	.LASF2
+ 1021 003e 02       		.uleb128 0x2
+ 1022 003f 02       		.byte	0x2
+ 1023 0040 07       		.byte	0x7
+ 1024 0041 42000000 		.4byte	.LASF3
+ 1025 0045 03       		.uleb128 0x3
+ 1026 0046 04       		.byte	0x4
+ 1027 0047 05       		.byte	0x5
+ 1028 0048 696E7400 		.ascii	"int\000"
+ 1029 004c 02       		.uleb128 0x2
+ 1030 004d 04       		.byte	0x4
+ 1031 004e 07       		.byte	0x7
+ 1032 004f 43010000 		.4byte	.LASF4
+ 1033 0053 02       		.uleb128 0x2
+ 1034 0054 08       		.byte	0x8
+ 1035 0055 05       		.byte	0x5
+ 1036 0056 00000000 		.4byte	.LASF5
+ 1037 005a 02       		.uleb128 0x2
+ 1038 005b 08       		.byte	0x8
+ 1039 005c 07       		.byte	0x7
+ 1040 005d 60010000 		.4byte	.LASF6
+ 1041 0061 02       		.uleb128 0x2
+ 1042 0062 04       		.byte	0x4
+ 1043 0063 05       		.byte	0x5
+ 1044 0064 39000000 		.4byte	.LASF7
+ 1045 0068 04       		.uleb128 0x4
+ 1046 0069 04       		.byte	0x4
+ 1047 006a 07       		.byte	0x7
+ 1048 006b 02       		.uleb128 0x2
+ 1049 006c 04       		.byte	0x4
+ 1050 006d 07       		.byte	0x7
+ 1051 006e 06010000 		.4byte	.LASF8
+ 1052 0072 02       		.uleb128 0x2
+ 1053 0073 01       		.byte	0x1
+ 1054 0074 08       		.byte	0x8
+ 1055 0075 B8010000 		.4byte	.LASF9
+ 1056 0079 05       		.uleb128 0x5
+ 1057 007a 18010000 		.4byte	.LASF10
+ 1058 007e 02       		.byte	0x2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 29
+
+
+ 1059 007f 4C       		.byte	0x4c
+ 1060 0080 30000000 		.4byte	0x30
+ 1061 0084 05       		.uleb128 0x5
+ 1062 0085 25010000 		.4byte	.LASF11
+ 1063 0089 02       		.byte	0x2
+ 1064 008a 4D       		.byte	0x4d
+ 1065 008b 3E000000 		.4byte	0x3e
+ 1066 008f 05       		.uleb128 0x5
+ 1067 0090 3C010000 		.4byte	.LASF12
+ 1068 0094 02       		.byte	0x2
+ 1069 0095 4E       		.byte	0x4e
+ 1070 0096 6B000000 		.4byte	0x6b
+ 1071 009a 02       		.uleb128 0x2
+ 1072 009b 04       		.byte	0x4
+ 1073 009c 04       		.byte	0x4
+ 1074 009d BE000000 		.4byte	.LASF13
+ 1075 00a1 02       		.uleb128 0x2
+ 1076 00a2 08       		.byte	0x8
+ 1077 00a3 04       		.byte	0x4
+ 1078 00a4 1E010000 		.4byte	.LASF14
+ 1079 00a8 06       		.uleb128 0x6
+ 1080 00a9 01       		.byte	0x1
+ 1081 00aa BD010000 		.4byte	.LASF15
+ 1082 00ae 01       		.byte	0x1
+ 1083 00af 2B       		.byte	0x2b
+ 1084 00b0 01       		.byte	0x1
+ 1085 00b1 00000000 		.4byte	.LFB0
+ 1086 00b5 14010000 		.4byte	.LFE0
+ 1087 00b9 00000000 		.4byte	.LLST0
+ 1088 00bd 06       		.uleb128 0x6
+ 1089 00be 01       		.byte	0x1
+ 1090 00bf 2C010000 		.4byte	.LASF16
+ 1091 00c3 01       		.byte	0x1
+ 1092 00c4 66       		.byte	0x66
+ 1093 00c5 01       		.byte	0x1
+ 1094 00c6 00000000 		.4byte	.LFB1
+ 1095 00ca 5E000000 		.4byte	.LFE1
+ 1096 00ce 2B000000 		.4byte	.LLST1
+ 1097 00d2 06       		.uleb128 0x6
+ 1098 00d3 01       		.byte	0x1
+ 1099 00d4 0E000000 		.4byte	.LASF17
+ 1100 00d8 01       		.byte	0x1
+ 1101 00d9 89       		.byte	0x89
+ 1102 00da 01       		.byte	0x1
+ 1103 00db 00000000 		.4byte	.LFB2
+ 1104 00df 2A000000 		.4byte	.LFE2
+ 1105 00e3 56000000 		.4byte	.LLST2
+ 1106 00e7 06       		.uleb128 0x6
+ 1107 00e8 01       		.byte	0x1
+ 1108 00e9 25000000 		.4byte	.LASF18
+ 1109 00ed 01       		.byte	0x1
+ 1110 00ee A6       		.byte	0xa6
+ 1111 00ef 01       		.byte	0x1
+ 1112 00f0 00000000 		.4byte	.LFB3
+ 1113 00f4 58000000 		.4byte	.LFE3
+ 1114 00f8 81000000 		.4byte	.LLST3
+ 1115 00fc 07       		.uleb128 0x7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 30
+
+
+ 1116 00fd 01       		.byte	0x1
+ 1117 00fe 8F010000 		.4byte	.LASF19
+ 1118 0102 01       		.byte	0x1
+ 1119 0103 C1       		.byte	0xc1
+ 1120 0104 01       		.byte	0x1
+ 1121 0105 79000000 		.4byte	0x79
+ 1122 0109 00000000 		.4byte	.LFB4
+ 1123 010d 46000000 		.4byte	.LFE4
+ 1124 0111 AC000000 		.4byte	.LLST4
+ 1125 0115 36010000 		.4byte	0x136
+ 1126 0119 08       		.uleb128 0x8
+ 1127 011a 1D000000 		.4byte	.LASF21
+ 1128 011e 01       		.byte	0x1
+ 1129 011f C1       		.byte	0xc1
+ 1130 0120 79000000 		.4byte	0x79
+ 1131 0124 02       		.byte	0x2
+ 1132 0125 91       		.byte	0x91
+ 1133 0126 6F       		.sleb128 -17
+ 1134 0127 09       		.uleb128 0x9
+ 1135 0128 33000000 		.4byte	.LASF22
+ 1136 012c 01       		.byte	0x1
+ 1137 012d C3       		.byte	0xc3
+ 1138 012e 79000000 		.4byte	0x79
+ 1139 0132 02       		.byte	0x2
+ 1140 0133 91       		.byte	0x91
+ 1141 0134 77       		.sleb128 -9
+ 1142 0135 00       		.byte	0x0
+ 1143 0136 0A       		.uleb128 0xa
+ 1144 0137 01       		.byte	0x1
+ 1145 0138 CB010000 		.4byte	.LASF20
+ 1146 013c 01       		.byte	0x1
+ 1147 013d 0101     		.2byte	0x101
+ 1148 013f 01       		.byte	0x1
+ 1149 0140 84000000 		.4byte	0x84
+ 1150 0144 00000000 		.4byte	.LFB5
+ 1151 0148 46000000 		.4byte	.LFE5
+ 1152 014c E3000000 		.4byte	.LLST5
+ 1153 0150 73010000 		.4byte	0x173
+ 1154 0154 0B       		.uleb128 0xb
+ 1155 0155 1D000000 		.4byte	.LASF21
+ 1156 0159 01       		.byte	0x1
+ 1157 015a 0101     		.2byte	0x101
+ 1158 015c 79000000 		.4byte	0x79
+ 1159 0160 02       		.byte	0x2
+ 1160 0161 91       		.byte	0x91
+ 1161 0162 6F       		.sleb128 -17
+ 1162 0163 0C       		.uleb128 0xc
+ 1163 0164 76616C00 		.ascii	"val\000"
+ 1164 0168 01       		.byte	0x1
+ 1165 0169 0301     		.2byte	0x103
+ 1166 016b 84000000 		.4byte	0x84
+ 1167 016f 02       		.byte	0x2
+ 1168 0170 91       		.byte	0x91
+ 1169 0171 76       		.sleb128 -10
+ 1170 0172 00       		.byte	0x0
+ 1171 0173 0A       		.uleb128 0xa
+ 1172 0174 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 31
+
+
+ 1173 0175 C4000000 		.4byte	.LASF23
+ 1174 0179 01       		.byte	0x1
+ 1175 017a 4D01     		.2byte	0x14d
+ 1176 017c 01       		.byte	0x1
+ 1177 017d 8F000000 		.4byte	0x8f
+ 1178 0181 00000000 		.4byte	.LFB6
+ 1179 0185 46000000 		.4byte	.LFE6
+ 1180 0189 1A010000 		.4byte	.LLST6
+ 1181 018d B0010000 		.4byte	0x1b0
+ 1182 0191 0B       		.uleb128 0xb
+ 1183 0192 1D000000 		.4byte	.LASF21
+ 1184 0196 01       		.byte	0x1
+ 1185 0197 4D01     		.2byte	0x14d
+ 1186 0199 79000000 		.4byte	0x79
+ 1187 019d 02       		.byte	0x2
+ 1188 019e 91       		.byte	0x91
+ 1189 019f 6F       		.sleb128 -17
+ 1190 01a0 0C       		.uleb128 0xc
+ 1191 01a1 76616C00 		.ascii	"val\000"
+ 1192 01a5 01       		.byte	0x1
+ 1193 01a6 4F01     		.2byte	0x14f
+ 1194 01a8 8F000000 		.4byte	0x8f
+ 1195 01ac 02       		.byte	0x2
+ 1196 01ad 91       		.byte	0x91
+ 1197 01ae 74       		.sleb128 -12
+ 1198 01af 00       		.byte	0x0
+ 1199 01b0 0D       		.uleb128 0xd
+ 1200 01b1 01       		.byte	0x1
+ 1201 01b2 50010000 		.4byte	.LASF25
+ 1202 01b6 01       		.byte	0x1
+ 1203 01b7 7701     		.2byte	0x177
+ 1204 01b9 01       		.byte	0x1
+ 1205 01ba 00000000 		.4byte	.LFB7
+ 1206 01be 3E000000 		.4byte	.LFE7
+ 1207 01c2 51010000 		.4byte	.LLST7
+ 1208 01c6 E9010000 		.4byte	0x1e9
+ 1209 01ca 0B       		.uleb128 0xb
+ 1210 01cb 1D000000 		.4byte	.LASF21
+ 1211 01cf 01       		.byte	0x1
+ 1212 01d0 7701     		.2byte	0x177
+ 1213 01d2 79000000 		.4byte	0x79
+ 1214 01d6 02       		.byte	0x2
+ 1215 01d7 91       		.byte	0x91
+ 1216 01d8 77       		.sleb128 -9
+ 1217 01d9 0B       		.uleb128 0xb
+ 1218 01da 5A020000 		.4byte	.LASF24
+ 1219 01de 01       		.byte	0x1
+ 1220 01df 7701     		.2byte	0x177
+ 1221 01e1 79000000 		.4byte	0x79
+ 1222 01e5 02       		.byte	0x2
+ 1223 01e6 91       		.byte	0x91
+ 1224 01e7 76       		.sleb128 -10
+ 1225 01e8 00       		.byte	0x0
+ 1226 01e9 0D       		.uleb128 0xd
+ 1227 01ea 01       		.byte	0x1
+ 1228 01eb 8B000000 		.4byte	.LASF26
+ 1229 01ef 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 32
+
+
+ 1230 01f0 AE01     		.2byte	0x1ae
+ 1231 01f2 01       		.byte	0x1
+ 1232 01f3 00000000 		.4byte	.LFB8
+ 1233 01f7 3E000000 		.4byte	.LFE8
+ 1234 01fb 88010000 		.4byte	.LLST8
+ 1235 01ff 22020000 		.4byte	0x222
+ 1236 0203 0B       		.uleb128 0xb
+ 1237 0204 1D000000 		.4byte	.LASF21
+ 1238 0208 01       		.byte	0x1
+ 1239 0209 AE01     		.2byte	0x1ae
+ 1240 020b 79000000 		.4byte	0x79
+ 1241 020f 02       		.byte	0x2
+ 1242 0210 91       		.byte	0x91
+ 1243 0211 77       		.sleb128 -9
+ 1244 0212 0B       		.uleb128 0xb
+ 1245 0213 5A020000 		.4byte	.LASF24
+ 1246 0217 01       		.byte	0x1
+ 1247 0218 AE01     		.2byte	0x1ae
+ 1248 021a 84000000 		.4byte	0x84
+ 1249 021e 02       		.byte	0x2
+ 1250 021f 91       		.byte	0x91
+ 1251 0220 74       		.sleb128 -12
+ 1252 0221 00       		.byte	0x0
+ 1253 0222 0D       		.uleb128 0xd
+ 1254 0223 01       		.byte	0x1
+ 1255 0224 6D020000 		.4byte	.LASF27
+ 1256 0228 01       		.byte	0x1
+ 1257 0229 E901     		.2byte	0x1e9
+ 1258 022b 01       		.byte	0x1
+ 1259 022c 00000000 		.4byte	.LFB9
+ 1260 0230 3C000000 		.4byte	.LFE9
+ 1261 0234 BF010000 		.4byte	.LLST9
+ 1262 0238 5B020000 		.4byte	0x25b
+ 1263 023c 0B       		.uleb128 0xb
+ 1264 023d 1D000000 		.4byte	.LASF21
+ 1265 0241 01       		.byte	0x1
+ 1266 0242 E901     		.2byte	0x1e9
+ 1267 0244 79000000 		.4byte	0x79
+ 1268 0248 02       		.byte	0x2
+ 1269 0249 91       		.byte	0x91
+ 1270 024a 77       		.sleb128 -9
+ 1271 024b 0B       		.uleb128 0xb
+ 1272 024c 5A020000 		.4byte	.LASF24
+ 1273 0250 01       		.byte	0x1
+ 1274 0251 E901     		.2byte	0x1e9
+ 1275 0253 8F000000 		.4byte	0x8f
+ 1276 0257 02       		.byte	0x2
+ 1277 0258 91       		.byte	0x91
+ 1278 0259 70       		.sleb128 -16
+ 1279 025a 00       		.byte	0x0
+ 1280 025b 0D       		.uleb128 0xd
+ 1281 025c 01       		.byte	0x1
+ 1282 025d 75000000 		.4byte	.LASF28
+ 1283 0261 01       		.byte	0x1
+ 1284 0262 0802     		.2byte	0x208
+ 1285 0264 01       		.byte	0x1
+ 1286 0265 00000000 		.4byte	.LFB10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 33
+
+
+ 1287 0269 F0000000 		.4byte	.LFE10
+ 1288 026d F6010000 		.4byte	.LLST10
+ 1289 0271 94020000 		.4byte	0x294
+ 1290 0275 0B       		.uleb128 0xb
+ 1291 0276 1D000000 		.4byte	.LASF21
+ 1292 027a 01       		.byte	0x1
+ 1293 027b 0802     		.2byte	0x208
+ 1294 027d 79000000 		.4byte	0x79
+ 1295 0281 02       		.byte	0x2
+ 1296 0282 91       		.byte	0x91
+ 1297 0283 77       		.sleb128 -9
+ 1298 0284 0B       		.uleb128 0xb
+ 1299 0285 77010000 		.4byte	.LASF29
+ 1300 0289 01       		.byte	0x1
+ 1301 028a 0802     		.2byte	0x208
+ 1302 028c 79000000 		.4byte	0x79
+ 1303 0290 02       		.byte	0x2
+ 1304 0291 91       		.byte	0x91
+ 1305 0292 76       		.sleb128 -10
+ 1306 0293 00       		.byte	0x0
+ 1307 0294 0E       		.uleb128 0xe
+ 1308 0295 79000000 		.4byte	0x79
+ 1309 0299 9F020000 		.4byte	0x29f
+ 1310 029d 0F       		.uleb128 0xf
+ 1311 029e 00       		.byte	0x0
+ 1312 029f 10       		.uleb128 0x10
+ 1313 02a0 AD000000 		.4byte	.LASF30
+ 1314 02a4 03       		.byte	0x3
+ 1315 02a5 24       		.byte	0x24
+ 1316 02a6 AC020000 		.4byte	0x2ac
+ 1317 02aa 01       		.byte	0x1
+ 1318 02ab 01       		.byte	0x1
+ 1319 02ac 11       		.uleb128 0x11
+ 1320 02ad 94020000 		.4byte	0x294
+ 1321 02b1 10       		.uleb128 0x10
+ 1322 02b2 55000000 		.4byte	.LASF31
+ 1323 02b6 03       		.byte	0x3
+ 1324 02b7 25       		.byte	0x25
+ 1325 02b8 BE020000 		.4byte	0x2be
+ 1326 02bc 01       		.byte	0x1
+ 1327 02bd 01       		.byte	0x1
+ 1328 02be 11       		.uleb128 0x11
+ 1329 02bf 94020000 		.4byte	0x294
+ 1330 02c3 10       		.uleb128 0x10
+ 1331 02c4 65000000 		.4byte	.LASF32
+ 1332 02c8 03       		.byte	0x3
+ 1333 02c9 26       		.byte	0x26
+ 1334 02ca D0020000 		.4byte	0x2d0
+ 1335 02ce 01       		.byte	0x1
+ 1336 02cf 01       		.byte	0x1
+ 1337 02d0 11       		.uleb128 0x11
+ 1338 02d1 94020000 		.4byte	0x294
+ 1339 02d5 10       		.uleb128 0x10
+ 1340 02d6 AA010000 		.4byte	.LASF33
+ 1341 02da 03       		.byte	0x3
+ 1342 02db 27       		.byte	0x27
+ 1343 02dc E2020000 		.4byte	0x2e2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 34
+
+
+ 1344 02e0 01       		.byte	0x1
+ 1345 02e1 01       		.byte	0x1
+ 1346 02e2 11       		.uleb128 0x11
+ 1347 02e3 94020000 		.4byte	0x294
+ 1348 02e7 10       		.uleb128 0x10
+ 1349 02e8 82010000 		.4byte	.LASF34
+ 1350 02ec 03       		.byte	0x3
+ 1351 02ed 28       		.byte	0x28
+ 1352 02ee F4020000 		.4byte	0x2f4
+ 1353 02f2 01       		.byte	0x1
+ 1354 02f3 01       		.byte	0x1
+ 1355 02f4 11       		.uleb128 0x11
+ 1356 02f5 94020000 		.4byte	0x294
+ 1357 02f9 12       		.uleb128 0x12
+ 1358 02fa 9C000000 		.4byte	.LASF35
+ 1359 02fe 01       		.byte	0x1
+ 1360 02ff 18       		.byte	0x18
+ 1361 0300 79000000 		.4byte	0x79
+ 1362 0304 01       		.byte	0x1
+ 1363 0305 05       		.byte	0x5
+ 1364 0306 03       		.byte	0x3
+ 1365 0307 00000000 		.4byte	Filter_1_initVar
+ 1366 030b 00       		.byte	0x0
+ 1367              		.section	.debug_abbrev
+ 1368 0000 01       		.uleb128 0x1
+ 1369 0001 11       		.uleb128 0x11
+ 1370 0002 01       		.byte	0x1
+ 1371 0003 25       		.uleb128 0x25
+ 1372 0004 0E       		.uleb128 0xe
+ 1373 0005 13       		.uleb128 0x13
+ 1374 0006 0B       		.uleb128 0xb
+ 1375 0007 03       		.uleb128 0x3
+ 1376 0008 0E       		.uleb128 0xe
+ 1377 0009 1B       		.uleb128 0x1b
+ 1378 000a 0E       		.uleb128 0xe
+ 1379 000b 11       		.uleb128 0x11
+ 1380 000c 01       		.uleb128 0x1
+ 1381 000d 52       		.uleb128 0x52
+ 1382 000e 01       		.uleb128 0x1
+ 1383 000f 55       		.uleb128 0x55
+ 1384 0010 06       		.uleb128 0x6
+ 1385 0011 10       		.uleb128 0x10
+ 1386 0012 06       		.uleb128 0x6
+ 1387 0013 00       		.byte	0x0
+ 1388 0014 00       		.byte	0x0
+ 1389 0015 02       		.uleb128 0x2
+ 1390 0016 24       		.uleb128 0x24
+ 1391 0017 00       		.byte	0x0
+ 1392 0018 0B       		.uleb128 0xb
+ 1393 0019 0B       		.uleb128 0xb
+ 1394 001a 3E       		.uleb128 0x3e
+ 1395 001b 0B       		.uleb128 0xb
+ 1396 001c 03       		.uleb128 0x3
+ 1397 001d 0E       		.uleb128 0xe
+ 1398 001e 00       		.byte	0x0
+ 1399 001f 00       		.byte	0x0
+ 1400 0020 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 35
+
+
+ 1401 0021 24       		.uleb128 0x24
+ 1402 0022 00       		.byte	0x0
+ 1403 0023 0B       		.uleb128 0xb
+ 1404 0024 0B       		.uleb128 0xb
+ 1405 0025 3E       		.uleb128 0x3e
+ 1406 0026 0B       		.uleb128 0xb
+ 1407 0027 03       		.uleb128 0x3
+ 1408 0028 08       		.uleb128 0x8
+ 1409 0029 00       		.byte	0x0
+ 1410 002a 00       		.byte	0x0
+ 1411 002b 04       		.uleb128 0x4
+ 1412 002c 24       		.uleb128 0x24
+ 1413 002d 00       		.byte	0x0
+ 1414 002e 0B       		.uleb128 0xb
+ 1415 002f 0B       		.uleb128 0xb
+ 1416 0030 3E       		.uleb128 0x3e
+ 1417 0031 0B       		.uleb128 0xb
+ 1418 0032 00       		.byte	0x0
+ 1419 0033 00       		.byte	0x0
+ 1420 0034 05       		.uleb128 0x5
+ 1421 0035 16       		.uleb128 0x16
+ 1422 0036 00       		.byte	0x0
+ 1423 0037 03       		.uleb128 0x3
+ 1424 0038 0E       		.uleb128 0xe
+ 1425 0039 3A       		.uleb128 0x3a
+ 1426 003a 0B       		.uleb128 0xb
+ 1427 003b 3B       		.uleb128 0x3b
+ 1428 003c 0B       		.uleb128 0xb
+ 1429 003d 49       		.uleb128 0x49
+ 1430 003e 13       		.uleb128 0x13
+ 1431 003f 00       		.byte	0x0
+ 1432 0040 00       		.byte	0x0
+ 1433 0041 06       		.uleb128 0x6
+ 1434 0042 2E       		.uleb128 0x2e
+ 1435 0043 00       		.byte	0x0
+ 1436 0044 3F       		.uleb128 0x3f
+ 1437 0045 0C       		.uleb128 0xc
+ 1438 0046 03       		.uleb128 0x3
+ 1439 0047 0E       		.uleb128 0xe
+ 1440 0048 3A       		.uleb128 0x3a
+ 1441 0049 0B       		.uleb128 0xb
+ 1442 004a 3B       		.uleb128 0x3b
+ 1443 004b 0B       		.uleb128 0xb
+ 1444 004c 27       		.uleb128 0x27
+ 1445 004d 0C       		.uleb128 0xc
+ 1446 004e 11       		.uleb128 0x11
+ 1447 004f 01       		.uleb128 0x1
+ 1448 0050 12       		.uleb128 0x12
+ 1449 0051 01       		.uleb128 0x1
+ 1450 0052 40       		.uleb128 0x40
+ 1451 0053 06       		.uleb128 0x6
+ 1452 0054 00       		.byte	0x0
+ 1453 0055 00       		.byte	0x0
+ 1454 0056 07       		.uleb128 0x7
+ 1455 0057 2E       		.uleb128 0x2e
+ 1456 0058 01       		.byte	0x1
+ 1457 0059 3F       		.uleb128 0x3f
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 36
+
+
+ 1458 005a 0C       		.uleb128 0xc
+ 1459 005b 03       		.uleb128 0x3
+ 1460 005c 0E       		.uleb128 0xe
+ 1461 005d 3A       		.uleb128 0x3a
+ 1462 005e 0B       		.uleb128 0xb
+ 1463 005f 3B       		.uleb128 0x3b
+ 1464 0060 0B       		.uleb128 0xb
+ 1465 0061 27       		.uleb128 0x27
+ 1466 0062 0C       		.uleb128 0xc
+ 1467 0063 49       		.uleb128 0x49
+ 1468 0064 13       		.uleb128 0x13
+ 1469 0065 11       		.uleb128 0x11
+ 1470 0066 01       		.uleb128 0x1
+ 1471 0067 12       		.uleb128 0x12
+ 1472 0068 01       		.uleb128 0x1
+ 1473 0069 40       		.uleb128 0x40
+ 1474 006a 06       		.uleb128 0x6
+ 1475 006b 01       		.uleb128 0x1
+ 1476 006c 13       		.uleb128 0x13
+ 1477 006d 00       		.byte	0x0
+ 1478 006e 00       		.byte	0x0
+ 1479 006f 08       		.uleb128 0x8
+ 1480 0070 05       		.uleb128 0x5
+ 1481 0071 00       		.byte	0x0
+ 1482 0072 03       		.uleb128 0x3
+ 1483 0073 0E       		.uleb128 0xe
+ 1484 0074 3A       		.uleb128 0x3a
+ 1485 0075 0B       		.uleb128 0xb
+ 1486 0076 3B       		.uleb128 0x3b
+ 1487 0077 0B       		.uleb128 0xb
+ 1488 0078 49       		.uleb128 0x49
+ 1489 0079 13       		.uleb128 0x13
+ 1490 007a 02       		.uleb128 0x2
+ 1491 007b 0A       		.uleb128 0xa
+ 1492 007c 00       		.byte	0x0
+ 1493 007d 00       		.byte	0x0
+ 1494 007e 09       		.uleb128 0x9
+ 1495 007f 34       		.uleb128 0x34
+ 1496 0080 00       		.byte	0x0
+ 1497 0081 03       		.uleb128 0x3
+ 1498 0082 0E       		.uleb128 0xe
+ 1499 0083 3A       		.uleb128 0x3a
+ 1500 0084 0B       		.uleb128 0xb
+ 1501 0085 3B       		.uleb128 0x3b
+ 1502 0086 0B       		.uleb128 0xb
+ 1503 0087 49       		.uleb128 0x49
+ 1504 0088 13       		.uleb128 0x13
+ 1505 0089 02       		.uleb128 0x2
+ 1506 008a 0A       		.uleb128 0xa
+ 1507 008b 00       		.byte	0x0
+ 1508 008c 00       		.byte	0x0
+ 1509 008d 0A       		.uleb128 0xa
+ 1510 008e 2E       		.uleb128 0x2e
+ 1511 008f 01       		.byte	0x1
+ 1512 0090 3F       		.uleb128 0x3f
+ 1513 0091 0C       		.uleb128 0xc
+ 1514 0092 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 37
+
+
+ 1515 0093 0E       		.uleb128 0xe
+ 1516 0094 3A       		.uleb128 0x3a
+ 1517 0095 0B       		.uleb128 0xb
+ 1518 0096 3B       		.uleb128 0x3b
+ 1519 0097 05       		.uleb128 0x5
+ 1520 0098 27       		.uleb128 0x27
+ 1521 0099 0C       		.uleb128 0xc
+ 1522 009a 49       		.uleb128 0x49
+ 1523 009b 13       		.uleb128 0x13
+ 1524 009c 11       		.uleb128 0x11
+ 1525 009d 01       		.uleb128 0x1
+ 1526 009e 12       		.uleb128 0x12
+ 1527 009f 01       		.uleb128 0x1
+ 1528 00a0 40       		.uleb128 0x40
+ 1529 00a1 06       		.uleb128 0x6
+ 1530 00a2 01       		.uleb128 0x1
+ 1531 00a3 13       		.uleb128 0x13
+ 1532 00a4 00       		.byte	0x0
+ 1533 00a5 00       		.byte	0x0
+ 1534 00a6 0B       		.uleb128 0xb
+ 1535 00a7 05       		.uleb128 0x5
+ 1536 00a8 00       		.byte	0x0
+ 1537 00a9 03       		.uleb128 0x3
+ 1538 00aa 0E       		.uleb128 0xe
+ 1539 00ab 3A       		.uleb128 0x3a
+ 1540 00ac 0B       		.uleb128 0xb
+ 1541 00ad 3B       		.uleb128 0x3b
+ 1542 00ae 05       		.uleb128 0x5
+ 1543 00af 49       		.uleb128 0x49
+ 1544 00b0 13       		.uleb128 0x13
+ 1545 00b1 02       		.uleb128 0x2
+ 1546 00b2 0A       		.uleb128 0xa
+ 1547 00b3 00       		.byte	0x0
+ 1548 00b4 00       		.byte	0x0
+ 1549 00b5 0C       		.uleb128 0xc
+ 1550 00b6 34       		.uleb128 0x34
+ 1551 00b7 00       		.byte	0x0
+ 1552 00b8 03       		.uleb128 0x3
+ 1553 00b9 08       		.uleb128 0x8
+ 1554 00ba 3A       		.uleb128 0x3a
+ 1555 00bb 0B       		.uleb128 0xb
+ 1556 00bc 3B       		.uleb128 0x3b
+ 1557 00bd 05       		.uleb128 0x5
+ 1558 00be 49       		.uleb128 0x49
+ 1559 00bf 13       		.uleb128 0x13
+ 1560 00c0 02       		.uleb128 0x2
+ 1561 00c1 0A       		.uleb128 0xa
+ 1562 00c2 00       		.byte	0x0
+ 1563 00c3 00       		.byte	0x0
+ 1564 00c4 0D       		.uleb128 0xd
+ 1565 00c5 2E       		.uleb128 0x2e
+ 1566 00c6 01       		.byte	0x1
+ 1567 00c7 3F       		.uleb128 0x3f
+ 1568 00c8 0C       		.uleb128 0xc
+ 1569 00c9 03       		.uleb128 0x3
+ 1570 00ca 0E       		.uleb128 0xe
+ 1571 00cb 3A       		.uleb128 0x3a
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 38
+
+
+ 1572 00cc 0B       		.uleb128 0xb
+ 1573 00cd 3B       		.uleb128 0x3b
+ 1574 00ce 05       		.uleb128 0x5
+ 1575 00cf 27       		.uleb128 0x27
+ 1576 00d0 0C       		.uleb128 0xc
+ 1577 00d1 11       		.uleb128 0x11
+ 1578 00d2 01       		.uleb128 0x1
+ 1579 00d3 12       		.uleb128 0x12
+ 1580 00d4 01       		.uleb128 0x1
+ 1581 00d5 40       		.uleb128 0x40
+ 1582 00d6 06       		.uleb128 0x6
+ 1583 00d7 01       		.uleb128 0x1
+ 1584 00d8 13       		.uleb128 0x13
+ 1585 00d9 00       		.byte	0x0
+ 1586 00da 00       		.byte	0x0
+ 1587 00db 0E       		.uleb128 0xe
+ 1588 00dc 01       		.uleb128 0x1
+ 1589 00dd 01       		.byte	0x1
+ 1590 00de 49       		.uleb128 0x49
+ 1591 00df 13       		.uleb128 0x13
+ 1592 00e0 01       		.uleb128 0x1
+ 1593 00e1 13       		.uleb128 0x13
+ 1594 00e2 00       		.byte	0x0
+ 1595 00e3 00       		.byte	0x0
+ 1596 00e4 0F       		.uleb128 0xf
+ 1597 00e5 21       		.uleb128 0x21
+ 1598 00e6 00       		.byte	0x0
+ 1599 00e7 00       		.byte	0x0
+ 1600 00e8 00       		.byte	0x0
+ 1601 00e9 10       		.uleb128 0x10
+ 1602 00ea 34       		.uleb128 0x34
+ 1603 00eb 00       		.byte	0x0
+ 1604 00ec 03       		.uleb128 0x3
+ 1605 00ed 0E       		.uleb128 0xe
+ 1606 00ee 3A       		.uleb128 0x3a
+ 1607 00ef 0B       		.uleb128 0xb
+ 1608 00f0 3B       		.uleb128 0x3b
+ 1609 00f1 0B       		.uleb128 0xb
+ 1610 00f2 49       		.uleb128 0x49
+ 1611 00f3 13       		.uleb128 0x13
+ 1612 00f4 3F       		.uleb128 0x3f
+ 1613 00f5 0C       		.uleb128 0xc
+ 1614 00f6 3C       		.uleb128 0x3c
+ 1615 00f7 0C       		.uleb128 0xc
+ 1616 00f8 00       		.byte	0x0
+ 1617 00f9 00       		.byte	0x0
+ 1618 00fa 11       		.uleb128 0x11
+ 1619 00fb 26       		.uleb128 0x26
+ 1620 00fc 00       		.byte	0x0
+ 1621 00fd 49       		.uleb128 0x49
+ 1622 00fe 13       		.uleb128 0x13
+ 1623 00ff 00       		.byte	0x0
+ 1624 0100 00       		.byte	0x0
+ 1625 0101 12       		.uleb128 0x12
+ 1626 0102 34       		.uleb128 0x34
+ 1627 0103 00       		.byte	0x0
+ 1628 0104 03       		.uleb128 0x3
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 39
+
+
+ 1629 0105 0E       		.uleb128 0xe
+ 1630 0106 3A       		.uleb128 0x3a
+ 1631 0107 0B       		.uleb128 0xb
+ 1632 0108 3B       		.uleb128 0x3b
+ 1633 0109 0B       		.uleb128 0xb
+ 1634 010a 49       		.uleb128 0x49
+ 1635 010b 13       		.uleb128 0x13
+ 1636 010c 3F       		.uleb128 0x3f
+ 1637 010d 0C       		.uleb128 0xc
+ 1638 010e 02       		.uleb128 0x2
+ 1639 010f 0A       		.uleb128 0xa
+ 1640 0110 00       		.byte	0x0
+ 1641 0111 00       		.byte	0x0
+ 1642 0112 00       		.byte	0x0
+ 1643              		.section	.debug_pubnames,"",%progbits
+ 1644 0000 01010000 		.4byte	0x101
+ 1645 0004 0200     		.2byte	0x2
+ 1646 0006 00000000 		.4byte	.Ldebug_info0
+ 1647 000a 0C030000 		.4byte	0x30c
+ 1648 000e A8000000 		.4byte	0xa8
+ 1649 0012 46696C74 		.ascii	"Filter_1_Init\000"
+ 1649      65725F31 
+ 1649      5F496E69 
+ 1649      7400
+ 1650 0020 BD000000 		.4byte	0xbd
+ 1651 0024 46696C74 		.ascii	"Filter_1_Enable\000"
+ 1651      65725F31 
+ 1651      5F456E61 
+ 1651      626C6500 
+ 1652 0034 D2000000 		.4byte	0xd2
+ 1653 0038 46696C74 		.ascii	"Filter_1_Start\000"
+ 1653      65725F31 
+ 1653      5F537461 
+ 1653      727400
+ 1654 0047 E7000000 		.4byte	0xe7
+ 1655 004b 46696C74 		.ascii	"Filter_1_Stop\000"
+ 1655      65725F31 
+ 1655      5F53746F 
+ 1655      7000
+ 1656 0059 FC000000 		.4byte	0xfc
+ 1657 005d 46696C74 		.ascii	"Filter_1_Read8\000"
+ 1657      65725F31 
+ 1657      5F526561 
+ 1657      643800
+ 1658 006c 36010000 		.4byte	0x136
+ 1659 0070 46696C74 		.ascii	"Filter_1_Read16\000"
+ 1659      65725F31 
+ 1659      5F526561 
+ 1659      64313600 
+ 1660 0080 73010000 		.4byte	0x173
+ 1661 0084 46696C74 		.ascii	"Filter_1_Read24\000"
+ 1661      65725F31 
+ 1661      5F526561 
+ 1661      64323400 
+ 1662 0094 B0010000 		.4byte	0x1b0
+ 1663 0098 46696C74 		.ascii	"Filter_1_Write8\000"
+ 1663      65725F31 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 40
+
+
+ 1663      5F577269 
+ 1663      74653800 
+ 1664 00a8 E9010000 		.4byte	0x1e9
+ 1665 00ac 46696C74 		.ascii	"Filter_1_Write16\000"
+ 1665      65725F31 
+ 1665      5F577269 
+ 1665      74653136 
+ 1665      00
+ 1666 00bd 22020000 		.4byte	0x222
+ 1667 00c1 46696C74 		.ascii	"Filter_1_Write24\000"
+ 1667      65725F31 
+ 1667      5F577269 
+ 1667      74653234 
+ 1667      00
+ 1668 00d2 5B020000 		.4byte	0x25b
+ 1669 00d6 46696C74 		.ascii	"Filter_1_SetCoherency\000"
+ 1669      65725F31 
+ 1669      5F536574 
+ 1669      436F6865 
+ 1669      72656E63 
+ 1670 00ec F9020000 		.4byte	0x2f9
+ 1671 00f0 46696C74 		.ascii	"Filter_1_initVar\000"
+ 1671      65725F31 
+ 1671      5F696E69 
+ 1671      74566172 
+ 1671      00
+ 1672 0101 00000000 		.4byte	0x0
+ 1673              		.section	.debug_aranges,"",%progbits
+ 1674 0000 6C000000 		.4byte	0x6c
+ 1675 0004 0200     		.2byte	0x2
+ 1676 0006 00000000 		.4byte	.Ldebug_info0
+ 1677 000a 04       		.byte	0x4
+ 1678 000b 00       		.byte	0x0
+ 1679 000c 0000     		.2byte	0x0
+ 1680 000e 0000     		.2byte	0x0
+ 1681 0010 00000000 		.4byte	.LFB0
+ 1682 0014 14010000 		.4byte	.LFE0-.LFB0
+ 1683 0018 00000000 		.4byte	.LFB1
+ 1684 001c 5E000000 		.4byte	.LFE1-.LFB1
+ 1685 0020 00000000 		.4byte	.LFB2
+ 1686 0024 2A000000 		.4byte	.LFE2-.LFB2
+ 1687 0028 00000000 		.4byte	.LFB3
+ 1688 002c 58000000 		.4byte	.LFE3-.LFB3
+ 1689 0030 00000000 		.4byte	.LFB4
+ 1690 0034 46000000 		.4byte	.LFE4-.LFB4
+ 1691 0038 00000000 		.4byte	.LFB5
+ 1692 003c 46000000 		.4byte	.LFE5-.LFB5
+ 1693 0040 00000000 		.4byte	.LFB6
+ 1694 0044 46000000 		.4byte	.LFE6-.LFB6
+ 1695 0048 00000000 		.4byte	.LFB7
+ 1696 004c 3E000000 		.4byte	.LFE7-.LFB7
+ 1697 0050 00000000 		.4byte	.LFB8
+ 1698 0054 3E000000 		.4byte	.LFE8-.LFB8
+ 1699 0058 00000000 		.4byte	.LFB9
+ 1700 005c 3C000000 		.4byte	.LFE9-.LFB9
+ 1701 0060 00000000 		.4byte	.LFB10
+ 1702 0064 F0000000 		.4byte	.LFE10-.LFB10
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 41
+
+
+ 1703 0068 00000000 		.4byte	0x0
+ 1704 006c 00000000 		.4byte	0x0
+ 1705              		.section	.debug_ranges,"",%progbits
+ 1706              	.Ldebug_ranges0:
+ 1707 0000 00000000 		.4byte	.Ltext0
+ 1708 0004 00000000 		.4byte	.Letext0
+ 1709 0008 00000000 		.4byte	.LFB0
+ 1710 000c 14010000 		.4byte	.LFE0
+ 1711 0010 00000000 		.4byte	.LFB1
+ 1712 0014 5E000000 		.4byte	.LFE1
+ 1713 0018 00000000 		.4byte	.LFB2
+ 1714 001c 2A000000 		.4byte	.LFE2
+ 1715 0020 00000000 		.4byte	.LFB3
+ 1716 0024 58000000 		.4byte	.LFE3
+ 1717 0028 00000000 		.4byte	.LFB4
+ 1718 002c 46000000 		.4byte	.LFE4
+ 1719 0030 00000000 		.4byte	.LFB5
+ 1720 0034 46000000 		.4byte	.LFE5
+ 1721 0038 00000000 		.4byte	.LFB6
+ 1722 003c 46000000 		.4byte	.LFE6
+ 1723 0040 00000000 		.4byte	.LFB7
+ 1724 0044 3E000000 		.4byte	.LFE7
+ 1725 0048 00000000 		.4byte	.LFB8
+ 1726 004c 3E000000 		.4byte	.LFE8
+ 1727 0050 00000000 		.4byte	.LFB9
+ 1728 0054 3C000000 		.4byte	.LFE9
+ 1729 0058 00000000 		.4byte	.LFB10
+ 1730 005c F0000000 		.4byte	.LFE10
+ 1731 0060 00000000 		.4byte	0x0
+ 1732 0064 00000000 		.4byte	0x0
+ 1733              		.section	.debug_str,"MS",%progbits,1
+ 1734              	.LASF5:
+ 1735 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1735      206C6F6E 
+ 1735      6720696E 
+ 1735      7400
+ 1736              	.LASF17:
+ 1737 000e 46696C74 		.ascii	"Filter_1_Start\000"
+ 1737      65725F31 
+ 1737      5F537461 
+ 1737      727400
+ 1738              	.LASF21:
+ 1739 001d 6368616E 		.ascii	"channel\000"
+ 1739      6E656C00 
+ 1740              	.LASF18:
+ 1741 0025 46696C74 		.ascii	"Filter_1_Stop\000"
+ 1741      65725F31 
+ 1741      5F53746F 
+ 1741      7000
+ 1742              	.LASF22:
+ 1743 0033 76616C75 		.ascii	"value\000"
+ 1743      6500
+ 1744              	.LASF7:
+ 1745 0039 6C6F6E67 		.ascii	"long int\000"
+ 1745      20696E74 
+ 1745      00
+ 1746              	.LASF3:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 42
+
+
+ 1747 0042 73686F72 		.ascii	"short unsigned int\000"
+ 1747      7420756E 
+ 1747      7369676E 
+ 1747      65642069 
+ 1747      6E7400
+ 1748              	.LASF31:
+ 1749 0055 46696C74 		.ascii	"Filter_1_data_a\000"
+ 1749      65725F31 
+ 1749      5F646174 
+ 1749      615F6100 
+ 1750              	.LASF32:
+ 1751 0065 46696C74 		.ascii	"Filter_1_data_b\000"
+ 1751      65725F31 
+ 1751      5F646174 
+ 1751      615F6200 
+ 1752              	.LASF28:
+ 1753 0075 46696C74 		.ascii	"Filter_1_SetCoherency\000"
+ 1753      65725F31 
+ 1753      5F536574 
+ 1753      436F6865 
+ 1753      72656E63 
+ 1754              	.LASF26:
+ 1755 008b 46696C74 		.ascii	"Filter_1_Write16\000"
+ 1755      65725F31 
+ 1755      5F577269 
+ 1755      74653136 
+ 1755      00
+ 1756              	.LASF35:
+ 1757 009c 46696C74 		.ascii	"Filter_1_initVar\000"
+ 1757      65725F31 
+ 1757      5F696E69 
+ 1757      74566172 
+ 1757      00
+ 1758              	.LASF30:
+ 1759 00ad 46696C74 		.ascii	"Filter_1_control\000"
+ 1759      65725F31 
+ 1759      5F636F6E 
+ 1759      74726F6C 
+ 1759      00
+ 1760              	.LASF13:
+ 1761 00be 666C6F61 		.ascii	"float\000"
+ 1761      7400
+ 1762              	.LASF23:
+ 1763 00c4 46696C74 		.ascii	"Filter_1_Read24\000"
+ 1763      65725F31 
+ 1763      5F526561 
+ 1763      64323400 
+ 1764              	.LASF1:
+ 1765 00d4 756E7369 		.ascii	"unsigned char\000"
+ 1765      676E6564 
+ 1765      20636861 
+ 1765      7200
+ 1766              	.LASF37:
+ 1767 00e2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Filter_1.c\000"
+ 1767      6E657261 
+ 1767      7465645F 
+ 1767      536F7572 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 43
+
+
+ 1767      63655C50 
+ 1768              	.LASF8:
+ 1769 0106 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1769      20756E73 
+ 1769      69676E65 
+ 1769      6420696E 
+ 1769      7400
+ 1770              	.LASF10:
+ 1771 0118 75696E74 		.ascii	"uint8\000"
+ 1771      3800
+ 1772              	.LASF14:
+ 1773 011e 646F7562 		.ascii	"double\000"
+ 1773      6C6500
+ 1774              	.LASF11:
+ 1775 0125 75696E74 		.ascii	"uint16\000"
+ 1775      313600
+ 1776              	.LASF16:
+ 1777 012c 46696C74 		.ascii	"Filter_1_Enable\000"
+ 1777      65725F31 
+ 1777      5F456E61 
+ 1777      626C6500 
+ 1778              	.LASF12:
+ 1779 013c 75696E74 		.ascii	"uint32\000"
+ 1779      333200
+ 1780              	.LASF4:
+ 1781 0143 756E7369 		.ascii	"unsigned int\000"
+ 1781      676E6564 
+ 1781      20696E74 
+ 1781      00
+ 1782              	.LASF25:
+ 1783 0150 46696C74 		.ascii	"Filter_1_Write8\000"
+ 1783      65725F31 
+ 1783      5F577269 
+ 1783      74653800 
+ 1784              	.LASF6:
+ 1785 0160 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1785      206C6F6E 
+ 1785      6720756E 
+ 1785      7369676E 
+ 1785      65642069 
+ 1786              	.LASF29:
+ 1787 0177 62797465 		.ascii	"byteSelect\000"
+ 1787      53656C65 
+ 1787      637400
+ 1788              	.LASF34:
+ 1789 0182 46696C74 		.ascii	"Filter_1_acu\000"
+ 1789      65725F31 
+ 1789      5F616375 
+ 1789      00
+ 1790              	.LASF19:
+ 1791 018f 46696C74 		.ascii	"Filter_1_Read8\000"
+ 1791      65725F31 
+ 1791      5F526561 
+ 1791      643800
+ 1792              	.LASF36:
+ 1793 019e 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1793      4320342E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cca9PUJ6.s 			page 44
+
+
+ 1793      342E3100 
+ 1794              	.LASF33:
+ 1795 01aa 46696C74 		.ascii	"Filter_1_cfsm\000"
+ 1795      65725F31 
+ 1795      5F636673 
+ 1795      6D00
+ 1796              	.LASF9:
+ 1797 01b8 63686172 		.ascii	"char\000"
+ 1797      00
+ 1798              	.LASF15:
+ 1799 01bd 46696C74 		.ascii	"Filter_1_Init\000"
+ 1799      65725F31 
+ 1799      5F496E69 
+ 1799      7400
+ 1800              	.LASF20:
+ 1801 01cb 46696C74 		.ascii	"Filter_1_Read16\000"
+ 1801      65725F31 
+ 1801      5F526561 
+ 1801      64313600 
+ 1802              	.LASF2:
+ 1803 01db 73686F72 		.ascii	"short int\000"
+ 1803      7420696E 
+ 1803      7400
+ 1804              	.LASF38:
+ 1805 01e5 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 1805      665C486F 
+ 1805      6D655C44 
+ 1805      65736B74 
+ 1805      6F705C50 
+ 1806 0212 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 1806      2D435938 
+ 1806      43353636 
+ 1806      375C5069 
+ 1806      6F6E6565 
+ 1807 0243 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 1807      4C505F55 
+ 1807      53425F41 
+ 1807      7564696F 
+ 1807      2E637964 
+ 1808              	.LASF24:
+ 1809 025a 73616D70 		.ascii	"sample\000"
+ 1809      6C6500
+ 1810              	.LASF0:
+ 1811 0261 7369676E 		.ascii	"signed char\000"
+ 1811      65642063 
+ 1811      68617200 
+ 1812              	.LASF27:
+ 1813 026d 46696C74 		.ascii	"Filter_1_Write24\000"
+ 1813      65725F31 
+ 1813      5F577269 
+ 1813      74653234 
+ 1813      00
+ 1814              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

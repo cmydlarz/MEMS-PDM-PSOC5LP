@@ -1,0 +1,898 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"USBFS_cls.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 92000000 		.text
+  20      02006D00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.section	.text.USBFS_DispatchClassRqst,"ax",%progbits
+  24              		.align	2
+  25              		.global	USBFS_DispatchClassRqst
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	USBFS_DispatchClassRqst, %function
+  29              	USBFS_DispatchClassRqst:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC5\\USBFS_cls.c"
+   1:.\Generated_Source\PSoC5/USBFS_cls.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/USBFS_cls.c **** * File Name: USBFS_cls.c
+   3:.\Generated_Source\PSoC5/USBFS_cls.c **** * Version 2.50
+   4:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+   5:.\Generated_Source\PSoC5/USBFS_cls.c **** * Description:
+   6:.\Generated_Source\PSoC5/USBFS_cls.c **** *  USB Class request handler.
+   7:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+   8:.\Generated_Source\PSoC5/USBFS_cls.c **** * Note:
+   9:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+  10:.\Generated_Source\PSoC5/USBFS_cls.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC5/USBFS_cls.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC5/USBFS_cls.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:.\Generated_Source\PSoC5/USBFS_cls.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:.\Generated_Source\PSoC5/USBFS_cls.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC5/USBFS_cls.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  17:.\Generated_Source\PSoC5/USBFS_cls.c **** #include "USBFS.h"
+  18:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  19:.\Generated_Source\PSoC5/USBFS_cls.c **** #if(USBFS_EXTERN_CLS == USBFS_FALSE)
+  20:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  21:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  22:.\Generated_Source\PSoC5/USBFS_cls.c **** /***************************************
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 2
+
+
+  23:.\Generated_Source\PSoC5/USBFS_cls.c **** * External references
+  24:.\Generated_Source\PSoC5/USBFS_cls.c **** ***************************************/
+  25:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  26:.\Generated_Source\PSoC5/USBFS_cls.c **** #if defined(USBFS_ENABLE_HID_CLASS)
+  27:.\Generated_Source\PSoC5/USBFS_cls.c ****     uint8 USBFS_DispatchHIDClassRqst(void);
+  28:.\Generated_Source\PSoC5/USBFS_cls.c **** #endif /* End USBFS_ENABLE_HID_CLASS */
+  29:.\Generated_Source\PSoC5/USBFS_cls.c **** #if defined(USBFS_ENABLE_AUDIO_CLASS)
+  30:.\Generated_Source\PSoC5/USBFS_cls.c ****     uint8 USBFS_DispatchAUDIOClassRqst(void);
+  31:.\Generated_Source\PSoC5/USBFS_cls.c **** #endif /* End USBFS_ENABLE_HID_CLASS */
+  32:.\Generated_Source\PSoC5/USBFS_cls.c **** #if defined(USBFS_ENABLE_CDC_CLASS)
+  33:.\Generated_Source\PSoC5/USBFS_cls.c ****     uint8 USBFS_DispatchCDCClassRqst(void);
+  34:.\Generated_Source\PSoC5/USBFS_cls.c **** #endif /* End USBFS_ENABLE_CDC_CLASS */
+  35:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  36:.\Generated_Source\PSoC5/USBFS_cls.c **** extern uint8 CYCODE *USBFS_interfaceClass;
+  37:.\Generated_Source\PSoC5/USBFS_cls.c **** extern volatile T_USBFS_EP_CTL_BLOCK USBFS_EP[];
+  38:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  39:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  40:.\Generated_Source\PSoC5/USBFS_cls.c **** /***************************************
+  41:.\Generated_Source\PSoC5/USBFS_cls.c **** * User Implemented Class Driver Declarations.
+  42:.\Generated_Source\PSoC5/USBFS_cls.c **** ***************************************/
+  43:.\Generated_Source\PSoC5/USBFS_cls.c **** /* `#START USER_DEFINED_CLASS_DECLARATIONS` Place your declaration here */
+  44:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  45:.\Generated_Source\PSoC5/USBFS_cls.c **** /* `#END` */
+  46:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  47:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  48:.\Generated_Source\PSoC5/USBFS_cls.c **** /*******************************************************************************
+  49:.\Generated_Source\PSoC5/USBFS_cls.c **** * Function Name: USBFS_DispatchClassRqst
+  50:.\Generated_Source\PSoC5/USBFS_cls.c **** ********************************************************************************
+  51:.\Generated_Source\PSoC5/USBFS_cls.c **** * Summary:
+  52:.\Generated_Source\PSoC5/USBFS_cls.c **** *  This routine dispatches class specific requests depend on inteface class.
+  53:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+  54:.\Generated_Source\PSoC5/USBFS_cls.c **** * Parameters:
+  55:.\Generated_Source\PSoC5/USBFS_cls.c **** *  None.
+  56:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+  57:.\Generated_Source\PSoC5/USBFS_cls.c **** * Return:
+  58:.\Generated_Source\PSoC5/USBFS_cls.c **** *  requestHandled.
+  59:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+  60:.\Generated_Source\PSoC5/USBFS_cls.c **** * Reentrant:
+  61:.\Generated_Source\PSoC5/USBFS_cls.c **** *  No.
+  62:.\Generated_Source\PSoC5/USBFS_cls.c **** *
+  63:.\Generated_Source\PSoC5/USBFS_cls.c **** *******************************************************************************/
+  64:.\Generated_Source\PSoC5/USBFS_cls.c **** uint8 USBFS_DispatchClassRqst() 
+  65:.\Generated_Source\PSoC5/USBFS_cls.c **** {
+  32              		.loc 1 65 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 8
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36 0000 80B5     		push	{r7, lr}
+  37              	.LCFI0:
+  38              		.cfi_def_cfa_offset 8
+  39 0002 82B0     		sub	sp, sp, #8
+  40              	.LCFI1:
+  41              		.cfi_def_cfa_offset 16
+  42 0004 00AF     		add	r7, sp, #0
+  43              		.cfi_offset 14, -4
+  44              		.cfi_offset 7, -8
+  45              	.LCFI2:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 3
+
+
+  46              		.cfi_def_cfa_register 7
+  66:.\Generated_Source\PSoC5/USBFS_cls.c ****     uint8 requestHandled = USBFS_FALSE;
+  47              		.loc 1 66 0
+  48 0006 4FF00003 		mov	r3, #0
+  49 000a BB71     		strb	r3, [r7, #6]
+  67:.\Generated_Source\PSoC5/USBFS_cls.c ****     uint8 interfaceNumber = 0u;
+  50              		.loc 1 67 0
+  51 000c 4FF00003 		mov	r3, #0
+  52 0010 FB71     		strb	r3, [r7, #7]
+  68:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+  69:.\Generated_Source\PSoC5/USBFS_cls.c ****     switch(CY_GET_REG8(USBFS_bmRequestType) & USBFS_RQST_RCPT_MASK)
+  53              		.loc 1 69 0
+  54 0012 46F20003 		movw	r3, #:lower16:1073766400
+  55 0016 C4F20003 		movt	r3, #:upper16:1073766400
+  56 001a 1B78     		ldrb	r3, [r3, #0]
+  57 001c DBB2     		uxtb	r3, r3
+  58 001e 03F00303 		and	r3, r3, #3
+  59 0022 012B     		cmp	r3, #1
+  60 0024 02D0     		beq	.L3
+  61 0026 022B     		cmp	r3, #2
+  62 0028 07D0     		beq	.L4
+  63 002a 1DE0     		b	.L2
+  64              	.L3:
+  70:.\Generated_Source\PSoC5/USBFS_cls.c ****     {
+  71:.\Generated_Source\PSoC5/USBFS_cls.c ****         case USBFS_RQST_RCPT_IFC:        /* class-specific request directed to an interface */
+  72:.\Generated_Source\PSoC5/USBFS_cls.c ****             interfaceNumber = CY_GET_REG8(USBFS_wIndexLo); /* wIndexLo contain Interface number */
+  65              		.loc 1 72 0
+  66 002c 46F20403 		movw	r3, #:lower16:1073766404
+  67 0030 C4F20003 		movt	r3, #:upper16:1073766404
+  68 0034 1B78     		ldrb	r3, [r3, #0]
+  69 0036 FB71     		strb	r3, [r7, #7]
+  73:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+  70              		.loc 1 73 0
+  71 0038 16E0     		b	.L2
+  72              	.L4:
+  74:.\Generated_Source\PSoC5/USBFS_cls.c ****         case USBFS_RQST_RCPT_EP:         /* class-specific request directed to the endpoint */
+  75:.\Generated_Source\PSoC5/USBFS_cls.c ****             /* find related intenface to the endpoint, wIndexLo contain EP number */
+  76:.\Generated_Source\PSoC5/USBFS_cls.c ****             interfaceNumber =
+  77:.\Generated_Source\PSoC5/USBFS_cls.c ****                 USBFS_EP[CY_GET_REG8(USBFS_wIndexLo) & USBFS_DIR_UNUSED].interface;
+  73              		.loc 1 77 0
+  74 003a 46F20403 		movw	r3, #:lower16:1073766404
+  75 003e C4F20003 		movt	r3, #:upper16:1073766404
+  76 0042 1B78     		ldrb	r3, [r3, #0]
+  77 0044 DBB2     		uxtb	r3, r3
+  78 0046 03F07F01 		and	r1, r3, #127
+  79              		.loc 1 76 0
+  80 004a 40F20002 		movw	r2, #:lower16:USBFS_EP
+  81 004e C0F20002 		movt	r2, #:upper16:USBFS_EP
+  82 0052 0B46     		mov	r3, r1
+  83 0054 4FEA4303 		lsl	r3, r3, #1
+  84 0058 0B44     		add	r3, r3, r1
+  85 005a 4FEA8303 		lsl	r3, r3, #2
+  86 005e 1344     		add	r3, r3, r2
+  87 0060 03F10803 		add	r3, r3, #8
+  88 0064 9B78     		ldrb	r3, [r3, #2]
+  89 0066 FB71     		strb	r3, [r7, #7]
+  90              	.L2:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 4
+
+
+  78:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+  79:.\Generated_Source\PSoC5/USBFS_cls.c ****         default:    /* requestHandled is initialized as FALSE by default */
+  80:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+  81:.\Generated_Source\PSoC5/USBFS_cls.c ****     }
+  82:.\Generated_Source\PSoC5/USBFS_cls.c ****     /* Handle Class request depend on interface type */
+  83:.\Generated_Source\PSoC5/USBFS_cls.c ****     switch(USBFS_interfaceClass[interfaceNumber])
+  91              		.loc 1 83 0
+  92 0068 40F20003 		movw	r3, #:lower16:USBFS_interfaceClass
+  93 006c C0F20003 		movt	r3, #:upper16:USBFS_interfaceClass
+  94 0070 1A68     		ldr	r2, [r3, #0]
+  95 0072 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  96 0074 1344     		add	r3, r2, r3
+  97 0076 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  98 0078 012B     		cmp	r3, #1
+  99 007a 06D0     		beq	.L6
+ 100 007c 032B     		cmp	r3, #3
+ 101 007e 08D1     		bne	.L5
+ 102              	.L7:
+  84:.\Generated_Source\PSoC5/USBFS_cls.c ****     {
+  85:.\Generated_Source\PSoC5/USBFS_cls.c ****         case USBFS_CLASS_HID:
+  86:.\Generated_Source\PSoC5/USBFS_cls.c ****             #if defined(USBFS_ENABLE_HID_CLASS)
+  87:.\Generated_Source\PSoC5/USBFS_cls.c ****                 requestHandled = USBFS_DispatchHIDClassRqst();
+ 103              		.loc 1 87 0
+ 104 0080 FFF7FEFF 		bl	USBFS_DispatchHIDClassRqst
+ 105 0084 0346     		mov	r3, r0
+ 106 0086 BB71     		strb	r3, [r7, #6]
+  88:.\Generated_Source\PSoC5/USBFS_cls.c ****             #endif /* USBFS_ENABLE_HID_CLASS */
+  89:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+ 107              		.loc 1 89 0
+ 108 0088 03E0     		b	.L5
+ 109              	.L6:
+  90:.\Generated_Source\PSoC5/USBFS_cls.c ****         case USBFS_CLASS_AUDIO:
+  91:.\Generated_Source\PSoC5/USBFS_cls.c ****             #if defined(USBFS_ENABLE_AUDIO_CLASS)
+  92:.\Generated_Source\PSoC5/USBFS_cls.c ****                 requestHandled = USBFS_DispatchAUDIOClassRqst();
+ 110              		.loc 1 92 0
+ 111 008a FFF7FEFF 		bl	USBFS_DispatchAUDIOClassRqst
+ 112 008e 0346     		mov	r3, r0
+ 113 0090 BB71     		strb	r3, [r7, #6]
+ 114              	.L5:
+  93:.\Generated_Source\PSoC5/USBFS_cls.c ****             #endif /* USBFS_ENABLE_HID_CLASS */
+  94:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+  95:.\Generated_Source\PSoC5/USBFS_cls.c ****         case USBFS_CLASS_CDC:
+  96:.\Generated_Source\PSoC5/USBFS_cls.c ****             #if defined(USBFS_ENABLE_CDC_CLASS)
+  97:.\Generated_Source\PSoC5/USBFS_cls.c ****                 requestHandled = USBFS_DispatchCDCClassRqst();
+  98:.\Generated_Source\PSoC5/USBFS_cls.c ****             #endif /* USBFS_ENABLE_CDC_CLASS */
+  99:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+ 100:.\Generated_Source\PSoC5/USBFS_cls.c ****         default:    /* requestHandled is initialezed as FALSE by default */
+ 101:.\Generated_Source\PSoC5/USBFS_cls.c ****             break;
+ 102:.\Generated_Source\PSoC5/USBFS_cls.c ****     }
+ 103:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+ 104:.\Generated_Source\PSoC5/USBFS_cls.c ****     /* `#START USER_DEFINED_CLASS_CODE` Place your Class request here */
+ 105:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+ 106:.\Generated_Source\PSoC5/USBFS_cls.c ****     /* `#END` */
+ 107:.\Generated_Source\PSoC5/USBFS_cls.c **** 
+ 108:.\Generated_Source\PSoC5/USBFS_cls.c ****     return(requestHandled);
+ 115              		.loc 1 108 0
+ 116 0092 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 5
+
+
+ 109:.\Generated_Source\PSoC5/USBFS_cls.c **** }
+ 117              		.loc 1 109 0
+ 118 0094 1846     		mov	r0, r3
+ 119 0096 07F10807 		add	r7, r7, #8
+ 120 009a BD46     		mov	sp, r7
+ 121 009c 80BD     		pop	{r7, pc}
+ 122              		.cfi_endproc
+ 123              	.LFE0:
+ 124              		.size	USBFS_DispatchClassRqst, .-USBFS_DispatchClassRqst
+ 125 009e 00BF     		.text
+ 126              	.Letext0:
+ 127              		.section	.debug_loc,"",%progbits
+ 128              	.Ldebug_loc0:
+ 129              	.LLST0:
+ 130 0000 00000000 		.4byte	.LFB0
+ 131 0004 02000000 		.4byte	.LCFI0
+ 132 0008 0100     		.2byte	0x1
+ 133 000a 5D       		.byte	0x5d
+ 134 000b 02000000 		.4byte	.LCFI0
+ 135 000f 04000000 		.4byte	.LCFI1
+ 136 0013 0200     		.2byte	0x2
+ 137 0015 7D       		.byte	0x7d
+ 138 0016 08       		.sleb128 8
+ 139 0017 04000000 		.4byte	.LCFI1
+ 140 001b 06000000 		.4byte	.LCFI2
+ 141 001f 0200     		.2byte	0x2
+ 142 0021 7D       		.byte	0x7d
+ 143 0022 10       		.sleb128 16
+ 144 0023 06000000 		.4byte	.LCFI2
+ 145 0027 9E000000 		.4byte	.LFE0
+ 146 002b 0200     		.2byte	0x2
+ 147 002d 77       		.byte	0x77
+ 148 002e 10       		.sleb128 16
+ 149 002f 00000000 		.4byte	0x0
+ 150 0033 00000000 		.4byte	0x0
+ 151              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 152              		.file 3 ".\\Generated_Source\\PSoC5\\/USBFS.h"
+ 153              		.section	.debug_info
+ 154 0000 99010000 		.4byte	0x199
+ 155 0004 0200     		.2byte	0x2
+ 156 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 157 000a 04       		.byte	0x4
+ 158 000b 01       		.uleb128 0x1
+ 159 000c 31010000 		.4byte	.LASF28
+ 160 0010 01       		.byte	0x1
+ 161 0011 F1010000 		.4byte	.LASF29
+ 162 0015 67010000 		.4byte	.LASF30
+ 163 0019 00000000 		.4byte	0x0
+ 164 001d 00000000 		.4byte	0x0
+ 165 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ 166 0025 00000000 		.4byte	.Ldebug_line0
+ 167 0029 02       		.uleb128 0x2
+ 168 002a 01       		.byte	0x1
+ 169 002b 06       		.byte	0x6
+ 170 002c E5010000 		.4byte	.LASF0
+ 171 0030 02       		.uleb128 0x2
+ 172 0031 01       		.byte	0x1
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 6
+
+
+ 173 0032 08       		.byte	0x8
+ 174 0033 B1000000 		.4byte	.LASF1
+ 175 0037 02       		.uleb128 0x2
+ 176 0038 02       		.byte	0x2
+ 177 0039 05       		.byte	0x5
+ 178 003a 4D010000 		.4byte	.LASF2
+ 179 003e 02       		.uleb128 0x2
+ 180 003f 02       		.byte	0x2
+ 181 0040 07       		.byte	0x7
+ 182 0041 0E000000 		.4byte	.LASF3
+ 183 0045 02       		.uleb128 0x2
+ 184 0046 04       		.byte	0x4
+ 185 0047 05       		.byte	0x5
+ 186 0048 DC010000 		.4byte	.LASF4
+ 187 004c 02       		.uleb128 0x2
+ 188 004d 04       		.byte	0x4
+ 189 004e 07       		.byte	0x7
+ 190 004f 81000000 		.4byte	.LASF5
+ 191 0053 02       		.uleb128 0x2
+ 192 0054 08       		.byte	0x8
+ 193 0055 05       		.byte	0x5
+ 194 0056 00000000 		.4byte	.LASF6
+ 195 005a 02       		.uleb128 0x2
+ 196 005b 08       		.byte	0x8
+ 197 005c 07       		.byte	0x7
+ 198 005d F7000000 		.4byte	.LASF7
+ 199 0061 03       		.uleb128 0x3
+ 200 0062 04       		.byte	0x4
+ 201 0063 05       		.byte	0x5
+ 202 0064 696E7400 		.ascii	"int\000"
+ 203 0068 02       		.uleb128 0x2
+ 204 0069 04       		.byte	0x4
+ 205 006a 07       		.byte	0x7
+ 206 006b EA000000 		.4byte	.LASF8
+ 207 006f 04       		.uleb128 0x4
+ 208 0070 57010000 		.4byte	.LASF9
+ 209 0074 02       		.byte	0x2
+ 210 0075 4C       		.byte	0x4c
+ 211 0076 30000000 		.4byte	0x30
+ 212 007a 04       		.uleb128 0x4
+ 213 007b D8000000 		.4byte	.LASF10
+ 214 007f 02       		.byte	0x2
+ 215 0080 4D       		.byte	0x4d
+ 216 0081 3E000000 		.4byte	0x3e
+ 217 0085 02       		.uleb128 0x2
+ 218 0086 04       		.byte	0x4
+ 219 0087 04       		.byte	0x4
+ 220 0088 45000000 		.4byte	.LASF11
+ 221 008c 02       		.uleb128 0x2
+ 222 008d 08       		.byte	0x8
+ 223 008e 04       		.byte	0x4
+ 224 008f BF000000 		.4byte	.LASF12
+ 225 0093 02       		.uleb128 0x2
+ 226 0094 01       		.byte	0x1
+ 227 0095 08       		.byte	0x8
+ 228 0096 3D010000 		.4byte	.LASF13
+ 229 009a 05       		.uleb128 0x5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 7
+
+
+ 230 009b 04       		.byte	0x4
+ 231 009c 07       		.byte	0x7
+ 232 009d 06       		.uleb128 0x6
+ 233 009e 18010000 		.4byte	.LASF31
+ 234 00a2 0C       		.byte	0xc
+ 235 00a3 03       		.byte	0x3
+ 236 00a4 7A       		.byte	0x7a
+ 237 00a5 28010000 		.4byte	0x128
+ 238 00a9 07       		.uleb128 0x7
+ 239 00aa C6000000 		.4byte	.LASF14
+ 240 00ae 03       		.byte	0x3
+ 241 00af 7B       		.byte	0x7b
+ 242 00b0 6F000000 		.4byte	0x6f
+ 243 00b4 02       		.byte	0x2
+ 244 00b5 23       		.byte	0x23
+ 245 00b6 00       		.uleb128 0x0
+ 246 00b7 07       		.uleb128 0x7
+ 247 00b8 DF000000 		.4byte	.LASF15
+ 248 00bc 03       		.byte	0x3
+ 249 00bd 7C       		.byte	0x7c
+ 250 00be 6F000000 		.4byte	0x6f
+ 251 00c2 02       		.byte	0x2
+ 252 00c3 23       		.byte	0x23
+ 253 00c4 01       		.uleb128 0x1
+ 254 00c5 07       		.uleb128 0x7
+ 255 00c6 0E010000 		.4byte	.LASF16
+ 256 00ca 03       		.byte	0x3
+ 257 00cb 7D       		.byte	0x7d
+ 258 00cc 6F000000 		.4byte	0x6f
+ 259 00d0 02       		.byte	0x2
+ 260 00d1 23       		.byte	0x23
+ 261 00d2 02       		.uleb128 0x2
+ 262 00d3 07       		.uleb128 0x7
+ 263 00d4 4B000000 		.4byte	.LASF17
+ 264 00d8 03       		.byte	0x3
+ 265 00d9 7E       		.byte	0x7e
+ 266 00da 6F000000 		.4byte	0x6f
+ 267 00de 02       		.byte	0x2
+ 268 00df 23       		.byte	0x23
+ 269 00e0 03       		.uleb128 0x3
+ 270 00e1 07       		.uleb128 0x7
+ 271 00e2 93000000 		.4byte	.LASF18
+ 272 00e6 03       		.byte	0x3
+ 273 00e7 7F       		.byte	0x7f
+ 274 00e8 6F000000 		.4byte	0x6f
+ 275 00ec 02       		.byte	0x2
+ 276 00ed 23       		.byte	0x23
+ 277 00ee 04       		.uleb128 0x4
+ 278 00ef 07       		.uleb128 0x7
+ 279 00f0 2A010000 		.4byte	.LASF19
+ 280 00f4 03       		.byte	0x3
+ 281 00f5 80       		.byte	0x80
+ 282 00f6 6F000000 		.4byte	0x6f
+ 283 00fa 02       		.byte	0x2
+ 284 00fb 23       		.byte	0x23
+ 285 00fc 05       		.uleb128 0x5
+ 286 00fd 07       		.uleb128 0x7
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 8
+
+
+ 287 00fe CD000000 		.4byte	.LASF20
+ 288 0102 03       		.byte	0x3
+ 289 0103 81       		.byte	0x81
+ 290 0104 7A000000 		.4byte	0x7a
+ 291 0108 02       		.byte	0x2
+ 292 0109 23       		.byte	0x23
+ 293 010a 06       		.uleb128 0x6
+ 294 010b 07       		.uleb128 0x7
+ 295 010c 42010000 		.4byte	.LASF21
+ 296 0110 03       		.byte	0x3
+ 297 0111 82       		.byte	0x82
+ 298 0112 7A000000 		.4byte	0x7a
+ 299 0116 02       		.byte	0x2
+ 300 0117 23       		.byte	0x23
+ 301 0118 08       		.uleb128 0x8
+ 302 0119 07       		.uleb128 0x7
+ 303 011a 5D010000 		.4byte	.LASF22
+ 304 011e 03       		.byte	0x3
+ 305 011f 83       		.byte	0x83
+ 306 0120 6F000000 		.4byte	0x6f
+ 307 0124 02       		.byte	0x2
+ 308 0125 23       		.byte	0x23
+ 309 0126 0A       		.uleb128 0xa
+ 310 0127 00       		.byte	0x0
+ 311 0128 04       		.uleb128 0x4
+ 312 0129 21000000 		.4byte	.LASF23
+ 313 012d 03       		.byte	0x3
+ 314 012e 84       		.byte	0x84
+ 315 012f 9D000000 		.4byte	0x9d
+ 316 0133 08       		.uleb128 0x8
+ 317 0134 01       		.byte	0x1
+ 318 0135 69000000 		.4byte	.LASF32
+ 319 0139 01       		.byte	0x1
+ 320 013a 40       		.byte	0x40
+ 321 013b 6F000000 		.4byte	0x6f
+ 322 013f 00000000 		.4byte	.LFB0
+ 323 0143 9E000000 		.4byte	.LFE0
+ 324 0147 00000000 		.4byte	.LLST0
+ 325 014b 6C010000 		.4byte	0x16c
+ 326 014f 09       		.uleb128 0x9
+ 327 0150 36000000 		.4byte	.LASF24
+ 328 0154 01       		.byte	0x1
+ 329 0155 42       		.byte	0x42
+ 330 0156 6F000000 		.4byte	0x6f
+ 331 015a 02       		.byte	0x2
+ 332 015b 91       		.byte	0x91
+ 333 015c 76       		.sleb128 -10
+ 334 015d 09       		.uleb128 0x9
+ 335 015e 98000000 		.4byte	.LASF25
+ 336 0162 01       		.byte	0x1
+ 337 0163 43       		.byte	0x43
+ 338 0164 6F000000 		.4byte	0x6f
+ 339 0168 02       		.byte	0x2
+ 340 0169 91       		.byte	0x91
+ 341 016a 77       		.sleb128 -9
+ 342 016b 00       		.byte	0x0
+ 343 016c 0A       		.uleb128 0xa
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 9
+
+
+ 344 016d 54000000 		.4byte	.LASF26
+ 345 0171 01       		.byte	0x1
+ 346 0172 24       		.byte	0x24
+ 347 0173 79010000 		.4byte	0x179
+ 348 0177 01       		.byte	0x1
+ 349 0178 01       		.byte	0x1
+ 350 0179 0B       		.uleb128 0xb
+ 351 017a 04       		.byte	0x4
+ 352 017b 6F000000 		.4byte	0x6f
+ 353 017f 0C       		.uleb128 0xc
+ 354 0180 28010000 		.4byte	0x128
+ 355 0184 8A010000 		.4byte	0x18a
+ 356 0188 0D       		.uleb128 0xd
+ 357 0189 00       		.byte	0x0
+ 358 018a 0A       		.uleb128 0xa
+ 359 018b A8000000 		.4byte	.LASF27
+ 360 018f 01       		.byte	0x1
+ 361 0190 25       		.byte	0x25
+ 362 0191 97010000 		.4byte	0x197
+ 363 0195 01       		.byte	0x1
+ 364 0196 01       		.byte	0x1
+ 365 0197 0E       		.uleb128 0xe
+ 366 0198 7F010000 		.4byte	0x17f
+ 367 019c 00       		.byte	0x0
+ 368              		.section	.debug_abbrev
+ 369 0000 01       		.uleb128 0x1
+ 370 0001 11       		.uleb128 0x11
+ 371 0002 01       		.byte	0x1
+ 372 0003 25       		.uleb128 0x25
+ 373 0004 0E       		.uleb128 0xe
+ 374 0005 13       		.uleb128 0x13
+ 375 0006 0B       		.uleb128 0xb
+ 376 0007 03       		.uleb128 0x3
+ 377 0008 0E       		.uleb128 0xe
+ 378 0009 1B       		.uleb128 0x1b
+ 379 000a 0E       		.uleb128 0xe
+ 380 000b 11       		.uleb128 0x11
+ 381 000c 01       		.uleb128 0x1
+ 382 000d 52       		.uleb128 0x52
+ 383 000e 01       		.uleb128 0x1
+ 384 000f 55       		.uleb128 0x55
+ 385 0010 06       		.uleb128 0x6
+ 386 0011 10       		.uleb128 0x10
+ 387 0012 06       		.uleb128 0x6
+ 388 0013 00       		.byte	0x0
+ 389 0014 00       		.byte	0x0
+ 390 0015 02       		.uleb128 0x2
+ 391 0016 24       		.uleb128 0x24
+ 392 0017 00       		.byte	0x0
+ 393 0018 0B       		.uleb128 0xb
+ 394 0019 0B       		.uleb128 0xb
+ 395 001a 3E       		.uleb128 0x3e
+ 396 001b 0B       		.uleb128 0xb
+ 397 001c 03       		.uleb128 0x3
+ 398 001d 0E       		.uleb128 0xe
+ 399 001e 00       		.byte	0x0
+ 400 001f 00       		.byte	0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 10
+
+
+ 401 0020 03       		.uleb128 0x3
+ 402 0021 24       		.uleb128 0x24
+ 403 0022 00       		.byte	0x0
+ 404 0023 0B       		.uleb128 0xb
+ 405 0024 0B       		.uleb128 0xb
+ 406 0025 3E       		.uleb128 0x3e
+ 407 0026 0B       		.uleb128 0xb
+ 408 0027 03       		.uleb128 0x3
+ 409 0028 08       		.uleb128 0x8
+ 410 0029 00       		.byte	0x0
+ 411 002a 00       		.byte	0x0
+ 412 002b 04       		.uleb128 0x4
+ 413 002c 16       		.uleb128 0x16
+ 414 002d 00       		.byte	0x0
+ 415 002e 03       		.uleb128 0x3
+ 416 002f 0E       		.uleb128 0xe
+ 417 0030 3A       		.uleb128 0x3a
+ 418 0031 0B       		.uleb128 0xb
+ 419 0032 3B       		.uleb128 0x3b
+ 420 0033 0B       		.uleb128 0xb
+ 421 0034 49       		.uleb128 0x49
+ 422 0035 13       		.uleb128 0x13
+ 423 0036 00       		.byte	0x0
+ 424 0037 00       		.byte	0x0
+ 425 0038 05       		.uleb128 0x5
+ 426 0039 24       		.uleb128 0x24
+ 427 003a 00       		.byte	0x0
+ 428 003b 0B       		.uleb128 0xb
+ 429 003c 0B       		.uleb128 0xb
+ 430 003d 3E       		.uleb128 0x3e
+ 431 003e 0B       		.uleb128 0xb
+ 432 003f 00       		.byte	0x0
+ 433 0040 00       		.byte	0x0
+ 434 0041 06       		.uleb128 0x6
+ 435 0042 13       		.uleb128 0x13
+ 436 0043 01       		.byte	0x1
+ 437 0044 03       		.uleb128 0x3
+ 438 0045 0E       		.uleb128 0xe
+ 439 0046 0B       		.uleb128 0xb
+ 440 0047 0B       		.uleb128 0xb
+ 441 0048 3A       		.uleb128 0x3a
+ 442 0049 0B       		.uleb128 0xb
+ 443 004a 3B       		.uleb128 0x3b
+ 444 004b 0B       		.uleb128 0xb
+ 445 004c 01       		.uleb128 0x1
+ 446 004d 13       		.uleb128 0x13
+ 447 004e 00       		.byte	0x0
+ 448 004f 00       		.byte	0x0
+ 449 0050 07       		.uleb128 0x7
+ 450 0051 0D       		.uleb128 0xd
+ 451 0052 00       		.byte	0x0
+ 452 0053 03       		.uleb128 0x3
+ 453 0054 0E       		.uleb128 0xe
+ 454 0055 3A       		.uleb128 0x3a
+ 455 0056 0B       		.uleb128 0xb
+ 456 0057 3B       		.uleb128 0x3b
+ 457 0058 0B       		.uleb128 0xb
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 11
+
+
+ 458 0059 49       		.uleb128 0x49
+ 459 005a 13       		.uleb128 0x13
+ 460 005b 38       		.uleb128 0x38
+ 461 005c 0A       		.uleb128 0xa
+ 462 005d 00       		.byte	0x0
+ 463 005e 00       		.byte	0x0
+ 464 005f 08       		.uleb128 0x8
+ 465 0060 2E       		.uleb128 0x2e
+ 466 0061 01       		.byte	0x1
+ 467 0062 3F       		.uleb128 0x3f
+ 468 0063 0C       		.uleb128 0xc
+ 469 0064 03       		.uleb128 0x3
+ 470 0065 0E       		.uleb128 0xe
+ 471 0066 3A       		.uleb128 0x3a
+ 472 0067 0B       		.uleb128 0xb
+ 473 0068 3B       		.uleb128 0x3b
+ 474 0069 0B       		.uleb128 0xb
+ 475 006a 49       		.uleb128 0x49
+ 476 006b 13       		.uleb128 0x13
+ 477 006c 11       		.uleb128 0x11
+ 478 006d 01       		.uleb128 0x1
+ 479 006e 12       		.uleb128 0x12
+ 480 006f 01       		.uleb128 0x1
+ 481 0070 40       		.uleb128 0x40
+ 482 0071 06       		.uleb128 0x6
+ 483 0072 01       		.uleb128 0x1
+ 484 0073 13       		.uleb128 0x13
+ 485 0074 00       		.byte	0x0
+ 486 0075 00       		.byte	0x0
+ 487 0076 09       		.uleb128 0x9
+ 488 0077 34       		.uleb128 0x34
+ 489 0078 00       		.byte	0x0
+ 490 0079 03       		.uleb128 0x3
+ 491 007a 0E       		.uleb128 0xe
+ 492 007b 3A       		.uleb128 0x3a
+ 493 007c 0B       		.uleb128 0xb
+ 494 007d 3B       		.uleb128 0x3b
+ 495 007e 0B       		.uleb128 0xb
+ 496 007f 49       		.uleb128 0x49
+ 497 0080 13       		.uleb128 0x13
+ 498 0081 02       		.uleb128 0x2
+ 499 0082 0A       		.uleb128 0xa
+ 500 0083 00       		.byte	0x0
+ 501 0084 00       		.byte	0x0
+ 502 0085 0A       		.uleb128 0xa
+ 503 0086 34       		.uleb128 0x34
+ 504 0087 00       		.byte	0x0
+ 505 0088 03       		.uleb128 0x3
+ 506 0089 0E       		.uleb128 0xe
+ 507 008a 3A       		.uleb128 0x3a
+ 508 008b 0B       		.uleb128 0xb
+ 509 008c 3B       		.uleb128 0x3b
+ 510 008d 0B       		.uleb128 0xb
+ 511 008e 49       		.uleb128 0x49
+ 512 008f 13       		.uleb128 0x13
+ 513 0090 3F       		.uleb128 0x3f
+ 514 0091 0C       		.uleb128 0xc
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 12
+
+
+ 515 0092 3C       		.uleb128 0x3c
+ 516 0093 0C       		.uleb128 0xc
+ 517 0094 00       		.byte	0x0
+ 518 0095 00       		.byte	0x0
+ 519 0096 0B       		.uleb128 0xb
+ 520 0097 0F       		.uleb128 0xf
+ 521 0098 00       		.byte	0x0
+ 522 0099 0B       		.uleb128 0xb
+ 523 009a 0B       		.uleb128 0xb
+ 524 009b 49       		.uleb128 0x49
+ 525 009c 13       		.uleb128 0x13
+ 526 009d 00       		.byte	0x0
+ 527 009e 00       		.byte	0x0
+ 528 009f 0C       		.uleb128 0xc
+ 529 00a0 01       		.uleb128 0x1
+ 530 00a1 01       		.byte	0x1
+ 531 00a2 49       		.uleb128 0x49
+ 532 00a3 13       		.uleb128 0x13
+ 533 00a4 01       		.uleb128 0x1
+ 534 00a5 13       		.uleb128 0x13
+ 535 00a6 00       		.byte	0x0
+ 536 00a7 00       		.byte	0x0
+ 537 00a8 0D       		.uleb128 0xd
+ 538 00a9 21       		.uleb128 0x21
+ 539 00aa 00       		.byte	0x0
+ 540 00ab 00       		.byte	0x0
+ 541 00ac 00       		.byte	0x0
+ 542 00ad 0E       		.uleb128 0xe
+ 543 00ae 35       		.uleb128 0x35
+ 544 00af 00       		.byte	0x0
+ 545 00b0 49       		.uleb128 0x49
+ 546 00b1 13       		.uleb128 0x13
+ 547 00b2 00       		.byte	0x0
+ 548 00b3 00       		.byte	0x0
+ 549 00b4 00       		.byte	0x0
+ 550              		.section	.debug_pubnames,"",%progbits
+ 551 0000 2A000000 		.4byte	0x2a
+ 552 0004 0200     		.2byte	0x2
+ 553 0006 00000000 		.4byte	.Ldebug_info0
+ 554 000a 9D010000 		.4byte	0x19d
+ 555 000e 33010000 		.4byte	0x133
+ 556 0012 55534246 		.ascii	"USBFS_DispatchClassRqst\000"
+ 556      535F4469 
+ 556      73706174 
+ 556      6368436C 
+ 556      61737352 
+ 557 002a 00000000 		.4byte	0x0
+ 558              		.section	.debug_aranges,"",%progbits
+ 559 0000 1C000000 		.4byte	0x1c
+ 560 0004 0200     		.2byte	0x2
+ 561 0006 00000000 		.4byte	.Ldebug_info0
+ 562 000a 04       		.byte	0x4
+ 563 000b 00       		.byte	0x0
+ 564 000c 0000     		.2byte	0x0
+ 565 000e 0000     		.2byte	0x0
+ 566 0010 00000000 		.4byte	.LFB0
+ 567 0014 9E000000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 13
+
+
+ 568 0018 00000000 		.4byte	0x0
+ 569 001c 00000000 		.4byte	0x0
+ 570              		.section	.debug_ranges,"",%progbits
+ 571              	.Ldebug_ranges0:
+ 572 0000 00000000 		.4byte	.Ltext0
+ 573 0004 00000000 		.4byte	.Letext0
+ 574 0008 00000000 		.4byte	.LFB0
+ 575 000c 9E000000 		.4byte	.LFE0
+ 576 0010 00000000 		.4byte	0x0
+ 577 0014 00000000 		.4byte	0x0
+ 578              		.section	.debug_str,"MS",%progbits,1
+ 579              	.LASF6:
+ 580 0000 6C6F6E67 		.ascii	"long long int\000"
+ 580      206C6F6E 
+ 580      6720696E 
+ 580      7400
+ 581              	.LASF3:
+ 582 000e 73686F72 		.ascii	"short unsigned int\000"
+ 582      7420756E 
+ 582      7369676E 
+ 582      65642069 
+ 582      6E7400
+ 583              	.LASF23:
+ 584 0021 545F5553 		.ascii	"T_USBFS_EP_CTL_BLOCK\000"
+ 584      4246535F 
+ 584      45505F43 
+ 584      544C5F42 
+ 584      4C4F434B 
+ 585              	.LASF24:
+ 586 0036 72657175 		.ascii	"requestHandled\000"
+ 586      65737448 
+ 586      616E646C 
+ 586      656400
+ 587              	.LASF11:
+ 588 0045 666C6F61 		.ascii	"float\000"
+ 588      7400
+ 589              	.LASF17:
+ 590 004b 6570546F 		.ascii	"epToggle\000"
+ 590      67676C65 
+ 590      00
+ 591              	.LASF26:
+ 592 0054 55534246 		.ascii	"USBFS_interfaceClass\000"
+ 592      535F696E 
+ 592      74657266 
+ 592      61636543 
+ 592      6C617373 
+ 593              	.LASF32:
+ 594 0069 55534246 		.ascii	"USBFS_DispatchClassRqst\000"
+ 594      535F4469 
+ 594      73706174 
+ 594      6368436C 
+ 594      61737352 
+ 595              	.LASF5:
+ 596 0081 6C6F6E67 		.ascii	"long unsigned int\000"
+ 596      20756E73 
+ 596      69676E65 
+ 596      6420696E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 14
+
+
+ 596      7400
+ 597              	.LASF18:
+ 598 0093 61646472 		.ascii	"addr\000"
+ 598      00
+ 599              	.LASF25:
+ 600 0098 696E7465 		.ascii	"interfaceNumber\000"
+ 600      72666163 
+ 600      654E756D 
+ 600      62657200 
+ 601              	.LASF27:
+ 602 00a8 55534246 		.ascii	"USBFS_EP\000"
+ 602      535F4550 
+ 602      00
+ 603              	.LASF1:
+ 604 00b1 756E7369 		.ascii	"unsigned char\000"
+ 604      676E6564 
+ 604      20636861 
+ 604      7200
+ 605              	.LASF12:
+ 606 00bf 646F7562 		.ascii	"double\000"
+ 606      6C6500
+ 607              	.LASF14:
+ 608 00c6 61747472 		.ascii	"attrib\000"
+ 608      696200
+ 609              	.LASF20:
+ 610 00cd 62756666 		.ascii	"buffOffset\000"
+ 610      4F666673 
+ 610      657400
+ 611              	.LASF10:
+ 612 00d8 75696E74 		.ascii	"uint16\000"
+ 612      313600
+ 613              	.LASF15:
+ 614 00df 61706945 		.ascii	"apiEpState\000"
+ 614      70537461 
+ 614      746500
+ 615              	.LASF8:
+ 616 00ea 756E7369 		.ascii	"unsigned int\000"
+ 616      676E6564 
+ 616      20696E74 
+ 616      00
+ 617              	.LASF7:
+ 618 00f7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 618      206C6F6E 
+ 618      6720756E 
+ 618      7369676E 
+ 618      65642069 
+ 619              	.LASF16:
+ 620 010e 68774570 		.ascii	"hwEpState\000"
+ 620      53746174 
+ 620      6500
+ 621              	.LASF31:
+ 622 0118 5F555342 		.ascii	"_USBFS_EpCtlBlock\000"
+ 622      46535F45 
+ 622      7043746C 
+ 622      426C6F63 
+ 622      6B00
+ 623              	.LASF19:
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\cciwUwuj.s 			page 15
+
+
+ 624 012a 65704D6F 		.ascii	"epMode\000"
+ 624      646500
+ 625              	.LASF28:
+ 626 0131 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 626      4320342E 
+ 626      342E3100 
+ 627              	.LASF13:
+ 628 013d 63686172 		.ascii	"char\000"
+ 628      00
+ 629              	.LASF21:
+ 630 0142 62756666 		.ascii	"bufferSize\000"
+ 630      65725369 
+ 630      7A6500
+ 631              	.LASF2:
+ 632 014d 73686F72 		.ascii	"short int\000"
+ 632      7420696E 
+ 632      7400
+ 633              	.LASF9:
+ 634 0157 75696E74 		.ascii	"uint8\000"
+ 634      3800
+ 635              	.LASF22:
+ 636 015d 696E7465 		.ascii	"interface\000"
+ 636      72666163 
+ 636      6500
+ 637              	.LASF30:
+ 638 0167 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 638      665C486F 
+ 638      6D655C44 
+ 638      65736B74 
+ 638      6F705C50 
+ 639 0194 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 639      2D435938 
+ 639      43353636 
+ 639      375C5069 
+ 639      6F6E6565 
+ 640 01c5 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 640      4C505F55 
+ 640      53425F41 
+ 640      7564696F 
+ 640      2E637964 
+ 641              	.LASF4:
+ 642 01dc 6C6F6E67 		.ascii	"long int\000"
+ 642      20696E74 
+ 642      00
+ 643              	.LASF0:
+ 644 01e5 7369676E 		.ascii	"signed char\000"
+ 644      65642063 
+ 644      68617200 
+ 645              	.LASF29:
+ 646 01f1 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBFS_cls.c\000"
+ 646      6E657261 
+ 646      7465645F 
+ 646      536F7572 
+ 646      63655C50 
+ 647              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

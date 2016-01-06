@@ -1,0 +1,663 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Timer.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 72000000 		.text
+  20      02005400 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	applicationTimerTick
+  24              		.bss
+  25              		.type	applicationTimerTick, %object
+  26              		.size	applicationTimerTick, 1
+  27              	applicationTimerTick:
+  28 0000 00       		.space	1
+  29              		.section	.text.HandleApplicationTimerTick,"ax",%progbits
+  30              		.align	2
+  31              		.global	HandleApplicationTimerTick
+  32              		.thumb
+  33              		.thumb_func
+  34              		.type	HandleApplicationTimerTick, %function
+  35              	HandleApplicationTimerTick:
+  36              	.LFB29:
+  37              		.file 1 ".\\Timer.c"
+   1:.\Timer.c     **** /*******************************************************************************
+   2:.\Timer.c     **** * File Name: Timer.c
+   3:.\Timer.c     **** *
+   4:.\Timer.c     **** * Version 1.0
+   5:.\Timer.c     **** *
+   6:.\Timer.c     **** * Description: This file contains the system timer tick event updates
+   7:.\Timer.c     **** *
+   8:.\Timer.c     **** ********************************************************************************
+   9:.\Timer.c     **** * Copyright (2008-2013), Cypress Semiconductor Corporation.
+  10:.\Timer.c     **** ********************************************************************************
+  11:.\Timer.c     **** * This software is owned by Cypress Semiconductor Corporation (Cypress) and is
+  12:.\Timer.c     **** * protected by and subject to worldwide patent protection (United States and
+  13:.\Timer.c     **** * foreign), United States copyright laws and international treaty provisions.
+  14:.\Timer.c     **** * Cypress hereby grants to licensee a personal, non-exclusive, non-transferable
+  15:.\Timer.c     **** * license to copy, use, modify, create derivative works of, and compile the
+  16:.\Timer.c     **** * Cypress Source Code and derivative works for the sole purpose of creating
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 2
+
+
+  17:.\Timer.c     **** * custom software in support of licensee product to be used only in conjunction
+  18:.\Timer.c     **** * with a Cypress integrated circuit as specified in the applicable agreement.
+  19:.\Timer.c     **** * Any reproduction, modification, translation, compilation, or representation of
+  20:.\Timer.c     **** * this software except as specified above is prohibited without the express
+  21:.\Timer.c     **** * written permission of Cypress.
+  22:.\Timer.c     **** *
+  23:.\Timer.c     **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH
+  24:.\Timer.c     **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  25:.\Timer.c     **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  26:.\Timer.c     **** * Cypress reserves the right to make changes without further notice to the
+  27:.\Timer.c     **** * materials described herein. Cypress does not assume any liability arising out
+  28:.\Timer.c     **** * of the application or use of any product or circuit described herein. Cypress
+  29:.\Timer.c     **** * does not authorize its products for use as critical components in life-support
+  30:.\Timer.c     **** * systems where a malfunction or failure may reasonably be expected to result in
+  31:.\Timer.c     **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  32:.\Timer.c     **** * support systems application implies that the manufacturer assumes all risk of
+  33:.\Timer.c     **** * such use and in doing so indemnifies Cypress against all charges. Use may be
+  34:.\Timer.c     **** * limited by and subject to the applicable Cypress software license agreement.
+  35:.\Timer.c     **** *******************************************************************************/
+  36:.\Timer.c     **** #include <Application.h>
+  37:.\Timer.c     **** #include <Configuration.h>
+  38:.\Timer.c     **** #include <device.h>
+  39:.\Timer.c     **** #include <VolumeControl.h>
+  40:.\Timer.c     **** #include <USBInterface.h>
+  41:.\Timer.c     **** 
+  42:.\Timer.c     **** extern uint8 switchDebounceTimer;
+  43:.\Timer.c     **** 
+  44:.\Timer.c     **** extern CYPDATA uint8 clockSwitchTimer;
+  45:.\Timer.c     **** 
+  46:.\Timer.c     **** extern uint8 USBFS_device;
+  47:.\Timer.c     **** 
+  48:.\Timer.c     **** CYBIT applicationTimerTick = FALSE;
+  49:.\Timer.c     **** 
+  50:.\Timer.c     **** /*******************************************************************************
+  51:.\Timer.c     **** * Function Name: HandleApplicationTimerTick
+  52:.\Timer.c     **** ********************************************************************************
+  53:.\Timer.c     **** * Summary:
+  54:.\Timer.c     **** *       This function updates all the Application layer timers based on sleep
+  55:.\Timer.c     **** *       timer tick event.
+  56:.\Timer.c     **** *
+  57:.\Timer.c     **** * Parameters:
+  58:.\Timer.c     **** *  void
+  59:.\Timer.c     **** *
+  60:.\Timer.c     **** * Return:
+  61:.\Timer.c     **** *  void
+  62:.\Timer.c     **** *
+  63:.\Timer.c     **** *******************************************************************************/
+  64:.\Timer.c     **** void HandleApplicationTimerTick(void)
+  65:.\Timer.c     **** {
+  38              		.loc 1 65 0
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 0
+  41              		@ frame_needed = 1, uses_anonymous_args = 0
+  42 0000 80B5     		push	{r7, lr}
+  43              	.LCFI0:
+  44              		.cfi_def_cfa_offset 8
+  45 0002 00AF     		add	r7, sp, #0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 3
+
+
+  46              		.cfi_offset 14, -4
+  47              		.cfi_offset 7, -8
+  48              	.LCFI1:
+  49              		.cfi_def_cfa_register 7
+  66:.\Timer.c     ****     if(applicationTimerTick)
+  50              		.loc 1 66 0
+  51 0004 40F20003 		movw	r3, #:lower16:applicationTimerTick
+  52 0008 C0F20003 		movt	r3, #:upper16:applicationTimerTick
+  53 000c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  54 000e 002B     		cmp	r3, #0
+  55 0010 30D0     		beq	.L5
+  67:.\Timer.c     ****     {
+  68:.\Timer.c     ****         
+  69:.\Timer.c     **** 		#ifdef HANDLE_USB_SUSPEND
+  70:.\Timer.c     ****         ServiceUSBSuspend();          /*Check for USB Suspend event*/
+  56              		.loc 1 70 0
+  57 0012 FFF7FEFF 		bl	ServiceUSBSuspend
+  71:.\Timer.c     ****         #endif
+  72:.\Timer.c     ****            
+  73:.\Timer.c     ****         if(switchDebounceTimer)
+  58              		.loc 1 73 0
+  59 0016 40F20003 		movw	r3, #:lower16:switchDebounceTimer
+  60 001a C0F20003 		movt	r3, #:upper16:switchDebounceTimer
+  61 001e 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  62 0020 002B     		cmp	r3, #0
+  63 0022 0CD0     		beq	.L3
+  74:.\Timer.c     ****         {
+  75:.\Timer.c     ****             switchDebounceTimer--;
+  64              		.loc 1 75 0
+  65 0024 40F20003 		movw	r3, #:lower16:switchDebounceTimer
+  66 0028 C0F20003 		movt	r3, #:upper16:switchDebounceTimer
+  67 002c 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  68 002e 03F1FF33 		add	r3, r3, #-1
+  69 0032 DAB2     		uxtb	r2, r3
+  70 0034 40F20003 		movw	r3, #:lower16:switchDebounceTimer
+  71 0038 C0F20003 		movt	r3, #:upper16:switchDebounceTimer
+  72 003c 1A70     		strb	r2, [r3, #0]
+  73              	.L3:
+  76:.\Timer.c     ****         }
+  77:.\Timer.c     ****         
+  78:.\Timer.c     ****         if(clockSwitchTimer)
+  74              		.loc 1 78 0
+  75 003e 40F20003 		movw	r3, #:lower16:clockSwitchTimer
+  76 0042 C0F20003 		movt	r3, #:upper16:clockSwitchTimer
+  77 0046 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  78 0048 002B     		cmp	r3, #0
+  79 004a 0CD0     		beq	.L4
+  79:.\Timer.c     ****         {
+  80:.\Timer.c     ****             clockSwitchTimer--;
+  80              		.loc 1 80 0
+  81 004c 40F20003 		movw	r3, #:lower16:clockSwitchTimer
+  82 0050 C0F20003 		movt	r3, #:upper16:clockSwitchTimer
+  83 0054 1B78     		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+  84 0056 03F1FF33 		add	r3, r3, #-1
+  85 005a DAB2     		uxtb	r2, r3
+  86 005c 40F20003 		movw	r3, #:lower16:clockSwitchTimer
+  87 0060 C0F20003 		movt	r3, #:upper16:clockSwitchTimer
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 4
+
+
+  88 0064 1A70     		strb	r2, [r3, #0]
+  89              	.L4:
+  81:.\Timer.c     ****         }
+  82:.\Timer.c     **** 		     
+  83:.\Timer.c     ****         /* USER_CODE: [System tick timer] Placeholder for adding additional timers for custom user 
+  84:.\Timer.c     ****          * routine is executed approximately at every 8ms */
+  85:.\Timer.c     ****         
+  86:.\Timer.c     ****         applicationTimerTick = FALSE;
+  90              		.loc 1 86 0
+  91 0066 40F20003 		movw	r3, #:lower16:applicationTimerTick
+  92 006a C0F20003 		movt	r3, #:upper16:applicationTimerTick
+  93 006e 4FF00002 		mov	r2, #0
+  94 0072 1A70     		strb	r2, [r3, #0]
+  95              	.L5:
+  87:.\Timer.c     ****     }
+  88:.\Timer.c     **** }
+  96              		.loc 1 88 0
+  97 0074 80BD     		pop	{r7, pc}
+  98              		.cfi_endproc
+  99              	.LFE29:
+ 100              		.size	HandleApplicationTimerTick, .-HandleApplicationTimerTick
+ 101 0076 00BF     		.text
+ 102              	.Letext0:
+ 103              		.section	.debug_loc,"",%progbits
+ 104              	.Ldebug_loc0:
+ 105              	.LLST0:
+ 106 0000 00000000 		.4byte	.LFB29
+ 107 0004 02000000 		.4byte	.LCFI0
+ 108 0008 0100     		.2byte	0x1
+ 109 000a 5D       		.byte	0x5d
+ 110 000b 02000000 		.4byte	.LCFI0
+ 111 000f 04000000 		.4byte	.LCFI1
+ 112 0013 0200     		.2byte	0x2
+ 113 0015 7D       		.byte	0x7d
+ 114 0016 08       		.sleb128 8
+ 115 0017 04000000 		.4byte	.LCFI1
+ 116 001b 76000000 		.4byte	.LFE29
+ 117 001f 0200     		.2byte	0x2
+ 118 0021 77       		.byte	0x77
+ 119 0022 08       		.sleb128 8
+ 120 0023 00000000 		.4byte	0x0
+ 121 0027 00000000 		.4byte	0x0
+ 122              		.file 2 "./Generated_Source/PSoC5/core_cm3.h"
+ 123              		.file 3 "./Generated_Source/PSoC5/cytypes.h"
+ 124              		.section	.debug_info
+ 125 0000 E3000000 		.4byte	0xe3
+ 126 0004 0200     		.2byte	0x2
+ 127 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 128 000a 04       		.byte	0x4
+ 129 000b 01       		.uleb128 0x1
+ 130 000c 71000000 		.4byte	.LASF16
+ 131 0010 01       		.byte	0x1
+ 132 0011 5A010000 		.4byte	.LASF17
+ 133 0015 BB000000 		.4byte	.LASF18
+ 134 0019 00000000 		.4byte	0x0
+ 135 001d 00000000 		.4byte	0x0
+ 136 0021 00000000 		.4byte	.Ldebug_ranges0+0x0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 5
+
+
+ 137 0025 00000000 		.4byte	.Ldebug_line0
+ 138 0029 02       		.uleb128 0x2
+ 139 002a 01       		.byte	0x1
+ 140 002b 06       		.byte	0x6
+ 141 002c 3D010000 		.4byte	.LASF0
+ 142 0030 02       		.uleb128 0x2
+ 143 0031 01       		.byte	0x1
+ 144 0032 08       		.byte	0x8
+ 145 0033 7D000000 		.4byte	.LASF1
+ 146 0037 02       		.uleb128 0x2
+ 147 0038 02       		.byte	0x2
+ 148 0039 05       		.byte	0x5
+ 149 003a 6A010000 		.4byte	.LASF2
+ 150 003e 02       		.uleb128 0x2
+ 151 003f 02       		.byte	0x2
+ 152 0040 07       		.byte	0x7
+ 153 0041 0E000000 		.4byte	.LASF3
+ 154 0045 02       		.uleb128 0x2
+ 155 0046 04       		.byte	0x4
+ 156 0047 05       		.byte	0x5
+ 157 0048 B2000000 		.4byte	.LASF4
+ 158 004c 02       		.uleb128 0x2
+ 159 004d 04       		.byte	0x4
+ 160 004e 07       		.byte	0x7
+ 161 004f 48000000 		.4byte	.LASF5
+ 162 0053 02       		.uleb128 0x2
+ 163 0054 08       		.byte	0x8
+ 164 0055 05       		.byte	0x5
+ 165 0056 00000000 		.4byte	.LASF6
+ 166 005a 02       		.uleb128 0x2
+ 167 005b 08       		.byte	0x8
+ 168 005c 07       		.byte	0x7
+ 169 005d 5A000000 		.4byte	.LASF7
+ 170 0061 03       		.uleb128 0x3
+ 171 0062 04       		.byte	0x4
+ 172 0063 05       		.byte	0x5
+ 173 0064 696E7400 		.ascii	"int\000"
+ 174 0068 02       		.uleb128 0x2
+ 175 0069 04       		.byte	0x4
+ 176 006a 07       		.byte	0x7
+ 177 006b 21000000 		.4byte	.LASF8
+ 178 006f 04       		.uleb128 0x4
+ 179 0070 42000000 		.4byte	.LASF19
+ 180 0074 03       		.byte	0x3
+ 181 0075 4C       		.byte	0x4c
+ 182 0076 30000000 		.4byte	0x30
+ 183 007a 02       		.uleb128 0x2
+ 184 007b 04       		.byte	0x4
+ 185 007c 04       		.byte	0x4
+ 186 007d 64010000 		.4byte	.LASF9
+ 187 0081 02       		.uleb128 0x2
+ 188 0082 08       		.byte	0x8
+ 189 0083 04       		.byte	0x4
+ 190 0084 AB000000 		.4byte	.LASF10
+ 191 0088 02       		.uleb128 0x2
+ 192 0089 01       		.byte	0x1
+ 193 008a 08       		.byte	0x8
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 6
+
+
+ 194 008b 8B000000 		.4byte	.LASF11
+ 195 008f 05       		.uleb128 0x5
+ 196 0090 04       		.byte	0x4
+ 197 0091 07       		.byte	0x7
+ 198 0092 06       		.uleb128 0x6
+ 199 0093 01       		.byte	0x1
+ 200 0094 90000000 		.4byte	.LASF20
+ 201 0098 01       		.byte	0x1
+ 202 0099 40       		.byte	0x40
+ 203 009a 01       		.byte	0x1
+ 204 009b 00000000 		.4byte	.LFB29
+ 205 009f 76000000 		.4byte	.LFE29
+ 206 00a3 00000000 		.4byte	.LLST0
+ 207 00a7 07       		.uleb128 0x7
+ 208 00a8 30010000 		.4byte	.LASF12
+ 209 00ac 02       		.byte	0x2
+ 210 00ad CE06     		.2byte	0x6ce
+ 211 00af B5000000 		.4byte	0xb5
+ 212 00b3 01       		.byte	0x1
+ 213 00b4 01       		.byte	0x1
+ 214 00b5 08       		.uleb128 0x8
+ 215 00b6 61000000 		.4byte	0x61
+ 216 00ba 09       		.uleb128 0x9
+ 217 00bb 2E000000 		.4byte	.LASF13
+ 218 00bf 01       		.byte	0x1
+ 219 00c0 2A       		.byte	0x2a
+ 220 00c1 6F000000 		.4byte	0x6f
+ 221 00c5 01       		.byte	0x1
+ 222 00c6 01       		.byte	0x1
+ 223 00c7 09       		.uleb128 0x9
+ 224 00c8 49010000 		.4byte	.LASF14
+ 225 00cc 01       		.byte	0x1
+ 226 00cd 2C       		.byte	0x2c
+ 227 00ce 6F000000 		.4byte	0x6f
+ 228 00d2 01       		.byte	0x1
+ 229 00d3 01       		.byte	0x1
+ 230 00d4 0A       		.uleb128 0xa
+ 231 00d5 74010000 		.4byte	.LASF15
+ 232 00d9 01       		.byte	0x1
+ 233 00da 30       		.byte	0x30
+ 234 00db 6F000000 		.4byte	0x6f
+ 235 00df 01       		.byte	0x1
+ 236 00e0 05       		.byte	0x5
+ 237 00e1 03       		.byte	0x3
+ 238 00e2 00000000 		.4byte	applicationTimerTick
+ 239 00e6 00       		.byte	0x0
+ 240              		.section	.debug_abbrev
+ 241 0000 01       		.uleb128 0x1
+ 242 0001 11       		.uleb128 0x11
+ 243 0002 01       		.byte	0x1
+ 244 0003 25       		.uleb128 0x25
+ 245 0004 0E       		.uleb128 0xe
+ 246 0005 13       		.uleb128 0x13
+ 247 0006 0B       		.uleb128 0xb
+ 248 0007 03       		.uleb128 0x3
+ 249 0008 0E       		.uleb128 0xe
+ 250 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 7
+
+
+ 251 000a 0E       		.uleb128 0xe
+ 252 000b 11       		.uleb128 0x11
+ 253 000c 01       		.uleb128 0x1
+ 254 000d 52       		.uleb128 0x52
+ 255 000e 01       		.uleb128 0x1
+ 256 000f 55       		.uleb128 0x55
+ 257 0010 06       		.uleb128 0x6
+ 258 0011 10       		.uleb128 0x10
+ 259 0012 06       		.uleb128 0x6
+ 260 0013 00       		.byte	0x0
+ 261 0014 00       		.byte	0x0
+ 262 0015 02       		.uleb128 0x2
+ 263 0016 24       		.uleb128 0x24
+ 264 0017 00       		.byte	0x0
+ 265 0018 0B       		.uleb128 0xb
+ 266 0019 0B       		.uleb128 0xb
+ 267 001a 3E       		.uleb128 0x3e
+ 268 001b 0B       		.uleb128 0xb
+ 269 001c 03       		.uleb128 0x3
+ 270 001d 0E       		.uleb128 0xe
+ 271 001e 00       		.byte	0x0
+ 272 001f 00       		.byte	0x0
+ 273 0020 03       		.uleb128 0x3
+ 274 0021 24       		.uleb128 0x24
+ 275 0022 00       		.byte	0x0
+ 276 0023 0B       		.uleb128 0xb
+ 277 0024 0B       		.uleb128 0xb
+ 278 0025 3E       		.uleb128 0x3e
+ 279 0026 0B       		.uleb128 0xb
+ 280 0027 03       		.uleb128 0x3
+ 281 0028 08       		.uleb128 0x8
+ 282 0029 00       		.byte	0x0
+ 283 002a 00       		.byte	0x0
+ 284 002b 04       		.uleb128 0x4
+ 285 002c 16       		.uleb128 0x16
+ 286 002d 00       		.byte	0x0
+ 287 002e 03       		.uleb128 0x3
+ 288 002f 0E       		.uleb128 0xe
+ 289 0030 3A       		.uleb128 0x3a
+ 290 0031 0B       		.uleb128 0xb
+ 291 0032 3B       		.uleb128 0x3b
+ 292 0033 0B       		.uleb128 0xb
+ 293 0034 49       		.uleb128 0x49
+ 294 0035 13       		.uleb128 0x13
+ 295 0036 00       		.byte	0x0
+ 296 0037 00       		.byte	0x0
+ 297 0038 05       		.uleb128 0x5
+ 298 0039 24       		.uleb128 0x24
+ 299 003a 00       		.byte	0x0
+ 300 003b 0B       		.uleb128 0xb
+ 301 003c 0B       		.uleb128 0xb
+ 302 003d 3E       		.uleb128 0x3e
+ 303 003e 0B       		.uleb128 0xb
+ 304 003f 00       		.byte	0x0
+ 305 0040 00       		.byte	0x0
+ 306 0041 06       		.uleb128 0x6
+ 307 0042 2E       		.uleb128 0x2e
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 8
+
+
+ 308 0043 00       		.byte	0x0
+ 309 0044 3F       		.uleb128 0x3f
+ 310 0045 0C       		.uleb128 0xc
+ 311 0046 03       		.uleb128 0x3
+ 312 0047 0E       		.uleb128 0xe
+ 313 0048 3A       		.uleb128 0x3a
+ 314 0049 0B       		.uleb128 0xb
+ 315 004a 3B       		.uleb128 0x3b
+ 316 004b 0B       		.uleb128 0xb
+ 317 004c 27       		.uleb128 0x27
+ 318 004d 0C       		.uleb128 0xc
+ 319 004e 11       		.uleb128 0x11
+ 320 004f 01       		.uleb128 0x1
+ 321 0050 12       		.uleb128 0x12
+ 322 0051 01       		.uleb128 0x1
+ 323 0052 40       		.uleb128 0x40
+ 324 0053 06       		.uleb128 0x6
+ 325 0054 00       		.byte	0x0
+ 326 0055 00       		.byte	0x0
+ 327 0056 07       		.uleb128 0x7
+ 328 0057 34       		.uleb128 0x34
+ 329 0058 00       		.byte	0x0
+ 330 0059 03       		.uleb128 0x3
+ 331 005a 0E       		.uleb128 0xe
+ 332 005b 3A       		.uleb128 0x3a
+ 333 005c 0B       		.uleb128 0xb
+ 334 005d 3B       		.uleb128 0x3b
+ 335 005e 05       		.uleb128 0x5
+ 336 005f 49       		.uleb128 0x49
+ 337 0060 13       		.uleb128 0x13
+ 338 0061 3F       		.uleb128 0x3f
+ 339 0062 0C       		.uleb128 0xc
+ 340 0063 3C       		.uleb128 0x3c
+ 341 0064 0C       		.uleb128 0xc
+ 342 0065 00       		.byte	0x0
+ 343 0066 00       		.byte	0x0
+ 344 0067 08       		.uleb128 0x8
+ 345 0068 35       		.uleb128 0x35
+ 346 0069 00       		.byte	0x0
+ 347 006a 49       		.uleb128 0x49
+ 348 006b 13       		.uleb128 0x13
+ 349 006c 00       		.byte	0x0
+ 350 006d 00       		.byte	0x0
+ 351 006e 09       		.uleb128 0x9
+ 352 006f 34       		.uleb128 0x34
+ 353 0070 00       		.byte	0x0
+ 354 0071 03       		.uleb128 0x3
+ 355 0072 0E       		.uleb128 0xe
+ 356 0073 3A       		.uleb128 0x3a
+ 357 0074 0B       		.uleb128 0xb
+ 358 0075 3B       		.uleb128 0x3b
+ 359 0076 0B       		.uleb128 0xb
+ 360 0077 49       		.uleb128 0x49
+ 361 0078 13       		.uleb128 0x13
+ 362 0079 3F       		.uleb128 0x3f
+ 363 007a 0C       		.uleb128 0xc
+ 364 007b 3C       		.uleb128 0x3c
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 9
+
+
+ 365 007c 0C       		.uleb128 0xc
+ 366 007d 00       		.byte	0x0
+ 367 007e 00       		.byte	0x0
+ 368 007f 0A       		.uleb128 0xa
+ 369 0080 34       		.uleb128 0x34
+ 370 0081 00       		.byte	0x0
+ 371 0082 03       		.uleb128 0x3
+ 372 0083 0E       		.uleb128 0xe
+ 373 0084 3A       		.uleb128 0x3a
+ 374 0085 0B       		.uleb128 0xb
+ 375 0086 3B       		.uleb128 0x3b
+ 376 0087 0B       		.uleb128 0xb
+ 377 0088 49       		.uleb128 0x49
+ 378 0089 13       		.uleb128 0x13
+ 379 008a 3F       		.uleb128 0x3f
+ 380 008b 0C       		.uleb128 0xc
+ 381 008c 02       		.uleb128 0x2
+ 382 008d 0A       		.uleb128 0xa
+ 383 008e 00       		.byte	0x0
+ 384 008f 00       		.byte	0x0
+ 385 0090 00       		.byte	0x0
+ 386              		.section	.debug_pubnames,"",%progbits
+ 387 0000 46000000 		.4byte	0x46
+ 388 0004 0200     		.2byte	0x2
+ 389 0006 00000000 		.4byte	.Ldebug_info0
+ 390 000a E7000000 		.4byte	0xe7
+ 391 000e 92000000 		.4byte	0x92
+ 392 0012 48616E64 		.ascii	"HandleApplicationTimerTick\000"
+ 392      6C654170 
+ 392      706C6963 
+ 392      6174696F 
+ 392      6E54696D 
+ 393 002d D4000000 		.4byte	0xd4
+ 394 0031 6170706C 		.ascii	"applicationTimerTick\000"
+ 394      69636174 
+ 394      696F6E54 
+ 394      696D6572 
+ 394      5469636B 
+ 395 0046 00000000 		.4byte	0x0
+ 396              		.section	.debug_aranges,"",%progbits
+ 397 0000 1C000000 		.4byte	0x1c
+ 398 0004 0200     		.2byte	0x2
+ 399 0006 00000000 		.4byte	.Ldebug_info0
+ 400 000a 04       		.byte	0x4
+ 401 000b 00       		.byte	0x0
+ 402 000c 0000     		.2byte	0x0
+ 403 000e 0000     		.2byte	0x0
+ 404 0010 00000000 		.4byte	.LFB29
+ 405 0014 76000000 		.4byte	.LFE29-.LFB29
+ 406 0018 00000000 		.4byte	0x0
+ 407 001c 00000000 		.4byte	0x0
+ 408              		.section	.debug_ranges,"",%progbits
+ 409              	.Ldebug_ranges0:
+ 410 0000 00000000 		.4byte	.Ltext0
+ 411 0004 00000000 		.4byte	.Letext0
+ 412 0008 00000000 		.4byte	.LFB29
+ 413 000c 76000000 		.4byte	.LFE29
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 10
+
+
+ 414 0010 00000000 		.4byte	0x0
+ 415 0014 00000000 		.4byte	0x0
+ 416              		.section	.debug_str,"MS",%progbits,1
+ 417              	.LASF6:
+ 418 0000 6C6F6E67 		.ascii	"long long int\000"
+ 418      206C6F6E 
+ 418      6720696E 
+ 418      7400
+ 419              	.LASF3:
+ 420 000e 73686F72 		.ascii	"short unsigned int\000"
+ 420      7420756E 
+ 420      7369676E 
+ 420      65642069 
+ 420      6E7400
+ 421              	.LASF8:
+ 422 0021 756E7369 		.ascii	"unsigned int\000"
+ 422      676E6564 
+ 422      20696E74 
+ 422      00
+ 423              	.LASF13:
+ 424 002e 73776974 		.ascii	"switchDebounceTimer\000"
+ 424      63684465 
+ 424      626F756E 
+ 424      63655469 
+ 424      6D657200 
+ 425              	.LASF19:
+ 426 0042 75696E74 		.ascii	"uint8\000"
+ 426      3800
+ 427              	.LASF5:
+ 428 0048 6C6F6E67 		.ascii	"long unsigned int\000"
+ 428      20756E73 
+ 428      69676E65 
+ 428      6420696E 
+ 428      7400
+ 429              	.LASF7:
+ 430 005a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 430      206C6F6E 
+ 430      6720756E 
+ 430      7369676E 
+ 430      65642069 
+ 431              	.LASF16:
+ 432 0071 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 432      4320342E 
+ 432      342E3100 
+ 433              	.LASF1:
+ 434 007d 756E7369 		.ascii	"unsigned char\000"
+ 434      676E6564 
+ 434      20636861 
+ 434      7200
+ 435              	.LASF11:
+ 436 008b 63686172 		.ascii	"char\000"
+ 436      00
+ 437              	.LASF20:
+ 438 0090 48616E64 		.ascii	"HandleApplicationTimerTick\000"
+ 438      6C654170 
+ 438      706C6963 
+ 438      6174696F 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 11
+
+
+ 438      6E54696D 
+ 439              	.LASF10:
+ 440 00ab 646F7562 		.ascii	"double\000"
+ 440      6C6500
+ 441              	.LASF4:
+ 442 00b2 6C6F6E67 		.ascii	"long int\000"
+ 442      20696E74 
+ 442      00
+ 443              	.LASF18:
+ 444 00bb 5C5C7073 		.ascii	"\\\\psf\\Home\\Desktop\\PSOC5LP dev\\non-boot-bit-s"
+ 444      665C486F 
+ 444      6D655C44 
+ 444      65736B74 
+ 444      6F705C50 
+ 445 00e8 68696674 		.ascii	"hift-CY8C5667\\PioneerKit_P5LP_USB_Audio\\PioneerKi"
+ 445      2D435938 
+ 445      43353636 
+ 445      375C5069 
+ 445      6F6E6565 
+ 446 0119 745F5035 		.ascii	"t_P5LP_USB_Audio.cydsn\000"
+ 446      4C505F55 
+ 446      53425F41 
+ 446      7564696F 
+ 446      2E637964 
+ 447              	.LASF12:
+ 448 0130 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 448      52784275 
+ 448      66666572 
+ 448      00
+ 449              	.LASF0:
+ 450 013d 7369676E 		.ascii	"signed char\000"
+ 450      65642063 
+ 450      68617200 
+ 451              	.LASF14:
+ 452 0149 636C6F63 		.ascii	"clockSwitchTimer\000"
+ 452      6B537769 
+ 452      74636854 
+ 452      696D6572 
+ 452      00
+ 453              	.LASF17:
+ 454 015a 2E5C5469 		.ascii	".\\Timer.c\000"
+ 454      6D65722E 
+ 454      6300
+ 455              	.LASF9:
+ 456 0164 666C6F61 		.ascii	"float\000"
+ 456      7400
+ 457              	.LASF2:
+ 458 016a 73686F72 		.ascii	"short int\000"
+ 458      7420696E 
+ 458      7400
+ 459              	.LASF15:
+ 460 0174 6170706C 		.ascii	"applicationTimerTick\000"
+ 460      69636174 
+ 460      696F6E54 
+ 460      696D6572 
+ 460      5469636B 
+ 461              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccWLQRx1.s 			page 12
+
+
